@@ -46,7 +46,7 @@
                     <a class="navbar-brand d-none d-md-block" href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
 
                     <!-- Top Nav Widget -->
-                    <div class="top-nav order-lg-3 flex-grow-1 flex-lg-grow-0 d-flex justify-content-end">
+                    <div class="top-nav bg-danger order-lg-3 flex-grow-1 flex-lg-grow-0 d-flex justify-content-end">
                         <?php if ( is_active_sidebar( 'top-nav' )) : ?>
                         <div>
                             <?php dynamic_sidebar( 'top-nav' ); ?>

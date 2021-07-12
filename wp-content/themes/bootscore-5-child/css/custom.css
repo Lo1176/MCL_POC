@@ -7,3 +7,7 @@
 }
 
 /* accueil fin */
+
+.nav-brand img, svg{
+  width: 32px;
+}
