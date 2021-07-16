@@ -1,6 +1,8 @@
 Changelog
 =========
 
+#### 1.4.1 - July 12 2021
+- Fixed several bugs
 
 #### 1.4.0 - June 15 2021
 - Added gutenberg contact form block CreativeMail

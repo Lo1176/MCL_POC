@@ -1,6 +1,6 @@
 <?php
 
-namespace CreativeMail\Modules\contacts\Exceptions;
+namespace CreativeMail\Modules\Contacts\Exceptions;
 
 use Exception;
 

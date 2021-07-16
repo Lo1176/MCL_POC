@@ -43,14 +43,32 @@
       "type": "string",
       "default": "optional"
     },
+    "onSubmissionSetting": {
+      "type": "string",
+      "selector": "div",
+      "default": "message"
+    },
     "onSubmission": {
       "type": "string",
       "selector": "div",
       "default": "Thank you for subscribing!"
     },
+    "redirectLink": {
+      "type": "string",
+      "selector": "div",
+      "default": ""
+    },
     "customList": {
       "type": "string",
       "default": null
+    },
+    "disclaimer": {
+      "type": "string",
+      "default": "By submitting your information, you are granting us permission to email you. You may unsubscribe at any time."
+    },
+    "consentLabel": {
+      "type": "string",
+      "default": "Can we send you an email from time to time?"
     }
   },
   "name": "ce4wp/subscribe",

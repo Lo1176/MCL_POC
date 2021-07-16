@@ -3,7 +3,10 @@ use CreativeMail\CreativeMail;
 use CreativeMail\Helpers\EnvironmentHelper;
 use CreativeMail\Helpers\OptionsHelper;
 
-    $contact_sync_available = !empty(CreativeMail::get_instance()->get_integration_manager()->get_active_plugins());
+    $activated_plugins = CreativeMail::get_instance()->get_integration_manager()->get_active_plugins();
+    $contact_sync_available = !empty(array_filter($activated_plugins, function ($item) {
+        return !$item->is_hidden_from_suggestions();
+    }));
     $supported_plugin_available = !empty(CreativeMail::get_instance()->get_integration_manager()->get_supported_integrations(true))
 ?>
 
@@ -17,6 +20,7 @@ use CreativeMail\Helpers\OptionsHelper;
         if($supported_plugin_available){
             include 'available-integrations.php';
         }
+        include 'creative-mail-form-banner.php'
         ?>
     </div>
 </div>

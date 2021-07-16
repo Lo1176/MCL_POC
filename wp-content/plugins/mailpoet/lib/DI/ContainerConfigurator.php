@@ -172,6 +172,7 @@ class ContainerConfigurator implements IContainerConfigurator {
     $container->autowire(\MailPoet\Cron\Workers\AuthorizedSendingEmailsCheck::class)->setPublic(true);
     $container->autowire(\MailPoet\Cron\Workers\WooCommercePastOrders::class)->setPublic(true);
     $container->autowire(\MailPoet\Cron\Workers\SubscribersEngagementScore::class)->setPublic(true);
+    $container->autowire(\MailPoet\Cron\Workers\SubscribersCountCacheRecalculation::class)->setPublic(true);
     // Custom field
     $container->autowire(\MailPoet\CustomFields\ApiDataSanitizer::class);
     $container->autowire(\MailPoet\CustomFields\CustomFieldsRepository::class)->setPublic(true);
@@ -266,6 +267,7 @@ class ContainerConfigurator implements IContainerConfigurator {
     $container->autowire(\MailPoet\Subscribers\ImportExport\ImportExportRepository::class)->setPublic(true);
     $container->autowire(\MailPoet\Subscribers\ImportExport\PersonalDataExporters\NewslettersExporter::class)->setPublic(true);
     $container->autowire(\MailPoet\Subscribers\Statistics\SubscriberStatisticsRepository::class);
+    $container->autowire(\MailPoet\Subscribers\SubscribersCountsController::class)->setPublic(true);
     // Segments
     $container->autowire(\MailPoet\Segments\WooCommerce::class)->setPublic(true);
     $container->autowire(\MailPoet\Segments\WP::class)->setPublic(true);
@@ -390,7 +392,8 @@ class ContainerConfigurator implements IContainerConfigurator {
     // Third party classes
     $container->autowire(\MailPoetVendor\CSS::class)->setClass(\MailPoetVendor\CSS::class)->setPublic(true);
     $container->autowire(\MailPoetVendor\csstidy::class)->setClass(\MailPoetVendor\csstidy::class);
-
+    // Cache
+    $container->autowire(\MailPoet\Cache\TransientCache::class)->setPublic(true);
     return $container;
   }
 

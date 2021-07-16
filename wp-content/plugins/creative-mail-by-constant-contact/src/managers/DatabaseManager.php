@@ -18,14 +18,14 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    const DB_VERSION = '1.0';
+    const ABANDONED_CART_TABLE_VERSION = '1.0';
 
     /**
      * Option name for abandoned checkouts db version.
      *
      * @since 1.3.0
      */
-    const DB_VERSION_OPTION_NAME = 'ce4wp_abandoned_checkout_db_version';
+    const ABANDONED_CART_TABLE_VERSION_OPTION_NAME = 'ce4wp_abandoned_checkout_db_version';
 
     const CHECKOUT_UUID = 'checkout_uuid';
 
@@ -34,14 +34,32 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    const TABLE_NAME = 'ce4wp_abandoned_checkout';
+    const ABANDONED_CART_TABLE_NAME = 'ce4wp_abandoned_checkout';
+
+    /**
+     * Current version of the contacts table.
+     *
+     * @since 1.4.0
+     */
+    const CONTACTS_TABLE_VERSION = '1.0';
+
+    /**
+     * Option name for the contacts db version.
+     *
+     * @since 1.4.0
+     */
+    const CONTACTS_TABLE_VERSION_OPTION_NAME = 'ce4wp_contacts_db_version';
+
+    /**
+     * Contacts table name.
+     *
+     * @since 1.4.0
+     */
+    const CONTACTS_TABLE_NAME = 'ce4wp_contacts';
 
     public function add_hooks()
     {
-        // check if woocommerce is active
-        if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-            add_action('admin_init', array($this, 'update_database_check'), 10, 2);
-        }
+        add_action('admin_init', array($this, 'update_database_check'), 10, 2);
     }
 
     /**
@@ -49,13 +67,22 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function update_database_check() {
-        if ( ! get_site_option( self::DB_VERSION_OPTION_NAME ) ) {
+    public function update_database_check()
+    {
+        // check if woocommerce is active
+        if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+            if (!get_site_option(self::ABANDONED_CART_TABLE_VERSION_OPTION_NAME)) {
+                // Fresh install: create table.
+                $this->create_abandoned_cart_table();
+            } else if (current_user_can('administrator')) {
+                // Cleanup old expired checkouts
+                $this->delete_expired_checkouts();
+            }
+        }
+        //check if ce4wp_contacts table exists
+        if (!get_site_option(self::CONTACTS_TABLE_VERSION_OPTION_NAME)) {
             // Fresh install: create table.
-            $this->create_table();
-        } else if(current_user_can('administrator')){
-            // Cleanup old expired checkouts
-            $this->delete_expired_checkouts();
+            $this->create_contacts_table();
         }
     }
 
@@ -64,12 +91,13 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function remove_checkout_data($checkout_uuid) {
+    public function remove_checkout_data($checkout_uuid)
+    {
         global $wpdb;
 
         // Delete current checkout data.
         $wpdb->delete(
-            DatabaseManager::get_table_name(),
+            DatabaseManager::get_table_name(self::ABANDONED_CART_TABLE_NAME),
             [
                 self::CHECKOUT_UUID => $checkout_uuid,
             ],
@@ -84,10 +112,11 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function create_table() {
+    public function create_abandoned_cart_table()
+    {
         global $wpdb;
 
-        $table_name = self::get_table_name();
+        $table_name = self::get_table_name(self::ABANDONED_CART_TABLE_NAME);
 
         $sql = "CREATE TABLE {$table_name} (
 			checkout_id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -107,9 +136,36 @@ class DatabaseManager
 		) {$wpdb->get_charset_collate()}";
 
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-        dbDelta( $sql );
+        dbDelta($sql);
 
-        add_option( self::DB_VERSION_OPTION_NAME, self::DB_VERSION );
+        add_option(self::ABANDONED_CART_TABLE_VERSION_OPTION_NAME, self::ABANDONED_CART_TABLE_VERSION);
+    }
+
+    /**
+     * Create contacts table
+     */
+    public function create_contacts_table()
+    {
+        global $wpdb;
+
+        $table_name = self::get_table_name(self::CONTACTS_TABLE_NAME);
+
+        //keep column names equal to the form submission names so we don't need additional conversion
+        $sql = "CREATE TABLE {$table_name} (
+			contact_id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+			email varchar(200) NOT NULL DEFAULT '',
+			first_name varchar(200) DEFAULT '',
+			last_name varchar(200) DEFAULT '',
+			telephone varchar(200) DEFAULT '',
+            consent varchar(200) DEFAULT '',
+			PRIMARY KEY  (contact_id),
+			UNIQUE KEY email (email)
+		) {$wpdb->get_charset_collate()}";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta($sql);
+
+        add_option(self::CONTACTS_TABLE_VERSION_OPTION_NAME, self::CONTACTS_TABLE_VERSION);
     }
 
     /**
@@ -117,11 +173,12 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function delete_expired_checkouts() {
+    public function delete_expired_checkouts()
+    {
         global $wpdb;
 
         // Delete all checkouts at least 30 days old.
-        $table_name = $this->get_table_name();
+        $table_name = $this->get_table_name(self::ABANDONED_CART_TABLE_NAME);
 
         $wpdb->query(
             $wpdb->prepare(
@@ -129,7 +186,7 @@ class DatabaseManager
                 "DELETE FROM {$table_name}
 				WHERE `checkout_updated_ts` <= %s",
                 // phpcs:enable
-                ( new DateTime() )->sub( new DateInterval( 'P30D' ) )->format( 'U' )
+                (new DateTime())->sub(new DateInterval('P30D'))->format('U')
             )
         );
     }
@@ -139,10 +196,11 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function upsert_checkout($checkout_uuid, $user_id, $billing_email, $content, $current_time) {
+    public function upsert_checkout($checkout_uuid, $user_id, $billing_email, $content, $current_time)
+    {
         global $wpdb;
 
-        $table_name = $this->get_table_name();
+        $table_name = $this->get_table_name(self::ABANDONED_CART_TABLE_NAME);
 
         // phpcs:disable WordPress.DB.PreparedSQL -- Okay use of unprepared variable for table name in SQL.
         $wpdb->query(
@@ -170,9 +228,9 @@ class DatabaseManager
                 $billing_email,
                 maybe_serialize($content),
                 $current_time,
-                strtotime( $current_time ),
+                strtotime($current_time),
                 $current_time,
-                strtotime( $current_time ),
+                strtotime($current_time),
                 $checkout_uuid
             )
         );
@@ -184,16 +242,17 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function mark_checkout_recovered($checkout_uuid) {
+    public function mark_checkout_recovered($checkout_uuid)
+    {
         global $wpdb;
 
-        $table_name = $this->get_table_name();
+        $table_name = $this->get_table_name(self::ABANDONED_CART_TABLE_NAME);
 
-        $current_time = current_time( 'mysql', 1 );
+        $current_time = current_time('mysql', 1);
 
         $wpdb->update($table_name, array(
             'checkout_recovered' => $current_time,
-            'checkout_recovered_ts' => strtotime( $current_time )
+            'checkout_recovered_ts' => strtotime($current_time)
         ), array(self::CHECKOUT_UUID => $checkout_uuid));
     }
 
@@ -202,10 +261,11 @@ class DatabaseManager
      *
      * @since 1.3.0
      */
-    public function change_checkout_consent($checkout_uuid, $consent) {
+    public function change_checkout_consent($checkout_uuid, $consent)
+    {
         global $wpdb;
 
-        $table_name = $this->get_table_name();
+        $table_name = $this->get_table_name(self::ABANDONED_CART_TABLE_NAME);
 
         $int_consent = $consent ? 1 : 0;
 
@@ -214,10 +274,11 @@ class DatabaseManager
         ), array(self::CHECKOUT_UUID => $checkout_uuid));
     }
 
-    public function has_checkout_consent($checkout_uuid) {
+    public function has_checkout_consent($checkout_uuid)
+    {
         global $wpdb;
 
-        $table_name = $this->get_table_name();
+        $table_name = $this->get_table_name(self::ABANDONED_CART_TABLE_NAME);
 
         $consent_value = $wpdb->get_var($wpdb->prepare("SELECT `checkout_consent` FROM $table_name WHERE `checkout_uuid` = %s", $checkout_uuid));
         return $consent_value === "1";
@@ -226,24 +287,24 @@ class DatabaseManager
     /**
      * Retrieve specific user's checkout data.
      *
-     * @param string $select     Field to return.
-     * @param mixed  $where      String or array of WHERE clause predicates, using placeholders for values.
-     * @param array  $where_args Array of WHERE clause arguments.
-     * @param string $order_by   Order by column.
-     * @param string $order      Order (ASC/DESC).
-     * @param string $limit      LIMIT clause.
-     * @param array  $limit_args Array of LIMIT clause arguments.
-     *
-     * @since 1.3.0
+     * @param string $select Field to return.
+     * @param mixed $where String or array of WHERE clause predicates, using placeholders for values.
+     * @param array $where_args Array of WHERE clause arguments.
+     * @param string $order_by Order by column.
+     * @param string $order Order (ASC/DESC).
+     * @param string $limit LIMIT clause.
+     * @param array $limit_args Array of LIMIT clause arguments.
      *
      * @return mixed              Checkout data if exists, else null.
+     * @since  1.3.0
      */
-    public function get_checkout_data( string $select, $where, array $where_args, string $order_by = 'checkout_updated_ts', string $order = 'DESC', string $limit = '', array $limit_args = [] ) {
+    public function get_checkout_data(string $select, $where, array $where_args, string $order_by = 'checkout_updated_ts', string $order = 'DESC', string $limit = '', array $limit_args = [])
+    {
         global $wpdb;
 
-        $table_name = $this->get_table_name();
-        $where      = is_array( $where ) ? implode( ' AND ', $where ) : $where;
-        $where      = empty( $where ) ? 1 : $where;
+        $table_name = $this->get_table_name(self::ABANDONED_CART_TABLE_NAME);
+        $where = is_array($where) ? implode(' AND ', $where) : $where;
+        $where = empty($where) ? 1 : $where;
 
         // Construct query to return checkout data.
         // phpcs:disable -- Disabling a number of sniffs that erroneously flag following block of code.
@@ -255,7 +316,7 @@ class DatabaseManager
 				WHERE {$where}
 				ORDER BY {$order_by} {$order}
 				{$limit}",
-                array_merge( $where_args, $limit_args )
+                array_merge($where_args, $limit_args)
             )
         );
         // phpcs:enable
@@ -264,12 +325,48 @@ class DatabaseManager
     /**
      * A simple utility for grabbing the full table name, including the WPDB table prefix.
      *
-     * @since 1.3.0
+     * @param string $OptionName
      *
      * @return string
+     * @since  1.3.0
      */
-    public static function get_table_name() : string {
+    public static function get_table_name(string $OptionName): string
+    {
         global $wpdb;
-        return $wpdb->prefix . self::TABLE_NAME;
+        if ($OptionName == self::ABANDONED_CART_TABLE_NAME) {
+            return $wpdb->prefix . self::ABANDONED_CART_TABLE_NAME;
+        } else if ($OptionName == self::CONTACTS_TABLE_NAME) {
+            return $wpdb->prefix . self::CONTACTS_TABLE_NAME;
+        }
+    }
+
+    public function insert_contact($data)
+    {
+        global $wpdb;
+
+        $table_name = $this->get_table_name(self::CONTACTS_TABLE_NAME);
+
+        $wpdb->query(
+            $wpdb->prepare(
+                "INSERT IGNORE INTO {$table_name} (
+					`email`,
+					`first_name`,
+					`last_name`,
+					`telephone`,
+					`consent`
+				) VALUES (
+					%s,
+					%s,
+					%s,
+					%s,
+					%s
+				)",
+                $data['email'],
+                $data['first_name'],
+                $data['last_name'],
+                $data['telephone'],
+                $data['consent']
+            )
+        );
     }
 }

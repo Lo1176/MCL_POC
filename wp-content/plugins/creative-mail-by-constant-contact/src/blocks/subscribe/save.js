@@ -1,6 +1,6 @@
 import { __ } from "@wordpress/i18n";
 import { useBlockProps, RichText } from "@wordpress/block-editor";
-import { FIELD_SETTING } from "./edit";
+import { FIELD_SETTING, ON_SUBMIT_SETTING } from "./edit";
 // phpcs:disable
 /**
  * addOnSubmit.
@@ -9,14 +9,65 @@ import { FIELD_SETTING } from "./edit";
  */
 export default function save({ attributes, className }) {
   return (
-    <div className={`wp-block-ce4wp-subscribe ${className ? className : ''}`}>
-      <div className="onSubmission" style={{ display: 'none' }}>
-        <RichText.Content
-          className="title"
-          tagName="h2"
-          value={attributes.title}
+    <div className={`wp-block-ce4wp-subscribe ${className ? className : ""}`}>
+      <div className="onSubmission" style={{ display: "none" }}>
+        <input
+            className="onSubmissionSetting"
+            name="onSubmissionSetting"
+            type="hidden"
+            value={attributes.onSubmissionSetting}
         />
-        <p className="subTitle">{__(attributes.onSubmission, "cewp4")}</p>
+        {attributes.onSubmissionSetting !== ON_SUBMIT_SETTING.MESSAGE && (
+            <div>
+              <RichText.Content
+                  className="title"
+                  tagName="h2"
+                  value={attributes.title}
+              />
+            </div>
+        )}
+        {attributes.onSubmissionSetting === ON_SUBMIT_SETTING.MESSAGE && (
+          <div>
+            <RichText.Content
+              className="title"
+              tagName="h2"
+              value={attributes.title}
+            />
+            <p className="subTitle">{__(attributes.onSubmission, "cewp4")}</p>
+          </div>
+        )}
+        {attributes.onSubmissionSetting === ON_SUBMIT_SETTING.SUMMARY && (
+          <div>
+            <h3>You have subscribed</h3>
+            <br />
+            {(attributes.displayFirstName !== FIELD_SETTING.NOTSHOW ||
+              attributes.displayLastName !== FIELD_SETTING.NOTSHOW) && (
+              <p>
+                <span>Name: </span>
+                <span className="firstNameSummary"></span>
+                <span className="lastNameSummary"></span>
+              </p>
+            )}
+            {attributes.displayTelephone !== FIELD_SETTING.NOTSHOW && (
+              <p>
+                <span>Telephone: </span>
+                <span className="telephoneSummary"></span>
+              </p>
+            )}
+            <p>
+              <span>Email: </span>
+              <span className="emailSummary"></span>
+            </p>
+          </div>
+        )}
+        {attributes.onSubmissionSetting === ON_SUBMIT_SETTING.REDIRECT && (
+          <input
+            className="redirect"
+            name="redirect"
+            type="hidden"
+            value={attributes.redirectLink}
+          />
+        )}
       </div>
       <form className="cm-contact-form" name="contact-form">
         <input
@@ -75,7 +126,7 @@ export default function save({ attributes, className }) {
               className="lastName"
               name="last_name"
               type="text"
-              required={attributes.displayFirstName === FIELD_SETTING.REQUIRED}
+              required={attributes.displayLastName === FIELD_SETTING.REQUIRED}
             ></input>
           </div>
         )}
@@ -98,9 +149,12 @@ export default function save({ attributes, className }) {
               name="telephone"
               type="tel"
               pattern="[+]?[0-9\(\)\s+-]{5,20}"
-              oninvalid={`setCustomValidity('${__("Please enter a valid phone number", "cewp4")}')`}
+              oninvalid={`setCustomValidity('${__(
+                "Please enter a valid phone number",
+                "cewp4"
+              )}')`}
               oninput="setCustomValidity('')"
-              required={attributes.displayFirstName === FIELD_SETTING.REQUIRED}
+              required={attributes.displayTelephone === FIELD_SETTING.REQUIRED}
             ></input>
           </div>
         )}
@@ -111,45 +165,45 @@ export default function save({ attributes, className }) {
             style={{ color: "#ee0000" }}
           >
             *
-                    </span>
+          </span>
           <input
             className="email"
             name="email"
             type="email"
-            oninvalid={`setCustomValidity('${__("Please enter a valid email address", "cewp4")}')`}
+            oninvalid={`setCustomValidity('${__(
+              "Please enter a valid email address",
+              "cewp4"
+            )}')`}
             oninput="setCustomValidity('')"
             required
           ></input>
         </div>
         {attributes.emailPermission == "message" && (
-          <span className="disclaimer">
+          <div className="disclaimer">
             <input
               className="consent_check"
               name="consent"
               type="hidden"
               checked
             ></input>
-            {__(
-              "By submitting your information, you are granting us permission to email you. You may unsubscribe at any time.",
-              "cewp4"
-            )}
-          </span>
+            <RichText.Content tagName="label" value={attributes.disclaimer} />
+          </div>
         )}
         {attributes.emailPermission == "checkbox" && (
-          <span>
+          <div className="disclaimer">
             <input
               className="consent_check"
               name={`consent_check_${attributes.blockId}`}
               id={`consent_check_${attributes.blockId}`}
               type="checkbox"
             />
-            <label
+            <RichText.Content
               htmlFor={`consent_check_${attributes.blockId}`}
-              className="disclaimer"
-            >
-              {__("Can we send you an email from time to time?", "cewp4")}
-            </label>
-          </span>
+              tagName="label"
+              value={attributes.consentLabel}
+              className="disclaimer-label"
+            />
+          </div>
         )}
         <button className="wp-block-button__link submit-button" type="submit">
           {__("Subscribe", "cewp4")}

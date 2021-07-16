@@ -108,4 +108,9 @@ class WorkersFactory {
   public function createWooCommercePastOrdersWorker() {
     return $this->container->get(WooCommercePastOrders::class);
   }
+
+  /** @return SubscribersCountCacheRecalculation */
+  public function createSubscribersCountCacheRecalculationWorker() {
+    return $this->container->get(SubscribersCountCacheRecalculation::class);
+  }
 }

@@ -4,13 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf072e6a69625454407ef91e265493635
+class ComposerStaticInit2c751694e0f0d8de65372ae58e93d526
 {
     public static $files = array (
         'bce4ecd6aabb2a2948e06d0e2c4ea9a6' => __DIR__ . '/..' . '/automattic/jetpack-connection/legacy/load-ixr.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'WCPay\\MultiCurrency\\' => 20,
+        ),
         'M' => 
         array (
             'MyCLabs\\Enum\\' => 13,
@@ -22,6 +26,10 @@ class ComposerStaticInitf072e6a69625454407ef91e265493635
     );
 
     public static $prefixDirsPsr4 = array (
+        'WCPay\\MultiCurrency\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/includes/multi-currency',
+        ),
         'MyCLabs\\Enum\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
@@ -57,6 +65,7 @@ class ComposerStaticInitf072e6a69625454407ef91e265493635
         'Automattic\\Jetpack\\Status' => __DIR__ . '/..' . '/automattic/jetpack-status/src/class-status.php',
         'Automattic\\Jetpack\\Terms_Of_Service' => __DIR__ . '/..' . '/automattic/jetpack-terms-of-service/src/class-terms-of-service.php',
         'Automattic\\Jetpack\\Tracking' => __DIR__ . '/..' . '/automattic/jetpack-tracking/src/class-tracking.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Jetpack_IXR_Client' => __DIR__ . '/..' . '/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php',
         'Jetpack_IXR_ClientMulticall' => __DIR__ . '/..' . '/automattic/jetpack-connection/legacy/class-jetpack-ixr-clientmulticall.php',
         'Jetpack_Options' => __DIR__ . '/..' . '/automattic/jetpack-options/legacy/class-jetpack-options.php',
@@ -66,14 +75,27 @@ class ComposerStaticInitf072e6a69625454407ef91e265493635
         'Jetpack_XMLRPC_Server' => __DIR__ . '/..' . '/automattic/jetpack-connection/legacy/class-jetpack-xmlrpc-server.php',
         'MyCLabs\\Enum\\Enum' => __DIR__ . '/..' . '/myclabs/php-enum/src/Enum.php',
         'MyCLabs\\Enum\\PHPUnit\\Comparator' => __DIR__ . '/..' . '/myclabs/php-enum/src/PHPUnit/Comparator.php',
+        'WCPay\\MultiCurrency\\AdminNotices' => __DIR__ . '/../..' . '/includes/multi-currency/AdminNotices.php',
+        'WCPay\\MultiCurrency\\Compatibility' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility.php',
+        'WCPay\\MultiCurrency\\CountryFlags' => __DIR__ . '/../..' . '/includes/multi-currency/CountryFlags.php',
+        'WCPay\\MultiCurrency\\Currency' => __DIR__ . '/../..' . '/includes/multi-currency/Currency.php',
+        'WCPay\\MultiCurrency\\CurrencySwitcherWidget' => __DIR__ . '/../..' . '/includes/multi-currency/CurrencySwitcherWidget.php',
+        'WCPay\\MultiCurrency\\FrontendCurrencies' => __DIR__ . '/../..' . '/includes/multi-currency/FrontendCurrencies.php',
+        'WCPay\\MultiCurrency\\FrontendPrices' => __DIR__ . '/../..' . '/includes/multi-currency/FrontendPrices.php',
+        'WCPay\\MultiCurrency\\MultiCurrency' => __DIR__ . '/../..' . '/includes/multi-currency/MultiCurrency.php',
+        'WCPay\\MultiCurrency\\Notes\\NoteMultiCurrencyAvailable' => __DIR__ . '/../..' . '/includes/multi-currency/Notes/NoteMultiCurrencyAvailable.php',
+        'WCPay\\MultiCurrency\\RestController' => __DIR__ . '/../..' . '/includes/multi-currency/RestController.php',
+        'WCPay\\MultiCurrency\\Settings' => __DIR__ . '/../..' . '/includes/multi-currency/Settings.php',
+        'WCPay\\MultiCurrency\\UserSettings' => __DIR__ . '/../..' . '/includes/multi-currency/UserSettings.php',
+        'WCPay\\MultiCurrency\\Utils' => __DIR__ . '/../..' . '/includes/multi-currency/Utils.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf072e6a69625454407ef91e265493635::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf072e6a69625454407ef91e265493635::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf072e6a69625454407ef91e265493635::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2c751694e0f0d8de65372ae58e93d526::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2c751694e0f0d8de65372ae58e93d526::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2c751694e0f0d8de65372ae58e93d526::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,5 +1,5 @@
 <?php
- namespace MailPoetVendor\Symfony\Component\Validator\Constraints; if (!defined('ABSPATH')) exit; use MailPoetVendor\Symfony\Component\Validator\Constraint; use MailPoetVendor\Symfony\Component\Validator\ConstraintValidator; use MailPoetVendor\Symfony\Component\Validator\Exception\InvalidOptionsException; use MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedTypeException; use MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedValueException; class UrlValidator extends \MailPoetVendor\Symfony\Component\Validator\ConstraintValidator { const PATTERN = '~^
+ namespace MailPoetVendor\Symfony\Component\Validator\Constraints; if (!defined('ABSPATH')) exit; use MailPoetVendor\Symfony\Component\Validator\Constraint; use MailPoetVendor\Symfony\Component\Validator\ConstraintValidator; use MailPoetVendor\Symfony\Component\Validator\Exception\InvalidOptionsException; use MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedTypeException; use MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedValueException; class UrlValidator extends \MailPoetVendor\Symfony\Component\Validator\ConstraintValidator { public const PATTERN = '~^
             (%s)://                                 # protocol
             (((?:[\\_\\.\\pL\\pN-]|%%[0-9A-Fa-f]{2})+:)?((?:[\\_\\.\\pL\\pN-]|%%[0-9A-Fa-f]{2})+)@)?  # basic auth
             (

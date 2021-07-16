@@ -19,6 +19,7 @@ class WooCommercePluginHandler extends BaseContactFormPluginHandler
     const CHECKOUT_CONSENT_CHECKBOX_ID = 'ce4wp_checkout_consent_checkbox';
     const CHECKOUT_CONSENT_CHECKBOX_VALUE = 'ce4wp_checkout_consent';
     const CHECKOUT_CONSENT_CHECKBOX_VALUE_OLD = 'ce_checkout_consent';
+    var $isSync = false;
 
     public function convertToContactModel($orderId)
     {
@@ -48,7 +49,7 @@ class WooCommercePluginHandler extends BaseContactFormPluginHandler
             if (!empty($contactModel->getEmail())) {
                 $contactModel->setEventType(CE4WP_WC_EVENTTYPE);
                 $contactModel->setOptActionBy(2);
-                $contactModel->setOptIn(false);
+                $contactModel->setOptIn($this->isSync);
                 $contactModel->setOptOut(false);
             }
 
@@ -56,30 +57,34 @@ class WooCommercePluginHandler extends BaseContactFormPluginHandler
                 $contactModel->setPhone($products_detail["_billing_phone"][0]);
             }
 
-            $checkbox_value = null;
-
-            if (!empty($_POST[self::CHECKOUT_CONSENT_CHECKBOX_ID])) {
-                $checkbox_value = esc_attr($_POST[self::CHECKOUT_CONSENT_CHECKBOX_ID]);
-            } else if (!empty($products_detail[self::CHECKOUT_CONSENT_CHECKBOX_ID])) {
-                $checkbox_value = $products_detail[self::CHECKOUT_CONSENT_CHECKBOX_ID];
-            } else if (!empty($_POST[self::CHECKOUT_CONSENT_CHECKBOX_VALUE])) {
-                $checkbox_value = esc_attr($_POST[self::CHECKOUT_CONSENT_CHECKBOX_VALUE]);
-            } else if (!empty($products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE])) {
-                $checkbox_value = $products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE][0]; //this value appears to be in array;
-            } else if (!empty($products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE_OLD])) {
-                $checkbox_value = $products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE_OLD][0]; //this value appears to be in array;
-            }
-
-            if (!is_null($checkbox_value)) {
-                $contactModel->setOptActionBy(1);
-                if ($checkbox_value === true){
-                    $contactModel->setOptIn(true);
-                } elseif ($checkbox_value === false){
-                    $contactModel->setOptIn(false);
-                }
-            }
+            $this->setConsentValues($contactModel, $products_detail);
         }
         return $contactModel;
+    }
+
+    function setConsentValues($contactModel, $products_detail){
+        $checkbox_value = null;
+
+        if (!empty($_POST[self::CHECKOUT_CONSENT_CHECKBOX_ID])) {
+            $checkbox_value = esc_attr($_POST[self::CHECKOUT_CONSENT_CHECKBOX_ID]);
+        } else if (!empty($products_detail[self::CHECKOUT_CONSENT_CHECKBOX_ID])) {
+            $checkbox_value = $products_detail[self::CHECKOUT_CONSENT_CHECKBOX_ID];
+        } else if (!empty($_POST[self::CHECKOUT_CONSENT_CHECKBOX_VALUE])) {
+            $checkbox_value = esc_attr($_POST[self::CHECKOUT_CONSENT_CHECKBOX_VALUE]);
+        } else if (!empty($products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE])) {
+            $checkbox_value = $products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE][0]; //this value appears to be in array;
+        } else if (!empty($products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE_OLD])) {
+            $checkbox_value = $products_detail[self::CHECKOUT_CONSENT_CHECKBOX_VALUE_OLD][0]; //this value appears to be in array;
+        }
+
+        if (!is_null($checkbox_value)) {
+            $contactModel->setOptActionBy(1);
+            if ($checkbox_value == true){
+                $contactModel->setOptIn(true);
+            } elseif ($checkbox_value == false){
+                $contactModel->setOptIn(false);
+            }
+        }
     }
 
     function getContactAddressFromOrder($products_detail)
@@ -153,6 +158,7 @@ class WooCommercePluginHandler extends BaseContactFormPluginHandler
 
             $contactModel = null;
             try {
+                $this->isSync = true;
                 $contactModel = $this->convertToContactModel($products_order->ID);
             } catch (\Exception $exception) {
                 // silent exception

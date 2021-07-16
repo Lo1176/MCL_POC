@@ -4,7 +4,7 @@
 namespace CreativeMail\Managers;
 
 use CreativeMail\CreativeMail;
-use CreativeMail\Modules\Woocommerce\Emails\AbandonedCartEmail;
+use CreativeMail\Modules\WooCommerce\Emails\AbandonedCartEmail;
 use CreativeMail\Helpers\EnvironmentHelper;
 use CreativeMail\Helpers\OptionsHelper;
 use stdClass;
@@ -675,7 +675,9 @@ class EmailManager
     public function redirect_managed_email_settings_to_creative_mail( $email )
     {
         if ($this->is_email_managed($email->id) || $email->id === 'cart_abandoned_ce4wp') {
-            $url = CreativeMail::get_instance()->get_admin_manager()->request_single_sign_on_url_internal("1fabdbe2-95ed-4e1e-a2f3-ba0278f5096f");
+            $url = CreativeMail::get_instance()->get_admin_manager()->request_single_sign_on_url_internal("66eabdb1-5d55-4bc0-a435-0415c5ada60a", array(
+                "woocommerceTemplateSlug" => $email->id
+            ));
             wp_redirect($url);
             exit;
         }

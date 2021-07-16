@@ -1,5 +1,5 @@
 <?php
-namespace CreativeMail\Modules\Woocommerce\Emails;
+namespace CreativeMail\Modules\WooCommerce\Emails;
 
 use WC_Email;
 use WC_Order;

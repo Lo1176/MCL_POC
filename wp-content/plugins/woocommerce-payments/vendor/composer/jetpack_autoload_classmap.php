@@ -6,6 +6,58 @@ $vendorDir = dirname(__DIR__);
 $baseDir   = dirname($vendorDir);
 
 return array(
+	'WCPay\\MultiCurrency\\RestController' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/RestController.php'
+	),
+	'WCPay\\MultiCurrency\\Settings' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/Settings.php'
+	),
+	'WCPay\\MultiCurrency\\FrontendPrices' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/FrontendPrices.php'
+	),
+	'WCPay\\MultiCurrency\\Notes\\NoteMultiCurrencyAvailable' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/Notes/NoteMultiCurrencyAvailable.php'
+	),
+	'WCPay\\MultiCurrency\\UserSettings' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/UserSettings.php'
+	),
+	'WCPay\\MultiCurrency\\Currency' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/Currency.php'
+	),
+	'WCPay\\MultiCurrency\\Utils' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/Utils.php'
+	),
+	'WCPay\\MultiCurrency\\MultiCurrency' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/MultiCurrency.php'
+	),
+	'WCPay\\MultiCurrency\\CurrencySwitcherWidget' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/CurrencySwitcherWidget.php'
+	),
+	'WCPay\\MultiCurrency\\AdminNotices' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/AdminNotices.php'
+	),
+	'WCPay\\MultiCurrency\\CountryFlags' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/CountryFlags.php'
+	),
+	'WCPay\\MultiCurrency\\FrontendCurrencies' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/FrontendCurrencies.php'
+	),
+	'WCPay\\MultiCurrency\\Compatibility' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/Compatibility.php'
+	),
 	'MyCLabs\\Enum\\Enum' => array(
 		'version' => '1.7.7.0',
 		'path'    => $vendorDir . '/myclabs/php-enum/src/Enum.php'

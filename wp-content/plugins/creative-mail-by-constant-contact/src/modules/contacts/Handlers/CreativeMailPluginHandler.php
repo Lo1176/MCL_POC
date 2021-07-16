@@ -19,7 +19,7 @@ class CreativeMailPluginHandler extends BaseContactFormPluginHandler
         $contactModel->setOptIn(false);
         $contactModel->setOptOut(false);
         if (!empty($contact['consent'])) {
-            $consent_bool= $contact['consent'] == 'true';
+            $consent_bool = $contact['consent'] == 'true';
             $contactModel->setOptIn($consent_bool);
         }
         $contactModel->setOptActionBy(OptActionBy::Visitor);
@@ -63,7 +63,36 @@ class CreativeMailPluginHandler extends BaseContactFormPluginHandler
 
     public function get_contacts($limit = null)
     {
-        // We don't store locally yet
+        if (!is_int($limit) || $limit <= 0) {
+            $limit = null;
+        }
+        //Get form submissions from the wp_ce4wp_contacts table
+        global $wpdb;
+        $contactsArray = array();
+
+        //get contacts
+        $contactsQuery = 'SELECT * FROM wp_ce4wp_contacts';
+        $contactsResult = $wpdb->get_results($wpdb->prepare($contactsQuery));
+
+        foreach ($contactsResult as $contact) {
+            $contactModel = null;
+            try {
+                $contact = $this->convertToContactModel(json_decode(json_encode($contact), true));
+                if (!empty($contact->getEmail())) {
+                    array_push($contactsArray, $contact);
+                }
+
+            } catch (\Exception $exception) {
+                RaygunManager::get_instance()->exception_handler($exception);
+                continue;
+            }
+            if (isset($limit) && count($contactsArray) >= $limit) {
+                break;
+            }
+        }
+        if (!empty($contactsArray)) {
+            return $contactsArray;
+        }
         return null;
     }
 }

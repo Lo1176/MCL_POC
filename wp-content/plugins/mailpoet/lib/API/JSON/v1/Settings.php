@@ -16,10 +16,12 @@ use MailPoet\Entities\ScheduledTaskEntity;
 use MailPoet\Form\FormMessageController;
 use MailPoet\Mailer\MailerLog;
 use MailPoet\Newsletter\Sending\ScheduledTasksRepository;
+use MailPoet\Segments\SegmentsRepository;
 use MailPoet\Services\AuthorizedEmailsController;
 use MailPoet\Services\Bridge;
 use MailPoet\Settings\SettingsController;
 use MailPoet\Statistics\StatisticsOpensRepository;
+use MailPoet\Subscribers\SubscribersCountsController;
 use MailPoet\WooCommerce\TransactionalEmails;
 use MailPoet\WP\Functions as WPFunctions;
 use MailPoetVendor\Carbon\Carbon;
@@ -57,6 +59,12 @@ class Settings extends APIEndpoint {
   /** @var FormMessageController */
   private $messageController;
 
+  /** @var SegmentsRepository */
+  private $segmentsRepository;
+
+  /** @var SubscribersCountsController */
+  private $subscribersCountsController;
+
   public $permissions = [
     'global' => AccessControl::PERMISSION_MANAGE_SETTINGS,
   ];
@@ -71,7 +79,9 @@ class Settings extends APIEndpoint {
     StatisticsOpensRepository $statisticsOpensRepository,
     ScheduledTasksRepository $scheduledTasksRepository,
     FormMessageController $messageController,
-    ServicesChecker $servicesChecker
+    ServicesChecker $servicesChecker,
+    SegmentsRepository $segmentsRepository,
+    SubscribersCountsController $subscribersCountsController
   ) {
     $this->settings = $settings;
     $this->bridge = $bridge;
@@ -83,6 +93,8 @@ class Settings extends APIEndpoint {
     $this->statisticsOpensRepository = $statisticsOpensRepository;
     $this->scheduledTasksRepository = $scheduledTasksRepository;
     $this->messageController = $messageController;
+    $this->segmentsRepository = $segmentsRepository;
+    $this->subscribersCountsController = $subscribersCountsController;
   }
 
   public function get() {
@@ -239,5 +251,17 @@ class Settings extends APIEndpoint {
     $task->setType($type);
     $task->setStatus(ScheduledTaskEntity::STATUS_SCHEDULED);
     return $task;
+  }
+
+  public function recalculateSubscribersCountsCache() {
+    $segments = $this->segmentsRepository->findAll();
+    foreach ($segments as $segment) {
+      $this->subscribersCountsController->recalculateSegmentStatisticsCache($segment);
+      if ($segment->isStatic()) {
+        $this->subscribersCountsController->recalculateSegmentGlobalStatusStatisticsCache($segment);
+      }
+    }
+    $this->subscribersCountsController->recalculateSubscribersWithoutSegmentStatisticsCache();
+    return $this->successResponse();
   }
 }

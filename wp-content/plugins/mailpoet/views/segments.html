@@ -33,6 +33,7 @@
     var mailpoet_woocommerce_currency_symbol = <%= json_encode(woocommerce_currency_symbol)  %>;
     var mailpoet_woocommerce_countries = <%= json_encode(woocommerce_countries)  %>;
     var mailpoet_tracking_enabled = <%= json_encode(tracking_enabled) %>;
+    var mailpoet_subscribers_counts_cache_created_at = <%= json_encode(subscribers_counts_cache_created_at) %>;
 
   </script>
 <% endblock %>
@@ -225,5 +226,9 @@
     'anyConditions': _x('<strong>Any</strong> of the following conditions', 'Dynamic segment creation: The user can select join between condition when he has more than one'),
     'filterConnectAnd': _x('and', 'Dynamic segment creation: The user can see logical operator between condition when has more than one'),
     'filterConnectOr': _x('or', 'Dynamic segment creation: The user can see logical operator between condition when has more than one'),
+
+    'subscribersCountWereCalculated': __('Lists and Segments subscribers counts were calculated'),
+    'subscribersMinutesAgo': __('minutes ago'),
+    'recalculateNow': __('Recalculate now'),
   }) %>
 <% endblock %>

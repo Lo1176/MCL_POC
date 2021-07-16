@@ -282,7 +282,6 @@ class Functions {
   /**
    * @param string|array $args
    * @param string|array $deprecated
-   * @return array|int|WP_Error
    */
   public function getTerms($args = [], $deprecated = '') {
     return get_terms($args, $deprecated);

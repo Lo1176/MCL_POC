@@ -3,7 +3,9 @@
 
 namespace CreativeMail\Managers;
 
+use CreativeMail\CreativeMail;
 use CreativeMail\Clients\CreativeMailClient;
+use CreativeMail\Helpers\OptionsHelper;
 
 /**
  * Class CheckoutManager
@@ -38,9 +40,10 @@ class FormManager
      */
     public function add_hooks()
     {
-            add_action('wp_ajax_ce4wp_form_submission', array($this, 'submit_contact'));
-            add_action('wp_ajax_nopriv_ce4wp_form_submission', array($this, 'submit_contact'));
-            add_action('wp_ajax_ce4wp_get_all_custom_lists', array($this, 'get_all_custom_lists'));
+        add_action('wp_ajax_ce4wp_form_submission', array($this, 'submit_contact'));
+        add_action('wp_ajax_nopriv_ce4wp_form_submission', array($this, 'submit_contact'));
+        add_action('wp_ajax_ce4wp_get_all_custom_lists', array($this, 'get_all_custom_lists'));
+        add_action('wp_ajax_ce4wp_creative_email_activated', array($this, 'get_creative_email_activated'));
     }
 
 
@@ -67,6 +70,13 @@ class FormManager
 
         do_action('ce4wp_contact_submission', $data);
 
+        try {
+            //Insert submission into database
+            CreativeMail::get_instance()->get_database_manager()->insert_contact($data);
+        } catch (\Exception $exception) {
+            RaygunManager::get_instance()->exception_handler($exception);
+        }
+
         wp_send_json_success();
     }
 
@@ -86,5 +96,17 @@ class FormManager
         else {
             wp_send_json_error(esc_html__('Could not retrieve data.', self::DOMAIN));
         }
+    }
+
+    public function get_creative_email_activated()
+    {
+        $data = filter_input_array(INPUT_POST, [
+            self::NONCE => FILTER_SANITIZE_STRING
+        ]);
+
+        if (empty($data[self::NONCE]) || !wp_verify_nonce($data[self::NONCE], 'ce4wp_get_creative_email_activated')) {
+            wp_send_json_error(esc_html__('Invalid nonce.', self::DOMAIN));
+        }
+        wp_send_json_success(OptionsHelper::get_instance_id() != null);
     }
 }

@@ -7,10 +7,12 @@ import {
 import {
   SelectControl,
   TextareaControl,
+  TextControl,
   Panel,
   PanelBody,
   PanelRow,
-  ExternalLink
+  ExternalLink,
+  Dashicon,
 } from "@wordpress/components";
 
 import "./editor.scss";
@@ -21,8 +23,14 @@ export const FIELD_SETTING = {
   REQUIRED: "required",
 };
 
-const useCustomLists = () => {
-  const [customLists, setCustomLists] = React.useState([]);
+export const ON_SUBMIT_SETTING = {
+  SUMMARY: "summary",
+  MESSAGE: "message",
+  REDIRECT: "redirect",
+};
+
+const useWPAction = (action, nonce) => {
+  const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [hasLoaded, setHasLoaded] = React.useState(false);
 
@@ -31,23 +39,52 @@ const useCustomLists = () => {
     setLoading(true);
     jQuery
       .post(ce4wp_form_submit_data?.url, {
-        action: "ce4wp_get_all_custom_lists",
-        nonce: ce4wp_form_submit_data?.listNonce,
+        action: action,
+        nonce: nonce,
       })
       .done((response) => {
         setLoading(false);
         setHasLoaded(true);
-        if (response?.data != null && response.data.length != undefined) {
-          setCustomLists(response.data.map((list) => ({
-            label: list.name,
-            value: list.id,
-          })))
+        if (response?.data != null) {
+          setData(response.data);
         }
       });
-  }, [loading, hasLoaded, customLists]);
+  }, [loading, hasLoaded, data]);
 
   return {
+    data,
+    loading,
+    hasLoaded,
+  };
+};
+
+const useCustomLists = () => {
+  const { data, loading, hasLoaded } = useWPAction(
+    "ce4wp_get_all_custom_lists",
+    ce4wp_form_submit_data?.listNonce
+  );
+
+  let customLists = [];
+  if (data != null && data.length != undefined) {
+    customLists = data.map((list) => ({
+      label: list.name,
+      value: list.id,
+    }));
+  }
+  return {
     customLists,
+    loading,
+    hasLoaded,
+  };
+};
+
+const useIsCreativeMailActivated = () => {
+  const { data, loading, hasLoaded } = useWPAction(
+    "ce4wp_creative_email_activated",
+    ce4wp_form_submit_data?.activatedNonce
+  );
+  return {
+    creativeEmailIsActivated: data,
     loading,
     hasLoaded,
   };
@@ -63,10 +100,10 @@ export default function Edit({
   if (!blockId) {
     setAttributes({ blockId: clientId });
   }
-  const { customLists } = useCustomLists()
-
+  const { customLists } = useCustomLists();
+  const { creativeEmailIsActivated } = useIsCreativeMailActivated();
   return (
-    <div className={`wp-block-ce4wp-subscribe ${className ? className : ''}`}>
+    <div className={`wp-block-ce4wp-subscribe ${className ? className : ""}`}>
       <BlockControls key="setting">
         <InspectorControls key="setting">
           <Panel header="Settings">
@@ -122,13 +159,55 @@ export default function Edit({
             <PanelBody title="On submission" initialOpen={true}>
               <PanelRow>
                 <fieldset>
-                  <TextareaControl
-                    label="Message text"
-                    value={attributes.onSubmission}
-                    onChange={(onSubmission) => setAttributes({ onSubmission })}
+                  <SelectControl
+                    label="On submission"
+                    value={attributes.onSubmissionSetting}
+                    options={[
+                      {
+                        label: "Show a custom text message",
+                        value: ON_SUBMIT_SETTING.MESSAGE,
+                      },
+                      {
+                        label: "Show a summary of submitted fields",
+                        value: ON_SUBMIT_SETTING.SUMMARY,
+                      },
+                      {
+                        label: "Redirect",
+                        value: ON_SUBMIT_SETTING.REDIRECT,
+                      },
+                    ]}
+                    onChange={(onSubmissionSetting) =>
+                      setAttributes({ onSubmissionSetting })
+                    }
                   />
                 </fieldset>
               </PanelRow>
+              {attributes.onSubmissionSetting === ON_SUBMIT_SETTING.MESSAGE && (
+                <PanelRow>
+                  <fieldset>
+                    <TextareaControl
+                      label="Message text"
+                      value={attributes.onSubmission}
+                      onChange={(onSubmission) =>
+                        setAttributes({ onSubmission })
+                      }
+                    />
+                  </fieldset>
+                </PanelRow>
+              )}
+              {attributes.onSubmissionSetting === ON_SUBMIT_SETTING.REDIRECT && (
+                <PanelRow>
+                  <fieldset>
+                    <TextControl
+                      label="Redirect link"
+                      value={attributes.redirectLink}
+                      onChange={(redirectLink) =>
+                        setAttributes({ redirectLink })
+                      }
+                    />
+                  </fieldset>
+                </PanelRow>
+              )}
             </PanelBody>
             <PanelBody title="Disclaimer settings" initialOpen={true}>
               <PanelRow className="no-flex">
@@ -258,6 +337,31 @@ export default function Edit({
           }}
           value={attributes.subTitle}
         />
+        {creativeEmailIsActivated === false && (
+          <div
+            className="ce4wp-inline-notification ce4wp-inline-warning ce4wp-banner-clickable"
+            onClick={() =>
+              ce4wpNavigateToDashboard(
+                this,
+                "d25f690a-217a-4d68-9c58-8693965d4673",
+                { source: "ce4wp_form_menu" },
+                ce4wpDashboardStartCallback,
+                ce4wpDashboardFinishCallback
+              )
+            }
+          >
+            <Dashicon className="ce4wp-inline-warning-icon" icon="warning" />
+            <div className="ce4wp-inline-warning-text">
+              {__(
+                "Set up Creative Mail before you use this form on your website."
+              )}
+            </div>
+            <Dashicon
+              className="ce4wp-inline-warning-arrow"
+              icon="arrow-right-alt2"
+            />
+          </div>
+        )}
         {attributes.displayFirstName !== FIELD_SETTING.NOTSHOW && (
           <div className="inputBlock">
             <RichText
@@ -336,26 +440,35 @@ export default function Edit({
           <input className="textwidget" name="email" type="text"></input>
         </div>
         {attributes.emailPermission == "message" && (
-          <span className="disclaimer">
-            {__(
-              "By submitting your information, you are granting us permission to email you. You may unsubscribe at any time.",
-              "cewp4"
-            )}
-          </span>
+          <div className="disclaimer">
+            <RichText
+              tagName="label"
+              className="disclaimer-text"
+              onChange={(disclaimer) => {
+                setAttributes({ disclaimer });
+              }}
+              value={attributes.disclaimer}
+            />
+          </div>
         )}
         {attributes.emailPermission == "checkbox" && (
-          <div>
+          <div className="disclaimer">
             <input
               type="checkbox"
               name={`consent_check_${clientId}`}
               id={`consent_check_${clientId}`}
             />
-            <label htmlFor={`consent_check_${clientId}`} className="disclaimer">
-              {__("Can we send you an email from time to time?", "cewp4")}
-            </label>
+            <RichText
+              htmlFor={`consent_check_${clientId}`}
+              tagName="label"
+              className="consentLabel disclaimer-label"
+              onChange={(consentLabel) => {
+                setAttributes({ consentLabel });
+              }}
+              value={attributes.consentLabel}
+            />
           </div>
         )}
-        <br />
         <button className="wp-block-button__link submit-button" type="button">
           {__("Subscribe", "cewp4")}
         </button>

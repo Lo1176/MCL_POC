@@ -415,15 +415,15 @@ class AdminManager
                 'callback' => null
             ));
             array_push($sub_actions, array(
-                'title'    => esc_html__('WooCommerce', self::DOMAIN_CE4WP),
-                'text'     => '<span id="ce4wp-menu-woocommerce" data-link_reference="1fabdbe2-95ed-4e1e-a2f3-ba0278f5096f">'. __( 'WooCommerce', self::DOMAIN_CE4WP) .'</span>',
-                'slug'     => 'creativemail_woocommerce',
-                'callback' => null
-            ));
-            array_push($sub_actions, array(
                 'title'    => esc_html__('Contacts', self::DOMAIN_CE4WP),
                 'text'     => '<span id="ce4wp-menu-contacts" data-link_reference="836b20fc-9ff1-41b2-912b-a8646caf05a4">'. __( 'Contacts', self::DOMAIN_CE4WP) .'</span>',
                 'slug'     => 'creativemail_contacts',
+                'callback' => null
+            ));
+            array_push($sub_actions, array(
+                'title'    => esc_html__('WooCommerce', self::DOMAIN_CE4WP),
+                'text'     => '<span id="ce4wp-menu-woocommerce" data-link_reference="1fabdbe2-95ed-4e1e-a2f3-ba0278f5096f">'. __( 'WooCommerce', self::DOMAIN_CE4WP) .'</span>',
+                'slug'     => 'creativemail_woocommerce',
                 'callback' => null
             ));
             array_push($sub_actions, array(

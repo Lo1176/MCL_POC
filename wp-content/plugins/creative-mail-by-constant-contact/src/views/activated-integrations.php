@@ -46,6 +46,9 @@ $activated_integrations = CreativeMail::get_instance()->get_integration_manager(
   <div style="color: rgba(0, 0, 0, 0.6);" class="ce4wp-grid">
         <?php
         foreach ($available_integrations as $available_integration) {
+            if ($available_integration->is_hidden_from_suggestions()) {
+                continue;
+            }
             $active = in_array($available_integration, $activated_integrations);
             $checked = $active === true ? 'checked' : '';
             $path = '/assets/p/universal/wordpress-plugin/'.$available_integration->get_slug() .'.png';

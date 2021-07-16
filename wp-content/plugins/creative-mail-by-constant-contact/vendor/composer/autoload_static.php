@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2db489663291a087b9625ad29c014f02
+class ComposerStaticInita6d0a402c6c28219ed112f975dab5938
 {
     public static $prefixLengthsPsr4 = array (
         'F' => 
@@ -78,59 +78,59 @@ class ComposerStaticInit2db489663291a087b9625ad29c014f02
 
     public static $classMap = array (
         'CreativeMail\\Blocks\\LoadBlock' => __DIR__ . '/../..' . '/src/blocks/LoadBlock.php',
-        'CreativeMail\\Clients\\CreativeMailClient' => __DIR__ . '/../..' . '/src/clients/CreativeMailClient.php',
-        'CreativeMail\\Constants\\EnvironmentNames' => __DIR__ . '/../..' . '/src/constants/EnvironmentNames.php',
+        'CreativeMail\\Clients\\CreativeMailClient' => __DIR__ . '/../..' . '/src/Clients/CreativeMailClient.php',
+        'CreativeMail\\Constants\\EnvironmentNames' => __DIR__ . '/../..' . '/src/Constants/EnvironmentNames.php',
         'CreativeMail\\CreativeMail' => __DIR__ . '/../..' . '/src/CreativeMail.php',
-        'CreativeMail\\Exceptions\\CreativeMailException' => __DIR__ . '/../..' . '/src/exceptions/CreativeMailException.php',
-        'CreativeMail\\Helpers\\EncryptionHelper' => __DIR__ . '/../..' . '/src/helpers/EncryptionHelper.php',
-        'CreativeMail\\Helpers\\EnvironmentHelper' => __DIR__ . '/../..' . '/src/helpers/EnvironmentHelper.php',
-        'CreativeMail\\Helpers\\GuidHelper' => __DIR__ . '/../..' . '/src/helpers/GuidHelper.php',
-        'CreativeMail\\Helpers\\OptionsHelper' => __DIR__ . '/../..' . '/src/helpers/OptionsHelper.php',
-        'CreativeMail\\Helpers\\SsoHelper' => __DIR__ . '/../..' . '/src/helpers/SsoHelper.php',
-        'CreativeMail\\Helpers\\ValidationHelper' => __DIR__ . '/../..' . '/src/helpers/ValidationHelper.php',
-        'CreativeMail\\Integrations\\Integration' => __DIR__ . '/../..' . '/src/integrations/Integration.php',
-        'CreativeMail\\Managers\\AdminManager' => __DIR__ . '/../..' . '/src/managers/AdminManager.php',
-        'CreativeMail\\Managers\\ApiManager' => __DIR__ . '/../..' . '/src/managers/ApiManager.php',
-        'CreativeMail\\Managers\\CheckoutManager' => __DIR__ . '/../..' . '/src/managers/CheckoutManager.php',
-        'CreativeMail\\Managers\\DatabaseManager' => __DIR__ . '/../..' . '/src/managers/DatabaseManager.php',
-        'CreativeMail\\Managers\\EmailManager' => __DIR__ . '/../..' . '/src/managers/EmailManager.php',
-        'CreativeMail\\Managers\\FormManager' => __DIR__ . '/../..' . '/src/managers/FormManager.php',
-        'CreativeMail\\Managers\\InstanceManager' => __DIR__ . '/../..' . '/src/managers/InstanceManager.php',
-        'CreativeMail\\Managers\\IntegrationManager' => __DIR__ . '/../..' . '/src/managers/IntegrationManager.php',
-        'CreativeMail\\Managers\\RaygunManager' => __DIR__ . '/../..' . '/src/managers/RaygunManager.php',
-        'CreativeMail\\Modules\\Api\\Models\\ApiRequestItem' => __DIR__ . '/../..' . '/src/modules/api/Models/ApiRequestItem.php',
-        'CreativeMail\\Modules\\Api\\Processes\\ApiBackgroundProcess' => __DIR__ . '/../..' . '/src/modules/api/Processes/ApiBackgroundProcess.php',
-        'CreativeMail\\Modules\\Blog\\Models\\BlogAttachment' => __DIR__ . '/../..' . '/src/modules/blog/models/BlogAttachment.php',
-        'CreativeMail\\Modules\\Blog\\Models\\BlogInformation' => __DIR__ . '/../..' . '/src/modules/blog/models/BlogInformation.php',
-        'CreativeMail\\Modules\\Blog\\Models\\BlogPost' => __DIR__ . '/../..' . '/src/modules/blog/models/BlogPost.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\BaseContactFormPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/BaseContactFormPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\BlueHostBuilderPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/BlueHostBuilderPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\CalderaPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/CalderaPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\ContactFormSevenPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/ContactFormSevenPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\CreativeMailPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/CreativeMailPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\ElementorPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/ElementorPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\FormidablePluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/FormidablePluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\GravityFormsPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/GravityFormsPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\JetpackPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/JetpackPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\NewsLetterContactFormPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/NewsLetterContactFormPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\NinjaFormsPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/NinjaFormsPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\WooCommercePluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/WooCommercePluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Handlers\\WpFormsPluginHandler' => __DIR__ . '/../..' . '/src/modules/contacts/Handlers/WpFormsPluginHandler.php',
-        'CreativeMail\\Modules\\Contacts\\Managers\\ContactsSyncManager' => __DIR__ . '/../..' . '/src/modules/contacts/Managers/ContactsSyncManager.php',
-        'CreativeMail\\Modules\\Contacts\\Models\\ContactAddressModel' => __DIR__ . '/../..' . '/src/modules/contacts/models/ContactAddressModel.php',
-        'CreativeMail\\Modules\\Contacts\\Models\\ContactFormSevenSubmission' => __DIR__ . '/../..' . '/src/modules/contacts/models/ContactFormSevenSubmission.php',
-        'CreativeMail\\Modules\\Contacts\\Models\\ContactModel' => __DIR__ . '/../..' . '/src/modules/contacts/models/ContactModel.php',
-        'CreativeMail\\Modules\\Contacts\\Models\\OptActionBy' => __DIR__ . '/../..' . '/src/modules/contacts/models/OptActionBy.php',
-        'CreativeMail\\Modules\\Contacts\\Processors\\ContactsSyncBackgroundProcessor' => __DIR__ . '/../..' . '/src/modules/contacts/Processes/ContactsSyncBackgroundProcessor.php',
-        'CreativeMail\\Modules\\Contacts\\Services\\ContactsSyncService' => __DIR__ . '/../..' . '/src/modules/contacts/Services/ContactsSyncService.php',
-        'CreativeMail\\Modules\\DashboardWidgetModule' => __DIR__ . '/../..' . '/src/modules/DashboardWidgetModule.php',
-        'CreativeMail\\Modules\\FeedbackNoticeModule' => __DIR__ . '/../..' . '/src/modules/FeedbackNoticeModule.php',
-        'CreativeMail\\Modules\\WooCommerce\\Models\\WCInformationModel' => __DIR__ . '/../..' . '/src/modules/woocommerce/models/WCInformationModel.php',
-        'CreativeMail\\Modules\\WooCommerce\\Models\\WCProductModel' => __DIR__ . '/../..' . '/src/modules/woocommerce/models/WCProductModel.php',
-        'CreativeMail\\Modules\\WooCommerce\\Models\\WCStoreInformation' => __DIR__ . '/../..' . '/src/modules/woocommerce/models/WCStoreInformation.php',
-        'CreativeMail\\Modules\\Woocommerce\\Emails\\AbandonedCartEmail' => __DIR__ . '/../..' . '/src/modules/woocommerce/emails/AbandonedCartEmail.php',
-        'CreativeMail\\Modules\\contacts\\Exceptions\\InvalidContactSyncBackgroundRequestException' => __DIR__ . '/../..' . '/src/modules/contacts/Exceptions/InvalidContactSyncBackgroundRequestException.php',
-        'CreativeMail\\Modules\\contacts\\Exceptions\\InvalidHandlerContactSyncRequestException' => __DIR__ . '/../..' . '/src/modules/contacts/Exceptions/InvalidHandlerContactSyncRequestException.php',
+        'CreativeMail\\Exceptions\\CreativeMailException' => __DIR__ . '/../..' . '/src/Exceptions/CreativeMailException.php',
+        'CreativeMail\\Helpers\\EncryptionHelper' => __DIR__ . '/../..' . '/src/Helpers/EncryptionHelper.php',
+        'CreativeMail\\Helpers\\EnvironmentHelper' => __DIR__ . '/../..' . '/src/Helpers/EnvironmentHelper.php',
+        'CreativeMail\\Helpers\\GuidHelper' => __DIR__ . '/../..' . '/src/Helpers/GuidHelper.php',
+        'CreativeMail\\Helpers\\OptionsHelper' => __DIR__ . '/../..' . '/src/Helpers/OptionsHelper.php',
+        'CreativeMail\\Helpers\\SsoHelper' => __DIR__ . '/../..' . '/src/Helpers/SsoHelper.php',
+        'CreativeMail\\Helpers\\ValidationHelper' => __DIR__ . '/../..' . '/src/Helpers/ValidationHelper.php',
+        'CreativeMail\\Integrations\\Integration' => __DIR__ . '/../..' . '/src/Integrations/Integration.php',
+        'CreativeMail\\Managers\\AdminManager' => __DIR__ . '/../..' . '/src/Managers/AdminManager.php',
+        'CreativeMail\\Managers\\ApiManager' => __DIR__ . '/../..' . '/src/Managers/ApiManager.php',
+        'CreativeMail\\Managers\\CheckoutManager' => __DIR__ . '/../..' . '/src/Managers/CheckoutManager.php',
+        'CreativeMail\\Managers\\DatabaseManager' => __DIR__ . '/../..' . '/src/Managers/DatabaseManager.php',
+        'CreativeMail\\Managers\\EmailManager' => __DIR__ . '/../..' . '/src/Managers/EmailManager.php',
+        'CreativeMail\\Managers\\FormManager' => __DIR__ . '/../..' . '/src/Managers/FormManager.php',
+        'CreativeMail\\Managers\\InstanceManager' => __DIR__ . '/../..' . '/src/Managers/InstanceManager.php',
+        'CreativeMail\\Managers\\IntegrationManager' => __DIR__ . '/../..' . '/src/Managers/IntegrationManager.php',
+        'CreativeMail\\Managers\\RaygunManager' => __DIR__ . '/../..' . '/src/Managers/RaygunManager.php',
+        'CreativeMail\\Modules\\Api\\Models\\ApiRequestItem' => __DIR__ . '/../..' . '/src/Modules/Api/Models/ApiRequestItem.php',
+        'CreativeMail\\Modules\\Api\\Processes\\ApiBackgroundProcess' => __DIR__ . '/../..' . '/src/Modules/Api/Processes/ApiBackgroundProcess.php',
+        'CreativeMail\\Modules\\Blog\\Models\\BlogAttachment' => __DIR__ . '/../..' . '/src/Modules/Blog/Models/BlogAttachment.php',
+        'CreativeMail\\Modules\\Blog\\Models\\BlogInformation' => __DIR__ . '/../..' . '/src/Modules/Blog/Models/BlogInformation.php',
+        'CreativeMail\\Modules\\Blog\\Models\\BlogPost' => __DIR__ . '/../..' . '/src/Modules/Blog/Models/BlogPost.php',
+        'CreativeMail\\Modules\\Contacts\\Exceptions\\InvalidContactSyncBackgroundRequestException' => __DIR__ . '/../..' . '/src/Modules/Contacts/Exceptions/InvalidContactSyncBackgroundRequestException.php',
+        'CreativeMail\\Modules\\Contacts\\Exceptions\\InvalidHandlerContactSyncRequestException' => __DIR__ . '/../..' . '/src/Modules/Contacts/Exceptions/InvalidHandlerContactSyncRequestException.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\BaseContactFormPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/BaseContactFormPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\BlueHostBuilderPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/BlueHostBuilderPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\CalderaPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/CalderaPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\ContactFormSevenPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/ContactFormSevenPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\CreativeMailPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/CreativeMailPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\ElementorPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/ElementorPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\FormidablePluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/FormidablePluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\GravityFormsPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/GravityFormsPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\JetpackPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/JetpackPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\NewsLetterContactFormPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/NewsLetterContactFormPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\NinjaFormsPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/NinjaFormsPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\WooCommercePluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/WooCommercePluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Handlers\\WpFormsPluginHandler' => __DIR__ . '/../..' . '/src/Modules/Contacts/Handlers/WpFormsPluginHandler.php',
+        'CreativeMail\\Modules\\Contacts\\Managers\\ContactsSyncManager' => __DIR__ . '/../..' . '/src/Modules/Contacts/Managers/ContactsSyncManager.php',
+        'CreativeMail\\Modules\\Contacts\\Models\\ContactAddressModel' => __DIR__ . '/../..' . '/src/Modules/Contacts/Models/ContactAddressModel.php',
+        'CreativeMail\\Modules\\Contacts\\Models\\ContactFormSevenSubmission' => __DIR__ . '/../..' . '/src/Modules/Contacts/Models/ContactFormSevenSubmission.php',
+        'CreativeMail\\Modules\\Contacts\\Models\\ContactModel' => __DIR__ . '/../..' . '/src/Modules/Contacts/Models/ContactModel.php',
+        'CreativeMail\\Modules\\Contacts\\Models\\OptActionBy' => __DIR__ . '/../..' . '/src/Modules/Contacts/Models/OptActionBy.php',
+        'CreativeMail\\Modules\\Contacts\\Processors\\ContactsSyncBackgroundProcessor' => __DIR__ . '/../..' . '/src/Modules/Contacts/Processors/ContactsSyncBackgroundProcessor.php',
+        'CreativeMail\\Modules\\Contacts\\Services\\ContactsSyncService' => __DIR__ . '/../..' . '/src/Modules/Contacts/Services/ContactsSyncService.php',
+        'CreativeMail\\Modules\\DashboardWidgetModule' => __DIR__ . '/../..' . '/src/Modules/DashboardWidgetModule.php',
+        'CreativeMail\\Modules\\FeedbackNoticeModule' => __DIR__ . '/../..' . '/src/Modules/FeedbackNoticeModule.php',
+        'CreativeMail\\Modules\\WooCommerce\\Emails\\AbandonedCartEmail' => __DIR__ . '/../..' . '/src/Modules/WooCommerce/Emails/AbandonedCartEmail.php',
+        'CreativeMail\\Modules\\WooCommerce\\Models\\WCInformationModel' => __DIR__ . '/../..' . '/src/Modules/WooCommerce/Models/WCInformationModel.php',
+        'CreativeMail\\Modules\\WooCommerce\\Models\\WCProductModel' => __DIR__ . '/../..' . '/src/Modules/WooCommerce/Models/WCProductModel.php',
+        'CreativeMail\\Modules\\WooCommerce\\Models\\WCStoreInformation' => __DIR__ . '/../..' . '/src/Modules/WooCommerce/Models/WCStoreInformation.php',
         'Defuse\\Crypto\\Core' => __DIR__ . '/..' . '/defuse/php-encryption/src/Core.php',
         'Defuse\\Crypto\\Crypto' => __DIR__ . '/..' . '/defuse/php-encryption/src/Crypto.php',
         'Defuse\\Crypto\\DerivedKeys' => __DIR__ . '/..' . '/defuse/php-encryption/src/DerivedKeys.php',
@@ -167,10 +167,10 @@ class ComposerStaticInit2db489663291a087b9625ad29c014f02
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2db489663291a087b9625ad29c014f02::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2db489663291a087b9625ad29c014f02::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit2db489663291a087b9625ad29c014f02::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit2db489663291a087b9625ad29c014f02::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita6d0a402c6c28219ed112f975dab5938::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita6d0a402c6c28219ed112f975dab5938::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita6d0a402c6c28219ed112f975dab5938::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita6d0a402c6c28219ed112f975dab5938::$classMap;
 
         }, null, ClassLoader::class);
     }
