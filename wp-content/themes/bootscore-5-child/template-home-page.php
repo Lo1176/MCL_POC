@@ -24,11 +24,11 @@ get_header();
                 <?php the_content(); ?>
 
                 <!-- test banner -->
-                <div class="p-5 bg-light rounded-3">
-                    <div class="container-fluid py-5">
+                <div class="p-5 rounded-3" style="background-color: #71110f;">
+                    <div class="container-fluid text-white py-5">
                         <h1 class="display-5 fw-bold">Ligne | W</h1>
                         <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint commodi est ut pariatur, voluptates, libero id maxime tenetur laudantium esse cumque recusandae error neque ratione et odit veritatis, magnam possimus.</p>
-                        <a href="#lw-edito" class="btn btn-outline-dark btn-lg" role="button" aria-pressed="true">En savoir plus</a>
+                        <a href="#lw-edito" class="btn btn-outline-light btn-lg" role="button" aria-pressed="true">En savoir plus</a>
                     </div>
                 </div>
                 <!-- buttons gamme de produit -->
