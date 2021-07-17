@@ -24,15 +24,15 @@ get_header();
                 <?php the_content(); ?>
 
                 <!-- test banner -->
-                <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="p-5 bg-light rounded-3">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold">Ligne | W</h1>
                         <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint commodi est ut pariatur, voluptates, libero id maxime tenetur laudantium esse cumque recusandae error neque ratione et odit veritatis, magnam possimus.</p>
                         <a href="#lw-edito" class="btn btn-outline-dark btn-lg" role="button" aria-pressed="true">En savoir plus</a>
                     </div>
                 </div>
-                <!-- gamme de produit -->
-                <div class="container text-center">
+                <!-- buttons gamme de produit -->
+                <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
                         <label class="btn btn-outline-secondary" for="btnradio1">Couteau sommelier</label>
@@ -51,7 +51,7 @@ get_header();
                 </div>
                 <div class="container-fluid d-flex bg-primary">
                     <!-- test recherche -->
-                    <div class="container col-2 bg-light">
+                    <div class="container-fluid col-2 bg-light">
                         <div class="bg-warning">
 
                             <button class="btn btn-outline-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Rechercher</button>
@@ -67,8 +67,48 @@ get_header();
                         </div>
                     </div>
                     <!-- test gammes -->
-                    <div class="container col-10 row">
-                        <div class="bg-danger">
+                    <div class="container-fluid col-10">
+                        <div class="d-flex flex-wrap col-12 bg-danger">
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product title</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product title</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product title</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product title</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product title</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                </div>
+                            </div>
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="..." alt="Produc image cap">
                                 <div class="card-body">
