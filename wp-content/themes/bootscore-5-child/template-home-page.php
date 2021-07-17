@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home page
+ * Template Name: Home page MCL
  */
 
 get_header();
