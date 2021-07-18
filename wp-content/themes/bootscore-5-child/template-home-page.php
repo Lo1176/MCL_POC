@@ -24,7 +24,8 @@ get_header();
                 </div><!-- container-fluid full width -->
             </header> <!-- end header -->
             <div class="entry-content">
-                <?php #the_content(); ?>
+                <?php #the_content(); 
+                ?>
 
                 <!-- test banner -->
                 <div class="p-5 rounded-3" style="background-color: #71110f;">
@@ -52,10 +53,10 @@ get_header();
 
                     </div>
                 </div>
-                <div class="container-fluid d-flex bg-primary">
+                <div class="container-fluid d-flex">
                     <!-- test LEFT SEARCH  -->
-                    <div class="container-fluid col-2 bg-light">
-                        <div class="bg-warning">
+                    <div class="container-fluid col-2">
+                        <div class="">
 
                             <button class="btn btn-outline-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Rechercher</button>
                             <!-- opened OFFCANVAS search -->
@@ -111,7 +112,7 @@ get_header();
 
                                     <div class="border-top my-3"> </div>
 
-                                    <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+                                    <!-- <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
                                     <label class="btn btn-outline-dark" for="btn-check-2-outlined">Bois</label><br>
                                     <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
                                     <label class="btn btn-outline-dark" for="btn-check-2-outlined">Métal</label><br>
@@ -122,7 +123,7 @@ get_header();
                                     <label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
 
                                     <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-                                    <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+                                    <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label> -->
 
                                     <div class="border-top my-3"> </div>
 
@@ -158,8 +159,19 @@ get_header();
 
                     <!-- test gammes  (PRODUCTS CATEGORIES per BRAND) -->
                     <div class="container-fluid col-10">
-                        <div class="d-flex flex-wrap col-12 bg-danger">
-                            <div class="card m-2" style="width: 18rem;">
+                        <div class="d-flex flex-wrap col-12">
+                            <?php
+                            echo do_shortcode('[products category="ligne-w"]');
+                            ?>
+                            <!-- <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product title</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                </div>
+                            </div> -->
+                            <!-- <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="..." alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Product title</h5>
@@ -214,15 +226,7 @@ get_header();
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
                                     <a href="#" class="btn btn-dark">Go somewhere</a>
                                 </div>
-                            </div>
-                            <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
-                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -250,11 +254,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <?php
-                        echo do_shortcode('[products category="ligne-w"]');
-                        ?>
-                    </div>
+               
                     <!-- <h2 class="text-dark">toto content</h2> -->
 
                 </div>
