@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home page MCL
+ * Template Name: Home page Chateau Laguiole
  */
 
 use Automattic\WooCommerce\Blocks\BlockTypes\SingleProduct;
@@ -30,7 +30,7 @@ get_header();
                 <!-- test banner -->
                 <div class="p-5 rounded-3" style="background-color: #71110f;">
                     <div class="container-fluid text-white py-5">
-                        <h1 class="display-5 fw-bold">Ligne | W</h1>
+                        <h1 class="display-5 fw-bold">Chateau Laguiole</h1>
                         <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint commodi est ut pariatur, voluptates, libero id maxime tenetur laudantium esse cumque recusandae error neque ratione et odit veritatis, magnam possimus.</p>
                         <a href="#lw-edito" class="btn btn-outline-light btn-lg" role="button" aria-pressed="true">En savoir plus</a>
                     </div>
@@ -77,11 +77,14 @@ get_header();
                                                     <!-- <option selected></option> -->
                                                     <option value="" disabled selected hidden>- Produit -</option>
 
-                                                    <option value="Prestige">Prestige</option>
-                                                    <option value="Signature">Signature</option>
-                                                    <option value="L'Origine">L'Origine</option>
-                                                    <option value="L'Iroquois">L'Iroquois</option>
-                                                    <option value="L'Essentiel">L'Essentiel</option>
+                                                    <option value="Classique">Classique</option>
+                                                    <option value="Cru">Grand Cru</option>
+                                                    <option value="Versailles">Versailles</option>
+                                                    <option value="sommelier">Meilleur sommelier</option>
+                                                    <option value="Opus">Opus</option>
+                                                    <option value="Melchior">Melchior</option>
+                                                    <option value="Pliants">Pliants</option>
+                                                    <option value="Table">Table</option>
                                                 </optgroup>
                                                 <!-- <option value="Ligne W">
                                                     <option value="Matéo Gallud">
@@ -161,20 +164,52 @@ get_header();
                     <div class="container-fluid col-10">
                         <div class="d-flex flex-wrap col-12">
                             <?php
-                            echo do_shortcode('[products category="ligne-w"]');
+                            // echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
-                            <!-- <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="../../uploads/2021/07/chat-lag-300x300.png" alt="Produc image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
+                                    <h5 class="card-title">Classique</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
+                                    <a href="#" class="btn btn-dark">Voir le produit</a>
                                 </div>
-                            </div> -->
-                            <!-- <div class="card m-2" style="width: 18rem;">
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="..." alt="Produc image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
+                                    <h5 class="card-title">Grand Cru</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Versailles</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Meilleur sommelier</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Opus</h5>
+                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
+                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Melchior</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
                                     <a href="#" class="btn btn-dark">Go somewhere</a>
                                 </div>
@@ -182,7 +217,7 @@ get_header();
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="..." alt="Produc image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
+                                    <h5 class="card-title">Couteaux Pliants</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
                                     <a href="#" class="btn btn-dark">Go somewhere</a>
                                 </div>
@@ -190,43 +225,11 @@ get_header();
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="..." alt="Produc image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
+                                    <h5 class="card-title">Couteaux de table</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
                                     <a href="#" class="btn btn-dark">Go somewhere</a>
                                 </div>
                             </div>
-                            <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
-                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
-                                </div>
-                            </div>
-                            <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
-                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
-                                </div>
-                            </div>
-                            <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
-                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
-                                </div>
-                            </div>
-                            <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product title</h5>
-                                    <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Go somewhere</a>
-                                </div>
-                            </div> -->
                         </div>
 
                     </div>
@@ -254,7 +257,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-               
+
                     <!-- <h2 class="text-dark">toto content</h2> -->
 
                 </div>
