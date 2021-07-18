@@ -1,0 +1,57 @@
+2021-07-18T09:26:13+00:00 CRITICAL Uncaught Error: Call to undefined function get_single() in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php:256
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 256
+
+2021-07-18T09:26:14+00:00 CRITICAL Uncaught Error: Call to undefined function get_single() in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php:256
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 256
+
+2021-07-18T09:26:37+00:00 CRITICAL Uncaught Error: Call to undefined function get_single() in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php:256
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 256
+
+2021-07-18T09:26:42+00:00 CRITICAL Uncaught Error: Call to undefined function get_single() in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php:256
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 256
+
+2021-07-18T09:37:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_products(), 0 passed in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php on line 256 and exactly 1 expected in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-product-functions.php:29
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php(256): wc_get_products()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#3 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#4 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-product-functions.php à la ligne 29
+
+2021-07-18T09:45:30+00:00 CRITICAL Uncaught Error: Undefined constant "woocommerce_cart" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php:266
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 266
+
+2021-07-18T09:45:30+00:00 CRITICAL Uncaught Error: Undefined constant "woocommerce_cart" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php:266
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 266
+

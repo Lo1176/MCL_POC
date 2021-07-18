@@ -4,6 +4,9 @@
  * Template Name: Home page MCL
  */
 
+use Automattic\WooCommerce\Blocks\BlockTypes\SingleProduct;
+use Automattic\WooCommerce\Blocks\StoreApi\Routes\ProductTags;
+
 get_header();
 ?>
 
@@ -19,9 +22,9 @@ get_header();
                 <div class="container-fluid px-0 pb-5">
 
                 </div><!-- container-fluid full width -->
-            </header>
+            </header> <!-- end header -->
             <div class="entry-content">
-                <?php the_content(); ?>
+                <?php #the_content(); ?>
 
                 <!-- test banner -->
                 <div class="p-5 rounded-3" style="background-color: #71110f;">
@@ -30,7 +33,7 @@ get_header();
                         <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint commodi est ut pariatur, voluptates, libero id maxime tenetur laudantium esse cumque recusandae error neque ratione et odit veritatis, magnam possimus.</p>
                         <a href="#lw-edito" class="btn btn-outline-light btn-lg" role="button" aria-pressed="true">En savoir plus</a>
                     </div>
-                </div>
+                </div> <!-- end banner -->
                 <!-- buttons gamme de produit -->
                 <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -50,12 +53,12 @@ get_header();
                     </div>
                 </div>
                 <div class="container-fluid d-flex bg-primary">
-                    <!-- test recherche -->
+                    <!-- test LEFT SEARCH  -->
                     <div class="container-fluid col-2 bg-light">
                         <div class="bg-warning">
 
                             <button class="btn btn-outline-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Rechercher</button>
-                            <!-- opened search -->
+                            <!-- opened OFFCANVAS search -->
                             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                                 <div class="offcanvas-header">
                                     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu ...</h5>
@@ -151,7 +154,9 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <!-- test gammes -->
+                    <!-- END SEARCH -->
+
+                    <!-- test gammes  (PRODUCTS CATEGORIES per BRAND) -->
                     <div class="container-fluid col-10">
                         <div class="d-flex flex-wrap col-12 bg-danger">
                             <div class="card m-2" style="width: 18rem;">
@@ -245,12 +250,17 @@ get_header();
                             </div>
                         </div>
                     </div>
+                    <div class="container">
+                        <?php
+                        echo do_shortcode('[products category="ligne-w"]');
+                        ?>
+                    </div>
+                    <!-- <h2 class="text-dark">toto content</h2> -->
+
                 </div>
 
-                <!-- <h2 class="text-dark">toto content</h2> -->
+
             </div>
-
-
 
 
             <!-- <footer class="entry-footer">
