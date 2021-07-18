@@ -168,7 +168,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Prestige</h5>
                                     <p class="card-text">Tire-bouchon, bois noble, corne, finition miroir, double levier, écrin en bois make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/prestige/" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -176,7 +176,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Signature</h5>
                                     <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/signature/" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -184,7 +184,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Origine</h5>
                                     <p class="card-text">L’originalité, la simplicité, l’histoire et le retour aux origines du vin and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/origine/" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -192,7 +192,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Iroquois</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/iroquois/" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -200,7 +200,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Essentiel</h5>
                                     <p class="card-text">Consommateurs ou professionnels en quête d’un objet efficace avec un confort d’utilisation optimale up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/essentiel/" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <!-- <div class="card m-2" style="width: 18rem;">
