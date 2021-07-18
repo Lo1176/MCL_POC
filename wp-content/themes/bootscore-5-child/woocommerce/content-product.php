@@ -2,7 +2,8 @@
 
 /**
  * The template for displaying product content within loops
- *
+ * This template will be used for MCL web site
+ * 
  * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you

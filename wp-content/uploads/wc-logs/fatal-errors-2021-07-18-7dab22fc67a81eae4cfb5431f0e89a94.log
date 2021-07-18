@@ -55,3 +55,5 @@ Stack trace:
 #3 {main}
   thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5-child/template-home-page.php à la ligne 266
 
+2021-07-18T10:36:36+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/content-product.php à la ligne 37
+
