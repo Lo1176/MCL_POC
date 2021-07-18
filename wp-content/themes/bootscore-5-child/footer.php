@@ -16,7 +16,7 @@
 
     <div class="bootscore-footer bg-dark pt-5 pb-3">
         <div class="container">
-<h2 class="text-white">PERSONAL FOOTER</h2>
+<!-- <h2 class="text-white">PERSONAL FOOTER</h2> -->
             <!-- Top Footer Widget -->
             <?php if (is_active_sidebar('top-footer')) : ?>
                 <div>
