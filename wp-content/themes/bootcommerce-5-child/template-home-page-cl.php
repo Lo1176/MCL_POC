@@ -169,6 +169,32 @@ get_header();
                             <?php
                             // echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
+
+                            <?php
+                            $params = array(
+                                'posts_per_page' => 0,
+                                'post_type' => 'product'
+                            ); // (1)
+                            $wc_query = new WP_Query($params); // (2)
+                            ?>
+                            <?php if ($wc_query->have_posts()) : // (3) 
+                            ?>
+                                <?php while ($wc_query->have_posts()) : // (4)
+                                    $wc_query->the_post(); // (4.1) 
+                                ?>
+                                    <?php the_title(); // (4.2) 
+                                    ?>
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); // (5) 
+                                ?>
+                            <?php else :  ?>
+                                <p>
+                                    <?php _e('No Products'); // (6) 
+                                    ?>
+                                </p>
+                            <?php endif; ?>
+
+                            
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
@@ -245,7 +271,7 @@ get_header();
                         <p class="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat...
                         </p>
                         <!-- read more -->
-                        <div class="accordion accordion-flush" id="accordionReadMore">
+                        <div class="d-inline-flex accordion accordion-flush" id="accordionReadMore">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="readMore">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">

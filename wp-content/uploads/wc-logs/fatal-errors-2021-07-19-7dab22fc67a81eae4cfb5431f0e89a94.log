@@ -48,3 +48,43 @@ Stack trace:
 
 2021-07-19T13:55:13+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/woocommerce/content-single-product.php à la ligne 66
 
+2021-07-19T17:33:35+00:00 CRITICAL syntax error, unexpected single-quoted string ""]", expecting ")" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 170
+
+2021-07-19T17:34:52+00:00 CRITICAL syntax error, unexpected token "echo" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 179
+
+2021-07-19T17:35:00+00:00 CRITICAL syntax error, unexpected token "echo" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 179
+
+2021-07-19T17:49:44+00:00 CRITICAL Uncaught Error: Undefined constant "toto" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php:181
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 181
+
+2021-07-19T17:49:49+00:00 CRITICAL Uncaught Error: Undefined constant "toto" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php:181
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 181
+
+2021-07-19T17:49:53+00:00 CRITICAL Uncaught Error: Undefined constant "toto" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php:181
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#3 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 181
+
+2021-07-19T17:58:06+00:00 CRITICAL syntax error, unexpected token "echo", expecting "," or ";" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 184
+
+2021-07-19T20:19:42+00:00 CRITICAL syntax error, unexpected token "print" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 177
+
+2021-07-19T20:20:15+00:00 CRITICAL syntax error, unexpected token "echo" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php à la ligne 177
+
+2021-07-19T20:47:15+00:00 CRITICAL Cannot redeclare remove_breadcrumbs() (previously declared in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php:49) dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 55
+
+2021-07-19T20:47:15+00:00 CRITICAL Cannot redeclare remove_breadcrumbs() (previously declared in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php:49) dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 55
+

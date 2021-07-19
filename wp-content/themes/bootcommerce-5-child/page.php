@@ -2,7 +2,10 @@
 
 /**
  * The template for displaying all pages
+ * 
+ * ##########
  * THIS TEMPLATE IS WITH THE LEFT SIDEBAR
+ * ##########
  * 
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages

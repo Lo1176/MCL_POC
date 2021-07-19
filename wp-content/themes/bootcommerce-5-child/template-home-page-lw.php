@@ -163,9 +163,30 @@ get_header();
                     <!-- test gammes  (PRODUCTS CATEGORIES per BRAND) -->
                     <div class="container-fluid col-10">
                         <div class="d-flex flex-wrap col-12">
+
+                            <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
+
+                            <script type="text/javascript">
+
+                                let url = document.location.pathname;
+                                let regex = /.*\/(.*?)\//;
+                                var brand = url.match(regex);
+                                
+                                <?php
+                                echo $brand = "<script>document.write(brand[1])</script>";
+                                
+                                ?>
+                                
+                            </script>
+
                             <?php
-                            // echo do_shortcode('[products category="ligne-w"]');
+                            // print $brand;
+                            // echo $brand;
+                            // echo do_shortcode('[products category= "' . $brand . '" ]');
+                            echo do_shortcode('[products category=ligne-w]');
                             ?>
+
+
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">

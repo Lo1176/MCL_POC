@@ -28,3 +28,35 @@ function wpm_remove_sku($enabled)
     }
     return $enabled;
 }
+
+/* Supprimer le fil d'Ariane de WooCommerce */
+
+// add_action('init', 'wpm_remove_wc_breadcrumbs');
+// function wpm_remove_wc_breadcrumbs()
+// {
+//     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+// }
+
+// remove_action('woocommerce_before_main_content',
+//     'woocommerce_breadcrumb',
+//     20,
+//     0
+// );
+// Remove breadcrumbs from shop & categories
+// add_filter('woocommerce_before_main_content', 'remove_breadcrumbs');
+// function remove_breadcrumbs()
+// {
+//     if (!is_product()) {
+//         remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+//     }
+// }
+
+
+// Remove breadcrumbs only from shop page
+add_filter('woocommerce_before_main_content', 'remove_breadcrumbs');
+function remove_breadcrumbs()
+{
+    if (!is_product() && !is_product_category()) {
+        remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+    }
+}
