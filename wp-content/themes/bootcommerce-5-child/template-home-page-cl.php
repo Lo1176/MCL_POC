@@ -28,7 +28,7 @@ get_header();
                 ?>
 
                 <!-- test banner -->
-                <div class="p-5 rounded-3" style="background-color: #71110f;">
+                <div class="p-5 rounded-3" style="background-color: grey;">
                     <div class="container-fluid text-white py-5">
                         <h1 class="display-5 fw-bold">Chateau Laguiole</h1>
                         <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint commodi est ut pariatur, voluptates, libero id maxime tenetur laudantium esse cumque recusandae error neque ratione et odit veritatis, magnam possimus.</p>

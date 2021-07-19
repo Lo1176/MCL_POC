@@ -51,7 +51,8 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     $classes[] = 'nav-item';
     $classes[] = 'nav-item-' . $item->ID;
     if ($depth && $args->walker->has_children) {
-      $classes[] = 'dropdown-menu dropdown-menu-end';
+      $classes[] = 'dropdown-menu dropdown-menu-end'; // something wrong here, submenus won't show
+      // $classes[] = 'toto-menu';
     }
 
     $class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
