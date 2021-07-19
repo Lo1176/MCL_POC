@@ -38,6 +38,9 @@ get_header();
                 <!-- buttons gamme de produit -->
                 <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
+                        <label class="btn btn-outline-secondary" for="btnradio0">Tous</label>
+
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
                         <label class="btn btn-outline-secondary" for="btnradio1">Couteau sommelier</label>
 
@@ -45,7 +48,7 @@ get_header();
                         <label class="btn btn-outline-secondary" for="btnradio2">Couteau de table</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio3">Autre gamme</label>
+                        <label class="btn btn-outline-secondary" for="btnradio3">Autre gamme; etc ...</label>
 
                         <!-- 3D link -->
                         <a href="https://lignew.clients.arkima.io/configurator/app/index.html" target="_blank" class="btn btn-dark">Personalisation 3D</a>
@@ -164,7 +167,7 @@ get_header();
                             // echo do_shortcode('[products category="ligne-w"]');
                             ?>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="../../uploads/2021/07/chat-lag-300x300.png" alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Prestige</h5>
                                     <p class="card-text">Tire-bouchon, bois noble, corne, finition miroir, double levier, écrin en bois make up the bulk of the product's content.</p>

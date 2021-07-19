@@ -38,6 +38,9 @@ get_header();
                 <!-- buttons gamme de produit -->
                 <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
+                        <label class="btn btn-outline-secondary" for="btnradio0">Tous</label>
+
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
                         <label class="btn btn-outline-secondary" for="btnradio1">Couteau sommelier</label>
 
@@ -167,7 +170,7 @@ get_header();
                             // echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="../../uploads/2021/07/chat-lag-300x300.png" alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Classique</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -175,7 +178,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/35426-thickbox_default/laguiole-pliant-12-cm-abeille-soudee-lame-seule-manche-bois-de-violette-avec-finition-laiton.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Grand Cru</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -183,7 +186,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.lamodeenimages.com/sites/default/files-lmi/images/push/miss-dior-exposition-love-nroses-shanghai-2019-la-mode-en-images-mini.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Versailles</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -191,7 +194,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Meilleur sommelier</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -199,7 +202,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Opus</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -207,7 +210,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Melchior</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -215,7 +218,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux Pliants</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -223,7 +226,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux de table</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
