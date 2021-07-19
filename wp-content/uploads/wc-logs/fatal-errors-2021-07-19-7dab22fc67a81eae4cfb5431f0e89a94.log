@@ -46,3 +46,5 @@ Stack trace:
 #7 {main}
   thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/header.php à la ligne 67
 
+2021-07-19T13:55:13+00:00 CRITICAL syntax error, unexpected token "<", expecting end of file dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/woocommerce/content-single-product.php à la ligne 66
+
