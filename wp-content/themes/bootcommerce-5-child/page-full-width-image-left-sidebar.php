@@ -29,9 +29,7 @@ get_header();
             <div class="container-fluid pb-5">
                 <div class="d-flex entry-content">
                     <?php get_sidebar(); ?>
-                    <?php query_posts('cat=6,7,8&showposts=10');
-                    while (have_posts()) : the_post(); ?> <?php $cpt += 1;
-                                                        endwhile; ?>
+                   
 
                     <!-- test afficher produit de la categorie de la page  -->
                     <?php
@@ -46,7 +44,7 @@ get_header();
                         <?php while ($wc_query->have_posts()) : // (4)
                             $wc_query->the_post(); // (4.1) 
                         ?>
-                            <?php the_title(); // (4.2) 
+                            <?php #the_title(); // (4.2) 
                             ?>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); // (5) 
