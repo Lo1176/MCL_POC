@@ -35,14 +35,14 @@ get_header();
                         <a href="#lw-edito" class="btn btn-outline-light btn-lg" role="button" aria-pressed="true">En savoir plus</a>
                     </div>
                 </div> <!-- end banner -->
-                <!-- buttons gamme de produit -->
+                <!-- SELECT gamme de produit -->
                 <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
                         <label class="btn btn-outline-secondary" for="btnradio0">Tous</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio1">Couteau sommelier</label>
+                        <label class="btn btn-outline-secondary" onclick="location.href='http://localhost/www/MCL_POC/chateau-laguiole/couteaux-sommeliers/'" for="btnradio1">Couteau sommelier</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                         <label class="btn btn-outline-secondary" for="btnradio2">Couteau de table</label>
@@ -194,7 +194,7 @@ get_header();
                                 </p>
                             <?php endif; ?>
 
-                            
+
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
