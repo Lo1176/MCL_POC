@@ -1,6 +1,6 @@
 <?php
     /**
-     * Template Name: Full Width Image
+     * Template Name: Full Width Image with left side bar
      *
      * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
      *
