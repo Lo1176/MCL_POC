@@ -28,10 +28,12 @@ if (empty($product) || !$product->is_visible()) {
 
 <div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
 	<div <?php wc_product_class('card h-100 d-flex text-center', $product); ?>>
+
 		<!-- ##### A EFFACER ##### -->
-		<h2 class="text-warning">A EFFACER THEME-ORIGINAL/WOOCOMMERCE/content-product.PHP</h2>
+		<!-- <h2 class="text-warning">A EFFACER THEME-ORIGINAL/WOOCOMMERCE/content-product.PHP</h2> -->
 		<!-- ##### A EFFACER ##### -->
-		`<?php
+
+		<?php
 		/**
 		 * Hook: woocommerce_before_shop_loop_item.
 		 *
