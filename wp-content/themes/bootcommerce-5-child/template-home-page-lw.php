@@ -74,17 +74,17 @@ get_header();
 
                                     <div class="input-group">
                                         <div class="form-outline mb-2 d-flex">
-                                            <select class="form-select" aria-label="Default select example">
+                                            <select class="form-select" aria-label="Default select example" onchange="window.location.href=this.value;">
 
                                                 <optgroup label="- Produit -" data-max-options="1">
                                                     <!-- <option selected></option> -->
                                                     <option value="" disabled selected hidden>- Produit -</option>
 
-                                                    <option value="Prestige">Prestige</option>
-                                                    <option value="Signature">Signature</option>
-                                                    <option value="L'Origine">L'Origine</option>
-                                                    <option value="L'Iroquois">L'Iroquois</option>
-                                                    <option value="L'Essentiel">L'Essentiel</option>
+                                                    <option value="http://localhost/www/MCL_POC/categorie-produit/prestige/">Prestige</option>
+                                                    <option value="http://localhost/www/MCL_POC/categorie-produit/signature">Signature</option>
+                                                    <option value="http://localhost/www/MCL_POC/categorie-produit/origine">L'Origine</option>
+                                                    <option value="http://localhost/www/MCL_POC/categorie-produit/iroquois">L'Iroquois</option>
+                                                    <option value="http://localhost/www/MCL_POC/categorie-produit/essentiel">L'Essentiel</option>
                                                 </optgroup>
                                                 <!-- <option value="Ligne W">
                                                     <option value="Matéo Gallud">
@@ -175,7 +175,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www2.artetsignature.com/940-large_default/sommelier-en-bois-de-genevrier-forge-de-laguiole.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Signature</h5>
                                     <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
@@ -183,7 +183,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.toc.fr/910-thickbox_default/sommelier-origine-bois.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">L'Origine</h5>
                                     <p class="card-text">L’originalité, la simplicité, l’histoire et le retour aux origines du vin and make up the bulk of the product's content.</p>
@@ -191,7 +191,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.mon-droguiste.com/media/catalog/product/cache/a10f16d04b06e97a621331e929457fb9/s/o/sommelier_iroquois_tendance.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">L'Iroquois</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
@@ -199,7 +199,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">L'Essentiel</h5>
                                     <p class="card-text">Consommateurs ou professionnels en quête d’un objet efficace avec un confort d’utilisation optimale up the bulk of the product's content.</p>
@@ -207,7 +207,7 @@ get_header();
                                 </div>
                             </div>
                             <!-- <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="..." alt="Produc image cap">
+                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Product title</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
