@@ -2,7 +2,7 @@
 
 namespace CreativeMail\Modules\Contacts\Handlers;
 
-define('CE4WP_EL_EVENTTYPE', 'WordPress - Creative Mail Form');
+define('CE4WP_CE_EVENTTYPE', 'WordPress - Creative Mail Form');
 
 use CreativeMail\Managers\RaygunManager;
 use CreativeMail\Modules\Contacts\Models\ContactModel;
@@ -14,7 +14,7 @@ class CreativeMailPluginHandler extends BaseContactFormPluginHandler
     {
         $contactModel = new ContactModel();
 
-        $contactModel->setEventType(CE4WP_EL_EVENTTYPE);
+        $contactModel->setEventType(CE4WP_CE_EVENTTYPE);
 
         $contactModel->setOptIn(false);
         $contactModel->setOptOut(false);

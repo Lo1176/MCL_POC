@@ -3,7 +3,7 @@ Contributors: Constant Contact
 Tags: email, marketing, newsletter, subscribe, contact form, constant contact, crm, automations, ecommerce, promotion, offers, retargeting
 Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.6
@@ -104,6 +104,7 @@ Creative Mail by Constant Contact [Privacy Notice](https://www.endurance.com/pri
 6. Enhance your brand with logomaker
 
 == Changelog ==
+* 1.4.2 - Fixed a crash that could occur when using the elementor contact sync.
 * 1.4.1 - Fixed several bugs
 * 1.4.0 - Added gutenberg contact form block CreativeMail
 * 1.3.9 - Include notice when you have enabled a password protection plugin.
