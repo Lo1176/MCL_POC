@@ -57,11 +57,11 @@ get_header();
                     </div>
                 </div>
                 <div class="container-fluid d-flex">
-                    <!-- test LEFT SEARCH  -->
+                    <!-- test LEFT MENU  -->
                     <div class="container-fluid col-2">
                         <div class="">
-
-                            <button class="btn btn-outline-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Rechercher</button>
+                            <!-- OPEN MENU burger -->
+                            <button class="btn btn-outline-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">|||</button>
                             <!-- opened OFFCANVAS search -->
                             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                                 <div class="offcanvas-header">
@@ -158,7 +158,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <!-- END SEARCH -->
+                    <!-- END MENU -->
 
                     <!-- test gammes  (PRODUCTS CATEGORIES per BRAND) -->
                     <div class="container-fluid col-10">
@@ -182,6 +182,7 @@ get_header();
                             <?php
                             // print $brand;
                             // echo $brand;
+                            
                             // echo do_shortcode('[products category= "' . $brand . '" ]');
                             echo do_shortcode('[products category=ligne-w]');
                             ?>
