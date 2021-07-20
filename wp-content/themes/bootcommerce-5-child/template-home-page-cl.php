@@ -167,36 +167,36 @@ get_header();
                     <div class="container-fluid col-10">
                         <div class="d-flex flex-wrap col-12">
                             <?php
-                            echo do_shortcode('[products category="chateau-laguiole[1]"]');
+                            #echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
 
-                     
+
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-classique-bois-erable-scaled.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Classique</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-classique/'); ?>" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/35426-thickbox_default/laguiole-pliant-12-cm-abeille-soudee-lame-seule-manche-bois-de-violette-avec-finition-laiton.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-Grand-Cru-bois-débène-entretoise-jaune--scaled.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Grand Cru</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-grand-cru/'); ?>" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.lamodeenimages.com/sites/default/files-lmi/images/push/miss-dior-exposition-love-nroses-shanghai-2019-la-mode-en-images-mini.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-Versailles-Genévrier-scaled.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Versailles</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-versailles/'); ?>" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CLME3033Enrico-Bernardo--scaled.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Meilleur sommelier</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -204,7 +204,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CLSOG0201-Grand-Cru-Opus-N°-2-Cocobolo-wood-scaled.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Opus</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -212,7 +212,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-melchior-ironwood.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Melchior</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -220,7 +220,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/COPGC7102-Corne-blonde-White-horn-1-scaled.jpg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux Pliants</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -228,11 +228,12 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content//uploads/2021/07/chateau-laguiole-steak-knives-brazilian-rosewood-set-of-6-chateau-laguioler-made-in-france_5000x.jpg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux de table</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
                                     <a href="#" class="btn btn-dark">Voir le produit</a>
+
                                 </div>
                             </div>
                         </div>

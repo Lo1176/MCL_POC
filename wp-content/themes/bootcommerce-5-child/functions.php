@@ -60,3 +60,10 @@ function remove_breadcrumbs()
         remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
     }
 }
+
+// for my images ...
+function homeURLshortcode()
+{
+    return home_url();
+}
+add_shortcode('homeurl', 'homeURLshortcode');
