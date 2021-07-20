@@ -167,7 +167,7 @@ get_header();
                     <div class="container-fluid col-10">
                         <div class="d-flex flex-wrap col-12">
                             <?php
-                            // echo do_shortcode('[products category="chateau-laguiole"]');
+                            echo do_shortcode('[products category="chateau-laguiole[1]"]');
                             ?>
 
                      
