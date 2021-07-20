@@ -170,31 +170,7 @@ get_header();
                             // echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
 
-                            <?php
-                            $params = array(
-                                'posts_per_page' => 0,
-                                'post_type' => 'product'
-                            ); // (1)
-                            $wc_query = new WP_Query($params); // (2)
-                            ?>
-                            <?php if ($wc_query->have_posts()) : // (3) 
-                            ?>
-                                <?php while ($wc_query->have_posts()) : // (4)
-                                    $wc_query->the_post(); // (4.1) 
-                                ?>
-                                    <?php the_title(); // (4.2) 
-                                    ?>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); // (5) 
-                                ?>
-                            <?php else :  ?>
-                                <p>
-                                    <?php _e('No Products'); // (6) 
-                                    ?>
-                                </p>
-                            <?php endif; ?>
-
-
+                     
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
                                 <div class="card-body">
