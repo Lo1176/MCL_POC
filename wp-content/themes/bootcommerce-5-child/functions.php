@@ -15,22 +15,23 @@ function bootscore_5_child_enqueue_styles()
 // WooCommerce
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
-
+##### CONTENT-PRODUCT #####
 // Archives pages: Additional button linked to the product
-add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
-function loop_continue_button()
-{
-    global $product;
+// add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
+// function loop_continue_button()
+// {
+    //     global $product;
+    
+    //     if ($product->is_type('simple')) {
+        //         $link = $product->get_permalink();
+        //         $text = __("Continue", "woocommerce");
+        
+        //         echo '<a href="' . $link . '" class="button alt" style="margin-top:10px;">' . $text . '</a>';
+        //     }
+        // }
+add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
 
-    if ($product->is_type('simple')) {
-        $link = $product->get_permalink();
-        $text = __("Continue", "woocommerce");
-
-        echo '<a href="' . $link . '" class="button alt" style="margin-top:10px;">' . $text . '</a>';
-    }
-}
-
-##### SINGLE-PRODUCT #####
+##### CONTENT-SINGLE-PRODUCT #####
 // Single product pages: Additional button linked to checkout
 add_action('woocommerce_single_product_summary', 'product_additional_3D_button', 1);
 function product_additional_3D_button()
@@ -50,8 +51,8 @@ function product_additional_3D_button()
 function custom_3D_button()
 {
     $link = "https://lignew.clients.arkima.io/configurator/app/index.html";
-    $text = __("Proceed to 3D", "woocommerce");
-    echo '<a href="' . $link . '" class="btn btn-danger alt" style="margin-bottom:14px;">' . $text . '</a>';
+    $text = __("Custumize with 3D app", "woocommerce");
+    echo '<a href="' . $link . '" class="btn btn-danger target="_blank" alt" style="margin-bottom:14px;">' . $text . '</a>';
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */

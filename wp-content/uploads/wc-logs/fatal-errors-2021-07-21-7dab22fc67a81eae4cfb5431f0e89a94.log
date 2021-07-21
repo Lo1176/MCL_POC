@@ -20,3 +20,19 @@ Stack trace:
 
 2021-07-21T14:00:29+00:00 CRITICAL syntax error, unexpected token ":" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 52
 
+2021-07-21T14:10:51+00:00 CRITICAL syntax error, unexpected token ";" dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 42
+
+2021-07-21T14:14:15+00:00 CRITICAL Unclosed '{' on line 22 dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 139
+
+2021-07-21T14:15:58+00:00 CRITICAL Unclosed '{' on line 22 dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 139
+
+2021-07-21T14:16:47+00:00 CRITICAL Uncaught Error: Call to a member function is_type() on null in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php:25
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-settings.php(528): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-config.php(90): require_once('/Users/laurentb...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/wp-load.php(37): require_once('/Users/laurentb...')
+#3 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(13): require_once('/Users/laurentb...')
+#4 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#5 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php à la ligne 25
+
