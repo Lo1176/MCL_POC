@@ -16,6 +16,44 @@ function bootscore_5_child_enqueue_styles()
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
 
+// Archives pages: Additional button linked to the product
+add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
+function loop_continue_button()
+{
+    global $product;
+
+    if ($product->is_type('simple')) {
+        $link = $product->get_permalink();
+        $text = __("Continue", "woocommerce");
+
+        echo '<a href="' . $link . '" class="button alt" style="margin-top:10px;">' . $text . '</a>';
+    }
+}
+
+##### SINGLE-PRODUCT #####
+// Single product pages: Additional button linked to checkout
+add_action('woocommerce_single_product_summary', 'product_additional_3D_button', 1);
+function product_additional_3D_button()
+{
+    global $product;
+
+    // For variable product types
+    if ($product->is_type('variable')) {
+        add_action('woocommerce_single_product_summary', 'custom_3D_button', 21);
+    }
+    // For all other product types
+    else {
+        add_action('woocommerce_single_product_summary', 'custom_3D_button', 31);
+    }
+}
+
+function custom_3D_button()
+{
+    $link = "https://lignew.clients.arkima.io/configurator/app/index.html";
+    $text = __("Proceed to 3D", "woocommerce");
+    echo '<a href="' . $link . '" class="btn btn-danger alt" style="margin-bottom:14px;">' . $text . '</a>';
+}
+
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
 
 add_filter('wc_product_sku_enabled', 'wpm_remove_sku');
@@ -28,6 +66,9 @@ function wpm_remove_sku($enabled)
     }
     return $enabled;
 }
+
+##### END ----- SINGLE-PRODUCT #####
+
 
 /* Supprimer le fil d'Ariane de WooCommerce */
 
@@ -70,7 +111,7 @@ function homeURLshortcode()
 }
 add_shortcode('homeurl', 'homeURLshortcode');
 
-
+// ############ A VERIFIER CA NE SEMBLE PAS MARCHER ###############
 /**
  * Change number or products per row to 3
  */

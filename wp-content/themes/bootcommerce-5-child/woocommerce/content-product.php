@@ -30,9 +30,9 @@ if (empty($product) || !$product->is_visible()) {
 	<div <?php wc_product_class('card m-2 h-100 d-flex text-center', $product); ?>>
 
 		<!-- ##### A EFFACER ##### -->
-		<!-- <h2 class="text-warning">A EFFACER THEME-ORIGINAL/WOOCOMMERCE/content-product.PHP</h2> -->
+		<h2 class="text-warning">A EFFACER THEME-ORIGINAL/WOOCOMMERCE/content-product.PHP</h2>
 		<!-- ##### A EFFACER ##### -->
-
+		
 		<?php
 		/**
 		 * Hook: woocommerce_before_shop_loop_item.
@@ -58,7 +58,6 @@ if (empty($product) || !$product->is_visible()) {
 			 * @hooked woocommerce_template_loop_product_title - 10
 			 */
 			do_action('woocommerce_shop_loop_item_title');
-
 			/**
 			 * Hook: woocommerce_after_shop_loop_item_title.
 			 *
