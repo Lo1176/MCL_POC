@@ -47,3 +47,12 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* font size @media  */
+@media (min-width: 1200px) {
+
+  .card-body h2 {
+    font-size: 1.5rem;
+    /* color: red; */
+  }
+}

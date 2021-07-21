@@ -42,13 +42,13 @@ get_header();
                         <label class="btn btn-outline-secondary" for="btnradio0">Tous</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio1">Couteau sommelier</label>
+                        <label class="btn btn-outline-secondary" for="btnradio1">Couteaux sommeliers</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio2">Couteau de table</label>
+                        <label class="btn btn-outline-secondary" for="btnradio2">Couteaux de table</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio3">Autre gamme; etc ...</label>
+                        <label class="btn btn-outline-secondary" for="btnradio3">Couteaux pliants</label>
 
                         <!-- 3D link -->
                         <a href="https://lignew.clients.arkima.io/configurator/app/index.html" target="_blank" class="btn btn-dark">Personalisation 3D</a>
@@ -191,7 +191,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Prestige</h5>
                                     <p class="card-text">Tire-bouchon, bois noble, corne, finition miroir, double levier, écrin en bois make up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/prestige//'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/prestige//'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -199,7 +199,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Signature</h5>
                                     <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
-                                    <a href="http://localhost/www/MCL_POC/categorie-produit/signature/" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/signature/" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -207,7 +207,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Origine</h5>
                                     <p class="card-text">L’originalité, la simplicité, l’histoire et le retour aux origines du vin and make up the bulk of the product's content.</p>
-                                    <a href="http://localhost/www/MCL_POC/categorie-produit/origine/" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/origine/" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -215,7 +215,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Iroquois "colors"</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -223,7 +223,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Iroquois "zinc"</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -231,7 +231,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Iroquois "wood"</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-wood/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-wood/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -239,7 +239,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Iroquois "urban"</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-urban/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-urban/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -247,7 +247,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">L'Essentiel</h5>
                                     <p class="card-text">Consommateurs ou professionnels en quête d’un objet efficace avec un confort d’utilisation optimale up the bulk of the product's content.</p>
-                                    <a href="http://localhost/www/MCL_POC/categorie-produit/essentiel/" class="btn btn-dark">Voir le produit</a>
+                                    <a href="http://localhost/www/MCL_POC/categorie-produit/essentiel/" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <!-- <div class="card m-2" style="width: 18rem;">

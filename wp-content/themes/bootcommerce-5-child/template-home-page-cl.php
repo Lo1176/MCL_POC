@@ -42,13 +42,13 @@ get_header();
                         <label class="btn btn-outline-secondary" for="btnradio0">Tous</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label class="btn btn-outline-secondary" onclick="location.href='http://localhost/www/MCL_POC/chateau-laguiole/couteaux-sommeliers/'" for="btnradio1">Couteau sommelier</label>
+                        <label class="btn btn-outline-secondary" onclick="location.href='http://localhost/www/MCL_POC/chateau-laguiole/couteaux-sommeliers/'" for="btnradio1">Couteaux sommeliers</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio2">Couteau de table</label>
+                        <label class="btn btn-outline-secondary" for="btnradio2">Couteaux pliants</label>
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio3">Autre gamme</label>
+                        <label class="btn btn-outline-secondary" for="btnradio3">Couteaux de table</label>
 
                         <!-- 3D link -->
                         <a href="https://lignew.clients.arkima.io/configurator/app/index.html" target="_blank" class="btn btn-dark">Personalisation 3D</a>
@@ -176,7 +176,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Classique</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-classique/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-classique/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -184,7 +184,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Grand Cru</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-grand-cru/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-grand-cru/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -192,7 +192,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Versailles</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-versailles/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-versailles/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -200,7 +200,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Meilleur sommelier</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="#" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -208,7 +208,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Opus</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="#" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -216,7 +216,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Melchior</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="#" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -224,7 +224,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux Pliants</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="#" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -232,7 +232,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux de table</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir le produit</a>
+                                    <a href="#" class="btn btn-dark">Voir les produits</a>
 
                                 </div>
                             </div>

@@ -1,3 +1,6 @@
 .DS_Store
 logs/
-wp-content/backups-dup-lite/
+/wp-content/backups-dup-lite/
+/wp-content/backups-dup-lite/*
+wp-content/backups-dup-lite/*
+
