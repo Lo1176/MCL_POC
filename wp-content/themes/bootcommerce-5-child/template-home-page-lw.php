@@ -167,33 +167,31 @@ get_header();
                             <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
 
                             <script type="text/javascript">
-
                                 let url = document.location.pathname;
                                 let regex = /.*\/(.*?)\//;
                                 var brand = url.match(regex);
-                                
+
                                 <?php
                                 echo $brand = "<script>document.write(brand[1])</script>";
-                                
+
                                 ?>
-                                
                             </script>
 
                             <?php
                             // print $brand;
                             // echo $brand;
-                            
+
                             // echo do_shortcode('[products category= "' . $brand . '" ]');
-                            echo do_shortcode('[products category=ligne-w]');
+                           # echo do_shortcode('[products category=ligne-w]');
                             ?>
 
 
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-prestige-corne.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Prestige</h5>
                                     <p class="card-text">Tire-bouchon, bois noble, corne, finition miroir, double levier, écrin en bois make up the bulk of the product's content.</p>
-                                    <a href="http://localhost/www/MCL_POC/categorie-produit/prestige/" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/prestige//'); ?>" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -213,11 +211,35 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www.mon-droguiste.com/media/catalog/product/cache/a10f16d04b06e97a621331e929457fb9/s/o/sommelier_iroquois_tendance.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-color-vinyard-scaled-1.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title">L'Iroquois</h5>
+                                    <h5 class="card-title">L'Iroquois "colors"</h5>
                                     <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-                                    <a href="http://localhost/www/MCL_POC/categorie-produit/iroquois/" class="btn btn-dark">Voir le produit</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-zinc-pack-scaled-1.jpeg'); ?>" alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">L'Iroquois "zinc"</h5>
+                                    <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-wood-pack-scaled-1.jpeg'); ?>" alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">L'Iroquois "wood"</h5>
+                                    <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-wood/'); ?>" class="btn btn-dark">Voir le produit</a>
+                                </div>
+                            </div>
+                            <div class="card m-2" style="width: 18rem;">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-URBAN-COMICS-pack-scaled.jpeg'); ?>" alt="Produc image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">L'Iroquois "urban"</h5>
+                                    <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-urban/'); ?>" class="btn btn-dark">Voir le produit</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
