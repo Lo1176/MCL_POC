@@ -41,11 +41,12 @@ get_header();
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
                         <label class="btn btn-outline-secondary" for="btnradio0">Tous</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label class="btn btn-outline-secondary" onclick="location.href='http://localhost/www/MCL_POC/chateau-laguiole/couteaux-sommeliers/'" for="btnradio1">Couteaux sommeliers</label>
+                        <a class="btn btn-outline-dark" href="<?php echo do_shortcode('[homeurl]/chateau-laguiole/couteaux-sommeliers/'); ?>">Couteaux sommeliers
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-secondary" for="btnradio2">Couteaux pliants</label>
+                        <a class="btn btn-outline-dark" href="<?php echo do_shortcode('[homeurl]/chateau-laguiole/chateau-laguiole-couteaux-pliants/'); ?>">Couteaux pliants
+                        </a>
+
 
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                         <label class="btn btn-outline-secondary" for="btnradio3">Couteaux de table</label>
