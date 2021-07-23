@@ -76,8 +76,7 @@ get_header();
                                         <div class="form-outline mb-2 d-flex">
                                             <select class="form-select" aria-label="Default select example" onchange="window.location.href=this.value;">
 
-                                                <optgroup label="- Produit -" data-max-options="1">
-                                                    <!-- <option selected></option> -->
+                                                <!-- <optgroup label="- Produit -" data-max-options="1">
                                                     <option value="" disabled selected hidden>- Produit -</option>
 
                                                     <option value="http://localhost/www/MCL_POC/categorie-produit/prestige/">Prestige</option>
@@ -85,7 +84,7 @@ get_header();
                                                     <option value="http://localhost/www/MCL_POC/categorie-produit/origine">L'Origine</option>
                                                     <option value="http://localhost/www/MCL_POC/categorie-produit/iroquois">L'Iroquois</option>
                                                     <option value="http://localhost/www/MCL_POC/categorie-produit/essentiel">L'Essentiel</option>
-                                                </optgroup>
+                                                </optgroup> -->
                                                 <!-- <option value="Ligne W">
                                                     <option value="Matéo Gallud">
                                                         <option value="Guy Vialis"> -->
@@ -182,7 +181,7 @@ get_header();
                             // echo $brand;
 
                             // echo do_shortcode('[products category= "' . $brand . '" ]');
-                           # echo do_shortcode('[products category=ligne-w]');
+                            # echo do_shortcode('[products category=ligne-w]');
                             ?>
 
 
@@ -195,7 +194,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="https://www2.artetsignature.com/940-large_default/sommelier-en-bois-de-genevrier-forge-de-laguiole.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="[homeurl]/wp-content/uploads/2021/07/LW-signature.jpg" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Signature</h5>
                                     <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
