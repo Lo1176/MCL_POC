@@ -194,7 +194,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="[homeurl]/wp-content/uploads/2021/07/LW-signature.jpg" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-signature.jepg'); ?> alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Signature</h5>
                                     <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
