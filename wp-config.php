@@ -37,6 +37,13 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+// // redirect localhost to http -> not working
+// define('WP_SITEURL', 'http://localhost/www/MCL_poc');
+// define('WP_HOME',    'http://localhost/www/MCL_poc');
+
+// define( 'WP_CACHE', false );
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
