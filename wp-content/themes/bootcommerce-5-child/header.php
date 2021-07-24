@@ -61,21 +61,6 @@
                             <div class="offcanvas-header hover cursor-pointer bg-dark text-danger" data-bs-dismiss="offcanvas">
                                 <i class="fas fa-chevron-left"></i> <?php esc_html_e('Close menu', 'bootscore'); ?>
                             </div>
-                            <div class="offcanvas-body">
-                                <!-- Bootstrap 5 Nav Walker Main Menu -->
-                                <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'my-navigation-menu',
-                                    'container' => false,
-                                    'menu_class' => '',
-                                    'fallback_cb' => '__return_false',
-                                    'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s">%3$s</ul>',
-                                    'depth' => 2,
-                                    'walker' => new bootstrap_5_wp_nav_menu_walker()
-                                ));
-                                ?>
-                                <!-- Bootstrap 5 Nav Walker Main Menu End -->
-                            </div>
                         </div>
 
                         <div class="header-actions d-flex align-items-center">
