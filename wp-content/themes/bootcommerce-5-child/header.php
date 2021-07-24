@@ -46,7 +46,7 @@
                     <div class="container-fluid">
                         <!-- SideNav Menu -->
                         <!-- Navbar Toggler Right for large devise-->
-                        <button class="btn btn-outline-primary d-lg-block d-md-none d-sm-none mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <i class="fas fa-bars"></i>
                         </button>
 
@@ -65,7 +65,7 @@
 
                         <div class="header-actions d-flex align-items-center">
 
-                            <!-- Top Nav Widget -->
+                            <!-- Top Nav Widget select the one you prefere-->
                             <div class="top-nav-widget">
                                 <?php if (is_active_sidebar('top-nav')) : ?>
                                     <div class="d-flex">
@@ -103,7 +103,7 @@
                             </button>
 
                             <!-- Navbar Toggler Right for small devise-->
-                            <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+                            <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                                 <i class="fas fa-bars"></i>
                             </button>
 
