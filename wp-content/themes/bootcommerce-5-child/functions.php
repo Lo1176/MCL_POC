@@ -15,6 +15,19 @@ function bootscore_5_child_enqueue_styles()
 // WooCommerce
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
+##### Menu #####
+/* 
+* add Custom Navigation Menu
+*/
+
+function lbi_custom_new_menu()
+{
+    register_nav_menu('my-navigation-menu', __('Navigation menu'));
+}
+add_action('init', 'lbi_custom_new_menu');
+
+/* end Custom Navigation Menu*/
+
 ##### CONTENT-PRODUCT #####
 // Archives pages: Additional button linked to the product
 // add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
