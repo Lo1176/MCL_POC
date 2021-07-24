@@ -76,12 +76,6 @@
 
                             </div>
 
-                            <!-- Search Toggler -->
-                            <!-- <button class="btn btn-outline-secondary ms-1 ms-md-2 top-nav-search-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
-                                <i class="fas fa-search"></i>
-                            </button> -->
-                            <!-- loop de recherche toute seule et inutile permet d'ouvrir le widget search... -->
-
                             <!-- User Toggler -->
                             <button class="btn btn-outline-secondary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
                                 <i class="fas fa-user"></i>
