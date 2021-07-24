@@ -43,7 +43,24 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-light navbar-light">
 
-                    <div class="container">
+                    <div class="container-fluid">
+                        <!-- SideNav Menu -->
+                        <!-- Sidenav -->
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Collapsed content</h5>
+                                <span class="text-muted">Toggleable via the navbar brand.</span>
+                            </div>
+                        </div>
+                        <nav class="navbar navbar-dark bg-dark">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                        <!-- Sidenav -->
+                        <!-- END SideNav Menu -->
 
                         <!-- Navbar Brand -->
                         <a class="navbar-brand xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
@@ -58,7 +75,7 @@
                                 <!-- Bootstrap 5 Nav Walker Main Menu -->
                                 <?php
                                 wp_nav_menu(array(
-                                    'theme_location' => 'main-menu',
+                                    'theme_location' => 'my-navigation-menu',
                                     'container' => false,
                                     'menu_class' => '',
                                     'fallback_cb' => '__return_false',
@@ -133,30 +150,23 @@
 
 
             </div><!-- .fixed-top .bg-light -->
-            <div class="offcanvas-body sticky-top">
+            <nav class="offcanvas-body">
                 <!-- Bootstrap 5 Nav Walker Main Menu -->
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'my-navigation-menu',
                     'container' => false,
+                    //'container_class' => 'custom-menu-class',
                     'menu_class' => '',
                     'fallback_cb' => '__return_false',
-                    'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav text-dark navbar-light bg-light ms-auto %2$s">%3$s</ul>',
+                    'items_wrap' => '<ul id="bootscore-navbar" class="navbar ms-auto %2$s">%3$s</ul>',
                     'depth' => 2,
                     'container_class' => 'custom-menu-class',
                     'walker' => new bootstrap_5_wp_nav_menu_walker()
                 ));
                 ?>
+                <!-- 'items_wrap' => '<ul id="bootscore-navbar" class="navbar navbar-nav navbar-expand-lg navbar-light bg-light ms-auto %2$s">%3$s</ul>', -->
                 <!-- Bootstrap 5 Nav Walker Main Menu End -->
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'my-navigation-menu',
-                    'container_class' => 'custom-menu-class'
-                ));
-                ?>
-
             </nav>
 
             <!-- offcanvas user -->
