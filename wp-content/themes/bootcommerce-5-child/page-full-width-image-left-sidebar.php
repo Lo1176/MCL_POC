@@ -20,7 +20,7 @@ get_header();
         <main id="main" class="site-main">
 
             <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-            <header class="entry-header featured-full-width-img height-75 bg-dark text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
+            <header class="entry-header featured-full-width-img height-75 bg-dark text-white mb-3" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.9) 100%), url('<?php echo $thumb['0']; ?>');">
                 <div class="container entry-header h-100 d-flex align-items-end pb-3">
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                 </div>
@@ -29,32 +29,6 @@ get_header();
             <div class="container-fluid pb-5">
                 <div class="d-flex entry-content">
                     <?php get_sidebar(); ?>
-                   
-
-                    <!-- test afficher produit de la categorie de la page  -->
-                    <?php
-                    $params = array(
-                        'posts_per_page' => 5,
-                        'posts_type' => 'product'
-                    ); // (1)
-                    $wc_query = new WP_Query($params); // (2)
-                    ?>
-                    <?php if ($wc_query->have_posts()) : // (3) 
-                    ?>
-                        <?php while ($wc_query->have_posts()) : // (4)
-                            $wc_query->the_post(); // (4.1) 
-                        ?>
-                            <?php #the_title(); // (4.2) 
-                            ?>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); // (5) 
-                        ?>
-                    <?php else :  ?>
-                        <p>
-                            <?php _e('No Products'); // (6) 
-                            ?>
-                        </p>
-                    <?php endif; ?>
 
                     <?php the_content(); ?>
                 </div>
