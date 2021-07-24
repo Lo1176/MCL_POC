@@ -59,6 +59,16 @@ get_header();
                 <div class="container-fluid d-flex">
                     <div class="container-fluid col-2">
                         <!-- search bar  -->
+                        <!-- test LEFT SEARCH  -->
+
+
+                        <?php
+                        get_search_form();
+                        // get_the_tags();
+                        ?>
+
+
+                        <!-- END SEARCH -->
                     </div>
 
                     <!-- test gammes  (PRODUCTS CATEGORIES per BRAND) -->
