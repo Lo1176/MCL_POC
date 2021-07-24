@@ -39,9 +39,9 @@
 
         <header id="masthead" class="site-header">
 
-            <div class="fixed-top bg-light">
+            <div class="">
 
-                <nav id="nav-main" class="navbar navbar-expand-lg navbar-light">
+                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-light navbar-light">
 
                     <div class="container">
 
@@ -75,13 +75,13 @@
 
                             <!-- Top Nav Widget -->
                             <div class="top-nav-widget">
-                                    <?php if (is_active_sidebar('top-nav')) : ?>
-                                        <div class="d-flex">
-                                            <?php dynamic_sidebar('top-nav'); ?>
-                                        </div>
-                                    <?php endif; ?>
+                                <?php if (is_active_sidebar('top-nav')) : ?>
+                                    <div class="d-flex">
+                                        <?php dynamic_sidebar('top-nav'); ?>
+                                    </div>
+                                <?php endif; ?>
 
-                    
+
                             </div>
 
                             <!-- Search Toggler -->
@@ -121,6 +121,7 @@
 
                 </nav><!-- .navbar -->
 
+
                 <!-- Top Nav Search Collapse -->
                 <div class="collapse container" id="collapse-search">
                     <?php if (is_active_sidebar('top-nav-search')) : ?>
@@ -130,7 +131,33 @@
                     <?php endif; ?>
                 </div>
 
+
             </div><!-- .fixed-top .bg-light -->
+            <div class="offcanvas-body sticky-top">
+                <!-- Bootstrap 5 Nav Walker Main Menu -->
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'my-navigation-menu',
+                    'container' => false,
+                    'menu_class' => '',
+                    'fallback_cb' => '__return_false',
+                    'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav text-dark navbar-light bg-light ms-auto %2$s">%3$s</ul>',
+                    'depth' => 2,
+                    'container_class' => 'custom-menu-class',
+                    'walker' => new bootstrap_5_wp_nav_menu_walker()
+                ));
+                ?>
+                <!-- Bootstrap 5 Nav Walker Main Menu End -->
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'my-navigation-menu',
+                    'container_class' => 'custom-menu-class'
+                ));
+                ?>
+
+            </nav>
 
             <!-- offcanvas user -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-user">
