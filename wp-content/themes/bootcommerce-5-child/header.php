@@ -44,15 +44,15 @@
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-light navbar-light">
 
                     <div class="container-fluid">
-                        <!-- SideNav Menu -->
-                        <!-- Navbar Toggler Right for large devise-->
+                        <!-- ## SideNavBar Menu ## -->
+                        <!-- Navbar Toggler LEFT for large devise-->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <i class="fas fa-bars"></i>
                         </button>
 
                         <!-- END SideNav Menu -->
 
-                        <!-- Navbar Brand -->
+                        <!-- ## Logo Brand ## -->
                         <a class="navbar-brand xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
                         <a class="navbar-brand md d-none d-md-block" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
 
@@ -64,7 +64,22 @@
                         </div>
 
                         <div class="header-actions d-flex align-items-center">
-
+                            <!-- ### dropdown menu for collection ###  -->
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId2" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+                Dropdown
+            </button>
+    <div class="dropdown-menu" aria-labelledby="triggerId2">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item disabled" href="#">Disabled action</a>
+        <h6 class="dropdown-header">Section header</h6>
+        <a class="dropdown-item" href="#">Action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">After divider action</a>
+    </div>
+</div>
+<!-- end dropdown collection menu  -->
                             <!-- Top Nav Widget select the one you prefere-->
                             <div class="top-nav-widget">
                                 <?php if (is_active_sidebar('top-nav')) : ?>
