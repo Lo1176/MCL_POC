@@ -46,7 +46,7 @@
                     <div class="container-fluid">
                         <!-- ## SideNavBar Menu ## -->
                         <!-- Navbar Toggler LEFT for large devise-->
-                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                        <button class="btn btn-outline-secondary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <i class="fas fa-bars"></i>
                         </button>
 
@@ -66,7 +66,7 @@
                         <div class="header-actions d-flex align-items-center">
                             <!-- ### dropdown menu for collection ###  -->
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-outline-secondary dropdown-toggle ms-1 ms-md-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Collections
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -83,8 +83,6 @@
                                         <?php dynamic_sidebar('top-nav'); ?>
                                     </div>
                                 <?php endif; ?>
-
-
                             </div>
 
                             <!-- User Toggler -->
