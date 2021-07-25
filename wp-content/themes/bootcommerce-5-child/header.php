@@ -65,21 +65,17 @@
 
                         <div class="header-actions d-flex align-items-center">
                             <!-- ### dropdown menu for collection ###  -->
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId2" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-                Dropdown
-            </button>
-    <div class="dropdown-menu" aria-labelledby="triggerId2">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item disabled" href="#">Disabled action</a>
-        <h6 class="dropdown-header">Section header</h6>
-        <a class="dropdown-item" href="#">Action</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">After divider action</a>
-    </div>
-</div>
-<!-- end dropdown collection menu  -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Collections
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Couteaux sommeliers</a></li>
+                                    <li><a class="dropdown-item" href="#">Couteaux pliants</a></li>
+                                    <li><a class="dropdown-item" href="#">Couteaux de table</a></li>
+                                </ul>
+                            </div>
+                            <!-- end dropdown collection menu  -->
                             <!-- Top Nav Widget select the one you prefere-->
                             <div class="top-nav-widget">
                                 <?php if (is_active_sidebar('top-nav')) : ?>
