@@ -1,0 +1,42 @@
+2021-07-26T13:58:35+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/loop/sale-flash.php:25
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1348): wc_get_template('loop/sale-flash...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#3 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#5 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-post-product-slider/templates/sc-product-slider.php(63): do_action('woocommerce_bef...')
+#6 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/shortcodes.php(356): bootscore_product_slider(Array, '', 'bs-product-slid...')
+#7 [internal function]: do_shortcode_tag(Array)
+#8 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(bs\\-sh...', 'do_shortcode_ta...', '\n<div class="wp...')
+#9 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/class-wp-hook.php(303): do_shortcode('\n<div class="wp...')
+#10 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/plugin.php(189): WP_Hook->apply_filters('\n<div class="wp...', Array)
+#11 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/post-template.php(253): apply_filters('the_content', '<!-- wp:group -...')
+#12 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/page-blank-without-container.php(20): the_content()
+#13 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include('/Users/laurentb...')
+#14 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#15 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#16 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/loop/sale-flash.php à la ligne 25
+
+2021-07-26T14:01:28+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/loop/sale-flash.php:25
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1348): wc_get_template('loop/sale-flash...')
+#2 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/class-wp-hook.php(303): woocommerce_show_product_loop_sale_flash('')
+#3 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#4 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#5 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-post-product-slider/templates/sc-product-slider.php(63): do_action('woocommerce_bef...')
+#6 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/shortcodes.php(356): bootscore_product_slider(Array, '', 'bs-product-slid...')
+#7 [internal function]: do_shortcode_tag(Array)
+#8 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(bs\\-sh...', 'do_shortcode_ta...', '\n<div class="wp...')
+#9 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/class-wp-hook.php(303): do_shortcode('\n<div class="wp...')
+#10 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/plugin.php(189): WP_Hook->apply_filters('\n<div class="wp...', Array)
+#11 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/post-template.php(253): apply_filters('the_content', '<!-- wp:group -...')
+#12 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/page-blank-without-container.php(20): the_content()
+#13 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include('/Users/laurentb...')
+#14 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#15 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#16 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/loop/sale-flash.php à la ligne 25
+
