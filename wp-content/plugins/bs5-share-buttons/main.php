@@ -66,7 +66,7 @@ function bs_share_buttons($content) {
         }
  
         // Based on popular demand added Pinterest too
-        // $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$bs_url.'&amp;media='.$bs_thumb[0].'&amp;description='.$bs_title;
+        $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$bs_url.'&amp;media='.$bs_thumb[0].'&amp;description='.$bs_title;
 
         // Add sharing button at the end of page/page content
         $content .= '<div id="share-buttons" class="mb-3">';

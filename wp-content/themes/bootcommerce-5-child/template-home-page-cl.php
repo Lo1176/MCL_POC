@@ -19,9 +19,7 @@ get_header();
         <main id="main" class="site-main">
             <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
             <header class="entry-header featured-full-width-img text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
-                <div class="container-fluid px-0 pb-5">
-
-                </div><!-- container-fluid full width -->
+                <!-- container-fluid full width -->
             </header> <!-- end header -->
             <div class="entry-content">
                 <?php #the_content(); 
@@ -36,6 +34,8 @@ get_header();
                     </div>
                 </div> <!-- end banner -->
                 <!-- SELECT gamme de produit -->
+                <?php echo do_shortcode("[bs-share-buttons]"); 
+                ?>
                 <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
@@ -61,10 +61,10 @@ get_header();
                     <!-- test LEFT SEARCH  -->
                     <div class="container-fluid col-2">
                         <?php
-                            get_search_form();
-                            // get_the_tags();
+                        get_search_form();
+                        // get_the_tags();
                         ?>
-                        
+
                     </div>
                     <!-- END SEARCH -->
 
@@ -93,7 +93,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
-                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-Versailles-Genévrier-scaled.jpeg'); ?>" alt="Produc image cap">
+                                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-Versailles-Genévrier-600x400.jpeg'); ?>" alt="Produc image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Versailles</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
@@ -113,7 +113,8 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Opus</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/#/'); ?>" class="btn btn-dark">Voir les produits</a>
+                                    <a href="#<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/#/'); 
+                                                ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -121,7 +122,8 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Melchior</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/#/'); ?>" class="btn btn-dark">Voir les produits</a>
+                                    <a href="#<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/#/'); 
+                                                ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -137,7 +139,8 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux de table</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#<?php #echo do_shortcode('[homeurl]/chateau-laguiole/chateau-laguiole-couteaux-de-table/'); ?>" class="btn btn-dark">Voir les produits</a>
+                                    <a href="#<?php #echo do_shortcode('[homeurl]/chateau-laguiole/chateau-laguiole-couteaux-de-table/'); 
+                                                ?>" class="btn btn-dark">Voir les produits</a>
 
                                 </div>
                             </div>
