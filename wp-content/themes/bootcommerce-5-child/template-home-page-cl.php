@@ -105,7 +105,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Meilleur sommelier</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir les produits</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/chateau-laguiole-meilleurs-sommeliers-du-monde/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -113,7 +113,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Opus</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir les produits</a>
+                                    <a href="#<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/#/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -121,7 +121,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Melchior</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir les produits</a>
+                                    <a href="#<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/#/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -129,7 +129,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux Pliants</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir les produits</a>
+                                    <a href="<?php echo do_shortcode('[homeurl]/chateau-laguiole/chateau-laguiole-couteaux-pliants/'); ?>" class="btn btn-dark">Voir les produits</a>
                                 </div>
                             </div>
                             <div class="card m-2" style="width: 18rem;">
@@ -137,7 +137,7 @@ get_header();
                                 <div class="card-body">
                                     <h5 class="card-title">Couteaux de table</h5>
                                     <p class="card-text">Some quick example text to build on the product title and make up the bulk of the product's content.</p>
-                                    <a href="#" class="btn btn-dark">Voir les produits</a>
+                                    <a href="#<?php #echo do_shortcode('[homeurl]/chateau-laguiole/chateau-laguiole-couteaux-de-table/'); ?>" class="btn btn-dark">Voir les produits</a>
 
                                 </div>
                             </div>
