@@ -34,8 +34,7 @@ get_header();
                     </div>
                 </div> <!-- end banner -->
                 <!-- SELECT gamme de produit -->
-                <?php echo do_shortcode("[bs-share-buttons]"); 
-                ?>
+
                 <div class="container my-3 text-center">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
@@ -56,6 +55,7 @@ get_header();
 
 
                     </div>
+
                 </div>
                 <div class="container-fluid d-flex">
                     <!-- test LEFT SEARCH  -->
@@ -144,8 +144,12 @@ get_header();
 
                                 </div>
                             </div>
-                        </div>
+                            <div class="container text-start">
+                                <?php echo do_shortcode("[bs-share-buttons]");
+                                ?>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
 
