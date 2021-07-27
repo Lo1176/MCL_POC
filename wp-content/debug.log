@@ -78,3 +78,5 @@
 [26-Jul-2021 17:11:27 UTC] PHP Warning:  Undefined variable $product in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-post-product-slider/templates/sc-product-slider.php on line 48
 [26-Jul-2021 17:11:27 UTC] PHP Warning:  Undefined variable $product in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-post-product-slider/templates/sc-product-slider.php on line 48
 [26-Jul-2021 17:11:27 UTC] PHP Warning:  Uninitialized string offset 0 in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-share-buttons/main.php on line 69
+[27-Jul-2021 08:43:44 UTC] PHP Warning:  Undefined variable $product in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-post-product-slider/templates/sc-product-slider.php on line 48
+[27-Jul-2021 08:43:58 UTC] PHP Warning:  Undefined variable $product in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/bs5-post-product-slider/templates/sc-product-slider.php on line 48
