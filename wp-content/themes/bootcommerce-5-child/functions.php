@@ -64,8 +64,8 @@ function product_additional_3D_button()
 function custom_3D_button()
 {
     $link = "https://lignew.clients.arkima.io/configurator/app/index.html";
-    $text = __("Custumize with 3D app", "woocommerce");
-    echo '<a href="' . $link . '" class="btn btn-danger my-1 target="_blank" alt" style="margin-bottom:14px;">' . $text . '</a>';
+    $text = __("Customize with 3D app", "woocommerce");
+    echo '<a href="' . $link . '" class="btn btn-danger my-1" target="_blank" alt" style="margin-bottom:14px;">' . $text . '</a>';
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
