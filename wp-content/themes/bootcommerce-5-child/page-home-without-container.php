@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home
+ * Template Name: Home topto
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,6 +10,7 @@
 
 get_header();
 ?>
+
 <div id="content" class="site-content">
 	<div id="primary" class="content-area">
 
@@ -28,9 +29,7 @@ get_header();
 					?>
 
 					<!-- slide products -->
-					<?php
-					#echo do_shortcode('[bs-product-slider order="DESC" orderby="title" posts="12" category="ligne-w"]');
-					?>
+					
 
 				</div>
 				<!-- video ?  -->
