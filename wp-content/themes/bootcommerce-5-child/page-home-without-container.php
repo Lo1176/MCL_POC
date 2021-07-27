@@ -29,7 +29,7 @@ get_header();
 
 					<!-- slide products -->
 					<?php
-					echo do_shortcode('[bs-product-slider order="DESC" orderby="title" posts="12" category="ligne-w"]');
+					#echo do_shortcode('[bs-product-slider order="DESC" orderby="title" posts="12" category="ligne-w"]');
 					?>
 
 				</div>
