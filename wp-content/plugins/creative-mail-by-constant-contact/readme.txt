@@ -3,7 +3,7 @@ Contributors: Constant Contact
 Tags: email, marketing, newsletter, subscribe, contact form, constant contact, crm, automations, ecommerce, promotion, offers, retargeting
 Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 1.4.2
+Stable tag: 1.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.6
@@ -41,7 +41,7 @@ Turn your WooCommerce store and your WordPress site into efficient marketing eng
 - **Enhanced Ecommerce:** WooCommerce store customers and ecommerce interactions are all captured automatically within your email marketing list. Retarget and re-engage your customers. Sell more stuff.
 - **Beautiful Transactional Emails:** Standard WooCommerce triggered emails can be replaced to match your branding and style. Build one, and then all your other WooCommerce emails managed by Creative will inherit the same branded look. Hey, style matters.
 - **Jetpack Forms Integration:** Collect, sync, and manage opt-in subscribers directly from Jetpack forms into Creative Mail.
-- **Build Better Branding:** Creative Mail includes our free LogoMaker and image editing suite to enhance your brand.
+- **Build Better Branding:** Creative Mail includes our free LogoBuilder and image editing suite to enhance your brand.
 - **Amazing Stock Images:** You get free access to the completely integrated photo library (in addition to your own WordPress media library) to make amazing email marketing campaigns with award winning images.
 - **Get Better Deliverability:** Other email marketing solutions require complex SMTP solutions, external gateways or have you sending from their less than stellar IPs. As a result, your emails can get bounced or never delivered. Creative Mail is an all-in-one solution that uses Constant Contact’s rock solid infrastructure, for superior deliverability. Boom! ‘nuff said.
 - **Live Support:** With our paid plans (Awesome & Ultimate) you get access to phone and chat support to help you get answers from real live, helpful humans. Imagine that!
@@ -87,7 +87,7 @@ Turn your WooCommerce store and your WordPress site into efficient marketing eng
 - **Social Campaigns:** Connect your social media accounts with your Creative Mail account to share your newsletters with your followers on social.
 - **Marketing Calendar:** With your socials connected we give you an overview of all the newsletters and posts that you’ve sent and scheduled. An easy overview to engage with your audience.
 - **Booking:** Set up Bookings for your business with the Bookingstool. Give clients and customers an easy, quick way to set up appointments with you.
-- **Logomaker:** Create an amazing logo for your business or social with Logomaker and add it to your email campaigns.
+- **LogoBuilder:** Create an amazing logo for your business or social with LogoBuilder and add it to your email campaigns.
 
 ## TERMS OF SERVICE & PRIVACY NOTICE
 On behalf of our lawyers (seriously, they’re nice people), please feel free to review our:
@@ -101,9 +101,11 @@ Creative Mail by Constant Contact [Privacy Notice](https://www.endurance.com/pri
 3. Manage your contacts and email lists, all in one place
 4. Let Creative Mail handle your WooCommerce emails
 5. Spice up your transactional WooCommerce store emails
-6. Enhance your brand with logomaker
+6. Enhance your brand with LogoBuilder
 
 == Changelog ==
+* 1.4.4 - Add support for 'return to shop' urls
+* 1.4.3 - Updated brand name.
 * 1.4.2 - Fixed a crash that could occur when using the elementor contact sync.
 * 1.4.1 - Fixed several bugs
 * 1.4.0 - Added gutenberg contact form block CreativeMail

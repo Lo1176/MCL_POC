@@ -24,6 +24,7 @@ class CheckoutManager
      * @since 1.3.0
      */
     protected $checkout_uuid = '';
+    protected $return_to_shop = false;
 
     const UPDATE_CHECKOUT_DATA = 'update_checkout_data';
     const META_CHECKOUT_UUID = 'ce4wp_checkout_uuid';
@@ -79,12 +80,19 @@ class CheckoutManager
 
             // Sanitize checkout UUID.
             $this->checkout_uuid = filter_input(INPUT_GET, 'ce4wp-recover', FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+            $this->return_to_shop = filter_input (INPUT_GET, 'ce4wp-return-to-shop', FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
-            if (empty($this->checkout_uuid)) {
+            if (empty($this->checkout_uuid) && empty($this->return_to_shop)) {
                 return;
             }
 
-            add_action('wp_loaded', array($this, 'recover_checkout'));
+            if (!empty($this->checkout_uuid)) {
+                add_action('wp_loaded', array($this, 'recover_checkout'));
+            }
+
+            if (!empty($this->return_to_shop)) {
+                add_action('wp_loaded', array($this, 'return_to_shop'));
+            }
         }
     }
 
@@ -621,6 +629,12 @@ class CheckoutManager
 
         // Redirect to checkout page.
         wp_safe_redirect( wc_get_page_permalink( 'cart' ) );
+
+        exit();
+    }
+
+    public function return_to_shop() {
+        wp_safe_redirect(wc_get_page_permalink('shop'));
 
         exit();
     }

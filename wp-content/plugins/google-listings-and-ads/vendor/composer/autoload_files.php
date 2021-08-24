@@ -19,4 +19,7 @@ return array(
     'bce4ecd6aabb2a2948e06d0e2c4ea9a6' => $vendorDir . '/automattic/jetpack-connection/legacy/load-ixr.php',
     'a8d3953fd9959404dd22d3dfcd0a79f0' => $vendorDir . '/google/apiclient/src/aliases.php',
     '56823cacd97af379eceaf82ad00b928f' => $vendorDir . '/phpseclib/bcmath_compat/lib/bcmath.php',
+    'a66af3295a2671f868924c6f4a9afc6c' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
+    '7fd7393568b2f049bdce22a915a0972c' => $vendorDir . '/guzzlehttp/promises/src/functions_include.php',
+    '182f64d0d30681748cdc000877186250' => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php',
 );

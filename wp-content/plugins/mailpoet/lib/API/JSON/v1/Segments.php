@@ -15,6 +15,7 @@ use MailPoet\Config\AccessControl;
 use MailPoet\Doctrine\Validator\ValidationException;
 use MailPoet\Entities\SegmentEntity;
 use MailPoet\Entities\SubscriberEntity;
+use MailPoet\Form\FormsRepository;
 use MailPoet\Listing;
 use MailPoet\Newsletter\Segment\NewsletterSegmentRepository;
 use MailPoet\Segments\SegmentListingRepository;
@@ -58,6 +59,9 @@ class Segments extends APIEndpoint {
   /** @var NewsletterSegmentRepository */
   private $newsletterSegmentRepository;
 
+  /** @var FormsRepository */
+  private $formsRepository;
+
   public function __construct(
     Listing\Handler $listingHandler,
     SegmentsRepository $segmentsRepository,
@@ -67,7 +71,8 @@ class Segments extends APIEndpoint {
     SubscribersRepository $subscribersRepository,
     WooCommerce $wooCommerce,
     WP $wpSegment,
-    NewsletterSegmentRepository $newsletterSegmentRepository
+    NewsletterSegmentRepository $newsletterSegmentRepository,
+    FormsRepository $formsRepository
   ) {
     $this->listingHandler = $listingHandler;
     $this->wooCommerceSync = $wooCommerce;
@@ -78,6 +83,7 @@ class Segments extends APIEndpoint {
     $this->wpSegment = $wpSegment;
     $this->segmentListingRepository = $segmentListingRepository;
     $this->newsletterSegmentRepository = $newsletterSegmentRepository;
+    $this->formsRepository = $formsRepository;
   }
 
   public function get($data = []) {
@@ -180,6 +186,23 @@ class Segments extends APIEndpoint {
       ]);
     }
 
+    $activelyUsedFormNames = $this->formsRepository->getNamesOfFormsForSegments();
+    if (isset($activelyUsedFormNames[$segment->getId()])) {
+      return $this->badRequest([
+        APIError::BAD_REQUEST => str_replace(
+          '%$1s',
+          "'" . join("', '", $activelyUsedFormNames[$segment->getId()] ) . "'",
+          _nx(
+            'List cannot be deleted because it’s used for %$1s form',
+            'List cannot be deleted because it’s used for %$1s forms',
+            count($activelyUsedFormNames[$segment->getId()]),
+            'Alert shown when trying to delete segment, when it is assigned to a form.',
+            'mailpoet'
+          )
+        ),
+      ]);
+    }
+
     // When the segment is of type WP_USERS we want to trash all subscribers who aren't subscribed in another list
     if ($segment->getType() === SegmentEntity::TYPE_WP_USERS) {
       $subscribers = $this->subscribersRepository->findExclusiveSubscribersBySegment((int)$segment->getId());
@@ -189,7 +212,7 @@ class Segments extends APIEndpoint {
       $this->subscribersRepository->bulkTrash($subscriberIds);
     }
 
-    $this->segmentsRepository->bulkTrash([$segment->getId()], $segment->getType());
+    $this->segmentsRepository->doTrash([$segment->getId()], $segment->getType());
     $this->segmentsRepository->refresh($segment);
     return $this->successResponse(
       $this->segmentsResponseBuilder->build($segment),

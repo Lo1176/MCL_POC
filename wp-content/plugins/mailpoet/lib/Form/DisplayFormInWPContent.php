@@ -22,6 +22,12 @@ class DisplayFormInWPContent {
     FormEntity::DISPLAY_TYPE_SLIDE_IN,
   ];
 
+  const SUPPORTED_POST_TYPES = [
+    'post',
+    'product',
+    'job_listing',
+  ];
+
   /** @var WPFunctions */
   private $wp;
 
@@ -190,7 +196,7 @@ class DisplayFormInWPContent {
       return false;
     }
 
-    if ($this->wp->isSingular('post') || $this->wp->isSingular('product')) {
+    if ($this->wp->isSingular($this->wp->applyFilters('mailpoet_display_form_supported_post_types', self::SUPPORTED_POST_TYPES))) {
       if ($this->shouldDisplayFormOnPost($setup, 'posts')) return true;
       if ($this->shouldDisplayFormOnCategory($setup)) return true;
       if ($this->shouldDisplayFormOnTag($setup)) return true;

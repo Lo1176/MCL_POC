@@ -262,6 +262,8 @@ class Settings extends APIEndpoint {
       }
     }
     $this->subscribersCountsController->recalculateSubscribersWithoutSegmentStatisticsCache();
+    // remove redundancies from cache
+      $this->subscribersCountsController->removeRedundancyFromStatisticsCache();
     return $this->successResponse();
   }
 }

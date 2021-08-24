@@ -1,2 +1,2 @@
 <?php
- namespace MailPoetVendor\Doctrine\DBAL; if (!defined('ABSPATH')) exit; class Exception extends \MailPoetVendor\Doctrine\DBAL\DBALException { } 
+ namespace MailPoetVendor\Doctrine\DBAL; if (!defined('ABSPATH')) exit; class Exception extends DBALException { } 

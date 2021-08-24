@@ -142,7 +142,7 @@ class SubscriberEntity {
 
   /**
    * @ORM\OneToMany(targetEntity="MailPoet\Entities\SubscriberSegmentEntity", mappedBy="subscriber")
-   * @var iterable<SubscriberSegmentEntity>&Collection
+   * @var Collection<int, SubscriberSegmentEntity>
    */
   private $subscriberSegments;
 
@@ -398,7 +398,7 @@ class SubscriberEntity {
   }
 
   /**
-   * @return Collection
+   * @return Collection<int, SubscriberSegmentEntity>
    */
   public function getSubscriberSegments() {
     return $this->subscriberSegments;

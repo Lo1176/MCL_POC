@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) exit;
 
 
 use MailPoet\AdminPages\PageRenderer;
+use MailPoet\Cache\TransientCache;
 use MailPoet\Config\ServicesChecker;
 use MailPoet\Form\Block;
 use MailPoet\Listing\PageLimit;
@@ -17,6 +18,7 @@ use MailPoet\Subscribers\ConfirmationEmailMailer;
 use MailPoet\Util\License\Features\Subscribers as SubscribersFeature;
 use MailPoet\Util\License\License;
 use MailPoet\WP\Functions as WPFunctions;
+use MailPoetVendor\Carbon\Carbon;
 
 class Subscribers {
   /** @var PageRenderer */
@@ -43,6 +45,9 @@ class Subscribers {
   /** @var SettingsController */
   private $settings;
 
+  /** @var TransientCache */
+  private $transientCache;
+
   public function __construct(
     PageRenderer $pageRenderer,
     PageLimit $listingPageLimit,
@@ -51,7 +56,8 @@ class Subscribers {
     ServicesChecker $servicesChecker,
     Block\Date $dateBlock,
     SettingsController $settings,
-    SegmentsSimpleListRepository $segmentsListRepository
+    SegmentsSimpleListRepository $segmentsListRepository,
+    TransientCache $transientCache
   ) {
     $this->pageRenderer = $pageRenderer;
     $this->listingPageLimit = $listingPageLimit;
@@ -61,6 +67,7 @@ class Subscribers {
     $this->servicesChecker = $servicesChecker;
     $this->segmentsListRepository = $segmentsListRepository;
     $this->settings = $settings;
+    $this->transientCache = $transientCache;
   }
 
   public function render() {
@@ -101,6 +108,9 @@ class Subscribers {
     $data['link_premium'] = $this->wp->getSiteUrl(null, '/wp-admin/admin.php?page=mailpoet-premium');
     $data['tracking_enabled'] = $this->settings->get('tracking.enabled');
 
+    $subscribersCacheCreatedAt = $this->transientCache->getOldestCreatedAt(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY);
+    $subscribersCacheCreatedAt = $subscribersCacheCreatedAt ?: Carbon::now();
+    $data['subscribers_counts_cache_created_at'] = $subscribersCacheCreatedAt->format('Y-m-d\TH:i:sO');
     $this->pageRenderer->displayPage('subscribers/subscribers.html', $data);
   }
 }

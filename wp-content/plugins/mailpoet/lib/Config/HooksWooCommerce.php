@@ -105,10 +105,13 @@ class HooksWooCommerce {
 
   public function onRegister($errors, string $userLogin, string $userEmail = null) {
     try {
-      return $this->subscriberRegistration->onRegister($errors, $userLogin, $userEmail);
+      if (empty($errors->errors)) {
+        $this->subscriberRegistration->onRegister($errors, $userLogin, $userEmail);
+      }
     } catch (\Throwable $e) {
       $this->logError($e, 'WooCommerce on Register');
     }
+    return $errors;
   }
 
   private function logError(\Throwable $e, $name) {

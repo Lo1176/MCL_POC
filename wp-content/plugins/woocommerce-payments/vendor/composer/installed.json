@@ -31,9 +31,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Used to record internal usage stats for Automattic. Not visible to site owners.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-a8c-mc-stats/tree/v1.2.0"
-            },
             "install-path": "../automattic/jetpack-a8c-mc-stats"
         },
         {
@@ -76,9 +73,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Creates a custom autoloader for a plugin or theme.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v2.8.0"
-            },
             "install-path": "../automattic/jetpack-autoloader"
         },
         {
@@ -112,9 +106,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Jetpack configuration package that initializes other packages and configures Jetpack's functionality. Can be used as a base for all variants of Jetpack package usage.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-config/tree/v1.4.3"
-            },
             "install-path": "../automattic/jetpack-config"
         },
         {
@@ -162,9 +153,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Everything needed to connect to the Jetpack infrastructure",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-connection/tree/v1.20.0"
-            },
             "install-path": "../automattic/jetpack-connection"
         },
         {
@@ -199,9 +187,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "A wrapper for defining constants in a more testable way.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-constants/tree/master"
-            },
             "install-path": "../automattic/jetpack-constants"
         },
         {
@@ -239,9 +224,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "This adds a cronjob that sends a batch of internal automattic stats to wp.com once a day",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-heartbeat/tree/v1.2.0"
-            },
             "install-path": "../automattic/jetpack-heartbeat"
         },
         {
@@ -279,9 +261,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "A wrapper for wp-options to manage specific Jetpack options.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-options/tree/v1.9.0"
-            },
             "install-path": "../automattic/jetpack-options"
         },
         {
@@ -316,9 +295,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Utilities, related with user roles and capabilities.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-roles/tree/master"
-            },
             "install-path": "../automattic/jetpack-roles"
         },
         {
@@ -354,9 +330,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Used to retrieve information about the current status of Jetpack and the site overall.",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-status/tree/v1.5.0"
-            },
             "install-path": "../automattic/jetpack-status"
         },
         {
@@ -395,9 +368,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Everything need to manage the terms of service state",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-terms-of-service/tree/v1.8.0"
-            },
             "install-path": "../automattic/jetpack-terms-of-service"
         },
         {
@@ -438,9 +408,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Tracking for Jetpack",
-            "support": {
-                "source": "https://github.com/Automattic/jetpack-tracking/tree/v1.11.0"
-            },
             "install-path": "../automattic/jetpack-tracking"
         },
         {
@@ -490,10 +457,6 @@
             "keywords": [
                 "enum"
             ],
-            "support": {
-                "issues": "https://github.com/myclabs/php-enum/issues",
-                "source": "https://github.com/myclabs/php-enum/tree/1.7.7"
-            },
             "funding": [
                 {
                     "url": "https://github.com/mnapoli",

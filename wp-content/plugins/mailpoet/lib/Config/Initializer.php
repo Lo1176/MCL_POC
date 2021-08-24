@@ -232,7 +232,6 @@ class Initializer {
       $this->setupPages();
 
       $this->setupPermanentNotices();
-      $this->setupDeactivationSurvey();
       $this->setupAutomaticEmails();
       $this->postEditorBlock->init();
 
@@ -363,11 +362,6 @@ class Initializer {
       Menu::addErrorPage($this->accessControl);
     }
     return WPNotice::displayWarning($exception->getMessage());
-  }
-
-  public function setupDeactivationSurvey() {
-    $survey = new DeactivationSurvey($this->renderer);
-    $survey->init();
   }
 
   public function setupAutomaticEmails() {

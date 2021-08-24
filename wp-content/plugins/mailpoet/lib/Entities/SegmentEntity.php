@@ -53,7 +53,7 @@ class SegmentEntity {
 
   /**
    * @ORM\OneToMany(targetEntity="MailPoet\Entities\DynamicSegmentFilterEntity", mappedBy="segment")
-   * @var DynamicSegmentFilterEntity[]|ArrayCollection
+   * @var ArrayCollection<int, DynamicSegmentFilterEntity>
    */
   private $dynamicFilters;
 
@@ -124,7 +124,7 @@ class SegmentEntity {
   }
 
   /**
-   * @return DynamicSegmentFilterEntity[]|ArrayCollection
+   * @return ArrayCollection<int, DynamicSegmentFilterEntity>
    */
   public function getDynamicFilters() {
     return $this->dynamicFilters;

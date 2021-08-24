@@ -9,7 +9,7 @@
  * Plugin URI: https://wordpress.org/plugins/creative-mail-by-constant-contact/
  * Description: Free email marketing designed specifically for WordPress, Jetpack and WooCommerce. Send newsletters, promotions, updates and transactional e-commerce emails. Simple and easy, powered by Constant Contact’s rock solid reliability.
  * Author: Constant Contact
- * Version: 1.4.2
+ * Version: 1.4.4
  * Author URI: https://www.constantcontact.com
  * WC requires at least: 3.0.0
  * WC tested up to: 5.1.0
@@ -27,7 +27,7 @@ function _load_ce4wp_plugin()
     define('CE4WP_PLUGIN_DIR', __DIR__ . '/');
     define('CE4WP_PLUGIN_URL', plugin_dir_url(__FILE__) . '/');
     define('CE4WP_PLUGIN_FILE', __FILE__);
-    define('CE4WP_PLUGIN_VERSION', '1.4.2');
+    define('CE4WP_PLUGIN_VERSION', '1.4.4');
     define('CE4WP_INSTANCE_UUID_KEY', 'ce4wp_instance_uuid');
     define('CE4WP_INSTANCE_HANDSHAKE_TOKEN', 'ce4wp_handshake_token');
     define('CE4WP_INSTANCE_HANDSHAKE_EXPIRATION', 'ce4wp_handshake_expiration');
@@ -44,7 +44,7 @@ function _load_ce4wp_plugin()
     define('CE4WP_APP_GATEWAY_URL', 'https://app-gateway.creativemail.com/');
     define('CE4WP_APP_URL', 'https://app.creativemail.com/');
     define('CE4WP_ENVIRONMENT', 'PRODUCTION');
-    define('CE4WP_BUILD_NUMBER', '1351');
+    define('CE4WP_BUILD_NUMBER', '1363');
     define('CE4WP_RAYGUN_PHP_KEY', 'Z85xL3mkgnW13Ri9DajGUg');
     define('CE4WP_BATCH_SIZE', 500);
     define('CE4WP_WC_API_KEY_ID', 'ce4wp_woocommerce_api_key_id');
