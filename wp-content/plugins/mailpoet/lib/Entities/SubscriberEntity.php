@@ -19,6 +19,7 @@ use MailPoetVendor\Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity()
  * @ORM\Table(name="subscribers")
+ * @ORM\HasLifecycleCallbacks
  */
 class SubscriberEntity {
   // statuses
@@ -141,7 +142,7 @@ class SubscriberEntity {
   private $engagementScoreUpdatedAt;
 
   /**
-   * @ORM\OneToMany(targetEntity="MailPoet\Entities\SubscriberSegmentEntity", mappedBy="subscriber")
+   * @ORM\OneToMany(targetEntity="MailPoet\Entities\SubscriberSegmentEntity", mappedBy="subscriber", orphanRemoval=true)
    * @var Collection<int, SubscriberSegmentEntity>
    */
   private $subscriberSegments;
@@ -438,5 +439,15 @@ class SubscriberEntity {
    */
   public function setEngagementScoreUpdatedAt(?DateTimeInterface $engagementScoreUpdatedAt): void {
     $this->engagementScoreUpdatedAt = $engagementScoreUpdatedAt;
+  }
+
+  /** @ORM\PreFlush */
+  public function cleanupSubscriberSegments(): void {
+    // Delete old orphan SubscriberSegments to avoid errors on update
+    $this->subscriberSegments->map(function (SubscriberSegmentEntity $subscriberSegment) {
+      if ($subscriberSegment->getSegment() === null) {
+        $this->subscriberSegments->removeElement($subscriberSegment);
+      }
+    });
   }
 }

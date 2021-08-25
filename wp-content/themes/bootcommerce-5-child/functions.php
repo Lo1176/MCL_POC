@@ -65,11 +65,28 @@ function custom_3D_button()
     global $product;
     $link = "/www/MCL_POC/wp-json/3D/v1/product/" . $product->get_id();
     $text = __("Customize with 3D app", "woocommerce");
-    echo '<button id="customize3d" class="btn btn-danger my-1" style="margin-bottom:14px;" data-url="'.$link.'">' . $text . '</button>';
+    echo '<button id="customize3d" class="btn btn-danger my-1" style="margin-bottom:14px;" data-url="' . $link . '">' . $text . '</button>';
+}
+
+// function btn test API
+add_action('rest_api_init', function () {
+    register_rest_route('3D/v1', '/product/(?P<id>\d+)', array(
+        'methods' => 'POST',
+        'callback' => 'my_3D_func',
+    ));
+});
+
+function my_3D_func($data)
+{
+
+    return array(
+        'produit' => $data['id'],
+        'entretoise' => $data['entretoise'],
+        'couleur' => $data['entretoise']
+    );
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
-
 add_filter('wc_product_sku_enabled', 'wpm_remove_sku');
 
 function wpm_remove_sku($enabled)
@@ -126,18 +143,4 @@ function new_loop_shop_per_page($cols)
     // Return the number of products you wanna show per page.
     $cols = 9;
     return $cols;
-}
-
-// ajout un 2eme btn test API
-add_action('rest_api_init', function () {
-    register_rest_route('3D/v1', '/product/(?P<id>\d+)', array(
-        'methods' => 'POST',
-        'callback' => 'my_3D_func',
-    ));
-});
-function my_3D_func($data)
-{
-    
-    return array('produit' => $data['id'],
-                'entretoise' => $data['entretoise']);
 }

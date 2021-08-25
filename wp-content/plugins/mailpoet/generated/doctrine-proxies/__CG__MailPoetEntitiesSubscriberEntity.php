@@ -597,6 +597,17 @@ class SubscriberEntity extends \MailPoet\Entities\SubscriberEntity implements \M
     /**
      * {@inheritDoc}
      */
+    public function cleanupSubscriberSegments(): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'cleanupSubscriberSegments', []);
+
+        parent::cleanupSubscriberSegments();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getId()
     {
         if ($this->__isInitialized__ === false) {
