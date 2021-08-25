@@ -1,0 +1,15 @@
+2021-08-25T10:36:12+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/cart/mini-cart.php:24
+Stack trace:
+#0 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2215): wc_get_template('cart/mini-cart....', Array)
+#2 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/header.php(177): woocommerce_mini_cart()
+#3 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template.php(770): require_once('/Users/laurentb...')
+#4 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template.php(716): load_template('/Users/laurentb...', true, Array)
+#5 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#6 /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/404.php(10): get_header()
+#7 /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/template-loader.php(106): include('/Users/laurentb...')
+#8 /Users/laurentbinder/Sites/www/MCL_POC/wp-blog-header.php(19): require_once('/Users/laurentb...')
+#9 /Users/laurentbinder/Sites/www/MCL_POC/index.php(17): require('/Users/laurentb...')
+#10 {main}
+  thrown dans /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootscore-5/woocommerce/cart/mini-cart.php à la ligne 24
+

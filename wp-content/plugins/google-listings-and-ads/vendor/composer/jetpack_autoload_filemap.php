@@ -10,21 +10,9 @@ return array(
 		'version' => '3.0.3.0',
 		'path'    => $vendorDir . '/ralouphie/getallheaders/src/getallheaders.php'
 	),
-	'a0edc8309cc5e1d60e3047b5df6b7052' => array(
-		'version' => '1.8.2.0',
-		'path'    => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php'
-	),
-	'c964ee0ededf28c96ebd9db5099ef910' => array(
-		'version' => '1.4.1.0',
-		'path'    => $vendorDir . '/guzzlehttp/promises/src/functions_include.php'
-	),
 	'decc78cc4436b1292c6c0d151b19445c' => array(
 		'version' => '3.0.9.0',
 		'path'    => $vendorDir . '/phpseclib/phpseclib/phpseclib/bootstrap.php'
-	),
-	'37a3dc5111fe8f707ab4c132ef1dbc62' => array(
-		'version' => '7.3.0.0',
-		'path'    => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php'
 	),
 	'1f87db08236948d07391152dccb70f04' => array(
 		'version' => '0.200.0.0',
@@ -59,15 +47,15 @@ return array(
 		'path'    => $vendorDir . '/phpseclib/bcmath_compat/lib/bcmath.php'
 	),
 	'a66af3295a2671f868924c6f4a9afc6c' => array(
-		'version' => '9999999-dev',
+		'version' => 'dev-trunk',
 		'path'    => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php'
 	),
 	'7fd7393568b2f049bdce22a915a0972c' => array(
-		'version' => '9999999-dev',
+		'version' => 'dev-trunk',
 		'path'    => $vendorDir . '/guzzlehttp/promises/src/functions_include.php'
 	),
 	'182f64d0d30681748cdc000877186250' => array(
-		'version' => '9999999-dev',
+		'version' => 'dev-trunk',
 		'path'    => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php'
 	),
 );
