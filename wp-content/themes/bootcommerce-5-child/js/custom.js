@@ -17,4 +17,18 @@ jQuery(document).ready(function ($) {
             // alert(url3d);
         });
     });
+
+    // fonction pour récupérer les paramètres de l'URL
+    function getParameter(p) {
+      var url = window.location.search.substring(1); // récupère les paramètres
+      var varUrl = url.split("&"); // sépare les params quand il y a &
+      for (var i = 0; i < varUrl.length; i++) {
+        var parameter = varUrl[i].split("=");
+        if (parameter[0] == p) {
+          return parameter[1];
+          alert(parameter[1]);
+        }
+      }
+    //   getParameter(p);
+    }
 }); // jQuery End
