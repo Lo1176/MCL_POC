@@ -81,33 +81,59 @@ add_action('rest_api_init', function () {
 function my_3D_func($data)
 {
     $productId = $data['id']; // get product id from data url
-    $product = wc_get_product( $productId ); // get product id from DB
+    $product = wc_get_product($productId); // get product id from DB
 
-    
+
     $api3dRequest = array(
         'id' => $product->get_id(), // id du produit récupéré en base de donnée
         'produit' => $productId, // id from url
         'entretoise' => $data['entretoise'],
         'couleur' => $data['couleur']
     );
-    // to do : appeler API 3D request
-    $urlTestApi = "https://exude-api.herokuapp.com/exude/stopping/data";
+    // test API avec l'EXUDE-API TBE
+    $urlApi = "https://exude-api.herokuapp.com/exude/stopping/data";
     $apiTestRequest = array(
-        "links" => "https://en.wikipedia.org/wiki/Rama"
+        "links" => ["https://en.wikipedia.org/wiki/Rama"]
     );
+    $apiTestRequestJSON = json_encode($apiTestRequest);
 
-    // wp_remote_post($urlTestApi, $apiTestRequest);
-    
-    $apiTestResponse = array(
+    wp_remote_post($urlApi, $apiTestRequestJSON);
+
+    $apiTestRequest2 = array(
         "data" => "Kannada is a Southern Dravidian language and according to scholar Sanford B. Steever, its history can be conventionally divided into three stages: Old Kannada (Halegannada) from 450–1200 AD, Middle Kannada (Nadugannada) from 1200–1700 and Modern Kannada from 1700 to the present.[23] Kannada is influenced to a considerable degree by Sanskrit. Influences of other languages such as Prakrit and Pali can also be found in Kannada. The scholar Iravatham Mahadevan indicated that Kannada was already a language of rich spoken tradition earlier than the 3rd century BC and based on the native Kannada words found in Prakrit inscriptions of that period, Kannada must have been spoken by a broad and stable population.[24][25] The scholar K. V. Narayana claims that many tribal languages which are now designated as Kannada dialects could be nearer to the earlier form of the language, with lesser influence from other languages"
     );
-    $apiTestResponseJSON = json_encode($apiTestResponse);
-    wp_remote_post($urlTestApi, $apiTestResponseJSON);
-    
+    $apiTestRequest2JSON = json_encode($apiTestRequest2);
+    wp_remote_post($urlApi, $apiTestRequest2JSON);
+
+
+    // $body = [
+    //     'name'  => 'Pixelbart',
+    //     'email' => 'pixelbart@example.com',
+    // ];
+
+    // $bodyJSON = wp_json_encode($body);
+
+    $options = [
+        'body'        => $apiTestRequestJSON,
+        'headers'     => [
+            'Content-Type' => 'application/json',
+        ], // précise qu'on lui envoie du JSON en data
+        'timeout'     => 60,
+        'redirection' => 5,
+        'blocking'    => true,
+        'httpversion' => '1.0',
+        'sslverify'   => false,
+        'data_format' => 'body',
+    ];
+
+    // to do : appeler API 3D request
     $api3dResponse = array(
-        'url3d' => "https://lignew.clients.arkima.io/configurator/app/index.html"
+        // 'url3d' => "https://lignew.clients.arkima.io/configurator/app/index.html"
+        'url3d' => wp_remote_post($urlApi, $options)
+        // 'url3d' => $urlApi
     );
     return $api3dResponse;
+
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
