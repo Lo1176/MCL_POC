@@ -73,17 +73,28 @@ add_action('rest_api_init', function () {
     register_rest_route('3D/v1', '/product/(?P<id>\d+)', array(
         'methods' => 'POST',
         'callback' => 'my_3D_func',
+        // If your REST API endpoint is public, you can use __return_true as the permission callback.
+        'permission_callback' => '__return_true',
     ));
 });
 
 function my_3D_func($data)
 {
+    $productId = $data['id'];
+    $product = wc_get_product( $productId );
 
-    return array(
-        'produit' => $data['id'],
+    
+    $api3dRequest = array(
+        'id' => $product->get_id(), // id du produit récupéré en base de donnée
+        'produit' => $productId, // id from url
         'entretoise' => $data['entretoise'],
-        'couleur' => $data['entretoise']
+        'couleur' => $data['couleur']
     );
+    // to do : appeler API 3D request 
+    $api3dResponse = array(
+        'url' => "https://lignew.clients.arkima.io/configurator/app/index.html"
+    );
+    return $api3dResponse;
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
