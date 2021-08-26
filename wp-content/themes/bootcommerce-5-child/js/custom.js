@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
     $.post(url, obj, function (data) {
       var url3d = data["url3d"];
       window.location = url3d;
-      // alert(url3d);
+      alert(url3d);
     });
   });
 
@@ -27,9 +27,11 @@ jQuery(document).ready(function ($) {
         return parameter[1];
       }
     }
-    //   getParameter(p);
-    if (getParameter("entretoise")) {
-      var entretoise = getParameter("entretoise");
-    }
   }
+
+  // var entretoiseValue = getParameter("entretoise");
+  // if (entretoiseValue !== undefined) {
+  //   var element = $("#entretoise");
+  //   element.val(entretoiseValue);
+  // }
 }); // jQuery End
