@@ -82,21 +82,21 @@ function my_3D_func($data)
 {
     // $productId = $data['id']; // get product id from data url
     $product = wc_get_product($data); // get product id from DB
-    
+
     // test API avec l'EXUDE-API TBE
     // $urlApi = "https://exude-api.herokuapp.com/exude/stopping/data";
     // $apiTestRequest = array(
-        //     "links" => ["https://en.wikipedia.org/wiki/Rama"]
-        // );
-        // $apiTestRequestJSON = json_encode($apiTestRequest);
-        // wp_remote_post($urlApi, $apiTestRequestJSON);
-        
-        // $apiTestRequest2 = array(
-            //     "data" => "Kannada is a Southern Dravidian language and according to scholar Sanford B. Steever, its history can be conventionally divided into three stages: Old Kannada (Halegannada) from 450–1200 AD, Middle Kannada (Nadugannada) from 1200–1700 and Modern Kannada from 1700 to the present.[23] Kannada is influenced to a considerable degree by Sanskrit. Influences of other languages such as Prakrit and Pali can also be found in Kannada. The scholar Iravatham Mahadevan indicated that Kannada was already a language of rich spoken tradition earlier than the 3rd century BC and based on the native Kannada words found in Prakrit inscriptions of that period, Kannada must have been spoken by a broad and stable population.[24][25] The scholar K. V. Narayana claims that many tribal languages which are now designated as Kannada dialects could be nearer to the earlier form of the language, with lesser influence from other languages"
-            // );
-            // $apiTestRequest2JSON = json_encode($apiTestRequest2);
-            // wp_remote_post($urlApi, $apiTestRequest2JSON);
-            
+    //     "links" => ["https://en.wikipedia.org/wiki/Rama"]
+    // );
+    // $apiTestRequestJSON = json_encode($apiTestRequest);
+    // wp_remote_post($urlApi, $apiTestRequestJSON);
+
+    // $apiTestRequest2 = array(
+    //     "data" => "Kannada is a Southern Dravidian language and according to scholar Sanford B. Steever, its history can be conventionally divided into three stages: Old Kannada (Halegannada) from 450–1200 AD, Middle Kannada (Nadugannada) from 1200–1700 and Modern Kannada from 1700 to the present.[23] Kannada is influenced to a considerable degree by Sanskrit. Influences of other languages such as Prakrit and Pali can also be found in Kannada. The scholar Iravatham Mahadevan indicated that Kannada was already a language of rich spoken tradition earlier than the 3rd century BC and based on the native Kannada words found in Prakrit inscriptions of that period, Kannada must have been spoken by a broad and stable population.[24][25] The scholar K. V. Narayana claims that many tribal languages which are now designated as Kannada dialects could be nearer to the earlier form of the language, with lesser influence from other languages"
+    // );
+    // $apiTestRequest2JSON = json_encode($apiTestRequest2);
+    // wp_remote_post($urlApi, $apiTestRequest2JSON);
+
     // Get Product ID
     // global $product;
     // $productId = $product->get_id();
@@ -123,14 +123,15 @@ function my_3D_func($data)
     ];
 
     // to do : appeler API 3D request
-    $urlApi = "https://lignew.clients.arkima.io/configurator/app/index.html";
+    // test API avec l'EXUDE-API TBE
+    $urlApi = "https://exude-api.herokuapp.com/exude/stopping/data";
+    // $urlApi = "https://lignew.clients.arkima.io/configurator/app/index.html";
     $api3dResponse = array(
         // 'url3d' => "https://lignew.clients.arkima.io/configurator/app/index.html"
-        'url3d' => wp_remote_post($urlApi, $options)
-        // 'url3d' => $urlApi
+        // 'url3d' => wp_remote_post($urlApi, $options)
+        'url3d' => $urlApi
     );
     return $api3dResponse;
-
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */

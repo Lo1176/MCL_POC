@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
     $.post(url, obj, function (data) {
       var url3d = data["url3d"];
       window.location = url3d;
-      alert(url3d);
+      alert('regarde dans Network');
     });
   });
 
