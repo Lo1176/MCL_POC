@@ -29,9 +29,14 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  // var entretoiseValue = getParameter("entretoise");
-  // if (entretoiseValue !== undefined) {
-  //   var element = $("#entretoise");
-  //   element.val(entretoiseValue);
-  // }
+  var entretoiseValue = getParameter("entretoise");
+  if (entretoiseValue !== undefined) {
+    var element = $("#entretoise");
+    element.val(entretoiseValue);
+  }
+  var couleurValue = getParameter("couleur");
+  if (couleurValue !== undefined) {
+    var element = $("#couleur");
+    element.val(couleurValue);
+  }
 }); // jQuery End
