@@ -128,8 +128,8 @@ function my_3D_func($data)
     // $urlApi = "https://lignew.clients.arkima.io/configurator/app/index.html";
     $api3dResponse = array(
         // 'url3d' => "https://lignew.clients.arkima.io/configurator/app/index.html"
-        // 'url3d' => wp_remote_post($urlApi, $options)
-        'url3d' => $urlApi
+        'url3d' => wp_remote_post($urlApi, $options)
+        // 'url3d' => $urlApi
     );
     return $api3dResponse;
 }
