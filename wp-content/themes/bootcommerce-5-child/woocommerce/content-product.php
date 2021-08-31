@@ -32,7 +32,7 @@ if (empty($product) || !$product->is_visible()) {
 		<!-- ##### A EFFACER ##### -->
 		<!-- <h2 class="text-warning">A EFFACER THEME-ORIGINAL/WOOCOMMERCE/content-product.PHP</h2> -->
 		<!-- ##### A EFFACER ##### -->
-		
+
 		<?php
 		/**
 		 * Hook: woocommerce_before_shop_loop_item.
@@ -74,6 +74,7 @@ if (empty($product) || !$product->is_visible()) {
 			 */
 			do_action('woocommerce_after_shop_loop_item');
 			?>
+
 		</div>
 	</div>
 </div>
