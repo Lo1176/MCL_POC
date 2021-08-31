@@ -32,7 +32,11 @@ if (post_password_required()) {
 	return;
 }
 ?>
+
+	<!-- <h2 class="text-warning">SIDEBAR-1</h2> -->
+	<?php #get_sidebar('sidebar-1') ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -46,7 +50,7 @@ if (post_password_required()) {
 	<div class="summary entry-summary">
 
 		<?php
-		echo "content-single-product.php";	
+		echo "content-single-product.php";
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
@@ -76,7 +80,6 @@ if (post_password_required()) {
 	 */
 	do_action('woocommerce_after_single_product_summary');
 	?>
-	<!-- ### A VIRER ###  -->
 </div>
 
 <?php do_action('woocommerce_after_single_product'); ?>
