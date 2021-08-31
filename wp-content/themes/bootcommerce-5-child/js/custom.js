@@ -12,8 +12,8 @@ jQuery(document).ready(function ($) {
     var url = $(this).attr("data-url");
     $.post(url, obj, function (data) {
       var url3d = data["url3d"];
-      window.location = url3d;
-      alert('regarde dans Network');
+      console.log(data);
+      // window.location = url3d;
     });
   });
 

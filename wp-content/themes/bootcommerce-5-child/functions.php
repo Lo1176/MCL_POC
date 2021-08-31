@@ -80,6 +80,10 @@ add_action('rest_api_init', function () {
 
 function my_3D_func($data)
 {
+    write_log('*****');
+    write_log('my 3D func input');
+    write_log($data);
+    write_log('*****');
     // $productId = $data['id']; // get product id from data url
     $product = wc_get_product($data); // get product id from DB
 
@@ -109,7 +113,7 @@ function my_3D_func($data)
     );
     $api3dRequestJSON = json_encode($api3dRequest);
 
-    $options = [
+    $api3dHttpRequest = [
         'body'        => $api3dRequestJSON,
         'headers'     => [
             'Content-Type' => 'application/json',
@@ -124,14 +128,30 @@ function my_3D_func($data)
 
     // to do : appeler API 3D request
     // test API avec l'EXUDE-API TBE
-    $urlApi = "https://exude-api.herokuapp.com/exude/stopping/data";
-    // $urlApi = "https://lignew.clients.arkima.io/configurator/app/index.html";
+    // $urlApi = "https://exude-api.herokuapp.com/exude/stopping/data";
+    $urlApi = "https://lignew.clients.arkima.io/configurator/app/index.html";
+    // $api3dHttpResponse = wp_remote_post($urlApi, $api3dHttpRequest);
     $api3dResponse = array(
         // 'url3d' => "https://lignew.clients.arkima.io/configurator/app/index.html"
-        'url3d' => wp_remote_post($urlApi, $options)
-        // 'url3d' => $urlApi
+        // 'url3d' => wp_remote_post($urlApi, $api3dHttpRequest)
+        'url3d' => $urlApi
     );
     return $api3dResponse;
+}
+
+// log errors
+if (!function_exists('write_log')) {
+
+    function write_log($log)
+    {
+        if (true === WP_DEBUG) {
+            if (is_array($log) || is_object($log)) {
+                error_log(print_r($log, true));
+            } else {
+                error_log($log);
+            }
+        }
+    }
 }
 
 /* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
