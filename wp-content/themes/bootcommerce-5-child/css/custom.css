@@ -57,9 +57,12 @@
   }
 }
 
-/* sidebar-1 */
-#secondary {
-  color: red;
-  
+
+/* to have  a left sidebar-1 */
+.site-main > .row {
+  display: flex;
+  flex-direction: row-reverse;
+  /* color: red; */
 }
+
   
