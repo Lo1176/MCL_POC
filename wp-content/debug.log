@@ -124,3 +124,588 @@
 
 [31-Aug-2021 16:36:49 UTC] PHP Parse error:  syntax error, unexpected identifier "write_log" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/functions.php on line 84
 [31-Aug-2021 16:55:21 UTC] PHP Warning:  Undefined variable $sync_status in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/google-listings-and-ads/views/meta-box/channel_visibility.php on line 81
+[01-Sep-2021 13:17:13 UTC] PHP Warning:  Undefined variable $sync_status in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/google-listings-and-ads/views/meta-box/channel_visibility.php on line 81
+[01-Sep-2021 14:15:11 UTC] *****
+[01-Sep-2021 14:15:11 UTC] my 3D func input
+[01-Sep-2021 14:15:11 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => blanche
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 18
+                )
+
+            [sec_ch_ua] => Array
+                (
+                    [0] => "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [sec_ch_ua_mobile] => Array
+                (
+                    [0] => ?0
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate, br
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+                )
+
+            [cookie] => Array
+                (
+                    [0] => wp-settings-time-1=1627651669; wp-settings-1=libraryContent%3Dbrowse%26posts_list_mode%3Dexcerpt%26widgets_access%3Doff%26editor%3Dtinymce%26imgsize%3Dmedium%26align%3Dnone; wordpress_test_cookie=WP%20Cookie%20check; wordpress_logged_in_20595faba5be3d42d53df63d0aacefbb=poc_dev_335%7C1630508545%7CUzJ1P0zxOyuxg0BRYCxLXUh7gdq4cUf74oWRiC07Yla%7C9dbe5e879d87fa960a26af370fb3b11923f645bf47e64da7caac41c25d841bfc; tk_ai=woo%3AGR6qlvNHm4ts1oRpeou6ed6w; woocommerce_items_in_cart=1; woocommerce_cart_hash=cb668519d92ed5b1a78421d5ab8f8f59; wp_woocommerce_session_20595faba5be3d42d53df63d0aacefbb=1%7C%7C1630677930%7C%7C1630674330%7C%7C6c13f1c45d07c5faf3ac67698c0b8cde; cookielawinfo-checkbox-necessary=yes; cookielawinfo-checkbox-functional=no; cookielawinfo-checkbox-performance=no; cookielawinfo-checkbox-analytics=no; cookielawinfo-checkbox-advertisement=no; cookielawinfo-checkbox-others=no; mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2Fwp-json%2Fwc%2Fstore%2Fproducts%2Fcollection-data%3Fcalculate_price_range%3Dtrue%26_locale%3Duser
+                )
+
+        )
+
+    [body:protected] => entretoise=blanche
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[01-Sep-2021 14:15:11 UTC] *****
+[01-Sep-2021 14:15:56 UTC] *****
+[01-Sep-2021 14:15:56 UTC] my 3D func input
+[01-Sep-2021 14:15:56 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => blanche
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 18
+                )
+
+            [sec_ch_ua] => Array
+                (
+                    [0] => "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [sec_ch_ua_mobile] => Array
+                (
+                    [0] => ?0
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate, br
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+                )
+
+            [cookie] => Array
+                (
+                    [0] => wp-settings-time-1=1627651669; wp-settings-1=libraryContent%3Dbrowse%26posts_list_mode%3Dexcerpt%26widgets_access%3Doff%26editor%3Dtinymce%26imgsize%3Dmedium%26align%3Dnone; wordpress_test_cookie=WP%20Cookie%20check; wordpress_logged_in_20595faba5be3d42d53df63d0aacefbb=poc_dev_335%7C1630508545%7CUzJ1P0zxOyuxg0BRYCxLXUh7gdq4cUf74oWRiC07Yla%7C9dbe5e879d87fa960a26af370fb3b11923f645bf47e64da7caac41c25d841bfc; tk_ai=woo%3AGR6qlvNHm4ts1oRpeou6ed6w; woocommerce_items_in_cart=1; woocommerce_cart_hash=cb668519d92ed5b1a78421d5ab8f8f59; wp_woocommerce_session_20595faba5be3d42d53df63d0aacefbb=1%7C%7C1630677930%7C%7C1630674330%7C%7C6c13f1c45d07c5faf3ac67698c0b8cde; cookielawinfo-checkbox-necessary=yes; cookielawinfo-checkbox-functional=no; cookielawinfo-checkbox-performance=no; cookielawinfo-checkbox-analytics=no; cookielawinfo-checkbox-advertisement=no; cookielawinfo-checkbox-others=no; mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2Fwp-json%2F3D%2Fv1%2Fproduct%2F341
+                )
+
+        )
+
+    [body:protected] => entretoise=blanche
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[01-Sep-2021 14:15:56 UTC] *****
+[01-Sep-2021 14:16:52 UTC] *****
+[01-Sep-2021 14:16:52 UTC] my 3D func input
+[01-Sep-2021 14:16:52 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => blanche
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:90.0) Gecko/20100101 Firefox/90.0
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 18
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [cookie] => Array
+                (
+                    [0] => mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2F%3Fwc-ajax%3Dget_refreshed_fragments
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+        )
+
+    [body:protected] => entretoise=blanche
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[01-Sep-2021 14:16:52 UTC] *****
+[01-Sep-2021 14:17:05 UTC] *****
+[01-Sep-2021 14:17:05 UTC] my 3D func input
+[01-Sep-2021 14:17:05 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => bleu
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:90.0) Gecko/20100101 Firefox/90.0
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 15
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [cookie] => Array
+                (
+                    [0] => mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2F%3Fwc-ajax%3Dget_refreshed_fragments
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+        )
+
+    [body:protected] => entretoise=bleu
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[01-Sep-2021 14:17:05 UTC] *****
