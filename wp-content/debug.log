@@ -709,3 +709,483 @@
 )
 
 [01-Sep-2021 14:17:05 UTC] *****
+[03-Sep-2021 07:38:01 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW PROCEDURE STATUS WHERE `Db` = 'MCL' made by do_action('toplevel_page_duplicator'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_get_menu, include('/plugins/duplicator/views/packages/controller.php'), include('/plugins/duplicator/views/packages/main/controller.php'), include('/plugins/duplicator/views/packages/main/s2.scan1.php'), include('/plugins/duplicator/views/packages/main/s2.scan3.php')
+[03-Sep-2021 07:38:01 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW FUNCTION STATUS WHERE `Db` = 'MCL' made by do_action('toplevel_page_duplicator'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_get_menu, include('/plugins/duplicator/views/packages/controller.php'), include('/plugins/duplicator/views/packages/main/controller.php'), include('/plugins/duplicator/views/packages/main/s2.scan1.php'), include('/plugins/duplicator/views/packages/main/s2.scan3.php')
+[03-Sep-2021 07:38:07 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW PROCEDURE STATUS WHERE `Db` = 'MCL' made by do_action('wp_ajax_duplicator_package_scan'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_scan, DUP_Package->runScanner
+[03-Sep-2021 07:38:07 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW FUNCTION STATUS WHERE `Db` = 'MCL' made by do_action('wp_ajax_duplicator_package_scan'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_scan, DUP_Package->runScanner
+[03-Sep-2021 08:05:34 UTC] *****
+[03-Sep-2021 08:05:34 UTC] my 3D func input
+[03-Sep-2021 08:05:34 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => blanche
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 18
+                )
+
+            [sec_ch_ua] => Array
+                (
+                    [0] => "Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [sec_ch_ua_mobile] => Array
+                (
+                    [0] => ?0
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+                )
+
+            [sec_ch_ua_platform] => Array
+                (
+                    [0] => "macOS"
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate, br
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+                )
+
+            [cookie] => Array
+                (
+                    [0] => wp-settings-time-1=1627651669; wp-settings-1=libraryContent%3Dbrowse%26posts_list_mode%3Dexcerpt%26widgets_access%3Doff%26editor%3Dtinymce%26imgsize%3Dmedium%26align%3Dnone; wp_woocommerce_session_20595faba5be3d42d53df63d0aacefbb=1%7C%7C1630677930%7C%7C1630674330%7C%7C6c13f1c45d07c5faf3ac67698c0b8cde; woocommerce_items_in_cart=1; woocommerce_cart_hash=cb668519d92ed5b1a78421d5ab8f8f59; cookielawinfo-checkbox-necessary=yes; cookielawinfo-checkbox-functional=no; cookielawinfo-checkbox-performance=no; cookielawinfo-checkbox-analytics=no; cookielawinfo-checkbox-advertisement=no; cookielawinfo-checkbox-others=no; mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2Fwp-admin%2Fadmin.php%3Fpage%3Dduplicator%26tab%3Dnew1%26_wpnonce%3D49a3171951
+                )
+
+        )
+
+    [body:protected] => entretoise=blanche
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[03-Sep-2021 08:05:34 UTC] *****
+[03-Sep-2021 08:05:39 UTC] *****
+[03-Sep-2021 08:05:39 UTC] my 3D func input
+[03-Sep-2021 08:05:39 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => blanche
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 18
+                )
+
+            [sec_ch_ua] => Array
+                (
+                    [0] => "Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [sec_ch_ua_mobile] => Array
+                (
+                    [0] => ?0
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+                )
+
+            [sec_ch_ua_platform] => Array
+                (
+                    [0] => "macOS"
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate, br
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+                )
+
+            [cookie] => Array
+                (
+                    [0] => wp-settings-time-1=1627651669; wp-settings-1=libraryContent%3Dbrowse%26posts_list_mode%3Dexcerpt%26widgets_access%3Doff%26editor%3Dtinymce%26imgsize%3Dmedium%26align%3Dnone; wp_woocommerce_session_20595faba5be3d42d53df63d0aacefbb=1%7C%7C1630677930%7C%7C1630674330%7C%7C6c13f1c45d07c5faf3ac67698c0b8cde; woocommerce_items_in_cart=1; woocommerce_cart_hash=cb668519d92ed5b1a78421d5ab8f8f59; cookielawinfo-checkbox-necessary=yes; cookielawinfo-checkbox-functional=no; cookielawinfo-checkbox-performance=no; cookielawinfo-checkbox-analytics=no; cookielawinfo-checkbox-advertisement=no; cookielawinfo-checkbox-others=no; mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2Fwp-admin%2Fadmin.php%3Fpage%3Dduplicator%26tab%3Dnew1%26_wpnonce%3D49a3171951
+                )
+
+        )
+
+    [body:protected] => entretoise=blanche
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[03-Sep-2021 08:05:39 UTC] *****
+[03-Sep-2021 08:05:47 UTC] *****
+[03-Sep-2021 08:05:47 UTC] my 3D func input
+[03-Sep-2021 08:05:47 UTC] WP_REST_Request Object
+(
+    [method:protected] => POST
+    [params:protected] => Array
+        (
+            [URL] => Array
+                (
+                    [id] => 341
+                )
+
+            [GET] => Array
+                (
+                )
+
+            [POST] => Array
+                (
+                    [entretoise] => blanche
+                )
+
+            [FILES] => Array
+                (
+                )
+
+            [JSON] => 
+            [defaults] => Array
+                (
+                )
+
+        )
+
+    [headers:protected] => Array
+        (
+            [authorization] => Array
+                (
+                    [0] => 
+                )
+
+            [host] => Array
+                (
+                    [0] => localhost
+                )
+
+            [connection] => Array
+                (
+                    [0] => keep-alive
+                )
+
+            [content_length] => Array
+                (
+                    [0] => 18
+                )
+
+            [sec_ch_ua] => Array
+                (
+                    [0] => "Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"
+                )
+
+            [accept] => Array
+                (
+                    [0] => */*
+                )
+
+            [content_type] => Array
+                (
+                    [0] => application/x-www-form-urlencoded; charset=UTF-8
+                )
+
+            [x_requested_with] => Array
+                (
+                    [0] => XMLHttpRequest
+                )
+
+            [sec_ch_ua_mobile] => Array
+                (
+                    [0] => ?0
+                )
+
+            [user_agent] => Array
+                (
+                    [0] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+                )
+
+            [sec_ch_ua_platform] => Array
+                (
+                    [0] => "macOS"
+                )
+
+            [origin] => Array
+                (
+                    [0] => http://localhost
+                )
+
+            [sec_fetch_site] => Array
+                (
+                    [0] => same-origin
+                )
+
+            [sec_fetch_mode] => Array
+                (
+                    [0] => cors
+                )
+
+            [sec_fetch_dest] => Array
+                (
+                    [0] => empty
+                )
+
+            [referer] => Array
+                (
+                    [0] => http://localhost/www/MCL_POC/boutique/chateau-laguiole-grand-cru-bois-debene-entretoise-blanche/
+                )
+
+            [accept_encoding] => Array
+                (
+                    [0] => gzip, deflate, br
+                )
+
+            [accept_language] => Array
+                (
+                    [0] => fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+                )
+
+            [cookie] => Array
+                (
+                    [0] => wp-settings-time-1=1627651669; wp-settings-1=libraryContent%3Dbrowse%26posts_list_mode%3Dexcerpt%26widgets_access%3Doff%26editor%3Dtinymce%26imgsize%3Dmedium%26align%3Dnone; wp_woocommerce_session_20595faba5be3d42d53df63d0aacefbb=1%7C%7C1630677930%7C%7C1630674330%7C%7C6c13f1c45d07c5faf3ac67698c0b8cde; woocommerce_items_in_cart=1; woocommerce_cart_hash=cb668519d92ed5b1a78421d5ab8f8f59; cookielawinfo-checkbox-necessary=yes; cookielawinfo-checkbox-functional=no; cookielawinfo-checkbox-performance=no; cookielawinfo-checkbox-analytics=no; cookielawinfo-checkbox-advertisement=no; cookielawinfo-checkbox-others=no; mailchimp_landing_site=http%3A%2F%2Flocalhost%2Fwww%2FMCL_POC%2Fwww%2FMCL_POC%2Fwp-admin%2Fadmin.php%3Fpage%3Dduplicator%26tab%3Dnew1%26_wpnonce%3D49a3171951
+                )
+
+        )
+
+    [body:protected] => entretoise=blanche
+    [route:protected] => /3D/v1/product/341
+    [attributes:protected] => Array
+        (
+            [methods] => Array
+                (
+                    [POST] => 1
+                )
+
+            [accept_json] => 
+            [accept_raw] => 
+            [show_in_index] => 1
+            [args] => Array
+                (
+                )
+
+            [callback] => my_3D_func
+            [permission_callback] => __return_true
+        )
+
+    [parsed_json:protected] => 1
+    [parsed_body:protected] => 
+)
+
+[03-Sep-2021 08:05:47 UTC] *****
+[03-Sep-2021 08:07:33 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW PROCEDURE STATUS WHERE `Db` = 'MCL' made by do_action('toplevel_page_duplicator'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_get_menu, include('/plugins/duplicator/views/packages/controller.php'), include('/plugins/duplicator/views/packages/main/controller.php'), include('/plugins/duplicator/views/packages/main/s2.scan1.php'), include('/plugins/duplicator/views/packages/main/s2.scan3.php')
+[03-Sep-2021 08:07:33 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW FUNCTION STATUS WHERE `Db` = 'MCL' made by do_action('toplevel_page_duplicator'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_get_menu, include('/plugins/duplicator/views/packages/controller.php'), include('/plugins/duplicator/views/packages/main/controller.php'), include('/plugins/duplicator/views/packages/main/s2.scan1.php'), include('/plugins/duplicator/views/packages/main/s2.scan3.php')
+[03-Sep-2021 08:07:34 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW PROCEDURE STATUS WHERE `Db` = 'MCL' made by do_action('wp_ajax_duplicator_package_scan'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_scan, DUP_Package->runScanner
+[03-Sep-2021 08:07:34 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW FUNCTION STATUS WHERE `Db` = 'MCL' made by do_action('wp_ajax_duplicator_package_scan'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_scan, DUP_Package->runScanner
+[03-Sep-2021 08:12:48 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW PROCEDURE STATUS WHERE `Db` = 'MCL' made by do_action('toplevel_page_duplicator'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_get_menu, include('/plugins/duplicator/views/packages/controller.php'), include('/plugins/duplicator/views/packages/main/controller.php'), include('/plugins/duplicator/views/packages/main/s2.scan1.php'), include('/plugins/duplicator/views/packages/main/s2.scan3.php')
+[03-Sep-2021 08:12:48 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW FUNCTION STATUS WHERE `Db` = 'MCL' made by do_action('toplevel_page_duplicator'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_get_menu, include('/plugins/duplicator/views/packages/controller.php'), include('/plugins/duplicator/views/packages/main/controller.php'), include('/plugins/duplicator/views/packages/main/s2.scan1.php'), include('/plugins/duplicator/views/packages/main/s2.scan3.php')
+[03-Sep-2021 08:12:49 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW PROCEDURE STATUS WHERE `Db` = 'MCL' made by do_action('wp_ajax_duplicator_package_scan'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_scan, DUP_Package->runScanner
+[03-Sep-2021 08:12:49 UTC] WordPress database error Cannot load from mysql.proc. The table is probably corrupted for query SHOW FUNCTION STATUS WHERE `Db` = 'MCL' made by do_action('wp_ajax_duplicator_package_scan'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_scan, DUP_Package->runScanner
