@@ -1305,3 +1305,5 @@
 [03-Sep-2021 12:17:44 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2006): MySQL server has gone away in /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/wp-db.php on line 1653
 [03-Sep-2021 12:19:46 UTC] PHP Warning:  mysqli_real_connect(): Error while reading greeting packet. PID=1046 in /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/wp-db.php on line 1653
 [03-Sep-2021 12:19:46 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2006): MySQL server has gone away in /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/wp-db.php on line 1653
+[03-Sep-2021 12:21:46 UTC] PHP Warning:  mysqli_real_connect(): Error while reading greeting packet. PID=1045 in /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/wp-db.php on line 1653
+[03-Sep-2021 12:21:46 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2006): MySQL server has gone away in /Users/laurentbinder/Sites/www/MCL_POC/wp-includes/wp-db.php on line 1653
