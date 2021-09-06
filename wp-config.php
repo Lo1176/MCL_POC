@@ -40,6 +40,8 @@ define( 'DB_COLLATE', '' );
 // // redirect localhost to http -> not working
 // define('WP_SITEURL', 'http://localhost/www/MCL_poc');
 // define('WP_HOME',    'http://localhost/www/MCL_poc');
+// define('FORCE_SSL_ADMIN', false);
+// define('FORCE_SSL_LOGIN', false);
 
 // define( 'WP_CACHE', false );
 

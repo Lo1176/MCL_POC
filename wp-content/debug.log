@@ -2755,3 +2755,4 @@ Stack trace:
 [03-Sep-2021 15:43:51 UTC] PHP Warning:  Undefined array key "astra-sites-tag" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/ultimate-addons-for-gutenberg/lib/gutenberg-templates/classes/class-ast-block-templates.php on line 481
 [03-Sep-2021 15:43:51 UTC] PHP Warning:  Undefined array key "astra-sites-tag" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/ultimate-addons-for-gutenberg/lib/gutenberg-templates/classes/class-ast-block-templates.php on line 481
 [03-Sep-2021 15:43:51 UTC] PHP Warning:  Undefined array key "astra-sites-tag" in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/plugins/ultimate-addons-for-gutenberg/lib/gutenberg-templates/classes/class-ast-block-templates.php on line 481
+[03-Sep-2021 16:16:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/laurentbinder/Sites/www/MCL_POC/wp-content/themes/bootcommerce-5-child/template-home-page-lw.php on line 21
