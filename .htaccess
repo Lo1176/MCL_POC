@@ -168,3 +168,46 @@ Header set Cache-Control "private, must-revalidate"
 </ifModule>
 
 # END cache
+
+# Compressions des fichiers statiques
+<IfModule mod_deflate.c> 
+    AddOutputFilterByType DEFLATE text/xhtml text/html text/plain text/xml text/javascript application/x-javascript text/css 
+    BrowserMatch ^Mozilla/4 gzip-only-text/html 
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip 
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary 
+    Header append Vary User-Agent env=!dont-vary 
+</IfModule>  
+
+AddOutputFilterByType DEFLATE text/html  
+AddOutputFilterByType DEFLATE text/plain  
+AddOutputFilterByType DEFLATE text/xml  
+AddOutputFilterByType DEFLATE text/css  
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+
+# Bloquer l'utilisation de certains scripts
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+
+# Protection contre les injections de fichiers
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http:// [OR]
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=(\.\.//?)+ [OR]
+RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
+RewriteRule .* - [F]
+
+# Protections diverses (XSS, clickjacking et MIME-Type sniffing)
+<ifModule mod_headers.c>
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options: "nosniff”
+</ifModule>
