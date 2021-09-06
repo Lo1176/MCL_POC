@@ -3,15 +3,14 @@ logs/
 wp-content/backups-dup-lite/
 wp-content/backups-dup-lite/*
 
-# ignore .htaccess files
-# /.htaccess
-*.htaccess_old_2021_08_25_DNU
-*.DNU_htaccess
+# ignore .htaccess files (starting with ...)
+# /.htaccess*
+.htaccess*
 
 # ignore .htpasswd files
 # *.htpasswd
 
-# ignore log files and databases
+# ignore log files and databases (ending with ...)
 *.log
 *.sql
 *.sqlite
