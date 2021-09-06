@@ -101,8 +101,8 @@ RewriteEngine On
 RewriteCond %{HTTP_REFERER} !^$
 # Remplacez maison-chateau-laguiole.fr par votre nom de domaine
 # attention au www2
-RewriteCond %{HTTP_REFERER} !^http(s)?://(www2\.)?maison-chateau-laguiole.fr [NC]
-RewriteRule \.(jpg|jpeg|png|gif)$ http://fakeimg.pl/400x200/?text=Private_Copyright [NC,R,L]
+# RewriteCond %{HTTP_REFERER} !^http(s)?://(www2\.)?maison-chateau-laguiole.fr [NC]
+# RewriteRule \.(jpg|jpeg|png|gif)$ http://fakeimg.pl/400x200/?text=Private_Copyright [NC,R,L]
 
 # Redirection vers HTTPS 
 # RewriteCond     %{SERVER_PORT} ^80$

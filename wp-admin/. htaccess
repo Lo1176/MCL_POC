@@ -1,0 +1,19 @@
+### Start config login htaccess for back-office WP ###
+
+## BEGIN finir la configuration pour Limiter l’accès à l’administration du site
+<Limit GET POST PUT>
+order deny,allow
+deny from all
+# IP de Laurent
+allow from xxx.xxx.xxx.xxx
+# IP de Seb
+allow from xxx.xxx.xxx.xxx
+# IP d'un autre point d'accès
+allow from xxx.xxx.xxx.xxx
+</Limit>
+## END finir la configuration pour Limiter l’accès à l’administration du site
+
+
+AuthUserFile
+
+### End config login htaccess for back-office WP ###
