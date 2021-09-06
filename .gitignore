@@ -4,3 +4,8 @@ logs/
 /wp-content/backups-dup-lite/*
 wp-content/backups-dup-lite/*
 
+# ignore .htaccess files
+.htaccess
+
+# ignore .htpasswd files
+.htpasswd
