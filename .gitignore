@@ -18,7 +18,7 @@ wp-content/backups-dup-lite/*
 #ignore images
 wp-content/uploads/
 
-# wp-config.php
+wp-config.php
 # wp-content/advanced-cache.php
 # wp-content/backup-db/
 # wp-content/backups/
@@ -28,3 +28,4 @@ wp-content/uploads/
 # wp-content/wp-cache-config.php
 # wp-content/plugins/hello.php
 DNU*
+wp-content_DNU*
