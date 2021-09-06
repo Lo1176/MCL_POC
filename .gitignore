@@ -4,7 +4,7 @@ wp-content/backups-dup-lite/
 wp-content/backups-dup-lite/*
 
 # ignore .htaccess files
-*.htaccess
+/.htaccess
 
 # ignore .htpasswd files
 *.htpasswd
