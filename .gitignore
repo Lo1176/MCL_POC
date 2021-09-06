@@ -14,3 +14,6 @@ wp-content/backups-dup-lite/*
 *.log
 *.sql
 *.sqlite
+
+#ignore images
+# wp-content/uploads/
