@@ -10,8 +10,11 @@ Order deny,allow
 Deny from all
 </IfModule>
 </Files>
+# Masquer les informations du serveur
 ServerSignature Off
+#
 LimitRequestBody 10485760
+# Protéger le fichier wp-config.php
 <Files wp-config.php>
 <IfModule mod_authz_core.c>
 Require all denied
@@ -71,3 +74,18 @@ RewriteRule . /www/MCL_POC/index.php [L]
 </IfModule>
 
 # END WordPress
+
+# Désactiver l'affichage du contenu des répertoires
+Options All -Indexes
+# Activation du suivi des liens symboliques
+Options +FollowSymLinks
+# Choix du fuseau horaire
+SetEnv TZ Europe/Paris
+# Encodage par défaut des fichiers textes et HTML
+AddDefaultCharset UTF-8
+# Protéger les fichiers .htaccess et .htpasswds
+<Files ~ "^.*\.([Hh][Tt][AaPp])">
+order allow,deny
+deny from all
+satisfy all
+</Files>
