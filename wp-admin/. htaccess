@@ -1,4 +1,3 @@
-### Start config login htaccess for back-office WP ###
 
 ## BEGIN finir la configuration pour Limiter l’accès à l’administration du site
 <Limit GET POST PUT>
@@ -13,7 +12,20 @@ allow from xxx.xxx.xxx.xxx
 </Limit>
 ## END finir la configuration pour Limiter l’accès à l’administration du site
 
+## Start config login htaccess for back-office WP ###
 
-AuthUserFile
+# Seconde authentification pour l'administration
 
-### End config login htaccess for back-office WP ###
+<Files admin-ajax.php>
+Order allow,deny
+Allow from all
+Satisfy any 
+</Files>
+
+AuthName "Connexion à l'administration"
+AuthType Basic
+AuthUserFile "/Users/laurentbinder/Sites/www/MCL_POC/.htpasswd"
+
+Require valid-user
+
+## End config login htaccess for back-office WP ###
