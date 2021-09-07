@@ -33,7 +33,7 @@ class SubscribersCountsController {
   }
 
   public function getSubscribersWithoutSegmentStatisticsCount(): array {
-    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY, 0);
+    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY, 0)['item'] ?? null;
     if (!$result) {
       $result = $this->recalculateSubscribersWithoutSegmentStatisticsCache();
     }
@@ -41,7 +41,7 @@ class SubscribersCountsController {
   }
 
   public function getSegmentStatisticsCount(SegmentEntity $segment): array {
-    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY, (int)$segment->getId());
+    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY, (int)$segment->getId())['item'] ?? null;
     if (!$result) {
       $result = $this->recalculateSegmentStatisticsCache($segment);
     }
@@ -49,7 +49,7 @@ class SubscribersCountsController {
   }
 
   public function getSegmentGlobalStatusStatisticsCount(SegmentEntity $segment): array {
-    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_GLOBAL_STATUS_STATISTICS_COUNT_KEY, (int)$segment->getId());
+    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_GLOBAL_STATUS_STATISTICS_COUNT_KEY, (int)$segment->getId())['item'] ?? null;
     if (!$result) {
       $result = $this->recalculateSegmentGlobalStatusStatisticsCache($segment);
     }
@@ -57,7 +57,7 @@ class SubscribersCountsController {
   }
 
   public function getSegmentStatisticsCountById(int $segmentId): array {
-    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY, $segmentId);
+    $result = $this->transientCache->getItem(TransientCache::SUBSCRIBERS_STATISTICS_COUNT_KEY, $segmentId)['item'] ?? null;
     if (!$result) {
       $segment = $this->segmentsRepository->findOneById($segmentId);
       if (!$segment) {

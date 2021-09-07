@@ -12,6 +12,7 @@ use MailPoet\Entities\SubscriberEntity;
 use MailPoet\Entities\UserAgentEntity;
 use MailPoet\Statistics\StatisticsOpensRepository;
 use MailPoet\Statistics\UserAgentsRepository;
+use MailPoet\Subscribers\SubscribersRepository;
 
 class Opens {
   /** @var StatisticsOpensRepository */
@@ -20,12 +21,17 @@ class Opens {
   /** @var UserAgentsRepository */
   private $userAgentsRepository;
 
+  /** @var SubscribersRepository */
+  private $subscribersRepository;
+
   public function __construct(
     StatisticsOpensRepository $statisticsOpensRepository,
-    UserAgentsRepository $userAgentsRepository
+    UserAgentsRepository $userAgentsRepository,
+    SubscribersRepository $subscribersRepository
   ) {
     $this->statisticsOpensRepository = $statisticsOpensRepository;
     $this->userAgentsRepository = $userAgentsRepository;
+    $this->subscribersRepository = $subscribersRepository;
   }
 
   public function track($data, $displayImage = true) {
@@ -59,6 +65,7 @@ class Opens {
             $this->statisticsOpensRepository->flush();
           }
         }
+        $this->subscribersRepository->maybeUpdateLastEngagement($subscriber, $userAgent ?? null);
         return $this->returnResponse($displayImage);
       }
       $statistics = new StatisticsOpenEntity($newsletter, $queue, $subscriber);
@@ -69,6 +76,7 @@ class Opens {
       }
       $this->statisticsOpensRepository->persist($statistics);
       $this->statisticsOpensRepository->flush();
+      $this->subscribersRepository->maybeUpdateLastEngagement($subscriber, $userAgent ?? null);
       $this->statisticsOpensRepository->recalculateSubscriberScore($subscriber);
     }
     return $this->returnResponse($displayImage);

@@ -10,6 +10,7 @@ use MailPoet\Entities\SegmentEntity;
 use MailPoet\Entities\SubscriberCustomFieldEntity;
 use MailPoet\Entities\SubscriberEntity;
 use MailPoet\Entities\SubscriberSegmentEntity;
+use MailPoet\Entities\UserAgentEntity;
 use MailPoet\WP\Functions as WPFunctions;
 use MailPoetVendor\Carbon\Carbon;
 use MailPoetVendor\Doctrine\DBAL\Connection;
@@ -20,6 +21,9 @@ use MailPoetVendor\Doctrine\ORM\Query\Expr\Join;
  * @extends Repository<SubscriberEntity>
  */
 class SubscribersRepository extends Repository {
+  /** @var WPFunctions */
+  private $wp;
+
   protected $ignoreColumnsForUpdate = [
     'wp_user_id',
     'is_woocommerce_user',
@@ -27,6 +31,11 @@ class SubscribersRepository extends Repository {
     'created_at',
     'last_subscribed_at',
   ];
+
+  public function __construct(EntityManager $entityManager, WPFunctions $wp) {
+    $this->wp = $wp;
+    parent::__construct($entityManager);
+  }
 
   protected function getEntityClassName() {
     return SubscriberEntity::class;
@@ -308,5 +317,19 @@ class SubscribersRepository extends Repository {
       ->getQuery()
       ->setMaxResults($limit)
       ->getResult();
+  }
+
+  public function maybeUpdateLastEngagement(SubscriberEntity $subscriberEntity, ?UserAgentEntity $userAgent = null): void {
+    if ($userAgent instanceof UserAgentEntity && $userAgent->getUserAgentType() === UserAgentEntity::USER_AGENT_TYPE_MACHINE) {
+      return;
+    }
+    $now = Carbon::createFromTimestamp((int)$this->wp->currentTime('timestamp'));
+    // Do not update engagement if was recently updated to avoid unnecessary updates in DB
+    if ($subscriberEntity->getLastEngagementAt() && $subscriberEntity->getLastEngagementAt() > $now->subMinute()) {
+      return;
+    }
+    // Update last engagement for human (and also unknown) user agent
+    $subscriberEntity->setLastEngagementAt($now);
+    $this->flush();
   }
 }

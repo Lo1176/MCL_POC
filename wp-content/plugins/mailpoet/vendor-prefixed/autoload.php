@@ -1,2 +1,2 @@
 <?php
- namespace MailPoetVendor; if (!defined('ABSPATH')) exit; require_once __DIR__ . '/composer/autoload_real.php'; return ComposerAutoloaderInit120d3c47c3814619bf4b5c6fface5cce::getLoader(); 
+ namespace MailPoetVendor; if (!defined('ABSPATH')) exit; require_once __DIR__ . '/composer/autoload_real.php'; return ComposerAutoloaderInit7b8f184fa49b5018defb2ebf2d8bf7a5::getLoader(); 

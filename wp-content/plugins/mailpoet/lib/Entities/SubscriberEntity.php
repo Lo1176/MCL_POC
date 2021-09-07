@@ -142,6 +142,12 @@ class SubscriberEntity {
   private $engagementScoreUpdatedAt;
 
   /**
+   * @ORM\Column(type="datetimetz", nullable=true)
+   * @var DateTimeInterface|null
+   */
+  private $lastEngagementAt;
+
+  /**
    * @ORM\OneToMany(targetEntity="MailPoet\Entities\SubscriberSegmentEntity", mappedBy="subscriber", orphanRemoval=true)
    * @var Collection<int, SubscriberSegmentEntity>
    */
@@ -439,6 +445,14 @@ class SubscriberEntity {
    */
   public function setEngagementScoreUpdatedAt(?DateTimeInterface $engagementScoreUpdatedAt): void {
     $this->engagementScoreUpdatedAt = $engagementScoreUpdatedAt;
+  }
+
+  public function getLastEngagementAt(): ?DateTimeInterface {
+    return $this->lastEngagementAt;
+  }
+
+  public function setLastEngagementAt(DateTimeInterface $lastEngagementAt): void {
+    $this->lastEngagementAt = $lastEngagementAt;
   }
 
   /** @ORM\PreFlush */

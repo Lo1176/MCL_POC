@@ -11,6 +11,7 @@ use MailPoet\Cron\Workers\Beamer;
 use MailPoet\Cron\Workers\InactiveSubscribers;
 use MailPoet\Cron\Workers\StatsNotifications\Worker;
 use MailPoet\Cron\Workers\SubscriberLinkTokens;
+use MailPoet\Cron\Workers\SubscribersLastEngagement;
 use MailPoet\Cron\Workers\UnsubscribeTokens;
 use MailPoet\Entities\FormEntity;
 use MailPoet\Entities\NewsletterEntity;
@@ -185,6 +186,7 @@ class Populator {
     $this->moveGoogleAnalyticsFromPremium();
     $this->addPlacementStatusToForms();
     $this->migrateFormPlacement();
+    $this->scheduleSubscriberLastEngagementDetection();
   }
 
   private function createMailPoetPage() {
@@ -880,5 +882,15 @@ class Populator {
 
   private function detectReferral() {
     $this->referralDetector->detect();
+  }
+
+  private function scheduleSubscriberLastEngagementDetection() {
+    if (version_compare($this->settings->get('db_version', '3.68.1'), '3.68.0', '>')) {
+      return;
+    }
+    $this->scheduleTask(
+      SubscribersLastEngagement::TASK_TYPE,
+      Carbon::createFromTimestamp($this->wp->currentTime('timestamp'))
+    );
   }
 }
