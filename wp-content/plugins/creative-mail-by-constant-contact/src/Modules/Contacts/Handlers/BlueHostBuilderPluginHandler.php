@@ -51,7 +51,7 @@ class BlueHostBuilderPluginHandler extends BaseContactFormPluginHandler
     {
         try {
             global $wpdb;
-            $contact = $wpdb->get_row($wpdb->prepare("SELECT * FROM wp_wb4wp_contacts WHERE contact_id = {$contact_id}"));
+            $contact = $wpdb->get_row("SELECT * FROM wp_wb4wp_contacts WHERE contact_id = $contact_id");
             if (empty($contact->email_address)) {
                 return;
             }

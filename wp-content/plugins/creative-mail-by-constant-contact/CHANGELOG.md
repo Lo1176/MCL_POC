@@ -1,6 +1,9 @@
 Changelog
 =========
 
+#### 1.4.5 - September 2 2021
+- This version contains a fix for Creative mail customers who also use the Bluehost Websitebuilder functionality to build their WordPress site.
+
 #### 1.4.4 - August 19 2021
 - Add support for 'return to shop' urls
 - Bug fixes

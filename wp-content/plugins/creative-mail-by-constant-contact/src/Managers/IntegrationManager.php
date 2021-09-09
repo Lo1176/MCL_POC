@@ -3,6 +3,7 @@
 
 namespace CreativeMail\Managers;
 
+use CreativeMail\Helpers\EnvironmentHelper;
 use CreativeMail\Helpers\OptionsHelper;
 use CreativeMail\Integrations\Integration;
 use CreativeMail\Modules\Contacts\Handlers\BlueHostBuilderPluginHandler;
@@ -35,6 +36,8 @@ class IntegrationManager
     {
         $this->active_integrations = array();
 
+        $environment = strtolower(EnvironmentHelper::get_environment());
+
         // Setup the default integrations
         $this->supported_integrations = array(
             new Integration('jetpack', 'Jetpack Forms', 'jetpack/jetpack.php', JetpackPluginHandler::class, false),
@@ -48,7 +51,7 @@ class IntegrationManager
             new Integration('elementor', 'Elementor', 'elementor/elementor.php', ElementorPluginHandler::class, false),
             new Integration('ninjaforms', 'Ninja Forms', 'ninja-forms/ninja-forms.php', NinjaFormsPluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=ninja-forms&TB_iframe=true&width=772&height=1144')),
             new Integration('caldera', 'Caldera Forms', 'caldera-forms/caldera-core.php', CalderaPluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=caldera-forms&TB_iframe=true&width=772&height=1144')),
-            new Integration('bluehost', 'Bluehost Builder', 'wb4wp-wordpress-plugin-bluehost/wb4wp-plugin.php', BlueHostBuilderPluginHandler::class, false, 'https://www.bluehost.com/'),
+            new Integration('bluehost', 'Bluehost Builder', "wb4wp-wordpress-plugin-bluehost-$environment/wb4wp-plugin.php", BlueHostBuilderPluginHandler::class, false, 'https://www.bluehost.com/'),
             new Integration('formidable', 'Formidable', 'formidable/formidable.php', FormidablePluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=formidable&TB_iframe=true&width=772&height=1144')),
             new Integration('creativemail', 'CreativeMail', 'creativ-email-wordpress-plugin/creative-mail-plugin.php', CreativeMailPluginHandler::class, true, null, true)
         );
