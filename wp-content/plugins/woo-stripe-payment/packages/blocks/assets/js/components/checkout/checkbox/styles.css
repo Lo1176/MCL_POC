@@ -1,0 +1,44 @@
+.wc-stripe-save-payment-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+}
+
+.wc-stripe-save-payment-method input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.wc-stripe-save-payment-method input[type="checkbox"]:checked + svg {
+  display: block;
+  height: auto;
+}
+
+.wc-stripe-save-payment-method span {
+  margin-left: 5px;
+}
+
+.wc-stripe-save-payment-method label {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: white;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  margin: 0;
+  padding: 0;
+}
+
+.wc-stripe-save-payment-method svg {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */
