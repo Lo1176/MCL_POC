@@ -4,11 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23
+class ComposerStaticInit45a964d8c3674266f4d2ab718d8ef7e9
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '1f87db08236948d07391152dccb70f04' => __DIR__ . '/..' . '/google/apiclient-services/autoload.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -770,7 +773,6 @@ class ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\View\\PHPView' => __DIR__ . '/../..' . '/src/View/PHPView.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\View\\PHPViewFactory' => __DIR__ . '/../..' . '/src/View/PHPViewFactory.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\View\\ViewException' => __DIR__ . '/../..' . '/src/View/ViewException.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
         'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
         'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
@@ -5517,7 +5519,9 @@ class ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23
         'Symfony\\Component\\Validator\\Mapping\\PropertyMetadataInterface' => __DIR__ . '/..' . '/symfony/validator/Mapping/PropertyMetadataInterface.php',
         'Symfony\\Component\\Validator\\Mapping\\TraversalStrategy' => __DIR__ . '/..' . '/symfony/validator/Mapping/TraversalStrategy.php',
         'Symfony\\Component\\Validator\\ObjectInitializerInterface' => __DIR__ . '/..' . '/symfony/validator/ObjectInitializerInterface.php',
+        'Symfony\\Component\\Validator\\Test\\AssertingContextualValidator' => __DIR__ . '/..' . '/symfony/validator/Test/ConstraintValidatorTestCase.php',
         'Symfony\\Component\\Validator\\Test\\ConstraintValidatorTestCase' => __DIR__ . '/..' . '/symfony/validator/Test/ConstraintValidatorTestCase.php',
+        'Symfony\\Component\\Validator\\Test\\ConstraintViolationAssertion' => __DIR__ . '/..' . '/symfony/validator/Test/ConstraintValidatorTestCase.php',
         'Symfony\\Component\\Validator\\Util\\PropertyPath' => __DIR__ . '/..' . '/symfony/validator/Util/PropertyPath.php',
         'Symfony\\Component\\Validator\\Validation' => __DIR__ . '/..' . '/symfony/validator/Validation.php',
         'Symfony\\Component\\Validator\\ValidatorBuilder' => __DIR__ . '/..' . '/symfony/validator/ValidatorBuilder.php',
@@ -5874,9 +5878,9 @@ class ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticIniteb33aedfa875fb21c6051e16227bbd23::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit45a964d8c3674266f4d2ab718d8ef7e9::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit45a964d8c3674266f4d2ab718d8ef7e9::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit45a964d8c3674266f4d2ab718d8ef7e9::$classMap;
 
         }, null, ClassLoader::class);
     }
