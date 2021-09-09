@@ -129,7 +129,7 @@ function my_3D_func($data)
     // to do : appeler API 3D request
     // test API avec l'EXUDE-API TBE
     // $urlApi = "https://exude-api.herokuapp.com/exude/stopping/data";
-    $urlApi = "https://lignew.clients.arkima.io/configurator/app/index.html";
+    $urlApi = "https://qa-lignew-lignew-configurator.preview.arkima.io/configurator/app/index.html";
     // $api3dHttpResponse = wp_remote_post($urlApi, $api3dHttpRequest);
     $api3dResponse = array(
         // 'url3d' => "https://lignew.clients.arkima.io/configurator/app/index.html"

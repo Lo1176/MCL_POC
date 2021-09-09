@@ -29,12 +29,12 @@ get_header();
 					?>
 
 					<!-- slide products -->
-					
+
 
 				</div>
 				<!-- video ?  -->
 				<div class="container-fluid text-center">
-					<a href="https://lignew.clients.arkima.io/configurator/app/index.html" target="_blank" rel="noopener noreferrer">
+					<a href="https://qa-lignew-lignew-configurator.preview.arkima.io/configurator/app/index.html" target="_blank" rel="noopener noreferrer">
 						<iframe class="elementor-background-video-embed" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/R8ljIK_ywz8?controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost&amp;widgetid=1" id="widget2" style="width: 680px"></iframe>
 					</a>
 				</div>

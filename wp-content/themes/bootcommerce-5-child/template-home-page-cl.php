@@ -51,7 +51,7 @@ get_header();
                         <label class="btn btn-outline-secondary" for="btnradio3">Couteaux de table</label>
 
                         <!-- 3D link -->
-                        <a href="https://lignew.clients.arkima.io/configurator/app/index.html" target="_blank" class="btn btn-dark">Personalisation 3D</a>
+                        <a href="https://qa-lignew-lignew-configurator.preview.arkima.io/configurator/app/index.html" target="_blank" class="btn btn-dark">Personalisation 3D</a>
 
 
                     </div>
