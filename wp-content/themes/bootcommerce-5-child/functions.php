@@ -20,11 +20,11 @@ require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 * add Custom Navigation Menu
 */
 
-function lbi_custom_new_menu()
+function mcl_custom_new_menu()
 {
     register_nav_menu('my-navigation-menu', __('Navigation menu'));
 }
-add_action('init', 'lbi_custom_new_menu');
+add_action('init', 'mcl_custom_new_menu');
 
 /* end Custom Navigation Menu*/
 

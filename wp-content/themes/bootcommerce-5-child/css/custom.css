@@ -1,6 +1,25 @@
 /* Add your styles here */
 
-/* Add your styles here */
+/***** body *****/
+body {
+  background-color: #fafafa !important;
+}
+/***** body fin *****/
+
+
+.badge {
+  display: inline-block;
+  padding: .35em .65em;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1.5 !important;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: coral !important;
+  vertical-align: baseline;
+  border-radius: 50% !important;
+}
 
 /* accueil */
 
