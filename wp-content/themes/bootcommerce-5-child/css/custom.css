@@ -7,7 +7,7 @@ body {
 /***** body fin *****/
 
 span.badge {
-  position: absolute;
+  /* position: absolute; */
   /* left: 1rem !important;
   top: 1rem; */
   padding: .35em .65em;
