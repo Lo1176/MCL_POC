@@ -1,0 +1,8 @@
+#woocommerce-revolut-card-element{
+    border-radius: 3px;
+    padding: 5px 5px;
+}
+
+.hidden_by_revolut {
+    display: none !important;
+}
