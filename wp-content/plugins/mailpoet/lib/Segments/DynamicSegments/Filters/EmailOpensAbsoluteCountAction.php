@@ -8,6 +8,7 @@ if (!defined('ABSPATH')) exit;
 use MailPoet\Entities\DynamicSegmentFilterEntity;
 use MailPoet\Entities\StatisticsOpenEntity;
 use MailPoet\Entities\SubscriberEntity;
+use MailPoet\Entities\UserAgentEntity;
 use MailPoet\Util\Security;
 use MailPoetVendor\Carbon\CarbonImmutable;
 use MailPoetVendor\Doctrine\DBAL\Query\QueryBuilder;
@@ -15,6 +16,7 @@ use MailPoetVendor\Doctrine\ORM\EntityManager;
 
 class EmailOpensAbsoluteCountAction implements Filter {
   const TYPE = 'opensAbsoluteCount';
+  const MACHINE_TYPE = 'machineOpensAbsoluteCount';
 
   /** @var EntityManager */
   private $entityManager;
@@ -27,6 +29,7 @@ class EmailOpensAbsoluteCountAction implements Filter {
     $filterData = $filter->getFilterData();
     $days = $filterData->getParam('days');
     $operator = $filterData->getParam('operator');
+    $action = $filterData->getParam('action');
     $parameterSuffix = $filter->getId() ?? Security::generateRandomString();
     $statsTable = $this->entityManager->getClassMetadata(StatisticsOpenEntity::class)->getTableName();
     $subscribersTable = $this->entityManager->getClassMetadata(SubscriberEntity::class)->getTableName();
@@ -44,6 +47,13 @@ class EmailOpensAbsoluteCountAction implements Filter {
       $queryBuilder->having("count(opens.id) > :opens" . $parameterSuffix);
     }
     $queryBuilder->setParameter('opens' . $parameterSuffix, $filterData->getParam('opens'));
+    if ($action === EmailOpensAbsoluteCountAction::TYPE) {
+      $queryBuilder->andWhere('opens.user_agent_type = :userAgentType')
+        ->setParameter('userAgentType', UserAgentEntity::USER_AGENT_TYPE_HUMAN);
+    } else {
+      $queryBuilder->andWhere('opens.user_agent_type = :userAgentType')
+        ->setParameter('userAgentType', UserAgentEntity::USER_AGENT_TYPE_MACHINE);
+    }
     return $queryBuilder;
   }
 }

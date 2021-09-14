@@ -12,6 +12,8 @@ use MailPoet\API\JSON\Error as APIError;
 use MailPoet\API\JSON\Response;
 use MailPoet\API\JSON\ResponseBuilders\SegmentsResponseBuilder;
 use MailPoet\Config\AccessControl;
+use MailPoet\Cron\CronWorkerScheduler;
+use MailPoet\Cron\Workers\WooCommerceSync;
 use MailPoet\Doctrine\Validator\ValidationException;
 use MailPoet\Entities\SegmentEntity;
 use MailPoet\Entities\SubscriberEntity;
@@ -59,6 +61,9 @@ class Segments extends APIEndpoint {
   /** @var NewsletterSegmentRepository */
   private $newsletterSegmentRepository;
 
+  /** @var CronWorkerScheduler */
+  private $cronWorkerScheduler;
+
   /** @var FormsRepository */
   private $formsRepository;
 
@@ -72,6 +77,7 @@ class Segments extends APIEndpoint {
     WooCommerce $wooCommerce,
     WP $wpSegment,
     NewsletterSegmentRepository $newsletterSegmentRepository,
+    CronWorkerScheduler $cronWorkerScheduler,
     FormsRepository $formsRepository
   ) {
     $this->listingHandler = $listingHandler;
@@ -83,6 +89,7 @@ class Segments extends APIEndpoint {
     $this->wpSegment = $wpSegment;
     $this->segmentListingRepository = $segmentListingRepository;
     $this->newsletterSegmentRepository = $newsletterSegmentRepository;
+    $this->cronWorkerScheduler = $cronWorkerScheduler;
     $this->formsRepository = $formsRepository;
   }
 
@@ -257,7 +264,7 @@ class Segments extends APIEndpoint {
   public function synchronize($data) {
     try {
       if ($data['type'] === SegmentEntity::TYPE_WC_USERS) {
-        $this->wooCommerceSync->synchronizeCustomers();
+        $this->cronWorkerScheduler->scheduleImmediatelyIfNotRunning(WooCommerceSync::TASK_TYPE);
       } else {
         $this->wpSegment->synchronizeUsers();
       }
