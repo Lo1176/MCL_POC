@@ -1,9 +1,13 @@
 /* Add your styles here */
 /*** COLORS ***/
+
 :root {
-  --bs-primary: red !important; // blue
+  --blue: white !important;
+  /* --bs-primary: #113e65 !important; blue */
+  --primary: #f0e550 !important;
+  --bs-primary: rgb(56, 172, 114) !important;
   --bs-black: green !important;
-  --bs-danger: yellow !important; // red
+  --bs-danger: #71110f !important;
 }
 /*** COLORS ***/
 
@@ -13,12 +17,11 @@ body {
 }
 /***** body fin *****/
 
-
 span.badge {
   /* position: absolute; */
   /* left: 1rem !important;
   top: 1rem; */
-  padding: .35em .65em;
+  padding: 0.35em 0.65em;
   /* font-size: .75em !important; */
   line-height: 1.5;
   border-radius: 50%;
