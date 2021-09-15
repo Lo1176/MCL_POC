@@ -1,10 +1,18 @@
 /* Add your styles here */
+/*** COLORS ***/
+:root {
+  --bs-primary: red !important; // blue
+  --bs-black: green !important;
+  --bs-danger: yellow !important; // red
+}
+/*** COLORS ***/
 
 /***** body *****/
 body {
   background-color: #fafafa !important;
 }
 /***** body fin *****/
+
 
 span.badge {
   /* position: absolute; */
