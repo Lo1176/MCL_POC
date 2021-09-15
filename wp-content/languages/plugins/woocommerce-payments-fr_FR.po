@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-26 11:42:34+0000\n"
+"PO-Revision-Date: 2021-09-05 20:04:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -234,7 +234,7 @@ msgstr "Rendez vos prix en %1$s cohérents en les arrondissant après leur conve
 msgid "Determines if the UPE feature flag is enabled."
 msgstr "Détermine si l’étiquette de fonctionnalité UPE est activée."
 
-#: includes/admin/class-wc-payments-admin.php:499
+#: includes/admin/class-wc-payments-admin.php:510
 msgid "Refunding manually requires reimbursing your customer offline via cash, check, etc. The refund amounts entered here will only be used to balance your analytics."
 msgstr "Le remboursement manuel nécessite de rembourser votre client hors ligne en espèces, chèque, etc. Les montants de remboursement entrés ici ne seront utilisés que pour équilibrer vos analyses."
 
@@ -1588,12 +1588,12 @@ msgstr "Impossible de trouver la commande via l’ID des frais : %1$s"
 msgid "ToS accept parameter is missing"
 msgstr "Le paramètre d’acceptation des conditions d’utilisation est manquant"
 
-#: includes/admin/class-wc-payments-admin.php:252
+#: includes/admin/class-wc-payments-admin.php:263
 msgid "Challenge dispute"
 msgstr "Contester le litige"
 
-#: includes/admin/class-wc-payments-admin.php:208
-#: includes/admin/class-wc-payments-admin.php:630
+#: includes/admin/class-wc-payments-admin.php:219
+#: includes/admin/class-wc-payments-admin.php:641
 #: includes/class-wc-payments.php:502
 msgid "Settings"
 msgstr "Paramètres"
