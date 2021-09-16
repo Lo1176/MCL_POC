@@ -43,11 +43,17 @@
             <div class="sticky-top bg-light">
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-light">
-                    <!-- <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-light"> -->
 
                     <div class="container">
 
-                        <!-- Navbar Brand -->
+                        <!-- ## SideNavBar Menu ## -->
+                        <!-- Navbar Toggler LEFT for large devise-->
+                        <button class="btn btn-outline-secondary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <!-- END SideNav Menu -->
+                        
+                        <!-- Navbar Brand (logo)-->
                         <a class="navbar-brand xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
                         <a class="navbar-brand md d-none d-md-block" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
 
