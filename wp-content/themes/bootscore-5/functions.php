@@ -243,28 +243,28 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 //Enqueue scripts and styles
 function bootscore_scripts() {
+   
+    // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
+    $modificated_styleCss = date( 'YmdHi', filemtime( get_stylesheet_directory() . '/style.css' ) );
+    $modificated_bootstrapCss = date( 'YmdHi', filemtime( get_template_directory() . '/css/lib/bootstrap.min.css' ) );
+    $modificated_fontawesomeCss = date( 'YmdHi', filemtime( get_template_directory() . '/css/lib/fontawesome.min.css' ) );
+    $modificated_bootstrapJs = date( 'YmdHi', filemtime( get_template_directory() . '/js/lib/bootstrap.bundle.min.js' ) );
+    $modificated_themeJs = date( 'YmdHi', filemtime( get_template_directory() . '/js/theme.js' ) );
     
-    // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes. 
-    $modificated = date( 'YmdHi', filemtime( get_template_directory() . '/css/lib/bootstrap.min.css' ) );
-	$modificated = date( 'YmdHi', filemtime( get_stylesheet_directory() . '/style.css' ) );
-    $modificated = date( 'YmdHi', filemtime( get_template_directory() . '/css/lib/fontawesome.min.css' ) );
-    $modificated = date( 'YmdHi', filemtime( get_template_directory() . '/js/theme.js' ) );
-    $modificated = date( 'YmdHi', filemtime( get_template_directory() . '/js/lib/bootstrap.bundle.min.js' ) );
-
 	// Style CSS
-	wp_enqueue_style( 'bootscore-style', get_stylesheet_uri(), array(), $modificated );
+	wp_enqueue_style( 'bootscore-style', get_stylesheet_uri(), array(), $modificated_styleCss );
 
 	// Bootstrap	
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/lib/bootstrap.min.css', array(), $modificated );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/lib/bootstrap.min.css', array(), $modificated_bootstrapCss );
     
-	// Fontawesome
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/lib/fontawesome.min.css', array(), $modificated );
+    // Fontawesome
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/lib/fontawesome.min.css', array(), $modificated_fontawesomeCss );
 
 	// Bootstrap JS
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/lib/bootstrap.bundle.min.js', array(), $modificated, true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/lib/bootstrap.bundle.min.js', array(), $modificated_bootstrapJs, true );
     
     // Theme JS
-	wp_enqueue_script( 'bootscore-script', get_template_directory_uri() . '/js/theme.js', array(), $modificated, true );
+	wp_enqueue_script( 'bootscore-script', get_template_directory_uri() . '/js/theme.js', array(), $modificated_themeJs, true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -272,6 +272,7 @@ function bootscore_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bootscore_scripts' );
 //Enqueue scripts and styles END
+
 
 
 // Add <link rel=preload> to Fontawesome
@@ -320,49 +321,54 @@ endif;
 
 
 // Pagination Categories
-function bootscore_pagination($pages = '', $range = 2) 
-{  
-	$showitems = ($range * 2) + 1;  
-	global $paged;
-	if($pages == '')
-	{
-		global $wp_query; 
-		$pages = $wp_query->max_num_pages;
-	
-		if(!$pages)
-			$pages = 1;		 
-	}   
-	
-	if(1 != $pages)
-	{
-	    echo '<nav aria-label="Page navigation" role="navigation">';
-        echo '<span class="sr-only">Page navigation</span>';
-        echo '<ul class="pagination justify-content-center ft-wpbs mb-4">';
-		
-     
-	 	if($paged > 2 && $paged > $range+1 && $showitems < $pages) 
-			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link(1).'" aria-label="First Page">&laquo;</a></li>';
-	
-	 	if($paged > 1 && $showitems < $pages) 
-			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged - 1).'" aria-label="Previous Page">&lsaquo;</a></li>';
-	
-		for ($i=1; $i <= $pages; $i++)
-		{
-		    if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-				echo ($paged == $i)? '<li class="page-item active"><span class="page-link"><span class="sr-only">Current Page </span>'.$i.'</span></li>' : '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($i).'"><span class="sr-only">Page </span>'.$i.'</a></li>';
-		}
-		
-		if ($paged < $pages && $showitems < $pages) 
-			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged + 1).'" aria-label="Next Page">&rsaquo;</a></li>';  
-	
-	 	if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) 
-			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($pages).'" aria-label="Last Page">&raquo;</a></li>';
-	
-	 	echo '</ul>';
-        echo '</nav>';
-        // echo '<div class="pagination-info mb-5 text-center">[ <span class="text-muted">Page</span> '.$paged.' <span class="text-muted">of</span> '.$pages.' ]</div>';	 	
-	}
-}
+if ( ! function_exists( 'bootscore_pagination' ) ) :
+
+    function bootscore_pagination($pages = '', $range = 2) 
+    {  
+        $showitems = ($range * 2) + 1;  
+        global $paged;
+        if($pages == '')
+        {
+            global $wp_query; 
+            $pages = $wp_query->max_num_pages;
+
+            if(!$pages)
+                $pages = 1;		 
+        }   
+
+        if(1 != $pages)
+        {
+            echo '<nav aria-label="Page navigation" role="navigation">';
+            echo '<span class="sr-only">Page navigation</span>';
+            echo '<ul class="pagination justify-content-center ft-wpbs mb-4">';
+
+
+            if($paged > 2 && $paged > $range+1 && $showitems < $pages) 
+                echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link(1).'" aria-label="First Page">&laquo;</a></li>';
+
+            if($paged > 1 && $showitems < $pages) 
+                echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged - 1).'" aria-label="Previous Page">&lsaquo;</a></li>';
+
+            for ($i=1; $i <= $pages; $i++)
+            {
+                if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+                    echo ($paged == $i)? '<li class="page-item active"><span class="page-link"><span class="sr-only">Current Page </span>'.$i.'</span></li>' : '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($i).'"><span class="sr-only">Page </span>'.$i.'</a></li>';
+            }
+
+            if ($paged < $pages && $showitems < $pages) 
+                echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link(($paged === 0 ? 1 : $paged) + 1).'" aria-label="Next Page">&rsaquo;</a></li>';  
+
+            if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) 
+                echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($pages).'" aria-label="Last Page">&raquo;</a></li>';
+
+            echo '</ul>';
+            echo '</nav>';
+            // Uncomment this if you want to show [Page 2 of 30]
+            // echo '<div class="pagination-info mb-5 text-center">[ <span class="text-muted">Page</span> '.$paged.' <span class="text-muted">of</span> '.$pages.' ]</div>';	 	
+        }
+    }
+
+endif;
 //Pagination Categories END
 
 
@@ -386,7 +392,7 @@ add_post_type_support( 'page', 'excerpt' );
 if ( ! function_exists( 'the_breadcrumb' ) ) :
     function the_breadcrumb() {
         if(!is_home()) {
-            echo '<nav class="breadcrumb mb-4 mt-2 bg-light py-1 px-2 rounded">';
+            echo '<nav class="breadcrumb mb-4 mt-2 bg-light py-2 px-3 small rounded">';
             echo '<a href="'.home_url('/').'">'.('<i class="fas fa-home"></i>').'</a><span class="divider">&nbsp;/&nbsp;</span>';
             if (is_category() || is_single()) {
                 the_category(' <span class="divider">&nbsp;/&nbsp;</span> ');
@@ -465,3 +471,10 @@ if ( ! function_exists( 'bs_comment_links_in_new_tab' ) ) :
 endif;
 // Open links in comments in new tab END
 
+
+// Disable Gutenberg blocks in widgets (WordPress 5.8)
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+// Disables the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
+// Disable Gutenberg blocks in widgets (WordPress 5.8) END

@@ -4,11 +4,11 @@ Contributors: craftwerk
 Tags: featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
-Tested up to: 5.7.2
+Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 5.0.2.2
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 5.1.1.0
+License: MIT License
+License URI: https://github.com/crftwrk/bootscore/blob/main/LICENSE
 
 bootScore, Bootstrap 5 WordPress Theme, Copyright 2019 - 2021 Bastian Kreiter.
 
@@ -17,7 +17,7 @@ bootScore, Bootstrap 5 WordPress Theme, Copyright 2019 - 2021 Bastian Kreiter.
 
 A starter theme called bootScore.
 
-Contributors: craftwerk
+Contributors: crftwrk, justinkruit, timgws
 
 
 == Description ==
@@ -41,7 +41,7 @@ https://bootscore.me/category/documentation/
 
 = Does this theme support any plugins? =
 
-bootScore includes support for Infinite Scroll in Jetpack.
+bootScore includes support for WooCommerce and Infinite Scroll in Jetpack.
 
 
 == Credits ==
@@ -52,9 +52,81 @@ bootScore includes support for Infinite Scroll in Jetpack.
 * Bootstrap 5 Wordpress Navbar Walker by AlexWebLab: https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker
 * Comments Section Script by wp-bootstrap-starter https://github.com/afterimagedesigns/wp-bootstrap-starter
 * Font Awesome https://fontawesome.com/license/free
+* Plugin Update Checker, YahnisElsts: https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
 
 
 == Changelog ==
+
+
+    = 5.1.1.0 - September 08 2021 =
+    
+        * [IMPROVEMENT] Ajax product notice alerts (ajax-add-to-cart.php, thanks to Martin Holzer)
+        * [IMPROVEMENT] Close collapse if searchform loses focus
+        * [IMPROVEMENT] Filter class card-img-top to product loop img (woocommerce-functions.php, woocommerce-style.css)
+        * [IMPROVEMENT] Changed all WooCommerce colors to variables
+        * [IMPROVEMENT] Bootstrap form validation in WooCommerce checkout
+        * [IMPROVEMENT] Removed custom-validation from checkout checkboxes and readded form-row (terms.php, woocommerce-js, woocommerce-style.css)
+        * [IMPROVEMENT] Refactored checkout (form-checkout.php, form-billing.php, form-shipping.php, Klarna checkout)
+        * [IMPROVEMENT] pointer-events variation-add-to-cart-button.php (thanks to Martin Holzer)
+        * [IMPROVEMENT] Searchform focus (theme.js, thanks to Martin Holzer)
+        * [IMPROVEMENT] Readded and improved timestrap to scripts & styles (functions.php, woocommerce-functions.php, thanks to Martin Holzer)
+        * [IMPROVEMENT] top-nav-search widget. Every widget can be shown there now theme.js, thanks to Martin Holzer)
+        * [IMPROVEMENT] bootscore_pagination is a pluggable function now (functions.php, thanks to Martin Holzer)
+        * [NEW] Renamed folder to bootscore-main (Github)
+        * [NEW] Language: Pусский (thanks to Vladislav)
+        * [UPDATE] Updated order-details-customer.php
+        * [UPDATE] Updated terms.php (thanks to Emil Linden)
+        * [UPDATE] Update Font Awesome Free 5.15.4
+        * [UPDATE] Bootstrap 5.1.1
+
+
+    = 5.1.0.1 - August 11 2021 =
+    
+        * [IMPROVEMENT] Added d-lg-none to search collapse (header.php)
+        * [IMPROVEMENT] "current_page_parent" and "current-post-ancestor" to nav_walker, thanks Justin Kruit https://justinkruit.com
+        * [IMPROVEMENT] Dutch translation, thanks Justin Kruit https://justinkruit.com
+        * [REMOVED] Timestrap from enqueue styles and scripts (CSS overrides needed !important rule, functions.php, woocommerce-functions.php)
+
+    = 5.1.0.0 - August 05 2021 =
+    
+        * [REMOVED] Self-coded offcanvas navbar implementation (header.php, header-woocommerce.php, style.css, theme.js)
+        * [UPDATE] Uses Bootstrap 5.1.0 offcanvas navbar implementation now
+        * [UPDATE] Bootstrap 5.1.0
+
+    = 5.0.2.5 - August 04 2021 =
+    
+        * [BUGFIX] Disable Gutenberg blocks in widgets and enable classic mode. Widgets like search won't work (WordPress 5.8, functions.php).
+
+    = 5.0.2.4 - August 03 2021 =
+    
+        * [NEW] README.md
+        * [IMPROVEMENT] Changed remove from cart button btn &times; to trash icon (cart.php, mini-cart.php)
+        * [IMPROVEMENT] Fixed a.badge color by text-* class instead of CSS (style.css, template-tags.php)
+        * [IMPROVEMENT] Breadcrumb padding and font-size (functions.php, woocommerce-functions.php)
+        * [BUGFIX] .form-select (shipping-calculator.php Thnx Martin Holzer risingbytes.at)
+        * [BUGFIX] Keep offcanvas-user open on reload if contains login or register error alert (woocommerce.js)
+        * [BUGFIX] Error alert if login is failed (my-account-offcanvas.php, thanks Sean VanderMolen https://techpad.biz)
+        * [BUGFIX] Changed duplicate id's in offcanvas user (my-account-offcanvas.php, thanks cemmos https://github.com/craftwerkberlin/bootscore-5/issues/8)
+        * [BUGFIX] Add col-md-8 col-xxl-9 classes to post list in index.php (Thanks Tim Groeneveld, https://github.com/craftwerkberlin/bootscore-5/pull/7)
+        * [CHANGED] Default Bootstrap offcanvas-header (header.php, header-woocommerce.php, mini-cart-php)
+        * [CHANGED] GNU General Public License v2 to MIT License
+        * [REMOVED] bootstrap.min.css.map and bootstrap.bundle.min.js.map
+
+    = 5.0.2.3 - July 14 2021 =
+    
+        * [NEW] Language Čeština, thnx Petr Žaloudek https://webhned.eu
+        * [BUGFIX] Height modal fullscreen if .logged-in.admin-bar (style.css)
+        * [BUGFIX] Missing author and breadcrumb on single-full-width-image.php
+        * [BUGFIX] The “next page” pagination work properly on the 1st page (functions.php, thnx Mike Collignon, https://www.alox.co)
+        * [BUGFIX] Searchform can be placed in any widget positions without showing search button in navbar
+        * [IMPROVEMENT] Cleanup Scroll To Top Button (style.css, footer.php)
+        * [IMPROVEMENT] Search collapse button hide if empty removed by JS (theme.js, style.css)
+        * [IMPROVEMENT] Focus on collapsed show searchform input
+        * [IMPROVEMENT] header.php and header-woocommerce.php are completely new, more simple. Search button uses collapse component now instead of dropdown. Old header can still be used.
+        * [REMOVED] Data attribute data-bs-hideresize="true". Close menu offcanvas in navbar on resize direct (theme.js, header.php, header-woocommerce.php)
+        * [REMOVED] index-woocommerce.php
+        * [REMOVED] wp-block-button reset (style.css)
+        * [REMOVED] Quote block (style.css)
 
     = 5.0.2.2 - June 23 2021 =
         
