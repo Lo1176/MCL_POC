@@ -57,7 +57,7 @@
 
                         <!-- Offcanvas Navbar -->
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
-                            <div class="offcanvas-header hover cursor-pointer bg-dark text-danger" data-bs-dismiss="offcanvas">
+                            <div class="offcanvas-header hover cursor-pointer bg-light" data-bs-dismiss="offcanvas">
                                 <i class="fas fa-chevron-left"></i> <?php esc_html_e('Close menu', 'bootscore'); ?>
                             </div>
                         </div>
