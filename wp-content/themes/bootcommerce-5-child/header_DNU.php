@@ -49,7 +49,6 @@
                         <button class="btn btn-outline-secondary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <i class="fas fa-bars"></i>
                         </button>
-
                         <!-- END SideNav Menu -->
 
                         <!-- ## Logo Brand ## -->
