@@ -12,6 +12,19 @@ function bootscore_5_child_enqueue_styles()
     wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
 }
 
+// Dequeue parent bootstrap.min.css and enqueue child
+function bootscore_remove_scripts()
+{
+
+    // Dequeue parent bootstrap.min.css
+    wp_dequeue_style('bootstrap');
+    wp_deregister_style('bootstrap');
+
+    // Register your child bootstrap.min.css
+    wp_enqueue_style('child-theme-bootstrap', get_stylesheet_directory_uri() . '/css/lib/bootstrap-mcl.css', array('parent-style')); // mine is bootstrap-mcl.css
+}
+add_action('wp_enqueue_scripts', 'bootscore_remove_scripts', 20);
+
 // WooCommerce
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
