@@ -13,17 +13,17 @@ function bootscore_5_child_enqueue_styles()
 }
 
 // Dequeue parent bootstrap.min.css and enqueue child
-// function bootscore_remove_scripts()
-// {
+function bootscore_remove_scripts()
+{
 
-//     // Dequeue parent bootstrap.min.css
-//     wp_dequeue_style('bootstrap');
-//     wp_deregister_style('bootstrap');
+    // Dequeue parent bootstrap.min.css
+    wp_dequeue_style('bootstrap');
+    wp_deregister_style('bootstrap');
 
-//     // Register your child bootstrap.min.css
-//     wp_enqueue_style('child-theme-bootstrap', get_stylesheet_directory_uri() . '/css/lib/bootstrap.min.css', array('parent-style'));
-// }
-// add_action('wp_enqueue_scripts', 'bootscore_remove_scripts', 20);
+    // Register your child bootstrap.min.css
+    wp_enqueue_style('child-theme-bootstrap', get_stylesheet_directory_uri() . '/css/lib/bootstrap.min.css', array('parent-style'));
+}
+add_action('wp_enqueue_scripts', 'bootscore_remove_scripts', 20);
 
 // WooCommerce
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
