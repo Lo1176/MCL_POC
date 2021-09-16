@@ -14,6 +14,4 @@ Add as many files as you need for development.
 When you're done, merge them all in the style.css file to reduce file requests. 
 */
 
-@import url("css/bootstrap-custom.css");
-@import url("css/bootstrap.min.css");
 @import url("css/custom.css");

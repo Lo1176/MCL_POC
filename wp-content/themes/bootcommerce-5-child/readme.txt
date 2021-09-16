@@ -1,27 +1,27 @@
-=== bootCommerce 5 Child Theme ===
+=== bootCommerce Child Theme ===
 
 Contributors: craftwerk
 
 Requires at least: 4.5
-Tested up to: 5.7.2
+Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 5.0.2.1
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 5.1.0.0
+License: MIT License
+License URI: https://github.com/crftwrk/bootcommerce-child/blob/main/LICENSE
 
 
 == Description ==
 
-WooCommerce Child Theme for bootScore 5, Copyright 2019 - 2021 Bastian Kreiter.
+WooCommerce Child Theme for bootScore, Copyright 2019 - 2021 Bastian Kreiter.
 
 This child theme has already all settings to create a shop, all header settings with cart and a basic store frontpage.
 
-Start developing your new project right away in a upgrade-safe way using overrides by copying files from bootScore 5 parent theme.
+Start developing your new project right away in a upgrade-safe way using overrides by copying files from bootScore parent theme.
 
 
 == Live preview ==
 
-https://bootscore.me/theme/header-nav-default/
+https://bootscore.me/
 
 
 == Installation ==
@@ -39,6 +39,14 @@ https://bootscore.me/shop/
 
 
 == Changelog ==
+
+    = 5.1.0.0 - September 08 2021 =
+    
+        * [CHANGED] Set path to the new repository name of bootScore parent theme.
+
+    = 5.0.2.2 - August 03 2021 =
+    
+        * [UPDATE] header.php (bootscore 5.0.2.4)
 
     = 5.0.2.1 - July 14 2021 =
     
