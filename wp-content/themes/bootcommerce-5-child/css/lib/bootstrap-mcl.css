@@ -6117,7 +6117,7 @@ fieldset:disabled .btn {
     border-left: 0 !important;
 }
 .border-primary {
-    border-color: var(--bs-primary); !important;
+    border-color: var(--bs-primary) !important;
 }
 .border-secondary {
     border-color: #6c757d !important;
@@ -6744,7 +6744,7 @@ fieldset:disabled .btn {
     word-break: break-word !important;
 }
 .text-primary {
-    color: var(--bs-primary); !important;
+    color: var(--bs-primary) !important;
 }
 .text-secondary {
     color: #6c757d !important;
@@ -6786,7 +6786,7 @@ fieldset:disabled .btn {
     color: inherit !important;
 }
 .bg-primary {
-    background-color: var(--bs-primary); !important;
+    background-color: var(--bs-primary) !important;
 }
 .bg-secondary {
     background-color: #6c757d !important;
