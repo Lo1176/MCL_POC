@@ -21,7 +21,7 @@ function bootscore_remove_scripts()
     wp_deregister_style('bootstrap');
 
     // Register your child bootstrap.min.css
-    wp_enqueue_style('child-theme-bootstrap', get_stylesheet_directory_uri() . '/css/lib/bootstrap-mcl.css', array('parent-style')); // mine is bootstrap-mcl.css
+    wp_enqueue_style('child-theme-bootstrap', get_stylesheet_directory_uri() . '/css/lib/bootstrap.min.css', array('parent-style'));
 }
 add_action('wp_enqueue_scripts', 'bootscore_remove_scripts', 20);
 
