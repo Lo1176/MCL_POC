@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc1bb7b15ec3951fd1a5086ba2dbd77ce
+class ComposerStaticInit0dffbdec8499b78f35d83cd694af9c9f
 {
     public static $files = array (
         'bce4ecd6aabb2a2948e06d0e2c4ea9a6' => __DIR__ . '/..' . '/automattic/jetpack-connection/legacy/load-ixr.php',
@@ -92,6 +92,7 @@ class ComposerStaticInitc1bb7b15ec3951fd1a5086ba2dbd77ce
         'WCPay\\MultiCurrency\\Settings' => __DIR__ . '/../..' . '/includes/multi-currency/Settings.php',
         'WCPay\\MultiCurrency\\SettingsOnboardCta' => __DIR__ . '/../..' . '/includes/multi-currency/SettingsOnboardCta.php',
         'WCPay\\MultiCurrency\\StorefrontIntegration' => __DIR__ . '/../..' . '/includes/multi-currency/StorefrontIntegration.php',
+        'WCPay\\MultiCurrency\\Tracking' => __DIR__ . '/../..' . '/includes/multi-currency/Tracking.php',
         'WCPay\\MultiCurrency\\UserSettings' => __DIR__ . '/../..' . '/includes/multi-currency/UserSettings.php',
         'WCPay\\MultiCurrency\\Utils' => __DIR__ . '/../..' . '/includes/multi-currency/Utils.php',
     );
@@ -99,9 +100,9 @@ class ComposerStaticInitc1bb7b15ec3951fd1a5086ba2dbd77ce
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc1bb7b15ec3951fd1a5086ba2dbd77ce::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc1bb7b15ec3951fd1a5086ba2dbd77ce::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc1bb7b15ec3951fd1a5086ba2dbd77ce::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0dffbdec8499b78f35d83cd694af9c9f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0dffbdec8499b78f35d83cd694af9c9f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit0dffbdec8499b78f35d83cd694af9c9f::$classMap;
 
         }, null, ClassLoader::class);
     }

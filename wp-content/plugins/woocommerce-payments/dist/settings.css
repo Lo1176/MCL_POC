@@ -8,7 +8,7 @@
 
 .survey-section .survey-radiocontrols>div>label{font-weight:600}.survey-section .comments-text-field{margin-top:2em}.survey-section .comments-text-field label{font-weight:600}.survey-section .comments-text-field textarea{height:4rem}.survey-section .survey-bottom-disclaimer{font-style:italic}
 
-.wcpay-confirmation-modal.wcpay-confirmation-modal{max-width:600px;min-width:400px}.wcpay-confirmation-modal .components-modal__content{padding:0 24px 24px}.wcpay-confirmation-modal .components-modal__header{margin:0 -24px 24px;padding:0 24px}.wcpay-confirmation-modal__separator{margin:24px -24px}.wcpay-confirmation-modal__footer{display:flex;justify-content:flex-end}.wcpay-confirmation-modal__footer>*:not(:first-child){margin-left:16px}
+.wcpay-confirmation-modal.wcpay-confirmation-modal{max-width:600px}.wcpay-confirmation-modal .components-modal__content{padding:0 24px 24px}.wcpay-confirmation-modal .components-modal__header{margin:0 -24px 24px;padding:0 24px;left:auto}.wcpay-confirmation-modal__separator{margin:24px -24px}.wcpay-confirmation-modal__footer{display:flex;justify-content:flex-end}.wcpay-confirmation-modal__footer>*:not(:first-child){margin-left:16px}
 
 .wcpay-inline-notice.wcpay-inline-notice{margin:0;margin-bottom:24px}.wcpay-inline-notice.is-info{background:#def1f7}
 
@@ -26,7 +26,7 @@
 
 .wcpay-tooltip__content-wrapper{display:contents}.wcpay-tooltip__tooltip-wrapper{visibility:hidden;position:fixed;opacity:0;transition:opacity 150ms ease-in;z-index:100010}.wcpay-tooltip__tooltip-wrapper.is-hiding{opacity:0 !important;transition:opacity 200ms ease-out 300ms}.wcpay-tooltip__tooltip{position:relative;color:#fff;background-color:#1e1e1e;padding:10px;text-align:center}.wcpay-tooltip__tooltip::after{content:' ';position:absolute;bottom:0;left:50%;transform:translate(-50%, 22px);border:solid 15px transparent;border-top-color:#1e1e1e}
 
-.payment-method-checkbox{display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:16px}.payment-method-checkbox:last-child{margin-bottom:0}.payment-method-checkbox>*{margin:0 3px}.payment-method-checkbox .components-base-control__field{margin-bottom:0}.payment-method-checkbox__fees{margin-left:auto;margin-right:3px;text-transform:uppercase}.payment-method-checkbox__info>*{margin:0;color:#949494}
+.payment-method-checkbox{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;width:100%;margin-bottom:16px}@media (max-width: 660px){.payment-method-checkbox{flex-wrap:wrap;justify-content:flex-start;row-gap:5px}}.payment-method-checkbox:last-child{margin-bottom:0}.payment-method-checkbox>*{margin:0 3px}@media (max-width: 660px){.payment-method-checkbox>*{flex-basis:100%}}.payment-method-checkbox .components-base-control__field{margin-bottom:0}.payment-method-checkbox__fees{margin-left:auto;margin-right:3px;text-transform:uppercase}@media (max-width: 660px){.payment-method-checkbox__fees{margin-left:40px}}.payment-method-checkbox__info>*{margin:0;color:#949494}@media (max-width: 660px){.woocommerce-payments__payment-method-icon svg{display:none}}
 
 .payment-request__additional-controls-wrapper{position:relative}.payment-request__additional-controls-wrapper::after{position:absolute;top:0;left:0;width:100%;height:100%;content:' ';background:#fff;opacity:0.5}.payment-request__additional-controls-wrapper.is-enabled::after{display:none}
 

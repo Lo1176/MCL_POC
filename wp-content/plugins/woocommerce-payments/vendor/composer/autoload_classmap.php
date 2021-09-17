@@ -57,6 +57,7 @@ return array(
     'WCPay\\MultiCurrency\\Settings' => $baseDir . '/includes/multi-currency/Settings.php',
     'WCPay\\MultiCurrency\\SettingsOnboardCta' => $baseDir . '/includes/multi-currency/SettingsOnboardCta.php',
     'WCPay\\MultiCurrency\\StorefrontIntegration' => $baseDir . '/includes/multi-currency/StorefrontIntegration.php',
+    'WCPay\\MultiCurrency\\Tracking' => $baseDir . '/includes/multi-currency/Tracking.php',
     'WCPay\\MultiCurrency\\UserSettings' => $baseDir . '/includes/multi-currency/UserSettings.php',
     'WCPay\\MultiCurrency\\Utils' => $baseDir . '/includes/multi-currency/Utils.php',
 );

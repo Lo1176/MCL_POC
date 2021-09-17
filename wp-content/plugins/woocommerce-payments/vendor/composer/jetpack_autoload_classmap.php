@@ -22,6 +22,10 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/includes/multi-currency/FrontendPrices.php'
 	),
+	'WCPay\\MultiCurrency\\Tracking' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/includes/multi-currency/Tracking.php'
+	),
 	'WCPay\\MultiCurrency\\PaymentMethodsCompatibility' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/includes/multi-currency/PaymentMethodsCompatibility.php'
