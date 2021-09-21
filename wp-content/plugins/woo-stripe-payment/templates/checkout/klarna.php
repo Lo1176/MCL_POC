@@ -1,11 +1,16 @@
 <?php
 /**
- * @version 3.1.7
+ * @version 3.3.10
  *
  * @var WC_Payment_Gateway_Stripe_Klarna $gateway
  */
 $payment_options = $gateway->get_option( 'payment_categories' );
 ?>
+<?php if(wc_stripe_mode() === 'test'):?>
+<div class="wc-stripe-klarna__testmode">
+    <label><?php _e('Test mode sms', 'woo-stripe-payment');?>:</label>&nbsp;<span>123456</span>
+</div>
+<?php endif;?>
 <div id="wc_stripe_local_payment_<?php echo $gateway->id ?>" style="display: none" data-active="<?php echo $gateway->is_local_payment_available() ?>">
     <ul class="stripe-klarna-categories">
 		<?php foreach ( $gateway->get_payment_categories() as $category => $label ): ?>

@@ -42,6 +42,7 @@ const PAYMENT_REQUEST_ADDRESS_MAPPINGS = {
     line2: 'address_2',
     city: 'city',
     region: 'state',
+    state: 'state',
     postalCode: 'postcode',
     postal_code: 'postcode',
     payerEmail: 'email',
@@ -340,18 +341,23 @@ export const formatPrice = (price, currencyCode) => {
     let fractional = '';
     const index = price.indexOf(decimalSeparator);
     if (index < 0) {
-        price += `${decimalSeparator}${new Array(minorUnit + 1).join('0')}`;
+        if (minorUnit > 0) {
+            price += `${decimalSeparator}${new Array(minorUnit + 1).join('0')}`;
+        }
     } else {
-        const fractional = price.substr(index + 1);
+        fractional = price.substr(index + 1);
         if (fractional.length < minorUnit) {
             price += new Array(minorUnit - fractional.length + 1).join('0');
         }
     }
 
     // separate out price and decimals so thousands separator can be added.
-    ({1: price, 2: fractional} = price.match(new RegExp(`(\\d+)\\${decimalSeparator}(\\d+)`)));
+    const match = price.match(new RegExp(`(\\d+)\\${decimalSeparator}(\\d+)`));
+    if (match) {
+        ({1: price, 2: fractional} = match);
+    }
     price = price.replace(new RegExp(`\\B(?=(\\d{3})+(?!\\d))`, 'g'), `${thousandSeparator}`);
-    price = price + decimalSeparator + fractional;
+    price = fractional?.length > 0 ? price + decimalSeparator + fractional : price;
     price = prefix + price + suffix;
     return price;
 }

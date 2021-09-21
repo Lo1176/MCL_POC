@@ -33,6 +33,25 @@ class WC_Payment_Gateway_Stripe_WeChat extends WC_Payment_Gateway_Stripe_Local_P
 		$this->form_fields['allowed_countries']['default'] = 'all';
 	}
 
+	public function get_local_payment_settings() {
+		return array_merge( parent::get_local_payment_settings(), array(
+			'qr_size' => array(
+				'type'              => 'input',
+				'title'             => __( 'QRCode Size', 'woo-stripe-payment' ),
+				'default'           => '128',
+				'desc_tip'          => true,
+				'description'       => __( 'This option controls the width and height in pixels of the QRCode.', 'woo-stripe-payment' ),
+				'sanitize_callback' => function ( $value ) {
+					if ( ! is_numeric( $value ) ) {
+						$value = 128;
+					}
+
+					return $value;
+				}
+			)
+		) );
+	}
+
 	/**
 	 *
 	 * {@inheritDoc}
@@ -70,6 +89,7 @@ class WC_Payment_Gateway_Stripe_WeChat extends WC_Payment_Gateway_Stripe_Local_P
 		$data               = parent::get_localized_params();
 		$data['qr_script']  = sprintf( stripe_wc()->scripts()->assets_url( 'js/frontend/qrcode.js?ver=%s' ), stripe_wc()->version );
 		$data['qr_message'] = __( 'Scan the QR code using your WeChat app. Once scanned click the Place Order button.', 'woo-stripe-payment' );
+		$data['qr_size']    = $this->get_option( 'qr_size', 128 );
 
 		return $data;
 	}

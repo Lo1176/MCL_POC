@@ -152,10 +152,7 @@ export const useCreateSource = (
             console.log(err);
             setError(err.error);
         }
-    }, [
-        stripe,
-        setSource
-    ]);
+    }, [stripe]);
 
     const updateSource = useCallback(async ({source, updates, currency}) => {
 
@@ -181,7 +178,7 @@ export const useCreateSource = (
         } catch (err) {
             console.log('update aborted');
         }
-    }, [setSource]);
+    }, []);
 
     // Create the source if the required data is available
     useEffect(() => {
@@ -231,6 +228,7 @@ export const useCreateSource = (
             }
         }
     }, [
+        stripe,
         source?.id,
         billingData,
         cartTotal.value,

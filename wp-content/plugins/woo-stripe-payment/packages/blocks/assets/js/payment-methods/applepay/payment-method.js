@@ -81,7 +81,7 @@ const ApplePayButton = (
             onClick();
             paymentRequest.show();
         }
-    }, [paymentRequest]);
+    }, [paymentRequest, onClick]);
 
     if (paymentRequest) {
         return (

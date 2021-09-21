@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Stripe For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Stripe For WooCommerce 3.3.9\n"
+"Project-Id-Version: Stripe For WooCommerce 3.3.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-stripe-payment\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-08-26T08:10:22+00:00\n"
+"POT-Creation-Date: 2021-09-18T19:38:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: woo-stripe-payment\n"
@@ -99,20 +99,20 @@ msgstr ""
 msgid "When the billing country matches one of these values, the payment method will be shown on the checkout page."
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:238
+#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:237
 msgid "Order %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:377
+#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:376
 msgid "Gateway will appear when store currency is <strong>%s</strong>"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:380
+#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:379
 msgid " & billing country is not <strong>%s</strong>"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:382
-#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:385
+#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:381
+#: includes/abstract/abstract-wc-payment-gateway-stripe-local-payment.php:384
 msgid " & billing country is <strong>%s</strong>"
 msgstr ""
 
@@ -130,132 +130,132 @@ msgstr ""
 msgid "Total"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:491
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:492
 msgid "User must be logged in."
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:516
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:517
 msgid "Error saving payment method. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:535
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:536
 #: includes/wc-stripe-webhook-functions.php:225
 msgid "Order refunded in Stripe. Amount: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:573
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:574
 msgid "Order amount captured in Stripe. Amount: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:583
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:584
 msgid "Error capturing charge in Stripe. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:604
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:605
 msgid "Error voiding charge. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:606
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:607
 msgid "Charge voided in Stripe."
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:783
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:784
 msgid "n/a"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:811
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:812
 #: includes/admin/meta-boxes/views/html-order-pay.php:42
 msgid "New Card"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:815
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:816
 #: includes/admin/meta-boxes/views/html-order-pay.php:30
 msgid "Saved Cards"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1024
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1004
 msgid "Attempt to save payment method failed. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1049
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1029
 msgid "We were not able to save your payment method. To prevent billing issues with your subscription, please add a payment method to the subscription."
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1051
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1031
 msgid "We were not able to save your payment method. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1085
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1065
 msgid "Payment Method Token"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1105
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1085
 msgid "Recurring payment for order failed. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1118
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1098
 msgid "Recurring payment captured in Stripe. Payment method: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1120
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1100
 msgid "Recurring payment authorized in Stripe. Payment method: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1123
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1355
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1103
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1335
 msgid "Customer must manually complete payment for payment method %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1157
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1137
 #: includes/abstract/abstract-wc-stripe-payment.php:255
 msgid "Order %1$s from %2$s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1342
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1322
 msgid "Pre-order payment for order failed. Reason: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1350
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1330
 msgid "Pre-order payment captured in Stripe. Payment method: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1352
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1332
 msgid "Pre-order payment authorized in Stripe. Payment method: %s"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1424
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1404
 msgid "Cannot process payment"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1432
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1412
 msgid "Increase your conversion rate by offering %1$s on your Product and Cart pages, or at the top of the checkout page. <br/><strong>Note:</strong> you can control which products display %s by going to the product edit page."
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1547
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1578
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1527
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1558
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:233
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:294
 msgid "Shipping"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1555
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1581
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1535
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1561
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:243
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:304
 msgid "Discount"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1558
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1538
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:261
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:326
 msgid "Tax"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1588
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1568
 msgid "Fees"
 msgstr ""
 
-#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1781
+#: includes/abstract/abstract-wc-payment-gateway-stripe.php:1761
 msgid "Error saving payment method for subscription. Reason: %s"
 msgstr ""
 
@@ -280,7 +280,7 @@ msgid "Transaction Id cannot be empty."
 msgstr ""
 
 #: includes/abstract/abstract-wc-stripe-payment.php:322
-#: includes/class-wc-stripe-payment-intent.php:397
+#: includes/class-wc-stripe-payment-intent.php:400
 #: includes/gateways/class-wc-payment-gateway-stripe-ach.php:121
 msgid "Error processing payment. Reason: %s"
 msgstr ""
@@ -757,8 +757,8 @@ msgstr ""
 msgid "Invalid order key."
 msgstr ""
 
-#: includes/controllers/class-wc-stripe-controller-checkout.php:244
-#: includes/controllers/class-wc-stripe-controller-checkout.php:290
+#: includes/controllers/class-wc-stripe-controller-checkout.php:245
+#: includes/controllers/class-wc-stripe-controller-checkout.php:291
 msgid "Please review your order details then click Place Order."
 msgstr ""
 
@@ -800,8 +800,8 @@ msgid "Connection test to Stripe was successful. Mode: %s."
 msgstr ""
 
 #: includes/controllers/class-wc-stripe-controller-googlepay.php:85
-#: packages/blocks/assets/js/payment-methods/googlepay/hooks/use-payments-client.js:154
-#: packages/blocks/build/commons.js:2346
+#: packages/blocks/assets/js/payment-methods/googlepay/hooks/use-payments-client.js:155
+#: packages/blocks/build/commons.js:2347
 msgid "Your shipping address is not serviceable."
 msgstr ""
 
@@ -884,7 +884,7 @@ msgstr ""
 #: includes/gateways/class-wc-payment-gateway-stripe-afterpay.php:25
 #: includes/gateways/class-wc-payment-gateway-stripe-afterpay.php:26
 #: packages/blocks/assets/js/payment-methods/local-payment/afterpay.js:80
-#: packages/blocks/build/commons.js:3188
+#: packages/blocks/build/commons.js:3201
 msgid "Afterpay"
 msgstr ""
 
@@ -1131,6 +1131,11 @@ msgstr ""
 msgid "Boleto gateway that integrates with your Stripe account."
 msgstr ""
 
+#: includes/gateways/class-wc-payment-gateway-stripe-boleto.php:38
+#: includes/wc-stripe-functions.php:1103
+msgid "Please enter a valid CPF / CNPJ"
+msgstr ""
+
 #: includes/gateways/class-wc-payment-gateway-stripe-cc.php:19
 #: includes/gateways/settings/cc-settings.php:22
 msgid "Credit Cards"
@@ -1274,7 +1279,7 @@ msgstr ""
 
 #: includes/gateways/class-wc-payment-gateway-stripe-klarna.php:374
 #: packages/blocks/assets/js/payment-methods/local-payment/klarna/hooks/use-process-payment.js:31
-#: packages/blocks/build/commons.js:4082
+#: packages/blocks/build/commons.js:4093
 msgid "Your purchase is not approved."
 msgstr ""
 
@@ -1381,9 +1386,17 @@ msgstr ""
 msgid "WeChat gateway that integrates with your Stripe account."
 msgstr ""
 
-#: includes/gateways/class-wc-payment-gateway-stripe-wechat.php:72
-#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:129
-#: packages/blocks/build/commons.js:4717
+#: includes/gateways/class-wc-payment-gateway-stripe-wechat.php:40
+msgid "QRCode Size"
+msgstr ""
+
+#: includes/gateways/class-wc-payment-gateway-stripe-wechat.php:43
+msgid "This option controls the width and height in pixels of the QRCode."
+msgstr ""
+
+#: includes/gateways/class-wc-payment-gateway-stripe-wechat.php:91
+#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:130
+#: packages/blocks/build/commons.js:4736
 msgid "Scan the QR code using your WeChat app. Once scanned click the Place Order button."
 msgstr ""
 
@@ -2154,10 +2167,6 @@ msgstr ""
 msgid "The IBAN you entered is incomplete."
 msgstr ""
 
-#: includes/wc-stripe-functions.php:1103
-msgid "Please enter a valid CPF / CNPJ"
-msgstr ""
-
 #: includes/wc-stripe-webhook-functions.php:100
 msgid "Charge.succeeded webhook received. Payment has been completed."
 msgstr ""
@@ -2254,7 +2263,7 @@ msgstr ""
 
 #: templates/checkout/afterpay.php:11
 #: packages/blocks/assets/js/payment-methods/local-payment/afterpay.js:66
-#: packages/blocks/build/commons.js:3174
+#: packages/blocks/build/commons.js:3187
 msgid "After clicking \"%s\", you will be redirected to Afterpay to complete your purchase securely."
 msgstr ""
 
@@ -2264,30 +2273,36 @@ msgstr ""
 
 #: templates/checkout/boleto.php:17
 #: packages/blocks/assets/js/payment-methods/local-payment/boleto.js:48
-#: packages/blocks/build/commons.js:3364
+#: packages/blocks/build/commons.js:3377
 msgid "Test mode values"
 msgstr ""
 
 #: templates/checkout/boleto.php:27
 #: packages/blocks/assets/js/payment-methods/local-payment/boleto.js:58
-#: packages/blocks/build/commons.js:3374
+#: packages/blocks/build/commons.js:3387
 msgid "Accepted formats"
 msgstr ""
 
 #: templates/checkout/boleto.php:29
 #: packages/blocks/assets/js/payment-methods/local-payment/boleto.js:61
-#: packages/blocks/build/commons.js:3377
+#: packages/blocks/build/commons.js:3390
 msgid "XXX.XXX.XXX-XX or XXXXXXXXXXX"
 msgstr ""
 
 #: templates/checkout/boleto.php:32
 #: packages/blocks/assets/js/payment-methods/local-payment/boleto.js:65
-#: packages/blocks/build/commons.js:3381
+#: packages/blocks/build/commons.js:3394
 msgid "XX.XXX.XXX/XXXX-XX or XXXXXXXXXXXXXX"
 msgstr ""
 
 #: templates/checkout/checkout-banner.php:9
 msgid "Express Checkout"
+msgstr ""
+
+#: templates/checkout/klarna.php:11
+#: packages/blocks/assets/js/payment-methods/local-payment/klarna/index.js:92
+#: packages/blocks/build/commons.js:4197
+msgid "Test mode sms"
 msgstr ""
 
 #: packages/blocks/assets/js/payment-methods/ach/payment-method.js:56
@@ -2301,33 +2316,33 @@ msgid "%s is not a valid blocks Stripe custom form. Please choose another custom
 msgstr ""
 
 #: packages/blocks/assets/js/payment-methods/local-payment/boleto.js:27
-#: packages/blocks/build/commons.js:3343
+#: packages/blocks/build/commons.js:3356
 msgid "Please enter a valid CPF/CNPJ value"
 msgstr ""
 
 #: packages/blocks/assets/js/payment-methods/local-payment/hooks/use-create-source.js:73
 #: packages/blocks/assets/js/payment-methods/local-payment/hooks/use-validate-checkout.js:10
-#: packages/blocks/build/commons.js:3661
-#: packages/blocks/build/commons.js:3698
+#: packages/blocks/build/commons.js:3674
+#: packages/blocks/build/commons.js:3711
 msgid "Please enter your payment info before proceeding."
 msgstr ""
 
-#: packages/blocks/assets/js/payment-methods/local-payment/klarna/index.js:101
-#: packages/blocks/build/commons.js:4195
+#: packages/blocks/assets/js/payment-methods/local-payment/klarna/index.js:108
+#: packages/blocks/build/commons.js:4213
 msgid "Please fill out all required fields before paying with Klarna."
 msgstr ""
 
-#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:50
-#: packages/blocks/build/commons.js:4638
+#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:51
+#: packages/blocks/build/commons.js:4657
 msgid "Please scan your QR code to continue with payment."
 msgstr ""
 
-#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:96
-#: packages/blocks/build/commons.js:4684
+#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:97
+#: packages/blocks/build/commons.js:4703
 msgid "Please fill out all the required fields in order to complete the WeChat payment."
 msgstr ""
 
-#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:126
-#: packages/blocks/build/commons.js:4714
+#: packages/blocks/assets/js/payment-methods/local-payment/wechat.js:127
+#: packages/blocks/build/commons.js:4733
 msgid "Test mode: Click the Place Order button to proceed."
 msgstr ""

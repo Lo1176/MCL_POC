@@ -38,7 +38,7 @@ class WC_Payment_Gateway_Stripe_Payment_Request extends WC_Payment_Gateway_Strip
 	}
 
 	public function get_icon() {
-		return wc_stripe_get_template( 'payment-request-icons.php' );
+		return wc_stripe_get_template_html( 'payment-request-icons.php' );
 	}
 
 	public function enqueue_product_scripts( $scripts ) {

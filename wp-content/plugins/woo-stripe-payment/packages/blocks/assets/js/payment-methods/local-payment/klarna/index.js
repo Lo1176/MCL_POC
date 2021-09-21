@@ -5,6 +5,7 @@ import {useProcessCheckoutError} from '../../hooks';
 import {
     getSettings,
     initStripe,
+    isTestMode
 } from "../../util";
 import {PaymentMethodLabel, PaymentMethod} from "../../../components/checkout";
 import {canMakePayment} from "../local-payment-method";
@@ -85,11 +86,17 @@ const KlarnaPaymentMethod = (
     if (source && klarnaInitialized) {
         const categories = getCategoriesFromSource(source);
         return (
-            <KlarnaPaymentCategories
-                source={source}
-                categories={categories}
-                selected={!selected && categories.length > 0 ? categories[0].type : selected}
-                onChange={setSelected}/>
+            <>
+                {isTestMode() &&
+                <div className="wc-stripe-klarna__testmode">
+                    <label>{__('Test mode sms', 'woo-stripe-payment')}:</label>&nbsp;<span>123456</span>
+                </div>}
+                <KlarnaPaymentCategories
+                    source={source}
+                    categories={categories}
+                    selected={!selected && categories.length > 0 ? categories[0].type : selected}
+                    onChange={setSelected}/>
+            </>
         )
     } else {
         if (isLoading) {

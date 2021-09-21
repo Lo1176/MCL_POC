@@ -47,7 +47,10 @@ class WC_Stripe_Payment_Intent extends WC_Stripe_Payment {
 		$order->save();
 
 		if ( $intent->status === 'requires_confirmation' ) {
-			$intent = $this->gateway->paymentIntents->confirm( $intent->id );
+			$intent = $this->gateway->paymentIntents->confirm(
+				$intent->id,
+				apply_filters( 'wc_stripe_payment_intent_confirmation_args', $this->payment_method->get_payment_intent_confirmation_args( $intent, $order ), $intent, $order )
+			);
 			if ( is_wp_error( $intent ) ) {
 				$this->add_payment_failed_note( $order, $intent );
 

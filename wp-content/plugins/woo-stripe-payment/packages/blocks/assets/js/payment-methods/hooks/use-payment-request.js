@@ -29,7 +29,7 @@ export const usePaymentRequest = (
         shippingData,
         eventRegistration
     });
-    const {needsShipping, shippingRates} = shippingData;
+    const {shippingAddress, needsShipping, shippingRates} = shippingData;
     const {billingData, cartTotalItems, currency, cartTotal} = billing;
     const [paymentRequest, setPaymentRequest] = useState(null);
     const paymentRequestOptions = useRef({});
@@ -70,7 +70,14 @@ export const usePaymentRequest = (
                 }
             });
         }
-    }, [stripe, billingData, shippingRates, needsShipping]);
+    }, [
+        stripe,
+        cartTotal.value,
+        billingData.country,
+        shippingRates,
+        cartTotalItems,
+        currency.code
+    ]);
 
     useEffect(() => {
         if (paymentRequest) {
@@ -81,7 +88,12 @@ export const usePaymentRequest = (
             paymentRequest.on('cancel', onClose);
             paymentRequest.on('paymentmethod', onPaymentMethodReceived);
         }
-    }, [paymentRequest]);
+    }, [
+        paymentRequest,
+        onShippingAddressChange,
+        onClose,
+        onPaymentMethodReceived
+    ]);
 
     const updatePaymentEvent = useCallback((event) => (success, {billing, shipping}) => {
         const {cartTotal, cartTotalItems, currency} = billing;
@@ -134,7 +146,7 @@ export const usePaymentRequest = (
         // set payment method
         setPaymentMethod(paymentMethod.id);
         paymentResponse.complete("success");
-    }, [setPaymentMethod]);
+    }, []);
 
     return {paymentRequest};
 }

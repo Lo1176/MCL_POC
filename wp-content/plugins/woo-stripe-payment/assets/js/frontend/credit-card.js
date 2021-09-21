@@ -12,6 +12,7 @@
         wc_stripe.credit_card = this;
         this.confirmedSetupIntent = false;
         this.has3DSecureParams();
+        this.handle_create_account_change();
     }
 
     var elementClasses = {
@@ -33,6 +34,7 @@
      */
     CC.prototype.initialize = function () {
         $(document.body).on('click', '#place_order', this.place_order.bind(this));
+        $(document.body).on('change', '#createaccount', this.handle_create_account_change.bind(this));
         this.setup_card();
 
         if (this.can_create_setup_intent()) {
@@ -277,6 +279,7 @@
      */
     CC.prototype.updated_checkout = function () {
         this.create_card_element();
+        this.handle_create_account_change();
         if (this.can_create_setup_intent() && !this.client_secret) {
             this.create_setup_intent();
         }
@@ -307,10 +310,6 @@
      */
     CC.prototype.is_custom_form = function () {
         return this.params.custom_form === "1";
-    }
-
-    CC.prototype.get_element_options = function () {
-        return this.params.elementOptions;
     }
 
     /**
@@ -387,6 +386,16 @@
             (this.is_current_page('checkout') && typeof wc_stripe_preorder_exists !== 'undefined') ||
             (this.is_current_page('order_pay') && 'pre_order' in this.get_gateway_data() && this.get_gateway_data().pre_order === true) ||
             (this.is_current_page('product') && this.get_total_price_cents() == 0);
+    }
+
+    CC.prototype.handle_create_account_change = function () {
+        if ($('#createaccount').length) {
+            if ($('#createaccount').is(':checked')) {
+                $('.wc-stripe-save-source').show();
+            } else {
+                $('.wc-stripe-save-source').hide();
+            }
+        }
     }
 
     new CC();

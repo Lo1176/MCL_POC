@@ -265,13 +265,6 @@
         }.bind(this));
     }
 
-    LocalPayment.prototype.get_element_options = function () {
-        if (this.params.element_options) {
-            return this.params.element_options;
-        }
-        return {};
-    }
-
     /*********** iDEAL ***********/
     function IDEAL(params) {
         this.elementType = 'idealBank';
@@ -655,8 +648,8 @@
                 this.get_form().unblock().removeClass('processing').addClass('wechat');
                 var qrCode = new QRCode('wc_stripe_local_payment_stripe_wechat', {
                     text: this.qrcode.code,
-                    width: 128,
-                    height: 128,
+                    width: parseInt(this.params.qr_size),
+                    height: parseInt(this.params.qr_size),
                     colorDark: '#424770',
                     colorLight: '#f8fbfd',
                     correctLevel: QRCode.CorrectLevel.H,
@@ -756,7 +749,7 @@
 
     Boleto.prototype.createSource = function () {
         var tax_id = this.get_tax_id();
-        if (!tax_id) {
+        if (!tax_id || !tax_id.match(/^(\w{3}\.){2}\w{3}-\w{2}$|^(\w{11}|\w{14})$|^\w{2}\.\w{3}\.\w{3}\/\w{4}-\w{2}$/)) {
             return this.submit_error({code: 'incomplete_boleto_tax_id'});
         } else {
             this.payment_token_received = true;

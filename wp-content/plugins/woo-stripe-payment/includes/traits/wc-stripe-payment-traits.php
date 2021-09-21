@@ -50,6 +50,14 @@ trait WC_Stripe_Payment_Intent_Trait {
 
 		return sprintf( '#response=%s', rawurlencode( base64_encode( wp_json_encode( $args ) ) ) );
 	}
+
+	/**
+	 * @param \Stripe\PaymentIntent $intent
+	 * @param WC_Order $order
+	 */
+	public function get_payment_intent_confirmation_args( $intent, $order ) {
+		return array();
+	}
 }
 
 /**
@@ -121,5 +129,15 @@ trait WC_Stripe_Local_Payment_Intent_Trait {
 	 */
 	public function get_confirmation_method( $order ) {
 		return 'automatic';
+	}
+
+	/**
+	 * @param \Stripe\PaymentIntent $intent
+	 * @param WC_Order $order
+	 */
+	public function get_payment_intent_confirmation_args( $intent, $order ) {
+		return array(
+			'return_url' => $this->get_local_payment_return_url( $order )
+		);
 	}
 }

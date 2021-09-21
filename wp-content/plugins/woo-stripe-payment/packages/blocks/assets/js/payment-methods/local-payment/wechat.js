@@ -41,6 +41,7 @@ const WeChatPaymentMethod = (
         eventRegistration,
         components
     }) => {
+    const size = parseInt(getData('qrSize'));
     const {responseTypes} = emitResponse;
     const {onPaymentProcessing, onCheckoutAfterProcessingWithSuccess} = eventRegistration;
     const {ValidationInputError} = components;
@@ -82,7 +83,7 @@ const WeChatPaymentMethod = (
 
     if (source) {
         return (
-            <QRCodeComponent text={source.wechat.qr_code_url}/>
+            <QRCodeComponent text={source.wechat.qr_code_url} width={size} height={size}/>
         );
     } else if (error) {
         return (
@@ -199,7 +200,8 @@ const useCreateSource = (
         }
     }, [
         stripe,
-        source
+        source,
+        createSource
     ]);
 
     return {source, setSource, error, deleteSourceFromStorage};

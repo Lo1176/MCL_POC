@@ -61,7 +61,6 @@ class WC_Payment_Gateway_Stripe_CC extends WC_Payment_Gateway_Stripe {
 			array(
 				'cardOptions'        => $this->get_card_form_options(),
 				'customFieldOptions' => $this->get_card_custom_field_options(),
-				'elementOptions'     => $this->get_element_options(),
 				'custom_form'        => $this->is_custom_form_active(),
 				'html'               => array( 'card_brand' => sprintf( '<img id="wc-stripe-card" src="%s" />', $this->get_custom_form()['cardBrand'] ) ),
 				'cards'              => array(
@@ -131,8 +130,12 @@ class WC_Payment_Gateway_Stripe_CC extends WC_Payment_Gateway_Stripe {
 		return wc_stripe_get_custom_forms()[ $this->get_option( 'custom_form' ) ];
 	}
 
-	public function get_element_options() {
-		return $this->get_custom_form()['elementOptions'];
+	public function get_element_options( $options = array() ) {
+		if ( $this->is_custom_form_active() ) {
+			return parent::get_element_options( $this->get_custom_form()['elementOptions'] );
+		}
+
+		return parent::get_element_options();
 	}
 
 	/**
@@ -209,5 +212,35 @@ class WC_Payment_Gateway_Stripe_CC extends WC_Payment_Gateway_Stripe {
 
 	public function has_enqueued_scripts( $scripts ) {
 		return wp_script_is( $scripts->get_handle( 'credit-card' ) );
+	}
+
+	/**
+	 * Returns true if the save payment method checkbox can be displayed.
+	 *
+	 * @return boolean
+	 */
+	public function show_save_source() {
+		$page = wc_stripe_get_current_page();
+
+		if ( 'checkout' === $page ) {
+			if ( wcs_stripe_active() ) {
+				if ( WC_Subscriptions_Cart::cart_contains_subscription() ) {
+					return false;
+				}
+				if ( wcs_cart_contains_renewal() ) {
+					return false;
+				}
+			}
+			// @since 3.1.5
+			if ( wc_stripe_pre_orders_active() && WC_Pre_Orders_Cart::cart_contains_pre_order() ) {
+				return ! WC_Pre_Orders_Product::product_is_charged_upon_release( WC_Pre_Orders_Cart::get_pre_order_product() );
+			}
+
+			return apply_filters( 'wc_stripe_cc_show_save_source', $this->is_active( 'save_card_enabled' ) );
+		} elseif ( in_array( $page, array( 'add_payment_method', 'change_payment_method' ) ) ) {
+			return false;
+		} elseif ( 'order_pay' === $page ) {
+			return is_user_logged_in() && $this->is_active( 'save_card_enabled' );
+		}
 	}
 }

@@ -65,7 +65,7 @@ export const useProcessPaymentIntent = (
         if (paymentMethod && typeof paymentMethod === 'string') {
             onSubmit();
         }
-    }, [paymentMethod]);
+    }, [paymentMethod, onSubmit]);
 
     useEffect(() => {
         const unsubscribeProcessingPayment = onPaymentProcessing(async () => {

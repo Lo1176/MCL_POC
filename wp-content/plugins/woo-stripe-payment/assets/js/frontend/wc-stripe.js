@@ -38,54 +38,29 @@
         this.fields.set(this.gateway_id + '_token_key', value);
         $(this.token_selector).val(value);
     };
-    /**
-     * [get_element_options description]
-     * @return {[type]} [description]
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_element_options = function () {
-        return {};
+        return this.params.elementOptions;
     };
 
     wc_stripe.BaseGateway.prototype.initialize = function () {
     };
-    /**
-     * @return {[type]}
-     */
 
 
     wc_stripe.BaseGateway.prototype.create_button = function () {
     };
-    /**
-     * @returns {Boolean}
-     */
-
 
     wc_stripe.BaseGateway.prototype.is_gateway_selected = function () {
         return $('[name="payment_method"]:checked').val() === this.gateway_id;
     };
-    /**
-     * @returns {Boolean}
-     */
-
 
     wc_stripe.BaseGateway.prototype.is_saved_method_selected = function () {
         return this.is_gateway_selected() && $('[name="' + this.gateway_id + '_payment_type_key"]:checked').val() === 'saved';
     };
-    /**
-     * @return {Boolean}
-     */
-
 
     wc_stripe.BaseGateway.prototype.has_checkout_error = function () {
         return $('#wc_stripe_checkout_error').length > 0 && this.is_gateway_selected();
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.submit_error = function (error) {
         var message = this.get_error_message(error);
@@ -120,11 +95,6 @@
 
         return message;
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.submit_message = function (message) {
         $('.woocommerce-error, .woocommerce-message, .woocommerce-info').remove();
@@ -224,30 +194,14 @@
     wc_stripe.BaseGateway.prototype.set_gateway_data = function (data) {
         $(this.container).find(".woocommerce_".concat(this.gateway_id, "_gateway_data")).data('gateway', data);
     };
-    /**
-     * [get_customer_name description]
-     * @return String
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_customer_name = function (prefix) {
         return this.fields.get(prefix + '_first_name') + ' ' + this.fields.get(prefix + '_last_name');
     };
-    /**
-     * [get_customer_email description]
-     * @return {String} [description]
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_customer_email = function () {
         return this.fields.get('billing_email');
     };
-    /**
-     * Returns a string representation of an address.
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_address_field_hash = function (prefix) {
         var params = ['_first_name', '_last_name', '_address_1', '_address_2', '_postcode', '_city', '_state', '_country'];
@@ -259,10 +213,6 @@
 
         return hash;
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.block = function () {
         if ($().block) {
@@ -275,28 +225,16 @@
             });
         }
     }
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.unblock = function () {
         if ($().block) {
             $.unblockUI();
         }
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_form = function () {
         return $(this.token_selector).closest('form');
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_total_price = function () {
         return this.get_gateway_data().total;
@@ -305,39 +243,22 @@
     wc_stripe.BaseGateway.prototype.get_total_price_cents = function () {
         return this.get_gateway_data().total_cents;
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.set_total_price = function (total) {
         var data = this.get_gateway_data();
         data.total = total;
         this.set_gateway_data(data);
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.set_total_price_cents = function (total) {
         var data = this.get_gateway_data();
         data.total_cents = total;
         this.set_gateway_data(data);
     };
-    /**
-     * [set_payment_method description]
-     * @param {[type]} payment_method [description]
-     */
-
 
     wc_stripe.BaseGateway.prototype.set_payment_method = function (payment_method) {
         $('[name="payment_method"][value="' + payment_method + '"]').prop("checked", true).trigger('click');
     };
-    /**
-     * [set_shipping_methods description]
-     */
-
 
     wc_stripe.BaseGateway.prototype.set_selected_shipping_methods = function (shipping_methods) {
         this.fields.set('shipping_method', shipping_methods);
@@ -349,11 +270,6 @@
             }
         }
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.on_token_received = function (paymentMethod) {
         this.payment_token_received = true;
@@ -376,10 +292,6 @@
             return;
         }
     };
-    /**
-     * @return {[Object]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_payment_request_options = function () {
         var options = {
@@ -422,10 +334,6 @@
 
         return options;
     };
-    /**
-     * @return {[Object]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_payment_request_update = function (data) {
         var options = {
@@ -453,50 +361,26 @@
 
         return options;
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_display_items = function () {
         return this.get_gateway_data().items;
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.set_display_items = function (items) {
         var data = this.get_gateway_data();
         data.items = items;
         this.set_gateway_data(data);
     };
-    /**
-     * Return an array of shipping options for display in the Google payment sheet
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.get_shipping_options = function () {
         return this.get_gateway_data().shipping_options;
     };
-    /**
-     * Update the shipping options.
-     * @param {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.set_shipping_options = function (items) {
         var data = this.get_gateway_data();
         data.shipping_options = items;
         this.set_gateway_data(data);
     };
-    /**
-     * Maps an address from the Browser address format to WC format.
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.map_address = function (address) {
         return {
@@ -506,11 +390,6 @@
             country: address.country
         };
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.on_payment_method_received = function (paymentResponse) {
         try {
@@ -522,20 +401,11 @@
             window.alert(err);
         }
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.populate_checkout_fields = function (data) {
         this.set_nonce(data.paymentMethod.id);
         this.update_addresses(data);
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.update_addresses = function (data) {
         if (data.payerName) {
@@ -624,10 +494,6 @@
             xhr.setRequestHeader('X-WP-Nonce', this.params.rest_nonce);
         }
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.process_checkout = function () {
         return new Promise(function () {
@@ -804,11 +670,6 @@
     wc_stripe.BaseGateway.prototype.serialize_fields = function () {
         return $.extend({}, this.fields.toJson(), $(document.body).triggerHandler('wc_stripe_process_checkout_data', [this, this.fields]));
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.map_shipping_methods = function (shippingData) {
         var methods = {};
@@ -823,11 +684,6 @@
 
         return methods;
     };
-    /**
-     * [maybe_set_ship_to_different description]
-     * @return {[type]} [description]
-     */
-
 
     wc_stripe.BaseGateway.prototype.maybe_set_ship_to_different = function () {
         // if shipping and billing address are different,
@@ -863,10 +719,6 @@
             }.bind(this));
         }.bind(this));
     };
-    /**
-     * @return {[@event]}
-     */
-
 
     wc_stripe.BaseGateway.prototype.update_shipping_method = function (ev) {
         return new Promise(function (resolve, reject) {
@@ -896,11 +748,6 @@
         }.bind(this));
     };
     /********** Checkout Gateway ********/
-
-    /**
-     * @constructor
-     */
-
 
     wc_stripe.CheckoutGateway = function () {
         this.message_container = 'li.payment_method_' + this.gateway_id;
@@ -1015,10 +862,6 @@
             this.hide_place_order();
         }
     };
-    /**
-     *
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.is_valid_checkout = function () {
         if ($('[name="terms"]').length && $('[name="terms"]').is(':visible')) {
@@ -1029,12 +872,6 @@
 
         return true;
     };
-    /**
-     * Returns the selected payment gateway's id.
-     *
-     * @returns {String}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.get_payment_method = function () {
         return $('[name="payment_method"]:checked').val();
@@ -1043,10 +880,6 @@
     wc_stripe.CheckoutGateway.prototype.set_use_new_option = function (bool) {
         $('#' + this.gateway_id + '_use_new').prop('checked', bool).trigger('change');
     };
-    /**
-     * Called on the WC checkout_place_order_{$gateway_id} event
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.checkout_place_order = function () {
         if (!this.is_valid_checkout()) {
@@ -1058,11 +891,6 @@
 
         return this.payment_token_received;
     };
-    /**
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.on_token_received = function (paymentMethod) {
         this.payment_token_received = true;
@@ -1070,10 +898,6 @@
         this.hide_payment_button();
         this.show_place_order();
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.block = function () {
         if ($().block) {
@@ -1087,10 +911,6 @@
         }
 
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.unblock = function () {
         if ($().block) {
@@ -1101,21 +921,10 @@
     wc_stripe.CheckoutGateway.prototype.hide_place_order = function () {
         $('#place_order').addClass('wc-stripe-hide');
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.show_place_order = function () {
         $('#place_order').removeClass('wc-stripe-hide');
     };
-    /**
-     * Method that should perform actions when the show new methods contain is made visible.
-     * @param  {[@event]}
-     * @param  {[String]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.on_show_new_methods = function () {
         if (this.payment_token_received) {
@@ -1126,54 +935,27 @@
             this.show_payment_button();
         }
     };
-    /**
-     * Method that performs actions when the saved methods contains is visible.
-     * @param  {[type]}
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.on_show_saved_methods = function () {
         this.hide_payment_button();
         this.show_place_order();
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.show_payment_button = function () {
         if (this.$button) {
             this.$button.show();
         }
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.hide_payment_button = function () {
         if (this.$button) {
             this.$button.hide();
         }
     };
-    /**
-     * Wrapper for on_payment_method_selected that is safe to call since it won't trigger
-     * any DOM events.
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.trigger_payment_method_selected = function () {
         this.on_payment_method_selected(null, $('[name="payment_method"]:checked').val());
     };
-    /**
-     * @param  {[type]}
-     * @param  {[type]}
-     * @return {[type]}
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.on_payment_method_selected = function (e, payment_method) {
         if (payment_method === this.gateway_id) {
@@ -1192,11 +974,6 @@
             }
         }
     };
-    /**
-     * [Return true if the banner option has been enabled for the gateway.]
-     * @return {[type]} [description]
-     */
-
 
     wc_stripe.CheckoutGateway.prototype.banner_enabled = function () {
         return this.params.banner_enabled === '1';
@@ -1613,18 +1390,10 @@
         this.payment_request_options = request;
         return request;
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.GooglePay.prototype.createPaymentsClient = function () {
         this.paymentsClient = new google.payments.api.PaymentsClient(this.get_payment_options());
     };
-    /**
-     * @return {Promise}
-     */
-
 
     wc_stripe.GooglePay.prototype.isReadyToPay = function () {
         return new Promise(function (resolve) {
@@ -1653,10 +1422,6 @@
         }));
         this.$button.addClass('gpay-button-container');
     };
-    /**
-     * @return {[type]}
-     */
-
 
     wc_stripe.GooglePay.prototype.start = function () {
         // always recreate the paymentClient to ensure latest data is used.
@@ -1832,7 +1597,7 @@
             return [k, this.params[k].value];
         }.bind(this)));
 
-        if ('checkout' === page || ('cart' === page && $(document.body).is('.woocommerce-checkout'))) {
+        if ('checkout' === page || ('cart' === page && $(document.body).is('.woocommerce-checkout')) || $('form.woocommerce-checkout').length > 0) {
             $(document.body).on('updated_checkout', this.updated_checkout.bind(this));
             $('form.checkout').on('change', '.input-text, select', this.onChange.bind(this));
             $('form.checkout').on('change', '[name="ship_to_different_address"]', this.on_ship_to_address_change.bind(this));
@@ -1950,12 +1715,6 @@
 
         return typeof value === 'undefined' ? '' : value;
     };
-    /**
-     * Return true if the field is required
-     * @param k
-     * @returns boolean
-     */
-
 
     wc_stripe.CheckoutFields.prototype.required = function (k) {
         if (this.params[k]) {
@@ -2237,10 +1996,6 @@
     wc_stripe.CheckoutFields.prototype.postalCode = function () {
         return wc_stripe.CheckoutFields.prototype.postcode.apply(this, arguments);
     };
-    /**
-     * Serialize the fields into an expected format
-     */
-
 
     wc_stripe.CheckoutFields.prototype.toJson = function () {
         var data = {};

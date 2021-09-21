@@ -31,4 +31,11 @@ class WC_Payment_Gateway_Stripe_Boleto extends WC_Payment_Gateway_Stripe_Local_P
 		parent::__construct();
 		$this->template_name = 'boleto.php';
 	}
+
+	public function validate_fields() {
+		$regex = '/^(\w{3}\.){2}\w{3}-\w{2}$|^(\w{11}|\w{14})$|^\w{2}\.\w{3}\.\w{3}\/\w{4}-\w{2}$/';
+		if ( empty( $_POST['wc_stripe_boleto_tax_id'] ) || ! preg_match_all( $regex, $_POST['wc_stripe_boleto_tax_id'] ) ) {
+			wc_add_notice( __( 'Please enter a valid CPF / CNPJ', 'woo-stripe-payment' ), 'error' );
+		}
+	}
 }

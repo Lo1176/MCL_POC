@@ -727,6 +727,12 @@ div[id*=wc_stripe_local_payment_stripe_].StripeElement {
     border-radius: 4px;
 }
 
+#payment .payment_methods li #wc_stripe_local_payment_stripe_wechat img,
+#wc_stripe_local_payment_stripe_wechat img {
+    max-height: 100%;
+    float: none;
+}
+
 .qrcode-message {
     margin: 10px 0 0 0;
 }
@@ -1914,4 +1920,11 @@ label[for=payment_method_stripe_afterpay] > #wc-stripe-afterpay-msg {
 
 .wc-stripe-boleto__description div label {
     margin: 0;
+}
+
+.wc-stripe-klarna__testmode{
+    margin-top: 10px;
+}
+.wc-stripe-klarna__testmode label{
+    display: inline-block;
 }

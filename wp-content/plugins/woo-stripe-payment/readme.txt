@@ -4,7 +4,7 @@ Tags: stripe, ach, klarna, credit card, apple pay, google pay, ideal, sepa, sofo
 Requires at least: 3.0.1
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 3.3.9
+Stable tag: 3.3.10
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,15 @@ If you're site is not loading over https, then Stripe won't render the Payment R
 8. Edit payment gateways on the product page
 
 == Changelog ==
+= 3.3.10 =
+* Added - Save card checkbox now shows (if enabled in Credit Card Setting) for guest users that select to create new account on checkout page.
+* Added - Capability check to Admin profile
+* Added - Option in WeChat settings to control QRCode size
+* Added - Klarna test mode sms code "123456"
+* Added - Filter "wc_stripe_get_element_options" which can be used to control the locale.
+* Removed - Filter "wc_stripe_local_element_options" since "wc_stripe_get_element_options" can be used instead.
+* Fixed - WooCommerce Blocks express checkout error when currency's number of decimals set to 0
+* Updated - wpml-config.xml now includes additional admin-text entries
 = 3.3.9 =
 * Added - OXXO payment method support for standard checkout and [WooCommerce Blocks](https://wordpress.org/plugins/woo-gutenberg-products-block/)
 * Added - WeChat support for currencies CNY, DKK, NOK, SEC, CHF

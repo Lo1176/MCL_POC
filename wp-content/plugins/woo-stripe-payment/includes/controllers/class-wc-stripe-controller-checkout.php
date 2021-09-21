@@ -239,6 +239,7 @@ class WC_Stripe_Controller_Checkout extends WC_Stripe_Rest_Controller {
 	 */
 	public function after_checkout_validation( $data, $errors ) {
 		if ( $errors->get_error_codes() ) {
+			wc_stripe_log_info( sprintf( __CLASS__ . '::checkout errors: %s', print_r( $errors->get_error_codes(), true ) ) );
 			wc_add_notice(
 				apply_filters(
 					'wc_stripe_after_checkout_validation_notice', __( 'Please review your order details then click Place Order.', 'woo-stripe-payment' ),

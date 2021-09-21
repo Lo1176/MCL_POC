@@ -53,6 +53,10 @@ class WC_Stripe_Admin_User_Edit {
 	 * @param int $user_id
 	 */
 	public static function save( $user_id ) {
+		// only users with "manage_woocommerce" can update the user's Stripe customer ID's.
+		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+			return;
+		}
 		$modes = array( 'test', 'live' );
 		if ( isset( $_POST['wc_stripe_live_id'] ) ) {
 			$old_live_id = wc_stripe_get_customer_id( $user_id, 'live' );

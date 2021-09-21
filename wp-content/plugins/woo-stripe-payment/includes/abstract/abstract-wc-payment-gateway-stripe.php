@@ -421,7 +421,8 @@ abstract class WC_Payment_Gateway_Stripe extends WC_Payment_Gateway {
 			'total_label'           => __( 'Total', 'woo-stripe-payment' ),
 			'country_code'          => wc_get_base_location()['country'],
 			'user_id'               => get_current_user_id(),
-			'description'           => $this->get_description()
+			'description'           => $this->get_description(),
+			'elementOptions'        => $this->get_element_options()
 		);
 	}
 
@@ -870,28 +871,7 @@ abstract class WC_Payment_Gateway_Stripe extends WC_Payment_Gateway {
 	 * @return boolean
 	 */
 	public function show_save_source() {
-		$page = wc_stripe_get_current_page();
-
-		if ( 'checkout' === $page ) {
-			if ( wcs_stripe_active() ) {
-				if ( WC_Subscriptions_Cart::cart_contains_subscription() ) {
-					return false;
-				}
-				if ( wcs_cart_contains_renewal() ) {
-					return false;
-				}
-			}
-			// @since 3.1.5
-			if ( wc_stripe_pre_orders_active() && WC_Pre_Orders_Cart::cart_contains_pre_order() ) {
-				return ! WC_Pre_Orders_Product::product_is_charged_upon_release( WC_Pre_Orders_Cart::get_pre_order_product() );
-			}
-
-			return apply_filters( 'wc_stripe_cc_show_save_source', is_user_logged_in() && $this->is_active( 'save_card_enabled' ) );
-		} elseif ( in_array( $page, array( 'add_payment_method', 'change_payment_method' ) ) ) {
-			return false;
-		} elseif ( 'order_pay' === $page ) {
-			return is_user_logged_in() && $this->is_active( 'save_card_enabled' );
-		}
+		return false;
 	}
 
 	/**
@@ -1807,5 +1787,17 @@ abstract class WC_Payment_Gateway_Stripe extends WC_Payment_Gateway {
 			$subscription->set_payment_method_title( $token->get_payment_method_title( $this->get_option( 'method_format' ) ) );
 			$subscription->save();
 		}
+	}
+
+	/**
+	 * @param array $options
+	 *
+	 * @return mixed|void
+	 * @since 3.3.10
+	 */
+	public function get_element_options( $options = array() ) {
+		$options = array_merge( array( 'locale' => 'auto' ), $options );
+
+		return apply_filters( 'wc_stripe_get_element_options', $options, $this );
 	}
 }

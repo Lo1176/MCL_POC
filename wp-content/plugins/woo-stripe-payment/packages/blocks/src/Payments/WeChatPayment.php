@@ -27,6 +27,12 @@ class WeChatPayment extends AbstractStripeLocalPayment {
 		return parent::get_payment_method_script_handles();
 	}
 
+	public function get_payment_method_data() {
+		return array_merge( parent::get_payment_method_data(), array(
+			'qrSize' => $this->payment_method->get_option( 'qr_size' )
+		) );
+	}
+
 	/**
 	 * Update the redirect url for live mode so that the WC_Stripe_Redirect_Handler can process
 	 * the live payment.
@@ -42,12 +48,12 @@ class WeChatPayment extends AbstractStripeLocalPayment {
 			 * @var \WC_Payment_Gateway_Stripe $payment_method
 			 */
 			$payment_method = $context->get_payment_method_instance();
-			$source_id      = $order->get_meta( \WC_Stripe_Constants::SOURCE_ID );
-			$source         = \WC_Stripe_Gateway::load( wc_stripe_order_mode( $order ) )->sources->retrieve( $source_id );
+			$source_id      = $context->order->get_meta( \WC_Stripe_Constants::SOURCE_ID );
+			$source         = \WC_Stripe_Gateway::load( wc_stripe_order_mode( $context->order ) )->sources->retrieve( $source_id );
 			$redirect       = add_query_arg( array(
 				'source'        => $source_id,
 				'client_secret' => $source->client_secret
-			), $payment_method->get_local_payment_return_url( $order ) );
+			), $payment_method->get_local_payment_return_url( $context->order ) );
 			$result->set_redirect_url( $redirect );
 		}
 	}

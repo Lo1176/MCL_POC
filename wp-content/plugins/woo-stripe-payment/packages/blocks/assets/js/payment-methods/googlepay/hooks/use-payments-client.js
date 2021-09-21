@@ -113,7 +113,8 @@ export const usePaymentsClient = (
     }, [
         stripe,
         button,
-        paymentsClient
+        paymentsClient,
+        handleClick
     ]);
 
     const paymentOptions = useMemo(() => {

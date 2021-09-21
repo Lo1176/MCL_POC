@@ -198,7 +198,6 @@ abstract class WC_Payment_Gateway_Stripe_Local_Payment extends WC_Payment_Gatewa
 					wc_get_checkout_url()
 				),
 				'element_params'     => $this->get_element_params(),
-				'element_options'    => apply_filters( 'wc_stripe_local_element_options', null, $this ),
 				'routes'             => array(
 					'order_pay'           => stripe_wc()->rest_api->checkout->rest_url( 'order-pay' ),
 					'delete_order_source' => WC_Stripe_Rest_API::get_endpoint( stripe_wc()->rest_api->checkout->rest_uri( 'order/source' ) ),
