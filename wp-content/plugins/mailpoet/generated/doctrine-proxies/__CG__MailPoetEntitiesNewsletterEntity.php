@@ -588,6 +588,17 @@ class NewsletterEntity extends \MailPoet\Entities\NewsletterEntity implements \M
     /**
      * {@inheritDoc}
      */
+    public function getProcessedAt(): ?\DateTimeInterface
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getProcessedAt', []);
+
+        return parent::getProcessedAt();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getId()
     {
         if ($this->__isInitialized__ === false) {

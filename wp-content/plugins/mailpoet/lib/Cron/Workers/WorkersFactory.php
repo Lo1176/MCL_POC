@@ -20,7 +20,9 @@ class WorkersFactory {
   /** @var ContainerWrapper */
   private $container;
 
-  public function __construct(ContainerWrapper $container) {
+  public function __construct(
+    ContainerWrapper $container
+  ) {
     $this->container = $container;
   }
 

@@ -21,7 +21,9 @@ class ViewInBrowser {
   /** @var ViewInBrowserController */
   private $viewInBrowserController;
 
-  public function __construct(ViewInBrowserController $viewInBrowserController) {
+  public function __construct(
+    ViewInBrowserController $viewInBrowserController
+  ) {
     $this->viewInBrowserController = $viewInBrowserController;
   }
 

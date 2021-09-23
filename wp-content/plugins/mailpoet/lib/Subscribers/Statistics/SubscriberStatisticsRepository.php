@@ -25,7 +25,10 @@ class SubscriberStatisticsRepository extends Repository {
   /** @var WCHelper */
   private $wcHelper;
 
-  public function __construct(EntityManager $entityManager, WCHelper $wcHelper) {
+  public function __construct(
+    EntityManager $entityManager,
+    WCHelper $wcHelper
+  ) {
     parent::__construct($entityManager);
     $this->wcHelper = $wcHelper;
   }
