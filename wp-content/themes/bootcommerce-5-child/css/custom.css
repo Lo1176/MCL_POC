@@ -9,6 +9,8 @@
 } */
 /** colors-end **/
 
+.btn { font-size: 80px }
+
 /***** body *****/
 body {
   background-color: #FEFEFE !important;
