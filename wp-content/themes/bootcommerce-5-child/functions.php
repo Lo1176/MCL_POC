@@ -15,7 +15,6 @@ function bootscore_5_child_enqueue_styles()
 // Dequeue parent bootstrap.min.css and enqueue child
 function bootscore_remove_scripts()
 {
-
     // Dequeue parent bootstrap.min.css
     wp_dequeue_style('bootstrap');
     wp_deregister_style('bootstrap');
