@@ -1,15 +1,15 @@
-# Translation of Plugins - Facebook for WooCommerce - Stable (latest release) in French (France)
-# This file is distributed under the same license as the Plugins - Facebook for WooCommerce - Stable (latest release) package.
+# Translation of Plugins - Facebook for WooCommerce - Development (trunk) in French (France)
+# This file is distributed under the same license as the Plugins - Facebook for WooCommerce - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-08 06:10:20+0000\n"
+"PO-Revision-Date: 2021-09-08 06:10:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: fr\n"
-"Project-Id-Version: Plugins - Facebook for WooCommerce - Stable (latest release)\n"
+"Project-Id-Version: Plugins - Facebook for WooCommerce - Development (trunk)\n"
 
 #: includes/AJAX.php:220
 msgid "Full product sync disabled by filter hook `facebook_for_woocommerce_allow_full_batch_api_sync`."
@@ -70,32 +70,32 @@ msgid "The name is how it appears on Facebook Catalog."
 msgstr "Le nom est celui qui apparaît sur le catalogue Facebook."
 
 #. translators: Text label
-#: class-wc-facebookcommerce.php:476
+#: class-wc-facebookcommerce.php:477
 msgid "Choose from the most used %s"
 msgstr "Choisir parmi les %s les plus utilisées"
 
 #. translators: Text label
-#: class-wc-facebookcommerce.php:474
+#: class-wc-facebookcommerce.php:475
 msgid "Separate %s with commas"
 msgstr "Séparer les %s avec des virgules"
 
 #. translators: Search label
-#: class-wc-facebookcommerce.php:472
+#: class-wc-facebookcommerce.php:473
 msgid "Search %s."
 msgstr "Rechercher %s."
 
 #. translators: No items found text
-#: class-wc-facebookcommerce.php:470
+#: class-wc-facebookcommerce.php:471
 msgid "No %s found."
 msgstr "Aucun %s trouvé."
 
 #. translators: Add new label
-#: class-wc-facebookcommerce.php:467
+#: class-wc-facebookcommerce.php:468
 msgid "Add new %s"
 msgstr "Ajout de %s"
 
 #. translators: Edit item label
-#: class-wc-facebookcommerce.php:465
+#: class-wc-facebookcommerce.php:466
 msgid "Edit %s"
 msgstr "Modifier %s"
 
@@ -103,17 +103,17 @@ msgstr "Modifier %s"
 msgid "Map FB Product Set to WC Product Categories"
 msgstr "Faire correspondre les produits Facebook avec les catégories produits WC"
 
-#: class-wc-facebookcommerce.php:456
+#: class-wc-facebookcommerce.php:457
 msgid "FB Product Sets"
 msgstr "Gammes de produits Facebook"
 
-#: class-wc-facebookcommerce.php:457
+#: class-wc-facebookcommerce.php:458
 msgid "FB Product Set"
 msgstr "Gamme de produits Facebook"
 
 #. translators: Placeholders: %1$s - opening <a> HTML link tag, %2$s - closing
 #. </a> HTML link tag
-#: class-wc-facebookcommerce.php:384
+#: class-wc-facebookcommerce.php:385
 msgid "Heads up! The Facebook menu is now located under the %1$sMarketing%2$s menu."
 msgstr "Super ! Le menu Facebook est maintenant situé sous le menu %1$sMarketing%2$s."
 
@@ -145,9 +145,53 @@ msgstr "Choisir une catégorie de produits Google par défaut pour les produits 
 msgid "Select default values for enhanced attributes within this category"
 msgstr "Choisir les valeurs par défaut des attributs améliorés dans cette catégorie"
 
+#: includes/Admin/Enhanced_Catalog_Attribute_Fields.php:104
+msgid "Show advanced options"
+msgstr "Afficher les options avancées"
+
+#: includes/Admin/Product_Categories.php:123
+#: includes/Admin/Settings_Screens/Product_Sync.php:162
+msgid "Update default Google product category"
+msgstr "Mise à jour de la catégorie de produits Google par défaut"
+
+#: includes/Admin/Product_Categories.php:233
+#: includes/Admin/Settings_Screens/Product_Sync.php:338
+msgid "Default Google product category"
+msgstr "Catégorie de produits Google par défaut"
+
+#: includes/Admin/Products.php:216
+msgid "Enable to sell this product on Instagram. Products that are hidden in the Facebook catalog can be synced, but won’t be available for purchase."
+msgstr "Permet de vendre ce produit sur Instagram. Les produits qui sont cachés dans le catalogue Facebook peuvent être synchronisés, mais ne seront pas disponibles à l’achat."
+
+#: includes/Admin/Products.php:226
+msgid "This product does not meet the requirements to sell on Instagram."
+msgstr "Ce produit ne remplit pas les conditions pour être vendu sur Instagram."
+
+#: includes/Admin/Products.php:227
+msgid "Click here to learn more."
+msgstr "Cliquez ici pour en savoir plus."
+
+#. translators: Placeholders %1$s - strong opening tag, %2$s - strong closing
+#. tag
+#: includes/Admin/Products.php:236
+msgid "To sell this product on Instagram, at least one variation must be synced to Facebook. You can control variation sync on the %1$sVariations%2$s tab with the %1$sFacebook Sync%2$s setting."
+msgstr "Pour vendre ce produit sur Instagram, au moins une variante doit être synchronisée avec Facebook. Vous pouvez contrôler la synchronisation des variations sur l’onglet %1$sVariations%2$s avec le paramètre %1$sFacebook Sync%2$s."
+
+#: includes/Admin/Settings_Screens/Product_Sync.php:339
+msgid "Choose a default Google product category for your products. Defaults can also be set for product categories. Products need at least two category levels defined for tax to be correctly applied."
+msgstr "Choisir une catégorie de produits Google par défaut pour vos produits. Des valeurs par défaut peuvent également être définies pour les catégories de produits. Les produits doivent avoir au moins deux niveaux de catégorie définis pour que la taxe soit correctement appliquée."
+
 #: includes/AJAX.php:82
 msgid "Invalid nonce."
 msgstr "Nonce non valide."
+
+#: includes/AJAX.php:89
+msgid "Order ID is required."
+msgstr "L’ID de commande est nécessaire."
+
+#: includes/AJAX.php:93
+msgid "Cancel reason is required."
+msgstr "La raison de l’annulation est obligatoire."
 
 #: includes/AJAX.php:99
 msgid "A valid Order ID is required."
@@ -199,20 +243,6 @@ msgstr "A %1$sManage Stock%2$s activé sur l’onglet %1$sInventory%2$s"
 msgid "Close"
 msgstr "Fermer"
 
-#: includes/Admin/Enhanced_Catalog_Attribute_Fields.php:104
-msgid "Show advanced options"
-msgstr "Afficher les options avancées"
-
-#: includes/Admin/Product_Categories.php:123
-#: includes/Admin/Settings_Screens/Product_Sync.php:162
-msgid "Update default Google product category"
-msgstr "Mise à jour de la catégorie de produits Google par défaut"
-
-#: includes/Admin/Product_Categories.php:233
-#: includes/Admin/Settings_Screens/Product_Sync.php:338
-msgid "Default Google product category"
-msgstr "Catégorie de produits Google par défaut"
-
 #: includes/Admin/Products.php:119 includes/Admin/Product_Categories.php:376
 msgid "Category Specific Attributes"
 msgstr "Attributs spécifiques aux catégories"
@@ -232,28 +262,6 @@ msgstr "Choisir la catégorie de produit Google et (éventuellement) les sous-ca
 #: includes/Admin/Products.php:214
 msgid "Sell on Instagram"
 msgstr "Vendre sur Instagram"
-
-#: includes/Admin/Products.php:216
-msgid "Enable to sell this product on Instagram. Products that are hidden in the Facebook catalog can be synced, but won’t be available for purchase."
-msgstr "Permet de vendre ce produit sur Instagram. Les produits qui sont cachés dans le catalogue Facebook peuvent être synchronisés, mais ne seront pas disponibles à l’achat."
-
-#: includes/Admin/Products.php:226
-msgid "This product does not meet the requirements to sell on Instagram."
-msgstr "Ce produit ne remplit pas les conditions pour être vendu sur Instagram."
-
-#: includes/Admin/Products.php:227
-msgid "Click here to learn more."
-msgstr "Cliquez ici pour en savoir plus."
-
-#. translators: Placeholders %1$s - strong opening tag, %2$s - strong closing
-#. tag
-#: includes/Admin/Products.php:236
-msgid "To sell this product on Instagram, at least one variation must be synced to Facebook. You can control variation sync on the %1$sVariations%2$s tab with the %1$sFacebook Sync%2$s setting."
-msgstr "Pour vendre ce produit sur Instagram, au moins une variante doit être synchronisée avec Facebook. Vous pouvez contrôler la synchronisation des variations sur l’onglet %1$sVariations%2$s avec le paramètre %1$sFacebook Sync%2$s."
-
-#: includes/Admin/Settings_Screens/Product_Sync.php:339
-msgid "Choose a default Google product category for your products. Defaults can also be set for product categories. Products need at least two category levels defined for tax to be correctly applied."
-msgstr "Choisir une catégorie de produits Google par défaut pour vos produits. Des valeurs par défaut peuvent également être définies pour les catégories de produits. Les produits doivent avoir au moins deux niveaux de catégorie définis pour que la taxe soit correctement appliquée."
 
 #: includes/Commerce/Orders.php:433
 msgid "Order %1$s paid in %2$s"
@@ -345,23 +353,6 @@ msgstr "Impossible de récupérer les données d’accès à la page. %s"
 msgid "Page %s not authorized."
 msgstr "Page %s non autorisée."
 
-#: includes/AJAX.php:89
-msgid "Order ID is required."
-msgstr "L’ID de commande est nécessaire."
-
-#: includes/AJAX.php:93
-msgid "Cancel reason is required."
-msgstr "La raison de l’annulation est obligatoire."
-
-#. translators: Placeholders: %1$s - number of affected products, %2$s opening
-#. HTML <a> tag, %3$s - closing HTML </a> tag, %4$s - opening HTML <a> tag,
-#. %5$s - closing HTML </a> tag
-#: includes/Admin.php:1129
-msgid "%2$s%1$s product%3$s or some of its variations could not be updated to show in the Facebook catalog — %4$sFacebook Commerce Policies%5$s prohibit selling some product types (like virtual products). You may still advertise Virtual products on Facebook."
-msgid_plural "%2$s%1$s products%3$s or some of their variations could not be updated to show in the Facebook catalog — %4$sFacebook Commerce Policies%5$s prohibit selling some product types (like virtual products). You may still advertise Virtual products on Facebook."
-msgstr[0] "%2$s%1$s produit%3$s ou certaines de ses variantes n’ont pas pu être mis à jour pour s’afficher dans le catalogue Facebook - %4$sLes politiques commerciales de Facebook%5$s interdisent la vente de certains types de produits (comme les produits virtuels). Vous pouvez toujours annoncer des produits virtuels sur Facebook."
-msgstr[1] "%2$s%1$s produits%3$s ou certaines de leurs variantes n’ont pas pu être mis à jour pour s’afficher dans le catalogue Facebook - %4$sLes politiques commerciales de Facebook%5$s interdisent la vente de certains types de produits (comme les produits virtuels). Vous pouvez toujours annoncer des produits virtuels sur Facebook."
-
 #: includes/Admin.php:1269 includes/Admin.php:1411
 msgid "Sync and show in catalog"
 msgstr "Synchroniser et afficher dans le catalogue"
@@ -381,6 +372,15 @@ msgstr "Vous n’êtes pas autorisé à enregistrer ces réglages."
 #: includes/Admin/Settings.php:225
 msgid "Your settings have been saved."
 msgstr "Vos réglages ont été enregistrés."
+
+#. translators: Placeholders: %1$s - number of affected products, %2$s opening
+#. HTML <a> tag, %3$s - closing HTML </a> tag, %4$s - opening HTML <a> tag,
+#. %5$s - closing HTML </a> tag
+#: includes/Admin.php:1129
+msgid "%2$s%1$s product%3$s or some of its variations could not be updated to show in the Facebook catalog — %4$sFacebook Commerce Policies%5$s prohibit selling some product types (like virtual products). You may still advertise Virtual products on Facebook."
+msgid_plural "%2$s%1$s products%3$s or some of their variations could not be updated to show in the Facebook catalog — %4$sFacebook Commerce Policies%5$s prohibit selling some product types (like virtual products). You may still advertise Virtual products on Facebook."
+msgstr[0] "%2$s%1$s produit%3$s ou certaines de ses variantes n’ont pas pu être mis à jour pour s’afficher dans le catalogue Facebook - %4$sLes politiques commerciales de Facebook%5$s interdisent la vente de certains types de produits (comme les produits virtuels). Vous pouvez toujours annoncer des produits virtuels sur Facebook."
+msgstr[1] "%2$s%1$s produits%3$s ou certaines de leurs variantes n’ont pas pu être mis à jour pour s’afficher dans le catalogue Facebook - %4$sLes politiques commerciales de Facebook%5$s interdisent la vente de certains types de produits (comme les produits virtuels). Vous pouvez toujours annoncer des produits virtuels sur Facebook."
 
 #. translators: Placeholders: %s - user-friendly error message
 #: includes/Admin/Settings.php:232
@@ -476,11 +476,11 @@ msgstr "Une erreur est survenue lors de la tentative de synchronisation des prod
 
 #. translators: Placeholders %1$s - opening link HTML tag, %2$s - closing link
 #. HTML tag
-#: class-wc-facebookcommerce.php:283
+#: class-wc-facebookcommerce.php:284
 msgid "For your convenience, the Facebook for WooCommerce settings are now located under %1$sWooCommerce > Facebook%2$s."
 msgstr "Désormais les réglages de Facebook pour WooCommerce se trouvent sous %1$sWooCommerce > Facebook%2$s."
 
-#: class-wc-facebookcommerce.php:592
+#: class-wc-facebookcommerce.php:593
 msgid "Cannot create the API instance because the access token is missing."
 msgstr "Impossible de créer l’instance d’API car le jeton d’accès est manquant."
 
@@ -583,6 +583,10 @@ msgstr "Vos produits seront désormais resynchronisés sur Facebook, cela peut p
 msgid "There was an error trying to sync the products to Facebook."
 msgstr "Une erreur est survenue lors de l’essai de synchronisation des produits vers Facebook."
 
+#: includes/Admin/Settings_Screens/Product_Sync.php:103
+msgid "Something went wrong while uploading the product information, please try again."
+msgstr "Une erreur s’est produite lors du téléchargement des informations sur le produit, veuillez réessayer."
+
 #: includes/Admin/Settings_Screens/Product_Sync.php:98
 msgid ""
 "Facebook for WooCommerce automatically syncs your products on create/update. Are you sure you want to force product resync?\n"
@@ -593,18 +597,14 @@ msgstr ""
 "\n"
 "Cela va envoyer des requêtes pour tous les produits publiés et peut prendre un certain temps. Vous devez le faire si vos produits sont désynchronisés ou si certains de vos produits ne se sont pas synchronisés."
 
-#: includes/Admin/Settings_Screens/Product_Sync.php:103
-msgid "Something went wrong while uploading the product information, please try again."
-msgstr "Une erreur s’est produite lors du téléchargement des informations sur le produit, veuillez réessayer."
-
 #. translators: Placeholders %1$s - opening strong HTML tag, %2$s - closing
 #. strong HTML tag, %3$s - opening link HTML tag, %4$s - closing link HTML tag
-#: class-wc-facebookcommerce.php:303
+#: class-wc-facebookcommerce.php:304
 msgid "%1$sFacebook for WooCommerce is almost ready.%2$s To complete your configuration, %3$scomplete the setup steps%4$s."
 msgstr "%1$sFacebook pour WooCommerce est presque prêt.%2$s Pour terminer votre configuration, %3$sterminez les étapes de configuration%4$s."
 
 #. Plugin Name of the plugin
-#: class-wc-facebookcommerce.php:1035 facebook-commerce.php:226
+#: class-wc-facebookcommerce.php:1036 facebook-commerce.php:226
 #: includes/Admin.php:1597 includes/Admin/Settings.php:90
 #: includes/Admin/Settings.php:115
 msgid "Facebook for WooCommerce"
@@ -889,10 +889,10 @@ msgstr "Sauver"
 msgid "https://github.com/facebookincubator/facebook-for-woocommerce/"
 msgstr "https://github.com/facebookincubator/facebook-for-woocommerce/"
 
-#. Description of the plugin
-msgid "Grow your business on Facebook! Use this official plugin to help sell more of your products using Facebook. After completing the setup, you'll be ready to create ads that promote your products and you can also create a shop section on your Page where customers can browse your products on Facebook."
-msgstr "Développez votre activité sur Facebook ! Utilisez cette extension officielle pour vendre davantage de produits en utilisant Facebook. Une fois la configuration terminée, vous serez prêt à créer des publicités qui font la promotion de vos produits et vous pouvez également créer une section boutique sur votre page où les clients peuvent voir vos produits sur Facebook."
-
 #. Author URI of the plugin
 msgid "https://www.facebook.com/"
 msgstr "https://www.facebook.com/"
+
+#. Description of the plugin
+msgid "Grow your business on Facebook! Use this official plugin to help sell more of your products using Facebook. After completing the setup, you'll be ready to create ads that promote your products and you can also create a shop section on your Page where customers can browse your products on Facebook."
+msgstr "Développez votre activité sur Facebook ! Utilisez cette extension officielle pour vendre davantage de produits en utilisant Facebook. Une fois la configuration terminée, vous serez prêt à créer des publicités qui font la promotion de vos produits et vous pouvez également créer une section boutique sur votre page où les clients peuvent voir vos produits sur Facebook."
