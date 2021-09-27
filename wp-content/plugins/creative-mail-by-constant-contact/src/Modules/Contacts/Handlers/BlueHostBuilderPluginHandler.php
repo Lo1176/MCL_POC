@@ -51,7 +51,8 @@ class BlueHostBuilderPluginHandler extends BaseContactFormPluginHandler
     {
         try {
             global $wpdb;
-            $contact = $wpdb->get_row("SELECT * FROM wp_wb4wp_contacts WHERE contact_id = $contact_id");
+            $table = $wpdb->prefix . 'wb4wp_contacts';
+            $contact = $wpdb->get_row("SELECT * FROM $table WHERE contact_id = $contact_id");
             if (empty($contact->email_address)) {
                 return;
             }
@@ -81,7 +82,8 @@ class BlueHostBuilderPluginHandler extends BaseContactFormPluginHandler
             global $wpdb;
 
             $contactsArray = array();
-            $contacts = $wpdb->get_results($wpdb->prepare("SELECT * FROM wp_wb4wp_contacts"));
+            $table = $wpdb->prefix . 'wb4wp_contacts';
+            $contacts = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table"));
 
             //loop through the entries and extract necessary data
             foreach ($contacts as $contact) {

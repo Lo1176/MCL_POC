@@ -5,7 +5,7 @@ use CreativeMail\Helpers\OptionsHelper;
 
     $activated_plugins = CreativeMail::get_instance()->get_integration_manager()->get_active_plugins();
     $contact_sync_available = !empty(array_filter($activated_plugins, function ($item) {
-        return !$item->is_hidden_from_suggestions();
+        return !$item->is_hidden_from_active_list();
     }));
     $supported_plugin_available = !empty(CreativeMail::get_instance()->get_integration_manager()->get_supported_integrations(true))
 ?>

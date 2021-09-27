@@ -399,6 +399,7 @@ class EmailManager
                     'date_completed' => $order->get_date_completed() ? $order->get_date_completed()->getTimestamp() : 0,
                     'status' => $order->get_status(),
                     'currency' => $order->get_currency(),
+                    'currency_symbol' => get_woocommerce_currency_symbol($order->get_currency()),
                     'total' => wc_format_decimal($order->get_total(), $dp),
                     'subtotal' => wc_format_decimal($order->get_subtotal(), $dp),
                     'total_line_items_quantity' => $order->get_item_count(),

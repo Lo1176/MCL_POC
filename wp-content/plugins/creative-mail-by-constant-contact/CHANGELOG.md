@@ -1,6 +1,9 @@
 Changelog
 =========
 
+#### 1.4.6 - September 23 2021
+- Add phone number handling for Jetpack Forms. Bug fixes.
+
 #### 1.4.5 - September 2 2021
 - This version contains a fix for Creative mail customers who also use the Bluehost Websitebuilder functionality to build their WordPress site.
 

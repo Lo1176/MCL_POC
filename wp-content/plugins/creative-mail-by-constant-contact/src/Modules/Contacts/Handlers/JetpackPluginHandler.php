@@ -58,6 +58,12 @@ class JetpackPluginHandler extends BaseContactFormPluginHandler
         preg_match($headerRegex, $header, $regexMatches);
         $values = null;
 
+        if(count($regexMatches) == 0)
+        {
+            $headerRegexWithNoQuote = '/(?:^Reply-To: )(.*)(?: <)(.*)(?:>)/mi';
+            preg_match($headerRegexWithNoQuote, $header, $regexMatches);
+        }
+
         //Check if the name isn't an email address (happens when no name is supplied)
         $values["name"] = (!filter_var($regexMatches[1], FILTER_VALIDATE_EMAIL)) ? $regexMatches[1] : null;
         //Check if email is valid
@@ -73,6 +79,7 @@ class JetpackPluginHandler extends BaseContactFormPluginHandler
             $nameAndEmail = $this->GetNameAndEmailFromHeader($headers);
             $contact->email = $nameAndEmail["email"];
             $contact->name = $nameAndEmail["name"];
+            $contact->phone = $this->GetPhoneNumber($all_values);
 
             $contact->opt_in = boolval(isset($all_values['email_marketing_consent']) && $all_values['email_marketing_consent']);
 
@@ -193,5 +200,19 @@ class JetpackPluginHandler extends BaseContactFormPluginHandler
         }
 
         return null;
+    }
+
+    public function GetPhoneNumber($all_values)
+    {
+        $target_substring = "phone";
+        // Loop through every field of the form
+        foreach ($all_values as $key => $value) {
+
+            // If the name of the key contains the substring "phone" then the value will be the phone number
+            if (mb_strpos(strtolower($key), $target_substring) !== false)
+            {
+                return $value;
+            }
+        }
     }
 }

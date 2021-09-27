@@ -18,6 +18,7 @@ class Integration
     private $hide_from_suggestions;
     private $url;
     private $has_multiple_plugins;
+    private $hide_from_active_list;
 
     /**
      * Integration constructor.
@@ -29,8 +30,9 @@ class Integration
      * @param $hide_from_suggestions boolean If you want to hide this plugin from the suggestion list, set this to true
      * @param $url                   string The link to the plugin store, default will set it based on the slug
      * @param $has_multiple_plugins  boolean If true the plugin will search using the basename (some plugins have different directories depending on license)
+     * @param $hide_from_active_list boolean If you want to hide this plugin from the active plugins list, set this to true
      */
-    public function __construct($slug, $name, $class, $integration_handler, $hide_from_suggestions, $url = null, $has_multiple_plugins = false)
+    public function __construct($slug, $name, $class, $integration_handler, $hide_from_suggestions, $url = null, $has_multiple_plugins = false, $hide_from_active_list = false)
     {
         $this->slug = $slug;
         $this->name = $name;
@@ -39,6 +41,7 @@ class Integration
         $this->hide_from_suggestions = $hide_from_suggestions;
         $this->url = is_null($url) ? admin_url("plugin-install.php?tab=plugin-information&plugin=$slug&TB_iframe=true&width=772&height=1144") : $url;
         $this->has_multiple_plugins = $has_multiple_plugins;
+        $this->hide_from_active_list = $hide_from_active_list;
     }
 
     /**
@@ -89,6 +92,16 @@ class Integration
     public function is_hidden_from_suggestions()
     {
         return $this->hide_from_suggestions;
+    }
+
+    /**
+     * Gets if this integration should be hidden from the active plugins list
+     *
+     * @return bool
+     */
+    public function is_hidden_from_active_list()
+    {
+        return $this->hide_from_active_list;
     }
 
     /**

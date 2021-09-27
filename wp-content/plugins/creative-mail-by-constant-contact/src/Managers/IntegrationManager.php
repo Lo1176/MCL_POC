@@ -53,7 +53,7 @@ class IntegrationManager
             new Integration('caldera', 'Caldera Forms', 'caldera-forms/caldera-core.php', CalderaPluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=caldera-forms&TB_iframe=true&width=772&height=1144')),
             new Integration('bluehost', 'Bluehost Builder', "wb4wp-wordpress-plugin-bluehost-$environment/wb4wp-plugin.php", BlueHostBuilderPluginHandler::class, false, 'https://www.bluehost.com/'),
             new Integration('formidable', 'Formidable', 'formidable/formidable.php', FormidablePluginHandler::class, false, admin_url('plugin-install.php?tab=plugin-information&plugin=formidable&TB_iframe=true&width=772&height=1144')),
-            new Integration('creativemail', 'CreativeMail', 'creativ-email-wordpress-plugin/creative-mail-plugin.php', CreativeMailPluginHandler::class, true, null, true)
+            new Integration('creativemail', 'CreativeMail', 'creativ-email-wordpress-plugin/creative-mail-plugin.php', CreativeMailPluginHandler::class, true, null, true, true)
         );
     }
 
