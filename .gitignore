@@ -16,7 +16,7 @@ wp-content/backups-dup-lite/*
 *.sqlite
 
 #ignore images
-wp-content/uploads/
+wp-content/uploads/20*
 
 wp-config.php
 wp-content/advanced-cache.php
@@ -28,7 +28,7 @@ wp-content/upgrade/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 DNU*
-wp-content_DNU*
+# _DNU*
 /license.txt
 /readme.html
 /sitemap.xml
