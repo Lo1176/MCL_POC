@@ -66,11 +66,11 @@ svg {
 }
 
 /* card image */
-.card-img-top,
+/* .card-img-top,
 img {
   height: 100%;
   object-fit: cover;
-}
+} */
 
 /* font size @media  */
 @media (min-width: 1200px) {
