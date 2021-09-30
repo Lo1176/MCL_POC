@@ -1,0 +1,93 @@
+/* Add your styles here */
+/** custom bootsrap in chid/css/lib/
+
+/** colors-start **/
+/* :root {
+  --gray-100: pink !important;
+  --bs-blue: orange !important;
+  --blue: orange !important;
+} */
+/** colors-end **/
+
+/* .btn { font-size: 80px } */
+
+/***** body *****/
+/* body {
+  background-color: #FEFEFE !important;
+} */
+/***** body fin *****/
+
+/* span.badge {
+   padding: 0.35em 0.65em;
+  line-height: 1.5;
+  border-radius: 50%;
+} */
+
+/* accueil */
+
+.page-id-177 .entry-title {
+  display: none;
+}
+
+/* accueil fin */
+
+.navbar-brand img,
+svg {
+  width: 32px;
+}
+
+/* Home page template  */
+/* header */
+.wp-block-cover,
+.wp-block-cover-image {
+  height: 75vh;
+}
+
+/* add css for home page */
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* card image */
+/* .card-img-top,
+img {
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* font size @media  */
+@media (min-width: 1200px) {
+  .card-body h2 {
+    font-size: 1.5rem;
+    /* color: red; */
+  }
+}
+
+/* to have  a left sidebar-1 */
+.site-main > .row {
+  display: flex;
+  flex-direction: row-reverse;
+  /* color: red; */
+}
+
+/* filter by price color */
+.wc-block-components-price-slider__range-input-progress {
+  --range-color: #0d6efd;
+}
