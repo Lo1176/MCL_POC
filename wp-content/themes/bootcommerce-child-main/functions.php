@@ -2,7 +2,8 @@
 
 // style and scripts
 add_action('wp_enqueue_scripts', 'bootscore_child_enqueue_styles');
-function bootscore_child_enqueue_styles() {
+function bootscore_child_enqueue_styles()
+{
 
   // style.css
   wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
@@ -19,20 +20,18 @@ function bootscore_child_enqueue_styles() {
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
 // add your custom functions bellow //
-##### Menu #####
-/* 
-* add Custom Navigation Menu
-*/
 
+##### start-Menu #####
+// Custom-Navigation-Menu
 function mcl_custom_new_menu()
 {
   register_nav_menu('my-navigation-menu', __('Navigation menu'));
 }
 add_action('init', 'mcl_custom_new_menu');
+// Custom-Navigation-Menu  END
+##### end-Menu #####
 
-/* end Custom Navigation Menu*/
-
-##### CONTENT-PRODUCT #####
+##### start-CONTENT-PRODUCT #####
 // Archives pages: Additional button linked to the product
 // add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
 // function loop_continue_button()
@@ -47,9 +46,10 @@ add_action('init', 'mcl_custom_new_menu');
 //     }
 // }
 add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
+##### end-CONTENT-PRODUCT #####
 
-##### CONTENT-SINGLE-PRODUCT #####
-/* Single product pages: Additional button linked to 3D website */
+##### start-CONTENT-SINGLE-PRODUCT #####
+// Single product pages: Additional button linked to 3D website
 add_action('woocommerce_single_product_summary', 'product_additional_3D_button', 1);
 function product_additional_3D_button()
 {
@@ -142,6 +142,8 @@ function my_3D_func($data)
   );
   return $api3dResponse;
 }
+##### end-CONTENT-SINGLE-PRODUCT #####
+
 
 // log errors
 if (!function_exists('write_log')) {
@@ -158,7 +160,7 @@ if (!function_exists('write_log')) {
   }
 }
 
-/* Ne pas afficher l'UGS sur vos pages produits (content-single-product) */
+// Ne pas afficher l'UGS sur vos pages produits (content-single-product)
 add_filter('wc_product_sku_enabled', 'wpm_remove_sku');
 
 function wpm_remove_sku($enabled)
@@ -182,9 +184,8 @@ function remove_breadcrumbs()
   }
 }
 
-/**
- * to prevent break links between localhost and http
- */
+//to prevent break links between localhost and http
+
 function homeURLshortcode()
 {
   return home_url();
@@ -192,9 +193,8 @@ function homeURLshortcode()
 add_shortcode('homeurl', 'homeURLshortcode');
 
 // ############ A VERIFIER CA NE SEMBLE PAS MARCHER ###############
-/**
- * Change number or products per row to 3
- */
+// Change number or products per row to 3
+
 add_filter('loop_shop_columns', 'loop_columns', 999);
 if (!function_exists('loop_columns')) {
   function loop_columns()
@@ -204,9 +204,8 @@ if (!function_exists('loop_columns')) {
 }
 
 
-/**
- * Change number of products that are displayed per page (shop page)
- */
+// Change number of products that are displayed per page (shop page)
+
 add_filter('loop_shop_per_page', 'new_loop_shop_per_page', 20);
 
 function new_loop_shop_per_page($cols)
@@ -216,3 +215,12 @@ function new_loop_shop_per_page($cols)
   $cols = 9;
   return $cols;
 }
+
+// Autoriser les fichiers SVG
+function wpc_mime_types($mimes)
+{
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'wpc_mime_types');
+/* rajouter <?xml version="1.0" encoding="utf-8"?> au début du svg */
