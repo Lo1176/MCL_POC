@@ -39,7 +39,7 @@
 
         <header id="masthead" class="site-header">
 
-            <div class=""> <!-- differences -->
+            <div class="">
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-light navbar-light">
 
