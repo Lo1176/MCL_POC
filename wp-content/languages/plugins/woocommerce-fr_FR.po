@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-26 17:08:35+0000\n"
+"PO-Revision-Date: 2021-09-29 12:30:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -190,6 +190,15 @@ msgstr "Odessa Oblast"
 #: i18n/states.php:1613
 msgid "Poltava Oblast"
 msgstr "Poltava Oblast"
+
+#. translators: 1: opening analytics docs link tag. 2: closing link tag
+#: packages/woocommerce-admin/src/Notes/UnsecuredReportFiles.php:37
+msgid "Files that may contain %1$sstore analytics%2$s reports were found in your uploads directory - we recommend assessing and deleting any such files."
+msgstr "Nous avons trouvé des fichiers qui contiennent des rapports %1$sd’analyse de votre boutique%2$s dans votre répertoire de téléchargements. Nous vous recommandons de passer en revue et supprimer ces fichiers."
+
+#: packages/woocommerce-admin/src/Notes/UnsecuredReportFiles.php:33
+msgid "Potentially unsecured files were found in your uploads directory"
+msgstr "Nous avons trouvé des fichiers potentiellement à risque dans votre répertoire de téléchargements"
 
 #: src/Internal/ProductAttributesLookup/LookupDataStore.php:106
 msgid "Update the table directly upon product changes, instead of scheduling a deferred update."
@@ -677,7 +686,7 @@ msgstr "Nice one; vous avez créé votre boutique WooCommerce ! Il est maintena
 #. translators: %s: is referring to the plugin's name.
 #: packages/woocommerce-admin/src/Loader.php:128
 msgid "You have the %s plugin activated but it is not being used."
-msgstr "Vous avez activé le plugin %s, mais vous ne l’utilisez pas."
+msgstr "Vous avez activé l’extension %s, mais vous ne l’utilisez pas."
 
 #: packages/woocommerce-admin/src/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php:201
 msgid "Enable PayU’s exclusive plugin for WooCommerce to start accepting payments in 100+ payment methods available in India including credit cards, debit cards, UPI, & more!"
@@ -21734,10 +21743,6 @@ msgstr "Très mauvais"
 msgid "Your review is awaiting approval"
 msgstr "Votre avis est en attente de validation"
 
-#: templates/single-product/related.php:27
-msgid "Related products"
-msgstr "Produits apparentés"
-
 #: templates/order/order-details.php:45
 msgid "Order details"
 msgstr "Détails de la commande"
@@ -21835,6 +21840,10 @@ msgstr "Présent dans l’e-mail de confirmation de commande."
 #: templates/order/form-tracking.php:31
 msgid "Track"
 msgstr "Suivre"
+
+#: templates/single-product/related.php:27
+msgid "Related products"
+msgstr "Produits similaires"
 
 #: includes/shortcodes/class-wc-shortcode-checkout.php:92
 #: includes/shortcodes/class-wc-shortcode-checkout.php:215
@@ -31022,6 +31031,12 @@ msgstr "Projet Github"
 msgid "WordPress.org project"
 msgstr "Projet WordPress.org"
 
+#. translators: 1: GitHub issues URL 2: GitHub contribution guide URL 3: System
+#. status report URL
+#: includes/admin/class-wc-admin-help.php:68
+msgid "If you find a bug within WooCommerce core you can create a ticket via <a href=\"%1$s\">Github issues</a>. Ensure you read the <a href=\"%2$s\">contribution guide</a> prior to submitting your report. To help us solve your issue, please be as descriptive as possible and include your <a href=\"%3$s\">system status report</a>."
+msgstr "Si vous trouvez un bug dans le noyau WooCommerce, vous pouvez créer un ticket sur <a href=\"%1$s\">Github</a>. Assurez-vous de lire le <a href=\"%2$s\">guide de contribution</a> avant de soumettre votre compte rendu. Pour nous aider à résoudre votre problème, veuillez être le plus descriptif possible et inclure votre <a href=\"%3$s\">rapport système</a>."
+
 #. translators: %s: Documentation URL
 #: includes/admin/class-wc-admin-help.php:47
 msgid "Should you need help understanding, using, or extending WooCommerce, <a href=\"%s\">please read our documentation</a>. You will find all kinds of resources including snippets, tutorials and much more."
@@ -31052,12 +31067,6 @@ msgstr "État de WooCommerce"
 #: includes/admin/class-wc-admin-attributes.php:455
 msgid "Add attribute"
 msgstr "Ajouter un attribut"
-
-#. translators: 1: GitHub issues URL 2: GitHub contribution guide URL 3: System
-#. status report URL
-#: includes/admin/class-wc-admin-help.php:68
-msgid "If you find a bug within WooCommerce core you can create a ticket via <a href=\"%1$s\">Github issues</a>. Ensure you read the <a href=\"%2$s\">contribution guide</a> prior to submitting your report. To help us solve your issue, please be as descriptive as possible and include your <a href=\"%3$s\">system status report</a>."
-msgstr "Si vous trouvez un bug dans le noyau WooCommerce, vous pouvez créer un ticket sur <a href=\"%1$s\">Github</a>. Assurez-vous de lire le <a href=\"%2$s\">guide de contribution</a> avant de soumettre votre compte rendu. Pour nous aider à résoudre votre problème, veuillez être le plus descriptif possible et inclure votre <a href=\"%3$s\">rapport système</a>."
 
 #: includes/admin/class-wc-admin-attributes.php:387
 #: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:247
