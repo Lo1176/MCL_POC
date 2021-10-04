@@ -224,3 +224,12 @@ function wpc_mime_types($mimes)
 }
 add_filter('upload_mimes', 'wpc_mime_types');
 /* rajouter <?xml version="1.0" encoding="utf-8"?> au début du svg */
+
+// Verifier si la page est parent/child/grandchild en utilisant le slug
+function is_tree( $page_id, $use_slug = false ) {
+
+  if ( $use_slog === true && !is_string( $page_id )) {
+    # code...
+  }
+
+}
