@@ -18,9 +18,11 @@ get_header();
 
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
       <header class="entry-header featured-full-width-img height-50 bg-dark text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
-        <div class="container entry-header h-100 d-flex align-items-end pb-3">
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-        </div>
+      <!-- no title tbe -->
+      <!-- <div class="container entry-header h-100 d-flex align-items-end pb-3">
+        <h1 class="entry-title"><?php #the_title(); ?></h1>
+      </div> -->
+      <!-- no title tbe END -->
       </header>
 
       <div class="container pb-5">
