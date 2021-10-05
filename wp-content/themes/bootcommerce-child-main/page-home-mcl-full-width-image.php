@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Full Width Image
+ * Template Name: Home MCL
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -29,10 +29,14 @@ get_header();
 
         <!-- Hook to add something nice -->
         <?php bs_after_primary(); ?>
+        <!-- nothing in there for the moment , change it in function.php -->
 
         <div class="entry-content">
+          <!-- all the content for wordpress 'modifier la page' -->
           <?php the_content(); ?>
         </div>
+        <h2 class="title-separation">Nos actualités</h2>
+        <?php echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
 
         <footer class="entry-footer">
 
