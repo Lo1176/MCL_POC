@@ -17,12 +17,12 @@ get_header();
     <main id="main" class="site-main">
 
       <header class="entry-header featured-full-width-img height-50 bg-dark text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
-      <div class="container entry-header h-100 d-flex justify-content-center pb-3">
-        <h1 class="text-light bg-secondary p-4 entry-title"><?php the_title(); ?></h1>
-      </div>
-      <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-      <!-- no title tbe -->
-      <!-- no title tbe END -->
+        <div class="container entry-header h-100 d-flex justify-content-center pb-3">
+          <h1 class="text-light bg-secondary p-4 entry-title"><?php the_title(); ?></h1>
+        </div>
+        <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
+        <!-- no title tbe -->
+        <!-- no title tbe END -->
       </header>
 
       <div class="container pb-5">
@@ -34,19 +34,23 @@ get_header();
         <div class="entry-content">
           <!-- all the content for wordpress 'modifier la page' -->
           <?php the_content(); ?>
-        <div class="d-flex justify-content-center">
-        <h2 class="title-separation">Nos actualités</h2>
-        </div>
+          <!-- all the content for wordpress 'modifier la page' END -->
 
-        <?php echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
+          <!-- actualités -->
+          <div class="d-flex justify-content-center">
+            <h2 class="title-separation">  Nos actualités  </h2>
+          </div>
+          
+          <?php echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
+          <!-- actualités END -->
+          
+          <footer class="entry-footer">
 
-        <footer class="entry-footer">
+          </footer>
 
-        </footer>
+          <?php comments_template(); ?>
 
-        <?php comments_template(); ?>
-
-      </div><!-- container -->
+        </div><!-- container -->
 
     </main><!-- #main -->
 
