@@ -167,20 +167,8 @@ class ScheduledTask extends Model {
       ->findOne() ?: null;
   }
 
-  public static function findDueByType($type, $limit = null) {
-    return self::findByTypeAndStatus($type, ScheduledTask::STATUS_SCHEDULED, $limit);
-  }
-
-  public static function findRunningByType($type, $limit = null) {
-    return self::findByTypeAndStatus($type, null, $limit);
-  }
-
   public static function findFutureScheduledByType($type, $limit = null) {
     return self::findByTypeAndStatus($type, ScheduledTask::STATUS_SCHEDULED, $limit, true);
-  }
-
-  public static function findCompletedByType($type, $limit = null) {
-    return self::findByTypeAndStatus($type, ScheduledTask::STATUS_COMPLETED, $limit);
   }
 
   private static function findByTypeAndStatus($type, $status, $limit = null, $future = false) {
@@ -205,5 +193,17 @@ class ScheduledTask extends Model {
     }
 
     return $query->findMany();
+  }
+
+  // temporary function to convert an ScheduledTaskEntity object to ScheduledTask while we don't migrate the rest of
+  // the code in this class to use Doctrine entities
+  public static function getFromDoctrineEntity(ScheduledTaskEntity $doctrineTask): ?ScheduledTask {
+    $parisTask = self::findOne($doctrineTask->getId());
+
+    if (!$parisTask instanceof ScheduledTask) {
+      return null;
+    }
+
+    return $parisTask;
   }
 }

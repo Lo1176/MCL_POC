@@ -5,7 +5,9 @@ namespace MailPoet\Cron;
 if (!defined('ABSPATH')) exit;
 
 
+use MailPoet\Entities\ScheduledTaskEntity;
 use MailPoet\Models\ScheduledTask;
+use MailPoet\Newsletter\Sending\ScheduledTasksRepository;
 use MailPoet\WP\Functions as WPFunctions;
 use MailPoetVendor\Carbon\Carbon;
 
@@ -26,15 +28,20 @@ class CronWorkerRunner {
   /** @var WPFunctions */
   private $wp;
 
+  /** @var ScheduledTasksRepository */
+  private $scheduledTasksRepository;
+
   public function __construct(
     CronHelper $cronHelper,
     CronWorkerScheduler $cronWorkerScheduler,
-    WPFunctions $wp
+    WPFunctions $wp,
+    ScheduledTasksRepository $scheduledTasksRepository
   ) {
     $this->timer = microtime(true);
     $this->cronHelper = $cronHelper;
     $this->cronWorkerScheduler = $cronWorkerScheduler;
     $this->wp = $wp;
+    $this->scheduledTasksRepository = $scheduledTasksRepository;
   }
 
   public function run(CronWorkerInterface $worker) {
@@ -45,7 +52,8 @@ class CronWorkerRunner {
 
     if (!$worker->checkProcessingRequirements()) {
       foreach (array_merge($dueTasks, $runningTasks) as $task) {
-        $task->delete();
+        $this->scheduledTasksRepository->remove($task);
+        $this->scheduledTasksRepository->flush();
       }
       return false;
     }
@@ -59,17 +67,24 @@ class CronWorkerRunner {
       return false;
     }
 
-    $task = null;
     try {
-      foreach ($dueTasks as $i => $task) {
-        $this->prepareTask($worker, $task);
+      $parisTask = null;
+
+      foreach ($dueTasks as $task) {
+        $parisTask = ScheduledTask::getFromDoctrineEntity($task);
+        if ($parisTask) {
+          $this->prepareTask($worker, $parisTask);
+        }
       }
-      foreach ($runningTasks as $i => $task) {
-        $this->processTask($worker, $task);
+      foreach ($runningTasks as $task) {
+        $parisTask = ScheduledTask::getFromDoctrineEntity($task);
+        if ($parisTask) {
+          $this->processTask($worker, $parisTask);
+        }
       }
     } catch (\Exception $e) {
-      if ($task && $e->getCode() !== CronHelper::DAEMON_EXECUTION_LIMIT_REACHED) {
-        $task->rescheduleProgressively();
+      if ($parisTask && $e->getCode() !== CronHelper::DAEMON_EXECUTION_LIMIT_REACHED) {
+        $parisTask->rescheduleProgressively();
       }
       throw $e;
     }
@@ -78,21 +93,24 @@ class CronWorkerRunner {
   }
 
   private function getDueTasks(CronWorkerInterface $worker) {
-    return ScheduledTask::findDueByType($worker->getTaskType(), self::TASK_BATCH_SIZE);
+    return $this->scheduledTasksRepository->findDueByType($worker->getTaskType(), self::TASK_BATCH_SIZE);
   }
 
   private function getRunningTasks(CronWorkerInterface $worker) {
-    return ScheduledTask::findRunningByType($worker->getTaskType(), self::TASK_BATCH_SIZE);
+    return $this->scheduledTasksRepository->findRunningByType($worker->getTaskType(), self::TASK_BATCH_SIZE);
   }
 
   private function prepareTask(CronWorkerInterface $worker, ScheduledTask $task) {
     // abort if execution limit is reached
     $this->cronHelper->enforceExecutionLimit($this->timer);
 
-    $prepareCompleted = $worker->prepareTaskStrategy($task, $this->timer);
-    if ($prepareCompleted) {
-      $task->status = null;
-      $task->save();
+    $doctrineTask = $this->convertTaskClassToDoctrine($task);
+    if ($doctrineTask) {
+      $prepareCompleted = $worker->prepareTaskStrategy($doctrineTask, $this->timer);
+      if ($prepareCompleted) {
+        $task->status = null;
+        $task->save();
+      }
     }
   }
 
@@ -168,5 +186,17 @@ class CronWorkerRunner {
     $task->processedAt = $this->wp->currentTime('mysql');
     $task->status = ScheduledTask::STATUS_COMPLETED;
     $task->save();
+  }
+
+  // temporary function to convert an ScheduledTask object to ScheduledTaskEntity while we don't migrate the rest of
+  // the code in this class to use Doctrine entities
+  private function convertTaskClassToDoctrine(ScheduledTask $parisTask): ?ScheduledTaskEntity {
+    $doctrineTask = $this->scheduledTasksRepository->findOneById($parisTask->id);
+
+    if (!$doctrineTask instanceof ScheduledTaskEntity) {
+      return null;
+    }
+
+    return $doctrineTask;
   }
 }

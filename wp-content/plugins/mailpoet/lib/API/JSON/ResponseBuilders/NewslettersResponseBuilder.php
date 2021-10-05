@@ -163,6 +163,13 @@ class NewslettersResponseBuilder {
     } elseif ($newsletter->getType() === NewsletterEntity::TYPE_NOTIFICATION_HISTORY) {
       $data['segments'] = $this->buildSegments($newsletter);
       $data['queue'] = $latestQueue ? $this->buildQueue($latestQueue) : false; // false for BC
+    } elseif ($newsletter->getType() === NewsletterEntity::TYPE_RE_ENGAGEMENT) {
+      $data['segments'] = $this->buildSegments($newsletter);
+      $data['options'] = $this->buildOptions($newsletter);
+      $data['total_sent'] = $statistics ? $statistics->getTotalSentCount() : 0;
+      $data['total_scheduled'] = SendingQueue::findTaskByNewsletterId($newsletter->getId())
+        ->where('tasks.status', SendingQueue::STATUS_SCHEDULED)
+        ->count();
     }
     return $data;
   }

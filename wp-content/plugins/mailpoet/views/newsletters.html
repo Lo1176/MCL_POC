@@ -88,6 +88,7 @@
     'stepNameTypeWelcome': __('Welcome Email'),
     'stepNameTypeNotification': __('Post Notification'),
     'stepNameTypeWooCommerce': __('WooCommerce'),
+    'stepNameTypeReEngagement': __('Re-engagement'),
     'stepNameTemplate': __('Template'),
     'stepNameDesign': __('Design'),
     'stepNameSend': __('Send'),
@@ -95,11 +96,17 @@
 
     'dismissButton': __('Dismiss this notice.'),
 
+    'tabReEngagementTitle': __('Re-engagement Email'),
     'tabStandardTitle': __('Newsletters'),
     'tabWelcomeTitle': __('Welcome Emails'),
     'tabNotificationTitle': __('Post Notifications'),
     'tabWoocommerceTitle': __('WooCommerce Emails'),
+    'tabReEngagementTitle': __('Re-engagement Email'),
     'tabBlankTitle': __('Simple text'),
+
+    'reEngagementTextPre': __('After no activity for'),
+    'reEngagementAterTimeNumberPlaceholder': __('count'),
+    'reEngagementEmailWarning': __('Disengaged subscribers will [link]become inactive[/link] after {$months} months and won’t receive this email. Please select a shorter period.'),
 
     'searchLabel': __('Search'),
     'loadingItems': __('Loading emails...'),
@@ -213,6 +220,7 @@
     'learnMore': __('Learn more'),
     'regularNewsletterTypeTitle': __('Newsletter'),
     'regularNewsletterTypeDescription': __('Send a newsletter with images, buttons, dividers, and social bookmarks. Or, just send a basic text email.'),
+    'reEngagementDescription': __('Automatically email and win back subscribers who have recently lost interest and stopped engaging with your emails.'),
     'create': __('Create'),
     'wooCommerceCustomizerTypeTitle': __('WooCommerce Emails Customizer'),
     'wooCommerceCustomizerTypeDescription': __("Customize the template used for your WooCommerce emails using MailPoet's editor. Example of WooCommerce email: Order processing notification, Order failed notification, ..."),
@@ -250,7 +258,14 @@
     'last': _x('last', 'e.g. monthly every last Monday'),
     'next': _x('Next', 'Button label: Next step'),
 
+    'reEngagementSettings': _x('{$count} {$frequency} after inactivity', 'example: "5 months after inactivity"'),
+    'reEngagementFrequencyMonth': _x('month', 'month in the sentence "1 month after inactivity"'),
+    'reEngagementFrequencyMonths': _x('months', 'months in the sentence "5 months after inactivity"'),
+    'reEngagementFrequencyWeek': _x('week', 'week in the sentence "1 week after inactivity"'),
+    'reEngagementFrequencyWeeks': _x('weeks', 'weeks in the sentence "5 weeks after inactivity"'),
+
     'selectEventToSendWelcomeEmail': __('When to send this welcome email?'),
+    'selectEventToSendReEngagementEmail': __('When to send this re-engagement email?'),
 
     'onSubscriptionToList': __('When someone subscribes to the list...'),
     'onWPUserRegistration': __('When a new WordPress user is added to your site...'),
@@ -300,6 +315,8 @@
     'newsletterInvalidFromAddress': _x('You need to authorize the email address <i>%$1s</i> to be able to send with it. [link]Authorize my email address[/link]', 'Users need to confirm that they own the email address they want to use to send their newsletter'),
     'welcomeEmailActivated': __('Your Welcome Email is now activated!'),
     'welcomeEmailActivationFailed': __('Your Welcome Email could not be activated, please check the settings.'),
+    'reEngagementEmailActivated': __('Your ReEngagement Email is now activated!'),
+    'reEngagementEmailActivationFailed': __('Your ReEngagement Email could not be activated, please check the settings.'),
     'postNotificationActivated': __('Your post notification is now active!'),
     'postNotificationActivationFailed': __('Your Post Notification could not be activated, check the settings.'),
     'welcomeEventSegment': __('Sent when someone subscribes to the list: "%$1s".'),

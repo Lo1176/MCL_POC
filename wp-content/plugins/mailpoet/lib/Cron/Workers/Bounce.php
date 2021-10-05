@@ -12,7 +12,6 @@ use MailPoet\Entities\SubscriberEntity;
 use MailPoet\Mailer\Mailer;
 use MailPoet\Models\ScheduledTask;
 use MailPoet\Models\ScheduledTaskSubscriber;
-use MailPoet\Newsletter\Sending\ScheduledTasksRepository;
 use MailPoet\Newsletter\Sending\SendingQueuesRepository;
 use MailPoet\Services\Bridge;
 use MailPoet\Services\Bridge\API;
@@ -43,9 +42,6 @@ class Bounce extends SimpleWorker {
   /** @var SubscribersRepository */
   private $subscribersRepository;
 
-  /** @var ScheduledTasksRepository */
-  private $scheduledTasksRepository;
-
   /** @var SendingQueuesRepository */
   private $sendingQueuesRepository;
 
@@ -55,7 +51,6 @@ class Bounce extends SimpleWorker {
   public function __construct(
     SettingsController $settings,
     SubscribersRepository $subscribersRepository,
-    ScheduledTasksRepository $scheduledTasksRepository,
     SendingQueuesRepository $sendingQueuesRepository,
     StatisticsBouncesRepository $statisticsBouncesRepository,
     Bridge $bridge
@@ -64,7 +59,6 @@ class Bounce extends SimpleWorker {
     $this->bridge = $bridge;
     parent::__construct();
     $this->subscribersRepository = $subscribersRepository;
-    $this->scheduledTasksRepository = $scheduledTasksRepository;
     $this->sendingQueuesRepository = $sendingQueuesRepository;
     $this->statisticsBouncesRepository = $statisticsBouncesRepository;
   }
@@ -79,11 +73,11 @@ class Bounce extends SimpleWorker {
     return $this->bridge->isMailpoetSendingServiceEnabled();
   }
 
-  public function prepareTaskStrategy(ScheduledTask $task, $timer) {
+  public function prepareTaskStrategy(ScheduledTaskEntity $task, $timer) {
     BounceTask::prepareSubscribers($task);
 
-    if (!ScheduledTaskSubscriber::getUnprocessedCount($task->id)) {
-      ScheduledTaskSubscriber::where('task_id', $task->id)->deleteMany();
+    if (!ScheduledTaskSubscriber::getUnprocessedCount($task->getId())) {
+      ScheduledTaskSubscriber::where('task_id', $task->getId())->deleteMany();
       return false;
     }
     return true;
