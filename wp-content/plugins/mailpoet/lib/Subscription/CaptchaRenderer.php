@@ -5,9 +5,8 @@ namespace MailPoet\Subscription;
 if (!defined('ABSPATH')) exit;
 
 
-use MailPoet\Entities\FormEntity;
-use MailPoet\Form\FormsRepository;
 use MailPoet\Form\Renderer as FormRenderer;
+use MailPoet\Models\Form as FormModel;
 use MailPoet\Util\Url as UrlHelper;
 use MailPoet\WP\Functions as WPFunctions;
 
@@ -27,15 +26,11 @@ class CaptchaRenderer {
   /** @var FormRenderer */
   private $formRenderer;
 
-  /** @var FormsRepository */
-  private $formsRepository;
-
   public function __construct(
     UrlHelper $urlHelper,
     WPFunctions $wp,
     CaptchaSession $captchaSession,
     SubscriptionUrlFactory $subscriptionUrlFactory,
-    FormsRepository $formsRepository,
     FormRenderer $formRenderer
   ) {
     $this->urlHelper = $urlHelper;
@@ -43,7 +38,6 @@ class CaptchaRenderer {
     $this->captchaSession = $captchaSession;
     $this->subscriptionUrlFactory = $subscriptionUrlFactory;
     $this->formRenderer = $formRenderer;
-    $this->formsRepository = $formsRepository;
   }
 
   public function getCaptchaPageTitle() {
@@ -91,10 +85,11 @@ class CaptchaRenderer {
       $formId = (int)$_GET['mailpoet_error'];
     }
 
-    $formModel = $this->formsRepository->findOneById($formId);
-    if (!$formModel instanceof FormEntity) {
+    $formModel = FormModel::findOne($formId);
+    if (!$formModel instanceof FormModel) {
       return false;
     }
+    $formModel = $formModel->asArray();
 
     if ($showSuccessMessage) {
       // Display a success message in a no-JS flow
@@ -131,13 +126,12 @@ class CaptchaRenderer {
   }
 
   private function renderFormMessages(
-    FormEntity $formModel,
+    array $formModel,
     $showSuccessMessage = false,
     $showErrorMessage = false
   ) {
-    $settings = $formModel->getSettings() ?? [];
     $formHtml = '<div class="mailpoet_message">';
-    $formHtml .= '<p class="mailpoet_validate_success" ' . ($showSuccessMessage ? '' : ' style="display:none;"') . '>' . $settings['success_message'] . '</p>';
+    $formHtml .= '<p class="mailpoet_validate_success" ' . ($showSuccessMessage ? '' : ' style="display:none;"') . '>' . $formModel['settings']['success_message'] . '</p>';
     $formHtml .= '<p class="mailpoet_validate_error" ' . ($showErrorMessage ? '' : ' style="display:none;"') . '>' . $this->wp->__('The characters you entered did not match the CAPTCHA image. Please try again with this new image.', 'mailpoet') . '</p>';
     $formHtml .= '</div>';
     return $formHtml;

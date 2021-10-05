@@ -54,9 +54,7 @@ class Products extends \Google\Service\Resource
    * @param string $productId The REST ID of the product.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string feedId The Content API Supplemental Feed ID. If present
-   * then product deletion applies to the data in a supplemental feed. If absent,
-   * entire product will be deleted.
+   * @opt_param string feedId The Content API Supplemental Feed ID.
    */
   public function delete($merchantId, $productId, $optParams = [])
   {
@@ -89,8 +87,7 @@ class Products extends \Google\Service\Resource
    * @param Product $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string feedId The Content API Supplemental Feed ID. If present
-   * then product insertion applies to the data in a supplemental feed.
+   * @opt_param string feedId The Content API Supplemental Feed ID.
    * @return Product
    */
   public function insert($merchantId, Product $postBody, $optParams = [])

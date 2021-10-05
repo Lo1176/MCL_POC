@@ -50,7 +50,6 @@ class ShoppingContent extends \Google\Service
   public $csses;
   public $datafeeds;
   public $datafeedstatuses;
-  public $freelistingsprogram;
   public $liasettings;
   public $localinventory;
   public $orderinvoices;
@@ -75,7 +74,6 @@ class ShoppingContent extends \Google\Service
   public $settlementreports;
   public $settlementtransactions;
   public $shippingsettings;
-  public $shoppingadsprogram;
 
   /**
    * Constructs the internal representation of the ShoppingContent service.
@@ -206,10 +204,6 @@ class ShoppingContent extends \Google\Service
                   'location' => 'query',
                   'type' => 'integer',
                 ],
-                'name' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -242,21 +236,6 @@ class ShoppingContent extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'requestphoneverification' => [
-              'path' => '{merchantId}/accounts/{accountId}/requestphoneverification',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'merchantId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'accountId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'update' => [
               'path' => '{merchantId}/accounts/{accountId}',
               'httpMethod' => 'PUT',
@@ -274,21 +253,6 @@ class ShoppingContent extends \Google\Service
               ],
             ],'updatelabels' => [
               'path' => '{merchantId}/accounts/{accountId}/updatelabels',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'merchantId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'accountId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'verifyphonenumber' => [
-              'path' => '{merchantId}/accounts/{accountId}/verifyphonenumber',
               'httpMethod' => 'POST',
               'parameters' => [
                 'merchantId' => [
@@ -501,10 +465,6 @@ class ShoppingContent extends \Google\Service
                 'maxResults' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ],
-                'name' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
                 'pageToken' => [
                   'location' => 'query',
@@ -982,36 +942,6 @@ class ShoppingContent extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->freelistingsprogram = new ShoppingContent\Resource\Freelistingsprogram(
-        $this,
-        $this->serviceName,
-        'freelistingsprogram',
-        [
-          'methods' => [
-            'get' => [
-              'path' => '{merchantId}/freelistingsprogram',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'merchantId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'requestreview' => [
-              'path' => '{merchantId}/freelistingsprogram/requestreview',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'merchantId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],
@@ -2863,36 +2793,6 @@ class ShoppingContent extends \Google\Service
                   'required' => true,
                 ],
                 'accountId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->shoppingadsprogram = new ShoppingContent\Resource\Shoppingadsprogram(
-        $this,
-        $this->serviceName,
-        'shoppingadsprogram',
-        [
-          'methods' => [
-            'get' => [
-              'path' => '{merchantId}/shoppingadsprogram',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'merchantId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'requestreview' => [
-              'path' => '{merchantId}/shoppingadsprogram/requestreview',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'merchantId' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

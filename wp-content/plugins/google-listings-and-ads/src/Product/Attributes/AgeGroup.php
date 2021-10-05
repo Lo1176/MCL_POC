@@ -3,8 +3,6 @@ declare( strict_types=1 );
 
 namespace Automattic\WooCommerce\GoogleListingsAndAds\Product\Attributes;
 
-use Automattic\WooCommerce\GoogleListingsAndAds\Admin\Product\Attributes\Input\AgeGroupInput;
-
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -25,6 +23,24 @@ class AgeGroup extends AbstractAttribute implements WithValueOptionsInterface {
 	 */
 	public static function get_id(): string {
 		return 'ageGroup';
+	}
+
+	/**
+	 * Returns a name for the attribute. Used in attribute's input.
+	 *
+	 * @return string
+	 */
+	public static function get_name(): string {
+		return __( 'Age Group', 'google-listings-and-ads' );
+	}
+
+	/**
+	 * Returns a short description for the attribute. Used in attribute's input.
+	 *
+	 * @return string
+	 */
+	public static function get_description(): string {
+		return __( 'Target age group of the item.', 'google-listings-and-ads' );
 	}
 
 	/**
@@ -51,19 +67,6 @@ class AgeGroup extends AbstractAttribute implements WithValueOptionsInterface {
 	 */
 	public static function get_applicable_product_types(): array {
 		return [ 'simple', 'variation' ];
-	}
-
-	/**
-	 * Return the attribute's input class. Must be an instance of `AttributeInputInterface`.
-	 *
-	 * @return string
-	 *
-	 * @see AttributeInputInterface
-	 *
-	 * @since 1.5.0
-	 */
-	public static function get_input_type(): string {
-		return AgeGroupInput::class;
 	}
 
 }

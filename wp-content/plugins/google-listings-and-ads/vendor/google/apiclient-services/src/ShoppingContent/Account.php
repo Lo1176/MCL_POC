@@ -20,7 +20,6 @@ namespace Google\Service\ShoppingContent;
 class Account extends \Google\Collection
 {
   protected $collection_key = 'youtubeChannelLinks';
-  public $accountManagement;
   protected $adsLinksType = AccountAdsLink::class;
   protected $adsLinksDataType = 'array';
   public $adultContent;
@@ -41,14 +40,6 @@ class Account extends \Google\Collection
   protected $youtubeChannelLinksType = AccountYouTubeChannelLink::class;
   protected $youtubeChannelLinksDataType = 'array';
 
-  public function setAccountManagement($accountManagement)
-  {
-    $this->accountManagement = $accountManagement;
-  }
-  public function getAccountManagement()
-  {
-    return $this->accountManagement;
-  }
   /**
    * @param AccountAdsLink[]
    */

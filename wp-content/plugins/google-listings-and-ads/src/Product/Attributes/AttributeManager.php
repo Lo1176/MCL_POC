@@ -37,7 +37,6 @@ class AttributeManager implements Service {
 		AgeGroup::class,
 		Multipack::class,
 		IsBundle::class,
-		AvailabilityDate::class,
 		Adult::class,
 	];
 

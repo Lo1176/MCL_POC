@@ -75,9 +75,7 @@ jQuery('#adminmenu #toplevel_page_mailpoet-newsletters')
 
 <!-- javascripts -->
 <%= javascript(
-  'runtime.js',
   'vendor.js',
-  'commons.js',
   'mailpoet.js'
 )%>
 
@@ -164,6 +162,7 @@ jQuery('#adminmenu #toplevel_page_mailpoet-newsletters')
 
 <% block after_translations %><% endblock %>
 <%= javascript(
+  'admin_vendor_chunk.js',
   'admin_vendor.js'
 )%>
 
