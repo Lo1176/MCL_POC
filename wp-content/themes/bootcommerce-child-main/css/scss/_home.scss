@@ -1,5 +1,9 @@
 .title-separation {
     // font-family: Helvetica Neue;
+    display: inline-block;
     text-transform: uppercase;
-    border: 2px 0;
+    border-width: 1px;
+    border: solid $secondary;
+    border-left: none;
+    border-right: none;
 }

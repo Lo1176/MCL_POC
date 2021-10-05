@@ -34,8 +34,10 @@ get_header();
         <div class="entry-content">
           <!-- all the content for wordpress 'modifier la page' -->
           <?php the_content(); ?>
-        </div>
+        <div class="d-flex justify-content-center">
         <h2 class="title-separation">Nos actualités</h2>
+        </div>
+
         <?php echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
 
         <footer class="entry-footer">

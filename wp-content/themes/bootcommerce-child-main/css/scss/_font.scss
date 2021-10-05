@@ -1,13 +1,1 @@
-$font-family-sans-serif:
-// Safari for OS X and iOS (San Francisco)
-// -apple-system,
-// Chrome < 56 for OS X (San Francisco)
-// BlinkMacSystemFont,
-// Windows
-// "Segoe UI",
-// Android
-// "Roboto",
-// Basic web fallback
-"Helvetica Neue", Arial, sans-serif,
-// Emoji fonts
-// "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
