@@ -70,8 +70,11 @@ get_header();
             <h2 class="title-separation">Nos actualités</h2>
           </div>
 
-          <?php echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
-          <!-- actualités END -->
+          <div class="container">
+            <?php #echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
+            <?php echo do_shortcode('[bs-swiper-card type="post" category="non-classe" order="DESC" orderby="date" posts="8"]'); ?>
+          </div>
+            <!-- actualités END -->
 
           <footer class="entry-footer">
 
