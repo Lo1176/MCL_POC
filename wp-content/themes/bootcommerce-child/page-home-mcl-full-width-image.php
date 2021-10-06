@@ -35,29 +35,37 @@ get_header();
           <!-- all the content for wordpress 'modifier la page' -->
           <?php the_content(); ?>
           <!-- all the content for wordpress 'modifier la page' END -->
+
           <!-- actualités -->
           <div class="d-flex justify-content-center">
             <h2 class="title-separation">Nos marques</h2>
           </div>
-          <div class="brand">
+
+          <div class="brand text-center">
 
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('chateau-laguiole'))); ?>>
-              <img class="brand-box border" alt="Qries" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/CL.svg'); ?> style="background-color: #3C3C3B;">
+              <figure class="figure">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-color.svg'); ?> class="figure-img img-fluid" alt="Château Laguiole image">
+              </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('ligne-w'))); ?>>
-              <img class="brand-box border" alt="Qries" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/logo-ligneW.svg'); ?> width="100" height="100" background-color="#00FF00">
+              <figure class="figure">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/lw-color.svg'); ?> class="figure-img img-fluid" alt="Ligne W image">
+              </figure>
             </a>
-            <img alt="Mateo Gallud image" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/logo-matteo.svg'); ?>>
-            <figure>
-              <div>
-                <img alt="Mateo Gallud image" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/logo-matteo.svg'); ?>>
-              </div>
-            </figure>
+            <a href=<?php echo esc_url(get_permalink(get_page_by_path('mateo-gallud'))); ?>>
+              <figure class="figure">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mg-color.svg'); ?> class="figure-img img-fluid" alt="Mateo Gallud image">
+              </figure>
+            </a>
+            <a href=<?php echo esc_url(get_permalink(get_page_by_path('guy-vialis'))); ?>>
+              <figure class="figure">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/gv-color.svg'); ?> class="figure-img img-fluid" alt="Guy Vialis image">
+              </figure>
+            </a>
 
-          </div>
-          <div class="brand"></div>
-          <div class="brand"></div>
-          <div class="brand"></div>
+          </div> <!-- .brand -->
+
           <div class="d-flex justify-content-center">
             <h2 class="title-separation">Nos actualités</h2>
           </div>
