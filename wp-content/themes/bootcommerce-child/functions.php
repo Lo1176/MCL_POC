@@ -217,12 +217,12 @@ function new_loop_shop_per_page($cols)
 }
 
 // Autoriser les fichiers SVG
-function wpc_mime_types($mimes)
+function mcl_mime_types($mimes)
 {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
-add_filter('upload_mimes', 'wpc_mime_types');
+add_filter('upload_mimes', 'mcl_mime_types');
 /* rajouter <?xml version="1.0" encoding="utf-8"?> au début du svg */
 
 // Verifier si la page est parent/child/grandchild en utilisant le slug
