@@ -25,7 +25,7 @@ get_header();
         <!-- no title tbe END -->
       </header>
 
-      <div class="container pb-5">
+      <div class="container-fluid pb-5">
 
         <!-- Hook to add something nice -->
         <?php bs_after_primary(); ?>
