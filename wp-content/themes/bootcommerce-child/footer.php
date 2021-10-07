@@ -14,7 +14,7 @@
 
 <footer>
 
-    <div class="bootscore-footer bg-light pt-5 pb-3">
+    <div class="bootscore-footer pt-5 pb-3">
         <div class="container">
 
             <!-- Top Footer Widget -->

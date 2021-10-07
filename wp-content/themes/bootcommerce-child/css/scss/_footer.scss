@@ -1,0 +1,15 @@
+.bootscore-footer {
+    background-color: $cl;
+        a {
+            color: $white;
+            opacity: .3;
+            &:hover {
+                color: $white;
+                opacity: 1;
+
+            }
+        }
+        .footer_widget img, svg {
+            width: 90%;
+        }
+}
