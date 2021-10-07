@@ -11,3 +11,16 @@
 //   @extend .figure-img;
 //   @extend .img-fluid;
 // }
+.swiper-slide {
+    .card-body { 
+        .text-muted {
+          border-bottom: 0.1rem solid $gray-200;
+          padding-bottom: 0.5rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+          text-transform: uppercase;
+        }
+
+    }
+}

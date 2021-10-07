@@ -84,7 +84,7 @@ function bootscore_swiper( $atts ) {
 
                 <div class="card-body d-flex flex-column">
 
-                    <?php bootscore_category_badge(); ?>
+                    <?php #bootscore_category_badge(); ?>
 
                     <!-- Title -->
                     <h2 class="blog-post-title">
