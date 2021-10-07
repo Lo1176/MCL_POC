@@ -69,12 +69,14 @@ get_header();
           <div class="d-flex justify-content-center">
             <h2 class="title-separation">Nos actualités</h2>
           </div>
+          
 
           <div class="container">
-            <?php #echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); ?>
+            <?php #echo do_shortcode('[bs-post-slider type="post" category="non-classe" order="ASC" orderby="title" posts="8"]'); 
+            ?>
             <?php echo do_shortcode('[bs-swiper-card type="post" category="non-classe" order="DESC" orderby="date" posts="8"]'); ?>
           </div>
-            <!-- actualités END -->
+          <!-- actualités END -->
 
           <footer class="entry-footer">
 
