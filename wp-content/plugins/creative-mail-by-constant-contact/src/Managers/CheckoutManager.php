@@ -477,6 +477,9 @@ class CheckoutManager
         $data = new stdClass();
         $data->products = array();
         $data->coupons = array();
+        $data->currency_symbol = get_woocommerce_currency_symbol();
+        $data->currency = get_woocommerce_currency();
+
         $data->user = new stdClass();
 
         try

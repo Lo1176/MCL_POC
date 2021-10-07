@@ -78,8 +78,7 @@
             ));
             ?>
             <!-- Bootstrap 5 Nav Walker Footer Menu End -->
-            <a href="#"> <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>HELLO</a>
-            <a href="#"> <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>COCO</a>
+            
         </div>
 
     </div>

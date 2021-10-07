@@ -1,6 +1,9 @@
 Changelog
 =========
 
+#### 1.4.7 - October 7 2021
+- Fix currency type being shown in "Abandoned Cart" emails for WooCommerce.
+
 #### 1.4.6 - September 23 2021
 - Add phone number handling for Jetpack Forms. Bug fixes.
 
