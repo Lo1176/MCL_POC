@@ -63,14 +63,14 @@ $colors: (
 // scss-docs-end colors-map
 
 // // scss-docs-start theme-color-variables
-$primary:       $blue;
+// $primary:       $blue !default;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
 // $danger:        $red !default;
 // $light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+// $dark:          $gray-900 !default;
 // // scss-docs-end theme-color-variables
 
 // // scss-docs-start theme-colors-map
@@ -93,13 +93,13 @@ $mg: #03456F;
 $gv: #D9A149;
 // End Maison Château Laguiole colors
 // $primary: #aaaa3d;
-$secondary: $dark;
+// $secondary: $dark;
 // $blue: #429851;
 
 // $danger: var(--bs-light);
 // $red: #dc3545;
-$light: $white;
+// $light: $white;
 $primary: $cl;
-$secondary: $cl;
+$secondary: $gray-500;
 
 //

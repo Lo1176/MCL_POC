@@ -1,0 +1,26 @@
+#nav-main>.btn, .btn-outline-secondary  {
+    border: none !important;
+}
+
+.offcanvas-body {
+    .nav-link {
+        // border-bottom: 1px dotted $red;
+            // &:after { // display a litle border bottom
+            //     content: ""; //this is necessary to make it work
+            //     display: block; // to put the element on its own line
+            //     // margin: 0 auto; // to center the border
+            //     width: 10%; // change the border width
+            //     // padding-top: 20px; // to add space between the element and the border
+            //     border-bottom: 1px solid $gray-200;
+            // }
+
+    }
+
+    .dropdown-menu {
+        border-width: 0;
+        border-left-width: 2px;
+        border-color: $gv;
+        border-radius: 0.1rem;
+    }
+}
+

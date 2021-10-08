@@ -130,7 +130,7 @@
 
             <!-- offcanvas sideNavBar  -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
-                <div class="offcanvas-header cursor-pointer hover bg-light text-dark" data-bs-dismiss="offcanvas">
+                <div class="offcanvas-header cursor-pointer hover bg-light text-gray-700" data-bs-dismiss="offcanvas">
                     <?php esc_html_e('Close menu', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="offcanvas-body">
