@@ -98,7 +98,7 @@ function bootscore_swiper($atts)
                                 <?php if ('post' === get_post_type()) : ?>
                                     <small class="text-muted mb-2">
                                         <?php
-                                        bootscore_date();
+                                        // bootscore_date();
                                         bootscore_author();
                                         #bootscore_comments();
                                         #bootscore_edit();
