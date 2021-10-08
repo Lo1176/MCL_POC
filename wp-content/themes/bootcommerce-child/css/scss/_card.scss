@@ -7,20 +7,25 @@
   padding-bottom: 2.5rem;
 }
 
-// .swiper-slide :nth-child(1n+0) {
-//   @extend .figure-img;
-//   @extend .img-fluid;
-// }
-.swiper-slide {
-    .card-body { 
-        .text-muted {
-          border-bottom: 0.1rem solid $gray-200;
-          padding-bottom: 0.5rem;
-        }
-        h2 {
-          font-size: 1.5rem;
-          text-transform: uppercase;
-        }
+// Swiper Cards
+.swiper-wrapper {
+    .card {
+      border: 1px solid rgb(0 0 0 / 0%);  
+    }
+    .swiper-slide {
+        .card-body { 
+          padding: 1rem 0rem;
+            .text-muted {
+              border-bottom: 0.1rem solid $gray-200;
+              padding-bottom: 0.5rem;
+              
+            }
+            h2 {
+              font-size: 1.5rem;
+              text-transform: uppercase;
+            }
 
+        }
     }
 }
+// Swiper Cards END //
