@@ -5,6 +5,9 @@
 
 .brand {
   padding-bottom: 2.5rem;
+    .img-fluid {
+      height: 260px;
+    }
 }
 
 // Swiper Cards
@@ -13,8 +16,11 @@
       border: 1px solid rgb(0 0 0 / 0%);  
     }
     .swiper-slide {
+        .card-img-top {
+          border-radius: 2px;
+        }
         .card-body { 
-          padding: 1rem 0rem;
+          // padding: 1rem 0rem;
             .text-muted {
               border-bottom: 0.1rem solid $gray-200;
               padding-bottom: 0.5rem;
@@ -27,5 +33,8 @@
 
         }
     }
+}
+.swiper-button-next, .swiper-button-prev {
+  display: none;
 }
 // Swiper Cards END //
