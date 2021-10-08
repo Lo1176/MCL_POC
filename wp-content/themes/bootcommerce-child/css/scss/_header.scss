@@ -2,6 +2,16 @@
     border: none !important;
 }
 
+#nav-main {
+    .dropdown-menu {
+            border-width: 0;
+            border-left-width: 2px;
+            border-color: $gv;
+            border-radius: 0.1rem; 
+    }
+}    
+
+
 .offcanvas-body {
     .nav-link {
         // border-bottom: 1px dotted $red;
@@ -15,12 +25,11 @@
             // }
 
     }
-
     .dropdown-menu {
         border-width: 0;
         border-left-width: 2px;
         border-color: $gv;
-        border-radius: 0.1rem;
+        border-radius: 0.1rem;      
     }
-}
 
+}

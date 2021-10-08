@@ -41,7 +41,7 @@
 
             <div class="">
 
-                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-light navbar-light">
+                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-white navbar-white">
 
                     <div class="container-fluid">
                         <!-- ## SideNavBar Menu ## -->
@@ -130,7 +130,7 @@
 
             <!-- offcanvas sideNavBar  -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
-                <div class="offcanvas-header cursor-pointer hover bg-light text-gray-700" data-bs-dismiss="offcanvas">
+                <div class="offcanvas-header cursor-pointer hover bg-white text-dark" data-bs-dismiss="offcanvas">
                     <?php esc_html_e('Close menu', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="offcanvas-body">
@@ -151,7 +151,7 @@
             </div>
             <!-- offcanvas user -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-user">
-                <div class="offcanvas-header cursor-pointer hover bg-light text-primary" data-bs-dismiss="offcanvas">
+                <div class="offcanvas-header cursor-pointer hover bg-light text-dark" data-bs-dismiss="offcanvas">
                     <?php esc_html_e('Close account', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="offcanvas-body">
@@ -163,13 +163,13 @@
 
             <!-- offcanvas cart -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-cart">
-                <div class="offcanvas-header cursor-pointer hover bg-light text-primary" data-bs-dismiss="offcanvas">
+                <div class="offcanvas-header cursor-pointer hover bg-light text-dark" data-bs-dismiss="offcanvas">
                     <i class="fas fa-chevron-left"></i> <?php esc_html_e('Continue shopping', 'bootscore'); ?>
                 </div>
                 <div class="offcanvas-body p-0">
                     <div class="cart-loader bg-white position-absolute end-0 bottom-0 start-0 d-flex align-items-center justify-content-center">
                         <div class="loader-icon ">
-                            <div class="spinner-border text-primary"></div>
+                            <div class="spinner-border text-dark"></div>
                         </div>
                     </div>
                     <div class="cart-list">
