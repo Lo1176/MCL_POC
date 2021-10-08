@@ -16,11 +16,11 @@ get_header();
 
     <main id="main" class="site-main">
 
-      <header class="entry-header featured-full-width-img height-50 bg-dark text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
-        <div class="container entry-header h-100 d-flex justify-content-center pb-3">
-          <h1 class="text-light bg-secondary p-4 entry-title"><?php the_title(); ?></h1>
+      <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
+      <header class="entry-header featured-full-width-img text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
+        <div class="container entry-header d-flex justify-content-center pb-3">
+          <h1 class="bg-secondary p-5 entry-title"><img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mcl-white.svg'); ?> id="mcl-logo" alt="Maison Château Laguiole image">
         </div>
-        <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
         <!-- no title tbe -->
         <!-- no title tbe END -->
       </header>
