@@ -11,3 +11,16 @@
     border-right: none;
     margin-bottom: 2.5rem;
 }
+
+.entry-header {
+    height: 420px;
+        .entry-title {
+            height: 240px;
+            position: relative;
+            top: -110px;
+            z-index: 9999;
+                #mcl-logo {
+                    padding: 8px 8px;
+                }
+        }
+}
