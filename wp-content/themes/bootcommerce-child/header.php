@@ -46,7 +46,7 @@
                     <div class="container-fluid">
                         <!-- ## SideNavBar Menu ## -->
                         <!-- Navbar Toggler LEFT for large devise-->
-                        <button class="btn btn-outline-secondary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <i class="fas fa-bars"></i>
                         </button>
                         <!-- END SideNav Menu -->
@@ -65,7 +65,7 @@
                         <div class="header-actions d-flex align-items-center">
                             <!-- ### dropdown menu for collection ###  -->
                             <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle ms-1 ms-md-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-outline-primary dropdown-toggle ms-1 ms-md-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Collections
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -85,12 +85,12 @@
                             </div>
 
                             <!-- User Toggler -->
-                            <button class="btn btn-outline-secondary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
+                            <button class="btn btn-outline-primary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
                                 <i class="fas fa-user"></i>
                             </button>
 
                             <!-- Mini Cart Toggler -->
-                            <button class="btn btn-outline-secondary ms-1 ms-md-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
+                            <button class="btn btn-outline-primary ms-1 ms-md-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
                                 <i class="fas fa-shopping-bag"></i>
                                 <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
                                     $count = WC()->cart->cart_contents_count;
@@ -105,7 +105,7 @@
                             </button>
 
                             <!-- Navbar Toggler Right for small devise-->
-                            <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                            <button class="btn btn-outline-primary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                                 <i class="fas fa-bars"></i>
                             </button>
 
