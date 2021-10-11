@@ -1,10 +1,10 @@
-=== Stripe For WooCommerce ===
+=== Payment Plugins for Stripe WooCommerce ===
 Contributors: mr.clayton
 Tags: stripe, ach, klarna, credit card, apple pay, google pay, ideal, sepa, sofort
 Requires at least: 3.0.1
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 3.3.10
+Stable tag: 3.3.11
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,11 @@ If you're site is not loading over https, then Stripe won't render the Payment R
 8. Edit payment gateways on the product page
 
 == Changelog ==
+= 3.3.11 =
+* Updated - Changed plugin name to "Payment Plugins for Stripe WooCommerce" at the request of Wordpress.org Plugin Review Team.
+* Updated - If user is logged out and guest checkout is disabled, show save card checkbox if enabled.
+* Added - Filter "wc_stripe_api_request_error_message" for more control over custom error messages.
+* Added - Filter "wc_stripe_pay_order_statuses" so merchants can control when the Pay for Order button appears on the order details page.
 = 3.3.10 =
 * Added - Save card checkbox now shows (if enabled in Credit Card Setting) for guest users that select to create new account on checkout page.
 * Added - Capability check to Admin profile

@@ -36,7 +36,9 @@ class WC_Stripe_Customer_Manager {
 			if ( $this->should_update_customer( $customer ) ) {
 				$result = $this->update_customer( $customer );
 				if ( is_wp_error( $result ) ) {
-					wc_add_notice( __( 'Error saving customer. Reason: %s', 'woo-stripe-payment' ), $result->get_error_message() );
+					// add info to log. This error isn't added to wc_add_notice because we don't want a user update to
+					// interfere with payment being processed.
+					wc_stripe_log_error( sprintf( __( 'Error saving customer. Reason: %s', 'woo-stripe-payment' ), $result->get_error_message() ) );
 				}
 			}
 		} else {
@@ -45,7 +47,7 @@ class WC_Stripe_Customer_Manager {
 			if ( ! is_wp_error( $response ) ) {
 				wc_stripe_save_customer( $response->id, $customer->get_id() );
 			} else {
-				wc_add_notice( __( 'Error saving customer. Reason: %s', 'woo-stripe-payment' ), $response->get_error_message() );
+				wc_add_notice( sprintf( __( 'Error saving customer. Reason: %s', 'woo-stripe-payment' ), $response->get_error_message() ), 'error' );
 			}
 		}
 	}
@@ -129,24 +131,32 @@ class WC_Stripe_Customer_Manager {
 			'customer' => $customer_id,
 			'type'     => 'card',
 		) );
-
 		if ( ! is_wp_error( $payment_methods ) ) {
 			foreach ( $payment_methods->data as $payment_method ) {
+				/**
+				 * @var \Stripe\PaymentMethod $payment_method
+				 */
 				if ( ! WC_Payment_Token_Stripe::token_exists( $payment_method->id, $user_id ) ) {
 					$payment_gateways = WC()->payment_gateways()->payment_gateways();
 					$gateway_id       = null;
-
-					if ( strstr( $payment_method->id, 'pm_' ) || strstr( $payment_method->id, 'src_' ) ) {
-						$gateway_id = 'stripe_cc';
-					} elseif ( strstr( $payment_method->id, 'card_' ) ) {
-						$gateway_id = 'stripe_googlepay';
+					$gateway_id       = 'stripe_cc';
+					if ( isset( $payment_method->card->wallet->type ) ) {
+						switch ( $payment_method->card->wallet->type ) {
+							case 'google_pay':
+								$gateway_id = 'stripe_googlepay';
+								break;
+							case 'apple_pay':
+								$gateway_id = 'stripe_applepay';
+								break;
+						}
 					}
 					/**
 					 *
 					 * @var WC_Payment_Gateway_Stripe_CC $payment_gateway
-					 */
-					$payment_gateway = $payment_gateways[ $gateway_id ];
-					$token           = $payment_gateway->get_payment_token( $payment_method->id, $payment_method );
+					 */ {
+						$payment_gateway = $payment_gateways[ $gateway_id ];
+					}
+					$token = $payment_gateway->get_payment_token( $payment_method->id, $payment_method );
 					$token->set_environment( $payment_method->livemode ? 'live' : 'test' );
 					$token->set_user_id( $user_id );
 					$token->set_customer_id( $customer_id );

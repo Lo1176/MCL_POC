@@ -55,7 +55,10 @@ class WC_Stripe_Admin_Order_Metaboxes {
 	 * @param WC_Order $order
 	 */
 	public static function pay_order_section( $order ) {
-		if ( $order->get_type() === 'shop_order' && $order->has_status( array( 'pending', 'auto-draft' ) ) ) {
+		if ( $order->get_type() === 'shop_order' && $order->has_status( apply_filters( 'wc_stripe_pay_order_statuses', array(
+				'pending',
+				'auto-draft'
+			), $order ) ) ) {
 			include 'views/html-order-pay.php';
 			$payment_methods = array();
 			foreach ( WC()->payment_gateways()->payment_gateways() as $gateway ) {

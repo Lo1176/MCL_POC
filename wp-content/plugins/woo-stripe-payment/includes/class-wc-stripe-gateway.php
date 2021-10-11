@@ -406,26 +406,47 @@ class WC_Stripe_Gateway {
 	/**
 	 *
 	 * @param mixed $err
+	 *
+	 * @return string
 	 */
 	private function get_error_message( $err ) {
+		$message = '';
 		if ( is_a( $err, '\Stripe\Exception\ApiErrorException' ) ) {
 			$err = $err->getError();
 		}
 		if ( is_array( $err ) || $err instanceof \Stripe\ErrorObject ) {
 			$this->messages = ! $this->messages ? wc_stripe_get_error_messages() : $this->messages;
-			if ( isset( $err['decline_code'] ) && isset( $this->messages[ $err['decline_code'] ] ) ) {
-				return $this->messages[ $err['decline_code'] ];
+			$keys           = array();
+			if ( isset( $err['code'] ) ) {
+				$keys[] = $err['code'];
+				if ( $err['code'] === 'card_declined' ) {
+					if ( isset( $err['decline_code'] ) ) {
+						$keys[] = $err['decline_code'];
+					}
+				}
 			}
-			if ( isset( $err['code'] ) && isset( $this->messages[ $err['code'] ] ) ) {
-				return $this->messages[ $err['code'] ];
+			while ( ! empty( $keys ) ) {
+				$key = array_pop( $keys );
+				if ( isset( $this->messages[ $key ] ) ) {
+					$message = $this->messages[ $key ];
+					break;
+				}
 			}
-			if ( isset( $err['message'] ) ) {
-				return $err['message'];
+			if ( empty( $message ) && isset( $err['message'] ) ) {
+				$message = $err['message'];
 			}
 		}
 		if ( is_string( $err ) ) {
-			return $err;
+			$message = $err;
 		}
+
+		/**
+		 * @param string $message
+		 * @param mixed $err
+		 *
+		 * @since 3.3.11
+		 */
+		return apply_filters( 'wc_stripe_api_request_error_message', $message, $err );
 	}
 
 	/**

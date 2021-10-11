@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 3.3.10
+ * @version 3.3.11
  *
  * @var WC_Payment_Gateway_Stripe_CC $gateway
  */
@@ -13,7 +13,8 @@
     <div id="wc-stripe-card-element"></div>
 <?php endif; ?>
 <?php if ( $gateway->show_save_source() ): ?>
-    <div class="wc-stripe-save-source" <?php if ( ! is_user_logged_in() ): ?>style="display:none"<?php endif ?>>
+    <div class="wc-stripe-save-source"
+	     <?php if ( ! is_user_logged_in() && ! WC()->checkout()->is_registration_required() ): ?>style="display:none"<?php endif ?>>
         <label class="checkbox">
             <input type="checkbox" id="<?php echo $gateway->save_source_key ?>" name="<?php echo $gateway->save_source_key ?>" value="yes"/>
             <span class="save-source-checkbox"></span>

@@ -1100,7 +1100,8 @@ function wc_stripe_get_error_messages() {
 			'empty_element_sepa_debit'         => __( 'Please enter your IBAN before proceeding.', 'woo-stripe-payment' ),
 			'empty_element_ideal'              => __( 'Please select a bank before proceeding', 'woo-stripe-payment' ),
 			'incomplete_iban'                  => __( 'The IBAN you entered is incomplete.', 'woo-stripe-payment' ),
-			'incomplete_boleto_tax_id'         => __( 'Please enter a valid CPF / CNPJ', 'woo-stripe-payment' )
+			'incomplete_boleto_tax_id'         => __( 'Please enter a valid CPF / CNPJ', 'woo-stripe-payment' ),
+			'test_mode_live_card'              => __( 'Your card was declined. Your request was in test mode, but you used a real credit card. Only test cards can be used in test mode.', 'woo-stripe-payment' )
 		)
 	);
 }
