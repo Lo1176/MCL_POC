@@ -76,7 +76,8 @@ get_header();
                             ?>
                            <?php
                            $term_id = 16;
-                           $taxonomy_name = 'products';
+                           $taxonomy_name = 'chateau-laguiole';
+                        //    $termchildren = get_term_children( $term_id, $taxonomy_name );
                            $termchildren = get_term_children( $term_id, $taxonomy_name );
 
                            echo '<ul>';
