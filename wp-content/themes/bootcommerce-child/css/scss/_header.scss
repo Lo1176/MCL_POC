@@ -10,7 +10,11 @@
             border-radius: 0.1rem; 
     }
 }    
-
+.site-header {
+        .offcanvas-start {
+            width: 240px;
+        }
+}
 
 .offcanvas-body {
     .nav-link {
