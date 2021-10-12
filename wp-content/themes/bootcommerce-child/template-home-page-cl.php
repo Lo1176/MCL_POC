@@ -74,9 +74,23 @@ get_header();
                             <?php
                             #echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
+                           <?php
+                           $term_id = 16;
+                           $taxonomy_name = 'products';
+                           $termchildren = get_term_children( $term_id, $taxonomy_name );
+
+                           echo '<ul>';
+                           foreach ( $termchildren as $child ) {
+                               $term = get_term_by( 'id', $child, $taxonomy_name );
+                               echo '<li><a href="' . get_term_link( $child, $taxonomy_name ) . '">' . $term->name . '</a></li>';
+                           }
+                           echo '</ul>';
+                           ?> 
                             <!-- test  -->
-                            <ul><?php echo do_shortcode('[product_category category="chateau-laguiole"  parent="0"]'); ?>
-                                <li>title</li>[post-taxonomy-iterator]
+                            <ul>
+                               
+                                <li><?php #echo do_shortcode('[product_categories category="classique" number="0" parent="1"]'); ?></li>
+
                             </ul>
                             <!-- test end  -->
                             <div class="open_grepper_editor" title="Edit & Save To Grepper"></div>

@@ -66,7 +66,7 @@ if (post_password_required()) {
 		do_action('woocommerce_single_product_summary');
 		?>
 		<!-- ### A VIRER ###  -->
-		<h2 class="text-warning">content-single-product dans theme CHILD</h2>
+		<h2 class="text-danger">-child/wc/content-single-product dans theme CHILD</h2>
 		<!-- ### A VIRER ###  -->
 	</div>
 

@@ -34,6 +34,10 @@ do_action( 'woocommerce_before_main_content' );
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
 
+	<!-- ##### A EFFACER ##### -->
+	<h2 class="text-warning">A EFFACER THEME-CHILD/woocommerce/template/archive-product.PHP</h2>
+	<!-- ##### A EFFACER ##### -->
+
 	<?php
 	/**
 	 * Hook: woocommerce_archive_description.
