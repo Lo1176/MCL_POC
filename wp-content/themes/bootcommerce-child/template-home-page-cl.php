@@ -75,17 +75,7 @@ get_header();
                             #echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
                            <?php
-                           $term_id = 16;
-                           $taxonomy_name = 'chateau-laguiole';
-                        //    $termchildren = get_term_children( $term_id, $taxonomy_name );
-                           $termchildren = get_term_children( $term_id, $taxonomy_name );
-
-                           echo '<ul>';
-                           foreach ( $termchildren as $child ) {
-                               $term = get_term_by( 'id', $child, $taxonomy_name );
-                               echo '<li><a href="' . get_term_link( $child, $taxonomy_name ) . '">' . $term->name . '</a></li>';
-                           }
-                           echo '</ul>';
+                           
                            ?> 
                             <!-- test  -->
                             <ul>
