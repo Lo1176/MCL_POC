@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="header-actions d-flex align-items-center">
-                        
+
                             <!-- Top Nav Widget select the one you prefere-->
                             <div class="top-nav-widget">
                                 <?php if (is_active_sidebar('top-nav')) : ?>
@@ -124,6 +124,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="my-offcancas-sidenavbar">
+                        <!-- Bootstrap 5 Nav Walker Main Menu -->
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'my-navigation-menu',
@@ -135,6 +136,8 @@
                             'walker' => new bootstrap_5_wp_nav_menu_walker()
                         ));
                         ?>
+                        <!-- Bootstrap 5 Nav Walker Main Menu End -->
+
                     </div>
                 </div>
             </div>
