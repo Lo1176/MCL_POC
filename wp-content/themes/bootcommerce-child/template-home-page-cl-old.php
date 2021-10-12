@@ -74,12 +74,7 @@ get_header();
                             <?php
                             #echo do_shortcode('[products category="chateau-laguiole"]');
                             ?>
-                            <!-- test  -->
-                            <ul><?php echo do_shortcode('[product_category category="chateau-laguiole"  parent="0"]'); ?>
-                                <li>title</li>[post-taxonomy-iterator]
-                            </ul>
-                            <!-- test end  -->
-                            <div class="open_grepper_editor" title="Edit & Save To Grepper"></div>
+
 
                             <div class="card m-2" style="width: 18rem;">
                                 <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-classique-bois-erable-scaled.jpeg'); ?>" alt="Produc image cap">
