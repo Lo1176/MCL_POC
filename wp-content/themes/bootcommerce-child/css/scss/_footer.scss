@@ -9,9 +9,14 @@
 
             }
         }
-        .footer_widget img, svg {
-            width: 90%;
+        .bottom-footer {
+            // display: flex;
+            // justify-content: space-between;
+                .footer_widget img, svg {
+                    width: 90%;
+                }
         }
+       
         .fab {
             // color: $white;
             font-size: 3rem;
