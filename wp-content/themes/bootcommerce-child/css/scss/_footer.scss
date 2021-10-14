@@ -1,5 +1,9 @@
 .bootscore-footer {
     background-color: $cl;
+    text-transform: uppercase;
+        #follow-us {
+            text-transform: initial;
+        }
         a {
             color: $white;
             opacity: .3;
@@ -10,16 +14,17 @@
             }
         }
         .bottom-footer {
-            // display: flex;
-            // justify-content: space-between;
                 .footer_widget img, svg {
                     width: 90%;
                 }
         }
        
         .fab {
-            // color: $white;
-            font-size: 3rem;
+            font-size: 2rem;
             padding-right: 1rem;
         }
+}
+
+.bootscore-info {
+    display: none;
 }
