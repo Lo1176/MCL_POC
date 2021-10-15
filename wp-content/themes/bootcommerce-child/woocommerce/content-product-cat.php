@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <!-- ##### A EFFACER ##### -->
-<h2 class="text-danger">A EFFACER THEME-CHILD/wc/template/content-product-cat.PHP</h2>
+<h2 class="text-danger">WC/content-product-cat</h2>
 <!-- ##### A EFFACER ##### -->
 <li <?php wc_product_cat_class( '', $category ); ?>>
 	<?php
