@@ -71,18 +71,9 @@ get_header();
                     <!-- test gammes  (PRODUCTS CATEGORIES per BRAND) -->
                     <div class="container-fluid col-10">
                         <div class="d-flex flex-wrap col-12">
-                            <?php
-                            #echo do_shortcode('[products category="chateau-laguiole"]');
-                            ?>
-                           <?php
-                           
-                           ?> 
+                         
                             <!-- test  -->
-                            <ul>
-                               
-                                <li><?php #echo do_shortcode('[product_categories category="classique" number="0" parent="1"]'); ?></li>
-
-                            </ul>
+                         
                             <!-- test end  -->
                             <div class="open_grepper_editor" title="Edit & Save To Grepper"></div>
 
