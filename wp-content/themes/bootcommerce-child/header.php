@@ -52,7 +52,7 @@
                         <!-- END SideNav Menu -->
 
                         <!-- ## Logo Brand ## -->
-                        <a class="navbar-brand xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
+                        <a class="navbar-brand align-center xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
                         <a class="navbar-brand md d-none d-md-block" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
 
                         <!-- Offcanvas Navbar -->
@@ -67,6 +67,7 @@
                         
                             <div class="offcanvas-header hover cursor-pointer bg-light" data-bs-dismiss="offcanvas">
                                 <i class="fas fa-chevron-left"></i> <?php #esc_html_e('Close menu', 'bootscore'); ?>
+
                             </div>
                         </div> -->
 
