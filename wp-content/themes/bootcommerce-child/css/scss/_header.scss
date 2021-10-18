@@ -19,34 +19,17 @@
 .offcanvas-body {
     overflow-y: inherit !important;
         .dropdown-divider {
-            // display: none;
             width: 3rem;
         }   
-         .nav-item {
-            // border-top: 1px solid red;
-        }
         .navbar-nav {
             .nav-link {
                 padding-left: 16px;
-                // border-bottom: 1px dotted $red;
-                    // &:after { // display a litle border bottom
-                    //     content: ""; //this is necessary to make it work
-                    //     display: block; // to put the element on its own line
-                    //     // margin: 0 auto; // to center the border
-                    //     width: 10%; // change the border width
-                    //     // padding-top: 20px; // to add space between the element and the border
-                    //     border-bottom: 1px solid $gray-200;
-                    // }
-
             }
         }
         
         .dropdown-menu {
             border-width: 0;
-            border-inline-start: 2px solid $gv;
-            // border-left-width: 2px;
-            // border-color: $gv;
-            // border-radius: 0.1rem;      
+            border-inline-start: 2px solid $gv;    
         }
 
 }
