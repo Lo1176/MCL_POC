@@ -5,7 +5,7 @@ Contributors: Bastian Kreiter, Justin Kruit
 Requires at least: 4.5
 Tested up to: 5.8.1
 Requires PHP: 5.6
-Stable tag: 5.1.0.1
+Stable tag: 5.1.0.2
 License: MIT License
 License URI: https://github.com/bootscore/bootcommerce-child/blob/main/LICENSE
 
@@ -14,14 +14,14 @@ License URI: https://github.com/bootscore/bootcommerce-child/blob/main/LICENSE
 
 WooCommerce Child Theme for bootScore, Copyright 2019 - 2021 bootScore.
 
-This child theme has already all settings to create a shop, all header settings with cart and a basic store frontpage.
+This child theme has already all settings to create a shop. This child needs WooCommerce to work.
 
 Start developing your new project right away in a upgrade-safe way using overrides by copying files from bootScore parent theme.
 
 
 == Live preview ==
 
-https://bootscore.me/
+https://bootscore.me/shop/
 
 
 == Installation ==
@@ -35,10 +35,14 @@ WooCommerce must be installed first!
 
 == Documentation ==
 
-https://bootscore.me/shop/
+https://bootscore.me/documentation/using-the-child-themes/
 
 
 == Changelog ==
+
+    = 5.1.0.2 - October 07 2021 =
+
+        * [UPDATE] header.php (bootscore 5.1.2.0)
 
     = 5.1.0.1 - September 29 2021 =
 
@@ -93,5 +97,4 @@ https://bootscore.me/shop/
     = 5.0.0.0 - February 01 2021 =
     
         * Initial release
-
 
