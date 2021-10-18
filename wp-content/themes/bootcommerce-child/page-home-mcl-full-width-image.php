@@ -17,7 +17,7 @@ get_header();
     <main id="main" class="site-main">
 
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-      <header class="entry-header featured-full-width-img text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
+      <header id="logo-header" class="entry-header featured-full-width-img text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
         <div class="container entry-header d-flex justify-content-center pb-3">
           <h1 class="bg-primary p-5 entry-title"><img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mcl-white.svg'); ?> id="mcl-logo" alt="Maison Château Laguiole image">
         </div>
