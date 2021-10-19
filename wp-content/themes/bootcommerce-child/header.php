@@ -111,27 +111,28 @@
 
 
             </div><!-- .fixed-top .bg-light -->
-
-            <!-- offcanvas sideNavBar on the left -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
-                <div class="offcanvas-header cursor-pointer hover bg-white text-dark" data-bs-dismiss="offcanvas">
-                    <?php esc_html_e('Close menu', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="my-offcancas-sidenavbar">
-                        <!-- Bootstrap 5 Nav Walker Main Menu -->
-                        <?php
-                        wp_nav_menu(array(
-                            'theme_location' => 'my-navigation-menu',
-                            'container' => false,
-                            'menu_class' => '',
-                            'fallback_cb' => '__return_false',
-                            'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s">%3$s</ul>',
-                            'depth' => 2,
-                            'walker' => new bootstrap_5_wp_nav_menu_walker()
-                        ));
-                        ?>
-                        <!-- Bootstrap 5 Nav Walker Main Menu End -->
+            <div class="navbar">
+                <!-- offcanvas sideNavBar on the left -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
+                    <div class="offcanvas-header cursor-pointer hover bg-white text-dark" data-bs-dismiss="offcanvas">
+                        <?php esc_html_e('Close menu', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="my-offcancas-sidenavbar">
+                            <!-- Bootstrap 5 Nav Walker Main Menu -->
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'my-navigation-menu',
+                                'container' => false,
+                                'menu_class' => '',
+                                'fallback_cb' => '__return_false',
+                                'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s">%3$s</ul>',
+                                'depth' => 2,
+                                'walker' => new bootstrap_5_wp_nav_menu_walker()
+                            ));
+                            ?>
+                            <!-- Bootstrap 5 Nav Walker Main Menu End -->
+                        </div>
                     </div>
                 </div>
             </div>
