@@ -59,7 +59,8 @@
                                 <!-- Bootstrap 5 Nav Walker Main Menu -->
                                 <?php
                                 wp_nav_menu(array(
-                                    'theme_location' => 'main-menu',
+                                    // 'theme_location' => 'main-menu',
+                                    'theme_location' => 'my-navigation-menu',
                                     'container' => false,
                                     'menu_class' => '',
                                     'fallback_cb' => '__return_false',

@@ -39,9 +39,9 @@
 
         <header id="masthead" class="site-header">
 
-            <div class="">
+            <div class="sticky-top bg-white">
 
-                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md sticky-top bg-white navbar-white">
+                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
                     <div class="container-fluid">
                         <!-- ## SideNavBar Menu ## -->
@@ -59,14 +59,16 @@
                         <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
                             <div class="offcanvas-header bg-light">
                                 <span class="h5 text-danger mb-0">
-                                    <?php #esc_html_e('Menu', 'bootscore'); ?>
+                                    <?php #esc_html_e('Menu', 'bootscore'); 
+                                    ?>
                                     <h2>tot doidsj oisdh oisdh sd</h2>
                                 </span>
                                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                         
                             <div class="offcanvas-header hover cursor-pointer bg-light" data-bs-dismiss="offcanvas">
-                                <i class="fas fa-chevron-left"></i> <?php #esc_html_e('Close menu', 'bootscore'); ?>
+                                <i class="fas fa-chevron-left"></i> <?php #esc_html_e('Close menu', 'bootscore'); 
+                                                                    ?>
 
                             </div>
                         </div> -->
