@@ -71,7 +71,7 @@ function bootscore_swiper($atts)
 
         <!-- Swiper -->
 
-        <div class="px-5 position-relative">
+        <div class="position-relative">
 
             <div class="cards swiper-container swiper position-static">
 
@@ -117,7 +117,7 @@ function bootscore_swiper($atts)
                                         ?>
                                     </div>
                                     <div class="mt-auto text-start">
-                                        <a class="btn btn-primary read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+                                        <a class="btn btn-dark read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
                                     </div>
                                 </div>
 
