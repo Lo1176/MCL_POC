@@ -1,3 +1,16 @@
+/* large and medium devise */
+@media (min-width: 992px) {
+    #nav-main .navbar-expand-lg .offcanvas {
+        visibility: hidden;
+    }
+    
+}
+@media (min-width: 768px) {
+    #nav-main .navbar-expand-md .offcanvas {
+        visibility: hidden;
+    }
+}
+
 /* Smartphone */
 @media screen and (max-width: 600px) {
     #mcl-logo-header {
@@ -5,6 +18,7 @@
         position: inherit;
         top: 0;
         height: fit-content;
+        z-index: 1010;
 
     }
     #nav-main

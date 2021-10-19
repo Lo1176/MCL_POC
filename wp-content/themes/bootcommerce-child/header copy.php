@@ -44,12 +44,34 @@
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
                     <div class="container-fluid">
+                        <!-- ## SideNavBar Menu ## -->
+                        <!-- Navbar Toggler LEFT for large devise-->
+                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <!-- END SideNav Menu -->
 
                         <!-- ## Logo Brand ## -->
                         <a class="navbar-brand align-center xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
                         <a class="navbar-brand md d-none d-md-block" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo" class="logo md"></a>
 
+                        <!-- Offcanvas Navbar -->
+                        <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
+                            <div class="offcanvas-header bg-light">
+                                <span class="h5 text-danger mb-0">
+                                    <?php #esc_html_e('Menu', 'bootscore'); 
+                                    ?>
+                                    <h2>tot doidsj oisdh oisdh sd</h2>
+                                </span>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                        
+                            <div class="offcanvas-header hover cursor-pointer bg-light" data-bs-dismiss="offcanvas">
+                                <i class="fas fa-chevron-left"></i> <?php #esc_html_e('Close menu', 'bootscore'); 
+                                                                    ?>
 
+                            </div>
+                        </div> -->
 
                         <div class="header-actions d-flex align-items-center">
 
@@ -83,15 +105,9 @@
                             </button>
 
                             <!-- Navbar Toggler Right for small devise-->
-                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
-                                <!-- <button class="btn btn-outline-primary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar"> -->
+                            <button class="btn btn-outline-primary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                                 <i class="fas fa-bars"></i>
                             </button>
-                            <!-- Burger-btn toggler LEFT for large devise-->
-                            <!-- <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
-                                <i class="fas fa-bars"></i>
-                            </button> -->
-                            <!-- END Burger-btn -->
 
                         </div><!-- .header-actions -->
 
@@ -112,7 +128,7 @@
 
             </div><!-- .fixed-top .bg-light -->
 
-            <!-- offcanvas sideNavBar on the left -->
+            <!-- offcanvas sideNavBar  -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
                 <div class="offcanvas-header cursor-pointer hover bg-white text-dark" data-bs-dismiss="offcanvas">
                     <?php esc_html_e('Close menu', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
@@ -132,10 +148,10 @@
                         ));
                         ?>
                         <!-- Bootstrap 5 Nav Walker Main Menu End -->
+
                     </div>
                 </div>
             </div>
-
             <!-- offcanvas user -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-user">
                 <div class="offcanvas-header cursor-pointer hover bg-light text-dark" data-bs-dismiss="offcanvas">
