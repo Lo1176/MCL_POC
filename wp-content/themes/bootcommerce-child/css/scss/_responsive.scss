@@ -25,9 +25,17 @@
         .container-fluid {
             justify-content: flex-end;
         }
-    .img-fluid {
-        width: 100vw;
-        margin-bottom: 0px;
+    
+    .brand {
+        .figure {
+            margin-bottom: 4px;
+            .img-fluid {
+                width: 100vw;
+                margin-bottom: 0px;
+            }
+
+        }
     }
+   
 
 }
