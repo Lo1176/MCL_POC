@@ -20,11 +20,11 @@ class WC_Gateway_Revolut_Pay extends WC_Payment_Gateway_Revolut
     public function __construct()
     {
         $this->id = 'revolut_pay';
-        $this->method_title = __('Revolut Gateway - Revolut Pay', 'woocommerce-gateway-revolut');
-        $this->tab_title = __('Revolut Pay', 'woocommerce-gateway-revolut');
+        $this->method_title = __('Revolut Gateway - Revolut Pay', 'revolut-gateway-for-woocommerce');
+        $this->tab_title = __('Revolut Pay', 'revolut-gateway-for-woocommerce');
 
-        $this->default_title = __('Pay with Revolut', 'woocommerce-gateway-revolut');
-        $this->method_description = sprintf(__('Accept payments easily and securely via %1$sRevolut%2$s.', 'woocommerce-gateway-revolut'), '<a href="https://www.revolut.com/business/online-payments">', '</a>');
+        $this->default_title = __('Pay with Revolut', 'revolut-gateway-for-woocommerce');
+        $this->method_description = sprintf(__('Accept payments easily and securely via %1$sRevolut%2$s.', 'revolut-gateway-for-woocommerce'), '<a href="https://www.revolut.com/business/online-payments">', '</a>');
 
         $this->title = $this->get_option('title');
         $this->description = $this->get_option('description');

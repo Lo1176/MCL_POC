@@ -1,0 +1,314 @@
+# Copyright (C) 2021 Revolut
+# This file is distributed under the same license as the Revolut Gateway for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Revolut Gateway for WooCommerce 2.3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/revolut-gateway-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-10-18T15:38:47+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: revolut-gateway-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "Revolut Gateway for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/revolut-gateway-for-woocommerce/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Accept card payments easily and securely via Revolut."
+msgstr ""
+
+#. Author of the plugin
+#: includes/class-wc-gateway-revolut-privacy.php:10
+msgid "Revolut"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.revolut.com/business/online-payments"
+msgstr ""
+
+#: api/RevolutController.php:83
+msgid "Payment has been successfully captured (Order ID: "
+msgstr ""
+
+#: gateway-revolut.php:97
+msgid "Settings"
+msgstr ""
+
+#: gateway-revolut.php:98
+msgid "Support"
+msgstr ""
+
+#: gateway-revolut.php:99
+msgid "Docs"
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:171
+#: includes/gateways/class-wc-gateway-revolut-cc.php:95
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:172
+#: includes/gateways/class-wc-gateway-revolut-cc.php:96
+msgid "Enable "
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:174
+#: includes/gateways/class-wc-gateway-revolut-cc.php:98
+msgid "This controls whether or not this gateway is enabled within WooCommerce."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:179
+#: includes/gateways/class-wc-gateway-revolut-cc.php:103
+msgid "Title"
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:181
+#: includes/gateways/class-wc-gateway-revolut-cc.php:105
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:247
+msgid "Customer will not be able to get a "
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:249
+msgid "Cannot "
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:966
+msgid "Revolut requires an API Key to work."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:987
+msgid "Can't retrieve Revolut Order ID right now. Try again later or contact support via the Revolut Business app or web portal."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:999
+msgid "Order amount can't be partially captured. Please try again or capture this payment from your Revolut Business web portal."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1008
+msgid "Payment amount has been captured successfully."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1011
+msgid "Order capture wasn't successful. Please try again or check your Revolut Business web portal for more information"
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1070
+msgid "Can't retrieve order information right now. Please try again later or process the refund via your Revolut Business account."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1075
+msgid "The amount remaining for this order is less than the amount being refunded. Please check your Revolut Business account."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1081
+msgid "Revolut: Can't refund this amount for this order. Please check your Revolut Business account."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1095
+msgid "Order has been successfully refunded (Refund ID: "
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1100
+msgid "Revolut: This amount can't be refunded for this order. Please check your Revolut Business account."
+msgstr ""
+
+#: includes/abstract/abstract-wc-gateway-revolut.php:1103
+msgid "Revolut: Incomplete order can't be refunded"
+msgstr ""
+
+#: includes/class-wc-gateway-revolut-privacy.php:12
+msgid "WooCommerce Revolut Order Data"
+msgstr ""
+
+#: includes/class-wc-gateway-revolut-privacy.php:17
+msgid "WooCommerce Revolut Data"
+msgstr ""
+
+#: includes/class-wc-gateway-revolut-privacy.php:56
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. %1$sLearn more about how this works, including what you may want to include in your privacy policy.%2$s"
+msgstr ""
+
+#: includes/class-wc-gateway-revolut-privacy.php:80
+msgid "Orders"
+msgstr ""
+
+#: includes/class-wc-gateway-revolut-privacy.php:84
+msgid "Revolut token"
+msgstr ""
+
+#: includes/class-wc-gateway-revolut-privacy.php:154
+msgid "Revolut Order Data Erased."
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:22
+msgid "Revolut Gateway - Credit Cards"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:23
+msgid "Credit Cards"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:25
+msgid "Pay with card"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:26
+msgid "Accept card payments easily and securely via %1$sRevolut%2$s."
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:109
+msgid "Card widget style"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:112
+msgid "Customise card widget style"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:113
+msgid "Enable"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:115
+msgid "By enabling this option you can customize the style of the Revolut card widget"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:120
+msgid "Card widget background color"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:122
+msgid "This controls the background color of the Revolut card widget"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:127
+msgid "Card widget font color"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:129
+msgid "This controls the text color of the Revolut Card widget"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:134
+msgid "Revolut logo theme"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:139
+msgid "Dark"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:140
+msgid "Light"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:142
+msgid "This controls the color of the Revolut"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:410
+msgid "N/A"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:414
+msgid "Via %1$s card ending in %2$s"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:552
+msgid "Save payment information to my account for future purchases."
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-cc.php:572
+msgid "Update the Payment Method used for all of my active subscriptions."
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-pay.php:23
+msgid "Revolut Gateway - Revolut Pay"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-pay.php:24
+msgid "Revolut Pay"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-pay.php:26
+msgid "Pay with Revolut"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-revolut-pay.php:27
+msgid "Accept payments easily and securely via %1$sRevolut%2$s."
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:11
+msgid "API Settings"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:36
+msgid "Revolut Gateway - API Settings"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:39
+msgid "Select Mode"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:40
+msgid "Select mode between live mode and sandbox."
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:45
+msgid "Sandbox"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:46
+msgid "Live"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:51
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:60
+msgid "API Key from your Merchant settings on Revolut."
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:58
+msgid "API Key Live"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:66
+msgid "Setup Webhook Sandbox"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:73
+msgid "Setup Webhook Live"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:80
+msgid "Payment Action"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:84
+msgid "Authorize Only"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:85
+msgid "Authorize and Capture"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:93
+msgid "Automatically capture order in Revolut"
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:95
+msgid "Automatically try to capture orders when their status is changed to Processing or Completed."
+msgstr ""
+
+#: includes/settings/class-wc-gateway-revolut-api-settings.php:193
+msgid "Set up failed. Please re-check your API and action mode"
+msgstr ""

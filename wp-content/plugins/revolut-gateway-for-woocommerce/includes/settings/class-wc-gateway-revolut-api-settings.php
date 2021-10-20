@@ -8,7 +8,7 @@ class WC_Revolut_Settings_API extends WC_Settings_API
     public function __construct()
     {
         $this->id = 'revolut';
-        $this->tab_title = __('API Settings', 'woocommerce-gateway-revolut');
+        $this->tab_title = __('API Settings', 'revolut-gateway-for-woocommerce');
         $this->init_form_fields();
         $this->init_settings();
         $this->hooks();
@@ -33,66 +33,66 @@ class WC_Revolut_Settings_API extends WC_Settings_API
         $this->form_fields = array(
             'title' => array(
                 'type' => 'title',
-                'title' => __('Revolut Gateway - API Settings', 'woocommerce-gateway-revolut'),
+                'title' => __('Revolut Gateway - API Settings', 'revolut-gateway-for-woocommerce'),
             ),
             'mode' => array(
-                'title' => __('Select Mode', 'woocommerce-gateway-revolut'),
-                'description' => __('Select mode between live mode and sandbox.', 'woocommerce-gateway-revolut'),
+                'title' => __('Select Mode', 'revolut-gateway-for-woocommerce'),
+                'description' => __('Select mode between live mode and sandbox.', 'revolut-gateway-for-woocommerce'),
                 'desc_tip' => true,
                 'type' => 'select',
                 'default' => $mode,
                 'options' => array(
-                    'sandbox' => __('Sandbox', 'woocommerce-gateway-revolut'),
-                    'live' => __('Live', 'woocommerce-gateway-revolut')
+                    'sandbox' => __('Sandbox', 'revolut-gateway-for-woocommerce'),
+                    'live' => __('Live', 'revolut-gateway-for-woocommerce')
                 )
             ),
             'api_key_sandbox' => array(
                 'title' => __('API Key Sandbox'),
-                'description' => __('API Key from your Merchant settings on Revolut.', 'woocommerce-gateway-revolut'),
+                'description' => __('API Key from your Merchant settings on Revolut.', 'revolut-gateway-for-woocommerce'),
                 'desc_tip' => true,
                 'default' => $api_key_sandbox,
                 'type' => 'password',
                 'class' => 'enabled-sandbox'
             ),
             'api_key' => array(
-                'title' => __('API Key Live', 'woocommerce-gateway-revolut'),
+                'title' => __('API Key Live', 'revolut-gateway-for-woocommerce'),
                 'type' => 'password',
-                'description' => __('API Key from your Merchant settings on Revolut.', 'woocommerce-gateway-revolut'),
+                'description' => __('API Key from your Merchant settings on Revolut.', 'revolut-gateway-for-woocommerce'),
                 'desc_tip' => true,
                 'default' => $api_key_live,
                 'class' => 'enabled-live'
             ),
             'setup_webhook_sandbox' => array(
-                'title' => __('Setup Webhook Sandbox', 'woocommerce-gateway-revolut'),
+                'title' => __('Setup Webhook Sandbox', 'revolut-gateway-for-woocommerce'),
                 'type' => 'text',
                 'description' => '<button class="setup-webhook" style="min-height: 30px;"><span id="span-for-active-button-sandbox">Setup</span></button>
                                 <p id="text_for_isset_webhook_sandbox"><i>Webhook has been set</i></p>
             					<p>Setup the Webhook to sync your Woocommerce orders when an order is completed on Revolut\'s side</p>'
             ),
             'setup_webhook_live' => array(
-                'title' => __('Setup Webhook Live', 'woocommerce-gateway-revolut'),
+                'title' => __('Setup Webhook Live', 'revolut-gateway-for-woocommerce'),
                 'type' => 'text',
                 'description' => '<button class="setup-webhook" style="min-height: 30px;"><span id="span-for-active-button-live">Setup</span></button>
                                 <p id="text_for_isset_webhook_live"><i>Webhook has been set</i></p>
             					<p>Setup the Webhook to sync your Woocommerce orders when an order is completed on Revolut\'s side</p>'
             ),
             'payment_action' => array(
-                'title' => __('Payment Action', 'woocommerce-gateway-revolut'),
+                'title' => __('Payment Action', 'revolut-gateway-for-woocommerce'),
                 'type' => 'select',
                 'default' => 'authorize_and_capture',
                 'options' => array(
-                    'authorize' => __('Authorize Only', 'woocommerce-gateway-revolut'),
-                    'authorize_and_capture' => __('Authorize and Capture', 'woocommerce-gateway-revolut')
+                    'authorize' => __('Authorize Only', 'revolut-gateway-for-woocommerce'),
+                    'authorize_and_capture' => __('Authorize and Capture', 'revolut-gateway-for-woocommerce')
                 ),
                 'description' => __('Select "Authorize Only" mode. This allows the payment to be captured up to 7 days after the user has placed the order (e.g. when the goods are shipped or received). 
                 If not selected, Revolut will try to authorize and capture all payments.', 'woocommece-gateway-revolut'),
                 'desc_tip' => true,
             ),
             'accept_capture' => array(
-                'title' => __('', 'woocommerce-gateway-revolut'),
-                'label' => __('Automatically capture order in Revolut', 'woocommerce-gateway-revolut'),
+                'title' => __('', 'revolut-gateway-for-woocommerce'),
+                'label' => __('Automatically capture order in Revolut', 'revolut-gateway-for-woocommerce'),
                 'type' => 'checkbox',
-                'description' => __('Automatically try to capture orders when their status is changed to Processing or Completed.', 'woocommerce-gateway-revolut'),
+                'description' => __('Automatically try to capture orders when their status is changed to Processing or Completed.', 'revolut-gateway-for-woocommerce'),
                 'default' => 'yes'
             ),
         );
@@ -145,7 +145,7 @@ class WC_Revolut_Settings_API extends WC_Settings_API
                                         Account</a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="https://business.revolut.com/merchant/api">Get your Production API key</a>
+                                    <a target="_blank" href="https://business.revolut.com/settings/merchant-api">Get your Production API key</a>
                                     and
                                     paste it in the corresponding field below
                                 </li>
@@ -190,7 +190,7 @@ class WC_Revolut_Settings_API extends WC_Settings_API
 
                 if ($message) {
                     echo '<div class="error revolut-passphrase-message"><p>'
-                        . __('Set up failed. Please re-check your API and action mode', 'woocommerce-gateway-revolut')
+                        . __('Set up failed. Please re-check your API and action mode', 'revolut-gateway-for-woocommerce')
                         . '</p></div>';
                 }
             }

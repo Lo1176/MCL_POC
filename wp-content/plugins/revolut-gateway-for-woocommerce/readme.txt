@@ -3,7 +3,7 @@ Contributors: revolutbusiness
 Tags: revolut, revolut business, payments, gateway, payment gateway, credit card, card
 Requires at least: 4.4
 Tested up to: 5.7
-Stable tag: 2.2.8
+Stable tag: 2.3.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.apache.org/licenses/LICENSE-2.0
@@ -100,6 +100,15 @@ Now you can start accepting real payments in your WooCommerce online store.
 5. The Revolut Pay Button settings
 
 == Changelog ==
+= 2.3.0 =
+* Optimize checkout validation
+
+= 2.2.9 =
+* Fix manual order page stack in loading issue
+* Fix API callback issue
+* Localization files added
+* Information about failed Payment attempts added into the order
+
 = 2.2.8 =
 * Update available Revolut order currency list
 * Update documentation link

@@ -5,7 +5,8 @@
  * Description: Accept card payments easily and securely via Revolut.
  * Author: Revolut
  * Author URI: https://www.revolut.com/business/online-payments
- * Version: 2.2.8
+ * Text Domain: revolut-gateway-for-woocommerce
+ * Version: 2.3.0
  * Requires at least: 4.4
  * Tested up to: 5.7
  * WC tested up to: 5.2
@@ -14,7 +15,7 @@
  */
 defined('ABSPATH') || exit;
 define('REVOLUT_PATH', plugin_dir_path(__FILE__));
-define('WC_GATEWAY_REVOLUT_VERSION', '2.2.8');
+define('WC_GATEWAY_REVOLUT_VERSION', '2.3.0');
 
 /**
  * Manage all dependencies
@@ -40,7 +41,7 @@ function woocommerce_revolut_init()
     define('WC_REVOLUT_CARD_WIDGET_TEXT_COLOR', '#848484');
     define('WC_REVOLUT_PLUGIN_URL', untrailingslashit(plugins_url(basename(plugin_dir_path(__FILE__)), basename(__FILE__))));
     add_action('admin_enqueue_scripts', 'load_admin_scripts');
-    load_plugin_textdomain('woocommerce-gateway-revolut', false, trailingslashit(dirname(plugin_basename(__FILE__))));
+    load_plugin_textdomain('revolut-gateway-for-woocommerce', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
     add_action('wp_ajax_set_webhook', 'setup_revolut_webhook');
     add_filter('woocommerce_payment_gateways', 'woocommerce_revolut_add_gateways');
     add_action('wp_enqueue_scripts', 'load_scripts');
@@ -93,9 +94,9 @@ function woocommerce_revolut_plugin_links($links)
     );
 
     $plugin_links = array(
-        '<a href="' . esc_url($settings_url) . '">' . __('Settings', 'woocommerce-gateway-revolut') . '</a>',
-        '<a href="https://business.revolut.com/help-centre">' . __('Support', 'woocommerce-gateway-revolut') . '</a>',
-        '<a href="https://developer.revolut.com/docs/accept-payments/#plugins-plugins-woocommerce">' . __('Docs', 'woocommerce-gateway-revolut') . '</a>',
+        '<a href="' . esc_url($settings_url) . '">' . __('Settings', 'revolut-gateway-for-woocommerce') . '</a>',
+        '<a href="https://business.revolut.com/help-centre">' . __('Support', 'revolut-gateway-for-woocommerce') . '</a>',
+        '<a href="https://developer.revolut.com/docs/accept-payments/plugins/woocommerce/configuration">' . __('Docs', 'revolut-gateway-for-woocommerce') . '</a>',
     );
 
     return array_merge($plugin_links, $links);

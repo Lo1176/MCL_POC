@@ -7,14 +7,14 @@ class WC_Gateway_Revolut_Privacy extends WC_Abstract_Privacy
 {
     public function __construct()
     {
-        parent::__construct(__('Revolut', 'woocommerce-gateway-revolut'));
+        parent::__construct(__('Revolut', 'revolut-gateway-for-woocommerce'));
 
-        $this->add_exporter('woocommerce-gateway-revolut-order-data', __('WooCommerce Revolut Order Data', 'woocommerce-gateway-revolut'), array(
+        $this->add_exporter('revolut-gateway-for-woocommerce-order-data', __('WooCommerce Revolut Order Data', 'revolut-gateway-for-woocommerce'), array(
             $this,
             'order_data_exporter'
         ));
 
-        $this->add_eraser('woocommerce-gateway-revolut-order-data', __('WooCommerce Revolut Data', 'woocommerce-gateway-revolut'), array(
+        $this->add_eraser('revolut-gateway-for-woocommerce-order-data', __('WooCommerce Revolut Data', 'revolut-gateway-for-woocommerce'), array(
             $this,
             'order_data_eraser'
         ));
@@ -53,7 +53,7 @@ class WC_Gateway_Revolut_Privacy extends WC_Abstract_Privacy
      */
     public function get_privacy_message()
     {
-        return wpautop(sprintf(__('By using this extension, you may be storing personal data or sharing data with an external service. <a href="%s" target="_blank">Learn more about how this works, including what you may want to include in your privacy policy.</a>', 'woocommerce-gateway-revolut'), 'https://docs.woocommerce.com/document/privacy-payments/#woocommerce-gateway-revolut'));
+        return wpautop(sprintf(__('By using this extension, you may be storing personal data or sharing data with an external service. %1$sLearn more about how this works, including what you may want to include in your privacy policy.%2$s', 'revolut-gateway-for-woocommerce'), '<a href="https://docs.woocommerce.com/document/privacy-payments/#revolut-gateway-for-woocommerce" target="_blank">', '</a>'));
     }
 
     /**
@@ -77,11 +77,11 @@ class WC_Gateway_Revolut_Privacy extends WC_Abstract_Privacy
             foreach ($orders as $order) {
                 $data_to_export[] = array(
                     'group_id' => 'woocommerce_orders',
-                    'group_label' => __('Orders', 'woocommerce-gateway-revolut'),
+                    'group_label' => __('Orders', 'revolut-gateway-for-woocommerce'),
                     'item_id' => 'order-' . $order->get_id(),
                     'data' => array(
                         array(
-                            'name' => __('Revolut token', 'woocommerce-gateway-revolut'),
+                            'name' => __('Revolut token', 'revolut-gateway-for-woocommerce'),
                             'value' => get_post_meta($order->get_id(), '_revolut_pre_order_token', true),
                         ),
                     ),
@@ -151,7 +151,7 @@ class WC_Gateway_Revolut_Privacy extends WC_Abstract_Privacy
 
         delete_post_meta($order_id, '_revolut_pre_order_token');
 
-        return array(true, false, array(__('Revolut Order Data Erased.', 'woocommerce-gateway-revolut')));
+        return array(true, false, array(__('Revolut Order Data Erased.', 'revolut-gateway-for-woocommerce')));
     }
 }
 

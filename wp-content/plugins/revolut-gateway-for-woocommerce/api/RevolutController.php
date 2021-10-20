@@ -66,6 +66,11 @@ class RevolutController extends \WC_REST_Data_Controller
         }
 
         $wc_order_id = $this->get_wc_order_id($order_id);
+
+        if (empty($wc_order_id)) {
+            return new WP_REST_Response(['status' => 'Failed'], 404);
+        }
+
         $wc_order = wc_get_order($wc_order_id['wc_order_id']);
         $wc_order_status = empty($wc_order->get_status()) ? "" : $wc_order->get_status();
         $check_wc_status = $wc_order_status == "processing" || $wc_order_status == "completed";
@@ -75,7 +80,7 @@ class RevolutController extends \WC_REST_Data_Controller
         if (!empty($order_id) && $check_capture != "yes") {
             if (!empty($wc_order) && empty($wc_order->get_transaction_id()) & !$check_wc_status) {
                 if ($event == "ORDER_COMPLETED") {
-                    $wc_order->add_order_note(__('Payment has been successfully captured (Order ID: ' . $order_id . ')', 'woocommerce-gateway-revolut'));
+                    $wc_order->add_order_note(__('Payment has been successfully captured (Order ID: ' . $order_id . ')', 'revolut-gateway-for-woocommerce'));
                     $wc_order->payment_complete($order_id);
                     update_post_meta($wc_order_id['wc_order_id'], 'revolut_capture', "yes");
                     $data = [

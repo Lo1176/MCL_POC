@@ -8,6 +8,8 @@ if (!class_exists('WC_Payment_Gateway')) {
 
 define('FAILED_CARD', 2005);
 
+class RevolutPaymentErrorException extends Exception { }
+
 /**
  * Abstract Revolut Payment Gateway
  * @since 2.0
@@ -26,6 +28,8 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
 
     protected $default_title;
 
+    protected $user_friendly_error_message_code = 1000;
+
     /**
      * Constructor
      */
@@ -34,8 +38,8 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
         $this->api_settings = revolut_wc()->api_settings;
         $this->has_fields = true;
         $this->icon = $this->get_icon();
-        $this->available_currency_list = array('AED','AUD','BGN','BHD','CAD','CHF','CZK','DKK','EUR','GBP','HKD','HRK','HUF','ILS','ISK','JPY','KWD','MXN','NOK','NZD','OMR','PLN','QAR','RON','RUB','SAR','SEK','SGD','THB','TRY','UAH','USD','ZAR');
-        $this->card_payments_currency_list = array('AED','AUD','BGN','BHD','CAD','CHF','CZK','DKK','EUR','GBP','HKD','HUF','ISK','JPY','KWD','NOK','NZD','OMR','PLN','QAR','RON','SAR','SEK','SGD','TRY','UAH','USD','ZAR');
+        $this->available_currency_list = array('AED','AUD','BHD','CAD','CHF','CZK','DKK','EUR','GBP','HKD','HRK','HUF','ILS','ISK','JPY','KWD','MXN','NOK','NZD','OMR','PLN','QAR','RON','RUB','SAR','SEK','SGD','THB','TRY','UAH','USD','ZAR');
+        $this->card_payments_currency_list = array('AED','AUD','BHD','CAD','CHF','CZK','DKK','EUR','GBP','HKD','HUF','ISK','JPY','KWD','NOK','NZD','OMR','PLN','QAR','RON','SAR','SEK','SGD','TRY','UAH','USD','ZAR');
         $this->api_key_sandbox = $this->api_settings->get_option('api_key_sandbox');
 
         //get setting from old version
@@ -67,6 +71,20 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
         add_action('woocommerce_order_status_changed', array($this, 'order_action_from_woocommerce'), 10, 3);
         add_action('woocommerce_pay_order_before_submit', array($this, 'add_shipping_information'));
         add_filter('wc_revolut_settings_nav_tabs', array($this, 'admin_nav_tab'));
+        add_action( 'woocommerce_checkout_order_processed', array( $this, 'woocommerce_checkout_revolut_order_processed' ), 10, 3 );
+    }
+
+    public function woocommerce_checkout_revolut_order_processed($order_id, $posted_data, $order)
+    {
+        if (!isset($_REQUEST['revolut_create_wc_order']) || $posted_data['payment_method'] !== $this->id) {
+            return;
+        }
+
+        WC()->session->set('order_awaiting_payment', $order_id);
+
+        wp_send_json(array(
+            "result" => "revolut_wc_order_created",
+        ));
     }
 
     /**
@@ -150,17 +168,17 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
     {
         $this->form_fields = array(
             'enabled' => array(
-                'title' => __('Enable/Disable', 'woocommerce-gateway-revolut'),
-                'label' => __('Enable ', 'woocommerce-gateway-revolut') . $this->method_title,
+                'title' => __('Enable/Disable', 'revolut-gateway-for-woocommerce'),
+                'label' => __('Enable ', 'revolut-gateway-for-woocommerce') . $this->method_title,
                 'type' => 'checkbox',
-                'description' => __('This controls whether or not this gateway is enabled within WooCommerce.', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls whether or not this gateway is enabled within WooCommerce.', 'revolut-gateway-for-woocommerce'),
                 'default' => 'yes',
                 'desc_tip' => true,
             ),
             'title' => array(
-                'title' => __('Title', 'woocommerce-gateway-revolut'),
+                'title' => __('Title', 'revolut-gateway-for-woocommerce'),
                 'type' => 'text',
-                'description' => __('This controls the title which the user sees during checkout.', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls the title which the user sees during checkout.', 'revolut-gateway-for-woocommerce'),
                 'default' => $this->default_title,
                 'desc_tip' => true,
             ),
@@ -226,9 +244,9 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
 
         if (!isset($json['id'])) {
             if ($json['code'] == FAILED_CARD) {
-                throw new Exception(__('Customer will not be able to get a ' . $action . ' using this card!', 'woocommerce-gateway-revolut'));
+                throw new Exception(__('Customer will not be able to get a ' . $action . ' using this card!', 'revolut-gateway-for-woocommerce'));
             }
-            throw new Exception(__('Cannot ' . $action . ' Order - Error Id: ' . $json['errorId'] . '.', 'woocommerce-gateway-revolut'));
+            throw new Exception(__('Cannot ' . $action . ' Order - Error Id: ' . $json['errorId'] . '.', 'revolut-gateway-for-woocommerce'));
         }
 
         return $json;
@@ -591,6 +609,11 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
      */
     public function process_payment($wc_order_id)
     {
+        //if request contains create key, that means request is for validating order
+        if (isset($_REQUEST['revolut_create_wc_order'])) {
+            return false;
+        }
+
         $wc_order = wc_get_order($wc_order_id);
 
         try {
@@ -613,6 +636,12 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
             } catch (Exception $e) {
                 $this->logError($e->getMessage());
             }
+
+            //check payment errors
+            if (!empty($_POST['revolut_payment_error'])) {
+                throw new Exception($_POST['revolut_payment_error'], $this->user_friendly_error_message_code);
+            }
+
             //check if neeeds to process payment with previously saved method
             $previously_saved_wc_token = $this->maybe_pay_by_saved_method($revolut_order_id);
             //payment should be processed until this point, if not throw an error
@@ -646,10 +675,15 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
             $this->logError($e->getMessage());
             $wc_order->update_status('failed');
             $wc_order->add_order_note("Customer attempted to pay, but the payment failed or got declined. (Error: " . $e->getMessage() . ")");
-            wc_add_notice('Something went wrong', 'error');
+            $error_message_for_user = 'Something went wrong';
+            if ($e->getCode() === $this->user_friendly_error_message_code) {
+                $error_message_for_user = $e->getMessage();
+            }
+
+            wc_add_notice($error_message_for_user, 'error');
 
             return array(
-                'messages' => 'Something went wrong',
+                'messages' => $error_message_for_user,
                 'result' => 'fail',
                 'redirect' => ''
             );
@@ -736,7 +770,13 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
      */
     public function payment_fields()
     {
-        $display_tokenization = $this->supports('tokenization') && (is_checkout() || isset($_GET['pay_for_order']));
+        if ($this->api_settings->get_option('mode') == "sandbox") {
+            if ($this->id == 'revolut_cc') {
+                echo "<p style='color:red'>The payment gateway is in Sandbox Mode. You can use our <a href='https://developer.revolut.com/docs/accept-payments/tutorials/test-in-the-sandbox-environment/test-cards' target='_blank'>test cards</a> to simulate different payment scenarios.";
+            } else if ($this->id == 'revolut_pay') {
+                echo "<p style='color:red'>The payment gateway is in Sandbox Mode.";
+            }
+        }
 
         if (!$this->check_currency_support()) {
             $this->currency_support_error();
@@ -746,6 +786,7 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
         $public_id = $this->get_revolut_public_id();
         $revolut_customer_id = $this->get_revolut_customer_id(get_current_user_id());
         $descriptor = new Revolut_Order_Descriptor(WC()->cart->get_total(''), get_woocommerce_currency(), $revolut_customer_id);
+        $display_tokenization = !empty($revolut_customer_id) && $this->supports('tokenization') && (is_checkout() || isset($_GET['pay_for_order']));
         try {
             if ($public_id === null || is_add_payment_method_page()) {
                 $public_id = $this->create_revolut_order($descriptor);
@@ -922,7 +963,7 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
 
         if (empty($this->api_key) && empty($this->api_key_sandbox)) {
             echo '<div class="error revolut-passphrase-message"><p>'
-                . __('Revolut requires an API Key to work.', 'woocommerce-gateway-revolut')
+                . __('Revolut requires an API Key to work.', 'revolut-gateway-for-woocommerce')
                 . '</p></div>';
         }
     }
@@ -942,8 +983,8 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
         if ($wc_order->get_payment_method() == 'revolut' || $wc_order->get_payment_method() == 'revolut_cc' || $wc_order->get_payment_method() == 'revolut_pay') {
             $revolut_order_id = $this->get_revolut_order($order_id);
 
-            if (!isset($revolut_order_id)) {
-                throw new Exception(__('Can\'t retrieve Revolut Order ID right now. Try again later or contact support via the Revolut Business app or web portal.', 'woocommerce-gateway-revolut'));
+            if (empty($revolut_order_id)) {
+                throw new Exception(__('Can\'t retrieve Revolut Order ID right now. Try again later or contact support via the Revolut Business app or web portal.', 'revolut-gateway-for-woocommerce'));
             } else if ($this->api_settings->get_option('accept_capture') == 'yes' && $revolut_order_id != "") {
                 $order = $this->api_client->get('/orders/' . $revolut_order_id);
                 $state = isset($order['state']) ? $order['state'] : "";
@@ -955,7 +996,7 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
                         $currency = isset($order['order_amount']['currency']) ? $order['order_amount']['currency'] : "";
                         $total = $this->isZeroDecimal($currency) ? $wc_order->get_total() : $wc_order->get_total() * 100;
                         if ($total != $order_amount) {
-                            $wc_order->add_order_note(__('Order amount can\'t be partially captured. Please try again or capture this payment from your Revolut Business web portal.', 'woocommerce-gateway-revolut'));
+                            $wc_order->add_order_note(__('Order amount can\'t be partially captured. Please try again or capture this payment from your Revolut Business web portal.', 'revolut-gateway-for-woocommerce'));
                         }
 
                         if ($state == "AUTHORISED") {
@@ -964,10 +1005,10 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
 
                             if ($order_response['state'] == 'COMPLETED' || $order_response['state'] == "IN_SETTLEMENT") {
                                 $wc_order->payment_complete($revolut_order_id);
-                                $wc_order->add_order_note(__('Payment amount has been captured successfully.', 'woocommerce-gateway-revolut'));
+                                $wc_order->add_order_note(__('Payment amount has been captured successfully.', 'revolut-gateway-for-woocommerce'));
                                 update_post_meta($order_id, 'revolut_capture', "yes");
                             } else {
-                                $wc_order->add_order_note(__('Order capture wasn\'t successful. Please try again or check your Revolut Business web portal for more information', 'woocommerce-gateway-revolut'));
+                                $wc_order->add_order_note(__('Order capture wasn\'t successful. Please try again or check your Revolut Business web portal for more information', 'revolut-gateway-for-woocommerce'));
                             }
                         }
                     }
@@ -1026,18 +1067,18 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
         $revolut_order_id = $this->get_revolut_order($order_id);
 
         if (!isset($revolut_order_id)) {
-            throw new Exception(__('Can\'t retrieve order information right now. Please try again later or process the refund via your Revolut Business account.', 'woocommerce-gateway-revolut'));
+            throw new Exception(__('Can\'t retrieve order information right now. Please try again later or process the refund via your Revolut Business account.', 'revolut-gateway-for-woocommerce'));
         } else {
             $order = $this->api_client->get('/orders/' . $revolut_order_id);
             if ($order['type'] == "PAYMENT" && $order['state'] == "COMPLETED" || $order['state'] == "IN_SETTLEMENT") {
                 if ($order['refunded_amount']['value'] == $order['order_amount']['value']) {
-                    throw new Exception(__('The amount remaining for this order is less than the amount being refunded. Please check your Revolut Business account.', 'woocommerce-gateway-revolut'));
+                    throw new Exception(__('The amount remaining for this order is less than the amount being refunded. Please check your Revolut Business account.', 'revolut-gateway-for-woocommerce'));
                 }
 
                 $amount = round($amount, 2);
                 $currency = isset($order['order_amount']['currency']) ? $order['order_amount']['currency'] : "";
                 if ($this->isZeroDecimal($currency) && ($amount - floor($amount)) > 0) {
-                    throw new Exception(__('Revolut: Can\'t refund this amount for this order. Please check your Revolut Business account.', 'woocommerce-gateway-revolut'));
+                    throw new Exception(__('Revolut: Can\'t refund this amount for this order. Please check your Revolut Business account.', 'revolut-gateway-for-woocommerce'));
                 }
                 $refund_amount = $this->isZeroDecimal($currency) ? $amount : $amount * 100;
                 $refund_amount_api = (float)$order['refunded_amount']['value'];
@@ -1051,15 +1092,15 @@ abstract class WC_Payment_Gateway_Revolut extends WC_Payment_Gateway_CC
                     );
                     $response = $this->action_revolut_order($revolut_order_id, 'refund', $body);
                     if ($response['type'] == "REFUND" && $response['state'] == "COMPLETED") {
-                        $wc_order->add_order_note(__('Order has been successfully refunded (Refund ID: ' . $response['id'] . ').', 'woocommerce-gateway-revolut'));
+                        $wc_order->add_order_note(__('Order has been successfully refunded (Refund ID: ' . $response['id'] . ').', 'revolut-gateway-for-woocommerce'));
 
                         return true;
                     }
                 } else {
-                    throw new Exception(__('Revolut: This amount can\'t be refunded for this order. Please check your Revolut Business account.', 'woocommerce-gateway-revolut'));
+                    throw new Exception(__('Revolut: This amount can\'t be refunded for this order. Please check your Revolut Business account.', 'revolut-gateway-for-woocommerce'));
                 }
             } else {
-                throw new Exception(__('Revolut: Incomplete order can\'t be refunded', 'woocommerce-gateway-revolut'));
+                throw new Exception(__('Revolut: Incomplete order can\'t be refunded', 'revolut-gateway-for-woocommerce'));
             }
         }
 

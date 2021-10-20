@@ -75,9 +75,10 @@ jQuery(function ($) {
 
     /**
      * Handle validation
-     * @param {string} messages
+     * @param {array} errors
      */
-    function handleValidation(messages) {
+    function handleValidation(errors) {
+        let messages = errors.filter((item) => item != null).map((item) => item.toString())
         displayError(messages);
     }
 
@@ -85,8 +86,22 @@ jQuery(function ($) {
      * Handle error message
      * @param {string} message
      */
-    function handleError(message) {
-        displayError(message);
+    function handleError(messages) {
+        messages = messages.toString().split(',');
+        messages = messages.filter(Boolean);
+        const currentPaymentMethod = getPaymentMethod();
+
+        if (!messages.length || messages.length < 0 || !currentPaymentMethod) {
+            return;
+        }
+
+        let isChangePaymentMethodAddPage = $payment_save.length > 0;
+
+        if (isChangePaymentMethodAddPage) {
+            displayError(messages);
+        } else {
+            handleSuccess(messages);
+        }
     }
 
     /**
@@ -94,13 +109,11 @@ jQuery(function ($) {
      * @param messages
      */
     function displayError(messages) {
-        messages = messages.toString().split(',');
-        messages = messages.filter(Boolean);
-        $('.revolut-error').remove();
         const currentPaymentMethod = getPaymentMethod();
+        $('.revolut-error').remove();
 
         if (!messages.length || messages.length < 0 || !currentPaymentMethod) {
-            return false;
+            return;
         }
 
         let error_view = '<div class="revolut-error woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">' +
@@ -146,6 +159,14 @@ jQuery(function ($) {
     }
 
     /**
+     * Check if Revolut Payment options is selected
+     */
+    function isRevolutPaymentMethodSelected() {
+        const currentPaymentMethod = $('input[name="payment_method"]:checked').val();
+        return currentPaymentMethod === PAYMENT_METHOD.CreditCard || currentPaymentMethod === PAYMENT_METHOD.RevolutPay;
+    }
+
+    /**
      * Check if we should use the saved Payment Method
      */
     function payWithPaymentToken() {
@@ -155,27 +176,32 @@ jQuery(function ($) {
     /**
      * Handle if success
      */
-    function handleSuccess() {
+    function handleSuccess(errorMessage = '') {
         isSubmitting = false;
         isSubmitted = true;
         stopProcessing();
         const currentPaymentMethod = getPaymentMethod();
         const savePaymentMethod = shouldSavePaymentMethod();
+
         const el_input_public_id = '<input type="hidden" class="revolut_public_id" name="revolut_public_id" value="' + currentPaymentMethod.publicId + '">';
         const el_input_save_payment_method = '<input type="hidden" class="revolut_cc-save-payment-method" name="revolut_cc-save-payment-method" value="' + savePaymentMethod + '">';
+        const el_input_payment_error = '<input type="hidden" class="revolut_payment_error" name="revolut_payment_error" value="' + errorMessage + '">';
 
         if ($form.length) {
             $form.append(el_input_public_id);
             $form.append(el_input_save_payment_method);
+            $form.append(el_input_payment_error);
             $form.removeClass('.processing');
             $form.trigger('submit');
         } else if ($order_review.length) {
             $order_review.append(el_input_public_id);
             $order_review.append(el_input_save_payment_method);
+            $order_review.append(el_input_payment_error);
             $order_review.submit();
         } else if ($payment_save.length) {
             $payment_save.append(el_input_public_id);
             $payment_save.append(el_input_save_payment_method);
+            $payment_save.append(el_input_payment_error);
             $payment_save.submit();
         }
     }
@@ -236,7 +262,7 @@ jQuery(function ($) {
      */
     function submitError(errorMessage) {
         $('.woocommerce-NoticeGroup-checkout, .woocommerce-error, .woocommerce-message').remove();
-        $order_review.prepend('<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">' + errorMessage + '</div>'); // eslint-disable-line max-len
+        $form.prepend('<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">' + errorMessage + '</div>'); // eslint-disable-line max-len
         $form.removeClass('processing').unblock();
         $form.find('.input-text, select, input:checkbox').trigger('validate').blur();
         var scrollElement = $('.woocommerce-NoticeGroup-updateOrderReview, .woocommerce-NoticeGroup-checkout');
@@ -290,38 +316,36 @@ jQuery(function ($) {
     function validateCheckoutForm() {
         return new Promise(function (resolve, reject) {
 
-            const json = getCheckoutFormData();
+            if ($body.hasClass('woocommerce-order-pay')) {
+                resolve(true);
+            }
 
             $.ajax({
-                type: "POST",
-                url: wc_revolut.ajaxurl,
-                data: {
-                    action: 'validate_checkout_field',
-                    json: json
-                },
-                success: function (response) {
-                    let response_html = jQuery(response);
-                    let result;
-                    for (i = 0; i < response_html.length; i++) {
-                        if (jQuery(response_html[i]).attr('class') == "revolut-result") {
-                            result = response_html[i].innerHTML;
+                type: 'POST',
+                url: wc_checkout_params.checkout_url,
+                data: $form.serialize() + '&revolut_create_wc_order=1',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.result === 'revolut_wc_order_created' || result.result === 'success') {
+                        resolve(true);
+                    } else if (result.result === 'fail' ||  result.result === 'failure') {
+                        stopProcessing();
+                        resolve(false);
+                        if (typeof result.messages != "undefined") {
+                            submitError(result.messages);
+                        } else {
+                            submitError('<div class="woocommerce-error">' + wc_checkout_params.i18n_checkout_error + '</div>');
                         }
-                    }
-                    try {
-                        if (result == "success") {
-                            resolve(true);
-                        } else
-                            throw 'Result failure';
-                    } catch (err) {
-                        if (result != "success") {
-                            stopProcessing();
-                            submitError(result);
-                            resolve(false);
-                        }
+                    } else {
+                        stopProcessing();
+                        resolve(false);
+                        submitError('<div class="woocommerce-error">Invalid response</div>');
                     }
                 },
-                catch(err) {
-                    reject(err);
+                error: function (jqXHR, textStatus, errorThrown) {
+                    stopProcessing();
+                    resolve(false);
+                    submitError('<div class="woocommerce-error">' + errorThrown + '</div>');
                 }
             });
         });
@@ -337,8 +361,14 @@ jQuery(function ($) {
     function submitOrderPay() {
         const json = getCheckoutFormData();
         if (json.payment_method === PAYMENT_METHOD.CreditCard) {
-            if (isSubmitting) return false;
-            if (isSubmitted) return true;
+            if (isSubmitting) {
+                return false;
+            }
+            if (isSubmitted) {
+                isSubmitted = false;
+                return true;
+            }
+
             startProcessing();
 
             if (payWithPaymentToken()) {
@@ -350,14 +380,6 @@ jQuery(function ($) {
                     getBillingInfo().then(function (billing_info) {
                         if ($body.hasClass('woocommerce-order-pay')) {
                             instance.submit(billing_info);
-
-                            if (cardStatus !== null && cardStatus.completed) {
-                                $form.removeClass('.processing');
-                            } else {
-                                alert('Your card is invalid. Please try again');
-                                stopProcessing();
-                                return false;
-                            }
                         }
                     });
                 } else {
@@ -384,13 +406,6 @@ jQuery(function ($) {
             getCustomerBaseInfo().then(function (billing_info) {
                 if ($body.hasClass('woocommerce-add-payment-method') || isChangePaymentMethodPage) {
                     instance.submit(billing_info);
-                    if (cardStatus !== null && cardStatus.completed) {
-                        $form.removeClass('.processing');
-                    } else {
-                        alert('Your card is invalid. Please try again');
-                        stopProcessing();
-                        return false;
-                    }
                 }
             });
         }
@@ -559,21 +574,27 @@ jQuery(function ($) {
     $form.on('checkout_place_order_revolut_cc', handleCreditCardSubmit);
 
     $order_review.on('submit', function (e) {
-        if ($('.revolut_public_id').length == 0) {
-            e.preventDefault();
-            let isChangePaymentMethodPage = $('#wc-revolut-change-payment-method').length > 0;
-            if (isChangePaymentMethodPage) {
-                submitPaymentMethodSave();
+        if (isRevolutPaymentMethodSelected()) {
+            if ($('.revolut_public_id').length === 0) {
+                e.preventDefault();
+                let isChangePaymentMethodPage = $('#wc-revolut-change-payment-method').length > 0;
+                if (isChangePaymentMethodPage) {
+                    submitPaymentMethodSave();
+                } else {
+                    submitOrderPay();
+                }
             } else {
-                submitOrderPay();
+                startProcessing();
             }
         }
     });
 
     $payment_save.on('submit', function (e) {
-        if ($('.revolut_public_id').length == 0) {
-            e.preventDefault();
-            submitPaymentMethodSave()
+        if (isRevolutPaymentMethodSelected()) {
+            if ($('.revolut_public_id').length === 0) {
+                e.preventDefault();
+                submitPaymentMethodSave()
+            }
         }
     });
 

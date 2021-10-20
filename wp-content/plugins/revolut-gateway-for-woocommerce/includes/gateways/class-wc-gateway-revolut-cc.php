@@ -19,11 +19,11 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
     public function __construct()
     {
         $this->id = 'revolut_cc';
-        $this->method_title = __('Revolut Gateway - Credit Cards', 'woocommerce-gateway-revolut');
-        $this->tab_title = __('Credit Cards', 'woocommerce-gateway-revolut');
+        $this->method_title = __('Revolut Gateway - Credit Cards', 'revolut-gateway-for-woocommerce');
+        $this->tab_title = __('Credit Cards', 'revolut-gateway-for-woocommerce');
 
-        $this->default_title = __('Pay with card', 'woocommerce-gateway-revolut');
-        $this->method_description = sprintf(__('Accept card payments easily and securely via %1$sRevolut%2$s.', 'woocommerce-gateway-revolut'), '<a href="https://www.revolut.com/business/online-payments">', '</a>');
+        $this->default_title = __('Pay with card', 'revolut-gateway-for-woocommerce');
+        $this->method_description = sprintf(__('Accept card payments easily and securely via %1$sRevolut%2$s.', 'revolut-gateway-for-woocommerce'), '<a href="https://www.revolut.com/business/online-payments">', '</a>');
 
         $this->title = $this->get_option('title');
         $this->description = $this->get_option('description');
@@ -92,57 +92,57 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
     {
         $this->form_fields = array(
             'enabled' => array(
-                'title' => __('Enable/Disable', 'woocommerce-gateway-revolut'),
-                'label' => __('Enable ', 'woocommerce-gateway-revolut') . $this->method_title,
+                'title' => __('Enable/Disable', 'revolut-gateway-for-woocommerce'),
+                'label' => __('Enable ', 'revolut-gateway-for-woocommerce') . $this->method_title,
                 'type' => 'checkbox',
-                'description' => __('This controls whether or not this gateway is enabled within WooCommerce.', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls whether or not this gateway is enabled within WooCommerce.', 'revolut-gateway-for-woocommerce'),
                 'default' => 'yes',
                 'desc_tip' => true,
             ),
             'title' => array(
-                'title' => __('Title', 'woocommerce-gateway-revolut'),
+                'title' => __('Title', 'revolut-gateway-for-woocommerce'),
                 'type' => 'text',
-                'description' => __('This controls the title which the user sees during checkout.', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls the title which the user sees during checkout.', 'revolut-gateway-for-woocommerce'),
                 'default' => $this->default_title,
                 'desc_tip' => true,
             ), 'styling_title' => array(
-                'title' => __('Card widget style', 'woocommerce-gateway-revolut'),
+                'title' => __('Card widget style', 'revolut-gateway-for-woocommerce'),
                 'type' => 'title',
             ), 'widget_styling' => array(
-                'title' => __('Customise card widget style', 'woocommerce-gateway-revolut'),
-                'label' => __('Enable', 'woocommerce-gateway-revolut'),
+                'title' => __('Customise card widget style', 'revolut-gateway-for-woocommerce'),
+                'label' => __('Enable', 'revolut-gateway-for-woocommerce'),
                 'type' => 'checkbox',
-                'description' => __('By enabling this option you can customize the style of the Revolut card widget', 'woocommerce-gateway-revolut'),
+                'description' => __('By enabling this option you can customize the style of the Revolut card widget', 'revolut-gateway-for-woocommerce'),
                 'default' => 'no',
                 'class' => 'revolut_styling_option_enable',
                 'desc_tip' => true,
             ), 'widget_background_color' => array(
-                'title' => __('Card widget background color', 'woocommerce-gateway-revolut'),
+                'title' => __('Card widget background color', 'revolut-gateway-for-woocommerce'),
                 'type' => 'color',
-                'description' => __('This controls the background color of the Revolut card widget', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls the background color of the Revolut card widget', 'revolut-gateway-for-woocommerce'),
                 'default' => WC_REVOLUT_CARD_WIDGET_BG_COLOR,
                 'class' => 'revolut_styling_option',
                 'desc_tip' => true,
             ), 'widget_text_color' => array(
-                'title' => __('Card widget font color', 'woocommerce-gateway-revolut'),
+                'title' => __('Card widget font color', 'revolut-gateway-for-woocommerce'),
                 'type' => 'color',
-                'description' => __('This controls the text color of the Revolut Card widget', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls the text color of the Revolut Card widget', 'revolut-gateway-for-woocommerce'),
                 'default' => WC_REVOLUT_CARD_WIDGET_TEXT_COLOR,
                 'class' => 'revolut_styling_option',
                 'desc_tip' => true,
             ), 'revolut_logo_color' => array(
-                'title' => __('Revolut logo theme', 'woocommerce-gateway-revolut'),
+                'title' => __('Revolut logo theme', 'revolut-gateway-for-woocommerce'),
                 'type' => 'select',
                 'default' => '#7a7a7a',
                 'class' => 'revolut_styling_option',
                 'options' => array(
-                    '#7a7a7a' => __('Dark', 'woocommerce-gateway-revolut'),
-                    '#cccccc' => __('Light', 'woocommerce-gateway-revolut')
+                    '#7a7a7a' => __('Dark', 'revolut-gateway-for-woocommerce'),
+                    '#cccccc' => __('Light', 'revolut-gateway-for-woocommerce')
                 ),
-                'description' => __('This controls the color of the Revolut', 'woocommerce-gateway-revolut'),
+                'description' => __('This controls the color of the Revolut', 'revolut-gateway-for-woocommerce'),
                 'desc_tip' => true,
             ), 'restore_button' => array(
-                'title' => __('', 'woocommerce-gateway-revolut'),
+                'title' => __('', 'revolut-gateway-for-woocommerce'),
                 'type' => 'text',
                 'description' => '<button class="revolut_style_restore revolut_styling_option setup-webhook" style="min-height: 30px;"><span id="span-for-active-button-sandbox">Restore defaults</span></button>'
             ),
@@ -211,13 +211,13 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
 
             $renewal_order->payment_complete($revolut_order_id);
 
-            $message = sprintf('Subscription charge succesfuly completed by Revolut (Order ID: %s)', $revolut_order_id);
+            $message = sprintf('Subscription charge successfully completed by Revolut (Order ID: %s)', $revolut_order_id);
             $renewal_order->add_order_note($message);
             $renewal_order->set_transaction_id($revolut_order_id);
             WC_Subscriptions_Manager::process_subscription_payments_on_order($renewal_order);
         } catch (Exception $e) {
             WC_Subscriptions_Manager::process_subscription_payment_failure_on_order($renewal_order);
-            $renewal_order->update_status('failed', 'An error accoured while Payment processing: ' . $e->getMessage());
+            $renewal_order->update_status('failed', 'An error occurred while Payment processing: ' . $e->getMessage());
             $this->logError($e->getMessage());
             return false;
         }
@@ -407,11 +407,11 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
         }
 
         $revolut_payment_token_id = get_post_meta($subscription->get_id(), '_payment_token_id', true);
-        $payment_method_to_display = __('N/A', 'woocommerce-gateway-revolut');
+        $payment_method_to_display = __('N/A', 'revolut-gateway-for-woocommerce');
         $wc_token = WC_Payment_Tokens::get($revolut_payment_token_id);
 
         if ($wc_token) {
-            $payment_method_to_display = sprintf(__('Via %1$s card ending in %2$s', 'woocommerce-gateway-revolut'), $wc_token->get_card_type(), $wc_token->get_last4());
+            $payment_method_to_display = sprintf(__('Via %1$s card ending in %2$s', 'revolut-gateway-for-woocommerce'), $wc_token->get_card_type(), $wc_token->get_last4());
         }
 
         return $payment_method_to_display;
@@ -549,7 +549,7 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
         if (!$this->is_save_payment_method_mandatory()) {
             return '<p class="form-row woocommerce-SavedPaymentMethods-saveNew">
 				<input id="wc-' . $this->id . '-new-payment-method" name="wc-' . $this->id . '-new-payment-method" type="checkbox" value="' . $this->savePaymentMethodFor . '" style="width:auto;" />
-				<label for="wc-' . $this->id . '-new-payment-method" style="display:inline;">' . __('Save payment information to my account for future purchases.', 'woocommerce-gateway-revolut') . '</label>
+				<label for="wc-' . $this->id . '-new-payment-method" style="display:inline;">' . __('Save payment information to my account for future purchases.', 'revolut-gateway-for-woocommerce') . '</label>
 			</p>';
         }
 
@@ -569,7 +569,7 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
             wcs_user_has_subscription(get_current_user_id(), '', ['active']) &&
             is_add_payment_method_page()
         ) {
-            $label = esc_html(__('Update the Payment Method used for all of my active subscriptions.', 'woocommerce-gateway-revolut'));
+            $label = esc_html(__('Update the Payment Method used for all of my active subscriptions.', 'revolut-gateway-for-woocommerce'));
             $id = sprintf('wc-%1$s-update-subs-payment-method-card', $this->id);
             woocommerce_form_field(
                 $id,
