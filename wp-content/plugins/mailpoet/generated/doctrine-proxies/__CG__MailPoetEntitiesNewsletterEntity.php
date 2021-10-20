@@ -522,6 +522,17 @@ class NewsletterEntity extends \MailPoet\Entities\NewsletterEntity implements \M
     /**
      * {@inheritDoc}
      */
+    public function getSegmentIds()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSegmentIds', []);
+
+        return parent::getSegmentIds();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getOptions()
     {
 

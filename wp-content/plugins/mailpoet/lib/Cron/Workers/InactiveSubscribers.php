@@ -5,7 +5,7 @@ namespace MailPoet\Cron\Workers;
 if (!defined('ABSPATH')) exit;
 
 
-use MailPoet\Models\ScheduledTask;
+use MailPoet\Entities\ScheduledTaskEntity;
 use MailPoet\Models\Subscriber;
 use MailPoet\Settings\SettingsController;
 use MailPoet\Subscribers\InactiveSubscribersController;
@@ -30,7 +30,7 @@ class InactiveSubscribers extends SimpleWorker {
     parent::__construct();
   }
 
-  public function processTaskStrategy(ScheduledTask $task, $timer) {
+  public function processTaskStrategy(ScheduledTaskEntity $task, $timer) {
     $trackingEnabled = (bool)$this->settings->get('tracking.enabled');
     if (!$trackingEnabled) {
       $this->schedule();
@@ -53,8 +53,9 @@ class InactiveSubscribers extends SimpleWorker {
         break;
       }
       $lastSubscriberId += self::BATCH_SIZE;
-      $task->meta = ['last_subscriber_id' => $lastSubscriberId];
-      $task->save();
+      $task->setMeta(['last_subscriber_id' => $lastSubscriberId]);
+      $this->scheduledTasksRepository->persist($task);
+      $this->scheduledTasksRepository->flush();
       $this->cronHelper->enforceExecutionLimit($timer);
     };
     while ($this->inactiveSubscribersController->markActiveSubscribers($daysToInactive, self::BATCH_SIZE) === self::BATCH_SIZE) {

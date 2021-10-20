@@ -12,6 +12,7 @@ use MailPoet\Cron\Workers\Bounce as BounceWorker;
 use MailPoet\Cron\Workers\InactiveSubscribers;
 use MailPoet\Cron\Workers\KeyCheck\PremiumKeyCheck as PremiumKeyCheckWorker;
 use MailPoet\Cron\Workers\KeyCheck\SendingServiceKeyCheck as SendingServiceKeyCheckWorker;
+use MailPoet\Cron\Workers\ReEngagementEmailsScheduler;
 use MailPoet\Cron\Workers\Scheduler as SchedulerWorker;
 use MailPoet\Cron\Workers\SendingQueue\Migration as MigrationWorker;
 use MailPoet\Cron\Workers\SendingQueue\SendingQueue as SendingQueueWorker;
@@ -232,6 +233,13 @@ class WordPress {
       'status' => ['null', ScheduledTask::STATUS_SCHEDULED],
     ]);
 
+    // re-engagement emails scheduling;
+    $subscribersReEngagementSchedulingTasks = $this->getTasksCount([
+      'type' => ReEngagementEmailsScheduler::TASK_TYPE,
+      'scheduled_in' => [self::SCHEDULED_IN_THE_PAST],
+      'status' => ['null', ScheduledTask::STATUS_SCHEDULED],
+    ]);
+
     // check requirements for each worker
     $sendingQueueActive = (($scheduledQueues || $runningQueues) && !$sendingLimitReached && !$sendingIsPaused);
     $bounceSyncActive = ($mpSendingEnabled && ($bounceDueTasks || !$bounceFutureTasks));
@@ -258,6 +266,7 @@ class WordPress {
       || $subscriberEngagementScoreTasks
       || $subscribersCountCacheRecalculationTasks
       || $subscribersLastEngagementTasks
+      || $subscribersReEngagementSchedulingTasks
     );
   }
 

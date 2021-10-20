@@ -231,6 +231,13 @@ class Hooks {
       10, // this should execute after the WC sync call on the same hook
       2
     );
+
+    $this->wp->addAction(
+      'woocommerce_before_pay_action',
+      [$this->hooksWooCommerce, 'subscribeOnOrderPay'],
+      10,
+      1
+    );
   }
 
   public function setupWPUsers() {

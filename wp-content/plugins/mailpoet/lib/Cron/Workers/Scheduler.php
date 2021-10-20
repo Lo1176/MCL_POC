@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) exit;
 
 
 use MailPoet\Cron\CronHelper;
+use MailPoet\Entities\NewsletterEntity;
 use MailPoet\Logging\LoggerFactory;
 use MailPoet\Models\Newsletter;
 use MailPoet\Models\ScheduledTask;
@@ -53,16 +54,18 @@ class Scheduler {
       $newsletter = Newsletter::findOneWithOptions($queue->newsletterId);
       if (!$newsletter || $newsletter->deletedAt !== null) {
         $queue->delete();
-      } elseif ($newsletter->status !== Newsletter::STATUS_ACTIVE && $newsletter->status !== Newsletter::STATUS_SCHEDULED) {
+      } elseif ($newsletter->status !== NewsletterEntity::STATUS_ACTIVE && $newsletter->status !== NewsletterEntity::STATUS_SCHEDULED) {
         continue;
-      } elseif ($newsletter->type === Newsletter::TYPE_WELCOME) {
+      } elseif ($newsletter->type === NewsletterEntity::TYPE_WELCOME) {
         $this->processWelcomeNewsletter($newsletter, $queue);
-      } elseif ($newsletter->type === Newsletter::TYPE_NOTIFICATION) {
+      } elseif ($newsletter->type === NewsletterEntity::TYPE_NOTIFICATION) {
         $this->processPostNotificationNewsletter($newsletter, $queue);
-      } elseif ($newsletter->type === Newsletter::TYPE_STANDARD) {
+      } elseif ($newsletter->type === NewsletterEntity::TYPE_STANDARD) {
         $this->processScheduledStandardNewsletter($newsletter, $queue);
-      } elseif ($newsletter->type === Newsletter::TYPE_AUTOMATIC) {
+      } elseif ($newsletter->type === NewsletterEntity::TYPE_AUTOMATIC) {
         $this->processScheduledAutomaticEmail($newsletter, $queue);
+      } elseif ($newsletter->type === NewsletterEntity::TYPE_RE_ENGAGEMENT) {
+        $this->processReEngagementEmail($queue);
       }
       $this->cronHelper->enforceExecutionLimit($timer);
     }
@@ -171,6 +174,12 @@ class Scheduler {
     $task->save();
     // update newsletter status
     $newsletter->setStatus(Newsletter::STATUS_SENDING);
+    return true;
+  }
+
+  private function processReEngagementEmail($queue) {
+    $queue->status = null;
+    $queue->save();
     return true;
   }
 

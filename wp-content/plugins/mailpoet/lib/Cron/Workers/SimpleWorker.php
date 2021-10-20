@@ -11,7 +11,6 @@ use MailPoet\Cron\CronWorkerRunner;
 use MailPoet\Cron\CronWorkerScheduler;
 use MailPoet\DI\ContainerWrapper;
 use MailPoet\Entities\ScheduledTaskEntity;
-use MailPoet\Models\ScheduledTask;
 use MailPoet\Newsletter\Sending\ScheduledTasksRepository;
 use MailPoet\WP\Functions as WPFunctions;
 use MailPoetVendor\Carbon\Carbon;
@@ -76,7 +75,7 @@ abstract class SimpleWorker implements CronWorkerInterface {
     return true;
   }
 
-  public function processTaskStrategy(ScheduledTask $task, $timer) {
+  public function processTaskStrategy(ScheduledTaskEntity $task, $timer) {
     return true;
   }
 

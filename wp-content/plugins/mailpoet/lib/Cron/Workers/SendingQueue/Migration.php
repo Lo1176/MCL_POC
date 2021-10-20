@@ -8,7 +8,6 @@ if (!defined('ABSPATH')) exit;
 use MailPoet\Cron\Workers\SimpleWorker;
 use MailPoet\Entities\ScheduledTaskEntity;
 use MailPoet\Mailer\MailerLog;
-use MailPoet\Models\ScheduledTask;
 use MailPoet\Models\ScheduledTaskSubscriber;
 use MailPoet\Models\SendingQueue as SendingQueueModel;
 use MailPoet\WP\Functions as WPFunctions;
@@ -40,7 +39,7 @@ class Migration extends SimpleWorker {
     ) {
       // nothing to migrate, complete task
       $task->setProcessedAt(Carbon::createFromTimestamp(WPFunctions::get()->currentTime('timestamp')));
-      $task->setStatus(ScheduledTask::STATUS_COMPLETED);
+      $task->setStatus(ScheduledTaskEntity::STATUS_COMPLETED);
       $this->scheduledTasksRepository->persist($task);
       $this->scheduledTasksRepository->flush();
       $this->resumeSending();
@@ -79,7 +78,7 @@ class Migration extends SimpleWorker {
     }
   }
 
-  public function processTaskStrategy(ScheduledTask $task, $timer) {
+  public function processTaskStrategy(ScheduledTaskEntity $task, $timer) {
     $this->migrateSendingQueues($timer);
     $this->migrateSubscribers($timer);
     $this->resumeSending();

@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) exit;
 
 
 use MailPoet\Cron\Workers\SimpleWorker;
+use MailPoet\Entities\ScheduledTaskEntity;
 use MailPoet\Models\ScheduledTask;
 use MailPoet\Services\Bridge;
 use MailPoetVendor\Carbon\Carbon;
@@ -19,7 +20,7 @@ abstract class KeyCheckWorker extends SimpleWorker {
     }
   }
 
-  public function processTaskStrategy(ScheduledTask $task, $timer) {
+  public function processTaskStrategy(ScheduledTaskEntity $task, $timer) {
     try {
       $result = $this->checkKey();
     } catch (\Exception $e) {
@@ -27,7 +28,10 @@ abstract class KeyCheckWorker extends SimpleWorker {
     }
 
     if (empty($result['code']) || $result['code'] == Bridge::CHECK_ERROR_UNAVAILABLE) {
-      $task->rescheduleProgressively();
+      $parisTask = ScheduledTask::getFromDoctrineEntity($task);
+      if ($parisTask) {
+        $parisTask->rescheduleProgressively();
+      }
       return false;
     }
 
