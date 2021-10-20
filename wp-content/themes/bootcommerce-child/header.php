@@ -49,9 +49,11 @@
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <i class="fas fa-bars"></i>
                         </button>
-                        <!-- END Burger-btn -->
 
-                        <!-- ## Logo Brand ## -->
+                        <!-- btn retour en arrière -->
+                        <!-- <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2"  onclick="history.go(-1);">RETOUR</button> -->
+
+                        <!-- Logo Brand -->
                         <a class="navbar-brand align-center xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
                         <a class="navbar-brand md d-none d-md-block" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo md"></a>
 
