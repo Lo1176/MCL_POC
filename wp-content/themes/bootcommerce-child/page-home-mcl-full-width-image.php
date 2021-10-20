@@ -45,7 +45,7 @@ get_header();
 
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('chateau-laguiole'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-color.svg'); ?> class="figure-img img-fluid" alt="Château Laguiole image">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-uncolor.svg'); ?> id="cl-logo" class="figure-img img-fluid" alt="Château Laguiole image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('ligne-w'))); ?>>
