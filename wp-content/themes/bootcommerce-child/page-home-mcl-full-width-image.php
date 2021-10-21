@@ -45,22 +45,22 @@ get_header();
 
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('chateau-laguiole'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-uncolor.svg'); ?> id="cl-logo" class="figure-img img-fluid" alt="Château Laguiole image">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-uncolored.svg'); ?> id="cl-logo" class="figure-img img-fluid" alt="Château Laguiole image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('ligne-w'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/lw-color.svg'); ?> class="figure-img img-fluid" alt="Ligne W image">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/lw-uncolored.svg'); ?> id="lw-logo" class="figure-img img-fluid" alt="Ligne W image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('mateo-gallud'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mg-color.svg'); ?> class="figure-img img-fluid" alt="Mateo Gallud image">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mg-uncolored.svg'); ?> id="mg-logo" class="figure-img img-fluid" alt="Mateo Gallud image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('guy-vialis'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/gv-color.svg'); ?> class="figure-img img-fluid" alt="Guy Vialis image">
+                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/gv-uncolored.svg'); ?> id="gv-logo" class="figure-img img-fluid" alt="Guy Vialis image">
               </figure>
             </a>
 
