@@ -1,6 +1,6 @@
 /* large devise */
 // @media (min-width: 992px) {
-    
+
 // }
 
 // /* medium devise */
@@ -10,29 +10,30 @@
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
-    #mcl-logo-header {
-        align-self: center;
-        position: inherit;
-        top: 0;
-        height: fit-content;
-        z-index: 1010;
-
+  #mcl-logo-header {
+    align-self: center;
+    position: inherit;
+    top: 0;
+    height: fit-content;
+    z-index: 1010;
+  }
+  #nav-main .container-fluid {
+    justify-content: flex-end;
+  }
+  .navbar-brand {
+    .logo {
+      height: 42px;
     }
-    #nav-main
-        .container-fluid {
-            justify-content: flex-end;
-        }
-    
-    .brand {
-        .figure {
-            margin-bottom: 4px;
-            .img-fluid {
-                width: 100vw;
-                margin-bottom: 0px;
-            }
+  }
 
-        }
+  .brand {
+    .figure {
+      margin-bottom: 4px;
+
+      .img-fluid {
+        width: 100vw;
+        margin-bottom: 0px;
+      }
     }
-   
-
+  }
 }

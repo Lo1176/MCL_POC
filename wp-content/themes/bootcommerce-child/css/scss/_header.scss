@@ -1,10 +1,13 @@
 #nav-main>.btn, .btn-outline-primary  {
     border: none !important;
 }
-.navbar {
-    .offcanvas-header {
-        padding-left: 32px;
-        border-bottom: 1px solid rgba($black, .15);
+#masthead {
+    .navbar {
+        padding-bottom: 0;
+        .offcanvas-header {
+                padding-left: 32px;
+                border-bottom: 1px solid rgba($black, .15);
+            }
     }
 }
 
