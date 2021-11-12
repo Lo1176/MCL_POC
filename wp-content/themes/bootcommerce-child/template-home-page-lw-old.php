@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home page Ligne | W
+ * Template Name: Home page Ligne | W OLD ###
  */
 
 use Automattic\WooCommerce\Blocks\BlockTypes\SingleProduct;

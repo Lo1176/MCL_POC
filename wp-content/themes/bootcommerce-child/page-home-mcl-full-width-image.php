@@ -19,7 +19,7 @@ get_header();
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
       <header class="entry-header featured-full-width-img text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
         <div class="container entry-header d-flex justify-content-center pb-3">
-          <h1 id="mcl-logo-header" class="bg-primary d-flex p-5 entry-title"><img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mcl-white.svg'); ?> alt="Maison Château Laguiole image">
+          <h1 id="brand-logo-header" class="bg-primary d-flex p-5 entry-title mcl-logo"><img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mcl-white.svg'); ?> alt="Maison Château Laguiole image">
         </div>
         <!-- no title tbe -->
         <!-- no title tbe END -->
