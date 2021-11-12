@@ -12,27 +12,30 @@
 .entry-header {
     height: 420px;
         #brand-logo-header {
-            height: 240px;
+            height: 340px;
             position: relative;
-            top: -26px; // blason MCL position (en relation avec padding navbar et _svg size
+            top: -36px; // blason MCL position (en relation avec padding navbar et _svg size
             z-index: 1020;
             padding: 8px 8px;
         }
-        .mcl-logo {
-            background-color: $mcl !important;
-        }
-        .cl-logo {
-            background-color: $cl !important;
-        }
-        .lw-logo {
-            background-color: $lw !important;
-        }
-        .mg-logo {
-            background-color: $mg !important;
-        }
-        .gv-logo {
-            background-color: $gv !important;
-        }
+      
 
 }
 
+#mcl-logo {
+    background-color: $mcl;
+    padding: 80px;
+
+}
+#cl-logo {
+    background-color: $cl;
+}
+#lw-logo {
+    background-color: $lw;
+}
+#mg-logo {
+    background-color: $mg;
+}
+#gv-logo {
+    background-color: $gv;
+}
