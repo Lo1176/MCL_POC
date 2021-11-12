@@ -87,7 +87,7 @@ function bootscore_swiper($atts)
 
                                 <?php #bootscore_category_badge(); 
                                 ?>
-
+                            <div class="post-card-text mx-4">
                                 <!-- Title -->
                                 <h2 class="blog-post-title">
                                     <a href="<?php the_permalink(); ?>">
@@ -116,6 +116,8 @@ function bootscore_swiper($atts)
                                         echo $result;
                                         ?>
                                     </div>
+                                    </div>
+
                                     <div class="mt-auto text-end">
                                         <a class="btn btn-dark read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
                                     </div>

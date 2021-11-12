@@ -3,6 +3,9 @@
     .img-fluid {
       height: 260px;
     }
+    .figure {
+      padding: 0 8px;
+    }
 }
 
 // collection cards
@@ -20,18 +23,23 @@
           color: $mcl;
           font-weight: lighter;
         }
-    }
-   
+    }  
 }
+// collection card end
+
 
 // Swiper Cards
 .swiper-wrapper {
     .card {
-      border: 1px solid rgb(0 0 0 / 0%);  
+      // border: 1px solid rgb(0 0 0 / 0%);  
+      border: none;  
     }
     .swiper-slide {
         .card-img-top {
-          border-radius: 2px;
+          border-radius: 1px;
+          width: 320px;
+          height: 240px;
+          object-fit: cover;
         }
         .card-body { 
           // padding: 1rem 0rem;
