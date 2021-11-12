@@ -15,7 +15,7 @@
 <footer>
 
     <div class="bootscore-footer pt-5 pb-3">
-        <div class="container">
+        <div class="container-fluid">
 
             <!-- Top Footer Widget -->
             <?php if (is_active_sidebar('top-footer')) : ?>
