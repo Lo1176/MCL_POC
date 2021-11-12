@@ -87,35 +87,34 @@ function bootscore_swiper($atts)
 
                                 <?php #bootscore_category_badge(); 
                                 ?>
-                            <div class="post-card-text mx-4">
-                                <!-- Title -->
-                                <h2 class="blog-post-title">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h2>
-                                <!-- Meta -->
-                                <?php if ('post' === get_post_type()) : ?>
-                                    <small class="text-muted mb-2">
-                                        <?php
-                                        // bootscore_date();
-                                        bootscore_author();
-                                        #bootscore_comments();
-                                        #bootscore_edit();
-                                        ?>
-                                    </small>
-                                <?php endif; ?>
-                                <!-- Excerpt & Read more -->
-                                <div class="">
-                                    <div class="card-text mb-3">
-                                        <?php
-                                        $excerpt = get_the_excerpt();
-                                        // disply only the first 200 characters
-                                        $excerpt = substr($excerpt, 0, 200);
-                                        $result = substr($excerpt, 0, strrpos($excerpt, ' '));
-                                        echo $result;
-                                        ?>
-                                    </div>
+                                <div class="swiper-card-text mx-4">
+                                    <!-- Title -->
+                                    <h2 class="blog-post-title">
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </h2>
+                                    <!-- Meta -->
+                                    <?php if ('post' === get_post_type()) : ?>
+                                        <small class="text-muted mb-2">
+                                            <?php
+                                            #bootscore_date();
+                                            bootscore_author();
+                                            #bootscore_comments();
+                                            #bootscore_edit();
+                                            ?>
+                                        </small>
+                                    <?php endif; ?>
+                                    <hr class="line-separator">
+                                    <!-- Excerpt & Read more -->
+                                    <div class="">
+                                        <div class="card-text mb-3">
+                                            <?php
+                                            $excerpt = get_the_excerpt();
+                                            // disply only the first 200 characters
+                                            $excerpt = substr($excerpt, 0, 200);
+                                            $result = substr($excerpt, 0, strrpos($excerpt, ' '));
+                                            echo $result;
+                                            ?>
+                                        </div>
                                     </div>
 
                                     <div class="mt-auto text-end">

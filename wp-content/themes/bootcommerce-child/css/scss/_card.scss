@@ -42,16 +42,19 @@
           object-fit: cover;
         }
         .card-body { 
-          // padding: 1rem 0rem;
-            .text-muted {
-              border-bottom: 0.1rem solid $gray-200;
-              padding-bottom: 0.5rem;
-              
-            }
-            h2 {
-              font-size: 1.5rem;
-              text-transform: uppercase;
-            }
+          .swiper-card-text {
+              hr, .line-separator {
+                border-top: 0.5px solid $gray-500;
+              }
+              h2 {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+              }
+              .card-text {
+                font-weight: 300;
+              }
+
+        }
 
         }
     }
