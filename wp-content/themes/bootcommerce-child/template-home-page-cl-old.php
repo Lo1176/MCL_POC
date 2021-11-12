@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Home page Chateau Laguiole
+ * Template Name: Home page Chateau Laguiole OLD
  */
 
 use Automattic\WooCommerce\Blocks\BlockTypes\SingleProduct;
