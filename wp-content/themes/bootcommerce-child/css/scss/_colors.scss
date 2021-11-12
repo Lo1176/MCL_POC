@@ -87,18 +87,18 @@ $colors: (
 // // scss-docs-end theme-colors-map
 
 // Start Maison Château Laguiole colors
-$cl: #3C3C3B;
-// $cl: #362b1f;
-$lw: #881516;
-$mg: #03456F;
-$gv: #D9A149;
+$mcl: #3D3D3B;
+$cl: #191919;
+$lw: #881817;
+$mg: #00456F;
+$gv: #D9A24A;
 // End Maison Château Laguiole colors
-// $primary: #aaaa3d;
-// $secondary: $dark;
-// $blue: #429851;
 
-// $danger: var(--bs-light);
-// $red: #dc3545;
-// $light: $white;
+// updated bootstrap colors
+$black: #1E1E1C;
+$gray-500: #c6c6c6;
+
+// fond grisé menu
+$bg-mcl: #F2F2F2;
 $primary: $cl;
 $secondary: $gray-500;
