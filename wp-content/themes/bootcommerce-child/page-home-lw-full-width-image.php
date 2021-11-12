@@ -118,10 +118,10 @@ get_header();
             </div>
             <div class="card m-2" style="width: 18rem;">
               <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/kit-sommelier/'); ?>">
-                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-kit-tbe.png'); ?>" alt="Produc image cap">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-kit-scaled.jpg'); ?>" alt="Produc image cap">
                 <div class="card-body">
                   <h5 class="card-title">le kit <strong>sommelier</strong></h5>
-                  <p class="card-text">Noble et intemporel</p>
+                  <p class="card-text">Le duo indispensable pour les amoureux du vin</p>
                 </div>
               </a>
             </div>
