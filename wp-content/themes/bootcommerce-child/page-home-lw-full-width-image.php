@@ -45,7 +45,7 @@ get_header();
             <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
             <div class="card m-2" style="width: 18rem;">
               <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/origine/'); ?>">
-                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-tbe.png'); ?>" alt="Produc image cap">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-scaled.jpg'); ?>" alt="Produc image cap">
                 <div class="card-body">
                   <h5 class="card-title"><strong>ORIGINE</strong></h5>
                   <p class="card-text">Grands crus j’élevais, grands crus j’ouvrirai</p>
@@ -53,97 +53,94 @@ get_header();
               </a>
             </div>
 
-          <div class="card m-2" style="width: 18rem;">
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/origine/'); ?>">
-              <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-prestige-tbe.png'); ?>" alt="Produc image cap">
-              <div class="card-body">
-                <h5 class="card-title">ORIGINE <strong>PRESTIGE</strong></h5>
-                <p class="card-text">lw-origine-prestige-tbe.png</p>
-              </div>
-            </a>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/prestige/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-prestige-scaled.jpg'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">ORIGINE <strong>PRESTIGE</strong></h5>
+                  <p class="card-text">Raffiné, associant tradition et modernité</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/signature/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-signature.png'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">LE <strong>W SIGNATURE</strong></h5>
+                  <p class="card-text">Aux courbes raffinées</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-urban/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-prestige-scaled.jpg'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">L'IROQUOIS <strong>URBAN</strong></h5>
+                  <p class="card-text">Le street art s’invite à votre table</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-colors/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-colors-tbe.png'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">L'IROQUOIS <strong>colors</strong></h5>
+                  <p class="card-text">Convivial et respectueux de l'environnement</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-zinc/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-zinc-tbe.png'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">L'IROQUOIS <strong>zinc</strong></h5>
+                  <p class="card-text">Un cadeau très masculin</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-wood/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-wood-tbe.png'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">L'IROQUOIS <strong>wood</strong></h5>
+                  <p class="card-text">Noble et intemporel</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/essentiel/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-essentiel.jpg'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">L'<strong>essentiel</strong></h5>
+                  <p class="card-text">Une inspiration pop pour les professionnels et les particuliers</p>
+                </div>
+              </a>
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/kit-sommelier/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-kit-tbe.png'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title">le kit <strong>sommelier</strong></h5>
+                  <p class="card-text">Noble et intemporel</p>
+                </div>
+              </a>
+            </div>
+
           </div>
 
-        
-
-   
-
-  
-
-
-
-        <!-- ------  -->
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-prestige-corne.jpeg'); ?>" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">Prestige</h5>
-            <p class="card-text">Tire-bouchon, bois noble, corne, finition miroir, double levier, écrin en bois make up the bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/prestige/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-signature.jpeg'); ?>" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">Signature</h5>
-            <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/signature/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-color-vinyard-scaled-1.jpeg'); ?>" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">L'Iroquois "colors"</h5>
-            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-zinc-pack-scaled-1.jpeg'); ?>" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">L'Iroquois "zinc"</h5>
-            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-wood-pack-scaled-1.jpeg'); ?>" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">L'Iroquois "wood"</h5>
-            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-wood/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-URBAN-COMICS-pack-scaled.jpeg'); ?>" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">L'Iroquois "urban"</h5>
-            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-urban/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
-          <div class="card-body">
-            <h5 class="card-title">L'Essentiel</h5>
-            <p class="card-text">Consommateurs ou professionnels en quête d’un objet efficace avec un confort d’utilisation optimale up the bulk of the product's content.</p>
-            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/essentiel/'); ?>" class="btn btn-dark">Voir les produits</a>
-          </div>
         </div>
       </div>
 
-  </div>
-</div>
 
+      <footer class="entry-footer">
 
-<footer class="entry-footer">
+      </footer>
 
-</footer>
+      <?php comments_template(); ?>
 
-<?php comments_template(); ?>
+  </div><!-- container -->
 
-</div><!-- container -->
-
-</main><!-- #main -->
+  </main><!-- #main -->
 
 </div><!-- #primary -->
 </div><!-- #content -->

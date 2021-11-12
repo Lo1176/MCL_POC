@@ -1,7 +1,10 @@
-.card-img-top, img {
-  height: 100%;
-  object-fit: cover;
+#collection {
+    .card-img-top, img {
+      height: 286px;
+      object-fit: contain;
+    }
 }
+
 
 .brand {
   padding-bottom: 2.5rem;
@@ -13,7 +16,10 @@
 // collection cards
 #collection {
     .card {
-      border: none;
+      // border: none;
+        .card-title {
+          text-transform: uppercase;
+        }
     }
 }
 
