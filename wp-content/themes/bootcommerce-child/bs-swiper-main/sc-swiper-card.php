@@ -118,7 +118,7 @@ function bootscore_swiper($atts)
                                     </div>
 
                                     <div class="mt-auto text-end">
-                                        <a class="btn btn-dark read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+                                        <a id="btn-read-more" class="btn btn-dark read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
                                     </div>
                                 </div>
 
