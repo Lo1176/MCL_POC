@@ -36,22 +36,116 @@ get_header();
           <?php the_content(); ?>
           <!-- all the content for wordpress 'modifier la page' END -->
         </div>
-        <!-- actualités -->
+        <!-- end content from WP  -->
 
+        <!-- collection from Ligne W -->
+        <div class="container-fluid col-10">
+          <div id="collection" class="d-flex flex-wrap col-12">
+
+            <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
+            <div class="card m-2" style="width: 18rem;">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/origine/'); ?>">
+                <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-tbe.png'); ?>" alt="Produc image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><strong>ORIGINE</strong></h5>
+                  <p class="card-text">Grands crus j’élevais, grands crus j’ouvrirai</p>
+                </div>
+              </a>
+            </div>
+
+          <div class="card m-2" style="width: 18rem;">
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/origine/'); ?>">
+              <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-prestige-tbe.png'); ?>" alt="Produc image cap">
+              <div class="card-body">
+                <h5 class="card-title">ORIGINE <strong>PRESTIGE</strong></h5>
+                <p class="card-text">lw-origine-prestige-tbe.png</p>
+              </div>
+            </a>
+          </div>
+
+        
+
+   
+
+  
+
+
+
+        <!-- ------  -->
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-prestige-corne.jpeg'); ?>" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">Prestige</h5>
+            <p class="card-text">Tire-bouchon, bois noble, corne, finition miroir, double levier, écrin en bois make up the bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/prestige/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-signature.jpeg'); ?>" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">Signature</h5>
+            <p class="card-text">J’aime mon lieu de vie, on s’y sent bien et j’aime y partager des bons moments avec mes amis bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/signature/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
+
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-color-vinyard-scaled-1.jpeg'); ?>" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">L'Iroquois "colors"</h5>
+            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-zinc-pack-scaled-1.jpeg'); ?>" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">L'Iroquois "zinc"</h5>
+            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-colors/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-wood-pack-scaled-1.jpeg'); ?>" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">L'Iroquois "wood"</h5>
+            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-wood/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/LW-iroquois-URBAN-COMICS-pack-scaled.jpeg'); ?>" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">L'Iroquois "urban"</h5>
+            <p class="card-text">Originalité, culture urbaine/street art, inspirations de voyage up the bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/ligne-w/iroquois-urban/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img class="card-img-top" src="https://www.layole.com/58554-medium_default/laguiole-pliant-12-cm-abeille-forgee-lame-seule-manche-bois-de-rose-avec-finition-inox-mat.jpg" alt="Produc image cap">
+          <div class="card-body">
+            <h5 class="card-title">L'Essentiel</h5>
+            <p class="card-text">Consommateurs ou professionnels en quête d’un objet efficace avec un confort d’utilisation optimale up the bulk of the product's content.</p>
+            <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/essentiel/'); ?>" class="btn btn-dark">Voir les produits</a>
+          </div>
+        </div>
       </div>
 
+  </div>
+</div>
 
-        <footer class="entry-footer">
 
-        </footer>
+<footer class="entry-footer">
 
-        <?php comments_template(); ?>
+</footer>
 
-      </div><!-- container -->
+<?php comments_template(); ?>
 
-    </main><!-- #main -->
+</div><!-- container -->
 
-  </div><!-- #primary -->
+</main><!-- #main -->
+
+</div><!-- #primary -->
 </div><!-- #content -->
 <?php
 get_footer();
