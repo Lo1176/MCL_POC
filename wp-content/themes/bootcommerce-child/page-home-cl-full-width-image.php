@@ -39,8 +39,8 @@ get_header();
         <!-- end content from WP  -->
 
         <!-- collection from Chateau Laguiole -->
-        <div class="container-fluid col-10">
-          <div id="collection" class="d-flex flex-wrap col-12">
+        <div class="container-fluid d-flex justify-content-center">
+          <div id="collection" class="d-flex justify-content-center flex-wrap col-8">
 
             <!-- ##### ecrit en DUR !!!!  ##### -->
             <div class="card m-2" style="width: 18rem;">
@@ -81,7 +81,8 @@ get_header();
               </a>
             </div>
             <div class="card m-2" style="width: 18rem;">
-              <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/opus/'); ?>">
+              <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/opus/'); 
+                        ?>">
                 <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CLSOG0201-Grand-Cru-Opus-N°-2-Cocobolo-wood-scaled.jpeg'); ?>" alt="Produc image cap">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Opus</strong></h5>
@@ -90,7 +91,8 @@ get_header();
               </a>
             </div>
             <div class="card m-2" style="width: 18rem;">
-              <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/melchior/'); ?>">
+              <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/melchior/'); 
+                        ?>">
                 <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-melchior-ironwood.jpeg'); ?>" alt="Produc image cap">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Melchior</strong></h5>
@@ -108,7 +110,8 @@ get_header();
               </a>
             </div>
             <div class="card m-2" style="width: 18rem;">
-              <a href="<?php #echo do_shortcode('[homeurl]/chateau-laguiole/couteaux-de-table/'); ?>">
+              <a href="<?php #echo do_shortcode('[homeurl]/chateau-laguiole/couteaux-de-table/'); 
+                        ?>">
                 <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/chateau-laguiole-steak-knives-brazilian-rosewood-set-of-6-chateau-laguioler-made-in-france_5000x.jpg'); ?>" alt="Produc image cap">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Couteaux de table</strong></h5>

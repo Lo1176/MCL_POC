@@ -39,8 +39,8 @@ get_header();
         <!-- end content from WP  -->
 
         <!-- collection from Ligne W -->
-        <div class="container-fluid col-10">
-          <div id="collection" class="d-flex flex-wrap col-12">
+        <div class="container-fluid d-flex justify-content-center">
+          <div id="collection" class="d-flex justify-content-center flex-wrap col-8">
 
             <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
             <div class="card m-2" style="width: 18rem;">

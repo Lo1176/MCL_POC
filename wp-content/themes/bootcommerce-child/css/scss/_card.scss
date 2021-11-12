@@ -32,7 +32,8 @@
 .swiper-wrapper {
     .card {
       // border: 1px solid rgb(0 0 0 / 0%);  
-      border: none;  
+      border: none;
+      min-width: 24rem;
     }
     .swiper-slide {
         .card-img-top {
