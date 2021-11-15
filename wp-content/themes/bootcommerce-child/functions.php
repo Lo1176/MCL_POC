@@ -56,12 +56,15 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 6);
 /** Remove product data tabs */
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+/** remove product meta */
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
 function woo_remove_product_tabs($tabs)
 {
 
   // unset($tabs['additional_information']);    // Remove the additional information tab
   // unset($tabs['description']);    // Remove the description tab
+  // $tabs['additional_information']['priority'] = 5;	// move Additional information at the beginning
 
   return $tabs;
 }
