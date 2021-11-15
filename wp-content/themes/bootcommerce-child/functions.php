@@ -21,7 +21,7 @@ require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
 // add your custom functions bellow //
 
-##### start-Menu #####
+##### start - Menu #####
 // Custom-Navigation-Menu
 function mcl_custom_new_menu()
 {
@@ -29,7 +29,7 @@ function mcl_custom_new_menu()
 }
 add_action('init', 'mcl_custom_new_menu');
 // Custom-Navigation-Menu  END
-##### end-Menu #####
+##### end - Menu #####
 
 ##### start-CONTENT-PRODUCT #####
 // Archives pages: Additional button linked to the product
@@ -48,7 +48,25 @@ add_action('init', 'mcl_custom_new_menu');
 add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
 ##### end-CONTENT-PRODUCT #####
 
-##### start-CONTENT-SINGLE-PRODUCT #####
+##### start - CONTENT-SINGLE-PRODUCT #####
+/** remove title */
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+/** change order of description (move the description on the top) */
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 6);
+/** Remove product data tabs */
+add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+
+function woo_remove_product_tabs($tabs)
+{
+
+  // unset($tabs['additional_information']);    // Remove the additional information tab
+  // unset($tabs['description']);    // Remove the description tab
+
+  return $tabs;
+}
+
+
 // Single product pages: Additional button linked to 3D website
 add_action('woocommerce_single_product_summary', 'product_additional_3D_button', 1);
 function product_additional_3D_button()
@@ -142,7 +160,7 @@ function my_3D_func($data)
   );
   return $api3dResponse;
 }
-##### end-CONTENT-SINGLE-PRODUCT #####
+##### end - CONTENT-SINGLE-PRODUCT #####
 
 
 // log errors
