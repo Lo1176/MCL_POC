@@ -30,7 +30,7 @@ if (empty($product) || !$product->is_visible()) {
 	<div <?php wc_product_class('card border-0 m-2 h-100 d-flex text-center', $product); ?>>
 
 		<!-- ##### A EFFACER ##### -->
-		<!-- <h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2> -->
+		<h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2>
 		<!-- ##### A EFFACER ##### -->
 
 		<?php

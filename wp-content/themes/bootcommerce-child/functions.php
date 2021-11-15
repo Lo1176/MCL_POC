@@ -54,10 +54,15 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 /** change order of description (move the description on the top) */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 6);
+// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+// add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 6);
+
 /** Remove product data tabs */
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 /** remove product meta */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+/** whishes logo product */
+
 
 function woo_remove_product_tabs($tabs)
 {
@@ -197,16 +202,24 @@ function wpm_remove_sku($enabled)
 
 
 // Remove breadcrumbs only from shop page
-add_filter('woocommerce_before_main_content', 'remove_breadcrumbs');
-function remove_breadcrumbs()
-{
-  if (!is_product() && !is_product_category()) {
-    remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
-  }
-}
+// add_filter('woocommerce_before_main_content', 'remove_breadcrumbs');
+// function remove_breadcrumbs()
+// {
+//   if (!is_product() && !is_product_category()) {
+//     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+//   }
+// }
 
-//to prevent break links between localhost and http
+// add_action('template_redirect', 'remove_shop_breadcrumbs');
+// function remove_shop_breadcrumbs()
+// {
 
+//   if (is_shop())
+//     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+// }
+
+
+/** to prevent break links between localhost and http */
 function homeURLshortcode()
 {
   return home_url();
