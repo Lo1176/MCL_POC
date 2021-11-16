@@ -1,0 +1,17 @@
+
+
+// Quick fix for badges in buttons
+// .btn .badge {
+//   position: relative;
+//   top: -1px;
+// }
+
+span.badge.sale {
+  background-color: $gv;
+
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 1.25rem;
+  border-radius: 3%;
+}
