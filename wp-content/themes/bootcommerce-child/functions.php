@@ -243,9 +243,16 @@ function action_woocommerce_before_shop_loop_item()
 {
   echo '<hr class="line-separator">';
 };
-
-// add the action 
 add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before_shop_loop_item', 10, 0);
+
+// when product is out of stock "choix des options"
+// instead of "Lire la suite"
+// add_filter( 'woocommerce_is_purchasable', 'vna_is_purchasable', 10, 2 );
+// function vna_is_purchasable( $purchasable, $product ){
+//   return true || false; // depending on your condition
+// }
+
+
 /* END content-product **/
 
 // Change number of products that are displayed per page (shop page)
