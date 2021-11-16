@@ -40,7 +40,7 @@ get_header();
 
         <!-- collection from Chateau Laguiole -->
         <div class="container-fluid d-flex justify-content-center">
-          <div id="collection" class="d-flex justify-content-center flex-wrap col-8">
+          <div id="collection" class="d-flex justify-content-center flex-wrap col-10">
 
             <!-- ##### ecrit en DUR !!!!  ##### -->
             <div class="card m-2" style="width: 18rem;">
