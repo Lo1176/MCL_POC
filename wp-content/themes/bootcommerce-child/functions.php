@@ -94,8 +94,8 @@ function custom_3D_button()
 {
   global $product;
   $link = "/www/MCL_POC/wp-json/3D/v1/product/" . $product->get_id();
-  $text = __("Customize with 3D app", "woocommerce");
-  echo '<button id="customize3d" class="btn btn-danger my-1" style="margin-bottom:14px;" data-url="' . $link . '">' . $text . '</button>';
+  $text = __("PERSONNALISER mon modèle", "woocommerce");
+  echo '<button id="customize3d" class="btn my-1" style="margin-bottom:14px;" data-url="' . $link . '">' . $text . '</button>';
 }
 
 // function btn test API
