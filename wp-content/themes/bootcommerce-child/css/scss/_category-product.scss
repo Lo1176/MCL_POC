@@ -5,10 +5,17 @@
 }
 
 .term-description {
-    margin: 0 280px;
-    padding: 0 12px;
+    margin: 0 12vw;
+    padding: 0 4px;
 }
 
 .category-products {
     margin: 0 24px;
+}
+
+.category-product-title {
+        h1 {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
 }

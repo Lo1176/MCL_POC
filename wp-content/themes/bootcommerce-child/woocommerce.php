@@ -33,7 +33,7 @@ get_header();
         if ($image) {
           echo '<img class="cat-image featured-full-width-img" src="' . $image . '" alt="' . $cat->name . '" />';
         }
-        echo '<div class="m-5"><h1>' . $cat->name . '</h1></div>';
+        echo '<div class="category-product-title mt-5"><h1>' . $cat->name . '</h1></div>';
 
       }
     }
