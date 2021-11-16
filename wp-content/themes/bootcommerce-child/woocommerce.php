@@ -16,7 +16,7 @@
 get_header();
 ?>
 
-<div id="content" class="site-content container py-5 mt-4">
+<div id="content" class="site-content container-fluid py-5 mt-4">
   <div id="primary" class="content-area">
     <?php
     /**
@@ -33,7 +33,7 @@ get_header();
         if ($image) {
           echo '<img class="cat-image featured-full-width-img" src="' . $image . '" alt="' . $cat->name . '" />';
         }
-        echo '<div class="container-fluid mb-3"><h1>' . $cat->name . '</h1></div>';
+        echo '<div class="m-5"><h1>' . $cat->name . '</h1></div>';
 
       }
     }
@@ -45,7 +45,10 @@ get_header();
     <main id="main" class="site-main">
 
       <!-- Breadcrumb -->
-      <?php woocommerce_breadcrumb(); ?>
+      <div class="text-danger container">
+        <?php woocommerce_breadcrumb(); ?>
+
+      </div>
       <div class="row">
 
         <div class="text-center col">
