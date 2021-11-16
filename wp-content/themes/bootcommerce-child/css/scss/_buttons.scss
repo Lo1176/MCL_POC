@@ -1,5 +1,21 @@
 #customize3d {
-    width: 160px;
+    display: flex;
+    align-items: center;
     color: $black;
-    
+        .btn3d {
+            text-align: start;
+                &:last-child {
+                    font-weight: 300;
+                    // color: $mg;
+                }
+                strong:first-child {
+                    // color: $red;
+                    font-weight: 700;
+                }
+
+        }
+        .fab {
+            font-size: 48px;
+        }
+
 }
