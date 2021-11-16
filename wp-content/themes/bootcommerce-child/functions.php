@@ -252,7 +252,6 @@ add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before
 //   return true || false; // depending on your condition
 // }
 
-
 /* END content-product **/
 
 // Change number of products that are displayed per page (shop page)
