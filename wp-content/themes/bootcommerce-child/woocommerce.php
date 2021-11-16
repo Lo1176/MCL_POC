@@ -31,9 +31,9 @@ get_header();
         $thumbnail_id = get_term_meta($cat->term_id, 'thumbnail_id', true);
         $image = wp_get_attachment_url($thumbnail_id);
         if ($image) {
-          echo '<div class="container-fluid"><img class="featured-full-width-img" src="' . $image . '" alt="' . $cat->name . '" /></div>';
+          echo '<img class="cat-image featured-full-width-img" src="' . $image . '" alt="' . $cat->name . '" />';
         }
-        echo '<div class="container-fluid"><h1>' . $cat->name . '</h1></div>';
+        echo '<div class="container-fluid mb-3"><h1>' . $cat->name . '</h1></div>';
 
       }
     }
