@@ -27,6 +27,8 @@ class ScheduledTaskEntity {
   const PRIORITY_HIGH = 1;
   const PRIORITY_MEDIUM = 5;
   const PRIORITY_LOW = 10;
+  const BASIC_RESCHEDULE_TIMEOUT = 5; // minutes
+  const MAX_RESCHEDULE_TIMEOUT = 1440; // minutes
 
   use AutoincrementedIdTrait;
   use CreatedAtTrait;
@@ -68,6 +70,12 @@ class ScheduledTaskEntity {
    * @var array|null
    */
   private $meta;
+
+  /**
+   * @ORM\Column(type="boolean", nullable=true)
+   * @var bool|null
+   */
+  private $inProgress;
 
   /**
    * @ORM\Column(type="integer", options={"default" : 0})
@@ -167,6 +175,20 @@ class ScheduledTaskEntity {
    */
   public function setMeta($meta) {
     $this->meta = $meta;
+  }
+
+  /**
+   * @return bool|null
+   */
+  public function getInProgress() {
+    return $this->inProgress;
+  }
+
+  /**
+   * @param bool|null $inProgress
+   */
+  public function setInProgress($inProgress) {
+    $this->inProgress = $inProgress;
   }
 
   public function getRescheduleCount(): int {

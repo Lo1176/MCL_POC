@@ -666,7 +666,7 @@ class Populator {
 
   private function scheduleTask($type, $datetime) {
     $task = ScheduledTask::where('type', $type)
-      ->whereRaw('status = ? OR status IS NULL', [ScheduledTask::STATUS_SCHEDULED])
+      ->whereRaw('(status = ? OR status IS NULL)', [ScheduledTask::STATUS_SCHEDULED])
       ->findOne();
     if ($task) {
       return true;
@@ -719,7 +719,7 @@ class Populator {
           t.status = :tStatusScheduled
           AND n.status = :nStatusDraft
     ";
-    $this->entityManager->getConnection()->executeUpdate(
+    $this->entityManager->getConnection()->executeStatement(
       $query,
       [
         'tStatusPaused' => ScheduledTaskEntity::STATUS_PAUSED,
@@ -894,7 +894,7 @@ class Populator {
   }
 
   private function scheduleSubscriberLastEngagementDetection() {
-    if (version_compare($this->settings->get('db_version', '3.68.1'), '3.68.0', '>')) {
+    if (version_compare($this->settings->get('db_version', '3.72.1'), '3.72.0', '>')) {
       return;
     }
     $this->scheduleTask(

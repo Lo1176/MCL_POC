@@ -5,9 +5,11 @@ namespace MailPoet\Config;
 if (!defined('ABSPATH')) exit;
 
 
+use MailPoet\Entities\DynamicSegmentFilterData;
 use MailPoet\Entities\FormEntity;
 use MailPoet\Models\Newsletter;
 use MailPoet\Models\Subscriber;
+use MailPoet\Segments\DynamicSegments\Filters\UserRole;
 use MailPoet\Settings\SettingsController;
 use MailPoet\Util\Helpers;
 
@@ -73,6 +75,7 @@ class Migrator {
     $this->updateNullInUnsubscribeStats();
     $this->fixScheduledTasksSubscribersTimestampColumns();
     $this->removeDeprecatedStatisticsIndexes();
+    $this->migrateSerializedFilterDataToNewColumns();
     return $output;
   }
 
@@ -584,6 +587,8 @@ class Migrator {
       'created_at timestamp NULL,',
       'updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,',
       'filter_data longblob,',
+      'filter_type varchar(255) NULL,',
+      'action varchar(255) NULL,',
       'PRIMARY KEY (id),',
       'KEY segment_id (segment_id)',
     ];
@@ -693,6 +698,36 @@ class Migrator {
       ";
         $wpdb->query($dropIndexQuery);
       }
+    }
+
+    return true;
+  }
+
+  private function migrateSerializedFilterDataToNewColumns(): bool {
+    global $wpdb;
+    // skip the migration if the DB version is higher than 3.73.1 or is not set (a new install)
+    if (version_compare($this->settings->get('db_version', '3.73.1'), '3.73.0', '>')) {
+      return false;
+    }
+
+    $dynamicSegmentFiltersTable = "{$this->prefix}dynamic_segment_filters";
+    $dynamicSegmentFilters = $wpdb->get_results("
+      SELECT id, filter_data, filter_type, `action`
+      FROM {$dynamicSegmentFiltersTable}
+    ", ARRAY_A);
+    foreach ($dynamicSegmentFilters as $dynamicSegmentFilter) {
+      if ($dynamicSegmentFilter['filter_type'] && $dynamicSegmentFilter['action']) {
+        continue;
+      }
+      $filterData = unserialize($dynamicSegmentFilter['filter_data']);
+      // bc compatibility fix, the filter with the segmentType userRole didn't have filled action
+      if ($filterData['segmentType'] === DynamicSegmentFilterData::TYPE_USER_ROLE && empty($filterData['action'])) {
+        $filterData['action'] = UserRole::TYPE;
+      }
+      $wpdb->update($dynamicSegmentFiltersTable, [
+        'action' => $filterData['action'] ?? null,
+        'filter_type' => $filterData['segmentType'] ?? null,
+      ], ['id' => $dynamicSegmentFilter['id']]);
     }
 
     return true;

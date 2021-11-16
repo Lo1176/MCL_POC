@@ -6,7 +6,6 @@ if (!defined('ABSPATH')) exit;
 
 
 use MailPoet\Entities\ScheduledTaskEntity;
-use MailPoet\Models\ScheduledTask;
 use MailPoet\Newsletter\Sending\ScheduledTasksRepository;
 use MailPoet\WP\Functions as WPFunctions;
 use MailPoetVendor\Carbon\Carbon;
@@ -58,11 +57,24 @@ class CronWorkerScheduler {
     return $task;
   }
 
-  public function reschedule(ScheduledTask $task, $timeout) {
+  public function reschedule(ScheduledTaskEntity $task, $timeout) {
     $scheduledAt = Carbon::createFromTimestamp($this->wp->currentTime('timestamp'));
-    $task->scheduledAt = $scheduledAt->addMinutes($timeout);
-    $task->setExpr('updated_at', 'NOW()');
-    $task->status = ScheduledTask::STATUS_SCHEDULED;
-    $task->save();
+    $task->setScheduledAt($scheduledAt->addMinutes($timeout));
+    $task->setStatus(ScheduledTaskEntity::STATUS_SCHEDULED);
+    $this->scheduledTaskRepository->persist($task);
+    $this->scheduledTaskRepository->flush();
+  }
+
+  public function rescheduleProgressively(ScheduledTaskEntity $task): int {
+    $scheduledAt = Carbon::createFromTimestamp($this->wp->currentTime('timestamp'));
+    $rescheduleCount = $task->getRescheduleCount();
+    $timeout = (int)min(ScheduledTaskEntity::BASIC_RESCHEDULE_TIMEOUT * pow(2, $rescheduleCount), ScheduledTaskEntity::MAX_RESCHEDULE_TIMEOUT);
+    $task->setScheduledAt($scheduledAt->addMinutes($timeout));
+    $task->setRescheduleCount($rescheduleCount + 1);
+    $task->setStatus(ScheduledTaskEntity::STATUS_SCHEDULED);
+    $this->scheduledTaskRepository->persist($task);
+    $this->scheduledTaskRepository->flush();
+
+    return $timeout;
   }
 }

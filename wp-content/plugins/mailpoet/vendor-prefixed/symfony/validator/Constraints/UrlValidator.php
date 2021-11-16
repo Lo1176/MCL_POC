@@ -3,7 +3,7 @@
             (%s)://                                 # protocol
             (((?:[\\_\\.\\pL\\pN-]|%%[0-9A-Fa-f]{2})+:)?((?:[\\_\\.\\pL\\pN-]|%%[0-9A-Fa-f]{2})+)@)?  # basic auth
             (
-                ([\\pL\\pN\\pS\\-\\_\\.])+(\\.?([\\pL\\pN]|xn\\-\\-[\\pL\\pN-]+)+\\.?) # a domain name
+                ([\\pL\\pN\\pS]+\\.?[\\pL\\pN\\pS\\-\\_]+)+(\\.?([\\pL\\pN]|xn\\-\\-[\\pL\\pN-]+)+\\.?) # a domain name
                     |                                                 # or
                 \\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}                    # an IP address
                     |                                                 # or

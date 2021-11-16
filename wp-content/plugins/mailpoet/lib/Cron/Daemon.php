@@ -72,6 +72,7 @@ class Daemon {
     yield $this->workersFactory->createQueueWorker(); // not CronWorkerInterface compatible
     yield $this->workersFactory->createSendingServiceKeyCheckWorker();
     yield $this->workersFactory->createPremiumKeyCheckWorker();
+    yield $this->workersFactory->createSubscribersStatsReportWorker();
     yield $this->workersFactory->createBounceWorker();
     yield $this->workersFactory->createExportFilesCleanupWorker();
     yield $this->workersFactory->createBeamerkWorker();

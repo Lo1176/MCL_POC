@@ -10,10 +10,13 @@ use MailPoet\API\JSON\Error as APIError;
 use MailPoet\API\JSON\Response;
 use MailPoet\Config\AccessControl;
 use MailPoet\Cron\Triggers\WordPress;
+use MailPoet\Entities\NewsletterEntity;
 use MailPoet\Models\Newsletter;
 use MailPoet\Models\SendingQueue as SendingQueueModel;
+use MailPoet\Newsletter\NewslettersRepository;
 use MailPoet\Newsletter\Scheduler\Scheduler;
 use MailPoet\Segments\SubscribersFinder;
+use MailPoet\Services\Bridge;
 use MailPoet\Tasks\Sending as SendingTask;
 use MailPoet\Util\License\Features\Subscribers as SubscribersFeature;
 
@@ -28,12 +31,22 @@ class SendingQueue extends APIEndpoint {
   /** @var SubscribersFinder */
   private $subscribersFinder;
 
+  /** @var NewslettersRepository */
+  private $newsletterRepository;
+
+  /** @var Bridge */
+  private $bridge;
+
   public function __construct(
     SubscribersFeature $subscribersFeature,
+    NewslettersRepository $newsletterRepository,
+    Bridge $bridge,
     SubscribersFinder $subscribersFinder
   ) {
     $this->subscribersFeature = $subscribersFeature;
     $this->subscribersFinder = $subscribersFinder;
+    $this->newsletterRepository = $newsletterRepository;
+    $this->bridge = $bridge;
   }
 
   public function add($data = []) {
@@ -55,6 +68,19 @@ class SendingQueue extends APIEndpoint {
         APIError::NOT_FOUND => __('This newsletter does not exist.', 'mailpoet'),
       ]);
     }
+    $newsletterEntity = $this->newsletterRepository->findOneById($newsletter->id);
+    if (!$newsletterEntity instanceof NewsletterEntity) {
+      return $this->errorResponse([
+        APIError::NOT_FOUND => __('This newsletter does not exist.', 'mailpoet'),
+      ]);
+    }
+
+    $validationError = $this->validateNewsletter($newsletterEntity);
+    if ($validationError) {
+      return $this->errorResponse([
+        APIError::BAD_REQUEST => $validationError,
+      ]);
+    }
 
     // check that the sending method has been configured properly
     try {
@@ -68,7 +94,7 @@ class SendingQueue extends APIEndpoint {
 
     // add newsletter to the sending queue
     $queue = SendingQueueModel::joinWithTasks()
-      ->where('queues.newsletter_id', $newsletter->id)
+      ->where('queues.newsletter_id', $newsletterEntity->getId())
       ->whereNull('tasks.status')
       ->findOne();
 
@@ -79,14 +105,14 @@ class SendingQueue extends APIEndpoint {
     }
 
     $scheduledQueue = SendingQueueModel::joinWithTasks()
-      ->where('queues.newsletter_id', $newsletter->id)
+      ->where('queues.newsletter_id', $newsletterEntity->getId())
       ->where('tasks.status', SendingQueueModel::STATUS_SCHEDULED)
       ->findOne();
     if ($scheduledQueue instanceof SendingQueueModel) {
       $queue = SendingTask::createFromQueue($scheduledQueue);
     } else {
       $queue = SendingTask::create();
-      $queue->newsletterId = $newsletter->id;
+      $queue->newsletterId = $newsletterEntity->getId();
     }
 
     WordPress::resetRunInterval();
@@ -123,6 +149,30 @@ class SendingQueue extends APIEndpoint {
         $newsletter->getQueue()->asArray()
       );
     }
+  }
+
+  private function validateNewsletter(NewsletterEntity $newsletterEntity): ?string {
+    if (
+      $newsletterEntity->getBody()
+      && is_array($newsletterEntity->getBody())
+      && $newsletterEntity->getBody()['content']
+    ) {
+      $body = json_encode($newsletterEntity->getBody()['content']);
+      if ($body === false) {
+        return __('Poet, please add prose to your masterpiece before you send it to your followers.');
+      }
+
+      if (
+        $this->bridge->isMailpoetSendingServiceEnabled()
+        && (strpos($body, '[link:subscription_unsubscribe_url]') === false)
+        && (strpos($body, '[link:subscription_unsubscribe]') === false)
+      ) {
+        return __('All emails must include an "Unsubscribe" link. Add a footer widget to your email to continue.');
+      }
+    } else {
+      return __('Poet, please add prose to your masterpiece before you send it to your followers.');
+    }
+    return null;
   }
 
   public function pause($data = []) {

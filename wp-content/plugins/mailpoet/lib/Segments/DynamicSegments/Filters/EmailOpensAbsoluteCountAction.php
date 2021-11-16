@@ -31,7 +31,7 @@ class EmailOpensAbsoluteCountAction implements Filter {
     $filterData = $filter->getFilterData();
     $days = $filterData->getParam('days');
     $operator = $filterData->getParam('operator');
-    $action = $filterData->getParam('action');
+    $action = $filterData->getAction();
     $parameterSuffix = $filter->getId() ?? Security::generateRandomString();
     $statsTable = $this->entityManager->getClassMetadata(StatisticsOpenEntity::class)->getTableName();
     $subscribersTable = $this->entityManager->getClassMetadata(SubscriberEntity::class)->getTableName();

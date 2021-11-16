@@ -327,7 +327,7 @@ class SegmentSubscribersRepository {
 
     $queryBuilder
       ->leftJoin('s', $subscribersSegmentTable, 'ssg',
-        (string)$queryBuilder->expr()->andX(
+        (string)$queryBuilder->expr()->and(
           $queryBuilder->expr()->eq('ssg.subscriber_id', 's.id'),
           $queryBuilder->expr()->eq('ssg.status', ':statusSubscribed'),
           $queryBuilder->expr()->notIn('ssg.segment_id', $deletedSegmentsQueryBuilder->getQuery()->getSQL())

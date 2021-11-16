@@ -8,6 +8,7 @@ if (!defined('ABSPATH')) exit;
 use MailPoetVendor\Psr\Container\ContainerInterface;
 use MailPoetVendor\Psr\Container\NotFoundExceptionInterface;
 use MailPoetVendor\Symfony\Component\DependencyInjection\Container;
+use MailPoetVendor\Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 
 class ContainerWrapper implements ContainerInterface {
 
@@ -28,14 +29,27 @@ class ContainerWrapper implements ContainerInterface {
     $this->premiumContainer = $premiumContainer;
   }
 
+  /**
+   * @template T
+   * @param class-string<T> $id
+   * @return T
+   */
   public function get($id) {
     try {
-      return $this->freeContainer->get($id);
+      $result = $this->freeContainer->get($id);
+      if (!$result instanceof $id) {
+        throw new ServiceNotFoundException('Service Not Found ' . $id);
+      }
+      return $result;
     } catch (NotFoundExceptionInterface $e) {
-      if (!$this->premiumContainer) {
+      if (!$this->premiumContainer || !$this->premiumContainer->has($id)) {
         throw $e;
       }
-      return $this->premiumContainer->get($id);
+      $result = $this->premiumContainer->get($id);
+      if (!$result instanceof $id) {
+        throw new ServiceNotFoundException('Service Not Found ' . $id);
+      }
+      return $result;
     }
   }
 

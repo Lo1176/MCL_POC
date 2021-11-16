@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) exit;
 
 
 use MailPoet\Config\ServicesChecker;
+use MailPoet\Cron\CronWorkerScheduler;
 use MailPoet\Mailer\Mailer;
 use MailPoet\Mailer\MailerLog;
 use MailPoet\Services\Bridge;
@@ -23,11 +24,12 @@ class SendingServiceKeyCheck extends KeyCheckWorker {
 
   public function __construct(
     SettingsController $settings,
-    ServicesChecker $servicesChecker
+    ServicesChecker $servicesChecker,
+    CronWorkerScheduler $cronWorkerScheduler
   ) {
     $this->settings = $settings;
     $this->servicesChecker = $servicesChecker;
-    parent::__construct();
+    parent::__construct($cronWorkerScheduler);
   }
 
   public function checkProcessingRequirements() {
@@ -52,7 +54,6 @@ class SendingServiceKeyCheck extends KeyCheckWorker {
     $mssKey = $this->settings->get(Mailer::MAILER_CONFIG_SETTING_NAME)['mailpoet_api_key'];
     $result = $this->bridge->checkMSSKey($mssKey);
     $this->bridge->storeMSSKeyAndState($mssKey, $result);
-    $this->bridge->updateSubscriberCount($result);
 
     $isPendingApproval = $this->servicesChecker->isMailPoetAPIKeyPendingApproval();
     if ($wasPendingApproval && !$isPendingApproval) {

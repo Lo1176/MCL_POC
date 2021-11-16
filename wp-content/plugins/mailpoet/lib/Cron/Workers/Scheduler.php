@@ -6,7 +6,9 @@ if (!defined('ABSPATH')) exit;
 
 
 use MailPoet\Cron\CronHelper;
+use MailPoet\Cron\CronWorkerScheduler;
 use MailPoet\Entities\NewsletterEntity;
+use MailPoet\Entities\ScheduledTaskEntity;
 use MailPoet\Logging\LoggerFactory;
 use MailPoet\Models\Newsletter;
 use MailPoet\Models\ScheduledTask;
@@ -16,6 +18,7 @@ use MailPoet\Models\SubscriberSegment;
 use MailPoet\Newsletter\Scheduler\PostNotificationScheduler;
 use MailPoet\Newsletter\Scheduler\Scheduler as NewsletterScheduler;
 use MailPoet\Newsletter\Scheduler\WelcomeScheduler;
+use MailPoet\Newsletter\Sending\ScheduledTasksRepository;
 use MailPoet\Segments\SubscribersFinder;
 use MailPoet\Tasks\Sending as SendingTask;
 
@@ -31,14 +34,24 @@ class Scheduler {
   /** @var CronHelper */
   private $cronHelper;
 
+  /** @var CronWorkerScheduler */
+  private $cronWorkerScheduler;
+
+  /** @var ScheduledTasksRepository */
+  private $scheduledTasksRepository;
+
   public function __construct(
     SubscribersFinder $subscribersFinder,
     LoggerFactory $loggerFactory,
-    CronHelper $cronHelper
+    CronHelper $cronHelper,
+    CronWorkerScheduler $cronWorkerScheduler,
+    ScheduledTasksRepository $scheduledTasksRepository
   ) {
     $this->cronHelper = $cronHelper;
     $this->subscribersFinder = $subscribersFinder;
     $this->loggerFactory = $loggerFactory;
+    $this->cronWorkerScheduler = $cronWorkerScheduler;
+    $this->scheduledTasksRepository = $scheduledTasksRepository;
   }
 
   public function process($timer = false) {
@@ -222,7 +235,12 @@ class Scheduler {
   public function verifySubscriber($subscriber, $queue) {
     if ($subscriber->status === Subscriber::STATUS_UNCONFIRMED) {
       // reschedule delivery
-      $queue->rescheduleProgressively();
+      $task = $this->scheduledTasksRepository->findOneById($queue->task()->id);
+
+      if ($task instanceof ScheduledTaskEntity) {
+        $this->cronWorkerScheduler->rescheduleProgressively($task);
+      }
+
       return false;
     } else if ($subscriber->status === Subscriber::STATUS_UNSUBSCRIBED) {
       $queue->delete();

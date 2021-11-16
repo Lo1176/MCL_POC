@@ -27,6 +27,7 @@ class Pages {
   const ACTION_CONFIRM_UNSUBSCRIBE = 'confirm_unsubscribe';
   const ACTION_MANAGE = 'manage';
   const ACTION_UNSUBSCRIBE = 'unsubscribe';
+  const ACTION_RE_ENGAGEMENT = 're_engagement';
 
   private $action;
   private $data;
@@ -242,6 +243,9 @@ class Pages {
 
         case self::ACTION_UNSUBSCRIBE:
           return $this->getUnsubscribeTitle();
+
+        case self::ACTION_RE_ENGAGEMENT:
+          return $this->getReEngagementTitle();
       }
     }
   }
@@ -274,6 +278,9 @@ class Pages {
           break;
         case self::ACTION_UNSUBSCRIBE:
           $content = $this->getUnsubscribeContent();
+          break;
+        case self::ACTION_RE_ENGAGEMENT:
+          $content = $this->getReEngagementContent();
           break;
       }
       return str_replace('[mailpoet_page]', trim($content), $pageContent);
@@ -338,6 +345,12 @@ class Pages {
     }
   }
 
+  private function getReEngagementTitle() {
+    if ($this->isPreview() || $this->subscriber !== null) {
+      return __('Thank you for letting us know!', 'mailpoet');
+    }
+  }
+
   private function getConfirmUnsubscribeTitle() {
     if ($this->isPreview() || $this->subscriber !== null) {
       return $this->wp->__('Confirm you want to unsubscribe', 'mailpoet');
@@ -383,6 +396,14 @@ class Pages {
       $content .= '<p>' . __('Accidentally unsubscribed?', 'mailpoet') . ' <strong>';
       $content .= '[mailpoet_manage]';
       $content .= '</strong></p>';
+    }
+    return $content;
+  }
+
+  private function getReEngagementContent() {
+    $content = '';
+    if ($this->isPreview() || $this->subscriber !== null) {
+      $content .= '<p>' . __('We appreciate your continued interest in our updates. Expect to hear from us again soon!', 'mailpoet') . '</p>';
     }
     return $content;
   }
