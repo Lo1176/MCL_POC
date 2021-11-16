@@ -27,6 +27,10 @@
 }
 // collection card end
 
+//line-separator
+hr, .line-separator {
+  border-top: 0.5px solid $gray-500;
+}  
 
 // Swiper Cards
 .swiper-wrapper {
@@ -44,9 +48,9 @@
         }
         .card-body { 
             .swiper-card-text {
-                hr, .line-separator {
-                  border-top: 0.5px solid $gray-500;
-                }
+                // hr, .line-separator {
+                //   border-top: 0.5px solid $gray-500;
+                // }
                 h2 {
                   font-size: 1.5rem;
                   text-transform: uppercase;

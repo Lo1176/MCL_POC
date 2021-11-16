@@ -237,6 +237,16 @@ if (!function_exists('loop_columns')) {
   }
 }
 
+/** content-product */
+// define the woocommerce_before_shop_loop_item_title callback 
+function action_woocommerce_before_shop_loop_item()
+{
+  echo '<hr class="line-separator">';
+};
+
+// add the action 
+add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before_shop_loop_item', 10, 0);
+/* END content-product **/
 
 // Change number of products that are displayed per page (shop page)
 
