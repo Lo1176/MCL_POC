@@ -55,4 +55,7 @@ jQuery(document).ready(function ($) {
     var element = $("#couleur");
     element.val(couleurValue);
   }
+
+  $('.single_add_to_cart_button, button.product_type_simple').prop('disabled', false);
+
 }); // jQuery End
