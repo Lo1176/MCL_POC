@@ -1,8 +1,10 @@
 jQuery(document).ready(function ($) {
   // Do stuff here
   // function to change the last word
+  console.log("ici c'est theme.js");
+
   $(document).ready(function() {
-      $("div p").each(function (index, element) {
+      $("div h1").each(function (index, element) {
         var heading = $(element);
         var Word_array, last_Word, first_part;
 
