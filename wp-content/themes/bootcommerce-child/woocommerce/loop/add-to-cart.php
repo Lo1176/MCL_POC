@@ -23,11 +23,14 @@ if (!defined('ABSPATH')) {
 
 global $product;
 
-echo '<div class="d-flex justify-content-between"><div class="btn btn-primary d-block">En stock</div>';
+echo '<div class="row">
+        <div class="col-sm stock-container mt-auto">
+          <div class="btn-stock btn btn-outline-dark d-block">en stock</div>
+        </div>';
 echo apply_filters(
   'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
   sprintf(
-    '<div class="add-to-cart-container mt-auto"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-primary d-block %s" %s> %s</a></div>',
+    '<div class="col-sm add-to-cart-container mt-auto"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-primary d-block %s" %s> %s</a></div>',
     esc_url($product->add_to_cart_url()),
     esc_attr(isset($args['quantity']) ? $args['quantity'] : 1),
     $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',

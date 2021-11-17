@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 }
 
 global $product;
-echo '<div class="toto-mega-class">HELLO LES CACAS</div>';
+
 echo apply_filters(
   'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
   sprintf(
