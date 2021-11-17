@@ -16,6 +16,20 @@
 .category-product-title {
         h1 {
             text-transform: uppercase;
-            font-weight: 700;
         }
+        h1::first-word {
+            font-weight: 700;
+            color: $red;
+            font-size: 48px;
+
+        }
+}
+
+// changed the css of the last word with ".last-word" or "h1 > span:last-child"
+.last-word {
+    font-weight:bold; /* Or whatever you want to do with this element */
+    color: pink;
+}
+h1 > span:last-child {
+  color: #c09;
 }
