@@ -27,8 +27,8 @@
 
 // changed the css of the last word with ".last-word" or "h1 > span:last-child"
 .last-word {
-    font-weight:bold; /* Or whatever you want to do with this element */
-    color: pink;
+    font-weight: 700; /* Or whatever you want to do with this element */
+    // color: pink;
 }
 h1 > span:last-child {
   color: #c09;

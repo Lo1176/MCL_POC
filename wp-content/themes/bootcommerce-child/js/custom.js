@@ -1,8 +1,5 @@
 jQuery(document).ready(function ($) {
-  // Do stuff here
   // function to change the last word
-  console.log("ici c'est theme.js");
-
   $(document).ready(function() {
       $("div h1").each(function (index, element) {
         var heading = $(element);
@@ -19,8 +16,6 @@ jQuery(document).ready(function ($) {
         );
       });
   });
-  console.log("Hello ça marche");
-
   // fonction pour récupérer les attributs des produits
   $("#customize3d").on("click", function () {
     // ajouter des if

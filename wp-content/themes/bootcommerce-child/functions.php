@@ -18,7 +18,19 @@ function bootscore_child_enqueue_styles()
 // WooCommerce
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
-// add your custom functions bellow //
+// ** add your custom functions bellow ** //
+
+/**
+ * Hide loop read more buttons for out of stock items 
+ */
+// if (!function_exists('woocommerce_template_loop_add_to_cart')) {
+//   function woocommerce_template_loop_add_to_cart()
+//   {
+//     global $product;
+//     if (!$product->is_in_stock() || !$product->is_purchasable()) return;
+//     wc_get_template('loop/add-to-cart.php');
+//   }
+// }
 
 ##### start - Menu #####
 // Custom-Navigation-Menu
@@ -28,7 +40,9 @@ function mcl_custom_new_menu()
 }
 add_action('init', 'mcl_custom_new_menu');
 // Custom-Navigation-Menu  END
+
 ##### end - Menu #####
+
 
 ##### start-CONTENT-PRODUCT #####
 // Archives pages: Additional button linked to the product
