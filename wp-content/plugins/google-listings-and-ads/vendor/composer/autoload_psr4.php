@@ -38,7 +38,6 @@ return array(
     'Automattic\\WooCommerce\\GoogleListingsAndAds\\Vendor\\GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'Automattic\\WooCommerce\\GoogleListingsAndAds\\Vendor\\GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Automattic\\WooCommerce\\GoogleListingsAndAds\\Vendor\\Google\\Auth\\' => array($vendorDir . '/google/auth/src'),
-    'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\' => array($baseDir . '/tests'),
     'Automattic\\WooCommerce\\GoogleListingsAndAds\\' => array($baseDir . '/src'),
     'Automattic\\Jetpack\\Autoloader\\' => array($vendorDir . '/automattic/jetpack-autoloader/src'),
 );

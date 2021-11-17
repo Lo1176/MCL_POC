@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
+class ComposerStaticInit068c1eaeca84baea3abf472817fbc620
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -78,7 +78,6 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
             'Automattic\\WooCommerce\\GoogleListingsAndAds\\Vendor\\GuzzleHttp\\Promise\\' => 70,
             'Automattic\\WooCommerce\\GoogleListingsAndAds\\Vendor\\GuzzleHttp\\' => 62,
             'Automattic\\WooCommerce\\GoogleListingsAndAds\\Vendor\\Google\\Auth\\' => 63,
-            'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\' => 50,
             'Automattic\\WooCommerce\\GoogleListingsAndAds\\' => 44,
             'Automattic\\Jetpack\\Autoloader\\' => 30,
         ),
@@ -214,10 +213,6 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         array (
             0 => __DIR__ . '/..' . '/google/auth/src',
         ),
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
-        ),
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -352,6 +347,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Text' => __DIR__ . '/../..' . '/src/Admin/Input/Text.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\AbstractMetaBox' => __DIR__ . '/../..' . '/src/Admin/MetaBox/AbstractMetaBox.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\ChannelVisibilityMetaBox' => __DIR__ . '/../..' . '/src/Admin/MetaBox/ChannelVisibilityMetaBox.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\CouponChannelVisibilityMetaBox' => __DIR__ . '/../..' . '/src/Admin/MetaBox/CouponChannelVisibilityMetaBox.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\MetaBoxInitializer' => __DIR__ . '/../..' . '/src/Admin/MetaBox/MetaBoxInitializer.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\MetaBoxInterface' => __DIR__ . '/../..' . '/src/Admin/MetaBox/MetaBoxInterface.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\SubmittableMetaBox' => __DIR__ . '/../..' . '/src/Admin/MetaBox/SubmittableMetaBox.php',
@@ -391,6 +387,12 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Autoloader' => __DIR__ . '/../..' . '/src/Autoloader.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\ConnectionTest' => __DIR__ . '/../..' . '/src/ConnectionTest.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Container' => __DIR__ . '/../..' . '/src/Container.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponHelper' => __DIR__ . '/../..' . '/src/Coupon/CouponHelper.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponMetaHandler' => __DIR__ . '/../..' . '/src/Coupon/CouponMetaHandler.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponSyncer' => __DIR__ . '/../..' . '/src/Coupon/CouponSyncer.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponSyncerException' => __DIR__ . '/../..' . '/src/Coupon/CouponSyncerException.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\SyncerHooks' => __DIR__ . '/../..' . '/src/Coupon/SyncerHooks.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\WCCouponAdapter' => __DIR__ . '/../..' . '/src/Coupon/WCCouponAdapter.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Installer' => __DIR__ . '/../..' . '/src/DB/Installer.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Migration\\AbstractMigration' => __DIR__ . '/../..' . '/src/DB/Migration/AbstractMigration.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Migration\\MigrationInterface' => __DIR__ . '/../..' . '/src/DB/Migration/MigrationInterface.php',
@@ -442,8 +444,11 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductIDRequestEntry' => __DIR__ . '/../..' . '/src/Google/BatchProductIDRequestEntry.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductRequestEntry' => __DIR__ . '/../..' . '/src/Google/BatchProductRequestEntry.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductResponse' => __DIR__ . '/../..' . '/src/Google/BatchProductResponse.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\DeleteCouponEntry' => __DIR__ . '/../..' . '/src/Google/DeleteCouponEntry.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\GlobalSiteTag' => __DIR__ . '/../..' . '/src/Google/GlobalSiteTag.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\GoogleProductService' => __DIR__ . '/../..' . '/src/Google/GoogleProductService.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\GooglePromotionService' => __DIR__ . '/../..' . '/src/Google/GooglePromotionService.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\InvalidCouponEntry' => __DIR__ . '/../..' . '/src/Google/InvalidCouponEntry.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\SiteVerificationMeta' => __DIR__ . '/../..' . '/src/Google/SiteVerificationMeta.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\HelperTraits\\ISO3166Awareness' => __DIR__ . '/../..' . '/src/HelperTraits/ISO3166Awareness.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\HelperTraits\\Utilities' => __DIR__ . '/../..' . '/src/HelperTraits/Utilities.php',
@@ -493,6 +498,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\StatusMapping' => __DIR__ . '/../..' . '/src/Internal/StatusMapping.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractActionSchedulerJob' => __DIR__ . '/../..' . '/src/Jobs/AbstractActionSchedulerJob.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractBatchedActionSchedulerJob' => __DIR__ . '/../..' . '/src/Jobs/AbstractBatchedActionSchedulerJob.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractCouponSyncerJob' => __DIR__ . '/../..' . '/src/Jobs/AbstractCouponSyncerJob.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractProductSyncerBatchedJob' => __DIR__ . '/../..' . '/src/Jobs/AbstractProductSyncerBatchedJob.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractProductSyncerJob' => __DIR__ . '/../..' . '/src/Jobs/AbstractProductSyncerJob.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\ActionSchedulerJobInterface' => __DIR__ . '/../..' . '/src/Jobs/ActionSchedulerJobInterface.php',
@@ -500,6 +506,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\BatchedActionSchedulerJobInterface' => __DIR__ . '/../..' . '/src/Jobs/BatchedActionSchedulerJobInterface.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\CleanupProductsJob' => __DIR__ . '/../..' . '/src/Jobs/CleanupProductsJob.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\DeleteAllProducts' => __DIR__ . '/../..' . '/src/Jobs/DeleteAllProducts.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\DeleteCoupon' => __DIR__ . '/../..' . '/src/Jobs/DeleteCoupon.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\DeleteProducts' => __DIR__ . '/../..' . '/src/Jobs/DeleteProducts.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\JobException' => __DIR__ . '/../..' . '/src/Jobs/JobException.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\JobInitializer' => __DIR__ . '/../..' . '/src/Jobs/JobInitializer.php',
@@ -512,6 +519,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\StartHook' => __DIR__ . '/../..' . '/src/Jobs/StartHook.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\StartOnHookInterface' => __DIR__ . '/../..' . '/src/Jobs/StartOnHookInterface.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\UpdateAllProducts' => __DIR__ . '/../..' . '/src/Jobs/UpdateAllProducts.php',
+        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\UpdateCoupon' => __DIR__ . '/../..' . '/src/Jobs/UpdateCoupon.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\UpdateProducts' => __DIR__ . '/../..' . '/src/Jobs/UpdateProducts.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\Update\\CleanupProductTargetCountriesJob' => __DIR__ . '/../..' . '/src/Jobs/Update/CleanupProductTargetCountriesJob.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\Update\\PluginUpdate' => __DIR__ . '/../..' . '/src/Jobs/Update/PluginUpdate.php',
@@ -590,37 +598,6 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\WP' => __DIR__ . '/../..' . '/src/Proxies/WP.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\TaskList\\CompleteSetup' => __DIR__ . '/../..' . '/src/TaskList/CompleteSetup.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\TaskList\\TaskListTrait' => __DIR__ . '/../..' . '/src/TaskList/TaskListTrait.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Framework\\ContainerAwareUnitTest' => __DIR__ . '/../..' . '/tests/Framework/ContainerAwareUnitTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Framework\\RESTControllerUnitTest' => __DIR__ . '/../..' . '/tests/Framework/RESTControllerUnitTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Framework\\UnitTest' => __DIR__ . '/../..' . '/tests/Framework/UnitTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\DataTrait' => __DIR__ . '/../..' . '/tests/Tools/HelperTrait/DataTrait.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\MerchantTrait' => __DIR__ . '/../..' . '/tests/Tools/HelperTrait/MerchantTrait.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\ProductMetaTrait' => __DIR__ . '/../..' . '/tests/Tools/HelperTrait/ProductMetaTrait.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\ProductTrait' => __DIR__ . '/../..' . '/tests/Tools/HelperTrait/ProductTrait.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\SettingsTrait' => __DIR__ . '/../..' . '/tests/Tools/HelperTrait/SettingsTrait.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\API\\Google\\MerchantTest' => __DIR__ . '/../..' . '/tests/Unit/API/Google/MerchantTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\API\\Site\\Controllers\\MerchantCenter\\ContactInformationControllerTest' => __DIR__ . '/../..' . '/tests/Unit/API/Site/Controllers/MerchantCenter/ContactInformationControllerTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\API\\Site\\Controllers\\MerchantCenter\\PhoneVerificationControllerTest' => __DIR__ . '/../..' . '/tests/Unit/API/Site/Controllers/MerchantCenter/PhoneVerificationControllerTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Assets\\AdminScriptAssetTest' => __DIR__ . '/../..' . '/tests/Unit/Assets/AdminScriptAssetTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\DB\\Migration\\MigratorTest' => __DIR__ . '/../..' . '/tests/Unit/DB/Migration/MigratorTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\MerchantCenter\\ContactInformationTest' => __DIR__ . '/../..' . '/tests/Unit/MerchantCenter/ContactInformationTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\MerchantCenter\\PhoneVerificationTest' => __DIR__ . '/../..' . '/tests/Unit/MerchantCenter/PhoneVerificationTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\Attributes\\AbstractAttributeTest' => __DIR__ . '/../..' . '/tests/Unit/Product/Attributes/AbstractAttributeTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\Attributes\\AttributeManagerTest' => __DIR__ . '/../..' . '/tests/Unit/Product/Attributes/AttributeManagerTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\BatchProductHelperTest' => __DIR__ . '/../..' . '/tests/Unit/Product/BatchProductHelperTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductFactoryTest' => __DIR__ . '/../..' . '/tests/Unit/Product/ProductFactoryTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductHelperTest' => __DIR__ . '/../..' . '/tests/Unit/Product/ProductHelperTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductMetaHandlerTest' => __DIR__ . '/../..' . '/tests/Unit/Product/ProductMetaHandlerTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductRepositoryTest' => __DIR__ . '/../..' . '/tests/Unit/Product/ProductRepositoryTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductSyncerTest' => __DIR__ . '/../..' . '/tests/Unit/Product/ProductSyncerTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\SyncerHooksTest' => __DIR__ . '/../..' . '/tests/Unit/Product/SyncerHooksTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\WCProductAdapterTest' => __DIR__ . '/../..' . '/tests/Unit/Product/WCProductAdapterTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Utility\\AddressUtilityTest' => __DIR__ . '/../..' . '/tests/Unit/Utility/AddressUtilityTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Utility\\DateTimeUtilityTest' => __DIR__ . '/../..' . '/tests/Unit/Utility/DateTimeUtilityTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Utility\\ISOUtilityTest' => __DIR__ . '/../..' . '/tests/Unit/Utility/ISOUtilityTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Value\\PhoneNumberTest' => __DIR__ . '/../..' . '/tests/Unit/Value/PhoneNumberTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\View\\PHPViewFactoryTest' => __DIR__ . '/../..' . '/tests/Unit/View/PHPViewFactoryTest.php',
-        'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\View\\PHPViewTest' => __DIR__ . '/../..' . '/tests/Unit/View/PHPViewTest.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\EventTracking' => __DIR__ . '/../..' . '/src/Tracking/EventTracking.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\BaseEvent' => __DIR__ . '/../..' . '/src/Tracking/Events/BaseEvent.php',
         'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\Loaded' => __DIR__ . '/../..' . '/src/Tracking/Events/Loaded.php',
@@ -4766,6 +4743,8 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Google\\Service\\ShoppingContent\\Amount' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Amount.php',
         'Google\\Service\\ShoppingContent\\BusinessDayConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/BusinessDayConfig.php',
         'Google\\Service\\ShoppingContent\\BuyOnGoogleProgramStatus' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/BuyOnGoogleProgramStatus.php',
+        'Google\\Service\\ShoppingContent\\CaptureOrderRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/CaptureOrderRequest.php',
+        'Google\\Service\\ShoppingContent\\CaptureOrderResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/CaptureOrderResponse.php',
         'Google\\Service\\ShoppingContent\\CarrierRate' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/CarrierRate.php',
         'Google\\Service\\ShoppingContent\\CarriersCarrier' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/CarriersCarrier.php',
         'Google\\Service\\ShoppingContent\\Collection' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Collection.php',
@@ -4798,6 +4777,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Google\\Service\\ShoppingContent\\Date' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Date.php',
         'Google\\Service\\ShoppingContent\\DateTime' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/DateTime.php',
         'Google\\Service\\ShoppingContent\\DeliveryTime' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/DeliveryTime.php',
+        'Google\\Service\\ShoppingContent\\ECommercePlatformLinkInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ECommercePlatformLinkInfo.php',
         'Google\\Service\\ShoppingContent\\Error' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Error.php',
         'Google\\Service\\ShoppingContent\\Errors' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Errors.php',
         'Google\\Service\\ShoppingContent\\FreeListingsProgramStatus' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/FreeListingsProgramStatus.php',
@@ -4973,6 +4953,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Google\\Service\\ShoppingContent\\PriceAmount' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/PriceAmount.php',
         'Google\\Service\\ShoppingContent\\Product' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Product.php',
         'Google\\Service\\ShoppingContent\\ProductAmount' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductAmount.php',
+        'Google\\Service\\ShoppingContent\\ProductDimension' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductDimension.php',
         'Google\\Service\\ShoppingContent\\ProductProductDetail' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductProductDetail.php',
         'Google\\Service\\ShoppingContent\\ProductShipping' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductShipping.php',
         'Google\\Service\\ShoppingContent\\ProductShippingDimension' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductShippingDimension.php',
@@ -4984,6 +4965,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Google\\Service\\ShoppingContent\\ProductTax' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductTax.php',
         'Google\\Service\\ShoppingContent\\ProductUnitPricingBaseMeasure' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductUnitPricingBaseMeasure.php',
         'Google\\Service\\ShoppingContent\\ProductUnitPricingMeasure' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductUnitPricingMeasure.php',
+        'Google\\Service\\ShoppingContent\\ProductWeight' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductWeight.php',
         'Google\\Service\\ShoppingContent\\ProductsCustomBatchRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchRequest.php',
         'Google\\Service\\ShoppingContent\\ProductsCustomBatchRequestEntry' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchRequestEntry.php',
         'Google\\Service\\ShoppingContent\\ProductsCustomBatchResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchResponse.php',
@@ -4994,6 +4976,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Google\\Service\\ShoppingContent\\ProductstatusesCustomBatchResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductstatusesCustomBatchResponse.php',
         'Google\\Service\\ShoppingContent\\ProductstatusesCustomBatchResponseEntry' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductstatusesCustomBatchResponseEntry.php',
         'Google\\Service\\ShoppingContent\\ProductstatusesListResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/ProductstatusesListResponse.php',
+        'Google\\Service\\ShoppingContent\\Promotion' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Promotion.php',
         'Google\\Service\\ShoppingContent\\PubsubNotificationSettings' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/PubsubNotificationSettings.php',
         'Google\\Service\\ShoppingContent\\RateGroup' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/RateGroup.php',
         'Google\\Service\\ShoppingContent\\RefundReason' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/RefundReason.php',
@@ -5050,6 +5033,7 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
         'Google\\Service\\ShoppingContent\\Resource\\Products' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/Products.php',
         'Google\\Service\\ShoppingContent\\Resource\\Productstatuses' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/Productstatuses.php',
         'Google\\Service\\ShoppingContent\\Resource\\ProductstatusesRepricingreports' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/ProductstatusesRepricingreports.php',
+        'Google\\Service\\ShoppingContent\\Resource\\Promotions' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/Promotions.php',
         'Google\\Service\\ShoppingContent\\Resource\\Pubsubnotificationsettings' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/Pubsubnotificationsettings.php',
         'Google\\Service\\ShoppingContent\\Resource\\Regionalinventory' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/Regionalinventory.php',
         'Google\\Service\\ShoppingContent\\Resource\\Regions' => __DIR__ . '/..' . '/google/apiclient-services/src/ShoppingContent/Resource/Regions.php',
@@ -5924,9 +5908,9 @@ class ComposerStaticInit13e7ec013b1fdde04a5385375871314e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit13e7ec013b1fdde04a5385375871314e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit13e7ec013b1fdde04a5385375871314e::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit13e7ec013b1fdde04a5385375871314e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit068c1eaeca84baea3abf472817fbc620::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit068c1eaeca84baea3abf472817fbc620::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit068c1eaeca84baea3abf472817fbc620::$classMap;
 
         }, null, ClassLoader::class);
     }

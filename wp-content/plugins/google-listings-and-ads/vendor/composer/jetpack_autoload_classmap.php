@@ -2923,1691 +2923,1719 @@ return array(
 		'path'    => $vendorDir . '/grpc/grpc/src/lib/ServerContext.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductStatusDestinationStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductStatusDestinationStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsProcessResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsProcessResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreportsListTransactionsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreportsListTransactionsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountGoogleMyBusinessLink' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountGoogleMyBusinessLink.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductsCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\TransitTableTransitTimeRowTransitTimeValue' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TransitTableTransitTimeRowTransitTimeValue.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosSaleRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosSaleRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersShipLineItemsRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersShipLineItemsRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\LabelIds' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LabelIds.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductstatusesCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductstatusesCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\Errors' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Errors.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderAddress' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderAddress.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiaInventorySettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiaInventorySettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementTransactionIdentifiers' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementTransactionIdentifiers.php'
 	),
 	'Google\\Service\\ShoppingContent\\DateTime' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DateTime.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionalInventory' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionalInventory.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountstatusesListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountstatusesListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\Headers' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Headers.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemReturnInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemReturnInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsRefundOperation' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsRefundOperation.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderCustomerMarketingRightsInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderCustomerMarketingRightsInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedsCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedsCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersUpdateShipmentResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersUpdateShipmentResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductShippingWeight' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductShippingWeight.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleEligibleOfferMatcherStringMatcher' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleEligibleOfferMatcherStringMatcher.php'
 	),
 	'Google\\Service\\ShoppingContent\\Region' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Region.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedstatusesCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedstatusesCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountUser' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountUser.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionGeoTargetArea' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionGeoTargetArea.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCustomBatchRequestEntryRefundItemItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCustomBatchRequestEntryRefundItemItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderReportTransaction' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderReportTransaction.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersRefundOrderResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersRefundOrderResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountstatusesCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountstatusesCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\LinkService' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LinkService.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderPromotion' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderPromotion.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionalinventoryCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionalinventoryCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersGetByMerchantOrderIdResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersGetByMerchantOrderIdResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\TransitTableTransitTimeRow' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TransitTableTransitTimeRow.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicyOnlineReturnShippingFee' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicyOnlineReturnShippingFee.php'
 	),
 	'Google\\Service\\ShoppingContent\\PauseBuyOnGoogleProgramRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PauseBuyOnGoogleProgramRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountstatusesCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountstatusesCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemProduct' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemProduct.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReportRow' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReportRow.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleStatsBasedRule' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleStatsBasedRule.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiaOnDisplayToOrderSettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiaOnDisplayToOrderSettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedFetchSchedule' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedFetchSchedule.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountAddress' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountAddress.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderShipment' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderShipment.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleReportBuyboxWinningRuleStats' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleReportBuyboxWinningRuleStats.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShipmentInvoice' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShipmentInvoice.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCreateTestOrderResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCreateTestOrderResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShoppingAdsProgramStatusRegionStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShoppingAdsProgramStatusRegionStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\FreeListingsProgramStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/FreeListingsProgramStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\RequestPhoneVerificationResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RequestPhoneVerificationResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiaSettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiaSettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersRefundItemRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersRefundItemRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsLinkResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsLinkResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShipmentInvoiceLineItemInvoice' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShipmentInvoiceLineItemInvoice.php'
 	),
 	'Google\\Service\\ShoppingContent\\UnitInvoice' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/UnitInvoice.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderPromotionItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderPromotionItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\LocalinventoryCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LocalinventoryCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccounttaxCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccounttaxCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsCreateOrderReturnRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsCreateOrderReturnRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnpolicyCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnpolicyCustomBatchRequestEntry.php'
 	),
+	'Google\\Service\\ShoppingContent\\CaptureOrderResponse' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CaptureOrderResponse.php'
+	),
 	'Google\\Service\\ShoppingContent\\LiasettingsCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductstatusesListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductstatusesListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\WarehouseBasedDeliveryTime' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/WarehouseBasedDeliveryTime.php'
 	),
 	'Google\\Service\\ShoppingContent\\SearchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SearchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnaddressCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnaddressCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\Product' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Product.php'
 	),
 	'Google\\Service\\ShoppingContent\\Order' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Order.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCancelTestOrderByCustomerRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCancelTestOrderByCustomerRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCreateTestReturnRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCreateTestReturnRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosInventoryResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosInventoryResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnaddressCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnaddressCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementReport' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementReport.php'
 	),
 	'Google\\Service\\ShoppingContent\\LinkedAccount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LinkedAccount.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersAdvanceTestOrderResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersAdvanceTestOrderResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsCustomBatchRequestEntryLinkRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsCustomBatchRequestEntryLinkRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingProductReport' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingProductReport.php'
 	),
 	'Google\\Service\\ShoppingContent\\RequestReviewShoppingAdsRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RequestReviewShoppingAdsRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListRepricingRulesResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListRepricingRulesResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnaddressCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnaddressCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderinvoicesCreateRefundInvoiceResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderinvoicesCreateRefundInvoiceResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\HolidayCutoff' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/HolidayCutoff.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedFormat' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedFormat.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementTransactionAmount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementTransactionAmount.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\VerifyPhoneNumberResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/VerifyPhoneNumberResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsProcessRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsProcessRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\MerchantRejectionReason' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/MerchantRejectionReason.php'
 	),
 	'Google\\Service\\ShoppingContent\\CustomAttribute' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CustomAttribute.php'
 	),
 	'Google\\Service\\ShoppingContent\\Service' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Service.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosInventory' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosInventory.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosSaleResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosSaleResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\PickupCarrierService' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PickupCarrierService.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleRestrictionBoundary' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleRestrictionBoundary.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedsFetchNowResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedsFetchNowResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountTax' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountTax.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnShipment' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnShipment.php'
 	),
 	'Google\\Service\\ShoppingContent\\PostalCodeRange' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PostalCodeRange.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListAccountLabelsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListAccountLabelsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleRestriction' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleRestriction.php'
 	),
 	'Google\\Service\\ShoppingContent\\InapplicabilityDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/InapplicabilityDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderTrackingSignalShipmentLineItemMapping' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderTrackingSignalShipmentLineItemMapping.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsUpdateLabelsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsUpdateLabelsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderShipmentLineItemShipment' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderShipmentLineItemShipment.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemShippingDetailsMethod' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemShippingDetailsMethod.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersInStoreRefundLineItemRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersInStoreRefundLineItemRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\MerchantOrderReturnItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/MerchantOrderReturnItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleEffectiveTime' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleEffectiveTime.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCancelTestOrderByCustomerResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCancelTestOrderByCustomerResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicyOnlineRestockingFee' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicyOnlineRestockingFee.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCancelResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCancelResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicyOnlinePolicy' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicyOnlinePolicy.php'
 	),
 	'Google\\Service\\ShoppingContent\\SearchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SearchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\GmbAccountsGmbAccount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/GmbAccountsGmbAccount.php'
 	),
 	'Google\\Service\\ShoppingContent\\PubsubNotificationSettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PubsubNotificationSettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCancelRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCancelRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\RequestPhoneVerificationRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RequestPhoneVerificationRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRule' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRule.php'
 	),
+	'Google\\Service\\ShoppingContent\\ECommercePlatformLinkInfo' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ECommercePlatformLinkInfo.php'
+	),
 	'Google\\Service\\ShoppingContent\\AccountIdentifier' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountIdentifier.php'
 	),
+	'Google\\Service\\ShoppingContent\\Promotion' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Promotion.php'
+	),
 	'Google\\Service\\ShoppingContent\\ProductTax' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductTax.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsAcknowledgeResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsAcknowledgeResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListRepricingProductReportsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListRepricingProductReportsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrderPickupDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrderPickupDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\FreeListingsProgramStatusRegionStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/FreeListingsProgramStatusRegionStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductstatusesCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductstatusesCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedstatusesCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedstatusesCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountStatusItemLevelIssue' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountStatusItemLevelIssue.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountStatusStatistics' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountStatusStatistics.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedstatusesListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedstatusesListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\Account' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Account.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedStatusExample' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedStatusExample.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleEffectiveTimeFixedTimePeriod' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleEffectiveTimeFixedTimePeriod.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrderAddress' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrderAddress.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsGetSupportedHolidaysResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsGetSupportedHolidaysResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\DeliveryTime' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DeliveryTime.php'
 	),
 	'Google\\Service\\ShoppingContent\\LoyaltyPoints' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LoyaltyPoints.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersSetLineItemMetadataResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersSetLineItemMetadataResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductUnitPricingMeasure' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductUnitPricingMeasure.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersSetLineItemMetadataRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersSetLineItemMetadataRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedstatusesCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedstatusesCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductSubscriptionCost' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductSubscriptionCost.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductStatusItemLevelIssue' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductStatusItemLevelIssue.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCreateTestOrderRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCreateTestOrderRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\RequestReviewBuyOnGoogleProgramRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RequestReviewBuyOnGoogleProgramRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementTransaction' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementTransaction.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsGetSupportedPickupServicesResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsGetSupportedPickupServicesResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersRefundItemResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersRefundItemResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountReturnCarrier' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountReturnCarrier.php'
 	),
 	'Google\\Service\\ShoppingContent\\MerchantOrderReturn' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/MerchantOrderReturn.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicySeasonalOverride' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicySeasonalOverride.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionPostalCodeAreaPostalCodeRange' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionPostalCodeAreaPostalCodeRange.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleEligibleOfferMatcher' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleEligibleOfferMatcher.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiaCountrySettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiaCountrySettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementtransactionsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementtransactionsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderPickupDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderPickupDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsGetAccessibleGmbAccountsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsGetAccessibleGmbAccountsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnAddressAddress' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnAddressAddress.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrderDeliveryDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrderDeliveryDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnShippingLabel' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnShippingLabel.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsAcknowledgeRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsAcknowledgeRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductstatusesCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductstatusesCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccounttaxListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccounttaxListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsSetInventoryVerificationContactResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsSetInventoryVerificationContactResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersRejectReturnLineItemRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersRejectReturnLineItemRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\InvoiceSummary' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/InvoiceSummary.php'
 	),
 	'Google\\Service\\ShoppingContent\\PaymentServiceProviderLinkInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PaymentServiceProviderLinkInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsListPosDataProvidersResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsListPosDataProvidersResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosSale' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosSale.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCancelLineItemResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCancelLineItemResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersRejectReturnLineItemResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersRejectReturnLineItemResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\CollectionFeaturedProduct' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CollectionFeaturedProduct.php'
 	),
 	'Google\\Service\\ShoppingContent\\Value' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Value.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemProductFee' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemProductFee.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountCredentials' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountCredentials.php'
 	),
 	'Google\\Service\\ShoppingContent\\MinimumOrderValueTable' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/MinimumOrderValueTable.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrderLineItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrderLineItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\Installment' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Installment.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicyOnline' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicyOnline.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsLinkRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsLinkRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersReturnRefundLineItemRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersReturnRefundLineItemRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\TransitTable' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TransitTable.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductstatusesCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductstatusesCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\Weight' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Weight.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderTrackingSignal' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderTrackingSignal.php'
 	),
 	'Google\\Service\\ShoppingContent\\RateGroup' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RateGroup.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountBusinessInformation' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountBusinessInformation.php'
 	),
 	'Google\\Service\\ShoppingContent\\Row' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Row.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountstatusesCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountstatusesCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\MinimumOrderValueTableStoreCodeSetWithMov' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/MinimumOrderValueTableStoreCodeSetWithMov.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedsCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedsCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicyPolicy' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicyPolicy.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductsCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsReturnItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsReturnItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionalinventoryCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionalinventoryCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCustomBatchRequestEntryCreateTestReturnReturnItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCustomBatchRequestEntryCreateTestReturnReturnItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsUpdateLabelsRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsUpdateLabelsRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountAdsLink' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountAdsLink.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccounttaxCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccounttaxCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsAuthInfoResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsAuthInfoResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LocalinventoryCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LocalinventoryCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\Price' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Price.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderShipmentScheduledDeliveryDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderShipmentScheduledDeliveryDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderReportDisbursement' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderReportDisbursement.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsCreateOrderReturnResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsCreateOrderReturnResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnpolicyCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnpolicyCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\InvoiceSummaryAdditionalChargeSummary' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/InvoiceSummaryAdditionalChargeSummary.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsLineItem' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsLineItem.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosDataProviders' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosDataProviders.php'
 	),
 	'Google\\Service\\ShoppingContent\\LocalinventoryCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LocalinventoryCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductsCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\Error' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Error.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersInStoreRefundLineItemResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersInStoreRefundLineItemResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderTrackingSignalShippingInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderTrackingSignalShippingInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\Date' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Date.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionalinventoryCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionalinventoryCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemProductVariantAttribute' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemProductVariantAttribute.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderPickupDetailsCollector' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderPickupDetailsCollector.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersUpdateMerchantOrderIdRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersUpdateMerchantOrderIdRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListRegionsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListRegionsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductsCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductsCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderCustomer' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderCustomer.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShipmentTrackingInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShipmentTrackingInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\Amount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Amount.php'
 	),
 	'Google\\Service\\ShoppingContent\\CollectionStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CollectionStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\PostalCodeGroup' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PostalCodeGroup.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnaddressCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnaddressCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreportsListDisbursementsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreportsListDisbursementsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsSetPosDataProviderResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsSetPosDataProviderResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountYouTubeChannelLink' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountYouTubeChannelLink.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersReturnRefundLineItemResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersReturnRefundLineItemResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersRefundOrderRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersRefundOrderRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleCostOfGoodsSaleRule' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleCostOfGoodsSaleRule.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsGetSupportedCarriersResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsGetSupportedCarriersResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LocalInventory' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LocalInventory.php'
 	),
 	'Google\\Service\\ShoppingContent\\BusinessDayConfig' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/BusinessDayConfig.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderMerchantProvidedAnnotation' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderMerchantProvidedAnnotation.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderTrackingSignalLineItemDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderTrackingSignalLineItemDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\LocationIdSet' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LocationIdSet.php'
 	),
 	'Google\\Service\\ShoppingContent\\GmbAccounts' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/GmbAccounts.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingSettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingSettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemShippingDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemShippingDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsPartialRefund' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsPartialRefund.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingRuleReport' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingRuleReport.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListRepricingRuleReportsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListRepricingRuleReportsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LocalinventoryCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LocalinventoryCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersShipLineItemsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersShipLineItemsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\TimeZone' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TimeZone.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCustomBatchRequestEntryRefundItemShipping' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCustomBatchRequestEntryRefundItemShipping.php'
 	),
 	'Google\\Service\\ShoppingContent\\PickupServicesPickupService' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PickupServicesPickupService.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnAddress' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnAddress.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiaPosDataProvider' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiaPosDataProvider.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementreportsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementreportsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListReturnPolicyOnlineResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListReturnPolicyOnlineResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionPostalCodeArea' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionPostalCodeArea.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsListLinksResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsListLinksResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedTarget' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedTarget.php'
 	),
 	'Google\\Service\\ShoppingContent\\Metrics' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Metrics.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderDeliveryDetails' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderDeliveryDetails.php'
 	),
 	'Google\\Service\\ShoppingContent\\CutoffTime' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CutoffTime.php'
 	),
 	'Google\\Service\\ShoppingContent\\RegionalinventoryCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RegionalinventoryCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\RefundReason' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RefundReason.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnpolicyCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnpolicyCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\RepricingProductReportBuyboxWinningProductStats' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RepricingProductReportBuyboxWinningProductStats.php'
 	),
 	'Google\\Service\\ShoppingContent\\Collection' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Collection.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicy' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicy.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductShipping' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductShipping.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountStatusAccountLevelIssue' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountStatusAccountLevelIssue.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountTaxTaxRule' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountTaxTaxRule.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnaddressListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnaddressListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductProductDetail' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductProductDetail.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderCancellation' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderCancellation.php'
 	),
 	'Google\\Service\\ShoppingContent\\UnitInvoiceAdditionalCharge' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/UnitInvoiceAdditionalCharge.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderinvoicesCreateChargeInvoiceResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderinvoicesCreateChargeInvoiceResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersAcknowledgeResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersAcknowledgeResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\MonetaryAmount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/MonetaryAmount.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrderLineItemProduct' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrderLineItemProduct.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListCssesResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListCssesResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\RequestReviewFreeListingsRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/RequestReviewFreeListingsRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountCustomerService' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountCustomerService.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrder' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrder.php'
 	),
 	'Google\\Service\\ShoppingContent\\Segments' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Segments.php'
 	),
+	'Google\\Service\\ShoppingContent\\ProductDimension' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductDimension.php'
+	),
 	'Google\\Service\\ShoppingContent\\AccountsCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderReturn' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderReturn.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShippingsettingsCustomBatchRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShippingsettingsCustomBatchRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersUpdateShipmentRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersUpdateShipmentRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderinvoicesCreateChargeInvoiceRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderinvoicesCreateChargeInvoiceRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountStatusProducts' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountStatusProducts.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosDataProvidersPosDataProvider' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosDataProvidersPosDataProvider.php'
 	),
 	'Google\\Service\\ShoppingContent\\ShoppingAdsProgramStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ShoppingAdsProgramStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\CarriersCarrier' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CarriersCarrier.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Collectionstatuses' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Collectionstatuses.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Regionalinventory' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Regionalinventory.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Settlementreports' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Settlementreports.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Settlementtransactions' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Settlementtransactions.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Liasettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Liasettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\AccountsLabels' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/AccountsLabels.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Reports' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Reports.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Accounttax' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Accounttax.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Pubsubnotificationsettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Pubsubnotificationsettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Datafeedstatuses' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Datafeedstatuses.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Orderreturns' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Orderreturns.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Buyongoogleprograms' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Buyongoogleprograms.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Orderreports' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Orderreports.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Returnpolicyonline' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Returnpolicyonline.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\OrderreturnsLabels' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/OrderreturnsLabels.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Datafeeds' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Datafeeds.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Accounts' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Accounts.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Pos' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Pos.php'
 	),
+	'Google\\Service\\ShoppingContent\\Resource\\Promotions' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Promotions.php'
+	),
 	'Google\\Service\\ShoppingContent\\Resource\\Localinventory' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Localinventory.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Accountstatuses' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Accountstatuses.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Shippingsettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Shippingsettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Csses' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Csses.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Returnaddress' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Returnaddress.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Repricingrules' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Repricingrules.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Returnpolicy' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Returnpolicy.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Products' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Products.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Regions' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Regions.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Ordertrackingsignals' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Ordertrackingsignals.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Collections' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Collections.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Shoppingadsprogram' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Shoppingadsprogram.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Productstatuses' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Productstatuses.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\AccountsReturncarrier' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/AccountsReturncarrier.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\AccountsCredentials' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/AccountsCredentials.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Freelistingsprogram' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Freelistingsprogram.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\ProductstatusesRepricingreports' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/ProductstatusesRepricingreports.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\RepricingrulesRepricingreports' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/RepricingrulesRepricingreports.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Orderinvoices' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Orderinvoices.php'
 	),
 	'Google\\Service\\ShoppingContent\\Resource\\Orders' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Resource/Orders.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsRequestGmbAccessResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsRequestGmbAccessResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\Css' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Css.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCancelLineItemRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCancelLineItemRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedsCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedsCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductShippingDimension' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductShippingDimension.php'
 	),
+	'Google\\Service\\ShoppingContent\\ProductWeight' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductWeight.php'
+	),
 	'Google\\Service\\ShoppingContent\\SettlementTransactionAmountCommission' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementTransactionAmountCommission.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedstatusesCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedstatusesCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderreturnsRejectOperation' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderreturnsRejectOperation.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersAcknowledgeRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersAcknowledgeRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderLineItemAdjustment' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderLineItemAdjustment.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedStatusError' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedStatusError.php'
 	),
 	'Google\\Service\\ShoppingContent\\DatafeedsCustomBatchRequestEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/DatafeedsCustomBatchRequestEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\Table' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Table.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderOrderAnnotation' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderOrderAnnotation.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosInventoryRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosInventoryRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\CarrierRate' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CarrierRate.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnpolicyListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnpolicyListResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountLabel' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountLabel.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderCustomerLoyaltyInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderCustomerLoyaltyInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListAccountReturnCarrierResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListAccountReturnCarrierResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\VerifyPhoneNumberRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/VerifyPhoneNumberRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\PosStore' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PosStore.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnpolicyCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnpolicyCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderRefund' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderRefund.php'
 	),
 	'Google\\Service\\ShoppingContent\\OnboardBuyOnGoogleProgramRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OnboardBuyOnGoogleProgramRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\CustomerReturnReason' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CustomerReturnReason.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersUpdateLineItemShippingDetailsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersUpdateLineItemShippingDetailsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersGetTestOrderTemplateResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersGetTestOrderTemplateResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccounttaxCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccounttaxCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\TestOrderPickupDetailsPickupPerson' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/TestOrderPickupDetailsPickupPerson.php'
 	),
 	'Google\\Service\\ShoppingContent\\Datafeed' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/Datafeed.php'
 	),
 	'Google\\Service\\ShoppingContent\\UnitInvoiceTaxLine' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/UnitInvoiceTaxLine.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountsClaimWebsiteResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountsClaimWebsiteResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ActivateBuyOnGoogleProgramRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ActivateBuyOnGoogleProgramRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccounttaxCustomBatchResponseEntry' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccounttaxCustomBatchResponseEntry.php'
 	),
 	'Google\\Service\\ShoppingContent\\HolidaysHoliday' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/HolidaysHoliday.php'
 	),
 	'Google\\Service\\ShoppingContent\\CollectionStatusDestinationStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CollectionStatusDestinationStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrderinvoicesCreateRefundInvoiceRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrderinvoicesCreateRefundInvoiceRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersUpdateLineItemShippingDetailsRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersUpdateLineItemShippingDetailsRequest.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersUpdateMerchantOrderIdResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersUpdateMerchantOrderIdResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListCollectionsResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListCollectionsResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\OrdersCreateTestReturnResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/OrdersCreateTestReturnResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPricingInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPricingInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\BuyOnGoogleProgramStatus' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/BuyOnGoogleProgramStatus.php'
 	),
 	'Google\\Service\\ShoppingContent\\ListCollectionStatusesResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ListCollectionStatusesResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\AccountstatusesCustomBatchResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/AccountstatusesCustomBatchResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiasettingsRequestInventoryVerificationResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiasettingsRequestInventoryVerificationResponse.php'
 	),
 	'Google\\Service\\ShoppingContent\\CollectionStatusItemLevelIssue' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CollectionStatusItemLevelIssue.php'
 	),
 	'Google\\Service\\ShoppingContent\\LiaAboutPageSettings' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/LiaAboutPageSettings.php'
 	),
 	'Google\\Service\\ShoppingContent\\ProductAmount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductAmount.php'
 	),
 	'Google\\Service\\ShoppingContent\\PriceAmount' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/PriceAmount.php'
 	),
+	'Google\\Service\\ShoppingContent\\CaptureOrderRequest' => array(
+		'version' => '0.216.0.0',
+		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/CaptureOrderRequest.php'
+	),
 	'Google\\Service\\ShoppingContent\\ProductUnitPricingBaseMeasure' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ProductUnitPricingBaseMeasure.php'
 	),
 	'Google\\Service\\ShoppingContent\\ReturnPolicyOnlineReturnReasonCategoryInfo' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/ReturnPolicyOnlineReturnReasonCategoryInfo.php'
 	),
 	'Google\\Service\\ShoppingContent\\SettlementTransactionTransaction' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent/SettlementTransactionTransaction.php'
 	),
 	'Google\\Service\\ShoppingContent' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/ShoppingContent.php'
 	),
 	'Google\\Service\\SiteVerification' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification.php'
 	),
 	'Google\\Service\\SiteVerification\\SiteVerificationWebResourceListResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/SiteVerificationWebResourceListResponse.php'
 	),
 	'Google\\Service\\SiteVerification\\SiteVerificationWebResourceGettokenRequestSite' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/SiteVerificationWebResourceGettokenRequestSite.php'
 	),
 	'Google\\Service\\SiteVerification\\SiteVerificationWebResourceGettokenRequest' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/SiteVerificationWebResourceGettokenRequest.php'
 	),
 	'Google\\Service\\SiteVerification\\SiteVerificationWebResourceGettokenResponse' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/SiteVerificationWebResourceGettokenResponse.php'
 	),
 	'Google\\Service\\SiteVerification\\Resource\\WebResource' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/Resource/WebResource.php'
 	),
 	'Google\\Service\\SiteVerification\\SiteVerificationWebResourceResourceSite' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/SiteVerificationWebResourceResourceSite.php'
 	),
 	'Google\\Service\\SiteVerification\\SiteVerificationWebResourceResource' => array(
-		'version' => '0.210.0.0',
+		'version' => '0.216.0.0',
 		'path'    => $vendorDir . '/google/apiclient-services/src/SiteVerification/SiteVerificationWebResourceResource.php'
 	),
 	'Google\\Protobuf\\Syntax' => array(
@@ -15755,87 +15783,87 @@ return array(
 		'path'    => $vendorDir . '/googleads/google-ads-php/src/Google/Ads/GoogleAds/Lib/ConfigurationLoader.php'
 	),
 	'Google\\Service' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Service.php'
 	),
 	'Google\\AccessToken\\Revoke' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/AccessToken/Revoke.php'
 	),
 	'Google\\AccessToken\\Verify' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/AccessToken/Verify.php'
 	),
 	'Google\\Model' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Model.php'
 	),
 	'Google\\Utils\\UriTemplate' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Utils/UriTemplate.php'
 	),
 	'Google\\AuthHandler\\Guzzle6AuthHandler' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/AuthHandler/Guzzle6AuthHandler.php'
 	),
 	'Google\\AuthHandler\\Guzzle7AuthHandler' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/AuthHandler/Guzzle7AuthHandler.php'
 	),
 	'Google\\AuthHandler\\Guzzle5AuthHandler' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/AuthHandler/Guzzle5AuthHandler.php'
 	),
 	'Google\\AuthHandler\\AuthHandlerFactory' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/AuthHandler/AuthHandlerFactory.php'
 	),
 	'Google\\Http\\Batch' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Http/Batch.php'
 	),
 	'Google\\Http\\MediaFileUpload' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Http/MediaFileUpload.php'
 	),
 	'Google\\Http\\REST' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Http/REST.php'
 	),
 	'Google\\Task\\Composer' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Task/Composer.php'
 	),
 	'Google\\Task\\Retryable' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Task/Retryable.php'
 	),
 	'Google\\Task\\Exception' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Task/Exception.php'
 	),
 	'Google\\Task\\Runner' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Task/Runner.php'
 	),
 	'Google\\Collection' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Collection.php'
 	),
 	'Google\\Service\\Exception' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Service/Exception.php'
 	),
 	'Google\\Service\\Resource' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Service/Resource.php'
 	),
 	'Google\\Exception' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Exception.php'
 	),
 	'Google\\Client' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/Client.php'
 	),
 	'Google\\LongRunning\\CancelOperationRequest' => array(
@@ -20935,1591 +20963,1663 @@ return array(
 		'path'    => $vendorDir . '/google/auth/src/Credentials/InsecureCredentials.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Value\\PhoneNumberTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Value/PhoneNumberTest.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Coupon\\SyncerHooksTest' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/tests/Unit/Coupon/SyncerHooksTest.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Coupon\\CouponMetaHandlerTest' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/tests/Unit/Coupon/CouponMetaHandlerTest.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Coupon\\CouponSyncerTest' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/tests/Unit/Coupon/CouponSyncerTest.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Coupon\\WCCouponAdapterTest' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/tests/Unit/Coupon/WCCouponAdapterTest.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\WCProductAdapterTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/WCProductAdapterTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\SyncerHooksTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/SyncerHooksTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductRepositoryTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/ProductRepositoryTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductFactoryTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/ProductFactoryTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductSyncerTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/ProductSyncerTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\Attributes\\AttributeManagerTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/Attributes/AttributeManagerTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\Attributes\\AbstractAttributeTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/Attributes/AbstractAttributeTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductHelperTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/ProductHelperTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\BatchProductHelperTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/BatchProductHelperTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Product\\ProductMetaHandlerTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Product/ProductMetaHandlerTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\View\\PHPViewTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/View/PHPViewTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\View\\PHPViewFactoryTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/View/PHPViewFactoryTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\DB\\Migration\\MigratorTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/DB/Migration/MigratorTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\API\\Google\\MerchantTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/API/Google/MerchantTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\API\\Site\\Controllers\\MerchantCenter\\PhoneVerificationControllerTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/API/Site/Controllers/MerchantCenter/PhoneVerificationControllerTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\API\\Site\\Controllers\\MerchantCenter\\ContactInformationControllerTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/API/Site/Controllers/MerchantCenter/ContactInformationControllerTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\MerchantCenter\\ContactInformationTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/MerchantCenter/ContactInformationTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\MerchantCenter\\PhoneVerificationTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/MerchantCenter/PhoneVerificationTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Assets\\AdminScriptAssetTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Assets/AdminScriptAssetTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Utility\\DateTimeUtilityTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Utility/DateTimeUtilityTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Utility\\AddressUtilityTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Utility/AddressUtilityTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Unit\\Utility\\ISOUtilityTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Unit/Utility/ISOUtilityTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\MerchantTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Tools/HelperTrait/MerchantTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\ProductTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Tools/HelperTrait/ProductTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\DataTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Tools/HelperTrait/DataTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\ProductMetaTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Tools/HelperTrait/ProductMetaTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\SettingsTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Tools/HelperTrait/SettingsTrait.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Tools\\HelperTrait\\CouponTrait' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/tests/Tools/HelperTrait/CouponTrait.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Framework\\UnitTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Framework/UnitTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Framework\\RESTControllerUnitTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Framework/RESTControllerUnitTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tests\\Framework\\ContainerAwareUnitTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/tests/Framework/ContainerAwareUnitTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\PluginFactory' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/PluginFactory.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Ads\\AdsService' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Ads/AdsService.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Ads\\AdsAwareInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Ads/AdsAwareInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Ads\\AdsAwareTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Ads/AdsAwareTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\AdsAccountState' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/AdsAccountState.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\AccountState' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/AccountState.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\OptionsAwareInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/OptionsAwareInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\Transients' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/Transients.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\OptionsAwareTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/OptionsAwareTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\TransientsInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/TransientsInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\OptionsInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/OptionsInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\AdsSetupCompleted' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/AdsSetupCompleted.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\Options' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/Options.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\MerchantAccountState' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/MerchantAccountState.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Options\\MerchantSetupCompleted' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Options/MerchantSetupCompleted.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Container' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Container.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\ActionScheduler\\ActionScheduler' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/ActionScheduler/ActionScheduler.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\ActionScheduler\\ActionSchedulerException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/ActionScheduler/ActionSchedulerException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\ActionScheduler\\AsyncActionRunner' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/ActionScheduler/AsyncActionRunner.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\ActionScheduler\\ActionSchedulerInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/ActionScheduler/ActionSchedulerInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Validator\\GooglePriceConstraintValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Validator/GooglePriceConstraintValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Validator\\GooglePriceConstraint' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Validator/GooglePriceConstraint.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Validator\\Validatable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Validator/Validatable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\ConnectionTest' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/ConnectionTest.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\YoastWooCommerceSeo' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/YoastWooCommerceSeo.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\WooCommerceBrands' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/WooCommerceBrands.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\WooCommerceSubscriptions' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/WooCommerceSubscriptions.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\WooCommercePreOrders' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/WooCommercePreOrders.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\IntegrationInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/IntegrationInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\WooCommerceProductBundles' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/WooCommerceProductBundles.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Integration\\IntegrationInitializer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Integration/IntegrationInitializer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\Ads\\GoogleAdsClient' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/Ads/GoogleAdsClient.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\Ads\\ServiceClientFactoryTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/Ads/ServiceClientFactoryTrait.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\InvalidCouponEntry' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Google/InvalidCouponEntry.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\DeleteCouponEntry' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Google/DeleteCouponEntry.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductRequestEntry' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/BatchProductRequestEntry.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\GooglePromotionService' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Google/GooglePromotionService.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchInvalidProductEntry' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/BatchInvalidProductEntry.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductIDRequestEntry' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/BatchProductIDRequestEntry.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\SiteVerificationMeta' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/SiteVerificationMeta.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductEntry' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/BatchProductEntry.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\GoogleProductService' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/GoogleProductService.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\BatchProductResponse' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/BatchProductResponse.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Google\\GlobalSiteTag' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Google/GlobalSiteTag.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\TosAccepted' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/TosAccepted.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\ProductIDMap' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/ProductIDMap.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\ChannelVisibility' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/ChannelVisibility.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\RateType' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/RateType.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\EnumeratedValues' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/EnumeratedValues.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\MCStatus' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/MCStatus.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\BuiltScriptDependencyArray' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/BuiltScriptDependencyArray.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\CastableValueInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/CastableValueInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\MerchantCenterSettings' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/MerchantCenterSettings.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\ValueInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/ValueInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\ArrayWithRequiredKeys' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/ArrayWithRequiredKeys.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\PhoneNumber' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/PhoneNumber.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\PositiveInteger' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/PositiveInteger.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Value\\SyncStatus' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Value/SyncStatus.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\DateTime' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/DateTime.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Integer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Integer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\FormInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/FormInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\BooleanSelect' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/BooleanSelect.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\FormException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/FormException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Input' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Input.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Select' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Select.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Checkbox' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Checkbox.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Form' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Form.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\InputInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/InputInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Text' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Text.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\Decimal' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/Decimal.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Input\\SelectWithTextInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Input/SelectWithTextInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\MPNInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/MPNInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\AdultInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/AdultInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\AgeGroupInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/AgeGroupInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\AvailabilityDateInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/AvailabilityDateInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\ConditionInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/ConditionInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\GTINInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/GTINInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\SizeInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/SizeInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\SizeTypeInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/SizeTypeInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\IsBundleInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/IsBundleInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\MaterialInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/MaterialInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\PatternInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/PatternInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\AttributeInputInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/AttributeInputInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\SizeSystemInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/SizeSystemInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\GenderInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/GenderInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\MultipackInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/MultipackInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\BrandInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/BrandInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\Input\\ColorInput' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/Input/ColorInput.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\VariationsAttributes' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/VariationsAttributes.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\AttributesTab' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/AttributesTab.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Product\\Attributes\\AttributesForm' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Product/Attributes/AttributesForm.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\MetaBoxInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/MetaBox/MetaBoxInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\AbstractMetaBox' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/MetaBox/AbstractMetaBox.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\MetaBoxInitializer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/MetaBox/MetaBoxInitializer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\ChannelVisibilityMetaBox' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/MetaBox/ChannelVisibilityMetaBox.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\CouponChannelVisibilityMetaBox' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Admin/MetaBox/CouponChannelVisibilityMetaBox.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\MetaBox\\SubmittableMetaBox' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/MetaBox/SubmittableMetaBox.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\ActivationRedirect' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/ActivationRedirect.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Admin\\Admin' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Admin/Admin.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\ContainerAwareTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/ContainerAwareTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\RequirementValidatorInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/RequirementValidatorInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\RequirementValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/RequirementValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\WCValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/WCValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\VersionValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/VersionValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\WCAdminValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/WCAdminValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\GoogleProductFeedValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/GoogleProductFeedValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Requirements\\PluginValidator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Requirements/PluginValidator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\StatusMapping' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/StatusMapping.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\InstallTimestamp' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/InstallTimestamp.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\RESTServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/RESTServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\ThirdPartyServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/ThirdPartyServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\DBServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/DBServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\ProxyServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/ProxyServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\JobServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/JobServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\CoreServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/CoreServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\AbstractServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/AbstractServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\IntegrationServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/IntegrationServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DependencyManagement\\GoogleServiceProvider' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DependencyManagement/GoogleServiceProvider.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\DeprecatedFilters' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/DeprecatedFilters.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Interfaces\\InstallableInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Interfaces/InstallableInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Interfaces\\FirstInstallInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Interfaces/FirstInstallInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Interfaces\\ISO3166AwareInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Interfaces/ISO3166AwareInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Internal\\Interfaces\\ContainerAwareInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Internal/Interfaces/ContainerAwareInterface.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\SyncerHooks' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Coupon/SyncerHooks.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponSyncerException' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Coupon/CouponSyncerException.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponSyncer' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Coupon/CouponSyncer.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponHelper' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Coupon/CouponHelper.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\WCCouponAdapter' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Coupon/WCCouponAdapter.php'
+	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Coupon\\CouponMetaHandler' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Coupon/CouponMetaHandler.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\SyncerHooks' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/SyncerHooks.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductMetaHandler' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductMetaHandler.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductRepository' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductRepository.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\WCProductAdapter' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/WCProductAdapter.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductSyncerException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductSyncerException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Material' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Material.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\SizeSystem' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/SizeSystem.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\MPN' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/MPN.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Size' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Size.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\AvailabilityDate' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/AvailabilityDate.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\AttributeInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/AttributeInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\AbstractAttribute' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/AbstractAttribute.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Multipack' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Multipack.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Pattern' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Pattern.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\AttributeManager' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/AttributeManager.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\GTIN' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/GTIN.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\WithValueOptionsInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/WithValueOptionsInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Color' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Color.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\IsBundle' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/IsBundle.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\SizeType' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/SizeType.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Adult' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Adult.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\AgeGroup' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/AgeGroup.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Condition' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Condition.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Brand' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Brand.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\Attributes\\Gender' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/Attributes/Gender.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\FilteredProductList' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/FilteredProductList.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductFactory' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductFactory.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\BatchProductHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/BatchProductHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductSyncer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductSyncer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Product\\ProductFilter' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Product/ProductFilter.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\GoogleHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/GoogleHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\HelperTraits\\ViewHelperTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/HelperTraits/ViewHelperTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\HelperTraits\\Utilities' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/HelperTraits/Utilities.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\HelperTraits\\ISO3166Awareness' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/HelperTraits/ISO3166Awareness.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\TaskList\\CompleteSetup' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/TaskList/CompleteSetup.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\TaskList\\TaskListTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/TaskList/TaskListTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Notes\\Note' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Notes/Note.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Notes\\CompleteSetup' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Notes/CompleteSetup.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Notes\\SetupCampaign' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Notes/SetupCampaign.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Notes\\SetupCampaignTwoWeeks' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Notes/SetupCampaignTwoWeeks.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Notes\\ContactInformation' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Notes/ContactInformation.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\Dashboard' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/Dashboard.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\Settings' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/Settings.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\Reports' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/Reports.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\WooAdminNavigationTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/WooAdminNavigationTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\MenuFixesTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/MenuFixesTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\ProductFeed' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/ProductFeed.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\SetupMerchantCenter' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/SetupMerchantCenter.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\GetStarted' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/GetStarted.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Menu\\SetupAds' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Menu/SetupAds.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\View\\PHPViewFactory' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/View/PHPViewFactory.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\View\\ViewException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/View/ViewException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\View\\PHPView' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/View/PHPView.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Polyfills\\MBString' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Polyfills/MBString.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\TableManager' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/TableManager.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\TableInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/TableInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\ProductFeedQueryHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/ProductFeedQueryHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Table\\MerchantIssueTable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Table/MerchantIssueTable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Table\\BudgetRecommendationTable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Table/BudgetRecommendationTable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Table\\ShippingRateTable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Table/ShippingRateTable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Table\\ShippingTimeTable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Table/ShippingTimeTable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Installer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Installer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Query' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Query.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Query\\MerchantIssueQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Query/MerchantIssueQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Query\\ShippingTimeQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Query/ShippingTimeQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Query\\ShippingRateQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Query/ShippingRateQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Query\\BudgetRecommendationQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Query/BudgetRecommendationQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\QueryInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/QueryInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\ProductMetaQueryHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/ProductMetaQueryHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Table' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Table.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Migration\\Migrator' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Migration/Migrator.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Migration\\MigrationVersion141' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Migration/MigrationVersion141.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Migration\\MigrationInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Migration/MigrationInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\DB\\Migration\\AbstractMigration' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/DB/Migration/AbstractMigration.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\MicroTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/MicroTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Connection' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Connection.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Ads' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Ads.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\CampaignStatus' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/CampaignStatus.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Settings' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Settings.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\ApiExceptionTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/ApiExceptionTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\ReportTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/ReportTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\AdsReport' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/AdsReport.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\SiteVerification' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/SiteVerification.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\LocationIDTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/LocationIDTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\BillingSetupStatus' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/BillingSetupStatus.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\AdsCampaignBudget' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/AdsCampaignBudget.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\AdsCampaign' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/AdsCampaign.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\AdsConversionAction' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/AdsConversionAction.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Merchant' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Merchant.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\AdsGroup' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/AdsGroup.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Proxy' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Proxy.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\MerchantReport' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/MerchantReport.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\MerchantProductReportQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/MerchantProductReportQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\MerchantQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/MerchantQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsProductReportQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsProductReportQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsBillingStatusQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsBillingStatusQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsGroupQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsGroupQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsAccountQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsAccountQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsGroupAdQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsGroupAdQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\MerchantFreeListingReportQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/MerchantFreeListingReportQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsListingGroupQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsListingGroupQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsCampaignBudgetQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsCampaignBudgetQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\MerchantReportQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/MerchantReportQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsCampaignReportQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsCampaignReportQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\ReportQueryTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/ReportQueryTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\Query' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/Query.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\QueryInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/QueryInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsCampaignQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsCampaignQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Google\\Query\\AdsReportQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Google/Query/AdsReportQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\TransportMethods' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/TransportMethods.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\RESTControllers' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/RESTControllers.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Ads\\ReportsController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Ads/ReportsController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Ads\\BudgetRecommendationController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Ads/BudgetRecommendationController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Ads\\SetupCompleteController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Ads/SetupCompleteController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Ads\\AccountController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Ads/AccountController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Ads\\CampaignController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Ads/CampaignController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\BaseOptionsController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/BaseOptionsController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\CountryCodeTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/CountryCodeTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\EmptySchemaPropertiesTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/EmptySchemaPropertiesTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\DisconnectController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/DisconnectController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\ResponseFromExceptionTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/ResponseFromExceptionTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Google\\AccountController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Google/AccountController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Google\\SiteVerificationController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Google/SiteVerificationController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\Jetpack\\AccountController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/Jetpack/AccountController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\BaseController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/BaseController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ReportsController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ReportsController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\IssuesController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/IssuesController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ShippingTimeBatchController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ShippingTimeBatchController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ContactInformationController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ContactInformationController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ProductStatisticsController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ProductStatisticsController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\AccountController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/AccountController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\SupportedCountriesController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/SupportedCountriesController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\BatchShippingTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/BatchShippingTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ShippingRateController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ShippingRateController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ProductVisibilityController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ProductVisibilityController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ShippingTimeController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ShippingTimeController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\SettingsSyncController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/SettingsSyncController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ShippingRateBatchController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ShippingRateBatchController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ConnectionController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ConnectionController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\SettingsController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/SettingsController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\TargetAudienceController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/TargetAudienceController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\PhoneVerificationController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/PhoneVerificationController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\MerchantCenter\\ProductFeedController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/MerchantCenter/ProductFeedController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\BaseReportsController' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/BaseReportsController.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\Site\\Controllers\\BatchSchemaTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/Site/Controllers/BatchSchemaTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\API\\PermissionsTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/API/PermissionsTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\TracksAwareTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/TracksAwareTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\TrackerSnapshot' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/TrackerSnapshot.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\EventTracking' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/EventTracking.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\TracksAwareInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/TracksAwareInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\Loaded' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/Events/Loaded.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\BaseEvent' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/Events/BaseEvent.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\SiteClaimEvents' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/Events/SiteClaimEvents.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\TracksEventInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/Events/TracksEventInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Events\\SiteVerificationEvents' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/Events/SiteVerificationEvents.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\TracksInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/TracksInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Tracking\\Tracks' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Tracking/Tracks.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\ContactInformation' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/ContactInformation.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\PhoneVerification' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/PhoneVerification.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\MerchantCenterService' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/MerchantCenterService.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\MerchantStatuses' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/MerchantStatuses.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\MerchantCenterAwareTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/MerchantCenterAwareTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\PhoneVerificationException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/PhoneVerificationException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\MerchantCenter\\MerchantCenterAwareInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/MerchantCenter/MerchantCenterAwareInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Installer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Installer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\GoogleGtagJs' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Proxies/GoogleGtagJs.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\Http' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Proxies/Http.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\RESTServer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Proxies/RESTServer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\WC' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Proxies/WC.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\Tracks' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Proxies/Tracks.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Proxies\\WP' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Proxies/WP.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractBatchedActionSchedulerJob' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/AbstractBatchedActionSchedulerJob.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\ProductSyncerJobInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/ProductSyncerJobInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\ProductSyncStats' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/ProductSyncStats.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractActionSchedulerJob' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/AbstractActionSchedulerJob.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\RecurringJobInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/RecurringJobInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\JobInitializer' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/JobInitializer.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\CleanupProductsJob' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/CleanupProductsJob.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\Update\\CleanupProductTargetCountriesJob' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/Update/CleanupProductTargetCountriesJob.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\Update\\PluginUpdate' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/Update/PluginUpdate.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\DeleteCoupon' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Jobs/DeleteCoupon.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\ActionSchedulerJobMonitor' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/ActionSchedulerJobMonitor.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\ResubmitExpiringProducts' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/ResubmitExpiringProducts.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\JobInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/JobInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\UpdateAllProducts' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/UpdateAllProducts.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\JobRepository' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/JobRepository.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\DeleteAllProducts' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/DeleteAllProducts.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\BatchedActionSchedulerJobInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/BatchedActionSchedulerJobInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractProductSyncerJob' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/AbstractProductSyncerJob.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\UpdateCoupon' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Jobs/UpdateCoupon.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\DeleteProducts' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/DeleteProducts.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\StartOnHookInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/StartOnHookInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\ActionSchedulerJobInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/ActionSchedulerJobInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\UpdateProducts' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/UpdateProducts.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractProductSyncerBatchedJob' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/AbstractProductSyncerBatchedJob.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\StartHook' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/StartHook.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\JobException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Jobs/JobException.php'
 	),
+	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Jobs\\AbstractCouponSyncerJob' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/Jobs/AbstractCouponSyncerJob.php'
+	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Activateable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Activateable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Service' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Service.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\ViewFactory' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/ViewFactory.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Renderable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Renderable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Plugin' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Plugin.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\AdminConditional' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/AdminConditional.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Deactivateable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Deactivateable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\View' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/View.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Registerable' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Registerable.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\GoogleListingsAndAdsPlugin' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/GoogleListingsAndAdsPlugin.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Infrastructure\\Conditional' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Infrastructure/Conditional.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\AssetsHandler' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/AssetsHandler.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\AdminAssetHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/AdminAssetHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\StyleAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/StyleAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\AssetsHandlerInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/AssetsHandlerInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\AdminStyleAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/AdminStyleAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\BaseAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/BaseAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\ScriptAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/ScriptAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\AdminScriptWithBuiltDependenciesAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/AdminScriptWithBuiltDependenciesAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\AdminScriptAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/AdminScriptAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Assets\\Asset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Assets/Asset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidState' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidState.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\ExceptionWithResponseData' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/ExceptionWithResponseData.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidArgument' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidArgument.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidQuery' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidQuery.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidVersion' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidVersion.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\ValidateInterface' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/ValidateInterface.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidAsset' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidAsset.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\MerchantApiException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/MerchantApiException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\ExtensionRequirementException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/ExtensionRequirementException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidClass' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidClass.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidMeta' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidMeta.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidTerm' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidTerm.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidService' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidService.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\GoogleListingsAndAdsException' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/GoogleListingsAndAdsException.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\WPErrorTrait' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/WPErrorTrait.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidProperty' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidProperty.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\WPError' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/WPError.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidType' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidType.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidArray' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidArray.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidOption' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidOption.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Exception\\InvalidValue' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Exception/InvalidValue.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Event\\ClearProductStatsCache' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Event/ClearProductStatsCache.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Event\\StartProductSync' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Event/StartProductSync.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Logging\\DebugLogger' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Logging/DebugLogger.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Autoloader' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Autoloader.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\PluginHelper' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/PluginHelper.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Utility\\ISOUtility' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Utility/ISOUtility.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Utility\\DateTimeUtility' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Utility/DateTimeUtility.php'
 	),
 	'Automattic\\WooCommerce\\GoogleListingsAndAds\\Utility\\AddressUtility' => array(
-		'version' => 'dev-release/1.5.1',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/Utility/AddressUtility.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => array(
@@ -22543,87 +22643,87 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php'
 	),
 	'Google_Task_Composer' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_AccessToken_Revoke' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_AccessToken_Verify' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_AuthHandler_AuthHandlerFactory' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_AuthHandler_Guzzle5AuthHandler' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_AuthHandler_Guzzle6AuthHandler' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_AuthHandler_Guzzle7AuthHandler' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Client' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Collection' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Exception' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Http_Batch' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Http_MediaFileUpload' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Http_REST' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Model' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Service' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Service_Exception' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Service_Resource' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Task_Exception' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Task_Retryable' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Task_Runner' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Google_Utils_UriTemplate' => array(
-		'version' => '2.10.1.0',
+		'version' => '2.11.0.0',
 		'path'    => $vendorDir . '/google/apiclient/src/aliases.php'
 	),
 	'Jetpack_XMLRPC_Server' => array(
