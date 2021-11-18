@@ -16,6 +16,7 @@ jQuery(document).ready(function ($) {
         );
       });
   });
+  
   // fonction pour récupérer les attributs des produits
   $("#customize3d").on("click", function () {
     // ajouter des if
