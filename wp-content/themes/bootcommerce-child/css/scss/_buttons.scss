@@ -24,10 +24,13 @@
     
 }
 
-.btn-stock {
-    // width: 160px;
-
+.box-stock {
+    p {
+        margin-bottom: 0px;
+        padding: 0.375rem 0.75rem;
+    }
 }
-.single_add_to_cart_button {
-    // width: 160px;
+
+.available-on-backorder {
+    color: $red !important;
 }
