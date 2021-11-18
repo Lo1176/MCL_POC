@@ -1,7 +1,6 @@
 #customize3d {
     display: flex;
     align-items: center;
-    justify-content: end;
     color: $black;
         .btn3d {
             text-align: start;
@@ -19,8 +18,13 @@
         .fab {
             font-size: 48px;
         }
+        
+    }
+.category-products #customize3d {
+        justify-content: end;
+        // color: pink;
 
-}
+    }          
 .btn {
     border-radius: 1px !important;
     
