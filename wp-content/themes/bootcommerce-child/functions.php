@@ -213,6 +213,40 @@ function wpm_remove_sku($enabled)
   return $enabled;
 }
 
+/**
+ *       Stock Quantity @ WooCommerce Shop / Cart / Archive Pages
+ */
+// add_action('woocommerce_after_shop_loop_item', 'mcl_show_stock_shop', 10);
+function mcl_show_stock_shop()
+{
+  global $product;
+  echo wc_get_stock_html($product);
+}
+add_shortcode('stock-mcl', 'mcl_show_stock_shop');
+
+/***** */
+// add_filter('woocommerce_get_stock_html', 'filter_get_stock_html', 10, 2);
+// function filter_get_stock_html($html, $product)
+// {
+//   $availability = $product->get_availability();
+
+//   if (!empty($availability['availability'])) {
+//     $class = esc_attr($availability['class']);
+//     $avail_text = wp_kses_post($availability['availability']);
+//     $stock_qty = $product->get_stock_quantity();
+
+//     if ($stock_qty > 0 && $stock_qty <= get_option('woocommerce_notify_low_stock_amount')) { // reflects backend for Low stock threshold
+//       $class .= ' low-in-stock';
+//       $avail_text = __('Low in stock', 'woocommerce');
+//     }
+//     ob_start();
+//   }
+//   ?>
+<!-- //   <p class="stock <?php #echo $class; ?>"><?php #echo $avail_text; ?></p> -->
+    <?php 
+//   return $html;
+// }
+
 ##### END ----- SINGLE-PRODUCT #####
 
 

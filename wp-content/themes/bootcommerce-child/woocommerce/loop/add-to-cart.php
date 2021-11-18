@@ -25,8 +25,12 @@ global $product;
 
 echo '<div class="row">
         <div class="col-sm stock-container mt-auto">
-          <div class="btn-stock btn btn-outline-dark d-block">en stock</div>
+          <div class="box-stock border border-dark d-block">';
+            do_shortcode('[stock-mcl]');        
+
+echo      '</div>
         </div>';
+
 echo apply_filters(
   'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
   sprintf(
