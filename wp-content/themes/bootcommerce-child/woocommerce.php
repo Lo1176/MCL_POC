@@ -16,7 +16,7 @@
 get_header();
 ?>
 
-<div id="content" class="site-content container-fluid py-5 mt-4">
+<div id="content" class="site-content container-fluid pb-5 mt-1">
   <div id="primary" class="content-area">
     <?php
     /**
@@ -46,7 +46,7 @@ get_header();
 
       <!-- Breadcrumb -->
       <div class="text-danger container">
-        <?php woocommerce_breadcrumb(); ?>
+        <?php #woocommerce_breadcrumb(); ?>
 
       </div>
       <div class="row">
