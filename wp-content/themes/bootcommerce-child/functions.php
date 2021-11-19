@@ -233,14 +233,6 @@ function wpm_remove_sku($enabled)
 //     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 // }
 
-
-/** to prevent break links between localhost and http */
-function homeURLshortcode()
-{
-  return home_url();
-}
-add_shortcode('homeurl', 'homeURLshortcode');
-
 // ############ A VERIFIER CA NE SEMBLE PAS MARCHER ###############
 // Change number or products per row to 3
 

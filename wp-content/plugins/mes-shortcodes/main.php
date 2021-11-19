@@ -7,14 +7,21 @@
  */
 
 /**
- *       Shortcode to display stock product
+ *  Shortcode to display stock product
  */
-function mcl_show_stock_shop()
-{
+function mcl_show_stock_shop() {
     global $product;
     echo wc_get_stock_html($product);
 }
 add_shortcode('stock-mcl', 'mcl_show_stock_shop');
+
+/**
+ *  to prevent break links between localhost and http
+ */
+function homeURLshortcode() {
+    return home_url();
+}
+add_shortcode('homeurl', 'homeURLshortcode');
 
 
 // // fonction pour afficher les 1er enfants de la category parent
