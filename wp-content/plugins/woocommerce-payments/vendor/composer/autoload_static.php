@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit522a778cab728fd24a7865ae23985279
+class ComposerStaticInitd754967ad4dc984ad57192497547590e
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -191,7 +191,13 @@ class ComposerStaticInit522a778cab728fd24a7865ae23985279
         'WCPay\\MultiCurrency\\Analytics' => __DIR__ . '/../..' . '/includes/multi-currency/Analytics.php',
         'WCPay\\MultiCurrency\\BackendCurrencies' => __DIR__ . '/../..' . '/includes/multi-currency/BackendCurrencies.php',
         'WCPay\\MultiCurrency\\Compatibility' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility.php',
+        'WCPay\\MultiCurrency\\Compatibility\\BaseCompatibility' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/BaseCompatibility.php',
+        'WCPay\\MultiCurrency\\Compatibility\\WooCommerceBookings' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommerceBookings.php',
+        'WCPay\\MultiCurrency\\Compatibility\\WooCommerceDeposits' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommerceDeposits.php',
         'WCPay\\MultiCurrency\\Compatibility\\WooCommerceFedEx' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommerceFedEx.php',
+        'WCPay\\MultiCurrency\\Compatibility\\WooCommercePreOrders' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommercePreOrders.php',
+        'WCPay\\MultiCurrency\\Compatibility\\WooCommerceProductAddOns' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommerceProductAddOns.php',
+        'WCPay\\MultiCurrency\\Compatibility\\WooCommerceSubscriptions' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommerceSubscriptions.php',
         'WCPay\\MultiCurrency\\Compatibility\\WooCommerceUPS' => __DIR__ . '/../..' . '/includes/multi-currency/Compatibility/WooCommerceUPS.php',
         'WCPay\\MultiCurrency\\CountryFlags' => __DIR__ . '/../..' . '/includes/multi-currency/CountryFlags.php',
         'WCPay\\MultiCurrency\\Currency' => __DIR__ . '/../..' . '/includes/multi-currency/Currency.php',
@@ -215,9 +221,9 @@ class ComposerStaticInit522a778cab728fd24a7865ae23985279
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit522a778cab728fd24a7865ae23985279::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit522a778cab728fd24a7865ae23985279::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit522a778cab728fd24a7865ae23985279::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd754967ad4dc984ad57192497547590e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd754967ad4dc984ad57192497547590e::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitd754967ad4dc984ad57192497547590e::$classMap;
 
         }, null, ClassLoader::class);
     }
