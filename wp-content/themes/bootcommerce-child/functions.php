@@ -202,15 +202,45 @@ if (!function_exists('write_log')) {
 }
 
 // custom text after description product summary
-add_action('woocommerce_before_add_to_cart_form', 'add_text_after_excerpt_single_product', 30);
-function add_text_after_excerpt_single_product()
+// add_action('woocommerce_before_add_to_cart_form', 'add_text_after_excerpt_single_product', 30);
+// function add_text_after_excerpt_single_product()
+// {
+//   global $product;
+
+//   // Output your custom text
+//   echo '<hr class="line-separator"><div class="custom-mcl-text-in-function red">
+//     <p>Current Delivery Times: Pink Equine - 4 - 6 Weeks, all other products 4 Weeks</p>
+//     </div>';
+// }
+
+// ATTENTION affiche en double remove action ???
+add_action('woocommerce_single_product_summary', 'custom_single_product_summary', 2);
+function custom_single_product_summary()
 {
   global $product;
 
-  // Output your custom text
-  echo '<div class="custom-mcl-text-in-function red">
-    <p>Current Delivery Times: Pink Equine - 4 - 6 Weeks, all other products 4 Weeks</p>
-    </div>';
+  // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+  add_action('woocommerce_single_product_summary', 'custom_single_excerpt', 20);
+}
+
+function custom_single_excerpt()
+{
+  global $post, $product;
+
+  $short_description = apply_filters('woocommerce_short_description', $post->post_excerpt);
+
+  if (!$short_description)
+    return;
+
+  // The custom text
+  $custom_text = '<hr class="line-separator">';
+
+?>
+  <div class="woocommerce-product-details__short-description">
+    <?php echo $short_description . $custom_text; // WPCS: XSS ok. 
+    ?>
+  </div>
+<?php
 }
 
 // Ne pas afficher l'UGS sur vos pages produits (content-single-product)
