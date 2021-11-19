@@ -71,7 +71,7 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_ex
 
 /** remove price */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 16);
 /** remove add-to-cart */
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
 
@@ -98,12 +98,23 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 add_action('woocommerce_single_product_summary', 'add_line_separator_after_excerpt_single_product', 15);
 function add_line_separator_after_excerpt_single_product()
 {
-  global $product;
+  // global $product;
 
   // Output your custom text
   echo '<hr class="line-separator">';
 }
 
+/** add <div> to have btn inline */
+add_action('woocommerce_single_product_summary', 'mcl_add_div', 19);
+function mcl_add_div() {
+  echo '<div class="d-flex">';
+
+};
+add_action('woocommerce_single_product_summary', 'mcl_add_div_end', 60);
+function mcl_add_div_end()
+{
+  echo '</div>';
+};
 /** function to remove or change order for tabs */
 function woo_remove_product_tabs($tabs)
 {
