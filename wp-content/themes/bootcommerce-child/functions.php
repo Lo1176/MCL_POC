@@ -64,10 +64,17 @@ add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
 ##### start - CONTENT-SINGLE-PRODUCT #####
 /** remove title */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+
 /** change order of description (move the description on the top) */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 6);
+
+/** remove price */
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+/** remove add-to-cart */
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+
 // add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 6);
 
 /** Remove product data tabs */
@@ -75,11 +82,31 @@ add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 /** remove product meta */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 /** whishes logo product */
+// custom text after description product summary
+// add_action('woocommerce_before_add_to_cart_form', 'add_text_after_excerpt_single_product', 30);
+// function add_text_after_excerpt_single_product()
+// {
+//   global $product;
 
+//   // Output your custom text
+//   echo '<hr class="line-separator"><div class="custom-mcl-text-in-function red">
+//     <p>Current Delivery Times: Pink Equine - 4 - 6 Weeks, all other products 4 Weeks</p>
+//     </div>';
+// }
 
+/** Add line-separator after description */
+add_action('woocommerce_single_product_summary', 'add_line_separator_after_excerpt_single_product', 15);
+function add_line_separator_after_excerpt_single_product()
+{
+  global $product;
+
+  // Output your custom text
+  echo '<hr class="line-separator">';
+}
+
+/** function to remove or change order for tabs */
 function woo_remove_product_tabs($tabs)
 {
-
   // unset($tabs['additional_information']);    // Remove the additional information tab
   // unset($tabs['description']);    // Remove the description tab
   // $tabs['additional_information']['priority'] = 5;	// move Additional information at the beginning
@@ -201,47 +228,7 @@ if (!function_exists('write_log')) {
   }
 }
 
-// custom text after description product summary
-// add_action('woocommerce_before_add_to_cart_form', 'add_text_after_excerpt_single_product', 30);
-// function add_text_after_excerpt_single_product()
-// {
-//   global $product;
 
-//   // Output your custom text
-//   echo '<hr class="line-separator"><div class="custom-mcl-text-in-function red">
-//     <p>Current Delivery Times: Pink Equine - 4 - 6 Weeks, all other products 4 Weeks</p>
-//     </div>';
-// }
-
-// ATTENTION affiche en double remove action ???
-add_action('woocommerce_single_product_summary', 'custom_single_product_summary', 2);
-function custom_single_product_summary()
-{
-  global $product;
-
-  // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
-  add_action('woocommerce_single_product_summary', 'custom_single_excerpt', 20);
-}
-
-function custom_single_excerpt()
-{
-  global $post, $product;
-
-  $short_description = apply_filters('woocommerce_short_description', $post->post_excerpt);
-
-  if (!$short_description)
-    return;
-
-  // The custom text
-  $custom_text = '<hr class="line-separator">';
-
-?>
-  <div class="woocommerce-product-details__short-description">
-    <?php echo $short_description . $custom_text; // WPCS: XSS ok. 
-    ?>
-  </div>
-<?php
-}
 
 // Ne pas afficher l'UGS sur vos pages produits (content-single-product)
 add_filter('wc_product_sku_enabled', 'wpm_remove_sku');
