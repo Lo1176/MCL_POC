@@ -6,25 +6,15 @@
   Version: 1.0.0
  */
 
-// fonction d'essai pour afficher un titre et le changer
-// en fonction de la langue
-function shortcode_agence($atts)
+/**
+ *       Shortcode to display stock product
+ */
+function mcl_show_stock_shop()
 {
-    extract(shortcode_atts(
-        array(
-            'langue' => 'FR'
-        ),
-        $atts
-    ));
-
-    if ($langue == "EN") {
-        $text = "karac, your digital communication agency ";
-    } else {
-        $text = "karac, votre agence de communication digitale";
-    }
-    return '<h2>' . $text . '</h2>';
+    global $product;
+    echo wc_get_stock_html($product);
 }
-add_shortcode('agence', 'shortcode_agence');
+add_shortcode('stock-mcl', 'mcl_show_stock_shop');
 
 
 // // fonction pour afficher les 1er enfants de la category parent

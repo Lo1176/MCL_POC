@@ -31,7 +31,9 @@
 }
 
 .box-stock {
+    height: 38px;
     p {
+        font-size: 14px;
         margin-bottom: 0px;
         padding: 0.375rem 0.75rem;
     }
@@ -39,4 +41,6 @@
 
 .available-on-backorder {
     color: $red !important;
+    font-size: .9rem;
+    line-height: 100%;
 }

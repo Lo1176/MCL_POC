@@ -213,16 +213,6 @@ function wpm_remove_sku($enabled)
   return $enabled;
 }
 
-/**
- *       Stock Quantity @ WooCommerce Shop / Cart / Archive Pages
- */
-// add_action('woocommerce_after_shop_loop_item', 'mcl_show_stock_shop', 10);
-function mcl_show_stock_shop()
-{
-  global $product;
-  echo wc_get_stock_html($product);
-}
-add_shortcode('stock-mcl', 'mcl_show_stock_shop');
 
 ##### END ----- SINGLE-PRODUCT #####
 
