@@ -137,10 +137,10 @@ function product_additional_3D_button()
   }
   // For all other product types
   else {
-    add_action('woocommerce_single_product_summary', 'custom_3D_button', 31);
+    add_action('woocommerce_single_product_summary', 'custom_3D_button', 21);
   }
 }
-
+/** */
 function custom_3D_button()
 {
   global $product;
