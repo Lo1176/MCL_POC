@@ -33,8 +33,9 @@ if (post_password_required()) {
 }
 ?>
 
-	<!-- <h2 class="text-warning">SIDEBAR-1</h2> -->
-	<?php #get_sidebar('sidebar-1') ?>
+<!-- <h2 class="text-warning">SIDEBAR-1</h2> -->
+<?php #get_sidebar('sidebar-1') 
+?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
 
 	<?php
@@ -49,8 +50,8 @@ if (post_password_required()) {
 
 	<div class="summary entry-summary">
 
+		<h2 class="text-danger">"content-single-product.php"</h2>
 		<?php
-		echo "content-single-product.php";
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
