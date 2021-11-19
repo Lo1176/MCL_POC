@@ -16,7 +16,7 @@ class WT_Wishlist_Singlepage {
             /*if(isset($wt_wishlist_button_style_settings_options['wt_button_type']) && ($wt_wishlist_button_style_settings_options['wt_button_type'] == 'normal_button')){
                 add_action( 'woocommerce_after_add_to_cart_button', array( $this, 'render_webtoffee_wishlist_button' ), 11 );
             }else{*/
-                add_action( 'woocommerce_single_product_summary', array( $this, 'render_webtoffee_wishlist_button' ), 31 );
+                add_action('woocommerce_before_add_to_cart_form', array( $this, 'render_webtoffee_wishlist_button' ), 31 );
             //}
         }
         
