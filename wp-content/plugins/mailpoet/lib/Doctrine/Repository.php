@@ -106,6 +106,17 @@ abstract class Repository {
     $this->entityManager->flush();
   }
 
+  public function getReference($id) {
+    return $this->entityManager->getReference($this->getEntityClassName(), $id);
+  }
+
+  /**
+   * @param T $entity
+   */
+  public function detach($entity) {
+    $this->entityManager->detach($entity);
+  }
+
   /**
    * @return class-string<T>
    */

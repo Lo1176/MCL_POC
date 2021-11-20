@@ -577,12 +577,23 @@ class NewsletterEntity extends \MailPoet\Entities\NewsletterEntity implements \M
     /**
      * {@inheritDoc}
      */
-    public function getLatestQueue()
+    public function getLatestQueue(): ?\MailPoet\Entities\SendingQueueEntity
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLatestQueue', []);
 
         return parent::getLatestQueue();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLastUpdatedQueue(): ?\MailPoet\Entities\SendingQueueEntity
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastUpdatedQueue', []);
+
+        return parent::getLastUpdatedQueue();
     }
 
     /**

@@ -5,7 +5,8 @@ namespace MailPoet\Cron\Workers\SendingQueue\Tasks;
 if (!defined('ABSPATH')) exit;
 
 
-use MailPoet\Models\NewsletterLink as NewsletterLinkModel;
+use MailPoet\Cron\Workers\StatsNotifications\NewsletterLinkRepository;
+use MailPoet\Entities\NewsletterLinkEntity;
 use MailPoet\Newsletter\Links\Links as NewsletterLinks;
 use MailPoet\Router\Endpoints\Track;
 use MailPoet\Router\Router;
@@ -25,14 +26,19 @@ class Links {
   /** @var SubscribersRepository */
   private $subscribersRepository;
 
+  /** @var NewsletterLinkRepository */
+  private $newsletterLinkRepository;
+
   public function __construct(
     LinkTokens $linkTokens,
     NewsletterLinks $newsletterLinks,
-    SubscribersRepository $subscribersRepository
+    SubscribersRepository $subscribersRepository,
+    NewsletterLinkRepository $newsletterLinkRepository
   ) {
     $this->linkTokens = $linkTokens;
     $this->newsletterLinks = $newsletterLinks;
     $this->subscribersRepository = $subscribersRepository;
+    $this->newsletterLinkRepository = $newsletterLinkRepository;
   }
 
   public function process($renderedNewsletter, $newsletter, $queue) {
@@ -63,17 +69,21 @@ class Links {
     $subscriber = $this->subscribersRepository->findOneById($subscriberId);
     $settings = SettingsController::getInstance();
     if ((boolean)$settings->get('tracking.enabled') && $subscriber) {
-      $linkHash = NewsletterLinkModel::where('queue_id', $queue->id)
-        ->where('url', NewsletterLinkModel::INSTANT_UNSUBSCRIBE_LINK_SHORT_CODE)
-        ->findOne();
-      if (!$linkHash instanceof NewsletterLinkModel) {
+      $linkHash = $this->newsletterLinkRepository->findOneBy(
+        [
+          'queue' => $queue->id,
+          'url' => NewsletterLinkEntity::INSTANT_UNSUBSCRIBE_LINK_SHORT_CODE,
+        ]
+      );
+
+      if (!$linkHash instanceof NewsletterLinkEntity) {
         return '';
       }
       $data = $this->newsletterLinks->createUrlDataObject(
         $subscriber->getId(),
         $this->linkTokens->getToken($subscriber),
         $queue->id,
-        $linkHash->hash,
+        $linkHash->getHash(),
         false
       );
       $url = Router::buildRequest(

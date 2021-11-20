@@ -129,7 +129,7 @@ class Settings extends APIEndpoint {
         $this->bridge->onSettingsSave($settings);
       }
 
-      $this->authorizedEmailsController->onSettingsSave($settings);
+      $meta = $this->authorizedEmailsController->onSettingsSave($settings);
       if ($signupConfirmation !== $this->settings->get('signup_confirmation.enabled')) {
         $this->messageController->updateSuccessMessages();
       }

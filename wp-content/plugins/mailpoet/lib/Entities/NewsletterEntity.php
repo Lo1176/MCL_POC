@@ -457,12 +457,16 @@ class NewsletterEntity {
     return $this->queues;
   }
 
-  /**
-   * @return SendingQueueEntity|null
-   */
-  public function getLatestQueue() {
+  public function getLatestQueue(): ?SendingQueueEntity {
     $criteria = new Criteria();
     $criteria->orderBy(['id' => Criteria::DESC]);
+    $criteria->setMaxResults(1);
+    return $this->queues->matching($criteria)->first() ?: null;
+  }
+
+  public function getLastUpdatedQueue(): ?SendingQueueEntity {
+    $criteria = new Criteria();
+    $criteria->orderBy(['updatedAt' => Criteria::DESC]);
     $criteria->setMaxResults(1);
     return $this->queues->matching($criteria)->first() ?: null;
   }

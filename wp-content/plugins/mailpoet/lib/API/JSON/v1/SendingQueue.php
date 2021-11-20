@@ -11,10 +11,12 @@ use MailPoet\API\JSON\Response;
 use MailPoet\Config\AccessControl;
 use MailPoet\Cron\Triggers\WordPress;
 use MailPoet\Entities\NewsletterEntity;
+use MailPoet\Entities\SendingQueueEntity;
 use MailPoet\Models\Newsletter;
 use MailPoet\Models\SendingQueue as SendingQueueModel;
 use MailPoet\Newsletter\NewslettersRepository;
 use MailPoet\Newsletter\Scheduler\Scheduler;
+use MailPoet\Newsletter\Sending\SendingQueuesRepository;
 use MailPoet\Segments\SubscribersFinder;
 use MailPoet\Services\Bridge;
 use MailPoet\Tasks\Sending as SendingTask;
@@ -37,9 +39,13 @@ class SendingQueue extends APIEndpoint {
   /** @var Bridge */
   private $bridge;
 
+  /** @var SendingQueuesRepository */
+  private $sendingQueuesRepository;
+
   public function __construct(
     SubscribersFeature $subscribersFeature,
     NewslettersRepository $newsletterRepository,
+    SendingQueuesRepository $sendingQueuesRepository,
     Bridge $bridge,
     SubscribersFinder $subscribersFinder
   ) {
@@ -47,6 +53,7 @@ class SendingQueue extends APIEndpoint {
     $this->subscribersFinder = $subscribersFinder;
     $this->newsletterRepository = $newsletterRepository;
     $this->bridge = $bridge;
+    $this->sendingQueuesRepository = $sendingQueuesRepository;
   }
 
   public function add($data = []) {
@@ -68,7 +75,7 @@ class SendingQueue extends APIEndpoint {
         APIError::NOT_FOUND => __('This newsletter does not exist.', 'mailpoet'),
       ]);
     }
-    $newsletterEntity = $this->newsletterRepository->findOneById($newsletter->id);
+    $newsletterEntity = $this->newsletterRepository->findOneById($newsletterId);
     if (!$newsletterEntity instanceof NewsletterEntity) {
       return $this->errorResponse([
         APIError::NOT_FOUND => __('This newsletter does not exist.', 'mailpoet'),
@@ -116,14 +123,13 @@ class SendingQueue extends APIEndpoint {
     }
 
     WordPress::resetRunInterval();
-
-    if ((bool)$newsletter->isScheduled) {
+    if ((bool)$newsletterEntity->getOptionValue('isScheduled')) {
       // set newsletter status
-      $newsletter->setStatus(Newsletter::STATUS_SCHEDULED);
+      $newsletterEntity->setStatus(NewsletterEntity::STATUS_SCHEDULED);
 
       // set queue status
       $queue->status = SendingQueueModel::STATUS_SCHEDULED;
-      $queue->scheduledAt = Scheduler::formatDatetimeString($newsletter->scheduledAt);
+      $queue->scheduledAt = Scheduler::formatDatetimeString($newsletterEntity->getOptionValue('scheduledAt'));
     } else {
       $segments = $newsletter->segments()->findMany();
       $subscribersCount = $this->subscribersFinder->addSubscribersToTaskFromSegments($queue->task(), $segments);
@@ -137,9 +143,10 @@ class SendingQueue extends APIEndpoint {
       $queue->scheduledAt = null;
 
       // set newsletter status
-      $newsletter->setStatus(Newsletter::STATUS_SENDING);
+      $newsletterEntity->setStatus(Newsletter::STATUS_SENDING);
     }
     $queue->save();
+    $this->newsletterRepository->flush();
 
     $errors = $queue->getErrors();
     if (!empty($errors)) {
@@ -180,20 +187,18 @@ class SendingQueue extends APIEndpoint {
       ? (int)$data['newsletter_id']
       : false
     );
-    $newsletter = Newsletter::findOne($newsletterId);
+    $newsletter = $this->newsletterRepository->findOneById($newsletterId);
 
-    if ($newsletter instanceof Newsletter) {
-      $queue = $newsletter->getQueue();
+    if ($newsletter instanceof NewsletterEntity) {
+      $queue = $newsletter->getLastUpdatedQueue();
 
-      if ($queue === false) {
+      if (!$queue instanceof SendingQueueEntity) {
         return $this->errorResponse([
           APIError::UNKNOWN => __('This newsletter has not been sent yet.', 'mailpoet'),
         ]);
       } else {
-        $queue->pause();
-        return $this->successResponse(
-          $newsletter->getQueue()->asArray()
-        );
+        $this->sendingQueuesRepository->pause($queue);
+        return $this->successResponse();
       }
     } else {
       return $this->errorResponse([
@@ -212,19 +217,18 @@ class SendingQueue extends APIEndpoint {
       ? (int)$data['newsletter_id']
       : false
     );
-    $newsletter = Newsletter::findOne($newsletterId);
-    if ($newsletter instanceof Newsletter) {
-      $queue = $newsletter->getQueue();
+    $newsletter = $this->newsletterRepository->findOneById($newsletterId);
 
-      if ($queue === false) {
+    if ($newsletter instanceof NewsletterEntity) {
+      $queue = $newsletter->getLastUpdatedQueue();
+
+      if (!$queue instanceof SendingQueueEntity) {
         return $this->errorResponse([
           APIError::UNKNOWN => __('This newsletter has not been sent yet.', 'mailpoet'),
         ]);
       } else {
-        $queue->resume();
-        return $this->successResponse(
-          $newsletter->getQueue()->asArray()
-        );
+        $this->sendingQueuesRepository->resume($queue);
+        return $this->successResponse();
       }
     } else {
       return $this->errorResponse([
