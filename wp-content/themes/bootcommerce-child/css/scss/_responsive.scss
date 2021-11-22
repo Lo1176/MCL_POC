@@ -10,6 +10,8 @@
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
+
+  // home page
   .entry-header {
       #brand-logo-header {
         align-self: center;
@@ -22,16 +24,6 @@
           }
       }
   }
-
-  #nav-main .container-fluid {
-    justify-content: flex-end;
-  }
-  .navbar-brand {
-    .logo {
-      height: 42px;
-    }
-  }
-
   .brand {
     .figure {
       margin-bottom: 40px;
@@ -42,4 +34,16 @@
       }
     }
   }
+
+  // nav
+  #nav-main .container-fluid {
+    justify-content: flex-end;
+  }
+  .navbar-brand {
+    .logo {
+      height: 42px;
+    }
+  }
+
+  //
 }
