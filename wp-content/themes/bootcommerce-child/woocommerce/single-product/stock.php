@@ -21,4 +21,6 @@ if (!defined('ABSPATH')) {
 }
 
 ?>
-<p class="box-stock stock <?php echo esc_attr($class); ?>"><?php echo wp_kses_post($availability); ?></p>
+<div class="col-sm stock-container">
+	<p class="box-stock stock <?php echo esc_attr($class); ?>"><?php echo wp_kses_post($availability); ?></p>
+</div>

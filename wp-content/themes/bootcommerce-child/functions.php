@@ -107,7 +107,7 @@ function add_line_separator_after_excerpt_single_product()
 /** add <div> to have btn inline */
 add_action('woocommerce_single_product_summary', 'mcl_add_div', 19);
 function mcl_add_div() {
-  echo '<div class="d-flex">';
+  echo '<div class="btn-inline">';
 
 };
 add_action('woocommerce_single_product_summary', 'mcl_add_div_end', 60);

@@ -23,11 +23,8 @@ if (!defined('ABSPATH')) {
 
 global $product;
 
-echo '<div class="row">
-        <div class="col-sm stock-container mt-auto">';
+echo '<div class="row">';
             do_shortcode('[stock-mcl]');        
-
-echo      '</div>';
 
 echo apply_filters(
   'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
