@@ -23,9 +23,10 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<div class="row">
+<div class="row justify-content-between">
   <!-- End in orderby.php -->
-  <div class="col-md-6 col-lg-8 col-xxl-9">
+  <!-- <div class="col-md-6 col-lg-8 col-xxl-9"> -->
+  <div class="col-3">
     <p class="woocommerce-result-count">
       <?php
       if (1 === $total) {

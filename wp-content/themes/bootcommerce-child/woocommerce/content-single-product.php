@@ -50,7 +50,7 @@ if (post_password_required()) {
 
 	<div class="summary entry-summary">
 
-		<h2 class="text-danger">"content-single-product.php"</h2>
+		<!-- <h2 class="text-danger">"content-single-product.php"</h2> -->
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
