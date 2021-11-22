@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 global $product;
 
 echo '<div class="row">
-        <div class="col-6 stock-container mt-auto">';
+        <div class="col-md-6 col-sm-12 stock-container mt-auto">';
             do_shortcode('[stock-mcl]');        
 
 echo      '</div>';
@@ -32,7 +32,7 @@ echo      '</div>';
 echo apply_filters(
   'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
   sprintf(
-    '<div class="col-6 add-to-cart-container mt-auto"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-primary d-block %s" %s> %s</a></div>',
+    '<div class="col-md-6 col-sm-12 add-to-cart-container mt-auto"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-primary d-block %s" %s> %s</a></div>',
     esc_url($product->add_to_cart_url()),
     esc_attr(isset($args['quantity']) ? $args['quantity'] : 1),
     $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
