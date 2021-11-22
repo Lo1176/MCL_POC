@@ -47,16 +47,8 @@
 
   // stock container
   .stock-container {
-    display: flex;
-    justify-content: center;
     margin-bottom: 4px;
-      .box-stock {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid $black;
-        width: 100%;
-      }
+    
   }
   //woocommerce.php ou category-content
   .term-description {
