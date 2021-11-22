@@ -1,43 +1,5 @@
 const PAYMENT_METHOD = {CreditCard: 'revolut_cc', RevolutPay: 'revolut_pay'};
 
-/**
- * Get payment data
- * @param {Object} address
- * @return {{}}
- */
-function getPaymentData(address) {
-    let paymentData = {};
-
-    paymentData.name = address.billing_first_name + ' ' + address.billing_last_name;
-    paymentData.email = address.billing_email;
-    paymentData.phone = address.billing_phone;
-
-    if (address.billing_country !== undefined && typeof address.billing_postcode !== undefined) {
-        paymentData.billingAddress = {
-            countryCode: address.billing_country,
-            region: address.billing_state,
-            city: address.billing_city,
-            streetLine1: address.billing_address_1,
-            streetLine2: address.billing_address_2,
-            postcode: address.billing_postcode,
-        };
-    }
-
-
-    if (address.ship_to_different_address && address.shipping_country !== undefined && address.shipping_postcode !== undefined) {
-        paymentData.shippingAddress = {
-            countryCode: address.shipping_country,
-            region: address.shipping_state,
-            city: address.shipping_city,
-            streetLine1: address.shipping_address_1,
-            streetLine2: address.shipping_address_2,
-            postcode: address.shipping_postcode,
-        };
-    }
-
-    return paymentData;
-}
-
 jQuery(function ($) {
     let $body = $(document.body);
     let $form = $('form.woocommerce-checkout');
@@ -47,6 +9,8 @@ jQuery(function ($) {
     let isSubmitting = false;
     let isSubmitted = false;
     let cardStatus = null;
+
+    maybeShowErrorMessage();
 
     /**
      * Start processing
@@ -78,7 +42,10 @@ jQuery(function ($) {
      * @param {array} errors
      */
     function handleValidation(errors) {
-        let messages = errors.filter((item) => item != null).map((item) => item.toString())
+        let messages = errors.filter((item) => item != null).map(function (message) {
+            return message.toString().replace("RevolutCheckout: ", "").replace("Validation: ", "");
+        })
+
         displayError(messages);
     }
 
@@ -88,8 +55,11 @@ jQuery(function ($) {
      */
     function handleError(messages) {
         messages = messages.toString().split(',');
-        messages = messages.filter(Boolean);
         const currentPaymentMethod = getPaymentMethod();
+
+        messages = messages.filter((item) => item != null).map(function (message) {
+            return message.toString().replace("RevolutCheckout: ", "").replace("Validation: ", "");
+        })
 
         if (!messages.length || messages.length < 0 || !currentPaymentMethod) {
             return;
@@ -100,7 +70,7 @@ jQuery(function ($) {
         if (isChangePaymentMethodAddPage) {
             displayError(messages);
         } else {
-            handleSuccess(messages);
+            handleSuccess(messages.join(' '));
         }
     }
 
@@ -159,11 +129,62 @@ jQuery(function ($) {
     }
 
     /**
+     * Get payment data
+     * @param {Object} address
+     * @return {{}}
+     */
+    function getPaymentData(address) {
+        let paymentData = {};
+
+        paymentData.name = address.billing_first_name + ' ' + address.billing_last_name;
+        paymentData.email = address.billing_email;
+        paymentData.phone = address.billing_phone;
+
+        if (address.billing_country !== undefined && typeof address.billing_postcode !== undefined) {
+            paymentData.billingAddress = {
+                countryCode: address.billing_country,
+                region: address.billing_state,
+                city: address.billing_city,
+                streetLine1: address.billing_address_1,
+                streetLine2: address.billing_address_2,
+                postcode: address.billing_postcode,
+            };
+        }
+
+
+        if (address.ship_to_different_address && address.shipping_country !== undefined && address.shipping_postcode !== undefined) {
+            paymentData.shippingAddress = {
+                countryCode: address.shipping_country,
+                region: address.shipping_state,
+                city: address.shipping_city,
+                streetLine1: address.shipping_address_1,
+                streetLine2: address.shipping_address_2,
+                postcode: address.shipping_postcode,
+            };
+        }
+
+        if (shouldSavePaymentMethod()) {
+            let target = document.getElementById('woocommerce-revolut-card-element');
+            paymentData.savePaymentMethodFor = target.dataset.savePaymentFor;
+        }
+
+        return paymentData;
+    }
+
+    function getAjaxURL(endpoint) {
+        return wc_revolut.ajax_url.toString() + '=wc_revolut_' + endpoint;
+    }
+
+    /**
      * Check if Revolut Payment options is selected
      */
     function isRevolutPaymentMethodSelected() {
         const currentPaymentMethod = $('input[name="payment_method"]:checked').val();
         return currentPaymentMethod === PAYMENT_METHOD.CreditCard || currentPaymentMethod === PAYMENT_METHOD.RevolutPay;
+    }
+
+    function isRevolutCardPaymentOptionSelected() {
+        return $('#payment_method_revolut_cc').is(':checked');
     }
 
     /**
@@ -182,6 +203,10 @@ jQuery(function ($) {
         stopProcessing();
         const currentPaymentMethod = getPaymentMethod();
         const savePaymentMethod = shouldSavePaymentMethod();
+
+        $('.revolut_public_id').remove();
+        $('.revolut_cc-save-payment-method').remove();
+        $('.revolut_payment_error').remove();
 
         const el_input_public_id = '<input type="hidden" class="revolut_public_id" name="revolut_public_id" value="' + currentPaymentMethod.publicId + '">';
         const el_input_save_payment_method = '<input type="hidden" class="revolut_cc-save-payment-method" name="revolut_cc-save-payment-method" value="' + savePaymentMethod + '">';
@@ -221,7 +246,7 @@ jQuery(function ($) {
         togglePlaceOrderButton();
 
         if (currentPaymentMethod.methodId !== PAYMENT_METHOD.RevolutPay) {
-            let cardWidgetPaymentOptions = {
+            instance = RevolutCheckout(currentPaymentMethod.publicId).createCardField({
                 target: currentPaymentMethod.target,
                 hidePostcodeField: !$body.hasClass('woocommerce-add-payment-method'),
                 locale: currentPaymentMethod.locale,
@@ -238,12 +263,7 @@ jQuery(function ($) {
                         }
                     },
                 },
-            };
-
-            if (currentPaymentMethod.savePaymentDetails > 0) {
-                cardWidgetPaymentOptions['savePaymentMethodFor'] = currentPaymentMethod.savePaymentMethodFor;
-            }
-            instance = RevolutCheckout(currentPaymentMethod.publicId).createCardField(cardWidgetPaymentOptions);
+            });
         } else {
             instance = RevolutCheckout(currentPaymentMethod.publicId).revolutPay({
                 target: currentPaymentMethod.target,
@@ -256,13 +276,22 @@ jQuery(function ($) {
         }
     }
 
+    function maybeShowErrorMessage() {
+        let url = new URL(window.location.href);
+        let isPageReloaded = url.searchParams.get("rev-page-reloaded");
+        if (isPageReloaded === "1") {
+            submitError(`<div class="woocommerce-error">${wc_revolut.checkout_reload_message}</div>`)
+            window.history.replaceState(null, null, window.location.pathname);
+        }
+    }
+
     /**
      * Show validation errors
      * @param errorMessage
      */
     function submitError(errorMessage) {
         $('.woocommerce-NoticeGroup-checkout, .woocommerce-error, .woocommerce-message').remove();
-        $form.prepend('<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">' + errorMessage + '</div>'); // eslint-disable-line max-len
+        $form.prepend(`<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">${errorMessage}</div>`); // eslint-disable-line max-len
         $form.removeClass('processing').unblock();
         $form.find('.input-text, select, input:checkbox').trigger('validate').blur();
         var scrollElement = $('.woocommerce-NoticeGroup-updateOrderReview, .woocommerce-NoticeGroup-checkout');
@@ -278,6 +307,10 @@ jQuery(function ($) {
      * @return {boolean}
      */
     function handleCreditCardSubmit() {
+        if (!isRevolutCardPaymentOptionSelected()) {
+            return true;
+        }
+
         if (isSubmitting) {
             return false;
         }
@@ -288,15 +321,15 @@ jQuery(function ($) {
 
         startProcessing();
 
-        if (payWithPaymentToken()) {
-            handleSuccess();
-            return false;
-        }
-
         const json = getCheckoutFormData();
         if (json.payment_method === PAYMENT_METHOD.CreditCard) {
             validateCheckoutForm().then(function (valid) {
                 if (valid) {
+                    if (payWithPaymentToken()) {
+                        handleSuccess();
+                        return false;
+                    }
+
                     instance.submit(getPaymentData(json));
                 } else {
                     stopProcessing();
@@ -315,9 +348,9 @@ jQuery(function ($) {
      */
     function validateCheckoutForm() {
         return new Promise(function (resolve, reject) {
-
             if ($body.hasClass('woocommerce-order-pay')) {
                 resolve(true);
+                return;
             }
 
             $.ajax({
@@ -327,25 +360,44 @@ jQuery(function ($) {
                 dataType: 'json',
                 success: function (result) {
                     if (result.result === 'revolut_wc_order_created' || result.result === 'success') {
-                        resolve(true);
-                    } else if (result.result === 'fail' ||  result.result === 'failure') {
-                        stopProcessing();
-                        resolve(false);
-                        if (typeof result.messages != "undefined") {
-                            submitError(result.messages);
-                        } else {
-                            submitError('<div class="woocommerce-error">' + wc_checkout_params.i18n_checkout_error + '</div>');
+                        if (result['refresh-checkout-token']) {
+                            refreshCheckoutToken().then(function (valid) {
+                                if (valid) {
+                                    resolve(true);
+                                }
+                            });
+                            return false;
                         }
-                    } else {
+
+                        if (result['refresh-checkout']) {
+                            reloadCheckoutPageWithMessage();
+                            return false;
+                        }
+
+                        resolve(true);
+                        return true;
+                    }
+
+                    if (result.result === 'fail' || result.result === 'failure') {
                         stopProcessing();
                         resolve(false);
-                        submitError('<div class="woocommerce-error">Invalid response</div>');
+
+                        if (typeof result.messages == "undefined") {
+                            result.messages = `<div class="woocommerce-error">${wc_checkout_params.i18n_checkout_error}</div>`
+                        }
+
+                        submitError(result.messages);
+                        return false;
                     }
+
+                    stopProcessing();
+                    resolve(false);
+                    submitError('<div class="woocommerce-error">Invalid response</div>');
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     stopProcessing();
                     resolve(false);
-                    submitError('<div class="woocommerce-error">' + errorThrown + '</div>');
+                    submitError(`<div class="woocommerce-error">${errorThrown}</div>`);
                 }
             });
         });
@@ -480,14 +532,17 @@ jQuery(function ($) {
         return new Promise(function (resolve, reject) {
             $.ajax({
                 type: "POST",
-                url: wc_revolut.ajaxurl,
+                url: getAjaxURL('get_order_pay_billing_info'),
                 data: {
-                    action: 'get_order_pay_billing_info',
+                    security: wc_revolut.nonce.billing_info,
                     order_id: wc_revolut.order_id,
                     order_key: wc_revolut.order_key,
                 },
-
                 success: function (response) {
+                    if (shouldSavePaymentMethod()) {
+                        let target = document.getElementById('woocommerce-revolut-card-element');
+                        response.savePaymentMethodFor = target.dataset.savePaymentFor;
+                    }
                     resolve(response);
                 },
                 catch: function (err) {
@@ -505,12 +560,16 @@ jQuery(function ($) {
         return new Promise(function (resolve, reject) {
             $.ajax({
                 type: "POST",
-                url: wc_revolut.ajaxurl,
+                url:  getAjaxURL('get_customer_info'),
                 data: {
-                    action: 'get_customer_base_info',
+                    security: wc_revolut.nonce.customer_info,
                 },
 
                 success: function (response) {
+                    if (shouldSavePaymentMethod()) {
+                        let target = document.getElementById('woocommerce-revolut-card-element');
+                        response.savePaymentMethodFor = target.dataset.savePaymentFor;
+                    }
                     resolve(response);
                 },
                 catch: function (err) {
@@ -518,6 +577,34 @@ jQuery(function ($) {
                 }
             });
         });
+    }
+
+    function refreshCheckoutToken() {
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                type: "POST",
+                async: false,
+                cache: false,
+                url: getAjaxURL('refresh_checkout_token'),
+                data: {
+                    security: wc_revolut.nonce.refresh_checkout_token,
+                },
+                success: function (response) {
+                    let wc_token_filed = $('#woocommerce-process-checkout-nonce');
+                    if (!response['refresh-checkout-token'] || wc_token_filed.length === 0) {
+                        reloadCheckoutPageWithMessage();
+                        resolve(false);
+                        return false;
+                    }
+                    wc_token_filed.val(response['refresh-checkout-token']);
+                    resolve(true);
+                },
+            });
+        });
+    }
+
+    function reloadCheckoutPageWithMessage() {
+        window.location.href = window.location.href + "?rev-page-reloaded=1";
     }
 
     /**
@@ -596,10 +683,6 @@ jQuery(function ($) {
                 submitPaymentMethodSave()
             }
         }
-    });
-
-    $(document).on('change', '#wc-revolut_cc-new-payment-method', function () {
-        handleUpdate();
     });
 
     if (wc_revolut.page === 'order_pay') {

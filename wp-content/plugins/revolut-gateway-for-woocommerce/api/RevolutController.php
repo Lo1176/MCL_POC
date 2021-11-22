@@ -67,18 +67,27 @@ class RevolutController extends \WC_REST_Data_Controller
 
         $wc_order_id = $this->get_wc_order_id($order_id);
 
-        if (empty($wc_order_id)) {
+        if (empty($wc_order_id) || empty($wc_order_id['wc_order_id'])) {
             return new WP_REST_Response(['status' => 'Failed'], 404);
         }
 
+        // force webhook callback to wait, in order to be sure that the main payment process has ended
+        $wait_for_main_process_time = (WC_REVOLUT_WAIT_FOR_ORDER_TIME * 3);
+        sleep($wait_for_main_process_time);
+
         $wc_order = wc_get_order($wc_order_id['wc_order_id']);
+
+        if (!$wc_order) {
+            return new WP_REST_Response(['status' => 'Failed'], 404);
+        }
+
         $wc_order_status = empty($wc_order->get_status()) ? "" : $wc_order->get_status();
         $check_wc_status = $wc_order_status == "processing" || $wc_order_status == "completed";
         $check_capture = isset(get_post_meta($wc_order_id['wc_order_id'], "revolut_capture")[0]) ? get_post_meta($wc_order_id['wc_order_id'], "revolut_capture")[0] : "";
 
         $data = [];
         if (!empty($order_id) && $check_capture != "yes") {
-            if (!empty($wc_order) && empty($wc_order->get_transaction_id()) & !$check_wc_status) {
+            if (!empty($wc_order) && empty($wc_order->get_transaction_id()) && !$check_wc_status) {
                 if ($event == "ORDER_COMPLETED") {
                     $wc_order->add_order_note(__('Payment has been successfully captured (Order ID: ' . $order_id . ')', 'revolut-gateway-for-woocommerce'));
                     $wc_order->payment_complete($order_id);

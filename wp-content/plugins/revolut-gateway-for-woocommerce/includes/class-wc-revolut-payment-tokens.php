@@ -26,7 +26,9 @@ class WC_Revolut_Payment_Tokens
         $gateway_revolut = new WC_Gateway_Revolut_CC();
         $revolut_customer_id = $gateway_revolut->get_revolut_customer_id(get_current_user_id());
         if (empty($revolut_customer_id)) {
-            wc_add_notice('Can not find customer ID', 'error');
+            if(is_account_page()){
+                wc_add_notice('Can not find customer ID', 'error');
+            }
         }
 
         if ($token->get_gateway_id() == $gateway_revolut->id) {
@@ -35,7 +37,9 @@ class WC_Revolut_Payment_Tokens
             try {
                 $gateway_revolut->api_client->delete("/customers/$revolut_customer_id/payment-methods/$payment_method_id");
             } catch (Exception $e) {
-                wc_add_notice($e->getMessage(), 'error');
+                if(is_account_page()){
+                    wc_add_notice($e->getMessage(), 'error');
+                }
             }
         }
     }

@@ -42,6 +42,8 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
 
         parent::__construct();
 
+        $this->revolut_saved_cards = 'yes' === $this->get_option('revolut_saved_cards');
+
         add_action('wp_enqueue_scripts', array($this, 'load_payment_scripts'));
 
         if (class_exists('WC_Subscriptions_Order')) {
@@ -105,6 +107,14 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
                 'description' => __('This controls the title which the user sees during checkout.', 'revolut-gateway-for-woocommerce'),
                 'default' => $this->default_title,
                 'desc_tip' => true,
+            ),
+            'revolut_saved_cards' => array(
+                'title' => __('Save Cards', 'revolut-gateway-for-woocommerce'),
+                'label' => __('Enable Payment with Saved Cards', 'revolut-gateway-for-woocommerce'),
+                'type' => 'checkbox',
+                'description' => __('If enabled, users will be able to save their cards and process checkout with saved cards. Card details will be saved on Revolut servers.', 'revolut-gateway-for-woocommerce'),
+                'default' => 'yes',
+                'desc_tip' => true,
             ), 'styling_title' => array(
                 'title' => __('Card widget style', 'revolut-gateway-for-woocommerce'),
                 'type' => 'title',
@@ -152,9 +162,7 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
     public function scheduled_subscription_payment($amount_to_charge, $renewal_order)
     {
         try {
-            global $wpdb;
             $wc_order_id = $renewal_order->get_id();
-
             $payment_token_id = $renewal_order->get_meta('_payment_token_id', true);
 
             if (empty($payment_token_id)) {
@@ -169,7 +177,7 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
 
             $revolut_customer_id = $this->get_revolut_customer_id($wc_customer_id);
 
-            if (empty($wc_customer_id)) {
+            if (empty($revolut_customer_id)) {
                 throw new Exception("Can not find Subscription Revolut customer ID: $revolut_customer_id");
             }
 
@@ -208,8 +216,6 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
 
             //check payment result and update order status
             $this->handle_revolut_order_result($renewal_order, $revolut_order_id);
-
-            $renewal_order->payment_complete($revolut_order_id);
 
             $message = sprintf('Subscription charge successfully completed by Revolut (Order ID: %s)', $revolut_order_id);
             $renewal_order->add_order_note($message);
@@ -528,11 +534,25 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
         return $cart_contains_subscription;
     }
 
-    public function is_save_payment_method_mandatory()
+    public function is_available()
+    {
+        if (is_add_payment_method_page() && !$this->revolut_saved_cards) {
+            return false;
+        }
+
+        return 'yes' === $this->enabled;
+    }
+
+    public function check_currency_support()
     {
         if (!in_array(get_woocommerce_currency(), $this->card_payments_currency_list)) {
-            return true;
+            return false;
         }
+        return true;
+    }
+
+    public function is_save_payment_method_mandatory()
+    {
 
         if (is_add_payment_method_page()) {
             return true;
@@ -541,12 +561,13 @@ class WC_Gateway_Revolut_CC extends WC_Payment_Gateway_Revolut
         if (!class_exists('WC_Subscriptions_Order')) {
             return false;
         }
-        return is_add_payment_method_page() || isset($_GET['change_payment_method']) || $this->cart_contains_subscription();
+
+        return isset($_GET['change_payment_method']) || $this->cart_contains_subscription();
     }
 
     public function save_payment_method_checkbox()
     {
-        if (!$this->is_save_payment_method_mandatory()) {
+        if (!$this->is_save_payment_method_mandatory() && $this->revolut_saved_cards && $this->check_currency_support()) {
             return '<p class="form-row woocommerce-SavedPaymentMethods-saveNew">
 				<input id="wc-' . $this->id . '-new-payment-method" name="wc-' . $this->id . '-new-payment-method" type="checkbox" value="' . $this->savePaymentMethodFor . '" style="width:auto;" />
 				<label for="wc-' . $this->id . '-new-payment-method" style="display:inline;">' . __('Save payment information to my account for future purchases.', 'revolut-gateway-for-woocommerce') . '</label>

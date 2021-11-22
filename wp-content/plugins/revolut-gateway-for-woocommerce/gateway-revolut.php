@@ -6,16 +6,18 @@
  * Author: Revolut
  * Author URI: https://www.revolut.com/business/online-payments
  * Text Domain: revolut-gateway-for-woocommerce
- * Version: 2.3.0
+ * Version: 2.4.2
  * Requires at least: 4.4
- * Tested up to: 5.7
- * WC tested up to: 5.2
+ * Tested up to: 5.8.1
+ * WC tested up to: 5.8
  * WC requires at least: 2.6
  *
  */
 defined('ABSPATH') || exit;
 define('REVOLUT_PATH', plugin_dir_path(__FILE__));
-define('WC_GATEWAY_REVOLUT_VERSION', '2.3.0');
+define('WC_GATEWAY_REVOLUT_VERSION', '2.4.2');
+define('WC_REVOLUT_WAIT_FOR_ORDER_TIME', 2);
+define('WC_REVOLUT_FETCH_API_ORDER_ATTEMPTS', 10);
 
 /**
  * Manage all dependencies
@@ -42,32 +44,28 @@ function woocommerce_revolut_init()
     define('WC_REVOLUT_PLUGIN_URL', untrailingslashit(plugins_url(basename(plugin_dir_path(__FILE__)), basename(__FILE__))));
     add_action('admin_enqueue_scripts', 'load_admin_scripts');
     load_plugin_textdomain('revolut-gateway-for-woocommerce', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
-    add_action('wp_ajax_set_webhook', 'setup_revolut_webhook');
+
+    add_action('wp_ajax_wc_revolut_set_webhook', 'wc_revolut_set_webhook');
     add_filter('woocommerce_payment_gateways', 'woocommerce_revolut_add_gateways');
-    add_action('wp_enqueue_scripts', 'load_scripts');
-    add_action('wp_ajax_validate_checkout_field', 'validate_checkout_field');
-    add_action('wp_ajax_nopriv_validate_checkout_field', 'validate_checkout_field');
-    add_action('wp_ajax_get_order_pay_billing_info', 'get_order_pay_billing_info');
-    add_action('wp_ajax_nopriv_get_order_pay_billing_info', 'get_order_pay_billing_info');
-    add_action('wp_ajax_get_customer_base_info', 'get_customer_base_info');
-    add_action('wp_ajax_nopriv_get_customer_base_info', 'get_customer_base_info');
-    add_action('wp_ajax_get_error_message', 'get_error_message');
-    add_action('wp_ajax_nopriv_get_error_message', 'get_error_message');
-    add_action('init', 'load_rest_api');
+    add_action('wc_ajax_wc_revolut_validate_checkout_field', 'wc_revolut_validate_checkout_field');
+    add_action('wc_ajax_wc_revolut_get_order_pay_billing_info', 'wc_revolut_get_order_pay_billing_info');
+    add_action('wc_ajax_wc_revolut_get_customer_info', 'wc_revolut_get_customer_info');
+    add_action('wc_ajax_wc_revolut_refresh_checkout_token', 'wc_revolut_refresh_checkout_token');
+    add_action('init', 'woocommerce_revolut_load_rest_api');
 }
 
 /**
  * Load API function
  */
-function load_rest_api()
+function woocommerce_revolut_load_rest_api()
 {
-    add_action('rest_api_init', 'createApi', 99);
+    add_action('rest_api_init', 'woocommerce_revolut_create_callback_api', 99);
 }
 
 /**
  * Create API to accept setup Webhook
  */
-function createApi()
+function woocommerce_revolut_create_callback_api()
 {
     $api = new RevolutController();
     $api->register_routes();
@@ -202,32 +200,10 @@ function load_admin_scripts()
 }
 
 /**
- * Add script & style checkout form
- */
-function load_scripts()
-{
-    wp_register_style('custom-style', plugins_url('assets/css/style.css', WC_REVOLUT_MAIN_FILE));
-    wp_enqueue_style('custom-style');
-    wp_register_script('revolut-woocommerce', plugins_url('assets/js/revolut.js', WC_REVOLUT_MAIN_FILE), array(
-        'revolut-core',
-        'jquery'
-    ), WC_GATEWAY_REVOLUT_VERSION, true);
-    wp_localize_script('revolut-woocommerce',
-        'wc_revolut',
-        array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'page' => wc_revolut_get_current_page(),
-            'order_id' => wc_revolut_get_current_order_id(),
-            'order_key' => wc_revolut_get_current_order_key(),
-        ));
-    wp_enqueue_script('revolut-woocommerce');
-}
-
-/**
  * Setup webhook
  * @throws Exception
  */
-function setup_revolut_webhook()
+function wc_revolut_set_webhook()
 {
     global $wp_version;
     global $woocommerce;
@@ -272,7 +248,7 @@ function setup_revolut_webhook()
 /**
  * Validate checkout fields
  */
-function validate_checkout_field()
+function wc_revolut_validate_checkout_field()
 {
     $json = $_POST['json'];
     $validate_checkout = new Revolut_Validate_Checkout();
@@ -303,17 +279,18 @@ function validate_checkout_field()
     }
 }
 
-
 /**
  * Get billing info for manual order payments
  */
-function get_order_pay_billing_info()
+function wc_revolut_get_order_pay_billing_info()
 {
+    check_ajax_referer('wc-revolut-get-billing-info', 'security');
+
     $order_id = $_POST['order_id'];
     $order_key = $_POST['order_key'];
     $order = wc_get_order($order_id);
     // validate order key
-    if ($order_key === $order->get_order_key()) {
+    if ($order && $order_key === $order->get_order_key()) {
         $billing_address = $order->get_address('billing');
         $billing_info = array(
             "name" => $billing_address['first_name'] . " " . $billing_address["last_name"],
@@ -337,8 +314,10 @@ function get_order_pay_billing_info()
 /**
  * Get billing info for payment method save
  */
-function get_customer_base_info()
+function wc_revolut_get_customer_info()
 {
+    check_ajax_referer('wc-revolut-get-customer-info', 'security');
+
     $customer_id = get_current_user_id();
     $customer = new WC_Customer($customer_id);
     // validate order key
@@ -358,69 +337,12 @@ function get_customer_base_info()
     wp_die();
 }
 
-/**
- * Check the current page
- */
-function wc_revolut_get_current_page()
+function wc_revolut_refresh_checkout_token()
 {
-    global $wp;
-    if (is_product()) {
-        return 'product';
-    }
-    if (is_cart()) {
-        return 'cart';
-    }
-    if (is_checkout()) {
-        if (!empty($wp->query_vars['order-pay'])) {
-            return 'order_pay';
-        }
-
-        return 'checkout';
-    }
-    if (is_add_payment_method_page()) {
-        return 'add_payment_method';
-    }
-
-    return '';
-}
-
-/**
- * Get current order id on 'order_pay' page
- */
-function wc_revolut_get_current_order_id()
-{
-    global $wp;
-    if (is_checkout()) {
-        if (!empty($wp->query_vars['order-pay']) && absint($wp->query_vars['order-pay']) > 0) {
-            return absint($wp->query_vars['order-pay']);;
-        }
-    }
-    return '';
-}
-
-/**
- * Get current order key
- */
-function wc_revolut_get_current_order_key()
-{
-    $order_id = wc_revolut_get_current_order_id();
-    if ($order_id) {
-        $order = wc_get_order($order_id);
-        $order_key = $order->get_order_key();
-        return $order_key;
-    }
-    return '';
-}
-
-
-/**
- * Get error message from card form
- */
-function get_error_message()
-{
-    $message = $_POST['message'];
-
-    update_option('revolut_message', $message);
-
-    wp_die();
+    wp_send_json(
+        array(
+            "refresh-checkout-token" => wp_create_nonce('woocommerce-process_checkout'),
+            'current-user' => get_current_user_id(),
+        )
+    );
 }

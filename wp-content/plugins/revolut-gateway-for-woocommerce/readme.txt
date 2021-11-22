@@ -2,8 +2,8 @@
 Contributors: revolutbusiness
 Tags: revolut, revolut business, payments, gateway, payment gateway, credit card, card
 Requires at least: 4.4
-Tested up to: 5.7
-Stable tag: 2.3.0
+Tested up to: 5.8
+Stable tag: 2.4.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.apache.org/licenses/LICENSE-2.0
@@ -100,6 +100,32 @@ Now you can start accepting real payments in your WooCommerce online store.
 5. The Revolut Pay Button settings
 
 == Changelog ==
+= 2.4.2 =
+* Fix duplicated order status update
+* Validate saved payment tokens through API
+
+= 2.4.1 =
+* Fix refund issue
+* Fix webhook callback order not found issue
+
+= 2.4.0 =
+* Refresh checkout page without reloading
+* Update payment amount after order creation
+* Fix card widget reloading when save card checkbox is updating
+* Add configuration in order enable/disable card save feature
+
+= 2.3.3 =
+* Fix order process error when create customer checkbox is enabled
+* Fix setting webhook issue
+
+= 2.3.2 =
+* Minor issues refactored
+* Missing dependency issue solved
+
+= 2.3.1 =
+* Fixed duplicated order issue
+* Tested with the latest WordPress and WooCommerce versions
+
 = 2.3.0 =
 * Optimize checkout validation
 

@@ -71,7 +71,7 @@ jQuery(document).ready(function ($) {
             type: "POST",
             url: ajaxurl,
             data: {
-                action: 'set_webhook',
+                action: 'wc_revolut_set_webhook',
                 mode: mode,
                 apiKey: api
             },
