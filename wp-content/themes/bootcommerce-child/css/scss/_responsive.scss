@@ -10,13 +10,19 @@
 
 /* Smartphone */
 @media screen and (max-width: 600px) {
-  #mcl-logo-header {
-    align-self: center;
-    position: inherit;
-    top: 0;
-    height: fit-content;
-    z-index: 1010;
+  .entry-header {
+      #brand-logo-header {
+        align-self: center;
+        position: inherit;
+        top: 0;
+        height: fit-content;
+        z-index: 1010;
+          #mcl-logo {
+            padding: 40px;
+          }
+      }
   }
+
   #nav-main .container-fluid {
     justify-content: flex-end;
   }
@@ -28,7 +34,7 @@
 
   .brand {
     .figure {
-      margin-bottom: 4px;
+      margin-bottom: 40px;
 
       .img-fluid {
         width: 100vw;

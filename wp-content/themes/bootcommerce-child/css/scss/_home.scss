@@ -10,19 +10,19 @@
 }
 
 .entry-header {
-    height: 420px;
         #brand-logo-header {
-            height: 340px;
+            justify-content: center;
+            margin: 40px;
             position: relative;
-            top: -36px; // blason MCL position (en relation avec padding navbar et _svg size
+            top: -66px; // blason MCL position (en relation avec padding navbar et _svg size
             z-index: 1020;
-            padding: 8px 8px;
         }
       
 
 }
 
 #mcl-logo {
+    align-self: center;
     background-color: $mcl;
     padding: 80px;
 
