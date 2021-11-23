@@ -49,6 +49,15 @@ add_action('init', 'mcl_custom_new_menu');
 // do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
 // add_action('woocommerce_single_product_summary', 'ti_wishlists_addtowishlist', 10);
 
+/**
+ * remove woocommerce-result-count
+ */
+add_action('after_setup_theme', 'my_remove_product_result_count', 99);
+function my_remove_product_result_count()
+{
+  remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+  remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
+}
 
 
 ##### start-CONTENT-PRODUCT #####
