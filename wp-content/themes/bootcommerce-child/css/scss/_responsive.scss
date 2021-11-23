@@ -61,4 +61,30 @@
   .woocommerce-product-details__short-description {
     text-align: center;
   }
+  .btn-inline {
+    flex-direction: column-reverse;
+    align-items: end;
+      .stock-container {
+        width: 50%;
+      }
+      .cart {
+        margin-bottom: 6px !important;
+        display: flex;
+        justify-content: end;
+        width: 100%;
+            .single_add_to_cart_button {
+              width: 50%;
+            }
+      }
+
+  }
+  .woocommerce div.product p.price, .woocommerce div.product span.price, .card .price {
+    text-align-last: end;
+  }
+  .woocommerce div.product form.cart {
+    // margin-bottom: 8px !important;
+  }
+  
 }
+/* Smartphone END */
+
