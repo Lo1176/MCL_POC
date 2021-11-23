@@ -1,17 +1,23 @@
-.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+.entry-summary {
     text-align: left;
+    padding-right: 6rem;
+        .price {
+            text-align: right;
+        }
+
 }
 
 .woocommerce .quantity {
     .qty {
         // color: red;
-
     }
 }
 
 .woocommerce div.product form.cart {
     margin-bottom: 0;
 }
+
+
 
 // input::-webkit-outer-spin-button,
 
