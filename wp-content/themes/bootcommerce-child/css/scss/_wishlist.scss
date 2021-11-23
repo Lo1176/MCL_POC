@@ -1,4 +1,12 @@
-.icon_above_image {
-    right: 10px;
-    top: 178px;
+// .icon_above_image {
+//     right: 10px;
+//     top: 178px;
+// }
+
+.tinv-wishlist > a {
+        color: $red;
+        &:hover {
+            color: $red;
+
+        }
 }
