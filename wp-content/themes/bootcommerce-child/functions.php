@@ -43,6 +43,13 @@ add_action('init', 'mcl_custom_new_menu');
 
 ##### end - Menu #####
 
+/**
+ * add wishlist buton
+ */
+// do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
+// add_action('woocommerce_single_product_summary', 'ti_wishlists_addtowishlist', 10);
+
+
 
 ##### start-CONTENT-PRODUCT #####
 // Archives pages: Additional button linked to the product
