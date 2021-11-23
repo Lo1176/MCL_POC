@@ -22,5 +22,5 @@ if (!defined('ABSPATH')) {
 
 ?>
 <div class="col-sm stock-container">
-	<p class="box-stock stock <?php echo esc_attr($class); ?>"><?php echo wp_kses_post($availability); ?></p>
+	<p class="box-stock stock text-center <?php echo esc_attr($class); ?>"><?php echo wp_kses_post($availability); ?></p>
 </div>
