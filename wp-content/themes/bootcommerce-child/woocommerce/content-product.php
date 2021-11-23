@@ -26,8 +26,8 @@ if (empty($product) || !$product->is_visible()) {
 }
 ?>
 
-<div class="toto col-md-6 col-lg-4 col-xxl-3 mb-4">
-	<div <?php wc_product_class('card border-0 m-4 h-100 d-flex text-center', $product); ?>>
+<div class="col-md-6 col-lg-4 col-xxl-3 mb-4">
+	<div <?php wc_product_class('card border-0 m-4 h-100 d-flex text-end', $product); ?>>
 
 		<!-- ##### A EFFACER ##### -->
 		<!-- <h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2> -->

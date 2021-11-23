@@ -55,8 +55,7 @@ get_header();
           <?php woocommerce_content(); ?>
         </div>
         <!-- sidebar -->
-        <?php #get_sidebar(); 
-        ?>
+        <?php #get_sidebar(); ?>
         <!-- row -->
       </div>
     </main><!-- #main -->

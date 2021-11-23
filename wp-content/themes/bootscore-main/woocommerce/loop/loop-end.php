@@ -20,4 +20,5 @@ if (!defined('ABSPATH')) {
   exit;
 }
 ?>
-</div><!-- row in loop-start.php -->
+</div>
+<!-- row in loop-start.php -->

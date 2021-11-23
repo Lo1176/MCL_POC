@@ -57,6 +57,7 @@ function my_remove_product_result_count()
 {
   remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
   remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
+  add_action('woocommerce_before_shop_loop', 'mcl_add_div_product_result_count', 10);
 }
 
 
@@ -121,14 +122,18 @@ function add_line_separator_after_excerpt_single_product()
 }
 
 /** add <div> to have btn inline */
-add_action('woocommerce_single_product_summary', 'mcl_add_div', 19);
-function mcl_add_div() {
+add_action('woocommerce_single_product_summary', 'mcl_add_div_btn_inline', 19);
+function mcl_add_div_btn_inline() {
   echo '<div class="btn-inline">';
 
 };
+
+function mcl_add_div_product_result_count() {
+  echo '<div class="row"><div class="col-sm-2"></div>';
+};
+
 add_action('woocommerce_single_product_summary', 'mcl_add_div_end', 60);
-function mcl_add_div_end()
-{
+function mcl_add_div_end() {
   echo '</div>';
 };
 /** function to remove or change order for tabs */
