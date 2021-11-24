@@ -3,6 +3,7 @@ declare( strict_types=1 );
 
 namespace Automattic\WooCommerce\GoogleListingsAndAds\Internal\DependencyManagement;
 
+use Automattic\WooCommerce\GoogleListingsAndAds\ActionScheduler\ActionScheduler;
 use Automattic\WooCommerce\GoogleListingsAndAds\Admin\ActivationRedirect;
 use Automattic\WooCommerce\GoogleListingsAndAds\Admin\Admin;
 use Automattic\WooCommerce\GoogleListingsAndAds\Admin\MetaBox\ChannelVisibilityMetaBox;
@@ -14,6 +15,7 @@ use Automattic\WooCommerce\GoogleListingsAndAds\Admin\Product\Attributes\Variati
 use Automattic\WooCommerce\GoogleListingsAndAds\Ads\AdsAwareInterface;
 use Automattic\WooCommerce\GoogleListingsAndAds\Ads\AdsService;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\Merchant;
+use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\MerchantMetrics;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\Settings as GoogleSettings;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Site\RESTControllers;
 use Automattic\WooCommerce\GoogleListingsAndAds\Assets\AssetsHandler;
@@ -52,6 +54,10 @@ use Automattic\WooCommerce\GoogleListingsAndAds\MerchantCenter\MerchantStatuses;
 use Automattic\WooCommerce\GoogleListingsAndAds\MerchantCenter\PhoneVerification;
 use Automattic\WooCommerce\GoogleListingsAndAds\Notes\ContactInformation as ContactInformationNote;
 use Automattic\WooCommerce\GoogleListingsAndAds\Notes\CompleteSetup as CompleteSetupNote;
+use Automattic\WooCommerce\GoogleListingsAndAds\Notes\Note;
+use Automattic\WooCommerce\GoogleListingsAndAds\Notes\NoteInitializer;
+use Automattic\WooCommerce\GoogleListingsAndAds\Notes\ReviewAfterClicks as ReviewAfterClicksNote;
+use Automattic\WooCommerce\GoogleListingsAndAds\Notes\ReviewAfterConversions as ReviewAfterConversionsNote;
 use Automattic\WooCommerce\GoogleListingsAndAds\Notes\SetupCampaign as SetupCampaignNote;
 use Automattic\WooCommerce\GoogleListingsAndAds\Notes\SetupCampaignTwoWeeks as SetupCampaign2Note;
 use Automattic\WooCommerce\GoogleListingsAndAds\Options\AdsAccountState;
@@ -76,7 +82,7 @@ use Automattic\WooCommerce\GoogleListingsAndAds\Proxies\Tracks as TracksProxy;
 use Automattic\WooCommerce\GoogleListingsAndAds\Proxies\WC;
 use Automattic\WooCommerce\GoogleListingsAndAds\Proxies\WP;
 use Automattic\WooCommerce\GoogleListingsAndAds\TaskList\CompleteSetup;
-use Automattic\WooCommerce\GoogleListingsAndAds\Tracking\Events\Loaded;
+use Automattic\WooCommerce\GoogleListingsAndAds\Tracking\Events\ActivatedEvents;
 use Automattic\WooCommerce\GoogleListingsAndAds\Tracking\Events\SiteClaimEvents;
 use Automattic\WooCommerce\GoogleListingsAndAds\Tracking\Events\SiteVerificationEvents;
 use Automattic\WooCommerce\GoogleListingsAndAds\Tracking\EventTracking;
@@ -121,11 +127,11 @@ class CoreServiceProvider extends AbstractServiceProvider {
 		GetStarted::class             => true,
 		GlobalSiteTag::class          => true,
 		ISOUtility::class             => true,
-		Loaded::class                 => true,
 		SiteVerificationEvents::class => true,
 		OptionsInterface::class       => true,
 		TransientsInterface::class    => true,
 		ProductFeed::class            => true,
+		ReviewAfterClicksNote::class  => true,
 		RESTControllers::class        => true,
 		Service::class                => true,
 		Settings::class               => true,
@@ -238,10 +244,13 @@ class CoreServiceProvider extends AbstractServiceProvider {
 		$this->conditionally_share_with_tags( AdsSetupCompleted::class );
 
 		// Inbox Notes
-		$this->conditionally_share_with_tags( ContactInformationNote::class );
-		$this->conditionally_share_with_tags( CompleteSetupNote::class );
-		$this->conditionally_share_with_tags( SetupCampaignNote::class );
-		$this->conditionally_share_with_tags( SetupCampaign2Note::class );
+		$this->share_with_tags( ContactInformationNote::class );
+		$this->share_with_tags( CompleteSetupNote::class );
+		$this->share_with_tags( ReviewAfterClicksNote::class, MerchantMetrics::class, WP::class );
+		$this->share_with_tags( ReviewAfterConversionsNote::class, MerchantMetrics::class, WP::class );
+		$this->share_with_tags( SetupCampaignNote::class );
+		$this->share_with_tags( SetupCampaign2Note::class );
+		$this->share_with_tags( NoteInitializer::class, ActionScheduler::class, Note::class );
 
 		// Product attributes
 		$this->conditionally_share_with_tags( AttributeManager::class );
@@ -305,9 +314,10 @@ class CoreServiceProvider extends AbstractServiceProvider {
 		$this->share_with_tags( PHPViewFactory::class );
 
 		// Share other classes.
-		$this->conditionally_share_with_tags( Loaded::class );
-		$this->conditionally_share_with_tags( SiteVerificationEvents::class );
-		$this->conditionally_share_with_tags( SiteClaimEvents::class );
+		$this->share_with_tags( ActivatedEvents::class, $_SERVER );
+		$this->share_with_tags( SiteVerificationEvents::class );
+		$this->share_with_tags( SiteClaimEvents::class );
+
 		$this->conditionally_share_with_tags( InstallTimestamp::class );
 		$this->conditionally_share_with_tags( ClearProductStatsCache::class, MerchantStatuses::class );
 

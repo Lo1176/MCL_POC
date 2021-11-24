@@ -3,12 +3,12 @@
  * Plugin Name: Google Listings and Ads
  * Plugin URL: https://wordpress.org/plugins/google-listings-and-ads/
  * Description: Native integration with Google that allows merchants to easily display their products across Google’s network.
- * Version: 1.6.0
+ * Version: 1.7.0
  * Author: WooCommerce
  * Author URI: https://woocommerce.com/
  * Text Domain: google-listings-and-ads
  * Requires at least: 5.6
- * Tested up to: 5.8
+ * Tested up to: 5.9
  * Requires PHP: 7.3
  *
  * WC requires at least: 5.5
@@ -27,7 +27,7 @@ use Psr\Container\ContainerInterface;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'WC_GLA_VERSION', '1.6.0' ); // WRCS: DEFINED_VERSION.
+define( 'WC_GLA_VERSION', '1.7.0' ); // WRCS: DEFINED_VERSION.
 define( 'WC_GLA_MIN_PHP_VER', '7.3' );
 define( 'WC_GLA_MIN_WC_VER', '5.5' );
 

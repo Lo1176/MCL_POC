@@ -47,15 +47,15 @@ return array(
 		'path'    => $vendorDir . '/phpseclib/bcmath_compat/lib/bcmath.php'
 	),
 	'a66af3295a2671f868924c6f4a9afc6c' => array(
-		'version' => 'dev-trunk',
+		'version' => 'dev-release/1.7.0',
 		'path'    => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php'
 	),
 	'7fd7393568b2f049bdce22a915a0972c' => array(
-		'version' => 'dev-trunk',
+		'version' => 'dev-release/1.7.0',
 		'path'    => $vendorDir . '/guzzlehttp/promises/src/functions_include.php'
 	),
 	'182f64d0d30681748cdc000877186250' => array(
-		'version' => 'dev-trunk',
+		'version' => 'dev-release/1.7.0',
 		'path'    => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php'
 	),
 );

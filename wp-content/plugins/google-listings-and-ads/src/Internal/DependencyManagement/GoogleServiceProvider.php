@@ -12,6 +12,7 @@ use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\AdsGroup;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\AdsReport;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\Connection;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\Merchant;
+use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\MerchantMetrics;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\MerchantReport;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\Proxy;
 use Automattic\WooCommerce\GoogleListingsAndAds\API\Google\Settings;
@@ -23,8 +24,10 @@ use Automattic\WooCommerce\GoogleListingsAndAds\Google\GoogleProductService;
 use Automattic\WooCommerce\GoogleListingsAndAds\Google\GooglePromotionService;
 use Automattic\WooCommerce\GoogleListingsAndAds\Options\Options;
 use Automattic\WooCommerce\GoogleListingsAndAds\Options\OptionsInterface;
+use Automattic\WooCommerce\GoogleListingsAndAds\Options\TransientsInterface;
 use Automattic\WooCommerce\GoogleListingsAndAds\PluginHelper;
 use Automattic\WooCommerce\GoogleListingsAndAds\Product\ProductHelper;
+use Automattic\WooCommerce\GoogleListingsAndAds\Proxies\WP;
 use Automattic\WooCommerce\GoogleListingsAndAds\Vendor\GuzzleHttp\Client as GuzzleClient;
 use Automattic\WooCommerce\GoogleListingsAndAds\Vendor\GuzzleHttp\ClientInterface;
 use Automattic\WooCommerce\GoogleListingsAndAds\Vendor\GuzzleHttp\Exception\RequestException;
@@ -60,24 +63,25 @@ class GoogleServiceProvider extends AbstractServiceProvider {
 	 * @var array
 	 */
 	protected $provides = [
-		Client::class                 => true,
-		ShoppingContent::class        => true,
-		GoogleAdsClient::class        => true,
-		GuzzleClient::class           => true,
-		Proxy::class                  => true,
-		Merchant::class               => true,
-		Ads::class                    => true,
-		AdsCampaign::class            => true,
-		AdsCampaignBudget::class      => true,
-		AdsConversionAction::class    => true,
-		AdsGroup::class               => true,
-		AdsReport::class              => true,
-		'connect_server_root'         => true,
-		Connection::class             => true,
-		GoogleProductService::class   => true,
+		Client::class               => true,
+		ShoppingContent::class      => true,
+		GoogleAdsClient::class      => true,
+		GuzzleClient::class         => true,
+		Proxy::class                => true,
+		Merchant::class             => true,
+		MerchantMetrics::class      => true,
+		Ads::class                  => true,
+		AdsCampaign::class          => true,
+		AdsCampaignBudget::class    => true,
+		AdsConversionAction::class  => true,
+		AdsGroup::class             => true,
+		AdsReport::class            => true,
+		'connect_server_root'       => true,
+		Connection::class           => true,
+		GoogleProductService::class => true,
 		GooglePromotionService::class => true,
-		SiteVerification::class       => true,
-		Settings::class               => true,
+		SiteVerification::class     => true,
+		Settings::class             => true,
 	];
 
 	/**
@@ -108,6 +112,7 @@ class GoogleServiceProvider extends AbstractServiceProvider {
 		);
 
 		$this->share( Merchant::class, ShoppingContent::class );
+		$this->share( MerchantMetrics::class, ShoppingContent::class, GoogleAdsClient::class, WP::class, TransientsInterface::class );
 		$this->share( MerchantReport::class, ShoppingContent::class, ProductHelper::class );
 
 		$this->add(

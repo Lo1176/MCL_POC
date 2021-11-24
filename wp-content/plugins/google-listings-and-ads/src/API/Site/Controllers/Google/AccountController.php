@@ -26,6 +26,19 @@ class AccountController extends BaseController {
 	protected $connection;
 
 	/**
+	 * Mapping between the client page name and its path.
+	 * The first value is also used as a default,
+	 * and changing the order of keys/values may affect things below.
+	 *
+	 * @var string[]
+	 */
+	private const NEXT_PATH_MAPPING = [
+		'setup-mc'  => '/google/setup-mc',
+		'setup-ads' => '/google/setup-ads',
+		'reconnect' => '/google/settings&subpath=/reconnect-accounts',
+	];
+
+	/**
 	 * BaseController constructor.
 	 *
 	 * @param RESTServer $server
@@ -87,11 +100,14 @@ class AccountController extends BaseController {
 	protected function get_connect_callback(): callable {
 		return function( Request $request ) {
 			try {
-				$next = $request->get_param( 'next' );
-				$path = $next === 'setup-mc' ? '/google/setup-mc' : '/google/settings&subpath=/reconnect-accounts';
-
+				$next       = $request->get_param( 'next' );
+				$login_hint = $request->get_param( 'login_hint' ) ?: '';
+				$path       = self::NEXT_PATH_MAPPING[ $next ];
 				return [
-					'url' => $this->connection->connect( admin_url( "admin.php?page=wc-admin&path={$path}" ) ),
+					'url' => $this->connection->connect(
+						admin_url( "admin.php?page=wc-admin&path={$path}" ),
+						$login_hint
+					),
 				];
 			} catch ( Exception $e ) {
 				return new Response( [ 'message' => $e->getMessage() ], $e->getCode() ?: 400 );
@@ -106,13 +122,18 @@ class AccountController extends BaseController {
 	 */
 	protected function get_connect_params(): array {
 		return [
-			'context' => $this->get_context_param( [ 'default' => 'view' ] ),
-			'next'    => [
+			'context'    => $this->get_context_param( [ 'default' => 'view' ] ),
+			'next'       => [
 				'description'       => __( 'Indicate the next page name to map the redirect URI when back from Google authorization.', 'google-listings-and-ads' ),
 				'type'              => 'string',
-				'default'           => 'setup-mc',
-				'enum'              => [ 'setup-mc', 'reconnect' ],
+				'default'           => array_key_first( self::NEXT_PATH_MAPPING ),
+				'enum'              => array_keys( self::NEXT_PATH_MAPPING ),
 				'validate_callback' => 'rest_validate_request_arg',
+			],
+			'login_hint' => [
+				'description'       => __( 'Indicate the Google account to suggest for authorization.', 'google-listings-and-ads' ),
+				'type'              => 'string',
+				'validate_callback' => 'is_email',
 			],
 		];
 	}
@@ -147,6 +168,7 @@ class AccountController extends BaseController {
 				return [
 					'active' => array_key_exists( 'status', $status ) && ( 'connected' === $status['status'] ) ? 'yes' : 'no',
 					'email'  => array_key_exists( 'email', $status ) ? $status['email'] : '',
+					'scope'  => array_key_exists( 'scope', $status ) ? $status['scope'] : [],
 				];
 			} catch ( Exception $e ) {
 				return new Response( [ 'message' => $e->getMessage() ], $e->getCode() ?: 400 );
