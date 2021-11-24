@@ -25,6 +25,11 @@
         }
 }
 
+.offcanvas-header {
+    font-weight: 300;
+    opacity: .5;
+
+}
 .offcanvas-body {
     overflow-y: inherit !important;
         .dropdown-divider {
@@ -33,6 +38,17 @@
         .navbar-nav {
             .nav-link {
                 padding-left: 16px;
+                font-weight: 300;
+                opacity: .5;
+                &:hover {
+                    font-weight: 500;
+                    opacity: 1;
+                    // background-color: aquamarine;
+                }
+            }
+            .menu-item + .dropdown-divider {
+                // background-color: aquamarine;
+                // color: red;
             }
         }
         
