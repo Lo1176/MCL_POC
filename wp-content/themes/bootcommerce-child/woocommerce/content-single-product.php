@@ -39,7 +39,7 @@ if (post_password_required()) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
 <!-- <h2 class="text-danger">"content-single-product.php"</h2> -->
 
-<!-- <div class="btn btn-danger"><?php #do_shortcode('[ti_wishlist_products_counter]'); ?> </div> -->
+<!-- <div class=""><?php #echo do_shortcode('[ti_wishlists_addtowishlist]'); ?> </div> -->
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.

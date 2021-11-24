@@ -71,6 +71,9 @@
                                 <?php endif; ?>
                             </div>
 
+                            <!-- wishlist Toggler -->
+                            <div class=""><?php echo do_shortcode('[ti_wishlist_products_counter]'); ?> </div>
+                            
                             <!-- User Toggler -->
                             <button class="btn btn-outline-primary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
                                 <i class="fas fa-user"></i>
@@ -140,6 +143,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- offcanvas user -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-user">

@@ -8,7 +8,8 @@
 
 
 // Woocommerce Templates
-function mytheme_add_woocommerce_support() {
+function mytheme_add_woocommerce_support()
+{
   add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
@@ -18,7 +19,8 @@ add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 // Woocommerce Lightbox
 add_action('after_setup_theme', 'bootscore');
 
-function bootscore() {
+function bootscore()
+{
   add_theme_support('wc-product-gallery-zoom');
   add_theme_support('wc-product-gallery-lightbox');
   add_theme_support('wc-product-gallery-slider');
@@ -27,7 +29,8 @@ function bootscore() {
 
 
 // Register Ajax Cart
-function register_ajax_cart() {
+function register_ajax_cart()
+{
   require_once('ajax-cart/ajax-add-to-cart.php');
 }
 add_action('after_setup_theme', 'register_ajax_cart');
@@ -35,7 +38,8 @@ add_action('after_setup_theme', 'register_ajax_cart');
 
 
 //Scripts and Styles
-function wc_scripts() {
+function wc_scripts()
+{
 
   // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes. 
   $modificated_WooCommercestyleCss = date('YmdHi', filemtime(get_template_directory() . '/woocommerce/css/woocommerce-style.css'));
@@ -57,7 +61,8 @@ add_action('wp_enqueue_scripts', 'wc_scripts');
 
 // Minicart Header
 if (!function_exists('bs_mini_cart')) :
-  function bs_mini_cart($fragments) {
+  function bs_mini_cart($fragments)
+  {
 
     ob_start();
     $count = WC()->cart->cart_contents_count; ?>
@@ -81,7 +86,8 @@ endif;
 // WooCommerce Breadcrumb
 if (!function_exists('bs_woocommerce_breadcrumbs')) :
   add_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs');
-  function bs_woocommerce_breadcrumbs() {
+  function bs_woocommerce_breadcrumbs()
+  {
     return array(
       'delimiter'   => ' &nbsp;&#47;&nbsp; ',
       'wrap_before' => '<nav class="breadcrumb mb-4 mt-2 bg-light py-2 px-3 small rounded" itemprop="breadcrumb">',
@@ -98,7 +104,8 @@ endif;
 // Optional Telephone
 if (!function_exists('evolution_phone_no_pflicht')) :
 
-  function evolution_phone_no_pflicht($address_fields) {
+  function evolution_phone_no_pflicht($address_fields)
+  {
     $address_fields['billing_phone']['required'] = false;
     return $address_fields;
   }
@@ -108,7 +115,8 @@ endif;
 
 
 // Bootstrap Billing forms
-function iap_wc_bootstrap_form_field_args($args, $key, $value) {
+function iap_wc_bootstrap_form_field_args($args, $key, $value)
+{
 
   $args['input_class'][] = 'form-control';
   return $args;
@@ -130,7 +138,8 @@ remove_action('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
 // Remove CSS and/or JS for Select2 used by WooCommerce, see https://gist.github.com/Willem-Siebe/c6d798ccba249d5bf080.
 add_action('wp_enqueue_scripts', 'wsis_dequeue_stylesandscripts_select2', 100);
 
-function wsis_dequeue_stylesandscripts_select2() {
+function wsis_dequeue_stylesandscripts_select2()
+{
   if (class_exists('woocommerce')) {
     wp_dequeue_style('selectWoo');
     wp_deregister_style('selectWoo');
@@ -146,10 +155,12 @@ function wsis_dequeue_stylesandscripts_select2() {
 remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
 remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20);
 
-function my_woocommerce_widget_shopping_cart_button_view_cart() {
+function my_woocommerce_widget_shopping_cart_button_view_cart()
+{
   echo '<a href="' . esc_url(wc_get_cart_url()) . '" class="btn btn-outline-primary d-block mb-2">' . esc_html__('View cart', 'woocommerce') . '</a>';
 }
-function my_woocommerce_widget_shopping_cart_proceed_to_checkout() {
+function my_woocommerce_widget_shopping_cart_proceed_to_checkout()
+{
   echo '<a href="' . esc_url(wc_get_checkout_url()) . '" class="btn btn-primary d-block">' . esc_html__('Checkout', 'woocommerce') . '</a>';
 }
 add_action('woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_button_view_cart', 10);
@@ -161,7 +172,8 @@ add_action('woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_sh
 remove_action('woocommerce_cart_is_empty', 'wc_empty_cart_message', 10);
 add_action('woocommerce_cart_is_empty', 'custom_empty_cart_message', 10);
 
-function custom_empty_cart_message() {
+function custom_empty_cart_message()
+{
   $html  = '<div class="cart-empty alert alert-info">';
   $html .= wp_kses_post(apply_filters('wc_empty_cart_message', __('Your cart is currently empty.', 'woocommerce')));
   echo $html . '</div>';
@@ -172,7 +184,8 @@ function custom_empty_cart_message() {
 // Add card-img-top class to product loop
 remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 add_action('woocommerce_before_shop_loop_item_title', 'custom_loop_product_thumbnail', 10);
-function custom_loop_product_thumbnail() {
+function custom_loop_product_thumbnail()
+{
   global $product;
   $size = 'woocommerce_thumbnail';
   $code = 'class=card-img-top';
