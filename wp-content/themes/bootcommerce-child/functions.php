@@ -69,7 +69,7 @@ function bs_mini_cart($fragments)
   $count = WC()->cart->cart_contents_count; ?>
   <span class="cart-content">
     <?php if ($count > 0) { ?>
-      <span class="cart-content-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><?php echo esc_html($count); ?></span><span class="cart-total ms-1 d-none d-md-inline"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
+      <span class="cart-content-count position-absolute start-100 translate-middle badge rounded-pill bg-danger"><?php echo esc_html($count); ?></span><span class="cart-total ms-1 d-none d-md-inline"><?php #echo WC()->cart->get_cart_subtotal(); ?></span>
     <?php } ?>
   </span>
 
@@ -188,11 +188,13 @@ function product_additional_3D_button()
 function custom_3D_button()
 {
   global $product;
+  $theme_link = get_stylesheet_directory_uri();
+  $svg_link = "/img/logo/logo_3d.svg";
   $link = "/www/MCL_POC/wp-json/3D/v1/product/" . $product->get_id();
   // $text = __("PERSONNALISER mon modèle", "woocommerce");
   $text1 = nl2br(__("PERSONNALISER\n", "woocommerce"));
   $text2 = __("mon modèle", "woocommerce");
-  echo '<div id="customize3d"><i class="fab fa-reacteurope"></i><button class="btn btn3d my-1" style="margin-bottom:14px;" data-url="' . $link . '"><strong>' . $text1 . '</strong>' . $text2 . '</button></div>';
+  echo '<div id="customize3d"><img src="' . $theme_link . $svg_link . '" alt="3D logo"/><button class="btn btn3d my-1" style="margin-bottom:14px;" data-url="' . $link . '"><strong>' . $text1 . '</strong>' . $text2 . '</button></div>';
 }
 
 // function btn test API
