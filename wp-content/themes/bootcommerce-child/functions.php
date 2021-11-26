@@ -269,8 +269,10 @@ function my_3D_func($data)
 }
 /** test API END */
 
-//Hide Price Range for WooCommerce Variable Products
-function wc_varb_price_range($wcv_price, $product)
+/** 
+ * Hide Price Range for WooCommerce Variable Products
+ */
+function mcl_wc_varb_price_range($wcv_price, $product)
 {
 
   // $prefix = sprintf('%s: ', __('From', 'wcvp_range'));
@@ -290,12 +292,12 @@ function wc_varb_price_range($wcv_price, $product)
     sprintf('%s%s', $prefix, $wcv_price);
 }
 
-add_filter('woocommerce_variable_sale_price_html', 'wc_varb_price_range', 10, 2);
-add_filter('woocommerce_variable_price_html', 'wc_varb_price_range', 10, 2);
+add_filter('woocommerce_variable_sale_price_html', 'mcl_wc_varb_price_range', 10, 2);
+add_filter('woocommerce_variable_price_html', 'mcl_wc_varb_price_range', 10, 2);
 
 //Hide "From:$X" 
-add_filter('woocommerce_get_price_html', 'lw_hide_variation_price', 10, 2);
-function lw_hide_variation_price($v_price, $v_product)
+add_filter('woocommerce_get_price_html', 'mcl_hide_variation_price', 10, 2);
+function mcl_hide_variation_price($v_price, $v_product)
 {
   $v_product_types = array('variable');
   if (in_array($v_product->get_type(), $v_product_types)) {
@@ -304,6 +306,7 @@ function lw_hide_variation_price($v_price, $v_product)
   // return regular price 
   return $v_price;
 }
+/* Hide Price Range for WooCommerce Variable Products END */
 
 ##### end - CONTENT-SINGLE-PRODUCT #####
 
