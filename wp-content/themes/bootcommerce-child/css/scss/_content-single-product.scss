@@ -1,5 +1,5 @@
 .entry-summary {
-    text-align: left;
+    // text-align: left;
     padding-right: 6rem;
         .price {
             text-align: right;
@@ -24,7 +24,10 @@
     margin-bottom: 0;
 }
 
-
+.woocommerce-tabs {
+    // text-align: start;
+    padding: 2rem;
+}
 
 // input::-webkit-outer-spin-button,
 

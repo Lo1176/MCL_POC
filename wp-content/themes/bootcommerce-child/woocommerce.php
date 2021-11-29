@@ -51,7 +51,7 @@ get_header();
       </div>
       <div class="row">
 
-        <div class="text-center col">
+        <div class="col">
           <?php woocommerce_content(); ?>
         </div>
         <!-- sidebar -->
