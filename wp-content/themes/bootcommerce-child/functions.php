@@ -47,13 +47,13 @@ add_action('init', 'mcl_custom_new_menu');
  * add wishlist buton
  */
 // do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
-function whishlist_icon() {
+function mcl_whishlist_icon() {
   echo do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
 };
 // add wish-icon on content-single-product.php
-add_action('woocommerce_single_product_summary', 'whishlist_icon', 11);
+add_action('woocommerce_single_product_summary', 'mcl_whishlist_icon', 11);
 // add wish-icon on content-product.php
-add_action('woocommerce_before_shop_loop_item_title', 'whishlist_icon', 10);
+add_action('woocommerce_before_shop_loop_item_title', 'mcl_whishlist_icon', 10);
 
 
 /**
