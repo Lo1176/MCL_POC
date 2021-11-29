@@ -46,12 +46,12 @@ get_header();
 
       <!-- Breadcrumb -->
       <div class="text-danger container">
-        <?php #woocommerce_breadcrumb(); ?>
+        <?php woocommerce_breadcrumb(); ?>
 
       </div>
       <div class="row">
 
-        <div class="text-center col">
+        <div class="col">
           <?php woocommerce_content(); ?>
         </div>
         <!-- sidebar -->

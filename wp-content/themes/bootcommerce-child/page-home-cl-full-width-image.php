@@ -72,7 +72,7 @@ get_header();
               </a>
             </div>
             <div class="card m-2" style="width: 18rem;">
-              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/meilleurs-sommeliers-du-monde/'); ?>">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/meilleur-sommelier/'); ?>">
                 <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CLME3033Enrico-Bernardo--scaled.jpeg'); ?>" alt="Produc image cap">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Meilleur Sommelier</strong></h5>

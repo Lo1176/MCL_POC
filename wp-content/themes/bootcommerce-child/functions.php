@@ -47,7 +47,14 @@ add_action('init', 'mcl_custom_new_menu');
  * add wishlist buton
  */
 // do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
-// add_action('woocommerce_single_product_summary', 'ti_wishlists_addtowishlist', 10);
+function mcl_whishlist_icon() {
+  echo do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
+};
+// add wish-icon on content-single-product.php
+add_action('woocommerce_single_product_summary', 'mcl_whishlist_icon', 11);
+// add wish-icon on content-product.php
+add_action('woocommerce_before_shop_loop_item_title', 'mcl_whishlist_icon', 10);
+
 
 /**
  * remove woocommerce-result-count
@@ -69,7 +76,7 @@ function bs_mini_cart($fragments)
   $count = WC()->cart->cart_contents_count; ?>
   <span class="cart-content">
     <?php if ($count > 0) { ?>
-      <span class="cart-content-count position-absolute start-100 translate-middle badge rounded-pill bg-danger"><?php echo esc_html($count); ?></span><span class="cart-total ms-1 d-none d-md-inline"><?php #echo WC()->cart->get_cart_subtotal(); ?></span>
+      <span class="cart-content-count position-absolute start-100 translate-middle badge rounded-pill bg-danger"><?php echo esc_html($count); ?></span><span class="cart-total ms-1 d-none d-md-inline"><?php echo WC()->cart->get_cart_subtotal(); ?></span>
     <?php } ?>
   </span>
 
@@ -267,6 +274,47 @@ function my_3D_func($data)
   );
   return $api3dResponse;
 }
+/** test API END */
+
+/** 
+ * Hide Price Range for WooCommerce Variable Products
+ */
+function mcl_wc_varb_price_range($wcv_price, $product)
+{
+
+  // $prefix = sprintf('%s: ', __('From', 'wcvp_range'));
+  $prefix = sprintf('%s:', __('From', 'wcvp_range'));
+
+  $wcv_reg_min_price = $product->get_variation_regular_price('min', true);
+  $wcv_min_sale_price    = $product->get_variation_sale_price('min', true);
+  $wcv_max_price = $product->get_variation_price('max', true);
+  $wcv_min_price = $product->get_variation_price('min', true);
+
+  $wcv_price = ($wcv_min_sale_price == $wcv_reg_min_price) ?
+    wc_price($wcv_reg_min_price) :
+    '<del>' . wc_price($wcv_reg_min_price) . '</del>' . '<ins>' . wc_price($wcv_min_sale_price) . '</ins>';
+
+  return ($wcv_min_price == $wcv_max_price) ?
+    $wcv_price :
+    sprintf('%s%s', $prefix, $wcv_price);
+}
+
+add_filter('woocommerce_variable_sale_price_html', 'mcl_wc_varb_price_range', 10, 2);
+add_filter('woocommerce_variable_price_html', 'mcl_wc_varb_price_range', 10, 2);
+
+//Hide "From:$X" 
+add_filter('woocommerce_get_price_html', 'mcl_hide_variation_price', 10, 2);
+function mcl_hide_variation_price($v_price, $v_product)
+{
+  $v_product_types = array('variable');
+  if (in_array($v_product->get_type(), $v_product_types)) {
+    return '';
+  }
+  // return regular price 
+  return $v_price;
+}
+/* Hide Price Range for WooCommerce Variable Products END */
+
 ##### end - CONTENT-SINGLE-PRODUCT #####
 
 

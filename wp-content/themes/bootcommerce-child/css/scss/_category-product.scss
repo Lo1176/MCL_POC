@@ -4,26 +4,24 @@
   object-fit: none;
 }
 
-.term-description {
-    margin: 0 12vw;
-    padding: 0 4px;
-}
-
 .category-products {
     margin: 0 24px;
 }
 
+// title
 .category-product-title {
+    text-align: center;
         h1 {
             text-transform: uppercase;
             font-weight: 300;
         }
-        h1::first-word {
-            // font-weight: 700;
-            color: $red;
-            font-size: 48px;
+}
 
-        }
+// description
+.term-description {
+    text-align: center;
+    margin: 0 12vw;
+    padding: 0 4px;
 }
 
 // changed the css of the last word with ".last-word" or "h1 > span:last-child"
