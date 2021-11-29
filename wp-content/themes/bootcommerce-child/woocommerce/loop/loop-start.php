@@ -21,5 +21,5 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<div class="d-flex category-products flex-wrap">
+<div class="d-sm-flex category-products flex-wrap">
 	<!-- End in loop-end.php -->
