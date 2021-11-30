@@ -25,7 +25,8 @@ wp_enqueue_script('tinvwl');
 	?>
 	<form action="<?php echo esc_url($form_url); ?>" method="post" autocomplete="off">
 		<?php do_action('tinvwl_before_wishlist_table', $wishlist); ?>
-		<table class="tinvwl-table-manage-list">
+		<table class="table tinvwl-table-manage-list">
+			<!-- table -->
 			<thead>
 				<tr>
 					<?php if (isset($wishlist_table['colm_checkbox']) && $wishlist_table['colm_checkbox']) { ?>
@@ -50,9 +51,8 @@ wp_enqueue_script('tinvwl');
 					<?php } ?>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="table-body-wishlist">
 				<?php do_action('tinvwl_wishlist_contents_before'); ?>
-
 				<?php
 
 				global $product, $post;
@@ -79,6 +79,7 @@ wp_enqueue_script('tinvwl');
 				?>
 						<tr class="<?php echo esc_attr(apply_filters('tinvwl_wishlist_item_class', 'wishlist_item', $wl_product, $product)); ?>">
 							<?php if (isset($wishlist_table['colm_checkbox']) && $wishlist_table['colm_checkbox']) { ?>
+								<!-- product-cb -->
 								<td class="product-cb">
 									<?php
 									echo apply_filters('tinvwl_wishlist_item_cb', sprintf( // WPCS: xss ok.
@@ -89,10 +90,13 @@ wp_enqueue_script('tinvwl');
 									?>
 								</td>
 							<?php } ?>
+
+							<!-- product-remove -->
 							<td class="product-remove">
 								<button type="submit" name="tinvwl-remove" value="<?php echo esc_attr($wl_product['ID']); ?>" title="<?php _e('Remove', 'ti-woocommerce-wishlist') ?>"><i class="ftinvwl ftinvwl-times"></i>
 								</button>
 							</td>
+							<!-- product-thumbnail -->
 							<td class="product-thumbnail">
 								<?php
 								$thumbnail = apply_filters('tinvwl_wishlist_item_thumbnail', $product->get_image(), $wl_product, $product);
@@ -104,6 +108,7 @@ wp_enqueue_script('tinvwl');
 								}
 								?>
 							</td>
+							<!-- product-name -->
 							<td class="product-name">
 								<?php
 								if (!$product->is_visible()) {
@@ -122,6 +127,8 @@ wp_enqueue_script('tinvwl');
 								?>
 							</td>
 							<?php if (isset($wishlist_table_row['colm_price']) && $wishlist_table_row['colm_price']) { ?>
+
+								<!-- product-price -->
 								<td class="product-price">
 									<?php
 									echo apply_filters('tinvwl_wishlist_item_price', $product->get_price_html(), $wl_product, $product); // WPCS: xss ok.
@@ -129,6 +136,7 @@ wp_enqueue_script('tinvwl');
 								</td>
 							<?php } ?>
 							<?php if (isset($wishlist_table_row['colm_date']) && $wishlist_table_row['colm_date']) { ?>
+								<!-- product-date -->
 								<td class="product-date">
 									<?php
 									echo apply_filters('tinvwl_wishlist_item_date', sprintf( // WPCS: xss ok.
@@ -140,6 +148,7 @@ wp_enqueue_script('tinvwl');
 								</td>
 							<?php } ?>
 							<?php if (isset($wishlist_table_row['colm_stock']) && $wishlist_table_row['colm_stock']) { ?>
+								<!-- product-stock -->
 								<td class="product-stock">
 									<?php
 									$availability = (array)$product->get_availability();
@@ -160,7 +169,7 @@ wp_enqueue_script('tinvwl');
 									<?php
 									if (apply_filters('tinvwl_wishlist_item_action_add_to_cart', $wishlist_table_row['add_to_cart'], $wl_product, $product)) {
 									?>
-										<button class="btn btn-outline-dark" name="tinvwl-add-to-cart" value="<?php echo esc_attr($wl_product['ID']); ?>" title="<?php echo esc_html(apply_filters('tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product)); ?>">
+										<button class="btn btn-dark" name="tinvwl-add-to-cart" value="<?php echo esc_attr($wl_product['ID']); ?>" title="<?php echo esc_html(apply_filters('tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product)); ?>">
 											<i class="fas fa-shopping-bag"></i>
 											<!-- <i class="ftinvwl ftinvwl-shopping-cart"></i> -->
 											<!--	<span

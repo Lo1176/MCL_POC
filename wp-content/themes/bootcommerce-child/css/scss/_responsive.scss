@@ -103,6 +103,47 @@
   .woocommerce div.product form.cart {
     // margin-bottom: 8px !important;
   }
+
+  // whishlist page
+  .product-cb, .product-date {
+    display: none !important;
+  }
+
+  #table-body-wishlist {
+      .wishlist_item {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+
+          .product-remove {
+            width: 20vw !important;
+    
+          }
+          .product-thumbnail {
+            width: 20vw !important;
+    
+          }
+          .product-name {
+            width: 40vw !important;
+    
+          }
+          .product-price {
+            width: 100vw !important;
+    
+          }
+          
+          .product-stock {
+            width: 100vw !important;
+    
+          }
+          .product-action {
+            // width: 20vw !important;
+    
+          }
+      }
+  }
   
 }
 /* Smartphone END */
