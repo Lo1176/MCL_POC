@@ -1,6 +1,7 @@
 #customize3d {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    text-align-last: end;
     color: $black;
         .btn3d {
             text-align: start;
@@ -22,6 +23,7 @@
     }
 .category-products #customize3d {
         justify-content: end;
+        width: 100%;
         // color: pink;
 
     }          
@@ -30,24 +32,34 @@
     
 }
 
-.stock-container {
+#stock-container {
   display: flex;
   justify-content: center;
     .box-stock {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid $black;
         width: 100%;
         height: 38px;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
+        border: 1px solid $black;
 
     }
 }
+// #stock-container {
+//     // border: 1px solid $black;
+//     .disabled {
+//         padding-left: 0;
+//             margin-bottom: 4px;
+//              width: 100%;
+//             height: 38px;
+//             opacity: 1;
+//         }
+// }
 .btn-inline {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
 }
 
 .available-on-backorder {
@@ -77,3 +89,6 @@
     font-weight: 300;
     padding: 0 12px;
 }
+.input-group-prepend ~ .input-text {
+        border: none !important;
+    }

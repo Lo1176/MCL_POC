@@ -153,7 +153,7 @@ function add_line_separator_after_excerpt_single_product()
 add_action('woocommerce_single_product_summary', 'mcl_add_div_btn_inline', 19);
 function mcl_add_div_btn_inline()
 {
-  echo '<div class="btn-inline">';
+  echo '<div class="btn-inline row">';
 };
 
 function mcl_add_div_product_result_count()
@@ -188,7 +188,7 @@ function product_additional_3D_button()
   }
   // For all other product types
   else {
-    add_action('woocommerce_single_product_summary', 'custom_3D_button', 21);
+    add_action('woocommerce_single_product_summary', 'custom_3D_button', 31);
   }
 }
 /** */
@@ -201,7 +201,7 @@ function custom_3D_button()
   // $text = __("PERSONNALISER mon modèle", "woocommerce");
   $text1 = nl2br(__("PERSONNALISER\n", "woocommerce"));
   $text2 = __("mon modèle", "woocommerce");
-  echo '<div id="customize3d"><img src="' . $theme_link . $svg_link . '" alt="3D logo"/><button class="btn btn3d my-1" style="margin-bottom:14px;" data-url="' . $link . '"><strong>' . $text1 . '</strong>' . $text2 . '</button></div>';
+  echo '<div id="customize3d" class="col-sm-12"><img src="' . $theme_link . $svg_link . '" alt="3D logo"/><button class="btn btn3d my-1" style="margin-bottom:14px;" data-url="' . $link . '"><strong>' . $text1 . '</strong>' . $text2 . '</button></div>';
 }
 
 // function btn test API
