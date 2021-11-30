@@ -60,8 +60,8 @@ jQuery(document).ready(function ($) {
   $('.single_add_to_cart_button, button.product_type_simple').prop('disabled', false);
 
   // fonction pour ajouter des flèches autour de Quantity
-  $(".btn-plus, .btn-minus").on("click", function (e) {
-    const isNegative = $(e.target).closest(".btn-minus").is(".btn-minus");
+  $("#btn-plus, #btn-minus").on("click", function (e) {
+    const isNegative = $(e.target).closest("#btn-minus").is("#btn-minus");
     const input = $(e.target).closest(".input-group").find("input");
     if (input.is("input")) {
       input[0][isNegative ? "stepDown" : "stepUp"]();

@@ -33,14 +33,15 @@ if ($max_value && $min_value === $max_value) {
     <label class="screen-reader-text" for="<?php echo esc_attr($input_id); ?>"><?php echo esc_attr($label); ?></label>
     <div class="input-group inline-group">
       <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary btn-minus">
-          <i class="fas fa-angle-left"></i>
+        <button id="btn-minus" class="btn btn-outline-primary">
+          < <!-- <i class="fas fa-angle-left"></i> -->
         </button>
       </div>
       <input type="number" id="<?php echo esc_attr($input_id); ?>" class="input-text qty text form-control ms-auto ms-lg-0" step="<?php echo esc_attr($step); ?>" min="<?php echo esc_attr($min_value); ?>" max="<?php echo esc_attr(0 < $max_value ? $max_value : ''); ?>" name="<?php echo esc_attr($input_name); ?>" value="<?php echo esc_attr($input_value); ?>" title="<?php echo esc_attr_x('Qty', 'Product quantity input tooltip', 'woocommerce'); ?>" size="4" placeholder="<?php echo esc_attr($placeholder); ?>" inputmode="<?php echo esc_attr($inputmode); ?>" />
       <div class="input-group-append">
-        <button class="btn btn-outline-secondary btn-plus">
-          <i class="fas fa-angle-right"></i>
+        <button id="btn-plus" class="btn btn-outline-primary">
+          >
+          <!-- <i class="fas fa-angle-right"></i> -->
         </button>
       </div>
     </div>
