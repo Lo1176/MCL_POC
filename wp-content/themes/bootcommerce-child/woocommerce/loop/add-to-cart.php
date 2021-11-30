@@ -29,7 +29,7 @@ echo '<div class="row">';
 echo apply_filters(
   'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
   sprintf(
-    '<div class="col-sm add-to-cart-container mt-auto"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-primary d-block %s" %s> %s</a></div>',
+    '<div class="col-sm add-to-cart-container"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-primary d-block %s" %s> %s</a></div>',
     esc_url($product->add_to_cart_url()),
     esc_attr(isset($args['quantity']) ? $args['quantity'] : 1),
     $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
