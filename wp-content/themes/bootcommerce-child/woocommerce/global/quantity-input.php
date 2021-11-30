@@ -31,7 +31,7 @@ if ($max_value && $min_value === $max_value) {
   <div class="quantity">
     <?php do_action('woocommerce_before_quantity_input_field'); ?>
     <label class="screen-reader-text" for="<?php echo esc_attr($input_id); ?>"><?php echo esc_attr($label); ?></label>
-    <div class="input-group inline-group">
+    <div class="d-flex inline-group">
       <div class="input-group-prepend">
         <button id="btn-minus" class="btn btn-outline-primary">
           < <!-- <i class="fas fa-angle-left"></i> -->

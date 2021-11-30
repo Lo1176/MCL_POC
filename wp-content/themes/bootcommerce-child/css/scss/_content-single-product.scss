@@ -28,30 +28,3 @@
     // text-align: start;
     padding: 2rem;
 }
-
-
-// show arrows when overed 
-// input[type=number]::-webkit-outer-spin-button:hover {  
-//    opacity: 1;
-// }
-
-// arrows box
-.inline-group {
-  max-width: 9rem;
-  padding: .5rem;
-}
-
-.inline-group .form-control {
-  text-align: right;
-}
-
-.form-control[type="number"]::-webkit-inner-spin-button,
-.form-control[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-#btn-minus, #btn-plus {
-    font-size: 32px;
-    font-weight: 300;
-}
