@@ -32,9 +32,11 @@
     
 }
 
+// stock display
 .entry-summary #stock-container {
     margin-left: 50%;
 }
+
 #stock-container {
   display: flex;
   justify-content: center;
@@ -71,7 +73,14 @@
     line-height: 100%;
 }
 
-// arrows box
+.in-stock {
+    font-size: .9rem !important;
+    line-height: 100%;
+}
+// stock display END //
+
+
+// arrows arround quantity
 .inline-group {
   max-width: 9rem;
   padding: .5rem;
@@ -95,3 +104,4 @@
 .input-group-prepend ~ .input-text {
         border: none !important;
     }
+// arrows arround quantity END //
