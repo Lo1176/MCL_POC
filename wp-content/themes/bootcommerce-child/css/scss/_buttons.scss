@@ -79,29 +79,34 @@
 }
 // stock display END //
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+
+}
 
 // arrows arround quantity
-.inline-group {
-  max-width: 9rem;
-  padding: .5rem;
-}
+// .inline-group {
+//   max-width: 9rem;
+//   padding: .5rem;
+// }
 
-.inline-group .form-control {
-  text-align: right;
-}
+// .inline-group .form-control {
+//   text-align: right;
+// }
 
-.form-control[type="number"]::-webkit-inner-spin-button,
-.form-control[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+// .form-control[type="number"]::-webkit-inner-spin-button,
+// .form-control[type="number"]::-webkit-outer-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
 
-#btn-minus, #btn-plus {
-    font-size: 24px;
-    font-weight: 300;
-    padding: 0 12px;
-}
-.input-group-prepend ~ .input-text {
-        border: none !important;
-    }
+// #btn-minus, #btn-plus {
+//     font-size: 24px;
+//     font-weight: 300;
+//     padding: 0 12px;
+// }
+// .input-group-prepend ~ .input-text {
+//         border: none !important;
+//     }
 // arrows arround quantity END //
