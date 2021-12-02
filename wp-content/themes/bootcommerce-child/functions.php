@@ -13,6 +13,7 @@ function bootscore_child_enqueue_styles()
 
   // custom.js
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
+ 
 }
 
 // WooCommerce
