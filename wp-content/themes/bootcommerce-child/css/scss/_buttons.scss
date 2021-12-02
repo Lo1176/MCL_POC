@@ -89,7 +89,7 @@
 
 .quantity input.qty {
     border: none;
-    width: auto !important;
+    width: 4rem !important;
     appearance: textfield;
     -webkit-appearance: none;
     -moz-appearance: textfield;
@@ -101,8 +101,9 @@
 }
 
 .woocommerce-cart-form__cart-item.cart_item {
-    .product-quantity {
-        width: 70%;
+    .product-quantity .quantity {
+        max-width: 70%;
+        // max-width: 50%;
     
 }
     
