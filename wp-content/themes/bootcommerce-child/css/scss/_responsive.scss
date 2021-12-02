@@ -104,6 +104,16 @@
     // margin-bottom: 8px !important;
   }
 
+  // btn quantity
+  .woocommerce-cart-form__cart-item.cart_item {
+        .product-quantity {
+          width: 100%;
+            .quantity {
+              margin-left: 5rem;
+            }
+        }
+  }
+
   // whishlist page
   .product-cb, .product-date {
     display: none !important;
