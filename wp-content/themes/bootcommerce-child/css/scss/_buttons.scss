@@ -1,141 +1,87 @@
 #customize3d {
-    // display: flex;
-    // align-items: center;
-    text-align-last: end;
-    color: $black;
-        .btn3d {
-            text-align: start;
-                padding-right: 0;
-                &:last-child {
-                    font-weight: 300;
-                    // color: $mg;
-                }
-                strong:first-child {
-                    // color: $red;
-                    font-weight: 700;
-                }
-
-        }
-        .fab {
-            font-size: 48px;
-        }
-        
+  text-align-last: end;
+  color: $black;
+  .btn3d {
+    text-align: start;
+    padding-right: 0;
+    &:last-child {
+      font-weight: 300;
+      // color: $mg;
     }
+    strong:first-child {
+      // color: $red;
+      font-weight: 700;
+    }
+  }
+  .fab {
+    font-size: 48px;
+  }
+}
 .category-products #customize3d {
-        justify-content: end;
-        width: 100%;
-        // color: pink;
-
-    }          
+  justify-content: end;
+  width: 100%;
+  // color: pink;
+}
 .btn {
-    border-radius: 1px !important;
-    
+  border-radius: 1px !important;
 }
 
 // stock display
 .entry-summary #stock-container {
-    margin-left: 50%;
+  margin-left: 50%;
 }
 
 #stock-container {
   display: flex;
   justify-content: center;
-    .box-stock {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 38px;
-        margin-bottom: 0.5rem;
-        border: 1px solid $black;
-
-    }
-}
-// #stock-container {
-//     // border: 1px solid $black;
-//     .disabled {
-//         padding-left: 0;
-//             margin-bottom: 4px;
-//              width: 100%;
-//             height: 38px;
-//             opacity: 1;
-//         }
-// }
-.btn-inline {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
+  .box-stock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 0.5rem;
+    border: 1px solid $black;
+  }
 }
 
 .available-on-backorder {
-    color: $red !important;
-    font-size: .9rem !important;
-    line-height: 100%;
+  color: $red !important;
+  font-size: 0.9rem !important;
+  line-height: 100%;
 }
 
 .in-stock {
-    font-size: .9rem !important;
-    line-height: 100%;
+  font-size: 0.9rem !important;
+  line-height: 100%;
 }
 // stock display END //
-
 
 /* Hide browser arrows in quantity input */
 .quantity input::-webkit-outer-spin-button,
 .quantity input::-webkit-inner-spin-button {
-    display: none;
-    margin: 0;
+  display: none;
+  margin: 0;
 }
 
 .quantity input.qty {
-    border: none;
-    width: 4rem !important;
-    appearance: textfield;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
+  border: none;
+  width: 4rem !important;
+  appearance: textfield;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
-.plus, .minus {
-    border: none !important;
-    background: none !important;
+.plus,
+.minus {
+  border: none !important;
+  background: none !important;
 }
 
 .woocommerce-cart-form__cart-item.cart_item {
-    .product-quantity .quantity {
-        max-width: 70%;
-        // max-width: 50%;
-    
+  .product-quantity .quantity {
+    max-width: 70%;
+    // max-width: 50%;
+  }
 }
-    
-}
-// input[type=number]::-webkit-inner-spin-button,
-// input[type=number]::-webkit-outer-spin-button {  
-//    opacity: 1;
-
-// }
-
-// arrows arround quantity
-// .inline-group {
-//   max-width: 9rem;
-//   padding: .5rem;
-// }
-
-// .inline-group .form-control {
-//   text-align: right;
-// }
-
-// .form-control[type="number"]::-webkit-inner-spin-button,
-// .form-control[type="number"]::-webkit-outer-spin-button {
-//   -webkit-appearance: none;
-//   margin: 0;
-// }
-
-// #btn-minus, #btn-plus {
-//     font-size: 24px;
-//     font-weight: 300;
-//     padding: 0 12px;
-// }
-// .input-group-prepend ~ .input-text {
-//         border: none !important;
-//     }
-// arrows arround quantity END //
+/* Hide browser arrows in quantity input END **/
