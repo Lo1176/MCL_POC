@@ -169,13 +169,8 @@ wp_enqueue_script('tinvwl');
 									<?php
 									if (apply_filters('tinvwl_wishlist_item_action_add_to_cart', $wishlist_table_row['add_to_cart'], $wl_product, $product)) {
 									?>
-										<button class="btn btn-dark" name="tinvwl-add-to-cart" value="<?php echo esc_attr($wl_product['ID']); ?>" title="<?php echo esc_html(apply_filters('tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product)); ?>">
+										<button class="btn btn-outline-dark" name="tinvwl-add-to-cart" value="<?php echo esc_attr($wl_product['ID']); ?>" title="<?php echo esc_html(apply_filters('tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product)); ?>">
 											<i class="fas fa-shopping-bag"></i>
-											<!-- <i class="ftinvwl ftinvwl-shopping-cart"></i> -->
-											<!--	<span
-											class="tinvwl-txt"><?php #echo wp_kses_post(apply_filters('tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product)); 
-																?>
-										</span> -->
 										</button>
 									<?php } elseif (apply_filters('tinvwl_wishlist_item_action_default_loop_button', $wishlist_table_row['add_to_cart'], $wl_product, $product)) {
 										woocommerce_template_loop_add_to_cart();

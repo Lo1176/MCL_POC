@@ -425,3 +425,12 @@ add_filter('upload_mimes', 'mcl_mime_types');
 //   }
 
 // }
+
+
+// change Return to shop URL
+add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
+
+function mcl_change_return_shop_url()
+{
+  return home_url();
+}
