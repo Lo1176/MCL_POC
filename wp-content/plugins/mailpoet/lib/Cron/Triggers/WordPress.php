@@ -5,6 +5,7 @@ namespace MailPoet\Cron\Triggers;
 if (!defined('ABSPATH')) exit;
 
 
+use MailPoet\Config\ServicesChecker;
 use MailPoet\Cron\CronHelper;
 use MailPoet\Cron\Workers\AuthorizedSendingEmailsCheck;
 use MailPoet\Cron\Workers\Beamer as BeamerWorker;
@@ -54,16 +55,21 @@ class WordPress {
   /** @var WPFunctions */
   private $wp;
 
+  /** @var ServicesChecker */
+  private $serviceChecker;
+
   public function __construct(
     CronHelper $cronHelper,
     MailPoet $mailpoetTrigger,
     SettingsController $settings,
+    ServicesChecker $serviceChecker,
     WPFunctions $wp
   ) {
     $this->mailpoetTrigger = $mailpoetTrigger;
     $this->settings = $settings;
     $this->wp = $wp;
     $this->cronHelper = $cronHelper;
+    $this->serviceChecker = $serviceChecker;
   }
 
   public function run() {
@@ -153,7 +159,7 @@ class WordPress {
       'status' => [ScheduledTask::STATUS_SCHEDULED],
     ]);
     // subscriber stats
-    $isAnyKeySpecified = Bridge::isMSSKeySpecified() || $premiumKeySpecified;
+    $isAnyKeyValid = $this->serviceChecker->getAnyValidKey();
     $statsReportDueTasks = $this->getTasksCount([
       'type' => SubscribersStatsReport::TASK_TYPE,
       'scheduled_in' => [self::SCHEDULED_IN_THE_PAST],
@@ -266,7 +272,7 @@ class WordPress {
     $bounceSyncActive = ($mpSendingEnabled && ($bounceDueTasks || !$bounceFutureTasks));
     $sendingServiceKeyCheckActive = ($mpSendingEnabled && ($msskeycheckDueTasks || !$msskeycheckFutureTasks));
     $premiumKeyCheckActive = ($premiumKeySpecified && ($premiumKeycheckDueTasks || !$premiumKeycheckFutureTasks));
-    $subscribersStatsReportActive = ($isAnyKeySpecified && ($statsReportDueTasks || !$statsReportFutureTasks));
+    $subscribersStatsReportActive = ($isAnyKeyValid && ($statsReportDueTasks || !$statsReportFutureTasks));
     $migrationActive = !$migrationDisabled && ($migrationDueTasks || (!$migrationCompletedTasks && !$migrationFutureTasks));
     $beamerActive = $beamerDueChecks || !$beamerFutureChecks;
 

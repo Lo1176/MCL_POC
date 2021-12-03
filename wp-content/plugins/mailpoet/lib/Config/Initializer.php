@@ -10,6 +10,7 @@ use MailPoet\AutomaticEmails\AutomaticEmails;
 use MailPoet\Cron\CronTrigger;
 use MailPoet\InvalidStateException;
 use MailPoet\PostEditorBlocks\PostEditorBlock;
+use MailPoet\PostEditorBlocks\WooCommerceBlocksIntegration;
 use MailPoet\Router;
 use MailPoet\Settings\SettingsController;
 use MailPoet\Util\ConflictResolver;
@@ -74,6 +75,9 @@ class Initializer {
   /** @var \MailPoet\PostEditorBlocks\PostEditorBlock */
   private $postEditorBlock;
 
+  /** @var \MailPoet\PostEditorBlocks\WooCommerceBlocksIntegration */
+  private $woocommerceBlocksIntegration;
+
   /** @var Localizer */
   private $localizer;
 
@@ -98,6 +102,7 @@ class Initializer {
     DatabaseInitializer $databaseInitializer,
     WCTransactionalEmails $wcTransactionalEmails,
     PostEditorBlock $postEditorBlock,
+    WooCommerceBlocksIntegration $woocommerceBlocksIntegration,
     WooCommerceHelper $wcHelper,
     Localizer $localizer,
     AssetsLoader $assetsLoader
@@ -118,6 +123,7 @@ class Initializer {
     $this->wcTransactionalEmails = $wcTransactionalEmails;
     $this->wcHelper = $wcHelper;
     $this->postEditorBlock = $postEditorBlock;
+    $this->woocommerceBlocksIntegration = $woocommerceBlocksIntegration;
     $this->localizer = $localizer;
     $this->assetsLoader = $assetsLoader;
   }
@@ -233,6 +239,7 @@ class Initializer {
 
       $this->setupPermanentNotices();
       $this->setupAutomaticEmails();
+      $this->setupWoocommerceBlocksIntegration();
       $this->postEditorBlock->init();
 
       WPFunctions::get()->doAction('mailpoet_initialized', MAILPOET_VERSION);
@@ -383,6 +390,14 @@ class Initializer {
     if ($wcEnabled && $optInEnabled) {
       $this->wcTransactionalEmails->overrideStylesForWooEmails();
       $this->wcTransactionalEmails->useTemplateForWoocommerceEmails();
+    }
+  }
+
+  private function setupWoocommerceBlocksIntegration() {
+    $wcEnabled = $this->wcHelper->isWooCommerceActive();
+    $wcBlocksEnabled = $this->wcHelper->isWooCommerceBlocksActive('6.3.0-dev');
+    if ($wcEnabled && $wcBlocksEnabled) {
+      $this->woocommerceBlocksIntegration->init();
     }
   }
 }
