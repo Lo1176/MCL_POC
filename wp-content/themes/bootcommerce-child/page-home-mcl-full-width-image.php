@@ -67,7 +67,7 @@ get_header();
           </div> <!-- .brand -->
 
           <div class="d-flex justify-content-center">
-            <h2 class="title-separation">Nos actualités</h2>
+            <h2 id="mcl-actuality" class="title-separation">Nos actualités</h2>
           </div>
 
 
