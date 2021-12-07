@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) {
+  
   // function to change the last word
   $(document).ready(function() {
       $("div h1").each(function (index, element) {

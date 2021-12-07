@@ -154,7 +154,13 @@ function get_taxonomy_hierarchy($post, $taxonomy)
 }
 add_shortcode('mcl-children2', 'get_taxonomy_hierarchy');
 
-
+/**
+ * Shortcode to get the title
+ */
+function mcl_get_the_page_title() {
+    return get_the_title();
+}
+add_shortcode('page-title', 'mcl_get_the_page_title');
 
 
 // //Warning
