@@ -368,6 +368,7 @@ function wpm_remove_sku($enabled)
 //     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 // }
 
+
 // ############ A VERIFIER CA NE SEMBLE PAS MARCHER ###############
 // Change number or products per row to 3
 
@@ -450,4 +451,27 @@ function bs_woocommerce_breadcrumbs()
 }
 add_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 11);
 // WooCommerce Breadcrumb End
+
+// Breadcrumb
+// if (!function_exists('the_breadcrumb')) :
+//   function the_breadcrumb()
+//   {
+//     if (!is_home()) {
+//       echo '<nav class="breadcrumb mb-4 mt-2 bg-light py-2 px-3 small rounded">';
+//       echo '<a href="' . home_url('/') . '">' . ('<i class="fas fa-home"></i>') . '</a><span class="divider">&nbsp;/&nbsp;</span>';
+//       if (is_category() || is_single()) {
+//         the_category(' <span class="divider">&nbsp;/&nbsp;</span> ');
+//         if (is_single()) {
+//           echo ' <span class="divider">&nbsp;/&nbsp;</span> ';
+//           the_title();
+//         }
+//       } elseif (is_page()) {
+//         echo the_title();
+//       }
+//       echo '</nav>';
+//     }
+//   }
+//   add_filter('breadcrumbs', 'breadcrumbs');
+// endif;
 // Breadcrumb END
+remove_filter('breadcrumbs', 'breadcrumbs');

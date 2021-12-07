@@ -12,7 +12,7 @@ get_header();  ?>
 
             <?php the_post(); ?>
             <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-            <header class="entry-header featured-full-width-img height-75 bg-dark text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
+            <header class="entry-header featured-full-width-img height-75 bg-dark text-light mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<?php echo $thumb['0']; ?>');">
                 <div class="container entry-header h-100 d-flex align-items-end pb-3">
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                 </div>
@@ -23,11 +23,13 @@ get_header();  ?>
                 <!-- Hook to add something nice -->
                 <?php bs_after_primary(); ?>
 
-                <?php the_breadcrumb(); ?>
+                <?php #the_breadcrumb(); 
+                ?>
 
                 <div class="entry-content">
 
-                    <?php bootscore_category_badge(); ?>
+                    <?php #bootscore_category_badge(); 
+                    ?>
 
                     <p class="entry-meta">
                         <small class="text-muted">
