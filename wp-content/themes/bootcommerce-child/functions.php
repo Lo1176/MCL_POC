@@ -434,6 +434,8 @@ add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 function mcl_change_return_shop_url()
 {
   return home_url();
+  // return wp_safe_redirect(home_url());
+  // exit;
 }
 
 // WooCommerce Breadcrumb custom
@@ -452,26 +454,49 @@ function bs_woocommerce_breadcrumbs()
 add_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 11);
 // WooCommerce Breadcrumb End
 
-// Breadcrumb
-// if (!function_exists('the_breadcrumb')) :
-//   function the_breadcrumb()
-//   {
-//     if (!is_home()) {
-//       echo '<nav class="breadcrumb mb-4 mt-2 bg-light py-2 px-3 small rounded">';
-//       echo '<a href="' . home_url('/') . '">' . ('<i class="fas fa-home"></i>') . '</a><span class="divider">&nbsp;/&nbsp;</span>';
-//       if (is_category() || is_single()) {
-//         the_category(' <span class="divider">&nbsp;/&nbsp;</span> ');
-//         if (is_single()) {
-//           echo ' <span class="divider">&nbsp;/&nbsp;</span> ';
-//           the_title();
-//         }
-//       } elseif (is_page()) {
-//         echo the_title();
-//       }
-//       echo '</nav>';
-//     }
-//   }
-//   add_filter('breadcrumbs', 'breadcrumbs');
-// endif;
-// Breadcrumb END
-remove_filter('breadcrumbs', 'breadcrumbs');
+
+
+// remove_filter('breadcrumbs', 'breadcrumbs');
+
+/**
+ * redirect ligne-w category to ligne-w home page
+ */
+function mcl_redirect_ligne_w() {
+  // find something to do
+  //
+  //
+}
+
+/**
+ * @snippet       Bulk (Dynamic) Pricing - WooCommerce
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 3.8
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+
+add_action('woocommerce_before_calculate_totals', 'bbloomer_quantity_based_pricing', 9999);
+
+function bbloomer_quantity_based_pricing($cart)
+{
+
+  if (is_admin() && !defined('DOING_AJAX')) return;
+
+  if (did_action('woocommerce_before_calculate_totals') >= 2) return;
+
+  // Define discount rules and thresholds
+  $threshold1 = 100; // Change price if items > 100
+  $discount1 = 0.05; // Reduce unit price by 5%
+  $threshold2 = 1000; // Change price if items > 1000
+  $discount2 = 0.1; // Reduce unit price by 10%
+
+  foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+    if ($cart_item['quantity'] >= $threshold1 && $cart_item['quantity'] < $threshold2) {
+      $price = round($cart_item['data']->get_price() * (1 - $discount1), 2);
+      $cart_item['data']->set_price($price);
+    } elseif ($cart_item['quantity'] >= $threshold2) {
+      $price = round($cart_item['data']->get_price() * (1 - $discount2), 2);
+      $cart_item['data']->set_price($price);
+    }
+  }
+}
