@@ -41,12 +41,18 @@
 
   // nav
   #nav-main .container-fluid {
-    justify-content: flex-end;
+    // justify-content: flex-end;
+    justify-content: space-around;
   }
   .navbar-brand {
     .logo {
       height: 42px;
     }
+  }
+
+  //burger small devise
+  .fas.fa-bars {
+    margin-left: 24px;
   }
 
   // cat-product
@@ -155,6 +161,11 @@
       }
   }
   
+  // account
+  .woocommerce .woocommerce-MyAccount-navigation {
+    display: none;
+  }
+
   // actuality id bg-dark and text-white
   // #mcl-actuality {
   //   color: $white;
