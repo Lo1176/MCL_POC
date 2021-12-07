@@ -434,3 +434,20 @@ function mcl_change_return_shop_url()
 {
   return home_url();
 }
+
+// WooCommerce Breadcrumb custom
+remove_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 10);
+function bs_woocommerce_breadcrumbs()
+{
+  return array(
+    'delimiter'   => ' &nbsp;&#47;&nbsp; ',
+    'wrap_before' => '<nav class="breadcrumb mb-4 mt-2 py-2 px-3 small" itemprop="breadcrumb">',
+    'wrap_after'  => '</nav>',
+    'before'      => '',
+    'after'       => '',
+    'home'        => _x('Home', 'breadcrumb', 'woocommerce'),
+  );
+}
+add_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 11);
+// WooCommerce Breadcrumb End
+// Breadcrumb END
