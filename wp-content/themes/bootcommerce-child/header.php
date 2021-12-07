@@ -80,7 +80,7 @@
                             </button>
 
                             <!-- Mini Cart Toggler -->
-                            <button class="btn btn-outline-primary ms-1 ms-md-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
+                            <button class="btn btn-outline-primary ms-2 mx-md-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
                                 <i class="fas fa-shopping-bag"></i>
                                 <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
                                     $count = WC()->cart->cart_contents_count;
