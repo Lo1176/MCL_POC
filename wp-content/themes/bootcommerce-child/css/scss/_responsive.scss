@@ -129,6 +129,12 @@
   .product-cb, .product-date {
     display: none !important;
   }
+  .tinvwl-input-group.tinvwl-no-full {
+    display: none;
+  }
+  .tinvwl-to-right.look_in .button:first-child {
+    display: none;
+  }
 
   #table-body-wishlist {
       .wishlist_item {
