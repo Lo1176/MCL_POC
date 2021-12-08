@@ -115,7 +115,12 @@
         .product-quantity {
           width: 100%;
             .quantity {
-              margin-left: 5rem;
+              // margin-left: 5rem;
+              margin-left: auto;
+              max-width: 50%;
+                .qty_button.plus {
+                  padding-right: 0.25rem;
+                }
             }
         }
   }
