@@ -448,7 +448,10 @@ function mcl_change_return_shop_url()
 // {
 //   return wc_get_page_permalink('shop'); // Change link
 // }
-// WooCommerce Breadcrumb custom
+
+/**
+ * WooCommerce Breadcrumb custom
+ */
 remove_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 10);
 function bs_woocommerce_breadcrumbs()
 {
@@ -463,10 +466,6 @@ function bs_woocommerce_breadcrumbs()
 }
 add_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 11);
 // WooCommerce Breadcrumb End
-
-
-
-// remove_filter('breadcrumbs', 'breadcrumbs');
 
 /**
  * redirect ligne-w category to ligne-w home page
