@@ -380,7 +380,9 @@ if (!function_exists('loop_columns')) {
   }
 }
 
-/** content-product */
+/** 
+ * content-product
+ */
 // define the woocommerce_before_shop_loop_item_title callback 
 function action_woocommerce_before_shop_loop_item()
 {
@@ -395,12 +397,10 @@ add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before
 //   return true || false; // depending on your condition
 // }
 
-/* END content-product **/
+/* content-product END */
 
 // Change number of products that are displayed per page (shop page)
-
 add_filter('loop_shop_per_page', 'new_loop_shop_per_page', 20);
-
 function new_loop_shop_per_page($cols)
 {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
@@ -415,8 +415,9 @@ function mcl_mime_types($mimes)
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
-add_filter('upload_mimes', 'mcl_mime_types');
 /* rajouter <?xml version="1.0" encoding="utf-8"?> au début du svg */
+add_filter('upload_mimes', 'mcl_mime_types');
+
 
 // Verifier si la page est parent/child/grandchild en utilisant le slug
 // function is_tree( $page_id, $use_slug = false ) {
@@ -434,10 +435,19 @@ add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 function mcl_change_return_shop_url()
 {
   return home_url();
-  // return wp_safe_redirect(home_url());
+  // return wp_safe_redirect(home_url(), 302);
   // exit;
 }
 
+/**
+ * WooCommerce
+ * Change continue shopping URL
+ */
+// add_filter('woocommerce_continue_shopping_redirect', 'st_change_continue_shopping');
+// function st_change_continue_shopping()
+// {
+//   return wc_get_page_permalink('shop'); // Change link
+// }
 // WooCommerce Breadcrumb custom
 remove_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 10);
 function bs_woocommerce_breadcrumbs()
