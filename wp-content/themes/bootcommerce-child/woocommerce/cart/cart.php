@@ -101,7 +101,7 @@ do_action('woocommerce_before_cart'); ?>
               ?>
             </td>
 
-            <td class="d-flex align-items-center justify-content-between product-quantity" data-title="<?php esc_attr_e('Quantity', 'woocommerce'); ?>">
+            <td class="product-quantity" data-title="<?php esc_attr_e('Quantity', 'woocommerce'); ?>">
               <?php
               if ($_product->is_sold_individually()) {
                 $product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
