@@ -351,22 +351,6 @@ function wpm_remove_sku($enabled)
 
 ##### END ----- SINGLE-PRODUCT #####
 
-// Remove breadcrumbs only from shop page
-// add_filter('woocommerce_before_main_content', 'remove_breadcrumbs');
-// function remove_breadcrumbs()
-// {
-//   if (!is_product() && !is_product_category()) {
-//     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
-//   }
-// }
-
-// add_action('template_redirect', 'remove_shop_breadcrumbs');
-// function remove_shop_breadcrumbs()
-// {
-
-//   if (is_shop())
-//     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
-// }
 
 
 // ############ A VERIFIER CA NE SEMBLE PAS MARCHER ###############
@@ -428,28 +412,70 @@ add_filter('upload_mimes', 'mcl_mime_types');
 
 // }
 
+/**
+ * Redirect URL
+ */
+// redirect main product-category to brand page
+function mcl_template_redirect()
+{
+  if (function_exists('is_product_category')) {
+    if (is_product_category('ligne-w')) {
+      $redirect_page_id = 299;
+      wp_safe_redirect(get_permalink($redirect_page_id));
+      exit();
+    } elseif (is_product_category('chateau-laguiole')) {
+        $redirect_page_id = 245;
+        wp_safe_redirect(get_permalink($redirect_page_id));
+        exit();
+    } elseif (is_product_category('mateo-gallud')) {
+        // $redirect_page_id = 245; // mateo-gallud page_id
+        // wp_redirect(get_permalink($redirect_page_id));
+        // exit();
+    } 
+    } elseif (is_product_category('guy-vialis')) {
+        // $redirect_page_id = 245; // guy-vialis page_id
+        // wp_redirect(get_permalink($redirect_page_id));
+        // exit();
+    } else {
+        return home_url();
+    }
+  }
+  
+  // if (function_exists('is_product_category')) {
+  //   $brand = is_product_category($i);
+  //   switch ($brand) {
+  //     case 'ligne-w':
+  //       $redirect_page_id = 299;
+  //       wp_redirect(get_permalink($redirect_page_id));
+  //       break;
+  //     case 'chateau-laguiole':
+  //       $redirect_page_id = 299;
+  //       wp_redirect(get_permalink($redirect_page_id));
+  //       break;
+        
+      
+  //     default:
+  //       # code...
+  //       break;
+  //   }
+  //   # code...
+  // }
+add_action('template_redirect', 'mcl_template_redirect');
+
 
 // change Return to shop URL
 add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
-
 function mcl_change_return_shop_url()
 {
   return home_url();
   // return wp_safe_redirect(home_url(), 302);
   // exit;
 }
+/** redirect URL END */
+
 
 /**
- * WooCommerce
- * Change continue shopping URL
- */
-// add_filter('woocommerce_continue_shopping_redirect', 'st_change_continue_shopping');
-// function st_change_continue_shopping()
-// {
-//   return wc_get_page_permalink('shop'); // Change link
-// }
-
-/**
+ * BREADCRUMB
  * WooCommerce Breadcrumb custom
  */
 remove_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 10);
