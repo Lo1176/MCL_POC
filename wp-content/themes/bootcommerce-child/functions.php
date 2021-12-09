@@ -415,7 +415,7 @@ add_filter('upload_mimes', 'mcl_mime_types');
 /**
  * Redirect URL
  */
-// redirect main product-category to brand page
+// redirect main product-category to his brand page
 function mcl_template_redirect()
 {
   if (function_exists('is_product_category')) {
@@ -440,30 +440,10 @@ function mcl_template_redirect()
         return home_url();
     }
   }
-  
-  // if (function_exists('is_product_category')) {
-  //   $brand = is_product_category($i);
-  //   switch ($brand) {
-  //     case 'ligne-w':
-  //       $redirect_page_id = 299;
-  //       wp_redirect(get_permalink($redirect_page_id));
-  //       break;
-  //     case 'chateau-laguiole':
-  //       $redirect_page_id = 299;
-  //       wp_redirect(get_permalink($redirect_page_id));
-  //       break;
-        
-      
-  //     default:
-  //       # code...
-  //       break;
-  //   }
-  //   # code...
-  // }
 add_action('template_redirect', 'mcl_template_redirect');
 
 
-// change Return to shop URL
+// change 'return-btn' to home URL
 add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 function mcl_change_return_shop_url()
 {
@@ -471,6 +451,16 @@ function mcl_change_return_shop_url()
   // return wp_safe_redirect(home_url(), 302);
   // exit;
 }
+
+// change 'shop' breadcrumb to hom URL
+function custom_shop_page_redirect()
+{
+  if (is_shop()) {
+    wp_safe_redirect(home_url(), 302);
+    exit();
+  }
+}
+add_action('template_redirect', 'custom_shop_page_redirect');
 /** redirect URL END */
 
 
@@ -479,7 +469,7 @@ function mcl_change_return_shop_url()
  * WooCommerce Breadcrumb custom
  */
 remove_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 10);
-function bs_woocommerce_breadcrumbs()
+function mcl_woocommerce_breadcrumbs()
 {
   return array(
     'delimiter'   => ' &nbsp;&#47;&nbsp; ',
@@ -487,20 +477,13 @@ function bs_woocommerce_breadcrumbs()
     'wrap_after'  => '</nav>',
     'before'      => '',
     'after'       => '',
-    'home'        => _x('Home', 'breadcrumb', 'woocommerce'),
+    // 'home'        => _x('Home', 'breadcrumb', 'woocommerce'),
   );
 }
-add_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 11);
+add_filter('woocommerce_breadcrumb_defaults', 'mcl_woocommerce_breadcrumbs', 11);
+
 // WooCommerce Breadcrumb End
 
-/**
- * redirect ligne-w category to ligne-w home page
- */
-function mcl_redirect_ligne_w() {
-  // find something to do
-  //
-  //
-}
 
 /**
  * @snippet       Bulk (Dynamic) Pricing - WooCommerce
