@@ -11,3 +11,10 @@ span.badge.sale {
   font-size: 1.25rem;
   border-radius: 3%;
 }
+
+span.badge.sale-product {
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

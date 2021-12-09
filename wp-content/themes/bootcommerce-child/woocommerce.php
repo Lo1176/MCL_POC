@@ -34,7 +34,6 @@ get_header();
           echo '<img class="cat-image featured-full-width-img" src="' . $image . '" alt="' . $cat->name . '" />';
         }
         echo '<div class="category-product-title mt-5"><h1>' . $cat->name . '</h1></div>';
-
       }
     }
 
@@ -52,12 +51,12 @@ get_header();
       <div class="row">
 
         <div class="col">
-          <?php woocommerce_content(); ?>
+        <?php woocommerce_content(); ?>
         </div>
         <!-- sidebar -->
         <?php #get_sidebar(); ?>
-        <!-- row -->
-      </div>
+
+      </div><!-- row -->
     </main><!-- #main -->
   </div><!-- #primary -->
 </div><!-- #content -->

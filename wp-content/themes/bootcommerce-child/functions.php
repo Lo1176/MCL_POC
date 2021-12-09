@@ -15,6 +15,17 @@ function bootscore_child_enqueue_styles()
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
  
 }
+/**
+ * Set WooCommerce image dimensions upon theme activation
+ */
+// Remove each style one by one
+add_filter('woocommerce_enqueue_styles', 'mcl_dequeue_styles');
+function mcl_dequeue_styles($enqueue_styles)
+{
+  unset( $enqueue_styles['woocommerce-layout'] ); //Remove woocommerce-page css
+  return $enqueue_styles;
+
+}
 
 // WooCommerce
 require get_template_directory() . '/woocommerce/woocommerce-functions.php';

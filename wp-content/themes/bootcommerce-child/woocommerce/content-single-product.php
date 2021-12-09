@@ -49,7 +49,7 @@ if (post_password_required()) {
 	do_action('woocommerce_before_single_product_summary');
 	?>
 
-	<div class="summary entry-summary">
+	<div class="summary entry-summary col-md-6">
 
 		<!-- <h2 class="text-danger">"content-single-product.php"</h2> -->
 		<?php
