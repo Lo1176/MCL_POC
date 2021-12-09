@@ -50,9 +50,9 @@ get_header();
       </div>
       <div class="row">
 
-        <div class="col">
+        <!-- <div class="col"> -->
         <?php woocommerce_content(); ?>
-        </div>
+        <!-- </div> -->
         <!-- sidebar -->
         <?php #get_sidebar(); ?>
 
