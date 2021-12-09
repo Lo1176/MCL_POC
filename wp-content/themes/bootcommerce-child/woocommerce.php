@@ -48,15 +48,12 @@ get_header();
         <?php woocommerce_breadcrumb(); ?>
 
       </div>
-      <div class="row">
 
-        <!-- <div class="col"> -->
         <?php woocommerce_content(); ?>
-        <!-- </div> -->
         <!-- sidebar -->
         <?php #get_sidebar(); ?>
 
-      </div><!-- row -->
+      </div>
     </main><!-- #main -->
   </div><!-- #primary -->
 </div><!-- #content -->

@@ -32,17 +32,6 @@ require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
 // ** add your custom functions bellow ** //
 
-/**
- * Hide loop read more buttons for out of stock items 
- */
-// if (!function_exists('woocommerce_template_loop_add_to_cart')) {
-//   function woocommerce_template_loop_add_to_cart()
-//   {
-//     global $product;
-//     if (!$product->is_in_stock() || !$product->is_purchasable()) return;
-//     wc_get_template('loop/add-to-cart.php');
-//   }
-// }
 
 ##### start - Menu #####
 // Custom-Navigation-Menu

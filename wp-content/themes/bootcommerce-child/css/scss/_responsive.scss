@@ -76,8 +76,12 @@
   .woocommerce-product-details__short-description {
     text-align: center;
   }
+  .product.type-product {
+    margin: 0;
+  }
   .entry-summary {
     padding-right: 0 !important;
+    padding-left: 0 !important;
       #stock-container {
           margin-left: 0;
       }

@@ -36,7 +36,7 @@ if (post_password_required()) {
 <!-- <h2 class="text-warning">SIDEBAR-1</h2> -->
 <?php #get_sidebar('sidebar-1') 
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('col', $product); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('row', $product); ?>>
 <!-- <h2 class="text-danger">"content-single-product.php"</h2> -->
 
 	<?php
@@ -49,7 +49,7 @@ if (post_password_required()) {
 	do_action('woocommerce_before_single_product_summary');
 	?>
 
-	<div class="summary entry-summary col-md-3">
+	<div class="summary entry-summary col-md-5">
 
 		<!-- <h2 class="text-danger">"content-single-product.php"</h2> -->
 		<?php
