@@ -28,3 +28,26 @@
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:before, a.wishlist_products_counter.top_wishlist-heart:before, span.wishlist_products_counter.top_wishlist-heart:before, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:before {
     font-size: 26px;
 }
+
+// empty wishlist page
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    border: none;
+}
+
+P.cart-empty.woocommerce-info:before {
+    
+    /* Using the zoom property to
+    control the size of the SVG */
+    display: inline-flex;
+    content: '';
+    
+    /* Using the background-image and
+    its related properties to add
+    the SVG content */
+            background-image: url('../../img/logo/heart-broken-solid.svg');
+            background-size: 24px 24px;
+            height: 24px;
+            width: 24px;
+            background-repeat: no-repeat;
+            
+}
