@@ -1,6 +1,11 @@
 Changelog
 =========
 
+#### 1.4.8 - December 1 2021
+- Redirect to main Creativ Email templates page when user has abandoned cart template deactivated.
+- Fix sync error with contact form 7
+- Added automation trigger for customer buying products
+
 #### 1.4.7 - October 7 2021
 - Fix currency type being shown in "Abandoned Cart" emails for WooCommerce.
 

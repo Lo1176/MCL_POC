@@ -193,8 +193,8 @@ class CheckoutManager
     /**
      * Update of checkout data in the external service
      *
-     * @param int $order_id    Newly created order id.
-     * @param string $endpoint Endpoint to call
+     * @param int      $order_id The order id.
+     * @param string   $endpoint Endpoint to call
      *
      * @since 1.3.0
      */
@@ -203,12 +203,14 @@ class CheckoutManager
         if ( empty( $order ) ) {
             return;
         }
+
         // check if order had checkout uuid
         $uuid = $order->get_meta( self::META_CHECKOUT_UUID, true);
         // check if order is created with checkout meta
         if (empty($uuid)) {
             return;
         }
+
         // try find recovery date from order meta data
         $recovery_date = $order->get_meta( self::META_CHECKOUT_RECOVERED, true);
         // Remote post to ce4wp marking checkout as completed/created
@@ -218,6 +220,7 @@ class CheckoutManager
         $requestItem->order_total = $order->get_total();
         $requestItem->order_currency = $order->get_currency();
         $requestItem->recovery_date = (empty($recovery_date) || $recovery_date === self::DATETIME_ZERO) ? null : $recovery_date;
+
         $endpoint = EnvironmentHelper::get_app_gateway_url('wordpress') . $endpoint;
         // call remote endpoint to update
         $this->ce4wp_remote_post($requestItem, $endpoint);
@@ -745,6 +748,167 @@ class CheckoutManager
             );
         } catch (\Exception $e) {
             // silent
+        }
+    }
+
+    public function add_order_completed_wc_hooks() {
+        add_action('woocommerce_order_status_completed', array($this, 'order_completed_trigger_wc_hook'), 10, 1);
+    }
+
+    public function order_completed_trigger_wc_hook($order_id) {
+        $order = wc_get_order($order_id);
+        if ( empty( $order ) ) {
+            return;
+        }
+
+        $endpoint = '/v1.0/wc/order_completed';
+        $decimal_point = 2;
+
+        // General Info
+        $requestItem = new stdClass();
+        $requestItem->order_id = $order->get_id();
+        $requestItem->order_number = $order->get_order_number();
+        $requestItem->date_created = $order->get_date_created() ? $order->get_date_created()->getTimestamp() : 0;
+        $requestItem->date_modified = $order->get_date_modified() ? $order->get_date_modified()->getTimestamp() : 0;
+        $requestItem->date_completed = $order->get_date_completed() ? $order->get_date_completed()->getTimestamp() : 0;
+        $requestItem->status = $order->get_status();
+        $requestItem->order_url = $order->get_checkout_order_received_url();
+        $requestItem->note = $order->get_customer_note();
+        $requestItem->customer_ip = $order->get_customer_ip_address();
+        $requestItem->customer_user_agent = $order->get_customer_user_agent();
+        $requestItem->customer_id = $order->get_user_id();
+        // Order Billing
+        $requestItem->order->billing->email = $order->get_billing_email();
+        $requestItem->order->billing->first_name = $order->get_billing_first_name();
+        $requestItem->order->billing->last_name = $order->get_billing_last_name();
+        $requestItem->order->billing->is_first_time_buyer = count(wc_get_orders(array('email' => $order->get_billing_email()))) <= 1;
+        $requestItem->order->billing->company = $order->get_billing_company();
+        $requestItem->order->billing->address_1 = $order->get_billing_address_1();
+        $requestItem->order->billing->address_2 = $order->get_billing_address_2();
+        $requestItem->order->billing->city = $order->get_billing_city();
+        $requestItem->order->billing->state = $order->get_billing_state();
+        $requestItem->order->billing->postcode = $order->get_billing_postcode();
+        $requestItem->order->billing->country = $order->get_billing_country();
+        $requestItem->order->billing->email = $order->get_billing_email();
+        $requestItem->order->billing->phone = $order->get_billing_phone();
+        $requestItem->order->billing->shipping = array(
+            'first_name' => $order->get_shipping_first_name(),
+            'last_name' => $order->get_shipping_last_name(),
+            'company' => $order->get_shipping_company(),
+            'address_1' => $order->get_shipping_address_1(),
+            'address_2' => $order->get_shipping_address_2(),
+            'city' => $order->get_shipping_city(),
+            'state' => $order->get_shipping_state(),
+            'postcode' => $order->get_shipping_postcode(),
+            'country' => $order->get_shipping_country(),
+            'shipping_methods' => $order->get_shipping_method()
+        );
+        $requestItem->order->billing->payment_details = array(
+            'method_id' => $order->get_payment_method(),
+            'method_title' => $order->get_payment_method_title(),
+            'paid' => !is_null($order->get_date_paid()),
+        );
+        // Order Currency and Total Info
+        $requestItem->total = wc_format_decimal($order->get_total(), $decimal_point);
+        $requestItem->subtotal = wc_format_decimal($order->get_subtotal(), $decimal_point);
+        $requestItem->total_tax = wc_format_decimal($order->get_total_tax(), $decimal_point);
+        $requestItem->shipping_total = wc_format_decimal($order->get_shipping_total(), $decimal_point);
+        $requestItem->cart_tax = wc_format_decimal($order->get_cart_tax(), $decimal_point);
+        $requestItem->shipping_tax = wc_format_decimal($order->get_shipping_tax(), $decimal_point);
+        $requestItem->discount_total = wc_format_decimal($order->get_total_discount(), $decimal_point);
+        $requestItem->order->currency_symbol = get_woocommerce_currency_symbol();
+        $requestItem->order->currency = $order->get_currency();
+        // Order Products Info
+        $requestItem->order->total_line_items_quantity = $order->get_item_count();
+        // Line Items / Products array for the expected endpoint
+        foreach ($order->get_items() as $itemsKey => $item) {
+            $product = $item->get_product();
+            $item_meta = $item->get_formatted_meta_data();
+
+            foreach ($item_meta as $key => $values) {
+                $item_meta[$key]->label = $values->display_key;
+                unset($item_meta[$key]->display_key);
+                unset($item_meta[$key]->display_value);
+            }
+
+            try {
+                $product_data = array(
+                    'images' => array(),
+                    'downloads' => array()
+                );
+                $attachment_ids = $product->get_gallery_image_ids();
+                foreach ($attachment_ids as $attachment_id) {
+                    $product_data['images'][] = wp_get_attachment_url($attachment_id);
+                }
+
+                $product_data["on_sale"] = $product->is_on_sale();
+                $product_data["sale_price"] = $product->get_sale_price();
+                $product_data["regular_price"] = $product->get_regular_price();
+
+                if ($product->is_downloadable()) {
+                    $item_downloads = $item->get_item_downloads();
+                    foreach ($item_downloads as $item_download)
+                    {
+                        $product_data["downloads"][] = array(
+                            'line_item_id' => $item->get_id(),
+                            'product_id' => $item->get_product_id(),
+                            'download_url' => $item_download["download_url"],
+                            'download_file' => $item_download["file"],
+                            'download_name' => $item_download["name"],
+                            'download_id' => $item_download["id"],
+                            'downloads_remaining' => $item_download["downloads_remaining"],
+                            'download_access_expires' => wc_format_datetime($item_download["access_expires"], 'U'),
+                            'download_limit' => $product->get_download_limit(),
+                            'download_expiry' => $product->get_download_expiry(),
+                        );
+                    }
+                }
+            } catch (\Exception $ex) {
+                RaygunManager::get_instance()->exception_handler($ex);
+            }
+
+            $src = wc_placeholder_img_src();
+            if ($image_id = $product->get_image_id() ) {
+                list( $src ) = wp_get_attachment_image_src($image_id, 'full');
+            }
+
+            $requestItem->order->line_items[] = array(
+                'product_id' => $item->get_product_id(),
+                'item_meta' => $item->get_formatted_meta_data(),
+                'subtotal' => wc_format_decimal($order->get_line_subtotal($item, false, false), $dp),
+                'subtotal_tax' => wc_format_decimal($item->get_subtotal_tax(), $dp),
+                'total' => wc_format_decimal($order->get_line_total($item, false, false), $dp),
+                'total_tax' => wc_format_decimal($item->get_total_tax(), $dp),
+                'price' => wc_format_decimal($order->get_item_total($item, false, false), $dp),
+                'quantity' => $item->get_quantity(),
+                'tax_class' => $item->get_tax_class(),
+                'name' => $item->get_name(),
+                'product_image' => $src,
+                'product_data' => $product_data,
+                'sku' => is_object($product) ? $product->get_sku() : null,
+                'meta' => array_values($item_meta),
+                'product_url' => get_the_permalink($item->get_product_id()),
+                'variation_id' => $item->get_variation_id()
+            );
+        }
+
+        $endpoint = EnvironmentHelper::get_app_gateway_url('wordpress') . $endpoint;
+        try
+        {
+            wp_remote_post(
+                $endpoint, array(
+                    'method' => 'POST',
+                    'timeout' => 10,
+                    'headers' => array(
+                        'x-account-id' => OptionsHelper::get_connected_account_id(),
+                        'x-api-key' => OptionsHelper::get_instance_api_key(),
+                        'content-type' => 'application/json'
+                    ),
+                    'body' => wp_json_encode($requestItem)
+                )
+            );
+        } catch (\Exception $e) {
+            RaygunManager::get_instance()->exception_handler($e);
         }
     }
 }

@@ -47,7 +47,6 @@ class ApiManager
      */
     public function add_hooks()
     {
-
         add_action('rest_api_init', array($this, 'add_rest_endpoints'));
     }
 
