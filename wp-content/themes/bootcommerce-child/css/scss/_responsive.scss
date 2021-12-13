@@ -118,6 +118,9 @@
   .woocommerce-cart-form__cart-item.cart_item {
         .product-quantity {
           width: 100%;
+            .button-arrow-qty {
+              justify-content: end !important;
+            }
             .quantity {
               // margin-left: 5rem;
               margin-left: auto;
