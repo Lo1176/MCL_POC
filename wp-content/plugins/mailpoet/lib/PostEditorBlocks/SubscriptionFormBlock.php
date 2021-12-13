@@ -10,6 +10,7 @@ use MailPoet\Form\FormsRepository;
 use MailPoet\Form\Widget;
 use MailPoet\WP\Functions as WPFunctions;
 
+// phpcs:disable Generic.Files.InlineHTML
 class SubscriptionFormBlock {
   /** @var WPFunctions */
   private $wp;

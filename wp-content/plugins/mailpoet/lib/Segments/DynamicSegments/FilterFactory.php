@@ -13,6 +13,7 @@ use MailPoet\Segments\DynamicSegments\Filters\EmailOpensAbsoluteCountAction;
 use MailPoet\Segments\DynamicSegments\Filters\Filter;
 use MailPoet\Segments\DynamicSegments\Filters\MailPoetCustomFields;
 use MailPoet\Segments\DynamicSegments\Filters\SubscriberScore;
+use MailPoet\Segments\DynamicSegments\Filters\SubscriberSegment;
 use MailPoet\Segments\DynamicSegments\Filters\SubscriberSubscribedDate;
 use MailPoet\Segments\DynamicSegments\Filters\UserRole;
 use MailPoet\Segments\DynamicSegments\Filters\WooCommerceCategory;
@@ -59,6 +60,11 @@ class FilterFactory {
   /** @var MailPoetCustomFields */
   private $mailPoetCustomFields;
 
+  /**
+   * @var SubscriberSegment
+   */
+  private $subscriberSegment;
+
   public function __construct(
     EmailAction $emailAction,
     UserRole $userRole,
@@ -71,7 +77,8 @@ class FilterFactory {
     WooCommerceTotalSpent $wooCommerceTotalSpent,
     WooCommerceSubscription $wooCommerceSubscription,
     SubscriberSubscribedDate $subscriberSubscribedDate,
-    SubscriberScore $subscriberScore
+    SubscriberScore $subscriberScore,
+    SubscriberSegment $subscriberSegment
   ) {
     $this->emailAction = $emailAction;
     $this->userRole = $userRole;
@@ -85,6 +92,7 @@ class FilterFactory {
     $this->subscriberSubscribedDate = $subscriberSubscribedDate;
     $this->subscriberScore = $subscriberScore;
     $this->mailPoetCustomFields = $mailPoetCustomFields;
+    $this->subscriberSegment = $subscriberSegment;
   }
 
   public function getFilterForFilterEntity(DynamicSegmentFilterEntity $filter): Filter {
@@ -112,6 +120,8 @@ class FilterFactory {
       return $this->subscriberScore;
     } elseif ($action === MailPoetCustomFields::TYPE) {
       return $this->mailPoetCustomFields;
+    } elseif ($action === SubscriberSegment::TYPE) {
+      return $this->subscriberSegment;
     }
     return $this->userRole;
   }

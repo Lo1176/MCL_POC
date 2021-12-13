@@ -14,6 +14,7 @@ use MailPoet\Entities\UserAgentEntity;
 use MailPoet\Newsletter\Shortcodes\Categories\Link as LinkShortcodeCategory;
 use MailPoet\Newsletter\Shortcodes\Shortcodes;
 use MailPoet\Settings\SettingsController;
+use MailPoet\Settings\TrackingConfig;
 use MailPoet\Statistics\StatisticsClicksRepository;
 use MailPoet\Statistics\UserAgentsRepository;
 use MailPoet\Subscribers\SubscribersRepository;
@@ -52,6 +53,9 @@ class Clicks {
   /** @var SubscribersRepository */
   private $subscribersRepository;
 
+  /** @var TrackingConfig */
+  private $trackingConfig;
+
   public function __construct(
     SettingsController $settingsController,
     Cookies $cookies,
@@ -60,7 +64,8 @@ class Clicks {
     StatisticsClicksRepository $statisticsClicksRepository,
     UserAgentsRepository $userAgentsRepository,
     LinkShortcodeCategory $linkShortcodeCategory,
-    SubscribersRepository $subscribersRepository
+    SubscribersRepository $subscribersRepository,
+    TrackingConfig $trackingConfig
   ) {
     $this->settingsController = $settingsController;
     $this->cookies = $cookies;
@@ -70,6 +75,7 @@ class Clicks {
     $this->statisticsClicksRepository = $statisticsClicksRepository;
     $this->userAgentsRepository = $userAgentsRepository;
     $this->subscribersRepository = $subscribersRepository;
+    $this->trackingConfig = $trackingConfig;
   }
 
   /**
@@ -119,7 +125,7 @@ class Clicks {
   }
 
   private function sendRevenueCookie(StatisticsClickEntity $clicks) {
-    if ($this->settingsController->get('woocommerce.accept_cookie_revenue_tracking.enabled')) {
+    if ($this->trackingConfig->isCookieTrackingEnabled()) {
       $this->cookies->set(
         self::REVENUE_TRACKING_COOKIE_NAME,
         [
@@ -135,7 +141,7 @@ class Clicks {
   }
 
   private function sendAbandonedCartCookie($subscriber) {
-    if ($this->settingsController->get('woocommerce.accept_cookie_revenue_tracking.enabled')) {
+    if ($this->trackingConfig->isCookieTrackingEnabled()) {
       $this->cookies->set(
         self::ABANDONED_CART_COOKIE_NAME,
         [

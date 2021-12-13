@@ -11,7 +11,7 @@ use MailPoet\Entities\SubscriberEntity;
 use MailPoet\Newsletter\Links\Links;
 use MailPoet\Newsletter\Renderer\Renderer;
 use MailPoet\Newsletter\Shortcodes\Shortcodes;
-use MailPoet\Settings\SettingsController;
+use MailPoet\Settings\TrackingConfig;
 use MailPoet\WP\Emoji;
 
 class ViewInBrowserRenderer {
@@ -32,13 +32,13 @@ class ViewInBrowserRenderer {
 
   public function __construct(
     Emoji $emoji,
-    SettingsController $settings,
+    TrackingConfig $trackingConfig,
     Shortcodes $shortcodes,
     Renderer $renderer,
     Links $links
   ) {
     $this->emoji = $emoji;
-    $this->isTrackingEnabled = $settings->get('tracking.enabled');
+    $this->isTrackingEnabled = $trackingConfig->isEmailTrackingEnabled();
     $this->renderer = $renderer;
     $this->shortcodes = $shortcodes;
     $this->links = $links;
