@@ -36,23 +36,23 @@ get_header();
         echo '<div class="category-product-title mt-5"><h1>' . $cat->name . '</h1></div>';
       }
     }
-
     ?>
     <!-- Hook to add something nice -->
     <?php bs_after_primary(); ?>
-
+    
     <main id="main" class="site-main">
-
+      
       <!-- Breadcrumb -->
       <div class="text-danger container">
         <?php woocommerce_breadcrumb(); ?>
-
       </div>
+      <div class="row">
+        <div class="col order-md-last">
+          <?php woocommerce_content(); ?>
+        </div>
 
-        <?php woocommerce_content(); ?>
         <!-- sidebar -->
-        <?php #get_sidebar(); ?>
-
+        <?php get_sidebar(); ?>
       </div>
     </main><!-- #main -->
   </div><!-- #primary -->
