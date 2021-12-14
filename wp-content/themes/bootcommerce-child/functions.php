@@ -459,15 +459,15 @@ function mcl_change_return_shop_url()
 }
 add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 
-// change 'shop' breadcrumb to home URL => problem :conflict with my search sidebar
+// change 'shop' breadcrumb to home URL
 function custom_shop_page_redirect()
 {
-  if (is_shop()) {
+  if (is_shop() && !isset($_GET['s'])) {
     wp_safe_redirect(home_url(), 302);
     exit();
   }
 }
-// add_action('template_redirect', 'custom_shop_page_redirect');
+add_action('template_redirect', 'custom_shop_page_redirect');
 /** redirect URL END */
 
 
