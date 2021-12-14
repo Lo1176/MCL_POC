@@ -451,15 +451,15 @@ add_action('template_redirect', 'mcl_template_redirect');
 
 
 // change 'return-btn' to home URL
-add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 function mcl_change_return_shop_url()
 {
   return home_url();
   // return wp_safe_redirect(home_url(), 302);
   // exit;
 }
+add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 
-// change 'shop' breadcrumb to hom URL
+// change 'shop' breadcrumb to home URL => problem :conflict with my search sidebar
 function custom_shop_page_redirect()
 {
   if (is_shop()) {
@@ -467,7 +467,7 @@ function custom_shop_page_redirect()
     exit();
   }
 }
-add_action('template_redirect', 'custom_shop_page_redirect');
+// add_action('template_redirect', 'custom_shop_page_redirect');
 /** redirect URL END */
 
 

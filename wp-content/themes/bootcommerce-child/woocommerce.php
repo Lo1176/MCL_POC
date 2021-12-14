@@ -39,9 +39,9 @@ get_header();
     ?>
     <!-- Hook to add something nice -->
     <?php bs_after_primary(); ?>
-    
+
     <main id="main" class="site-main">
-      
+
       <!-- Breadcrumb -->
       <div class="text-danger container">
         <?php woocommerce_breadcrumb(); ?>
