@@ -1,7 +1,7 @@
 <?php
 
 /*
-    Plugin Name: WooCommerce Product Category 
+    Plugin Name: !!! DNU WooCommerce Product Category DNU !!!
     Description: Display WooCommerce categories on WooCommerce product pages
     Author: Laurent
     Version: 1.0.0
