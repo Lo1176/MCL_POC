@@ -2,4 +2,16 @@
     background-color: #f8f9fa;
     padding-top: 1.5rem;
     padding-bottom: 100vh;
+        section > h2 {
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        color: $gv;
+        }
+}
+// .sidebar-1 {
+//     section ~ h2 {
+//     text-transform: uppercase;
+//     }
+// }
+.sidebar-1 {
 }

@@ -28,11 +28,6 @@ get_header();
       <div class="container-fluid pb-5">
         <!-- test LEFT SEARCH  -->
         <div class="container-fluid col-2">
-            <?php
-            get_search_form();
-            #get_the_tags();
-            #get_sidebar();
-            ?>
 
         </div>
         <!-- END SEARCH -->

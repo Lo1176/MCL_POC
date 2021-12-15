@@ -462,7 +462,9 @@ add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 // change 'shop' breadcrumb to home URL
 function custom_shop_page_redirect()
 {
+  $search = array('s', 'taxonomy');
   if (is_shop() && !isset($_GET['s'])) {
+ 
     wp_safe_redirect(home_url(), 302);
     exit();
   }
