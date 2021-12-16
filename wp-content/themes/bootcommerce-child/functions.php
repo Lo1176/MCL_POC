@@ -374,7 +374,8 @@ if (!function_exists('loop_columns')) {
 /** 
  * content-product
  */
-// define the woocommerce_before_shop_loop_item_title callback 
+// define the woocommerce_before_shop_loop_item_title callback
+// function to add '<hr class="line-separator">'
 function action_woocommerce_before_shop_loop_item()
 {
   echo '<hr class="line-separator">';

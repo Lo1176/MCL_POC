@@ -33,9 +33,6 @@ if (post_password_required()) {
 }
 ?>
 
-<!-- <h2 class="text-warning">SIDEBAR-1</h2> -->
-<?php #get_sidebar('sidebar-1') 
-?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('row', $product); ?>>
 <!-- <h2 class="text-danger">"content-single-product.php"</h2> -->
 
