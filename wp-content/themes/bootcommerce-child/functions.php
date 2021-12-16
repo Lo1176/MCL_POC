@@ -116,7 +116,7 @@ add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
 
 ##### start - CONTENT-SINGLE-PRODUCT #####
 /** remove title */
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 
 /** change order of description (move the description on the top) */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
