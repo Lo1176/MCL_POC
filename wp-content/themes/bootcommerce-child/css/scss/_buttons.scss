@@ -78,6 +78,9 @@
     .minus {
       border: none !important;
       background: none !important;
+      padding: 0;
+      width: 16px;
+
     }
     input.qty {
       border: none;
@@ -85,7 +88,7 @@
       appearance: textfield;
       -webkit-appearance: none;
       -moz-appearance: textfield;
-      font-weight: bolder;
+      font-weight: 500;
       font-size: 1.5rem;
     }
 }
