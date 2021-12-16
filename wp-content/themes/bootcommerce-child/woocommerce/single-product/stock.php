@@ -22,6 +22,6 @@ if (!defined('ABSPATH')) {
 
 ?>
 <!-- <div class="col-sm-6 stock-container"> -->
-<div id="stock-container" class="col-xl-6 offset-xl-6">
+<div id="stock-container" class="col-xl-7 offset-xl-5">
 	<p class="box-stock stock text-center <?php echo esc_attr($class); ?>"><?php echo wp_kses_post($availability); ?></p>
 </div>
