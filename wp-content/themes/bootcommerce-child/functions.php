@@ -18,7 +18,7 @@ function bootscore_child_enqueue_styles()
 /**
  * Set WooCommerce image dimensions upon theme activation
  */
-// Remove each style one by one
+// Remove each style one by one (e.i. woocommerce-page css)
 add_filter('woocommerce_enqueue_styles', 'mcl_dequeue_styles');
 function mcl_dequeue_styles($enqueue_styles)
 {
