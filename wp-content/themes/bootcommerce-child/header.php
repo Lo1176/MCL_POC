@@ -73,10 +73,11 @@
 
                             <!-- wishlist Toggler -->
                             <div class=""><?php echo do_shortcode('[ti_wishlist_products_counter]'); ?> </div>
-                            
+
                             <!-- User Toggler -->
                             <button class="btn btn-outline-primary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
-                                <i class="fas fa-user"></i>
+                                <!-- <i class="fas fa-user"></i> -->
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/user.svg" alt="user-logo">
                             </button>
 
                             <!-- Mini Cart Toggler -->
