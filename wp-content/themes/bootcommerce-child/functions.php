@@ -204,7 +204,7 @@ function custom_3D_button()
 {
   global $product;
   $theme_link = get_stylesheet_directory_uri();
-  $svg_link = "/img/logo/logo_3d.svg";
+  $svg_link = "/img/svg/logo_3d.svg";
   $link = "/www/MCL_POC/wp-json/3D/v1/product/" . $product->get_id();
   // $text = __("PERSONNALISER mon modèle", "woocommerce");
   $text1 = nl2br(__("PERSONNALISER\n", "woocommerce"));

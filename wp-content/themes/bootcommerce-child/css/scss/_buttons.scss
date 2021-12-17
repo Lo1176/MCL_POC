@@ -47,12 +47,11 @@
 
 .available-on-backorder {
   color: $red !important;
-  font-size: 0.9rem !important;
-  line-height: 100%;
+
 }
 
-.in-stock {
-  font-size: 0.9rem !important;
+.in-stock,.available-on-backorder {
+  font-size: 0.8rem !important;
   line-height: 100%;
 }
 // stock display END //

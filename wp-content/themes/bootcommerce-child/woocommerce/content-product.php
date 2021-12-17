@@ -33,6 +33,7 @@ if (empty($product) || !$product->is_visible()) {
 			<!-- ##### A EFFACER ##### -->
 			<!-- <h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2> -->
 			<!-- ##### A EFFACER ##### -->
+			<h2><?php #echo $product->get_name?> </h2>
 
 			<?php
 			/**

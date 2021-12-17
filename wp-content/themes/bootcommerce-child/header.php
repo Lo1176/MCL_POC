@@ -77,12 +77,14 @@
                             <!-- User Toggler -->
                             <button class="btn btn-outline-primary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
                                 <!-- <i class="fas fa-user"></i> -->
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/user.svg" alt="user-logo">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/user.svg" alt="user logo">
                             </button>
 
                             <!-- Mini Cart Toggler -->
                             <button class="btn btn-outline-primary ms-2 mx-md-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
-                                <i class="fas fa-shopping-bag"></i>
+                                <!-- <i class="fas fa-shopping-bag"></i> -->
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart.svg" alt="cart logo">
+
                                 <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
                                     $count = WC()->cart->cart_contents_count;
                                 ?>
