@@ -456,6 +456,11 @@ function mcl_gv_redirect() {
     $redirect_page_id = 2330; // guy-vialis page_id
     wp_redirect(get_permalink($redirect_page_id));
     exit();
+  } elseif ( is_page(3415) ) {
+    $redirect_page_id = 2330; // guy-vialis page_id
+    wp_redirect(get_permalink($redirect_page_id));
+    exit();
+
   }
 }
 add_action('template_redirect', 'mcl_gv_redirect');
