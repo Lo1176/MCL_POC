@@ -43,7 +43,7 @@ get_header();
     <main id="main" class="site-main">
 
       <!-- Breadcrumb -->
-      <div class="text-danger container">
+      <div class="text-danger container-fluid">
         <?php woocommerce_breadcrumb(); ?>
       </div>
       <div class="row">
