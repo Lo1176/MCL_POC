@@ -436,20 +436,30 @@ function mcl_template_redirect()
         wp_safe_redirect(get_permalink($redirect_page_id));
         exit();
     } elseif (is_product_category('mateo-gallud')) {
-        // $redirect_page_id = 245; // mateo-gallud page_id
-        // wp_redirect(get_permalink($redirect_page_id));
-        // exit();
+        $redirect_page_id = 2330; // mateo-gallud page_id
+        wp_redirect(get_permalink($redirect_page_id));
+        exit();
     } 
     } elseif (is_product_category('guy-vialis')) {
-        // $redirect_page_id = 245; // guy-vialis page_id
-        // wp_redirect(get_permalink($redirect_page_id));
-        // exit();
+        $redirect_page_id = 2330; // guy-vialis page_id
+        wp_redirect(get_permalink($redirect_page_id));
+        exit();
     } else {
         return home_url();
     }
   }
 add_action('template_redirect', 'mcl_template_redirect');
 
+// redirect function for Guy-Vialis home page
+function mcl_gv_redirect() {
+  if ( is_page(1704) ) {
+    $redirect_page_id = 2330; // guy-vialis page_id
+    wp_redirect(get_permalink($redirect_page_id));
+    exit();
+  }
+}
+add_action('template_redirect', 'mcl_gv_redirect');
+// remove_action('template_redirect', 'mcl_gv_redirect');
 
 // change 'return-btn' to home URL
 function mcl_change_return_shop_url()
