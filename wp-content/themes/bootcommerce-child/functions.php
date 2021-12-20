@@ -401,13 +401,13 @@ function new_loop_shop_per_page($cols)
   return $cols;
 }
 
-// Autoriser les fichiers SVG
+// Autoriser l'ajout de fichiers SVG
 function mcl_mime_types($mimes)
 {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
-/* rajouter <?xml version="1.0" encoding="utf-8"?> au début du svg */
+/* penser à rajouter <?xml version="1.0" encoding="utf-8"?> au début du svg */
 add_filter('upload_mimes', 'mcl_mime_types');
 
 
@@ -419,6 +419,27 @@ add_filter('upload_mimes', 'mcl_mime_types');
 //   }
 
 // }
+
+/**
+ * Hide some product-categories
+ */
+add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
+function ts_get_subcategory_terms($terms, $taxonomies, $args)
+{
+  $new_terms = array();
+  // if it is a product category and on the shop page
+  #if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
+  if (in_array('product_cat', $taxonomies)) {
+    foreach ($terms as $key => $term) {
+      if (!in_array($term->slug, array('uncategorised', 'boite', 'display', 'packaging', 'serie-speciale', 'classique'))) { //pass the slug name here
+        $new_terms[] = $term;
+      }
+    }
+    $terms = $new_terms;
+  }
+  return $terms;
+}
+
 
 /**
  * Redirect URL

@@ -81,10 +81,10 @@ get_header();
               </a>
             </div>
             <div class="card m-2" style="width: 18rem;">
-              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-colors/'); ?>">
+              <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-color/'); ?>">
                 <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-colors-tbe.png'); ?>" alt="Produc image cap">
                 <div class="card-body">
-                  <h5 class="card-title">L'IROQUOIS <strong>colors</strong></h5>
+                  <h5 class="card-title">L'IROQUOIS <strong>color</strong></h5>
                   <p class="card-text">Convivial et respectueux de l'environnement</p>
                 </div>
               </a>
