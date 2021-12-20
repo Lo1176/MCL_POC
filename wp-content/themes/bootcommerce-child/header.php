@@ -43,7 +43,7 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
-                    <div class="container-fluid">
+                    <div class="container-fluid toto justify-content-center justify-content-sm-between">
 
                         <!-- Burger-btn toggler LEFT for large devise -->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
@@ -81,7 +81,7 @@
                             </button>
 
                             <!-- Mini Cart Toggler -->
-                            <button class="btn btn-outline-primary ms-2 mx-md-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
+                            <button class="btn btn-outline-primary ms-1 me-md-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
                                 <!-- <i class="fas fa-shopping-bag"></i> -->
                                 <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart.svg" alt="cart logo">
 

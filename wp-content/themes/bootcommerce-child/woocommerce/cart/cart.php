@@ -50,7 +50,7 @@ do_action('woocommerce_before_cart'); ?>
             <td class="product-remove">
               <!-- test wishlist ici  -->
               <div class="bg-warning">
-                WISH HERE WON'T SHOWS
+                <!-- WISH HERE WON'T SHOWS -->
                 <?php echo do_shortcode('[ti_wishlists_addtowishlist loop=yes]'); ?>
               </div>
               <!-- test wishlist ici  -->
