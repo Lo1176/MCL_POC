@@ -45,7 +45,7 @@ add_action('init', 'mcl_custom_new_menu');
 ##### end - Menu #####
 
 /**
- * add wishlist buton
+ * add wishlist button
  */
 // do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
 function mcl_whishlist_icon() {
@@ -55,25 +55,7 @@ function mcl_whishlist_icon() {
 add_action('woocommerce_single_product_summary', 'mcl_whishlist_icon', 11);
 // add wish-icon on content-product.php
 add_action('woocommerce_before_shop_loop_item_title', 'mcl_whishlist_icon', 10);
-
-/**
- * fonction pour tester les loop
- */
-// function mcl_test() {
-//   echo 'hello my text';
-// }
-// add_action('woocommerce_before_shop_loop_item', 'mcl_test', 2);
-
-/**
- * remove woocommerce-result-count
- */
-add_action('after_setup_theme', 'my_remove_product_result_count', 99);
-function my_remove_product_result_count()
-{
-  remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-  remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
-  add_action('woocommerce_before_shop_loop', 'mcl_add_div_product_result_count', 10);
-}
+// wishlist button END
 
 // Minicart Header
 remove_filter('woocommerce_add_to_cart_fragments', 'bs_mini_cart', 10);
@@ -96,23 +78,6 @@ function bs_mini_cart($fragments)
 add_filter('woocommerce_add_to_cart_fragments', 'bs_mini_cart', 11);
 // Minicart Header End
 
-
-##### start-CONTENT-PRODUCT #####
-// Archives pages: Additional button linked to the product
-// add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
-// function loop_continue_button()
-// {
-//     global $product;
-
-//     if ($product->is_type('simple')) {
-//         $link = $product->get_permalink();
-//         $text = __("Continue", "woocommerce");
-
-//         echo '<a href="' . $link . '" class="button alt" style="margin-top:10px;">' . $text . '</a>';
-//     }
-// }
-add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
-##### end-CONTENT-PRODUCT #####
 
 ##### start - CONTENT-SINGLE-PRODUCT #####
 /** remove title */
@@ -374,13 +339,33 @@ if (!function_exists('loop_columns')) {
 /** 
  * content-product
  */
+// remove woocommerce-result-count
+add_action('after_setup_theme', 'my_remove_product_result_count', 99);
+function my_remove_product_result_count()
+{
+  remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+  remove_action('woocommerce_after_shop_loop', 'woocommerce_result_count', 20);
+  add_action('woocommerce_before_shop_loop', 'mcl_add_div_product_result_count', 10);
+}
+
 // define the woocommerce_before_shop_loop_item_title callback
 // function to add '<hr class="line-separator">'
+add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before_shop_loop_item', 10, 0);
 function action_woocommerce_before_shop_loop_item()
 {
   echo '<hr class="line-separator">';
 };
-add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before_shop_loop_item', 10, 0);
+
+// fonction pour tester les loop
+// add_action('woocommerce_before_shop_loop_item', 'mcl_test', 2);
+// function mcl_test()
+// {
+//   echo 'hello my text';
+// }
+
+// add 3D_button after shop loop item
+add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
+
 
 // when product is out of stock "choix des options"
 // instead of "Lire la suite"
@@ -388,6 +373,21 @@ add_action('woocommerce_before_shop_loop_item_title', 'action_woocommerce_before
 // function vna_is_purchasable( $purchasable, $product ){
 //   return true || false; // depending on your condition
 // }
+
+// Archives pages: Additional button linked to the product
+// add_action('woocommerce_after_shop_loop_item', 'loop_continue_button', 15);
+// function loop_continue_button()
+// {
+//     global $product;
+
+//     if ($product->is_type('simple')) {
+//         $link = $product->get_permalink();
+//         $text = __("Continue", "woocommerce");
+
+//         echo '<a href="' . $link . '" class="button alt" style="margin-top:10px;">' . $text . '</a>';
+//     }
+// }
+
 
 /* content-product END */
 

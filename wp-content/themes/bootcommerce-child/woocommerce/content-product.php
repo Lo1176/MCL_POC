@@ -26,57 +26,56 @@ if (empty($product) || !$product->is_visible()) {
 }
 ?>
 
-	<?php #get_sidebar(); ?>
+<?php #get_sidebar(); 
+?>
 
-	<div class="col-md-6 col-lg-4 col-xxl-3 mb-5">
-		<div <?php wc_product_class('card border-0 mx-sm-4 h-100 d-flex text-end', $product); ?>>
-			<!-- ##### A EFFACER ##### -->
-			<!-- <h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2> -->
-			<!-- ##### A EFFACER ##### -->
-			<h2><?php #echo $product->get_name?> </h2>
+<div class="col-md-6 col-lg-4 col-xxl-3 mb-5">
+	<div <?php wc_product_class('card border-0 mx-sm-4 h-100 d-flex text-end', $product); ?>>
+		<!-- ##### A EFFACER ##### -->
+		<!-- <h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2> -->
+		<!-- ##### A EFFACER ##### -->
+		<?php
+		/**
+		 * Hook: woocommerce_before_shop_loop_item.
+		 *
+		 * @hooked woocommerce_template_loop_product_link_open - 10
+		 */
+		do_action('woocommerce_before_shop_loop_item');
 
+		/**
+		 * Hook: woocommerce_before_shop_loop_item_title.
+		 *
+		 * @hooked woocommerce_show_product_loop_sale_flash - 10
+		 * @hooked woocommerce_template_loop_product_thumbnail - 10
+		 */
+		do_action('woocommerce_before_shop_loop_item_title');
+
+		?>
+		<div class="card-body d-flex flex-column">
 			<?php
 			/**
-			 * Hook: woocommerce_before_shop_loop_item.
+			 * Hook: woocommerce_shop_loop_item_title.
 			 *
-			 * @hooked woocommerce_template_loop_product_link_open - 10
+			 * @hooked woocommerce_template_loop_product_title - 10
 			 */
-			do_action('woocommerce_before_shop_loop_item');
+			do_action('woocommerce_shop_loop_item_title');
 
 			/**
-			 * Hook: woocommerce_before_shop_loop_item_title.
+			 * Hook: woocommerce_after_shop_loop_item_title.
 			 *
-			 * @hooked woocommerce_show_product_loop_sale_flash - 10
-			 * @hooked woocommerce_template_loop_product_thumbnail - 10
+			 * @hooked woocommerce_template_loop_rating - 5
+			 * @hooked woocommerce_template_loop_price - 10
 			 */
-			do_action('woocommerce_before_shop_loop_item_title');
+			do_action('woocommerce_after_shop_loop_item_title');
 
+			/**
+			 * Hook: woocommerce_after_shop_loop_item.
+			 *
+			 * @hooked woocommerce_template_loop_product_link_close - 5
+			 * @hooked woocommerce_template_loop_add_to_cart - 10
+			 */
+			do_action('woocommerce_after_shop_loop_item');
 			?>
-			<div class="card-body d-flex flex-column">
-				<?php
-				/**
-				 * Hook: woocommerce_shop_loop_item_title.
-				 *
-				 * @hooked woocommerce_template_loop_product_title - 10
-				 */
-				// do_action('woocommerce_shop_loop_item_title');
-				/**
-				 * Hook: woocommerce_after_shop_loop_item_title.
-				 *
-				 * @hooked woocommerce_template_loop_rating - 5
-				 * @hooked woocommerce_template_loop_price - 10
-				 */
-				do_action('woocommerce_after_shop_loop_item_title');
-
-				/**
-				 * Hook: woocommerce_after_shop_loop_item.
-				 *
-				 * @hooked woocommerce_template_loop_product_link_close - 5
-				 * @hooked woocommerce_template_loop_add_to_cart - 10
-				 */
-				do_action('woocommerce_after_shop_loop_item');
-				?>
-
-			</div>
 		</div>
 	</div>
+</div>
