@@ -3,9 +3,7 @@
 // Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
 
 //
-// Split button dropdowns
-//
-// .btn {
-//     @include button-size($btn-padding-y * 2/3 , $btn-padding-x, $btn-font-size, $btn-border-radius);
-
-// }
+// add margin bottom for site-content class when header is fixed-top
+.site-content {
+    margin-top: 36px;
+}
