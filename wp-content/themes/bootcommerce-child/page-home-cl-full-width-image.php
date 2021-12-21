@@ -25,6 +25,7 @@ get_header();
 
 
       <div class="container-fluid pb-5">
+
         <!-- Hook to add something nice -->
         <?php bs_after_primary(); ?>
         <!-- nothing in there for the moment , change it in function.php -->
@@ -35,9 +36,9 @@ get_header();
             <?php get_sidebar(); ?>
             <div class="col">
               <div class="container">
-                <!-- all the content from wordpress 'modifier la page' -->
+                <!-- content from wordpress 'modifier la page' -->
                 <?php the_content(); ?>
-                <!-- all the content from wordpress 'modifier la page' END -->
+
               </div><!-- container  -->
 
               <!-- collection from Chateau Laguiole -->
@@ -121,9 +122,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-
-                </div>
-
+                </div><!-- #collection -->
               </div><!-- container-fluid -->
             </div><!-- col -->
           </div><!-- row -->
