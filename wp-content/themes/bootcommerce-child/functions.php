@@ -520,7 +520,7 @@ function mcl_woocommerce_breadcrumbs()
 {
   return array(
     'delimiter'   => '<div class"delimiter style="font-size: 1.25rem;">&nbsp;&gt;&nbsp;</div> ',
-    'wrap_before' => '<nav class="breadcrumb align-items-center mb-4 mt-2 py-2 px-3 small" itemprop="breadcrumb">',
+    'wrap_before' => '<nav class="breadcrumb d-flex align-items-center mb-1 mb-sm-3 mt-2 py-sm-2 px-3 small" itemprop="breadcrumb">',
     'wrap_after'  => '</nav>',
     'before'      => '',
     'after'       => '',

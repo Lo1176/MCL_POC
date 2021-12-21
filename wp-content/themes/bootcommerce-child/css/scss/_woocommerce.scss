@@ -1,5 +1,3 @@
-.delimiter {
-    font-size: 2rem !important;
-    color: lawngreen;
-    background-color: lightcoral;
+.woocommerce img, .woocommerce-page img {
+    object-fit: cover;
 }
