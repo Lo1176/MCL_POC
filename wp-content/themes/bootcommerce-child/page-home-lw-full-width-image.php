@@ -43,7 +43,7 @@ get_header();
 
               <!-- collection from Ligne W -->
               <div class="container-fluid d-flex justify-content-center">
-                <div id="collection" class="d-flex justify-content-center flex-wrap">
+                <div id="collection" class="d-flex justify-content-center justify-content-sm-start flex-wrap">
 
                   <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
                   <div class="card m-2" style="width: 18rem;">
