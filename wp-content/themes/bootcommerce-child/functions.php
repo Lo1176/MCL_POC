@@ -432,7 +432,7 @@ function ts_get_subcategory_terms($terms, $taxonomies, $args)
   #if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
   if (in_array('product_cat', $taxonomies)) {
     foreach ($terms as $key => $term) {
-      if (!in_array($term->slug, array('uncategorised', 'boite', 'display', 'packaging', 'serie-speciale', 'classique'))) { //pass the slug name here
+      if (!in_array($term->slug, array('uncategorised', 'boite', 'display', 'packaging', 'serie-speciale', 'mcl'))) { //pass the slug name here
         $new_terms[] = $term;
       }
     }

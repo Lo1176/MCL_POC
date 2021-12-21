@@ -94,3 +94,10 @@ hr, .line-separator {
   display: none;
 }
 // Swiper Cards END //
+
+//content-product-cat card
+.woocommerce-loop-category__title {
+  mark {
+    display: none;
+  }
+}
