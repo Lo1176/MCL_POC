@@ -60,7 +60,7 @@ get_header();
 
 
       <div class="row">
-        <div class="col order-md-last">
+        <div class="col order-last">
           <?php woocommerce_content(); ?>
         </div>
         <!-- sidebar -->
