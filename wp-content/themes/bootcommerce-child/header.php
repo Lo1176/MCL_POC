@@ -128,7 +128,7 @@
                         <?php esc_html_e('Close menu', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
                     </div>
                     <div class="offcanvas-body">
-                        <div class="my-offcancas-sidenavbar">
+                        <div class="my-offcanvas-sidenavbar">
                             <!-- Bootstrap 5 Nav Walker Main Menu -->
                             <?php
                             wp_nav_menu(array(
@@ -154,7 +154,7 @@
                     <?php esc_html_e('Close account', 'bootscore'); ?> <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="offcanvas-body">
-                    <div class="my-offcancas-account">
+                    <div class="my-offcanvas-account">
                         <?php include get_template_directory() . '/woocommerce/myaccount/my-account-offcanvas.php'; ?>
                     </div>
                 </div>
