@@ -25,7 +25,7 @@ get_header();
     <main id="main" class="site-main">
 
       <!-- Breadcrumb -->
-      <div class="text-danger">
+      <div class="text-black">
         <?php woocommerce_breadcrumb(); ?>
       </div>
 

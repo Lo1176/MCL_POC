@@ -430,7 +430,7 @@ function ts_get_subcategory_terms($terms, $taxonomies, $args)
   $new_terms = array();
   // if it is a product category and on the shop page
   #if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
-  if ( in_array('product_cat', $taxonomies) ) {
+  if ( in_array('product_cat', $taxonomies) && !is_admin() ) {
     foreach ($terms as $key => $term) {
       if (!in_array($term->slug, array('boite', 'display', 'etui', 'mcl', 'packaging'))) { //pass the slug name here
         $new_terms[] = $term;
@@ -519,8 +519,8 @@ remove_filter('woocommerce_breadcrumb_defaults', 'bs_woocommerce_breadcrumbs', 1
 function mcl_woocommerce_breadcrumbs()
 {
   return array(
-    'delimiter'   => ' &nbsp;&#47;&nbsp; ',
-    'wrap_before' => '<nav class="breadcrumb mb-4 mt-2 py-2 px-3 small" itemprop="breadcrumb">',
+    'delimiter'   => '<div class"delimiter style="font-size: 1.25rem;">&nbsp;&gt;&nbsp;</div> ',
+    'wrap_before' => '<nav class="breadcrumb align-items-center mb-4 mt-2 py-2 px-3 small" itemprop="breadcrumb">',
     'wrap_after'  => '</nav>',
     'before'      => '',
     'after'       => '',
