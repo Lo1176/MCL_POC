@@ -21,8 +21,6 @@ get_header();
         <div class="container entry-header d-flex justify-content-center pb-3">
           <h1 id="brand-logo-header" class="d-flex entry-title"><img id="lw-logo" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/lw-uncolored.svg'); ?> alt="Maison Château Laguiole image">
         </div>
-        <!-- no title tbe -->
-        <!-- no title tbe END -->
       </header>
 
       <div class="container-fluid pb-5">
