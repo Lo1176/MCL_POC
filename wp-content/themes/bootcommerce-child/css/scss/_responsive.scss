@@ -190,11 +190,13 @@
     display: none;
   }
 
-  // actuality id bg-dark and text-white
-  // #mcl-actuality {
-  //   color: $white;
-  //   background-color: $black;
-  // }
+  // sidebar
+  .sidebar-1 {
+    section:nth-child(1n+2) {
+      display: none;
+
+    }
+  }
 }
 /* Smartphone END *****************************************/
 
