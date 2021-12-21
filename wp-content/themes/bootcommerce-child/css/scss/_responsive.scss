@@ -8,7 +8,9 @@
 
 // }
 
-/* Smartphone */
+/************************************************** 
+ * Smartphone
+ */
 @media screen and (max-width: 600px) {
 
   // home page
@@ -34,16 +36,8 @@
       }
     }
   }
-  // #collection {
-  //   padding-left: 0 !important;
-  //   padding-right: 0 !important;
-  // }
 
   // nav
-  #nav-main .container-fluid {
-    // justify-content: flex-end;
-    // justify-content: space-around !important;
-  }
   .navbar-brand {
     .logo {
       height: 42px;
@@ -113,12 +107,21 @@
   .woocommerce div.product p.price, .woocommerce div.product span.price, .card .price {
     text-align-last: end;
   }
-  .woocommerce div.product form.cart {
-    // margin-bottom: 8px !important;
-  }
 
-  // btn quantity
+  // btn quantity && cart
+  .woocommerce-cart-form__cart-item.cart_item > td {
+    border-color: $gray-100 !important;
+
+  }
+  .woocommerce-cart-form__contents {
+    border: 0 !important;
+  }
+  .woocommerce-cart-form__cart-item.cart_item:nth-child(2n) > td {
+    background-color: $white !important;
+  }
   .woocommerce-cart-form__cart-item.cart_item {
+    margin-bottom: 1rem;
+    border: 1px solid $gv;
         .product-quantity {
           width: 100%;
             .button-arrow-qty {
@@ -193,5 +196,5 @@
   //   background-color: $black;
   // }
 }
-/* Smartphone END */
+/* Smartphone END *****************************************/
 
