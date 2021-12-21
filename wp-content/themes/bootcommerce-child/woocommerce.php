@@ -16,7 +16,7 @@
 get_header();
 ?>
 
-<div id="content" class="site-content container-fluid pb-5 mt-1">
+<div id="content" class="site-content container-fluid pb-5">
   <div id="primary" class="content-area">
 
     <!-- Hook to add something nice -->
