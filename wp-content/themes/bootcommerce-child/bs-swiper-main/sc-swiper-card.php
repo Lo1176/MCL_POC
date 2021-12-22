@@ -87,7 +87,7 @@ function bootscore_swiper($atts)
 
                                 <?php #bootscore_category_badge(); 
                                 ?>
-                                <div class="swiper-card-text mx-4">
+                                <div class="swiper-card-text m-4">
                                     <!-- Title -->
                                     <h2 class="blog-post-title">
                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
