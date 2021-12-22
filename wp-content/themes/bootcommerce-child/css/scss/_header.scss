@@ -1,3 +1,9 @@
 #nav-main>.btn, .btn-outline-primary  {
     border: none !important;
 }
+
+#nav-main {
+        .woocommerce-Price-amount {
+            display: none;
+        }
+}

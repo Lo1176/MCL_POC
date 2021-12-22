@@ -2,6 +2,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 464px;
 }
 .featured-full-width-img {
     background-position: inherit;
@@ -26,6 +27,8 @@
             position: relative;
             top: -66px; // blason MCL position (en relation avec padding navbar et _svg size
             z-index: 1020;
+            height: 252px; // Shera
+            width: 264px; // Shera
         }
       
 
