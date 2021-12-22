@@ -24,10 +24,21 @@
 #collection {
     .card {
       border: none;
+      margin: 1rem;
+      // width: 18rem;
+      width: 332px; // Shera
         .card-title {
           text-transform: uppercase;
+          font-size: 2rem;  // Shera
+          font-weight: 300; // Shera
+            strong {
+              font-weight: 500;
+            }
         }
         .card-img-top, img {
+          min-height: 260px; // shera
+          min-width: 316px; // shera
+          background-color: $gray-200; // shera
           height: 286px;
           object-fit: contain;
         }
