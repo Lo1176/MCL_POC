@@ -424,7 +424,7 @@ add_filter('upload_mimes', 'mcl_mime_types');
 /**
  * Hide some product-categories
  */
-add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
+// add_filter('get_terms', 'ts_get_subcategory_terms', 10, 3);
 function ts_get_subcategory_terms($terms, $taxonomies, $args)
 {
   $new_terms = array();
@@ -498,6 +498,7 @@ function mcl_change_return_shop_url()
 add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 
 // change 'shop' breadcrumb to home URL
+// add_action('template_redirect', 'custom_shop_page_redirect');
 function custom_shop_page_redirect()
 {
   $search = array('s', 'taxonomy');
@@ -507,7 +508,6 @@ function custom_shop_page_redirect()
     exit();
   }
 }
-add_action('template_redirect', 'custom_shop_page_redirect');
 /** redirect URL END */
 
 
@@ -683,4 +683,4 @@ function bootscore_widgets_init()
 
 }
 add_action('widgets_init', 'bootscore_widgets_init');
-// Widgets END
+// Register Widgets END
