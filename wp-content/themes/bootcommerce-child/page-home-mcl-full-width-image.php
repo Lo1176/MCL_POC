@@ -71,18 +71,18 @@ get_header();
           </div>
 
 
-          <div class="container">
+          <div class="container-fluid mx-sm-2">
             <?php echo do_shortcode('[bs-swiper-card type="post" category="non-classe" order="DESC" orderby="date" posts="8"]'); ?>
           </div>
           <!-- actualités END -->
 
-          <footer class="entry-footer">
+          <footer class=" entry-footer">
 
-          </footer>
+            </footer>
 
-          <?php comments_template(); ?>
+            <?php comments_template(); ?>
 
-        </div><!-- container -->
+          </div><!-- container -->
 
     </main><!-- #main -->
 

@@ -1,10 +1,13 @@
 .brand {
   padding-bottom: 2.5rem;
     .img-fluid {
-      height: 260px;
+      // height: 260px;
+      height: 432px; // Shera
+      width: 432px; // must be eq to height The Shera's square
     }
     .figure {
-      padding: 0 8px;
+      // padding: 0 8px;
+      padding: 0 14px;
     }
 }
 
@@ -66,8 +69,10 @@ hr, .line-separator {
     .swiper-slide {
         .card-img-top {
           // border-radius: 1px;
-          width: 320px;
-          height: 240px;
+          // width: 320px;
+          // height: 240px;
+          width: 432px;
+          height: 400px;
           object-fit: cover;
         }
         .card-body {
