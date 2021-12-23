@@ -8,6 +8,19 @@
   width: 32px;
 }
 
+// SVG in header nav-bar (user, cart ...)
+#nav-main {
+  img, svg {
+    width: 24px; // Gilles SVG
+  }
+  .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:before, a.wishlist_products_counter.top_wishlist-heart:before, span.wishlist_products_counter.top_wishlist-heart:before, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:before {
+    font-size: 36px !important; // wishlist heart plugin
+  }
+  .fas.fa-bars {
+    font-size: 28px; // burger bars fontawesome
+  }
+}
+
 // .badge {
 //   background-color: $gv;
 // }
