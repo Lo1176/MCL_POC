@@ -56,7 +56,7 @@ if (!defined('ABSPATH')) {
           <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="username_1"><?php esc_html_e('Username or email address', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
             <input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="username" id="username_1" autocomplete="username" value="<?php echo (!empty($_POST['username'])) ? esc_attr(wp_unslash($_POST['username'])) : ''; ?>" /><?php // @codingStandardsIgnoreLine 
-                                                                                                                                                                                                                                                                                ?>
+                                                                                                                                                                                                                                                                        ?>
           </p>
           <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="password_1"><?php esc_html_e('Password', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
@@ -65,18 +65,22 @@ if (!defined('ABSPATH')) {
 
           <?php do_action('woocommerce_login_form'); ?>
 
-          <p class="form-check mb-3">
-            <input name="rememberme" type="checkbox" class="form-check-input" id="rememberme_1" value="forever" />
-            <label class="form-check-label" for="rememberme_1"><?php _e('Remember me', 'woocommerce'); ?></label>
-          </p>
+          <div class="row my-1">
 
+
+            <p class="col-12 col-sm-6 woocommerce-LostPassword lost_password mb-0">
+              <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
+            </p>
+            <p class="col-12 col-sm-6 form-check">
+              <input name="rememberme" type="checkbox" class="form-check-input" id="rememberme_1" value="forever" />
+              <label class="form-check-label" for="rememberme_1"><?php _e('Remember me', 'woocommerce'); ?></label>
+            </p>
+          </div>
           <p class="form-row">
             <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
             <button type="submit" class="woocommerce-form-login__submit btn btn-primary" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
           </p>
-          <p class="woocommerce-LostPassword lost_password mb-0 mt-3">
-            <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
-          </p>
+
 
           <?php do_action('woocommerce_login_form_end'); ?>
 
@@ -103,7 +107,7 @@ if (!defined('ABSPATH')) {
               <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                 <label for="reg_username_1"><?php esc_html_e('Username', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
                 <input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="username" id="reg_username_1" autocomplete="username" value="<?php echo (!empty($_POST['username'])) ? esc_attr(wp_unslash($_POST['username'])) : ''; ?>" /><?php // @codingStandardsIgnoreLine 
-                                                                                                                                                                                                                                                                                        ?>
+                                                                                                                                                                                                                                                                                ?>
               </p>
 
             <?php endif; ?>
@@ -111,7 +115,7 @@ if (!defined('ABSPATH')) {
             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
               <label for="reg_email_1"><?php esc_html_e('Email address', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
               <input type="email" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="email" id="reg_email_1" autocomplete="email" value="<?php echo (!empty($_POST['email'])) ? esc_attr(wp_unslash($_POST['email'])) : ''; ?>" /><?php // @codingStandardsIgnoreLine 
-                                                                                                                                                                                                                                                                        ?>
+                                                                                                                                                                                                                                                                ?>
             </p>
 
             <?php if ('no' === get_option('woocommerce_registration_generate_password')) : ?>
