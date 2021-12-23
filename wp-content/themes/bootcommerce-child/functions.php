@@ -339,6 +339,35 @@ if (!function_exists('loop_columns')) {
 /** 
  * content-product
  */
+// test
+
+add_action( 'pre_get_posts', 'njengah_hide_out_of_stock_products' );
+
+function njengah_hide_out_of_stock_products( $query ) {
+
+  if ( ! $query->is_main_query() || is_admin() ) {
+    return;
+  }
+
+     if ( $outofstock_term = get_term_by( 'name', 'outofstock', 'product_visibility' ) ) {
+
+     $tax_query = (array) $query->get('tax_query');
+
+      $tax_query[] = array(
+      'taxonomy' => 'product_visibility',
+      'field' => 'term_taxonomy_id',
+      'terms' => array( $outofstock_term->term_taxonomy_id ),
+      'operator' => 'NOT IN'
+   );
+
+  $query->set( 'tax_query', $tax_query );
+
+}
+
+  remove_action( 'pre_get_posts', 'njengah_hide_out_of_stock_products' );
+
+}
+// test end
 // remove woocommerce-result-count
 add_action('after_setup_theme', 'mcl_remove_product_result_count', 99);
 function mcl_remove_product_result_count()
@@ -367,6 +396,15 @@ function action_woocommerce_before_shop_loop_item()
 // add 3D_button after shop loop item
 add_action('woocommerce_after_shop_loop_item', 'custom_3D_button', 21);
 
+// Override loop template and show quantities next to add to cart buttons
+add_filter('woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2);
+function quantity_inputs_for_woocommerce_loop_add_to_cart_link($html, $product)
+{
+  if ($product && $product->is_type('simple') && $product->is_purchasable() && $product->is_in_stock() && !$product->is_sold_individually()) {
+    $html = wc_get_template_html('single-product/add-to-cart/simple.php');
+  }
+  return $html;
+}
 
 // when product is out of stock "choix des options"
 // instead of "Lire la suite"

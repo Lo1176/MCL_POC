@@ -24,7 +24,7 @@ if (!$product->is_purchasable()) {
   return;
 }
 
-echo wc_get_stock_html($product); // WPCS: XSS ok.
+echo wc_get_stock_html($product); // WPCS: XSS ok.=> affiche le stock
 
 if ($product->is_in_stock()) : ?>
 
