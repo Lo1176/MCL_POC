@@ -43,7 +43,7 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
-                    <div class="container-fluid fixed-top py-2 pt-sm-3 bg-white border-bottom justify-content-center justify-content-sm-between">
+                    <div class="container-fluid smart-scroll py-2 pt-sm-3 bg-white border-bottom justify-content-center justify-content-sm-between">
 
                         <!-- Burger-btn toggler LEFT for large devise -->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
