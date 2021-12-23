@@ -39,9 +39,9 @@ if (!defined('ABSPATH')) {
 
   <?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
 
-    <div id="customer_login_1">
+    <div id="customer_login_1" class="row">
 
-      <div class="login">
+      <div class="login col-12 col-sm-6">
 
       <?php endif; ?>
 
@@ -88,7 +88,7 @@ if (!defined('ABSPATH')) {
 
       </div>
 
-      <div class="register">
+      <div class="register col-12 col-sm-6">
 
         <p class="h2"><?php esc_html_e('Register', 'woocommerce'); ?></p>
 
