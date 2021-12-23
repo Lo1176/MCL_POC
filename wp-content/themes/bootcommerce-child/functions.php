@@ -340,32 +340,15 @@ if (!function_exists('loop_columns')) {
  * content-product
  */
 // test
-
-add_action( 'pre_get_posts', 'njengah_hide_out_of_stock_products' );
-
-function njengah_hide_out_of_stock_products( $query ) {
-
-  if ( ! $query->is_main_query() || is_admin() ) {
-    return;
+// add_filter('woocommerce_get_stock_html', '__return_empty_string', 10, 2);
+// add_filter('woocommerce_get_stock_html', 'my_wc_hide_in_stock_message', 10, 2);
+function my_wc_hide_in_stock_message($html, $product)
+{
+  if ($product->is_in_stock()) {
+    return '';
   }
 
-     if ( $outofstock_term = get_term_by( 'name', 'outofstock', 'product_visibility' ) ) {
-
-     $tax_query = (array) $query->get('tax_query');
-
-      $tax_query[] = array(
-      'taxonomy' => 'product_visibility',
-      'field' => 'term_taxonomy_id',
-      'terms' => array( $outofstock_term->term_taxonomy_id ),
-      'operator' => 'NOT IN'
-   );
-
-  $query->set( 'tax_query', $tax_query );
-
-}
-
-  remove_action( 'pre_get_posts', 'njengah_hide_out_of_stock_products' );
-
+  return $html;
 }
 // test end
 // remove woocommerce-result-count

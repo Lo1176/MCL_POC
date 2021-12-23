@@ -26,7 +26,7 @@ if (empty($product) || !$product->is_visible()) {
 }
 ?>
 
-<?php #get_sidebar(); 
+<?php get_sidebar(); 
 ?>
 
 <div class="col-md-6 col-lg-4 col-xxl-3 mb-5">
