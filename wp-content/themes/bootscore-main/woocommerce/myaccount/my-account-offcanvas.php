@@ -72,7 +72,7 @@ if (!defined('ABSPATH')) {
 
           <p class="form-row">
             <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
-            <button type="submit" class="woocommerce-form-login__submit btn btn-outline-primary" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
+            <button type="submit" class="woocommerce-form-login__submit btn btn-primary" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
           </p>
           <p class="woocommerce-LostPassword lost_password mb-0 mt-3">
             <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
@@ -131,7 +131,7 @@ if (!defined('ABSPATH')) {
 
             <p class="woocommerce-form-row form-row mb-0">
               <?php wp_nonce_field('woocommerce-register', 'woocommerce-register-nonce'); ?>
-              <button type="submit" class="btn btn-outline-primary woocommerce-form-register__submit" name="register" value="<?php esc_attr_e('Register', 'woocommerce'); ?>"><?php esc_html_e('Register', 'woocommerce'); ?></button>
+              <button type="submit" class="btn btn-primary woocommerce-form-register__submit" name="register" value="<?php esc_attr_e('Register', 'woocommerce'); ?>"><?php esc_html_e('Register', 'woocommerce'); ?></button>
             </p>
 
             <?php do_action('woocommerce_register_form_end'); ?>
