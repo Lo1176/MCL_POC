@@ -33,6 +33,12 @@
       
 
 }
+.brand {
+    #cl-logo, #lw-logo, #gv-logo, #mg-logo {
+        height: 376px; // Shera
+        width: 376px; // Shera
+    }
+}
 
 #mcl-logo {
     align-self: center;
@@ -44,21 +50,29 @@
 }
 #cl-logo {
     background-color: $cl;
-    height: 252px; // Shera
-    width: 264px; // Shera
+    // height: 252px; // Shera
+    // width: 264px; // Shera
+    height: 232px; // Shera
+    width: 232px; // Shera
 }
 #lw-logo {
     background-color: $lw;
-    height: 252px; // Shera
-    width: 264px; // Shera
+    // height: 252px; // Shera
+    // width: 264px; // Shera
+     height: 232px; // Shera
+    width: 232px; // Shera
 }
 #mg-logo {
     background-color: $mg;
-    height: 252px; // Shera
-    width: 264px; // Shera
+    // height: 252px; // Shera
+    // width: 264px; // Shera
+     height: 232px; // Shera
+    width: 232px; // Shera
 }
 #gv-logo {
     background-color: $gv;
-    height: 252px; // Shera
-    width: 264px; // Shera
+    // height: 252px; // Shera
+    // width: 264px; // Shera
+     height: 232px; // Shera
+    width: 232px; // Shera
 }
