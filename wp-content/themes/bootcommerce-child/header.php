@@ -81,7 +81,7 @@
                             </button>
 
                             <!-- Mini Cart Toggler -->
-                            <button class="btn btn-outline-primary ms-1 me-md-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
+                            <button class="btn btn-outline-primary ms-1 me-md-4 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
                                 <!-- <i class="fas fa-shopping-bag"></i> -->
                                 <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart.svg" alt="cart logo">
 
