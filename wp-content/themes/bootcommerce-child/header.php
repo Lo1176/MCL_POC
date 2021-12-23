@@ -47,7 +47,8 @@
 
                         <!-- Burger-btn toggler LEFT for large devise -->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
-                            <i class="fas fa-bars"></i>
+                            <!-- <i class="fas fa-bars"></i> -->
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
                         </button>
 
                         <!-- btn retour en arrière -->
@@ -99,7 +100,8 @@
 
                             <!-- Navbar Toggler Right for small devise-->
                             <button class="btn btn-outline-primary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
-                                <i class="fas fa-bars"></i>
+                                <!-- <i class="fas fa-bars"></i> -->
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
                             </button>
 
 

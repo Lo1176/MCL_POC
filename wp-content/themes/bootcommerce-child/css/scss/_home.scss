@@ -26,7 +26,7 @@
             justify-content: center;
             // margin: 40px;
             position: relative;
-            top: -28px; // blason MCL position (en relation avec padding navbar et _svg size
+            // top: -28px; // blason MCL position (en relation avec padding navbar et _svg size
             z-index: 1020;
         
         }
@@ -38,8 +38,8 @@
     align-self: center;
     background-color: $mcl;
     padding: 24px;
-    height: 224px; // Shera
-    width: 224px; // Shera
+    height: 232px; // Shera
+    width: 232px; // Shera
 
 }
 #cl-logo {
