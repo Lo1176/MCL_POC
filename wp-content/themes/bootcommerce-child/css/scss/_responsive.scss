@@ -12,7 +12,10 @@
  * Smartphone
  */
 @media screen and (max-width: 600px) {
-
+  // body padding top from scroll header
+  body {
+    padding-top: 48;
+  }
   // home page
   .entry-header {
       #brand-logo-header {
@@ -33,6 +36,11 @@
     height: 332px;
     margin-left: 24px;
     margin-right: 24px;
+      #cl-logo, #lw-logo, #gv-logo, #mg-logo {
+        height: 186px;
+        width: 186px;
+
+      }
   }
   .brand {
     #cl-logo, #lw-logo, #gv-logo, #mg-logo {
@@ -51,19 +59,20 @@
 
   // nav
   #nav-main {
-    img, svg {
-      // width: 44px;
-    }
+    min-height: 0 !important;
+      img, svg {
+        // width: 44px;
+      }
 
-    .navbar-brand {
-      .logo.xs {
-        width: 104px;
-        // width: 26vw;
+      .navbar-brand {
+        .logo.xs {
+          width: 104px;
+          // width: 26vw;
+        }
+        .logo {
+          height: 42px;
+        }
       }
-      .logo {
-        height: 42px;
-      }
-    }
   }
 
   //burger small devise

@@ -18,7 +18,7 @@ get_header();
 
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
       <header class="entry-header d-flex align-items-sm-start featured-full-width-img-brand text-light" style="background-image: url('<?php echo $thumb['0']; ?>')">
-        <div class="container entry-header d-flex justify-content-center pb-3">
+        <div class="container entry-header d-flex justify-content-center">
           <h1 id="brand-logo-header" class="d-flex entry-title"><img id="lw-logo" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/lw-uncolored.svg'); ?> alt="Maison Château Laguiole image">
         </div>
       </header>

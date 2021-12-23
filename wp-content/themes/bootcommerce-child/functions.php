@@ -472,14 +472,14 @@ function mcl_template_redirect()
   }
 add_action('template_redirect', 'mcl_template_redirect');
 
-// redirect function for Guy-Vialis home page
+// redirect function for Guy-Vialis and Mateo Gallud to 'soon'
 function mcl_gv_redirect() {
   if ( is_page(1704) ) {
-    $redirect_page_id = 2330; // guy-vialis page_id
+    $redirect_page_id = 2330; // 'soon' page_id
     wp_redirect(get_permalink($redirect_page_id));
     exit();
   } elseif ( is_page(3415) ) {
-    $redirect_page_id = 2330; // guy-vialis page_id
+    $redirect_page_id = 2330; // 'soon' page_id
     wp_redirect(get_permalink($redirect_page_id));
     exit();
 
@@ -498,7 +498,7 @@ function mcl_change_return_shop_url()
 add_filter('woocommerce_return_to_shop_redirect', 'mcl_change_return_shop_url');
 
 // change 'shop' breadcrumb to home URL
-// add_action('template_redirect', 'custom_shop_page_redirect');
+add_action('template_redirect', 'custom_shop_page_redirect');
 function custom_shop_page_redirect()
 {
   $search = array('s', 'taxonomy');
