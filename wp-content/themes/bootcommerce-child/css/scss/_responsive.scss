@@ -22,9 +22,17 @@
         height: fit-content;
         z-index: 1010;
           #mcl-logo {
-            padding: 40px;
+            // padding: 40px;
+            padding: 24px;
+            height: 186px;
+            width: 186px;
           }
       }
+  }
+  .featured-full-width-img-brand {
+    height: 332px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
   .brand {
     .figure {
