@@ -2,7 +2,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 464px;
+    // height: 464px;
+    height: 400px;
 }
 .featured-full-width-img {
     background-position: inherit;
@@ -23,12 +24,11 @@
 .entry-header {
         #brand-logo-header {
             justify-content: center;
-            margin: 40px;
+            // margin: 40px;
             position: relative;
-            top: -66px; // blason MCL position (en relation avec padding navbar et _svg size
+            top: -28px; // blason MCL position (en relation avec padding navbar et _svg size
             z-index: 1020;
-            height: 252px; // Shera
-            width: 264px; // Shera
+        
         }
       
 
@@ -37,18 +37,28 @@
 #mcl-logo {
     align-self: center;
     background-color: $mcl;
-    padding: 80px;
+    padding: 24px;
+    height: 224px; // Shera
+    width: 224px; // Shera
 
 }
 #cl-logo {
     background-color: $cl;
+    height: 252px; // Shera
+    width: 264px; // Shera
 }
 #lw-logo {
     background-color: $lw;
+    height: 252px; // Shera
+    width: 264px; // Shera
 }
 #mg-logo {
     background-color: $mg;
+    height: 252px; // Shera
+    width: 264px; // Shera
 }
 #gv-logo {
     background-color: $gv;
+    height: 252px; // Shera
+    width: 264px; // Shera
 }
