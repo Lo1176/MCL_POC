@@ -67,7 +67,6 @@ if (!defined('ABSPATH')) {
 
           <div class="row my-1">
 
-
             <p class="col-12 col-sm-6 woocommerce-LostPassword lost_password mb-0">
               <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
             </p>

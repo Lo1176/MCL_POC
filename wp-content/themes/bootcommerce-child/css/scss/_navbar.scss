@@ -65,11 +65,13 @@
 // Customer Login
 #offcanvas-user {
     width: 90vw;
-     h2 {
-         text-transform: uppercase;
-         padding-left: 1rem;
-     }
-     button {
-         width: 100%;
-     }
+}
+#offcanvas-user, #customer_login {
+      h2 {
+        text-transform: uppercase;
+        padding-left: 1rem;
+      }
+      button {
+        width: 100%;
+      }
 }
