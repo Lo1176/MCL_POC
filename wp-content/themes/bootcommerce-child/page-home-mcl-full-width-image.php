@@ -41,7 +41,7 @@ get_header();
             <h2 class="title-separation">Nos marques</h2>
           </div>
 
-          <div class="brand d-sm-flex justify-content-center">
+          <div class="brand d-flex flex-wrap justify-content-center">
 
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('chateau-laguiole'))); ?>>
               <figure class="figure">

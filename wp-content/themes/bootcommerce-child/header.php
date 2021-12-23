@@ -43,7 +43,7 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
-                    <div class="container-fluid smart-scroll py-2 pt-sm-3 bg-white border-bottom justify-content-center justify-content-sm-between">
+                    <div class="container-fluid smart-scroll py-2 pt-sm-3 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between">
 
                         <!-- Burger-btn toggler LEFT for large devise -->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
@@ -55,7 +55,7 @@
                         <!-- <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2"  onclick="history.go(-1);">RETOUR</button> -->
 
                         <!-- Logo Brand -->
-                        <a class="navbar-brand align-center xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
+                        <a class="navbar-brand align-center xs d-sm-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
                         <!-- logo brand disable for large devise class="... md d-md-block" -->
                         <a class="navbar-brand d-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo md"></a>
 
@@ -99,7 +99,7 @@
                             </button>
 
                             <!-- Navbar Toggler Right for small devise-->
-                            <button class="btn btn-outline-primary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                            <button class="btn btn-outline-primary d-md-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                                 <!-- <i class="fas fa-bars"></i> -->
                                 <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
                             </button>
