@@ -36,7 +36,7 @@ get_header();
             <?php #get_sidebar(); 
             ?>
             <div class="col">
-              <div class="container">
+              <div class="container  mt-5 mb-2">
                 <!-- content from wordpress 'modifier la page' -->
                 <?php the_content(); ?>
 

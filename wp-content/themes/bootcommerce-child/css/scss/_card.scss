@@ -26,7 +26,7 @@
       border: none;
       margin: 1rem;
       // width: 18rem;
-      width: 400px; // Shera
+      width: 368px; // Shera
         .card-title {
           text-transform: uppercase;
           font-size: 2rem;  // Shera
@@ -36,10 +36,10 @@
             }
         }
         .card-img-top, img {
-          min-height: 344px; // shera
-          min-width: 400px; // shera
-          background-color: $gray-200; // shera
-          height: 286px;
+          height: 344px; // shera
+          // min-width: 400px; // shera
+          // background-color: $gray-200; // shera
+          // height: 286px;
           object-fit: contain;
         }
         .card-text {
