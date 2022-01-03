@@ -13,7 +13,6 @@ function bootscore_child_enqueue_styles()
 
   // custom.js
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
- 
 }
 /**
  * Set WooCommerce image dimensions upon theme activation
@@ -22,9 +21,8 @@ function bootscore_child_enqueue_styles()
 add_filter('woocommerce_enqueue_styles', 'mcl_dequeue_styles');
 function mcl_dequeue_styles($enqueue_styles)
 {
-  unset( $enqueue_styles['woocommerce-layout'] ); //Remove woocommerce-page css
+  unset($enqueue_styles['woocommerce-layout']); //Remove woocommerce-page css
   return $enqueue_styles;
-
 }
 
 // WooCommerce
@@ -48,7 +46,8 @@ add_action('init', 'mcl_custom_new_menu');
  * add wishlist button
  */
 // do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
-function mcl_whishlist_icon() {
+function mcl_whishlist_icon()
+{
   echo do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
 };
 // add wish-icon on content-single-product.php
@@ -451,7 +450,7 @@ function ts_get_subcategory_terms($terms, $taxonomies, $args)
   $new_terms = array();
   // if it is a product category and on the shop page
   #if (in_array('product_cat', $taxonomies) && !is_admin() && is_shop()) {
-  if ( in_array('product_cat', $taxonomies) && !is_admin() ) {
+  if (in_array('product_cat', $taxonomies) && !is_admin()) {
     foreach ($terms as $key => $term) {
       if (!in_array($term->slug, array('boite', 'display', 'etui', 'mcl', 'packaging'))) { //pass the slug name here
         $new_terms[] = $term;
@@ -475,35 +474,35 @@ function mcl_template_redirect()
       wp_safe_redirect(get_permalink($redirect_page_id));
       exit();
     } elseif (is_product_category('chateau-laguiole')) {
-        $redirect_page_id = 245;
-        wp_safe_redirect(get_permalink($redirect_page_id));
-        exit();
+      $redirect_page_id = 245;
+      wp_safe_redirect(get_permalink($redirect_page_id));
+      exit();
     } elseif (is_product_category('mateo-gallud')) {
-        $redirect_page_id = 2330; // mateo-gallud page_id
-        wp_redirect(get_permalink($redirect_page_id));
-        exit();
-    } 
-    } elseif (is_product_category('guy-vialis')) {
-        $redirect_page_id = 2330; // guy-vialis page_id
-        wp_redirect(get_permalink($redirect_page_id));
-        exit();
-    } else {
-        return home_url();
+      $redirect_page_id = 2330; // mateo-gallud page_id
+      wp_redirect(get_permalink($redirect_page_id));
+      exit();
     }
+  } elseif (is_product_category('guy-vialis')) {
+    $redirect_page_id = 2330; // guy-vialis page_id
+    wp_redirect(get_permalink($redirect_page_id));
+    exit();
+  } else {
+    return home_url();
   }
+}
 add_action('template_redirect', 'mcl_template_redirect');
 
 // redirect function for Guy-Vialis and Mateo Gallud to 'soon'
-function mcl_gv_redirect() {
-  if ( is_page(1704) ) {
+function mcl_gv_redirect()
+{
+  if (is_page(1704)) {
     $redirect_page_id = 2330; // 'soon' page_id
     wp_redirect(get_permalink($redirect_page_id));
     exit();
-  } elseif ( is_page(3415) ) {
+  } elseif (is_page(3415)) {
     $redirect_page_id = 2330; // 'soon' page_id
     wp_redirect(get_permalink($redirect_page_id));
     exit();
-
   }
 }
 add_action('template_redirect', 'mcl_gv_redirect');
@@ -524,7 +523,7 @@ function custom_shop_page_redirect()
 {
   $search = array('s', 'taxonomy');
   if (is_shop() && !isset($_GET['s'])) {
- 
+
     wp_safe_redirect(home_url(), 302);
     exit();
   }
@@ -588,10 +587,10 @@ function bbloomer_quantity_based_pricing($cart)
 }
 
 /**
-* Register widget area.
-*
-* @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
-*/
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
 function bootscore_widgets_init()
 {
   // Top Nav
@@ -712,5 +711,14 @@ add_action('widgets_init', 'bootscore_widgets_init');
 /**
  * email customization
  */
-
+// add brands logo in email footer
+add_action('woocommerce_email_footer', 'mcl_footer_email', 11, 1);
+function mcl_footer_email()
+{ ?>
+  <div class="mcl-footer-email" style="filter: invert(11%) sepia(6%) saturate(407%) hue-rotate(21deg) brightness(0) contrast(97%); display: flex; width: 20%; padding: 48px;"><?php echo '<img src="' . home_url() . '/wp-content/uploads/2021/10/cl-uncolored.svg"
+  alt="Chateau Laguiole Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/lw-uncolored.svg"
+  alt="Ligne | W Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/mg-uncolored.svg"
+  alt="Mateo Gallud Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/gv-uncolored.svg"
+  alt="Guy Vialis Logo">';
+                                                                                                                                                                            }
 // email customization END
