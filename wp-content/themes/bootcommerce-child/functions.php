@@ -711,14 +711,4 @@ add_action('widgets_init', 'bootscore_widgets_init');
 /**
  * email customization
  */
-// add brands logo in email footer
-add_action('woocommerce_email_footer', 'mcl_footer_email', 11, 1);
-function mcl_footer_email()
-{ ?>
-  <div class="mcl-footer-email" style="filter: invert(11%) sepia(6%) saturate(407%) hue-rotate(21deg) brightness(0) contrast(97%); display: flex; width: 20%; padding: 48px;"><?php echo '<img src="' . home_url() . '/wp-content/uploads/2021/10/cl-uncolored.svg"
-  alt="Chateau Laguiole Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/lw-uncolored.svg"
-  alt="Ligne | W Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/mg-uncolored.svg"
-  alt="Mateo Gallud Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/gv-uncolored.svg"
-  alt="Guy Vialis Logo">';
-                                                                                                                                                                            }
 // email customization END
