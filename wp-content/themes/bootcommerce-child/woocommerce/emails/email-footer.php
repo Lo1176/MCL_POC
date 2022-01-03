@@ -39,9 +39,6 @@ defined( 'ABSPATH' ) || exit;
 								<td valign="top">
 									<table border="0" cellpadding="10" cellspacing="0" width="100%">
 										<tr>
-											<div class="link-footer-email">
-												
-											</div>
 											<div class="mcl-brand-logo-footer-email" style="filter: invert(11%) sepia(6%) saturate(407%) hue-rotate(21deg) brightness(0) contrast(97%); display: flex; width: 20%; padding: 48px;">
 												<?php echo '<img src="' . home_url() . '/wp-content/uploads/2021/10/cl-uncolored.svg"
 												alt="Chateau Laguiole Logo"><img src="' . home_url() . '/wp-content/uploads/2021/10/lw-uncolored.svg"

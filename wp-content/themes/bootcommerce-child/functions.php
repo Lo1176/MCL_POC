@@ -711,4 +711,20 @@ add_action('widgets_init', 'bootscore_widgets_init');
 /**
  * email customization
  */
+// add brands logo in email footer
+add_action('woocommerce_email_footer', 'mcl_footer_email', 5, 1);
+function mcl_footer_email()
+{ ?>
+  <div class="link-footer-email" style="background-color:#3c3c3b; padding: 2rem; color: white;">
+    <?php echo '
+                <i class="far fa-envelope">Email Us</i>
+                <img src="' . home_url() . '/wp-content/themes/bootcommerce-child/img/svg/phone.svg "
+alt="Phone Logo">Call Us
+                
+
+ 
+  ' ?>
+  </div>
+<?php
+}
 // email customization END
