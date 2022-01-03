@@ -39,7 +39,7 @@ if (!defined('ABSPATH')) {
 
   <?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
 
-    <div id="customer_login_1" class="totogigo-woo row">
+    <div id="customer_login_1" class="row">
 
       <div class="login col-12 col-sm-6">
 

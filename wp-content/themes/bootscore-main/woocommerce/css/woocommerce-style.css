@@ -12,19 +12,6 @@
 1. Header
 --------------------------------------------------------------*/
 
-/* Since 5.1.0.0 logo is on the left in new header. Fallback to old header */
-@media (max-width: 991px) {
-  #nav-main .navbar-brand:not(#nav-main .navbar-brand.xs, #nav-main .navbar-brand.md) {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0px);
-  }
-  #nav-main {
-    min-height: 56px;
-  }
-}
-/* Fallback to old header End */
-
 #offcanvas-cart .cart-list {
   /* height cart-footer */
   padding-bottom: 208px;
@@ -194,21 +181,12 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link:hover {
   width: 100%;
 }
 
-span.badge.bg-danger.sale {
+.badge.sale,
+.badge.sale-product {
   position: absolute;
-  left: 1rem;
   top: 1rem;
-}
-
-span.badge.bg-danger.sale,
-span.badge.bg-danger.sale-product {
+  left: 1rem;
   font-size: 1.25rem;
-}
-
-.sale-product {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
   z-index: 1;
 }
 
