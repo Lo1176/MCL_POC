@@ -690,7 +690,9 @@ function bootscore_widgets_init()
   ));
   // Footer 4 End
 
-  // 404 Page
+  /** 
+   * 404 Page
+   */
   register_sidebar(array(
     'name' => esc_html__('404 Page', 'bootscore'),
     'id' => '404-page',
@@ -705,3 +707,10 @@ function bootscore_widgets_init()
 }
 add_action('widgets_init', 'bootscore_widgets_init');
 // Register Widgets END
+
+
+/**
+ * email customization
+ */
+
+// email customization END
