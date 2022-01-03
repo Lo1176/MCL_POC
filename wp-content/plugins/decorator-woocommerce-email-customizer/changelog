@@ -1,0 +1,58 @@
+Version 1.1.2, 23 Dec 2021
+------------------------------------------------------------------------------------
+* [Compatibility] - Tested OK with WP 5.8.2
+* [Compatibility] - Tested OK with WC 6.0.0
+* Improvement: Code stability improved.
+
+Version 1.1.1, 11 Aug 2021
+------------------------------------------------------------------------------------
+* [Compatibility] - Tested OK with WP 5.8.
+* [Compatibility] - Tested OK with WC 5.6.
+
+Version 1.1.0, 3 Mar 2021
+------------------------------------------------------------------------------------
+* Tested OK with WC 5.1
+
+Version 1.0.9, 7 Jan 2021
+------------------------------------------------------------------------------------
+* Tested OK with WC 4.8
+* Tested OK with WP 5.6
+
+Version 1.0.8, 16 Sep 2020
+------------------------------------------------------------------------------------
+* Tested OK with WC 4.5.2
+
+Version 1.0.7, 15 Aug 2020
+------------------------------------------------------------------------------------
+* Tested OK with WC 4.3.3
+
+Version 1.0.6, 28 July 2020
+------------------------------------------------------------------------------------
+* Tested OK with WC 4.3.1
+
+Version 1.0.5, 31 March 2020
+------------------------------------------------------------------------------------
+* Tested OK with WP 5.4
+* Tested OK with WC 4.0.1
+
+Version 1.0.4, 21 March 2020
+------------------------------------------------------------------------------------
+* Tested OK with WP 5.3
+* Tested OK with WC 4.0.0
+
+Version 1.0.3, 8 May 2017
+------------------------------------------------------------------------------------
+* Fix - Warning related to second parameter of date()
+* Dev - New filter hook rp_decorator_option_value to override any value
+
+Version 1.0.2, 4 April 2017
+------------------------------------------------------------------------------------
+* Fix - Styles are not always applied to order items table
+
+Version 1.0.1, 25 February 2017
+------------------------------------------------------------------------------------
+* Tweak - Improved compatibility with WooCommerce 2.7
+
+Version 1.0, 12 December 2016
+------------------------------------------------------------------------------------
+* Initial release
