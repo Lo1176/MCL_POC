@@ -43,19 +43,33 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
-                    <div class="container-fluid smart-scroll py-2 pt-sm-3 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between align-items-end">
+                    <div class="container-fluid smart-scroll py-0 pt-sm-3 ms-1 ms-md-2 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between align-items-end">
+
+                        <!-- test burger btn  -->
+                        <!-- Collapse button -->
+                        <button class="btn animated-burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23" aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="stripes nav-icon-5">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                        <!-- test burger btn  END-->
 
                         <!-- Burger-btn toggler LEFT for large devise -->
-                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2 burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <!-- <i class="fas fa-bars"></i> -->
                             <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
                         </button>
+
+
+
 
                         <!-- btn retour en arrière -->
                         <!-- <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2"  onclick="history.go(-1);">RETOUR</button> -->
 
                         <!-- Logo Brand -->
-                        <a class="navbar-brand align-center xs d-sm-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
+                        <a class="navbar-brand align-center xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo xs"></a>
                         <!-- logo brand disable for large devise class="... md d-md-block" -->
                         <a class="navbar-brand d-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/mcl-black.svg" alt="logo" class="logo md"></a>
 
@@ -73,7 +87,7 @@
                             </div>
 
                             <!-- contact -->
-                            <div class="contact-link me-3">
+                            <div class="contact-link d-none d-md-block me-3">
                                 <a href="<?php echo esc_url(get_permalink(get_page_by_title('contact'))); ?>" class="d-inline-flex align-baseline">
 
                                     <img class="phone-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/phone.svg" alt="phone logo" class="">
@@ -82,7 +96,7 @@
                             </div>
 
                             <!-- flag -->
-                            <div class="flag-link me-3">
+                            <div class="flag-link d-none d-md-block me-3">
                                 <a href="<?php #echo esc_url(get_permalink(get_page_by_title('contact'))); 
                                             ?>" class="d-inline-flex align-items-center">
 
@@ -93,7 +107,7 @@
                             </div>
 
                             <!-- need help -->
-                            <div class="help-link me-3">
+                            <div class="help-link d-none d-md-block me-3">
                                 <a href="<?php echo esc_url(get_permalink(get_page_by_title('aide'))); ?>" class="d-inline-flex align-items-center">
 
                                     <img class="help-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/help.svg" alt="help logo" class="">
@@ -102,7 +116,7 @@
                             </div>
 
                             <!-- vertical separator  -->
-                            <div class="vertical-separator me-3">
+                            <div class="vertical-separator d-none d-md-block me-3">
                                 <h2 class="mb-0">|</h2>
                             </div>
 

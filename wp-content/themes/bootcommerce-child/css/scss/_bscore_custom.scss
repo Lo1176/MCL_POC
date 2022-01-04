@@ -15,3 +15,7 @@
 h2 {
     font-weight: $font-weight-light;
 }
+
+.btn:focus {
+    box-shadow: none;
+}

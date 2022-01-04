@@ -142,4 +142,15 @@ jQuery(document).ready(function ($) {
   //   }
   // });
 
+  // Burger Btn Animation
+  const icons = document.querySelectorAll('.stripes');
+  icons.forEach (icon => {  
+    icon.addEventListener('click', (event) => {
+      icon.classList.toggle("open");
+    });
+  });
+
+
+
+
 }); // jQuery End
