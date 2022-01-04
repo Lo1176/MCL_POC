@@ -43,7 +43,7 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
-                    <div class="container-fluid smart-scroll py-2 pt-sm-3 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between">
+                    <div class="container-fluid smart-scroll py-2 pt-sm-3 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between align-items-end">
 
                         <!-- Burger-btn toggler LEFT for large devise -->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
@@ -61,7 +61,7 @@
 
 
 
-                        <div class="header-actions d-flex align-items-center">
+                        <div class="header-actions d-flex align-items-end">
 
                             <!-- Top Nav Widget select the one you prefere-->
                             <div class="top-nav-widget">
@@ -72,19 +72,55 @@
                                 <?php endif; ?>
                             </div>
 
+                            <!-- contact -->
+                            <div class="contact-link me-3">
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('contact'))); ?>" class="d-inline-flex align-baseline">
+
+                                    <img class="phone-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/phone.svg" alt="phone logo" class="">
+                                    <p class="my-0 mx-1">Contactez-nous</p>
+                                </a>
+                            </div>
+
+                            <!-- flag -->
+                            <div class="flag-link me-3">
+                                <a href="<?php #echo esc_url(get_permalink(get_page_by_title('contact'))); 
+                                            ?>" class="d-inline-flex align-items-center">
+
+                                    <img class="flag-logo" src="<?php echo esc_url(get_stylesheet_directory_uri());
+                                                                ?>/img/logo/france.png" alt="flag logo" class="">
+                                    <p class="my-0 mx-1"></p>
+                                </a>
+                            </div>
+
+                            <!-- need help -->
+                            <div class="help-link me-3">
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('aide'))); ?>" class="d-inline-flex align-items-center">
+
+                                    <img class="help-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/help.svg" alt="help logo" class="">
+                                    <p class="my-0 mx-1">Besoin d'aide ?</p>
+                                </a>
+                            </div>
+
+                            <!-- vertical separator  -->
+                            <div class="vertical-separator me-3">
+                                <h2 class="mb-0">|</h2>
+                            </div>
+
+
                             <!-- wishlist Toggler -->
-                            <div class=""><?php echo do_shortcode('[ti_wishlist_products_counter]'); ?> </div>
+                            <div class=" wishlist-link"><?php echo do_shortcode('[ti_wishlist_products_counter]'); ?>
+                            </div>
 
                             <!-- User Toggler -->
                             <button class="btn btn-outline-primary ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-user" aria-controls="offcanvas-user">
                                 <!-- <i class="fas fa-user"></i> -->
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/user.svg" alt="user logo">
+                                <img class="user-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/user.svg" alt="user logo">
                             </button>
 
                             <!-- Mini Cart Toggler -->
                             <button class="btn btn-outline-primary ms-1 me-md-4 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart" aria-controls="offcanvas-cart">
                                 <!-- <i class="fas fa-shopping-bag"></i> -->
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart.svg" alt="cart logo">
+                                <img class="cart-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart.svg" alt="cart logo">
 
                                 <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
                                     $count = WC()->cart->cart_contents_count;
@@ -148,7 +184,6 @@
                     </div>
                 </div>
             </div>
-
 
             <!-- offcanvas user -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-user">
