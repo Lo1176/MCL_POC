@@ -716,14 +716,12 @@ add_action('woocommerce_email_footer', 'mcl_footer_email', 9, 1);
 function mcl_footer_email()
 { ?>
   <div class="link-footer-email" style="">
-    
-                <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg "
-alt="Phone Logo" style="width: 32px; margin:0;">Email Us</div>
-                <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg "
-alt="Phone Logo" style="width: 32px; margin:0;">Call Us</div>
-                <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg "
-alt="Phone Logo" style="width: 32px; margin:0;">Visit Us</div>
-                
+
+    <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg " alt="Enveloppe Logo" style="width: 32px; margin:0;">Email Us</div>
+    <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg " alt="Phone Logo" style="width: 32px; margin:0;">Call Us</div>
+    <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg " alt="Facebook Logo" style="width: 32px; margin:0;">Visit Us</div>
+    <div class="link-footer-logo"><i class="fa-brands fa-whatsapp" alt="Whatsapp Logo" style="width: 32px; margin:0;">Whatsapp</i></div>
+
 
   </div>
 <?php
