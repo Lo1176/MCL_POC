@@ -712,24 +712,19 @@ add_action('widgets_init', 'bootscore_widgets_init');
  * email customization
  */
 // add brands logo in email footer
-add_action('woocommerce_email_footer', 'mcl_footer_email', 5, 1);
+add_action('woocommerce_email_footer', 'mcl_footer_email', 9, 1);
 function mcl_footer_email()
 { ?>
-  <div class="link-footer-email" style="background-color:#3c3c3b; display:flex; justify-content: space-between; padding: 2rem; color: white;">
-    <?php echo '
-                <div style="padding:12px; display:flex; flex-direction: column; align-items: center;
- "><img src="' . home_url() . '/wp-content/themes/bootcommerce-child/img/svg/phone.svg "
+  <div class="link-footer-email" style="">
+    
+                <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg "
+alt="Phone Logo" style="width: 32px; margin:0;">Email Us</div>
+                <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg "
 alt="Phone Logo" style="width: 32px; margin:0;">Call Us</div>
-                <div style="padding:12px; display:flex; flex-direction: column; align-items: center;
- "><img src="' . home_url() . '/wp-content/themes/bootcommerce-child/img/svg/phone.svg "
-alt="Phone Logo" style="width: 32px; margin:0;">Call Us</div>
-                <div style="padding:12px; display:flex; flex-direction: column; align-items: center;
- "><img src="' . home_url() . '/wp-content/themes/bootcommerce-child/img/svg/phone.svg "
-alt="Phone Logo" style="width: 32px; margin:0;">Call Us</div>
+                <div class="link-footer-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/phone.svg "
+alt="Phone Logo" style="width: 32px; margin:0;">Visit Us</div>
                 
 
- 
-  ' ?>
   </div>
 <?php
 }

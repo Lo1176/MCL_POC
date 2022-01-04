@@ -1,10 +1,30 @@
+// ne fonctionne pas pour l'envoi d'email
+// à titre indicatif pour sauvegarder le Custom CSS pour le plugin DECORATOR
+// ne pas coper de commentaire
+
 .mcl-brand-logo-footer-email {
-    background-color: red;
-//     display: flex;
-//     // filter: invert(11%) sepia(6%) saturate(407%) hue-rotate(21deg) brightness(0) contrast(97%);
-//     width: 60%;
-//     padding: 48px;
+    filter: invert(11%) sepia(6%) saturate(407%) hue-rotate(21deg) brightness(0) contrast(97%);
+    display: flex;
+    width: 20%;
+    padding: 48px;
 }
+
 .link-footer-email {
-    background-color: green;
+    background-color:#3c3c3b;
+    display:flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+    margin: 0 -48px;
+}
+
+.link-footer-logo {
+    padding:12px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#template_header_image {
+    margin-bottom: 32px;
 }
