@@ -51,7 +51,7 @@ if (!defined('ABSPATH')) {
 
         <form class="card-body" method="post">
 
-          <?php do_action('woocommerce_login_form_start'); ?>
+          <?php #do_action('woocommerce_login_form_start'); ?>
 
           <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="username_1"><?php esc_html_e('Username or email address', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
