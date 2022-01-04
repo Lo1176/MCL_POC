@@ -5,7 +5,7 @@ namespace MailPoet\Util;
 if (!defined('ABSPATH')) exit;
 
 
-use pQuery\DomNode;
+use MailPoetVendor\pQuery\DomNode;
 
 class DOM {
   /**

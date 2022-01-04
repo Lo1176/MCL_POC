@@ -107,10 +107,13 @@ class SubscriberActions {
     $segments = $this->segmentsRepository->findBy(['id' => $segmentIds]);
     $this->subscriberSegmentRepository->subscribeToSegments($subscriber, $segments);
 
-    $subscriberModel = Subscriber::findOne($subscriber->getId());
-    if ($subscriberModel) {
-      $this->confirmationEmailMailer->sendConfirmationEmailOnce($subscriberModel);
+    try {
+      $this->confirmationEmailMailer->sendConfirmationEmailOnce($subscriber);
+    } catch (\Exception $e) {
+      // ignore errors
     }
+
+    $subscriberModel = Subscriber::findOne($subscriber->getId());
 
     // We want to send the notification on subscribe only when signupConfirmation is disabled
     if ($signupConfirmationEnabled === false && $subscriber->getStatus() === SubscriberEntity::STATUS_SUBSCRIBED && $subscriberModel) {

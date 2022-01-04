@@ -17,7 +17,6 @@ class RequirementsChecker {
 
   public $displayErrorNotice;
   public $vendorClasses = [
-    '\pQuery',
     '\Cron\CronExpression',
     '\Html2Text\Html2Text',
   ];

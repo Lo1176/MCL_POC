@@ -4,8 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5353feb2a9acaca8f9a228230b549b60
+class ComposerStaticInitbd09ec186edad039902f31971cc204c7
 {
+    public static $files = array (
+        '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/..' . '/automattic/jetpack-assets/actions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
@@ -47,6 +51,7 @@ class ComposerStaticInit5353feb2a9acaca8f9a228230b549b60
     public static $classMap = array (
         'Automattic\\Jetpack\\A8c_Mc_Stats' => __DIR__ . '/..' . '/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php',
         'Automattic\\Jetpack\\Assets' => __DIR__ . '/..' . '/automattic/jetpack-assets/src/class-assets.php',
+        'Automattic\\Jetpack\\Assets\\Semver' => __DIR__ . '/..' . '/automattic/jetpack-assets/src/class-semver.php',
         'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php',
         'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/AutoloadGenerator.php',
         'Automattic\\Jetpack\\Autoloader\\AutoloadProcessor' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/AutoloadProcessor.php',
@@ -222,9 +227,9 @@ class ComposerStaticInit5353feb2a9acaca8f9a228230b549b60
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5353feb2a9acaca8f9a228230b549b60::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5353feb2a9acaca8f9a228230b549b60::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit5353feb2a9acaca8f9a228230b549b60::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbd09ec186edad039902f31971cc204c7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbd09ec186edad039902f31971cc204c7::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbd09ec186edad039902f31971cc204c7::$classMap;
 
         }, null, ClassLoader::class);
     }

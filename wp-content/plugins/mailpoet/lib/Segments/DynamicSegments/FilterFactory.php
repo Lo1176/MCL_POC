@@ -127,7 +127,8 @@ class FilterFactory {
   }
 
   private function email($action) {
-    if ($action === EmailOpensAbsoluteCountAction::TYPE) {
+    $countActions = [EmailOpensAbsoluteCountAction::TYPE, EmailOpensAbsoluteCountAction::MACHINE_TYPE];
+    if (in_array($action, $countActions)) {
       return $this->emailOpensAbsoluteCount;
     }
     return $this->emailAction;
