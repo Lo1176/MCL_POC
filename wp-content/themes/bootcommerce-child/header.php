@@ -39,11 +39,12 @@
 
         <header id="masthead" class="site-header">
 
-            <div class="sticky-top bg-white">
+            <!-- <div class="sticky-top bg-white"> -->
+            <div class="">
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
-                    <div class="container-fluid smart-scroll py-0 pt-sm-3 ms-1 ms-md-2 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between align-items-end">
+                    <div class="header-height container-fluid smart-scroll py-0 pt-sm-3 ms-1 ms-md-2 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between align-items-end">
 
                         <!-- test burger btn  -->
                         <!-- Collapse button "FROMAGE..." -->
