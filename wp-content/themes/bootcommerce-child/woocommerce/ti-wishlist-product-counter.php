@@ -22,6 +22,6 @@ if ($icon_class && 'custom' === $icon && !empty($icon_upload)) {
 	<!-- <span class="wishlist_products_counter_text"><?php #echo $text; // WPCS: xss ok. 
 													?></span> -->
 	<?php if ($show_counter) : ?>
-		<span class="wishlist_products_counter_number start-100 translate-middle badge rounded-pill bg-danger text-white"></span>
+		<span class="wishlist_products_counter_number start-100 translate-middle badge rounded-pill bg-black text-white"></span>
 	<?php endif; ?>
 </a>
