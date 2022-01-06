@@ -19,6 +19,7 @@
 .site-header {
         .offcanvas-start {
             width: $offcanvas_width;
+            top: $header-height;
             // width: 240px;
             // width: 280px;
         }
@@ -33,6 +34,7 @@
 
 }
 .offcanvas-body {
+    
     overflow-y: inherit !important;
         .dropdown-divider {
             width: 3rem;
