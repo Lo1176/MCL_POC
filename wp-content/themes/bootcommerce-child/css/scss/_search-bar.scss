@@ -1,6 +1,7 @@
 .sidebar-1 {
     // background-color: #f8f9fa;
     // background-color: $white;
+    display: none; // à voir avec Sébastien
     padding-top: 1.5rem;
     // padding-bottom: 100vh;
         section > h2 {
@@ -8,4 +9,8 @@
         font-size: 1.75rem;
         color: $black;
         }
+}
+
+.container-woocommerce-ordering {
+    display: none; // à voir avec Sébastien
 }

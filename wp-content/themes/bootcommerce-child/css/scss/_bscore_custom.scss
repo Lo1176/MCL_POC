@@ -4,8 +4,8 @@
 
 //
 // add margin bottom for site-content class when header is fixed-top
-.site-content {
-    margin-top: 36px;
+#masthead {
+    margin-top: $header-height;
 }
 
 //breadcrumb css

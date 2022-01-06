@@ -39,8 +39,8 @@
 
         <header id="masthead" class="site-header">
 
-            <!-- <div class="sticky-top bg-white"> -->
-            <div class="">
+            <div class="sticky-top bg-white">
+            <!-- <div class=""> -->
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
 
@@ -89,7 +89,7 @@
 
                             <!-- contact -->
                             <div class="contact-link d-none d-md-block me-3">
-                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('contact'))); ?>" class="d-inline-flex align-baseline">
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('contact'))); ?>" class="d-inline-flex align-items-baseline">
 
                                     <img class="phone-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/phone.svg" alt="phone logo" class="">
                                     <p class="my-0 mx-1">Contactez-nous</p>
