@@ -3,17 +3,19 @@
 
 // my custom variables
 // custom .offcanvas-start width
-$offcanvas_width : 300px;
+$offcanvas_width: 300px;
 
 // header
-$header-height : 80px;
-$header-border : 20px; // testing the border height
+$header-height: 80px;
+$header-border: 20px; // testing the border height
 
 // images height
-$presentation-img-height : 400px;
+$presentation-img-height: 400px;
+$presentation-border-top-height: 12px;
+
 
 // personal scss
-@import "woocommerce-layout";
+  @import "woocommerce-layout";
 @import "colors";
 @import "font";
 @import "header";
