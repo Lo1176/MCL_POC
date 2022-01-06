@@ -42,9 +42,9 @@
             <div class="sticky-top bg-white">
             <!-- <div class=""> -->
 
-                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white">
+                <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white pt-0">
 
-                    <div class="header-height container-fluid smart-scroll py-0 pt-sm-3 ps-1 ps-md-2 bg-white border-bottom d-flex flex-nowrap justify-content-sm-between align-items-end">
+                    <div class="header-height container-fluid smart-scroll py-0 pt-sm-3 ps-1 ps-md-2 bg-white d-flex flex-nowrap justify-content-sm-between align-items-end">
 
                         <!-- test burger btn  -->
                         <!-- Collapse button "FROMAGE..." -->
@@ -89,7 +89,7 @@
 
                             <!-- contact -->
                             <div class="contact-link d-none d-md-block me-3">
-                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('contact'))); ?>" class="d-inline-flex align-items-baseline">
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_title('contact'))); ?>" class="d-inline-flex align-items-end">
 
                                     <img class="phone-logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/phone.svg" alt="phone logo" class="">
                                     <p class="my-0 mx-1">Contactez-nous</p>
