@@ -11,8 +11,9 @@
 #nav-main {
     .dropdown-menu {
             border-width: 0;
-            border-left-width: 2px;
-            border-color: $gv;
+            // border-radius: 0;
+            // border-left-width: 2px;
+            // border-color: $gv;
             // border-radius: 0.1rem; 
     }
 }    
@@ -58,7 +59,11 @@
         
         .dropdown-menu {
             border-width: 0;
-            border-inline-start: 2px solid $gv;    
+            border-radius: 0;
+            // width: $offcanvas_width;
+
+
+            // border-inline-start: 2px solid $gv;    
         }
 
 }
