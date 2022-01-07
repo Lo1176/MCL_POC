@@ -44,10 +44,11 @@ get_header();
 
               <!-- collection from Ligne W -->
               <div class="container-fluid d-flex justify-content-center">
-                <div id="collection" class="d-flex justify-content-center justify-content-sm-around flex-wrap">
+                <!-- <div id="collection" class="d-flex justify-content-center justify-content-sm-around flex-wrap"> -->
+                <div id="collection" class="row">
 
-                  <!-- ##### ligne-w ecrit en DUR !!!!  ##### -->
-                  <div class="card">
+                  <!-- ##### ligne-w  ##### -->
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/origine/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-scaled.jpg'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -59,7 +60,7 @@ get_header();
                     </a>
                   </div>
 
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/prestige/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-prestige-scaled.jpg'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -70,7 +71,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/signature/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-signature.png'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -81,7 +82,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-urban/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-origine-prestige-scaled.jpg'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -92,7 +93,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-color/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-colors-tbe.png'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -103,7 +104,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-zinc/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-zinc-tbe.png'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -114,7 +115,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/iroquois-wood/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-iroquois-wood-tbe.png'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -125,7 +126,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/essentiel/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-essentiel.jpg'); 
                                                           ?>" alt="Produc image cat"> -->
@@ -136,7 +137,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/kit-sommelier/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/11/lw-kit-scaled.jpg'); 
                                                           ?>" alt="Produc image cat"> -->

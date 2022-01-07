@@ -44,10 +44,11 @@ get_header();
 
               <!-- collection from Chateau Laguiole -->
               <div class="container-fluid d-flex justify-content-center">
-                <div id="collection" class="d-flex justify-content-center justify-content-sm-around flex-wrap">
+                <!-- <div id="collection" class="d-flex justify-content-center justify-content-sm-around flex-wrap"> -->
+                <div id="collection" class="row">
 
-                  <!-- ##### ecrit en DUR !!!!  ##### -->
-                  <div class="card">
+                  <!-- #####   ##### -->
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/classique/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-classique-bois-erable-scaled.jpeg'); 
                                                           ?>" alt="Produc image cap"> -->
@@ -59,7 +60,7 @@ get_header();
                     </a>
                   </div>
 
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/grand-cru/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-Grand-Cru-bois-débène-entretoise-jaune--scaled.jpeg'); 
                                                           ?>" alt="Produc image cap"> -->
@@ -70,7 +71,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/versailles/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-Versailles-Genévrier-600x400.jpeg'); 
                                                           ?>" alt="Produc image cap"> -->
@@ -81,7 +82,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/meilleur-sommelier/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CLME3033Enrico-Bernardo--scaled.jpeg'); 
                                                           ?>" alt="Produc image cap"> -->
@@ -92,7 +93,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/opus/'); 
                               ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CLSOG0201-Grand-Cru-Opus-N°-2-Cocobolo-wood-scaled.jpeg'); 
@@ -104,7 +105,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/melchior/'); 
                               ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-melchior-ironwood.jpeg'); 
@@ -116,7 +117,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php echo do_shortcode('[homeurl]/chateau-laguiole/couteaux-pliants/'); ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/COPGC7102-Corne-blonde-White-horn-1-scaled.jpg'); 
                                                           ?>" alt="Produc image cap"> -->
@@ -127,7 +128,7 @@ get_header();
                       </div>
                     </a>
                   </div>
-                  <div class="card">
+                  <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php #echo do_shortcode('[homeurl]/chateau-laguiole/couteaux-de-table/'); 
                               ?>">
                       <!-- <img class="card-img-top" src="<?php #echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/chateau-laguiole-steak-knives-brazilian-rosewood-set-of-6-chateau-laguioler-made-in-france_5000x.jpg'); 
