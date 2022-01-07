@@ -2,16 +2,16 @@
 # This file is distributed under the same license as the WPC Show Single Variations for WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPC Show Single Variations for WooCommerce 2.0.0\n"
+"Project-Id-Version: WPC Show Single Variations for WooCommerce 2.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpc-show-single-variations\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-10-19T17:24:28+00:00\n"
+"POT-Creation-Date: 2021-12-31T03:24:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.2.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: wpc-show-single-variations\n"
 
 #. Plugin Name of the plugin

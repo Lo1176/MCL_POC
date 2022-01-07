@@ -4,7 +4,7 @@ Donate link: https://wpclever.net
 Tags: woocommerce, woo, wpc, single, variation, variable
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ If you have any suggestions on how to improve this plugin, feel free to [contact
 5. Go to each variation to enable/disable/reverse for the individual variation
 
 == Changelog ==
+
+= 2.0.1 =
+* Updated: Optimized the code
 
 = 2.0.0 =
 * Added: Choose variable product that will not be hide

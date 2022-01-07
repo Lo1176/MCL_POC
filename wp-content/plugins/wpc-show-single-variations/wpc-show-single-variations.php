@@ -3,7 +3,7 @@
  *  Plugin Name: WPC Show Single Variations for WooCommerce
  *  Plugin URI: https://wpclever.net/
  *  Description: WPC Show Single Variations help you show all variations as single products on catalog pages (shop, category, tag, search).
- *  Version: 2.0.0
+ *  Version: 2.0.1
  *  Author: WPClever
  *  Author URI: https://wpclever.net
  *  Text Domain: wpc-show-single-variations
@@ -11,13 +11,13 @@
  *  Requires at least: 4.0
  *  Tested up to: 5.8
  *  WC requires at least: 3.0
- *  WC tested up to: 5.8
+ *  WC tested up to: 6.0
  **/
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! class_exists( 'WPClever_Woosv' ) && class_exists( 'WC_Product' ) ) {
-	class WPClever_Woosv {
+if ( ! class_exists( 'WPCleverWoosv' ) && class_exists( 'WC_Product' ) ) {
+	class WPCleverWoosv {
 		public function __construct() {
 			$this->define_constants();
 			$this->include_library();
@@ -26,7 +26,7 @@ if ( ! class_exists( 'WPClever_Woosv' ) && class_exists( 'WC_Product' ) ) {
 		}
 
 		private function define_constants() {
-			! defined( 'WOOSV_VERSION' ) && define( 'WOOSV_VERSION', '2.0.0' );
+			! defined( 'WOOSV_VERSION' ) && define( 'WOOSV_VERSION', '2.0.1' );
 			! defined( 'WOOSV_URI' ) && define( 'WOOSV_URI', plugin_dir_url( __FILE__ ) );
 			! defined( 'WOOSV_BASE' ) && define( 'WOOSV_BASE', plugin_basename( __FILE__ ) );
 			! defined( 'WOOSV_REVIEWS' ) && define( 'WOOSV_REVIEWS', 'https://wordpress.org/support/plugin/wpc-show-single-variations/reviews/?filter=5' );
@@ -62,5 +62,5 @@ if ( ! class_exists( 'WPClever_Woosv' ) && class_exists( 'WC_Product' ) ) {
 		}
 	}
 
-	new WPClever_Woosv();
+	new WPCleverWoosv();
 }
