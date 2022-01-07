@@ -36,6 +36,8 @@ require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 function mcl_custom_new_menu()
 {
   register_nav_menu('my-navigation-menu', __('Navigation menu'));
+  register_nav_menu('rigt-menu', 'Right menu');
+
 }
 add_action('init', 'mcl_custom_new_menu');
 // Custom-Navigation-Menu  END

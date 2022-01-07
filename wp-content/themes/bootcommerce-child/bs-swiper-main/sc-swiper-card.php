@@ -79,7 +79,7 @@ function bootscore_swiper($atts)
 
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
 
-                        <div class="swiper-slide card h-auto mb-5">
+                        <div class="swiper-slide card h-100 mb-5">
                             <!-- Featured Image-->
                             <?php the_post_thumbnail('medium', array('class' => 'card-img-top')); ?>
 
