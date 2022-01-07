@@ -29,7 +29,8 @@ if (empty($product) || !$product->is_visible()) {
 <?php get_sidebar(); 
 ?>
 
-<div class="col-md-6 col-lg-4 col-xxl-3 mb-5">
+<!-- <div class="col-md-6 col-lg-4 col-xxl-3 mb-5"> -->
+<div class="col-xl-3 mb-5">
 	<div <?php wc_product_class('card border-0 mx-sm-4 h-100 d-flex text-end', $product); ?>>
 		<!-- ##### A EFFACER ##### -->
 		<!-- <h2 class="text-warning">A EFFACER THEME-CHILD/WOOCOMMERCE/content-product.PHP</h2> -->

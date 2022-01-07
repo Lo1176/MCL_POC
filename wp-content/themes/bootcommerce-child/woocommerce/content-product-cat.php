@@ -26,7 +26,8 @@ if (!defined('ABSPATH')) {
 <!-- ##### A EFFACER ##### -->
 </div> <!-- closing div because of sidebar-1 -->
 
-<div class="col-md-6 col-lg-4 col-xxl-3 mb-5">
+<!-- <div class="col-md-6 col-lg-4 col-xxl-3 mb-5"> -->
+<div class="col-xl-3 mb-5">
 	<div <?php wc_product_cat_class('card border-0 mx-sm-4 h-100 d-flex text-end', $category); ?>>
 		<?php
 		/**
