@@ -59,7 +59,7 @@
                 </div>
 
                 <!-- Footer 4 Widget -->
-                <div class="col-auto ms-auto col-md-6 col-lg-2">
+                <div class="col-auto me-auto ms-sm-auto col-md-6 col-lg-2">
                     <?php if (is_active_sidebar('footer-4')) : ?>
                         <div>
                             <?php dynamic_sidebar('footer-4'); ?>
