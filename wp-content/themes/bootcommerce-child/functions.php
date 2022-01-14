@@ -542,11 +542,11 @@ function mcl_woocommerce_breadcrumbs()
 {
   return array(
     'delimiter'   => '<div class"delimiter style="font-size: 1.25rem;">&nbsp;&gt;&nbsp;</div> ',
-    'wrap_before' => '<nav class="breadcrumb d-flex align-items-center mb-1 mb-sm-3 mt-2 py-sm-2 px-3 small" itemprop="breadcrumb">',
+    'wrap_before' => '<nav class="breadcrumb d-flex align-items-center justify-content-end mb-1 mb-sm-3 mt-2 py-sm-2 px-3 text-uppercase small" itemprop="breadcrumb">',
     'wrap_after'  => '</nav>',
     'before'      => '',
     'after'       => '',
-    // 'home'        => _x('Home', 'breadcrumb', 'woocommerce'),
+    // 'home'        => _x('Home', 'breadcrumb', 'woocommerce'), => BOUTIQUE SHOP
   );
 }
 add_filter('woocommerce_breadcrumb_defaults', 'mcl_woocommerce_breadcrumbs', 11);
