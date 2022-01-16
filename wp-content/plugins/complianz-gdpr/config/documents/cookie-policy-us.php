@@ -3,7 +3,7 @@
  * This document is intentionally not translatable, as it is intended to be for US citizens, and should therefore always be in English
  *
  * */
-defined('ABSPATH') or die("you do not have acces to this page!");
+defined('ABSPATH') or die("you do not have access to this page!");
 
 $this->pages['us']['cookie-statement']['document_elements'] = array(
     array(
@@ -160,7 +160,17 @@ $this->pages['us']['cookie-statement']['document_elements'] = array(
       'content' => 'When you visit our website for the first time, we will show you a pop-up with an explanation about cookies. You do have the right to opt-out and to object against the further use of non-functional cookies.',
   ),
   array(
-    'subtitle' => 'Manage your consent settings',
+	  'subtitle' => 'Vendors',
+	  'content' => "We participate in the Transparency & Consent Framework for the CCPA. Other, so-called 'downstream', participants may re-sell data that was sold by us, as a publisher. You can opt-out to the re-sale of this data on the property of the participant as shown below."
+					.'[cmplz-tcf-us-vendors]',
+        'p' => false,
+        'callback_condition' => 'cmplz_tcf_active',
+        'condition' => array(
+        	'california' => 'yes',
+        )
+  ),
+  array(
+    'subtitle' => 'Manage your opt-out preferences',
     'content' => '[cmplz-manage-consent]',
   ),
 
@@ -202,7 +212,7 @@ $this->pages['us']['cookie-statement']['document_elements'] = array(
     ),
 
     array(
-        'content' => sprintf(_x('This Cookie Policy was synchronized with %scookiedatabase.org%s on %s', 'Legal document cookie policy', 'complianz-gdpr'),'<a href="https://cookiedatabase.org" target="_blank">', '</a>', '[sync_date]'),
+        'content' => sprintf(_x('This Cookie Policy was synchronized with %scookiedatabase.org%s on %s', 'Legal document cookie policy', 'complianz-gdpr'),'<a href="https://cookiedatabase.org/" target="_blank">', '</a>', '[sync_date]'),
         'callback_condition' => array(
 	        'cmplz_cdb_reference_in_policy',
         )

@@ -15,7 +15,7 @@ $plugins = array(
 			'constant_free' => 'rsssl_version',
 			'constant_premium' => 'rsssl_pro_version',
 			'website' => 'https://really-simple-ssl.com/premium/?src=complianz-plugin',
-			'search' => 'really-simple-ssl%20rogier%20lankhorst&tab=search',
+			'search' => 'really-simple-ssl%20HSTS%20complianz&tab=search',
 			'url' => 'https://wordpress.org/plugins/really-simple-ssl/',
 			'title' => 'Really Simple SSL - '. __("Easily migrate your website to SSL", "complianz-gdpr"),
 	),
@@ -39,7 +39,7 @@ $plugins = array(
 				<div class="cmplz-bullet"></div>
 			</div>
 			<div class="plugin-text">
-				<a href="<?php echo $plugin['url']?>" target="_blank"><?php echo $plugin['title']?></a>
+				<a href="<?php echo esc_url_raw($plugin['url'])?>" target="_blank"><?php echo esc_html($plugin['title'])?></a>
 			</div>
 			<div class="plugin-status">
 				<?php echo COMPLIANZ::$admin->get_status_link($plugin)?>

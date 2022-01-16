@@ -20,17 +20,23 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 			$plugin = cmplz_plugin;
 			add_filter( "plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
 
-			add_action( "in_plugin_update_message-{$plugin}", array( $this, 'plugin_update_message'), 10, 2 );
-			add_filter( "auto_update_plugin", array( $this, 'override_auto_updates'), 99, 2 );
+			//add_action( "in_plugin_update_message-{$plugin}", array( $this, 'plugin_update_message'), 10, 2 );
+			//add_filter( "auto_update_plugin", array( $this, 'override_auto_updates'), 99, 2 );
 
 			//multisite
 			add_filter( "network_admin_plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
-
 			add_action( 'admin_init', array( $this, 'process_reset_action' ), 10, 1 );
-			add_action('cmplz_fieldvalue', array($this, 'filter_cookie_domain'), 10, 2);
+			add_action( 'cmplz_fieldvalue', array($this, 'filter_cookie_domain'), 10, 2);
 			add_action( 'wp_ajax_cmplz_dismiss_warning', array( $this, 'dismiss_warning' ) );
 			add_action( 'wp_ajax_cmplz_load_warnings', array( $this, 'ajax_load_warnings' ) );
 			add_action( 'wp_ajax_cmplz_load_gridblock', array( $this, 'ajax_load_gridblock' ) );
+			add_filter( 'cmplz_warning_types', array( $this, 'filter_enable_dismissable_warnings' ) );
+
+			//admin notices
+			add_action( 'wp_ajax_cmplz_dismiss_admin_notice', array( $this, 'dismiss_warning' ) );
+			add_action( 'admin_notices', array( $this, 'show_admin_notice' ) );
+			add_action( 'admin_print_footer_scripts', array( $this, 'insert_dismiss_admin_notice_script' ) );
+
 		}
 
 		static function this() {
@@ -86,6 +92,8 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 					$dismissed_warnings[] = $warning_id;
 				}
 				update_option('cmplz_dismissed_warnings', $dismissed_warnings );
+				delete_transient('complianz_warnings');
+				delete_transient('complianz_warnings_admin_notices');
 			}
 
 			$out = array(
@@ -202,6 +210,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 			}
 
 			$options = array(
+				'cmplz_post_scribe_required',
 				'cmplz_activation_time',
 				'cmplz_review_notice_shown',
 				"cmplz_wizard_completed_once",
@@ -272,6 +281,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 
 		/**
 		 * If this update is to 6, don't auto update
+		 * Deactivated as of 6.0
 		 *
 		 * @param $update
 		 * @param $item
@@ -351,7 +361,59 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 			return $links;
 		}
 
+		/**
+		 * Insert some ajax script to dismiss the admin notice
+		 *
+		 * @since  2.0
+		 *
+		 * @access public
+		 *
+		 * type: dismiss, later
+		 *
+		 */
 
+		public function insert_dismiss_admin_notice_script() {
+			$ajax_nonce = wp_create_nonce( "cmplz_dismiss_admin_notice" );
+			?>
+			<script type='text/javascript'>
+				jQuery(document).ready(function ($) {
+					$(".cmplz-admin-notice.notice.is-dismissible").on("click", ".notice-dismiss, .cmplz-btn-dismiss-notice", function (event) {
+						var id = $('.cmplz-admin-notice').data('admin_notice_id');
+						var data = {
+							'action': 'cmplz_dismiss_admin_notice',
+							'id': id,
+							'token': '<?php echo $ajax_nonce; ?>'
+						};
+						$.post(ajaxurl, data, function (response) {
+							$(".cmplz-admin-notice.notice.is-dismissible").remove();
+						});
+					});
+				});
+			</script>
+			<?php
+		}
+
+		/**
+		 * Show an admin notice from our warnings list
+		 * @return void
+		 */
+		public function show_admin_notice(){
+			delete_transient( 'complianz_warnings' );
+			$warnings = $this->get_warnings( [ 'admin_notices' => true] );
+			if (count($warnings)==0) {
+				return;
+			}
+
+			//only one admin notice at the same time.
+			$keys = array_keys($warnings);
+			$id = $keys[0];
+			$warning = $warnings[$id];
+			if ( !isset($warning['open'])) {
+				return;
+			}
+			$dismiss_btn = '<br><br><button class="cmplz-btn-dismiss-notice button-secondary">'.__("Dismiss","complianz-gdpr").'</button>';
+			cmplz_admin_notice($warning['open'].$dismiss_btn, $id);
+		}
 
 		/**
 		 * get a list of applicable warnings.
@@ -367,14 +429,16 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 				'status' => 'all',
 				'plus_ones' => false,
 				'progress_items_only' => false,
+				'admin_notices' => false,
 			);
 			$args = wp_parse_args($args, $defaults);
+			$admin_notice =  $args['admin_notices'] ? '_admin_notices' : '';
 			$cache = $args['cache'];
 			if (isset($_GET['page']) && ($_GET['page']==='complianz' || strpos($_GET['page'],'cmplz') !== false ) ) {
 				$cache = false;
 			}
 
-			$warnings = $cache ? get_transient( 'complianz_warnings' ) : false;
+			$warnings = $cache ? get_transient( 'complianz_warnings'.$admin_notice ) : false;
 			//re-check if there are no warnings, or if the transient has expired
 			if ( ! $warnings ) {
 
@@ -384,7 +448,9 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 					'success_conditions' => array(),
 					'relation' => 'OR',
 					'status' => 'open',
+					'dismissible' => true,
 					'include_in_progress' => false,
+					'admin_notice' => false,
 				);
 
 				$warning_types = COMPLIANZ::$config->warning_types;
@@ -395,6 +461,14 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 				$dismissed_warnings = get_option('cmplz_dismissed_warnings', array() );
 				foreach ( $warning_types as $id => $warning ) {
 					if ( in_array( $id, $dismissed_warnings) ) {
+						continue;
+					}
+
+					if ( $args['admin_notices'] && !$warning['admin_notice']){
+						continue;
+					}
+
+					if ( !$args['admin_notices'] && $warning['admin_notice']){
 						continue;
 					}
 
@@ -427,6 +501,10 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 							$warning['message'] = $warning['urgent'];
 							$warning['status'] = 'urgent';
 							$warnings[$id] = $warning;
+						} else if (isset( $warning['premium']) ) {
+							$warning['message'] = $warning['premium'];
+							$warning['status'] = 'premium';
+							$warnings[$id] = $warning;
 						}
 					} else {
 						if (isset( $warning['completed']) ) {
@@ -437,7 +515,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 						}
 					}
 				}
-				set_transient( 'complianz_warnings', $warnings, HOUR_IN_SECONDS );
+				set_transient( 'complianz_warnings'.$admin_notice, $warnings, HOUR_IN_SECONDS );
 			}
 
 			//filtering outside cache if, to make sure all warnings are saved for the cache.
@@ -484,22 +562,44 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 			$completed = array();
 			$open = array();
 			$urgent = array();
-			foreach ($warnings as $key => $warning){
-				//prevent notices on upgrade to 5.0
-				if ( !isset( $warning['status'])) continue;
+			if (!empty($warnings)) {
+				foreach ( $warnings as $key => $warning ) {
+					//prevent notices on upgrade to 5.0
+					if ( ! isset( $warning['status'] ) ) {
+						continue;
+					}
 
-				if ($warning['status']==='urgent') {
-					$urgent[$key] = $warning;
-				} else if ($warning['status']==='open') {
-					$open[$key] = $warning;
-				} else {
-					$completed[$key] = $warning;
+					if ( $warning['status'] === 'urgent' ) {
+						$urgent[ $key ] = $warning;
+					} else if ( $warning['status'] === 'open' ) {
+						$open[ $key ] = $warning;
+					} else {
+						$completed[ $key ] = $warning;
+					}
 				}
 			}
 			$warnings = $urgent + $open + $completed;
 
 			return $warnings;
 		}
+
+		/**
+		 * Enable dismissable warnings for current free users
+		 * @param $warnings
+		 * @return array
+		 * @filter cmplz_warning_types
+		 */
+		function filter_enable_dismissable_warnings($warnings){
+			if (get_option('complianz_enable_dismissible_premium_warnings') && ! defined( 'cmplz_premium' ) ){
+				$warnings['advertising-enabled']['dismissible'] = true;
+				$warnings['sync-privacy-statement']['dismissible'] = true;
+				$warnings['ecommerce-legal']['dismissible'] = true;
+				$warnings['configure-tag-manager']['dismissible'] = true;
+				$warnings['targeting-multiple-regions']['dismissible'] = true;
+			}
+			return $warnings;
+		}
+
 
 
 		/**
@@ -667,7 +767,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 				$link = admin_url() . "plugin-install.php?s=".$item['search']."&tab=search&type=term";
 				$text = __('Install', 'complianz-gdpr');
 				$status = "<a href=$link>$text</a>";
-			} elseif ($item['constant_free'] == 'wpsi_plugin' || defined($item['constant_premium'] ) ) {
+			} elseif (defined($item['constant_premium'] ) ) {
 				$status = __("Installed", "complianz-gdpr");
 			} elseif (defined($item['constant_free']) && !defined($item['constant_premium'])) {
 				$link = $item['website'];
@@ -787,7 +887,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 		public function get_help_tip( $str ) {
 			?>
 			<span class="cmplz-tooltip-right tooltip-right"
-			      data-cmplz-tooltip="<?php echo $str ?>">
+			      data-cmplz-tooltip="<?php echo esc_attr($str) ?>">
               <span class="dashicons dashicons-editor-help"></span>
             </span>
 			<?php
@@ -828,7 +928,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
                 'document-styling' => array(
                     'page' => 'settings',
                     'name' => 'document-styling',
-                    'header' => __('Document Styling', 'complianz-gdpr'),
+                    'header' => __('Advanced features', 'complianz-gdpr'),
                     'class' => 'big condition-check-1',
                     'index' => '14',
                     'controls' => '',

@@ -1,7 +1,7 @@
 <?php
 /*100% match*/
 
-defined( 'ABSPATH' ) or die( "you do not have acces to this page!" );
+defined( 'ABSPATH' ) or die( "you do not have access to this page!" );
 
 if ( ! class_exists( "cmplz_wizard" ) ) {
 	class cmplz_wizard {
@@ -94,6 +94,7 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 		 */
 		public function wizard_last_step_callback() {
 			$page = $this->wizard_type();
+			cmplz_update_all_banners();
 
 			if ( ! $this->all_required_fields_completed( $page ) ) {
                 echo '<div class="cmplz-wizard-intro">';
@@ -162,20 +163,6 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 				wp_redirect( admin_url( 'admin.php?page=cmplz-cookiebanner' ) );
 				exit();
 			}
-
-//						if (isset($_POST['wizard_type']) && $_POST['wizard_type'] === 'wizard' ) {
-//				$url = add_query_arg(array( 'page' => 'cmplz-'.sanitize_title($_POST['wizard_type']) ),  admin_url('admin.php') );
-//				if (isset($_POST['step'])) {
-//					$url = add_query_arg(array( 'step' => intval($_POST['step'])),  $url );
-//				}
-//
-//				if (isset($_POST['section'])) {
-//					$url = add_query_arg(array( 'section' => intval($_POST['section'])),  $url );
-//				}
-//				wp_redirect( $url );
-//				exit();
-//			}
-
 		}
 
 		/**
@@ -198,8 +185,7 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 			$uses_tagmanager   = cmplz_get_value( 'compile_statistics' ) === 'google-tag-manager' ? true : false;
 
 			/* if tag manager fires scripts, cats should be enabled for each cookiebanner. */
-			if ( $fieldname === 'compile_statistics' && $fieldvalue === 'google-tag-manager'
-			) {
+			if ( $fieldname === 'compile_statistics' && $fieldvalue === 'google-tag-manager' ) {
 				$enable_categories = true;
 			}
 
@@ -223,7 +209,7 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 				if ( ! empty( $banners ) ) {
 					foreach ( $banners as $banner ) {
 						$banner                 = new CMPLZ_COOKIEBANNER( $banner->ID );
-						$banner->use_categories = 'hidden';
+						$banner->use_categories = 'view-preferences';
 						$banner->save();
 					}
 				}
@@ -234,7 +220,7 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 			if ( $fieldname === 'privacy-statement' || $fieldname === 'regions'
 			     || $fieldname === 'cookie-statement'
 			) {
-				cmplz_update_banner_version_all_banners();
+				cmplz_update_all_banners();
 			}
 
 			//we can check here if certain things have been updated,
@@ -289,6 +275,7 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 		 */
 
 		public function after_save_wizard_option( $fieldname, $fieldvalue, $prev_value, $type ) {
+			$generate_css = false;
 			if ( $fieldname == 'california' || $fieldname == 'purpose_personaldata' ) {
 				add_action( 'shutdown', 'cmplz_update_cookie_policy_title', 12 );
 			}
@@ -299,15 +286,15 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 				cmplz_update_option( 'wizard', 'children-safe-harbor', 'no' );
 			}
 
-
 			if ( $fieldvalue === $prev_value ) {
 				return;
 			}
 
+			//clear blocked scripts transient on wizard edits.
+			delete_transient('cmplz_blocked_scripts');
+
 			//keep services in sync
-			if ( $fieldname === 'socialmedia_on_site'
-			     || $fieldname === 'thirdparty_services_on_site'
-			) {
+			if ( $fieldname === 'socialmedia_on_site' || $fieldname === 'thirdparty_services_on_site' ) {
 				COMPLIANZ::$cookie_admin->update_services();
 			}
 
@@ -317,35 +304,18 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 			     || $fieldname === 'compile_statistics_more_info_tag_manager'
 			) {
 				COMPLIANZ::$cookie_admin->maybe_add_statistics_service();
+				$generate_css = true;
 			}
 
-			$enable_categories_uk = $enable_categories_eu = false;
-			if ( $fieldname === 'compile_statistics_more_info'
-			     || $fieldname === 'compile_statistics_more_info_tag_manager'
-			) {
-				if ( COMPLIANZ::$cookie_admin->cookie_warning_required_stats( 'eu' ) ) {
-					$enable_categories_eu = true;
-				}
-				if ( COMPLIANZ::$cookie_admin->cookie_warning_required_stats( 'uk' ) ) {
-					$enable_categories_uk = true;
-				}
+			/**
+			 * If TCF was just disabled, regenerate the css.
+			 */
+			if ( $fieldname === 'uses_ad_cookies_personalized' && $fieldvalue !== 'tcf' && $prev_value === 'tcf' ) {
+				$generate_css = true;
 			}
 
-			if ( $enable_categories_eu || $enable_categories_uk ) {
-				$banners = cmplz_get_cookiebanners();
-				if ( ! empty( $banners ) ) {
-					foreach ( $banners as $banner ) {
-						$banner = new CMPLZ_COOKIEBANNER( $banner->ID );
-						if ( $enable_categories_uk ) {
-							$banner->use_categories_optinstats = 'hidden';
-						}
-						if ( $enable_categories_eu ) {
-							$banner->use_categories_optinstats = 'hidden';
-						}
-						$banner->save();
-					}
-
-				}
+			if ( $generate_css ){
+				cmplz_update_all_banners();
 			}
 		}
 
@@ -655,7 +625,6 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
             if ( $page != 'wizard' ) {
                 if ( $step == 1 ) {
                     delete_option( 'complianz_options_' . $page );
-
                 }
             }
 
@@ -686,9 +655,10 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
                 /**
                  * Only for the wizard type, should there optional be a button redirecting to the cookie settings page
                  * */
+
                 if ( $page == 'wizard' && COMPLIANZ::$cookie_admin->site_needs_cookie_warning() ) {
-                    $args['cookie_or_finish_button'] =
-                        '<input class="button button-primary cmplz-cookiebanner-settings" type="submit" name="cmplz-cookiebanner-settings" value="'. __( "Finish and check cookie banner settings", 'complianz-gdpr' ) . '">';
+					$target = apply_filters('cmplz_finish_wizard_target', 'cmplz-cookiebanner-settings');
+					$args['cookie_or_finish_button'] = '<input class="button button-primary '.$target.'" type="submit" name="'.$target.'" value="'. __( "Finish and check cookie banner settings", 'complianz-gdpr' ) . '">';
                 } else {
                     $args['cookie_or_finish_button'] = '<input class="button button-primary cmplz-finish" type="submit" name="cmplz-finish" value="'. $label . '">';
                 }
@@ -800,29 +770,37 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 		 * */
 
 		public function all_required_fields_completed( $page ) {
-			for ( $step = 1; $step <= $this->total_steps( $page ); $step ++ ) {
-				if ( COMPLIANZ::$config->has_sections( $page, $step ) ) {
-					for (
-						$section = $this->first_section( $page, $step );
-						$section <= $this->last_section( $page, $step );
-						$section ++
+
+			$total_fields     = 0;
+			$completed_fields = 0;
+			$total_steps      = $this->total_steps( $page );
+			for ( $i = 1; $i <= $total_steps; $i ++ ) {
+				$fields = COMPLIANZ::$config->fields( $page, $i, false );
+
+				foreach ( $fields as $fieldname => $field ) {
+					//is field required
+					$required = isset( $field['required'] ) ? $field['required'] : false;
+					if ( ( isset( $field['condition'] )
+					       || isset( $field['callback_condition'] ) )
+					     && ! COMPLIANZ::$field->condition_applies( $field )
 					) {
-						if ( ! $this->required_fields_completed( $page, $step,
-							$section )
-						) {
-							return false;
-						}
+						$required = false;
 					}
-				} else {
-					if ( ! $this->required_fields_completed( $page, $step,
-						false )
-					) {
-						return false;
+					if ( $required ) {
+						$value = cmplz_get_value( $fieldname );
+						$total_fields ++;
+						if ( ! empty( $value ) ) {
+							$completed_fields ++;
+						}
 					}
 				}
 			}
 
-			return true;
+			if ( $completed_fields == $total_fields ) {
+				return true;
+			} else {
+				return false;
+			}
 		}
 
 		/**
@@ -1109,7 +1087,6 @@ if ( ! class_exists( "cmplz_wizard" ) ) {
 					'progress_items_only' => true,
 				);
 				$completed_warnings = count( COMPLIANZ::$admin->get_warnings( $args ) );
-
 				$completed_fields += $completed_warnings;
 				$total_fields     += $total_warnings;
 			}
