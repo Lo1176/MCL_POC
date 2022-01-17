@@ -948,5 +948,13 @@ final class WOOF_HELPER {
 		
 		return $array;
 	}	
+	public static function sanitize_html_fields_array($fiels){
+		$array = array();
+		foreach ($fiels as $key => $data) {
+			$key = sanitize_text_field( $key );
+			$array[$key] = wp_kses($data, wp_kses_allowed_html('post'));
+		}
+		return $array;
+	}	
 
 }

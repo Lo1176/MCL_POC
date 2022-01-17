@@ -4,17 +4,17 @@
   Plugin URI: https://products-filter.com/
   Description: WOOF - WooCommerce Products Filter. Flexible, easy and robust products filter for WooCommerce store site!
   Requires at least: WP 4.9.0
-  Tested up to: WP 5.8
+  Tested up to: WP 5.9
   Author: realmag777
   Author URI: https://pluginus.net/
-  Version: 1.2.6.2
+  Version: 1.2.6.4
   Requires PHP: 7.0
   Tags: filter,search,woocommerce,woocommerce filter,woocommerce product filter,woocommerce products filter,products filter,product filter,filter of products,filter for products,filter for woocommerce
   Text Domain: woocommerce-products-filter
   Domain Path: /languages
   Forum URI: https://pluginus.net/support/forum/woof-woocommerce-products-filter/
   WC requires at least: 3.6.0
-  WC tested up to: 5.9
+  WC tested up to: 6.1
  */
 
 //update_option('woof_settings', '');//dev: nearly absolute reset of the plugin settings
@@ -37,7 +37,7 @@ define('WOOF_PATH', plugin_dir_path(__FILE__));
 define('WOOF_LINK', plugin_dir_url(__FILE__));
 define('WOOF_PLUGIN_NAME', plugin_basename(__FILE__));
 define('WOOF_EXT_PATH', WOOF_PATH . 'ext/');
-define('WOOF_VERSION', '1.2.6.2');
+define('WOOF_VERSION', '1.2.6.4');
 define('WOOF_MIN_WOOCOMMERCE_VERSION', '3.6');
 //classes
 include WOOF_PATH . 'classes/storage.php';
@@ -52,7 +52,7 @@ include WOOF_PATH . 'classes/widgets.php';
 include WOOF_PATH . 'lib/alert/index.php';
 
 //***
-//07-12-2021
+//14-01-2022
 final class WOOF {
 
     public $settings = array();
@@ -343,7 +343,7 @@ final class WOOF {
 
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('wp-color-picker');
-
+        wp_enqueue_media();
         wp_enqueue_script('woof', WOOF_LINK . 'js/plugin_options.js', array('jquery', 'jquery-ui-core', 'jquery-ui-sortable'), WOOF_VERSION);
 
         $is_custom_extensions = false;
@@ -1910,7 +1910,8 @@ final class WOOF {
         $data = $this->get_request_data();
         $res = array();
 
-        $woo_taxonomies = NULL; {
+        $woo_taxonomies = NULL;
+        {
             $woo_taxonomies = get_object_taxonomies('product');
         }
 
@@ -2296,7 +2297,7 @@ final class WOOF {
         ?>
 
         <?php if ($is_ajax == 1): ?>
-            <?php ?>
+                <?php ?>
             <div id="woof_results_by_ajax" data-count="<?php echo $products->found_posts ?>"  class="woof_results_by_ajax_shortcode" data-shortcode="<?php echo $shortcode_txt ?>">
                 <?php
                 //endif;
@@ -2388,7 +2389,7 @@ final class WOOF {
                         }
                         ?>
 
-                        <?php //wc_get_template('loop/loop-end.php');                                ?>
+                        <?php //wc_get_template('loop/loop-end.php');                                 ?>
 
                         <?php
                         //woo_pagenav(); - for wp theme canvas
@@ -2443,7 +2444,7 @@ final class WOOF {
                 ?>
 
                 <?php if ($is_ajax == 1): ?>
-                    <?php if (!get_option('woof_try_ajax', 0)): ?>
+            <?php if (!get_option('woof_try_ajax', 0)): ?>
                     </div>
 
                 <?php endif; ?>
@@ -2492,10 +2493,10 @@ final class WOOF {
             $additional_fields = array();
 
             if (isset($_REQUEST["woof_redraw_elements"]) AND $_REQUEST["woof_redraw_elements"]) {
-                $additional_fields = $_REQUEST["woof_redraw_elements"];
+                $additional_fields = WOOF_HELPER::sanitize_html_fields_array($_REQUEST["woof_redraw_elements"]);
             }
             if (isset($_GET["woof_redraw_elements"]) AND $_GET["woof_redraw_elements"]) {
-                $additional_fields = array_merge($additional_fields, $_GET["woof_redraw_elements"]);
+                $additional_fields = array_merge($additional_fields, WOOF_HELPER::sanitize_html_fields_array($_GET["woof_redraw_elements"]));
             }
 
             //+++

@@ -3,7 +3,7 @@ Contributors: RealMag777
 Donate link: https://pluginus.net/affiliate/woocommerce-products-filter
 Tags: filter, products filter, product filter, woocommerce, products, ajax filter, category filter, woocommerce products filter, woocommerce price filter, attributes filter, advanced product filters, woof
 Requires at least: 4.9.0
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 7.0
 Stable tag: trunk
 
@@ -153,6 +153,12 @@ R: [https://products-filter.com/documentation/](https://products-filter.com/docu
 1. The plugin settings
 
 == Changelog ==
+
+= 1.2.6.4 =
+* fixed: is_ajax function is deprecated since woocommerce version 6.1.0. Replace with wp_doing_ajax.
+
+= 1.2.6.3 =
+* 1 security issue fixed thanks to Erwan from WPScan
 
 = 1.2.6.2 =
 * 1 security issue (sanitizing)

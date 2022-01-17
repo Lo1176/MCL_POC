@@ -105,11 +105,14 @@ global $WOOF;
 
                     <div class="woof-control-container">
                         <div class="woof-control">
-                            <input type="text" name="woof_settings[woof_slideout_img]" class="slideout_value" data-name="woof_slideout_img" value="<?php echo $woof_settings['woof_slideout_img'] ?>" />
-                            <a href="#" class="woof-button woof_select_image"><?php esc_html_e('Select Image', 'woocommerce-products-filter') ?></a>
+                            <input disabled="disabled" type="text" name="woof_settings[woof_slideout_img]" class="slideout_value" data-name="woof_slideout_img" value="<?php echo $woof_settings['woof_slideout_img'] ?>" />
+                            <a  class="woof-button"><?php esc_html_e('Select Image', 'woocommerce-products-filter') ?></a>
                         </div>
                         <div class="woof-description">
-                            <p class="description"><?php esc_html_e('Url of the custom image for the button', 'woocommerce-products-filter') ?></p>
+                            <p class="description"><?php esc_html_e('Url of the custom image for the button', 'woocommerce-products-filter') ?>
+							<span style="color:red;"><?php esc_html_e('(In the Premium version only!)', 'woocommerce-products-filter')?></span>
+							</p>
+							
                         </div>
                     </div>
                 </div><!--/ .woof-control-section-->
@@ -121,11 +124,13 @@ global $WOOF;
 
                     <div class="woof-control-container">
                         <div class="woof-control">
-                            <input type="text" name="woof_settings[woof_slideout_txt]" class="slideout_value" data-name="woof_slideout_txt" value="<?php echo $woof_settings['woof_slideout_txt'] ?>" />
+                            <input disabled="disabled" type="text" name="woof_settings[woof_slideout_txt]" class="slideout_value" data-name="woof_slideout_txt" value="<?php echo $woof_settings['woof_slideout_txt'] ?>" />
 
                         </div>
                         <div class="woof-description">
-                            <p class="description"><?php esc_html_e('Custom text of the button', 'woocommerce-products-filter') ?></p>
+                            <p class="description"><?php esc_html_e('Custom text of the button', 'woocommerce-products-filter') ?>
+							<span style="color:red;"><?php esc_html_e('(In the Premium version only!)', 'woocommerce-products-filter')?></span>
+							</p>
                         </div>
                     </div>
                 </div><!--/ .woof-control-section-->                     

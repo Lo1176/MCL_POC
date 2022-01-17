@@ -122,9 +122,7 @@ final class WOOF_SLIDEOUT extends WOOF_EXT {
 
     public function woof_slideout($atts, $content) {
         $image = $this->get_ext_link() . 'img' . DIRECTORY_SEPARATOR . 'filter.png';
-        if (isset($this->woof_settings['woof_slideout_img']) AND $this->woof_settings['woof_slideout_img']) {
-            $image = $this->woof_settings['woof_slideout_img'];
-        }
+
 
         $atts = shortcode_atts(array(
             'image' => $image,

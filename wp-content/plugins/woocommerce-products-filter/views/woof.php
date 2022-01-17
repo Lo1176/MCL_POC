@@ -366,7 +366,7 @@ if (!function_exists('woof_print_item_by_key')) {
                                     <?php echo WOOF_HELPER::draw_tooltipe(WOOF_HELPER::wpml_translate(null, $WOOF->settings['by_price']['title_text']), $tooltip_text) ?>
                                     </<?php echo apply_filters('woof_title_tag', 'h4'); ?>>
                                 <?php endif; ?>
-                    <?php echo $price_woo_slider ?>
+                                <?php echo $price_woo_slider ?>
                             </div>
                         </div>
                     </div>
@@ -384,7 +384,7 @@ if (!function_exists('woof_print_item_by_key')) {
                                 </<?php echo apply_filters('woof_title_tag', 'h4'); ?>>
                             <?php endif; ?>
 
-                    <?php echo do_shortcode('[woof_price_filter type="select" additional_taxes="' . $additional_taxes . '"]'); ?>
+                            <?php echo do_shortcode('[woof_price_filter type="select" additional_taxes="' . $additional_taxes . '"]'); ?>
 
                         </div>
                     </div>
@@ -409,7 +409,7 @@ if (!function_exists('woof_print_item_by_key')) {
                                 </<?php echo apply_filters('woof_title_tag', 'h4'); ?>>
                             <?php endif; ?>
 
-                    <?php echo $price_woo_slider ?>
+                            <?php echo $price_woo_slider ?>
 
                         </div>
                     </div>
@@ -427,7 +427,7 @@ if (!function_exists('woof_print_item_by_key')) {
                                 </<?php echo apply_filters('woof_title_tag', 'h4'); ?>>
                             <?php endif; ?>
 
-                    <?php echo do_shortcode('[woof_price_filter type="text" additional_taxes="' . $additional_taxes . '"]'); ?>
+                            <?php echo do_shortcode('[woof_price_filter type="text" additional_taxes="' . $additional_taxes . '"]'); ?>
 
                         </div>
                     </div>
@@ -474,9 +474,9 @@ if (!function_exists('woof_print_item_by_key')) {
                                 <?php echo WOOF_HELPER::wpml_translate(null, $WOOF->settings['by_price']['title_text']); ?>
                                 <?php WOOF_HELPER::draw_title_toggle($show_toggle, $block_is_closed); ?>
                                 </<?php echo apply_filters('woof_title_tag', 'h4'); ?>>
-                                <?php endif; ?>
+                            <?php endif; ?>
                             <div class="<?php echo $css_classes ?>" <?php if (!empty($woof_container_styles)): ?>style="<?php echo $woof_container_styles ?>"<?php endif; ?>>
-                    <?php echo do_shortcode('[woof_price_filter type="radio" additional_taxes="' . $additional_taxes . '"]'); ?>
+                                <?php echo do_shortcode('[woof_price_filter type="radio" additional_taxes="' . $additional_taxes . '"]'); ?>
                             </div>
 
                         </div>
@@ -496,7 +496,7 @@ if (!function_exists('woof_print_item_by_key')) {
 ?>
 
 
-    <?php if ($autohide): ?>
+<?php if ($autohide): ?>
     <div>
         <?php
         //***
@@ -509,7 +509,7 @@ if (!function_exists('woof_print_item_by_key')) {
         <!-------------------- inline css for js anim ----------------------->
         <div class="woof_auto_show woof_overflow_hidden" style="opacity: 0; height: 1px;">
             <div class="woof_auto_show_indent woof_overflow_hidden">
-            <?php
+                <?php
             endif;
 
             $woof_class = "";
@@ -569,7 +569,7 @@ if (!function_exists('woof_print_item_by_key')) {
                         $start_filtering_btn = false;
                     }
 
-                    if (is_ajax()) {
+                    if (wp_doing_ajax()) {
                         $start_filtering_btn = false;
                     }
 
