@@ -1,12 +1,12 @@
 === Decorator - WooCommerce Email Customizer ===
 Contributors: webtoffee
-Version: 1.1.2
+Version: 1.1.3
 Tags: email customizer, email designer, woocommerce emails, email templates, woocommerce email customizer
 Donate link: https://www.webtoffee.com/plugins
 Requires at least: 4.4
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -79,6 +79,11 @@ At the moment, the plugin only allows you to customize the style of the elements
 
 == Changelog ==
 
+= 1.1.3 =
+* [Compatibility] - Tested OK with WP 5.8.3
+* [Compatibility] - Tested OK with WC 6.1.0
+* Fix:- WC compatibility with shipping phone number
+
 = 1.1.2 =
 * [Compatibility] - Tested OK with WP 5.8.2
 * [Compatibility] - Tested OK with WC 6.0.0
@@ -128,7 +133,7 @@ At the moment, the plugin only allows you to customize the style of the elements
 
 == Upgrade Notice ==
 
-= 1.1.2 =
-* [Compatibility] - Tested OK with WP 5.8.2
-* [Compatibility] - Tested OK with WC 6.0.0
-* Improvement: Code stability improved.
+= 1.1.3 =
+* [Compatibility] - Tested OK with WP 5.8.3
+* [Compatibility] - Tested OK with WC 6.1.0
+* Fix:- WC compatibility with shipping phone number

@@ -39,6 +39,7 @@ $shipping   = $order->get_formatted_shipping_address();
 			</address>
 		</td>
 		<?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() && $shipping ) : ?>
+                     <?php if ( defined('WC_VERSION') && (WC_VERSION >= 5.6) ) : ?>
 			<td style="text-align:<?php echo esc_attr( $text_align ); ?>; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0;" valign="top" width="50%">
 				<h2><?php esc_html_e( 'Shipping address', 'decorator-woocommerce-email-customizer' ); ?></h2>
 
@@ -49,6 +50,7 @@ $shipping   = $order->get_formatted_shipping_address();
 					<?php endif; ?>
 				</address>
 			</td>
+                        <?php endif; ?>
 		<?php endif; ?>
 	</tr>
 </table>

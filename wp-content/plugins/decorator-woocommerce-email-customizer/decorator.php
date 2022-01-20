@@ -4,12 +4,12 @@
  * Plugin Name: Decorator - WooCommerce Email Customizer
  * Plugin URI: 
  * Description: Use native WordPress Customizer to make WooCommerce emails match your brand
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: WebToffee
  * Author URI: https://www.webtoffee.com
  * Requires at least: 4.4
  * Tested up to: 5.8
- * WC tested up to: 6.0.0
+ * WC tested up to: 6.1.0
  * Text Domain: decorator-woocommerce-email-customizer
  * Domain Path: /languages
  *
@@ -42,7 +42,7 @@ if (!defined('ABSPATH')) {
 define('RP_DECORATOR_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('RP_DECORATOR_PLUGIN_URL', plugins_url(basename(plugin_dir_path(__FILE__)), basename(__FILE__)));
 define( 'WT_WOOMAIL_PATH', realpath( plugin_dir_path( __FILE__ ) ) . DIRECTORY_SEPARATOR );
-define('RP_DECORATOR_VERSION', '1.1.2');
+define('RP_DECORATOR_VERSION', '1.1.3');
 define('RP_DECORATOR_SUPPORT_PHP', '5.3');
 define('RP_DECORATOR_SUPPORT_WP', '4.4');
 define('RP_DECORATOR_SUPPORT_WC', '2.4');
