@@ -19,7 +19,9 @@ get_header();
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
       <header class="entry-header d-flex align-items-sm-start featured-full-width-img-brand text-light" style="background-image: url('<?php echo $thumb['0']; ?>')">
         <div class="container entry-header d-flex justify-content-center">
-          <h1 id="brand-logo-header" class="d-flex entry-title"><img id="lw-logo" src=<?php echo file_get_contents(get_stylesheet_directory() . '/img/svg/lw-box-attr_pres.svg' ); ?> alt="Ligne W logo">
+          <div id="brand-logo-header" class="d-flex entry-title">
+            <?php include get_stylesheet_directory() . '/img/svg/lw-box.svg';?>
+          </div>
         </div>
       </header>
 
