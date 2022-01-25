@@ -20,7 +20,7 @@ get_header();
       <header class="entry-header d-flex align-items-sm-start featured-full-width-img-brand text-light" style="background-image: url('<?php echo $thumb['0']; ?>')">
         <div class="container entry-header d-flex justify-content-center">
           <div id="brand-logo-header" class="d-flex entry-title">
-            <img id="cl-logo" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-uncolored.svg'); ?> alt="Maison Château Laguiole image">
+            <?php include get_stylesheet_directory() . '/img/svg/cl-box.svg';?>
           </div>
         </div>
       </header>

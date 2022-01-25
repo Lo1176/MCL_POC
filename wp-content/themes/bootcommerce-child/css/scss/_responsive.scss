@@ -16,15 +16,14 @@
         top: 0;
         // height: fit-content;
         z-index: 1010;
-        // height: 186px;
-        // width: 186px;
       }
   }
 }
 /************************************************** 
  * Smartphone
  */
-@media screen and (max-width: 600px) {
+// @media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   // body padding top from scroll header
   body {
     padding-top: 48;
@@ -38,15 +37,7 @@
         top: 0;
         height: fit-content;
         z-index: 1010;
-        height: 186px;
-        width: 186px;
-          #mcl-logo {
-            // padding: 40px;
-            // padding: 24px;
-            // height: 186px;
-            // width: 186px;
-
-          }
+        width: 39vw;
       }
   }
 
@@ -55,8 +46,8 @@
     margin-left: 24px;
     margin-right: 24px;
       #cl-logo, #lw-logo, #gv-logo, #mg-logo {
-        height: 186px;
-        width: 186px;
+        // height: 186px;
+        // width: 186px;
 
       }
   }

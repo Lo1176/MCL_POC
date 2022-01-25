@@ -13,9 +13,18 @@ $header-border: 20px; // testing the border height
 $presentation-img-height: 400px;
 $presentation-border-top-height: 12px;
 
+// responsive grid variables
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 // personal scss
-  @import "woocommerce-layout";
+@import "woocommerce-layout";
 @import "colors";
 @import "font";
 @import "header";
@@ -37,3 +46,4 @@ $presentation-border-top-height: 12px;
 @import "woocommerce";
 @import "social-buttons";
 @import "email";
+@import "breadcrumb";

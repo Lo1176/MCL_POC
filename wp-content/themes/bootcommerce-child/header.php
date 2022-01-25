@@ -48,7 +48,7 @@
 
                         <!-- test burger btn  -->
                         <!-- Collapse animated button "FROMAGE..." -->
-                        <button class="btn animated-burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileNav" aria-controls="offcanvasMobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="btn animated-burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar" aria-expanded="false" aria-label="Toggle navigation">
                             <div class="stripes nav-icon-5">
                                 <span></span>
                                 <span></span>
@@ -177,10 +177,11 @@
                             </button>
 
                             <!-- Navbar Toggler Right for small devise NEED TO TAKE THE ANIMATED BURGER -->
-                            <button class="btn btn-outline-primary d-md-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
-                                <!-- <i class="fas fa-bars"></i> -->
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
-                            </button>
+                            <!-- <button class="btn btn-outline-primary d-md-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar"> -->
+                            <!-- <i class="fas fa-bars"></i> -->
+                            <!-- <img src="<?php #echo esc_url(get_stylesheet_directory_uri()); 
+                                            ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
+                            </button> -->
 
 
                         </div><!-- .header-actions -->
