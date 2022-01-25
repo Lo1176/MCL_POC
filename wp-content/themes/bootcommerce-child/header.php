@@ -57,7 +57,7 @@
                         </button>
                         <!-- test burger btn  END-->
                         <!-- new nav bar mcl-mobile -->
-                        <div class="navbar">
+                        <!-- <div class="navbar">
                             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMobileNav">
 
                                 <div class="offcanvas-body">
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- new nav bar mcl-mobile END -->
 
                         <!-- test mobile menu offcanvas left than right -->
