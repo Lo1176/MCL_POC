@@ -32,7 +32,7 @@
         // fade text's last word, if clamped ()
         &::after {
           content: "";
-          width: 6ch;
+          width: 18ch;
           height: 2rem;
           position: absolute;
           bottom: 0;
@@ -40,7 +40,7 @@
           pointer-events: none;
         //   background: linear-gradient(90deg, transparent, var(--bg));
         //   background: inherit; // it's easier to work with inheritance
-          background: $white; // it's easier to work with inheritance
+          background: $white; // won't work with inheritance
 
         //   -webkit-mask-image: -webkit-radial-gradient(85% 85%, transparent 7px, black 8px);
         //   -moz-mask-image: -moz-radial-gradient(circle at 85% 85%, transparent 7px, black 8px);
