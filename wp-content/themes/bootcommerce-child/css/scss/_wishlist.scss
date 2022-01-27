@@ -19,9 +19,11 @@
 }
 
 .tinv-wishlist > a {
-        color: $red;
+        // color: $red;
+        color: $black;
         &:hover {
-            color: $red;
+            // color: $red;
+            color: $black;
         }
 }
 
