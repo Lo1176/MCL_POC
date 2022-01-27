@@ -19,7 +19,9 @@ get_header();
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
       <header class="entry-header d-flex align-items-sm-start featured-full-width-img-brand text-light" style="background-image: url('<?php echo $thumb['0']; ?>')">
         <div class="container entry-header d-flex justify-content-center">
-          <h1 id="brand-logo-header" class="d-flex entry-title"><img id="mcl-logo" src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mcl-white.svg'); ?> alt="Maison Château Laguiole image">
+          <div id="brand-logo-header" class="d-flex entry-title">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/mcl-box.svg" id="mcl-box" class="figure-img bg-black img-fluid" alt="Maison Château Laguiole image">
+          </div>
         </div>
         <!-- no title tbe -->
         <!-- no title tbe END -->
@@ -45,22 +47,22 @@ get_header();
 
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('chateau-laguiole'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/cl-uncolored.svg'); ?> id="cl-logo" class="figure-img img-fluid" alt="Château Laguiole image">
+                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cl-box.svg" id="cl-box" class="figure-img bg-black img-fluid" alt="Château Laguiole image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('ligne-w'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/lw-uncolored.svg'); ?> id="lw-logo" class="figure-img img-fluid" alt="Ligne W image">
+                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/lw-box.svg" id="lw-box" class="figure-img img-fluid" alt="Ligne W image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('soon'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/mg-uncolored.svg'); ?> id="mg-logo" class="figure-img img-fluid" alt="Mateo Gallud image">
+                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/mg-box.svg" id="mg-box" class="figure-img img-fluid" alt="Mateo Gallud image">
               </figure>
             </a>
             <a href=<?php echo esc_url(get_permalink(get_page_by_path('soon'))); ?>>
               <figure class="figure">
-                <img src=<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/10/gv-uncolored.svg'); ?> id="gv-logo" class="figure-img img-fluid" alt="Guy Vialis image">
+                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/gv-box.svg" id="gv-box" class="figure-img img-fluid" alt="Guy Vialis image">
               </figure>
             </a>
 
@@ -78,11 +80,11 @@ get_header();
 
           <footer class=" entry-footer">
 
-            </footer>
+          </footer>
 
-            <?php comments_template(); ?>
+          <?php comments_template(); ?>
 
-          </div><!-- container -->
+        </div><!-- container -->
 
     </main><!-- #main -->
 

@@ -23,6 +23,9 @@ $grid-breakpoints: (
   xxl: 1400px
 );
 
+// default border-radius
+$border-radius: .1rem;
+
 // personal scss
 @import "woocommerce-layout";
 @import "colors";
@@ -46,3 +49,4 @@ $grid-breakpoints: (
 @import "woocommerce";
 @import "social-buttons";
 @import "email";
+@import "breadcrumb";

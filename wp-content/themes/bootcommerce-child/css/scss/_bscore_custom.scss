@@ -20,12 +20,14 @@ h2 {
     box-shadow: none;
 }
 
-// default border-radius
-$border-radius: 0.1rem;
-
 .container {
     padding-left: 80px;
     padding-right: 80px;
 }
 
-@import "breadcrumb";
+// custom breadcrumb
+@include media-breakpoint-down(lg) {
+  .breadcrumb {
+    display: flex !important;
+  }
+}
