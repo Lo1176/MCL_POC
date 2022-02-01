@@ -37,8 +37,7 @@
     visibility: visible;
     // position: absolute;
     content: url("../../img/svg/heart.svg");
-    // font-size: 26px;
-    width: 32px; // font width for the header wishlist icon
+    // width: 32px; // font width for the header wishlist icon
 
 }
 
@@ -51,13 +50,34 @@
     content: url("../../img/svg/heart-select.svg");
     // font-size: 26px;
 }
-//manage width heart svg
+//manage heart svg size
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt:before, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
     width: 22px;
     height: 100%;
     margin: 0px 8px 0 0;
 }
 
+// test wish-heart in HEADER
+.wishlist-link {
+    width: 28px; // SVG size
+
+        .wishlist_products_counter.top_wishlist-heart.top_wishlist-.no-txt.wishlist-counter-with-products {
+            &::before {
+                visibility: hidden;
+        
+            }
+            &::after {
+                visibility: visible;
+                content: url("../../img/svg/heart-select.svg");
+            }
+        }
+    // wish-product-counter
+    .wishlist_products_counter_number {
+        position: relative;
+        top: 12px;
+    }
+
+}
 // empty wishlist page
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     border: none;
