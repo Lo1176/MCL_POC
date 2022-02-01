@@ -37,19 +37,27 @@
     visibility: visible;
     // position: absolute;
     content: url("../../img/svg/heart.svg");
-    font-size: 26px;
+    // font-size: 26px;
+    width: 22px; // font width for the header wishlist icon
+
 }
+
 // selected heart
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.tinvwl-product-in-list:before {
     visibility: hidden;
 }
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.tinvwl-product-in-list:after {
     visibility: visible;
-    content: url("../../img/svg/heart.svg");
-    font-size: 26px;
-    fill: aquamarine;
-    color: blueviolet;
+    content: url("../../img/svg/heart-select.svg");
+    // font-size: 26px;
 }
+//manage width heart svg
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt:before, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
+    width: 22px;
+    height: 100%;
+    margin: 0px 8px 0 0;
+}
+
 // empty wishlist page
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     border: none;
