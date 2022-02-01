@@ -33,12 +33,12 @@
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:before, a.wishlist_products_counter.top_wishlist-heart:before, span.wishlist_products_counter.top_wishlist-heart:before, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:before {
     visibility: hidden;
 }
-.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:before, a.wishlist_products_counter.top_wishlist-heart:before, span.wishlist_products_counter.top_wishlist-heart:before, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:after {
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:after, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:after, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:after, a.wishlist_products_counter.top_wishlist-heart:after, span.wishlist_products_counter.top_wishlist-heart:after, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:after {
     visibility: visible;
     // position: absolute;
     content: url("../../img/svg/heart.svg");
     // font-size: 26px;
-    width: 22px; // font width for the header wishlist icon
+    width: 32px; // font width for the header wishlist icon
 
 }
 
