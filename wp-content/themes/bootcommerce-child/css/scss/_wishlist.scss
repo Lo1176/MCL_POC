@@ -1,21 +1,9 @@
-// .icon_above_image {
-//     right: 10px;
-//     top: 178px;
-// }
 .single-product {
     .tinv-wishlist {
         display: flex;
         flex-direction: row-reverse;
     }
 
-}
-
-.archive {
-    .tinv-wishlist {
-        // position: absolute !important;
-        // top: 40%;
-        // right: 3%;
-    }
 }
 
 .tinv-wishlist > a {
@@ -27,18 +15,16 @@
         }
 }
 
-
-// change the wishlist icon with :before & :after
+/**
+* change the wishlist icon with :before & :after
+*/
 // empty heart
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:before, a.wishlist_products_counter.top_wishlist-heart:before, span.wishlist_products_counter.top_wishlist-heart:before, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:before {
     visibility: hidden;
 }
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:after, .woocommerce ul.products li.product a.tinvwl-button.tinvwl_add_to_wishlist_button.tinvwl-icon-heart:after, .woocommerce-page ul.products li.product a.tinvwl-button.tinvwl-icon-heart.tinvwl_add_to_wishlist_button:after, a.wishlist_products_counter.top_wishlist-heart:after, span.wishlist_products_counter.top_wishlist-heart:after, a.sidr-class-wishlist_products_counter.sidr-class-top_wishlist-heart:after {
     visibility: visible;
-    // position: absolute;
     content: url("../../img/svg/heart.svg");
-    // width: 32px; // font width for the header wishlist icon
-
 }
 
 // selected heart
@@ -48,8 +34,8 @@
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.tinvwl-product-in-list:after {
     visibility: visible;
     content: url("../../img/svg/heart-select.svg");
-    // font-size: 26px;
 }
+
 //manage heart svg size
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt:before, .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
     width: 22px;
@@ -57,7 +43,7 @@
     margin: 0px 8px 0 0;
 }
 
-// test wish-heart in HEADER
+// wish-heart in HEADER
 .wishlist-link {
     width: 28px; // SVG size
 
@@ -78,6 +64,7 @@
     }
 
 }
+
 // empty wishlist page
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     border: none;
