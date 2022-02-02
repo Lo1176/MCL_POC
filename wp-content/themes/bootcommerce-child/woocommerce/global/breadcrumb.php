@@ -32,7 +32,8 @@ if (!empty($breadcrumb)) {
     if (!empty($crumb[1]) && sizeof($breadcrumb) !== $key + 1) {
       if (0 == $key) {
         #echo '<a href="' . esc_url($crumb[1]) . '"><i class="fas fa-home"></i></a>';
-        echo '<a href="' . home_url() . '">MAISON CHATEAU LAGUIOLE</a>';
+        echo '<a href="' . home_url() . '">' . esc_html(get_bloginfo('title')) . '</a>';
+      
       } else {
         echo '<a href="' . esc_url($crumb[1]) . '">' . esc_html($crumb[0]) . '</a>';
       }
