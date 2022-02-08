@@ -1,5 +1,24 @@
 *** WooCommerce Subscriptions Core Changelog ***
 
+2022-01-19 - version 1.6.2
+* Fix: Prevent fatal error when too few arguments passed to widget_title filter. PR#100
+
+2022-01-18 - version 1.6.1
+* Dev: Update the list of "export-ignore" in `.gitattributes` to include recent developer files. PR#97
+* Dev: Set the composer package type to "wordpress-plugin". PR#96
+
+2022-01-17 - version 1.6.0
+* Fix: When viewing a WCPay Subscription product page, make sure other gateway's express payment buttons aren't shown. PR#87 wcpay#3401
+* Fix: When viewing a WC Product page with a WCPay subscription product in cart, make sure other gateway's express payment buttons are shown. PR#87 wcpay#3401
+
+2022-01-14 - version 1.5.0
+* New: Introduce filter to allow third-parties to specify the minimum recurring amount the payment method can support. Displays a warning to the merchant when creating products below that amount. #PR89 wcpay#3542
+
+2022-01-03 - version 1.4.0
+* Fix: Simple subscription elements on the product edit page not shown/hidden when necessary. PR#80
+* Fix: Prevent fatal errors on the admin subscriptions screen when a subscription fails to load. PR#84 wcpay#3596 wcs#4286
+* Fix: Compatibility issue when loading subscriptions templates. PR#86 wcpay#3606 wcs#4291
+
 2021-12-21 - version 1.3.0
 * Fix: Remove references to the Subscription extension in the tooltips found on the Payment Methods settings table. PR#55 wcpay#3234
 * Fix: Update the Automatic Recurring Payments column on the Payment Methods table to only show which payment methods are supported by Subscriptions Core. PR#55

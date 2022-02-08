@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbd09ec186edad039902f31971cc204c7
+class ComposerStaticInit52c0942ff6f788f7ebcb683949362138
 {
     public static $files = array (
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/..' . '/automattic/jetpack-assets/actions.php',
@@ -85,7 +85,6 @@ class ComposerStaticInitbd09ec186edad039902f31971cc204c7
         'Automattic\\Jetpack\\Status\\Host' => __DIR__ . '/..' . '/automattic/jetpack-status/src/class-host.php',
         'Automattic\\Jetpack\\Terms_Of_Service' => __DIR__ . '/..' . '/automattic/jetpack-terms-of-service/src/class-terms-of-service.php',
         'Automattic\\Jetpack\\Tracking' => __DIR__ . '/..' . '/automattic/jetpack-tracking/src/class-tracking.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Composer\\Installers\\AglInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AglInstaller.php',
         'Composer\\Installers\\AimeosInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AimeosInstaller.php',
         'Composer\\Installers\\AnnotateCmsInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php',
@@ -227,9 +226,9 @@ class ComposerStaticInitbd09ec186edad039902f31971cc204c7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbd09ec186edad039902f31971cc204c7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbd09ec186edad039902f31971cc204c7::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitbd09ec186edad039902f31971cc204c7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit52c0942ff6f788f7ebcb683949362138::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit52c0942ff6f788f7ebcb683949362138::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit52c0942ff6f788f7ebcb683949362138::$classMap;
 
         }, null, ClassLoader::class);
     }
