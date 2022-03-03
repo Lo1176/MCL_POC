@@ -6,7 +6,7 @@ Requires at least: 4.9
 License: GPL2
 Requires PHP: 5.6
 Tested up to: 5.9
-Stable tag: 6.0.6
+Stable tag: 6.1.0.1
 
 Configure your Cookie Notice, Cookie Consent and Cookie Policy with our Wizard and Cookie Scan. Supports GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA and PIPEDA.
 
@@ -166,8 +166,70 @@ The Brazilian General Data Protection Law is similar to the GDPR, the UK-GDPR it
 With some custom CSS this is possible, but we do not consider a cookie wall to be GDPR compliant, so it's not actively supported. We do, however, have the option to create a Soft Cookie Wall. Which blocks interaction with the website, but dismissing remains a possibility.
 
 == Changelog ==
+
+= 6.1.0.1 =
+* Fix: Recaptcha integration issue, props @delanthear @peopleinside @soydelia
+
+= 6.1.0 =
+* New: Consent per Service in combination with CookieShredder.
+* New: Matomo cookieless tracking
+* CSS: simplify scrollbar in dashboard css
+* CSS: drop overflow: auto on header
+* CSS: drop min-width 300px below 350px
+* CSS: set bottom banner to bottom on mobile as well
+* CSS: padding on links in legal pages
+* CSS: override theme flex property on buttons in banner
+* Improvement: hide not required fields if no documents are selected, props @paaljoachim
+* Improvement: allow for time zone offset when saving consent in records of consent
+* Improvement: keep categories in sync https://github.com/Really-Simple-Plugins/complianz-gdpr/issues/324 props @antonellon
+* Improvement: Link to permalink settings when notice is shown
+* Improvement: DNT feedback string improved
+* Improvement: drop fieldname class from fields in settings page, to prevent conflicts
+* Improvement: CloudFlare CFCustom geo ip option
+* Improvement: new options for GEO ip
+* Improvement: allow saving of empty script center blocks
+* Improvement: on switch to TCF banner, regenerate the banner css
+* Improvement: obfuscate email address also with css
+* Improvement: remove condition on categories settings in cookie banner setting, to allow for manage consent area configuration in cookie policy
+* Improvement: catch Tatsu pagebuilder preview
+* Improvement: auto enable GEO ip if records of consent enabled
+* Improvement: disable hide cookiebanner option on legal pages
+* Improvement: added font size option
+* Improvement: responsiveness wizard
+* Improvement: cookiebanner required feedback
+* Improvement: new option to disable width auto correction
+* Improvement: ratio option for placeholders on openstreetmap
+* Improvement: drop title element from svg in banner, props @alexbosch
+* Improvement: p elements on all paragraphs in legal documents
+* Improvement: added Flexible Maps integration
+* Improvement: add toggle to hide the legal document links on the banner
+* Fix: Novo Maps integration
+* Fix: domains with 'type' in the url could not load the css file props @nimdaweb
+* Fix: catch not set enable dependency key
+* Fix: preview cookiebanner not always correctly updated.
+* Fix: paging in integrations
+* Fix: remove <title> tag from close button. props @doubleyourbrand
+* Fix: only reload on a deny action if marketing was accepted props @dasisdormax
+* Fix: allow mappress en google maps enabled at the same time
+* Fix: allow quotes in custom css
+* Fix: export filtered dataset from Records of Consent
+* Fix: in cmplz_fire_categories, declare event as local variable, fixing theme conflicts with global declared variables props @jrt341 and @skydivider
+* Fix: fix revert to defaults for text_checkbox booleans @puregraphx
+* Fix: Due to change from google-analytics.js to gtag.js, anonymizeIp has changed to anonymize_ip, props @ccalislar35
+* Fix: On sync, include services without cookies, even if completed
+
+= 6.0.7 =
+* Changed database upgrade order
+* Improvement: catch Tatsu pagebuilder preview
+* Fix: only reload on a deny action if marketing was accepted props @dasisdormax
+* Fix: allow mappress en google maps enabled at the same time
+* Fix: allow quotes in custom css
+* Improvement: allow saving of empty script center blocks
+* Improvement: obfuscate email address also with css
+* Improvement: remove condition on categories settings in cookie banner setting, to allow for manage consent area configuration in cookie policy
+
 = 6.0.6 =
-* Bumped tested up to 5.9
+* Bumped tested up to
 
 = 6.0.5 =
 * Improvement: auto enable migrate.js when upgrading from <6 to 6.0 and up

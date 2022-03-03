@@ -40,7 +40,7 @@ $this->fields = $this->fields + array(
 			'label'     => __( "Do you consent to the use of the cookiedatabase.org API?", 'complianz-gdpr' ),
 			'help'   => __( "Without the API, you will have to manually describe all found cookies, their purpose, function, service and service types. ",
 					'complianz-gdpr' ),
-			  'comment' => sprintf( __( "Complianz provides your Cookie Policy with comprehensive cookie descriptions, supplied by %scookiedatabase.org%s. We connect to this open-source database using an external API, which sends the results of the cookiescan (a list of found cookies, used plugins and your domain) to cookiedatabase.org, for the sole purpose of providing you with accurate descriptions and keeping them up-to-date at a weekly schedule. For more information, read the %sPrivacy Statement%s",
+			  'comment' => cmplz_sprintf( __( "Complianz provides your Cookie Policy with comprehensive cookie descriptions, supplied by %scookiedatabase.org%s. We connect to this open-source database using an external API, which sends the results of the cookiescan (a list of found cookies, used plugins and your domain) to cookiedatabase.org, for the sole purpose of providing you with accurate descriptions and keeping them up-to-date at a weekly schedule. For more information, read the %sPrivacy Statement%s",
 					'complianz-gdpr' ),
 					'<a target="_blank" href="https://cookiedatabase.org/">', '</a>',
 					'<a target="_blank" href="https://cookiedatabase.org/privacy-statement/">',
@@ -69,19 +69,38 @@ $this->fields = $this->fields + array(
 			'default'  => false,
 		),
 
-        'blocked_content_text' => array(
-            'step'         => 'general',
-            'source'       => 'settings',
-            'type'         => 'text',
-            'translatable' => true,
-            'label'        => __( "Blocked content text", 'complianz-gdpr' ),
-            'default'      => _x( 'Click to accept marketing cookies and enable this content', 'Accept cookies on blocked content', 'complianz-gdpr' ),
-            'tooltip'         => __( 'The blocked content text appears when for example a Youtube video is embedded.', 'complianz-gdpr' ),
-            'condition'    => array(
-                'disable_cookie_block' => false,
-            )
-        ),
+		'blocked_content_text' => array(
+			'step'         => 'general',
+			'source'       => 'settings',
+			'type'         => 'text',
+			'translatable' => true,
+			'label'        => __( "Blocked content text", 'complianz-gdpr' ),
+			'default'      => __( 'Click to accept marketing cookies and enable this content', 'complianz-gdpr' ),
+			'tooltip'      => __( 'The blocked content text appears when for example a Youtube video is embedded.', 'complianz-gdpr' ),
+			'condition'    => array(
+				'disable_cookie_block' => false,
+			),
+			'callback_condition' => array(
+				'consent_per_service' => 'no',
+			)
+		),
 
+		'blocked_content_text_per_service' => array(
+			'step'         => 'general',
+			'source'       => 'settings',
+			'type'         => 'text',
+			'translatable' => true,
+			'label'        => __( "Blocked content text", 'complianz-gdpr' ),
+			'default'      => cmplz_sprintf(__( "Click 'I agree' to enable %s", 'complianz-gdpr' ), '{service}'),
+			'tooltip'      => __( 'The blocked content text appears when for example a Youtube video is embedded.', 'complianz-gdpr' ),
+			'help'      => __( 'Do not change or translate the {service} string.', 'complianz-gdpr' ).'&nbsp;'.__( 'You may remove it if you want.', 'complianz-gdpr' ).'&nbsp;'.__( 'It will be replaced with the name of the service that is blocked.', 'complianz-gdpr' ),
+			'condition'    => array(
+				'disable_cookie_block' => false,
+			),
+			'callback_condition' => array(
+				'consent_per_service' => 'yes',
+			)
+		),
 		'a_b_testing_duration' => array(
 			'source'    => 'settings',
 			'step'      => 'general',
@@ -158,7 +177,7 @@ $this->fields = $this->fields + array(
 			'step'    => 'cookie-blocker',
 			'label'   => __( "Enable safe mode", 'complianz-gdpr' ),
 			'default' => false,
-			'comment'    => sprintf( __( 'When safe mode is enabled, all integrations will be disabled temporarily, please read %sthese instructions%s to debug the issue or ask support if needed.',
+			'comment'    => cmplz_sprintf( __( 'When safe mode is enabled, all integrations will be disabled temporarily, please read %sthese instructions%s to debug the issue or ask support if needed.',
 				'complianz-gdpr' ),
 				'<a  target="_blank" href="https://complianz.io/debugging-issues/">', '</a>' )
 		),
@@ -212,29 +231,16 @@ $this->fields = $this->fields + array(
 				'custom' => __("Custom",'complianz-gdpr'),
 			),
 			'step'      => 'cookie-blocker',
-			'label'     => __( "Google Maps placeholder format", 'complianz-gdpr' ),
+			'label'     => __( "Placeholder ratio", 'complianz-gdpr' ),
 			'default'   => '1280x920',
-			'tooltip'      => __( "Select the optimal Google Maps placeholder ratio for your site.", 'complianz-gdpr' ),
+			'tooltip'      => __( "Select the optimal placeholder ratio for your site.", 'complianz-gdpr' ),
 			'condition' => array(
 				'disable_cookie_block' => false,
 			),
 			'callback_condition' => array(
-				'thirdparty_services_on_site' => 'google-maps',
+				'thirdparty_services_on_site' => 'google-maps,openstreetmaps',
 			),
 			'comment'=> __( "If you select custom, you need to add your custom image to your site.", 'complianz-gdpr' ).cmplz_read_more('https://complianz.io/changing-the-google-maps-placeholder/'),
-		),
-
-		'blocked_content_text' => array(
-			'step'      => 'cookie-blocker',
-			'source'       => 'settings',
-			'type'         => 'text',
-			'translatable' => true,
-			'label'        => __( "Blocked content text", 'complianz-gdpr' ),
-			'default'      => __( 'Click to accept the cookies for this service', 'complianz-gdpr' ),
-			'tooltip'         => __( 'The blocked content text appears when for example a Youtube video is embedded.', 'complianz-gdpr' ),
-			'condition'    => array(
-				'disable_cookie_block' => false,
-			)
 		),
 
         'set_cookies_on_root' => array(
@@ -295,7 +301,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'upload',
 			'action'   => 'cmplz_import_settings',
 			'label'    => __( "Import settings", 'complianz-gdpr' ),
-			'comment'  => sprintf( __( 'If you want to import your settings, please check out the %spremium version%s',
+			'comment'  => cmplz_sprintf( __( 'If you want to import your settings, please check out the %spremium version%s',
 				'complianz-gdpr' ),
 				'<a target="_blank" href="https://complianz.io">', "</a>" ),
 		),
@@ -378,7 +384,7 @@ $this->fields = $this->fields + array(
                 . "\n" . '#cmplz-cookies-overview .cmplz-service-header {} /* service header in cookie policy */'
                 . "\n" . '#cmplz-cookies-overview .cmplz-service-desc {} /* service description */'
                 . "\n" . '#cmplz-document.impressum, #cmplz-document.cookie-statement, #cmplz-document.privacy-statement {} /* styles for impressum */',
-            'help'      => sprintf(__('You can add additional custom CSS here. For tips and CSS lessons, check out our %sdocumentation%s', 'complianz-gdpr'), '<a target="_blank" href="https://complianz.io/?s=css">', '</a>'),
+            'help'      => cmplz_sprintf(__('You can add additional custom CSS here. For tips and CSS lessons, check out our %sdocumentation%s', 'complianz-gdpr'), '<a target="_blank" href="https://complianz.io/?s=css">', '</a>'),
             'condition' => array( 'use_custom_document_css' => true ),
         ),
 	);

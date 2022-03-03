@@ -31,6 +31,12 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 			'firstparty_marketing' => false,
 	),
 
+	'themify-builder' => array(
+			'constant_or_function' => 'themify_builder_theme_check',
+			'label'                => 'Themify Builder',
+			'firstparty_marketing' => false,
+	),
+
 	'meks-easy-maps' => array(
 			'constant_or_function' => 'MKS_MAP_VER',
 			'label'                => 'Meks Easy Maps',
@@ -73,6 +79,12 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 			'firstparty_marketing' => false,
 	),
 
+	'wpadverts' => array(
+		'constant_or_function' => 'ADVERTS_PATH',
+		'label'                => 'WP Adverts',
+		'firstparty_marketing' => false,
+	),
+	
 	'citadela-directory' => array(
 			'constant_or_function' => 'CITADELA_DIRECTORY_LITE_PLUGIN',
 			'label'                => 'Citadela Directory',
@@ -143,6 +155,12 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 		'constant_or_function' => 'toeGetClassNameGmp',
 		'label'                => 'Google Maps Easy',
 		'firstparty_marketing' => false,
+	),
+
+	'flexible-map'               => array(
+			'constant_or_function' => 'FLXMAP_PLUGIN_VERSION',
+			'label'                => 'Flexible Map',
+			'firstparty_marketing' => false,
 	),
 
 	'activecampaign'               => array(
@@ -390,6 +408,11 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 		'label'                => 'WP Store Locator',
 		'firstparty_marketing' => false,
 	),
+	'thrive' => array(
+		'constant_or_function' => 'Thrive_Product_Manager',
+		'label'                => 'Thrive',
+		'firstparty_marketing' => false,
+	),
 
 	'gravity-forms' => array(
 		'constant_or_function' => 'GF_MIN_WP_VERSION',
@@ -550,7 +573,9 @@ function cmplz_integrations() {
 	if ( $statistics === 'google-analytics' ) {
 		require_once( 'statistics/google-analytics.php' );
 	}
-
+	if ( $statistics === 'matomo' && cmplz_get_value('configuration_by_complianz') !=='yes' ) {
+		require_once( 'statistics/matomo.php' );
+	}
 }
 
 add_action( 'plugins_loaded', 'cmplz_integrations', 10 );
@@ -667,7 +692,7 @@ function cmplz_notify_of_plugin_integrations( $warnings ){
 	foreach ($fields as $id => $field ) {
 		if ($field['disabled']) continue;
 		$warnings[$id] = array(
-			'open' => sprintf(__( 'We have enabled the %s integration.', 'complianz-gdpr' ), $field['label']).cmplz_read_more("https://complianz.io/enabled-integration"),
+			'open' => cmplz_sprintf(__( 'We have enabled the %s integration.', 'complianz-gdpr' ), $field['label']).cmplz_read_more("https://complianz.io/enabled-integration"),
 			'include_in_progress' => false,
 		);
 	}
