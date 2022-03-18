@@ -1014,7 +1014,6 @@ jQuery(document).ready(function ($) {
 		var type = btn.data('type');
 		var action = btn.data('action');
 		var id = btn.data('id');
-
         if ( action == "save" || action == "remove" ) {
 			btn.html('<div class="cmplz-loader"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
 		}
@@ -1024,6 +1023,7 @@ jQuery(document).ready(function ($) {
         container.find(':input').each(function () {
             if ($(this).attr('type') === 'button') return;
             if ( typeof $(this).attr('name') === 'undefined') return;
+			if (!$(this).data('name')) return;
             if ($(this).attr('type')==='checkbox' ) {
                 data[$(this).data('name')] = $(this).is(":checked");
             } else if ( $(this).attr('type')==='radio' ) {
@@ -1045,15 +1045,7 @@ jQuery(document).ready(function ($) {
                 data[$(this).data('name')] = $(this).val();
             }
         });
-
-        // Enable / Disable
-        if ( action === 'enable' ) {
-            data['enable'] = 1;
-        } else if ( action === 'disable' ) {
-            data['enable'] = 0;
-        }
-
-        $.ajax({
+		$.ajax({
             type: "POST",
             url: complianz_admin.admin_url,
             data: ({
@@ -1066,12 +1058,6 @@ jQuery(document).ready(function ($) {
             }),
             success: function (response) {
                 if (response.success) {
-                    if ( action === 'enable' ) {
-                    	btn.data('action', 'disable');
-                    }
-                    if ( action === 'disable' ) {
-						btn.data('action', 'enable');
-					}
                     if ( action === 'save' ) {
                         btn.html(btn_html);
                     }

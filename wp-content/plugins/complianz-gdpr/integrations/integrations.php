@@ -11,7 +11,6 @@ function cmplz_enqueue_integrations_assets( $hook ) {
 
 	wp_register_script( ' cmplz-pagify', trailingslashit( cmplz_url ) . 'assets/pagify/pagify.min.js', array( "jquery" ), cmplz_version );
 	wp_enqueue_script( ' cmplz-pagify' );
-
 	wp_register_style( ' cmplz-pagify', trailingslashit( cmplz_url ) . 'assets/pagify/pagify.css', false, cmplz_version );
 	wp_enqueue_style( ' cmplz-pagify' );
 }
@@ -22,6 +21,12 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 	'advanced-nocaptcha-recaptcha' => array(
 			'constant_or_function' => 'ANR_PLUGIN_VERSION',
 			'label'                => 'Advanced noCaptcha & invisible Captcha',
+			'firstparty_marketing' => false,
+	),
+
+	'burst-statistics' => array(
+			'constant_or_function' => 'burst_version',
+			'label'                => 'Burst Statistics',
 			'firstparty_marketing' => false,
 	),
 
@@ -84,7 +89,7 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 		'label'                => 'WP Adverts',
 		'firstparty_marketing' => false,
 	),
-	
+
 	'citadela-directory' => array(
 			'constant_or_function' => 'CITADELA_DIRECTORY_LITE_PLUGIN',
 			'label'                => 'Citadela Directory',
@@ -388,6 +393,12 @@ $cmplz_integrations_list = apply_filters( 'cmplz_integrations', array(
 	'happyforms' => array(
 		'constant_or_function' => 'HAPPYFORMS_VERSION',
 		'label'                => 'Happy Forms',
+		'firstparty_marketing' => false,
+	),
+
+	'lazy-loader' => array(
+		'constant_or_function' => 'FlorianBrinkmann\LazyLoadResponsiveImages\Plugin',
+		'label'                => 'Lazy Loader',
 		'firstparty_marketing' => false,
 	),
 

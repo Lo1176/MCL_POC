@@ -125,8 +125,9 @@ if ( ! class_exists( 'cmplz_cookie_blocker' ) ) {
 		 */
 		public function blocked_content_text(){
 			if (cmplz_get_value( 'consent_per_service' ) === 'yes') {
+				$agree_text = cmplz_get_value( 'agree_text_per_service' );
 				$placeholdertext = cmplz_get_value( 'blocked_content_text_per_service' );
-				$placeholdertext = '<div class="cmplz-blocked-content-notice-body">'.$placeholdertext.'&nbsp;<div class="cmplz-links"><a href="#" class="cmplz-link cookie-statement">{title}</a></div></div><button class="cmplz-accept-service">'.__("I Agree", "complianz-gdpr").'</button>';
+				$placeholdertext = '<div class="cmplz-blocked-content-notice-body">'.$placeholdertext.'&nbsp;<div class="cmplz-links"><a href="#" class="cmplz-link cookie-statement">{title}</a></div></div><button class="cmplz-accept-service">'.$agree_text.'</button>';
 			} else {
 				$placeholdertext = cmplz_get_value( 'blocked_content_text' );
 			}
@@ -496,7 +497,7 @@ if ( ! class_exists( 'cmplz_cookie_blocker' ) ) {
 						$is_video = $this->is_video( $iframe_src );
 						$service_name = sanitize_title($tag['name']);
 						$new         = $total_match;
-						$new         = preg_replace( '~<iframe\\s~i', '<iframe data-src-cmplz="' . $iframe_src . '" ', $new , 1 ); // make sure we replace it only once
+						$new         = preg_replace( '~<iframe\\s~i', '<iframe data-cmplz-target="'.apply_filters('cmplz_data_target', 'src').'" data-src-cmplz="' . $iframe_src . '" ', $new , 1 ); // make sure we replace it only once
 
 						//remove lazy loading for iframes, as it is breaking on activation
 						$new = str_replace('loading="lazy"', 'data-deferlazy="1"', $new );

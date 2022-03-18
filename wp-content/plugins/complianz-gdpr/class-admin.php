@@ -460,7 +460,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 
 				$dismissed_warnings = get_option('cmplz_dismissed_warnings', array() );
 				foreach ( $warning_types as $id => $warning ) {
-					if ( in_array( $id, $dismissed_warnings) ) {
+					if ( in_array( sanitize_title($id), $dismissed_warnings) ) {
 						continue;
 					}
 
@@ -770,7 +770,7 @@ if ( ! class_exists( "cmplz_admin" ) ) {
 				$status = __("Installed", "complianz-gdpr");
 			} elseif (defined($item['constant_free']) && !defined($item['constant_premium'])) {
 				$link = $item['website'];
-				$text = __('Upgrade to pro', 'complianz-gdpr');
+				$text = __('Upgrade to Pro', 'complianz-gdpr');
 				$status = "<a href=$link>$text</a>";
 			}
 			return $status;
