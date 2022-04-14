@@ -35,13 +35,6 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
         );
     }
 
-    function get_current_tab()
-    {
-        $tab_keys = array_keys($this->menu_tabs);
-        $tab = isset( $_GET['tab'] ) ? sanitize_text_field($_GET['tab']) : $tab_keys[0];
-        return $tab;
-    }
-
     /*
      * Renders our tabs of this menu as nav items
      */
@@ -540,6 +533,10 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
             if(strpos($secret_key, '********') === false){
                 $aio_wp_security->configs->set_value('aiowps_recaptcha_site_key',sanitize_text_field($_POST["aiowps_recaptcha_site_key"]));
                 $aio_wp_security->configs->set_value('aiowps_recaptcha_secret_key',sanitize_text_field($_POST["aiowps_recaptcha_secret_key"]));
+
+				if ($aio_wp_security->google_recaptcha_sitekey_verification(stripslashes($_POST['aiowps_recaptcha_site_key'])) && $aio_wp_security->configs->get_value('aios_is_google_recaptcha_wrong_site_key')) {
+                    $aio_wp_security->configs->delete_value('aios_is_google_recaptcha_wrong_site_key');
+				}
             }
 
             $aio_wp_security->configs->set_value('aiowps_default_recaptcha',isset($_POST["aiowps_default_recaptcha"])?'1':'');//Checkbox
@@ -550,6 +547,9 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
 
             $this->show_msg_settings_updated();
         }
+        if (0 === $aio_wp_security->configs->get_value('aios_is_google_recaptcha_wrong_site_key')) {
+			echo '<div class="notice notice-warning aio_red_box"><p>'.__('Google reCAPTCHA site key is wrong. Please enter the correct reCAPTCHA keys below to use the reCAPTCHA feature.').'</p></div>';
+		}
 
         $secret_key_masked = AIOWPSecurity_Utility::mask_string($aio_wp_security->configs->get_value('aiowps_recaptcha_secret_key'));
         ?>
