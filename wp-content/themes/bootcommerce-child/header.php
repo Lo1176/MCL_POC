@@ -180,10 +180,10 @@
             <div class="navbar">
                 <!-- offcanvas sideNavBar on the left -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
-                    <!-- <div class="offcanvas-header cursor-pointer hover bg-white text-dark" data-bs-dismiss="offcanvas">
-                        <?php #esc_html_e('Close menu', 'bootscore'); 
+                    <div class="offcanvas-header cursor-pointer hover bg-white text-dark" data-bs-dismiss="offcanvas">
+                        <?php esc_html_e('Close menu', 'bootscore'); 
                         ?> <i class="fas fa-chevron-left"></i>
-                    </div> -->
+                    </div>
                     <div class="offcanvas-body">
                         <div class="my-offcanvas-sidenavbar">
                             <!-- Bootstrap 5 Nav Walker Main Menu -->
