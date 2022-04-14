@@ -12,15 +12,15 @@
 // SVG in header nav-bar (user, cart ...)
 .header-actions {
     .phone-logo{
+      width: 16px;
+    }
+    .help-logo, .flag-logo, .user-logo, .cart-logo {
       width: 20px;
     }
-    .help-logo {
-      width: 24px;
-    }
-    .flag-logo {
-      width: 24px;
-    }
-    .user-logo, .cart-logo {
-      width: 24px; // Gilles SVG
-    }
+    // .flag-logo {
+    //   width: 24px;
+    // }
+    // .user-logo, .cart-logo {
+    //   width: 24px; // Gilles SVG
+    // }
 }
