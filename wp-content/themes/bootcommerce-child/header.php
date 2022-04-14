@@ -44,7 +44,7 @@
 
                 <nav id="nav-main" class="navbar navbar-expand-lg navbar-expand-md navbar-white pt-0">
 
-                    <div class="header-height container-fluid smart-scroll py-0 pt-sm-3 ps-1 ps-md-2 bg-white d-flex flex-nowrap justify-content-sm-between align-items-end">
+                    <div class="header-height container-fluid smart-scroll py-0 ps-1 ps-md-2 bg-white d-flex flex-nowrap justify-content-sm-between align-items-end">
 
                         <!-- test burger btn  -->
                         <!-- Collapse animated button "FROMAGE..." -->
@@ -63,7 +63,7 @@
                         <!-- Burger-btn toggler LEFT for large devise "...OU DESSERT" -->
                         <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2 burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
                             <!-- <i class="fas fa-bars"></i> -->
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 24px;">
                         </button>
 
 
