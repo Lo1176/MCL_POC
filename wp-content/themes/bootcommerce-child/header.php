@@ -48,7 +48,7 @@
 
                         <!-- test burger btn  -->
                         <!-- Collapse animated button "FROMAGE..." -->
-                        <button class="btn animated-burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="btn d-none animated-burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23" aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
                             <div class="stripes nav-icon-5">
                                 <span></span>
                                 <span></span>
@@ -56,39 +56,15 @@
                             </div>
                         </button>
                         <!-- test burger btn  END-->
-                        <!-- new nav bar mcl-mobile -->
-                        <!-- <div class="navbar">
-                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMobileNav">
-
-                                <div class="offcanvas-body">
-                                    <div class="my-offcanvas-sidenavbar">
-                                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                                    </div>
-                                    <div class="dropdown mt-3">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            Dropdown button
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- new nav bar mcl-mobile END -->
-
-                        <!-- test mobile menu offcanvas left than right -->
-
+                        <!-- text mobile menu offcanvas left than right  -->
+                        
                         <!-- text mobile menu offcanvas left than right END -->
 
                         <!-- Burger-btn toggler LEFT for large devise "...OU DESSERT" -->
-                        <!-- <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2 burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
-                            
-                        <img src="<?php #echo esc_url(get_stylesheet_directory_uri()); 
-                                    ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
-                        </button> -->
+                        <button class="btn btn-outline-primary md d-none d-md-block mx-5 ms-md-2 burger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                            <!-- <i class="fas fa-bars"></i> -->
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
+                        </button>
 
 
 
@@ -176,12 +152,11 @@
                                 <?php } ?>
                             </button>
 
-                            <!-- Navbar Toggler Right for small devise NEED TO TAKE THE ANIMATED BURGER -->
-                            <!-- <button class="btn btn-outline-primary d-md-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar"> -->
-                            <!-- <i class="fas fa-bars"></i> -->
-                            <!-- <img src="<?php #echo esc_url(get_stylesheet_directory_uri()); 
-                                            ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
-                            </button> -->
+                            <!-- Navbar Toggler Right for small devise-->
+                            <button class="btn btn-outline-primary d-md-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidenavbar" aria-controls="offcanvas-sidenavbar">
+                                <!-- <i class="fas fa-bars"></i> -->
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/svg/bars.svg" alt="bars logo" style="width: 48px;">
+                            </button>
 
 
                         </div><!-- .header-actions -->
@@ -202,7 +177,6 @@
 
 
             </div><!-- .fixed-top .bg-light -->
-            <!-- wp navbar menu  -->
             <div class="navbar">
                 <!-- offcanvas sideNavBar on the left -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-sidenavbar">
@@ -228,9 +202,7 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- navbar -->
-            <!-- wp navbar menu END -->
-
+            </div>
 
             <!-- offcanvas user -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-user">
