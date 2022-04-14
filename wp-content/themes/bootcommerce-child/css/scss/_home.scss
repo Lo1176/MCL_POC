@@ -11,7 +11,7 @@
 }
 
 .featured-full-width-img-brand, .featured-full-width-img {
-    // height: $presentation-img-height !important;
+    height: $presentation-img-height;
     // border-top: $presentation-border-top-height solid $border-color;
 
 }
@@ -38,10 +38,11 @@
 .entry-header {
         #brand-logo-header {
             justify-content: center;
+            align-items: center;
             // margin: 40px;
-            position: relative;
-            top: -40px; // blason MCL position (en relation avec padding navbar et _svg size
-            z-index: 1020;
+            // position: relative;
+            // top: -40px; // blason MCL position (en relation avec padding navbar et _svg size
+            // z-index: 1020;
             // background-color: $mcl;
             // height: 232px; // Shera
             // width: 232px; // Shera

@@ -17,7 +17,7 @@ get_header();
     <main id="main" class="site-main">
 
       <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-      <header class="entry-header d-flex align-items-sm-start featured-full-width-img-brand text-light" style="background-image: url('<?php echo $thumb['0']; ?>')">
+      <header class="entry-header d-flex featured-full-width-img-brand text-light" style="background-image: url('<?php echo $thumb['0']; ?>')">
         <div class="container entry-header d-flex justify-content-center">
           <div id="brand-logo-header" class="d-flex entry-title">
             <?php include get_stylesheet_directory() . '/img/svg/cl-box.svg';?>

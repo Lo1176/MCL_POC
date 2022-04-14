@@ -19,6 +19,11 @@
     }
 }    
 .site-header {
+    .btn {
+        &:hover {
+        background: none;
+        }
+    }
         .offcanvas-start {
             // width: $offcanvas_width;
             // top: $header-height;
