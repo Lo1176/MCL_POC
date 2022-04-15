@@ -71,43 +71,50 @@ hr, .line-separator {
 }  
 
 // Swiper Cards
-.swiper-wrapper {
-    .card {
-      // border: 1px solid rgb(0 0 0 / 0%);  
-      border: none;
-      min-width: auto;
-    }
-    .swiper-slide {
-        .card-img-top {
-          // border-radius: 1px;
-          // width: 320px;
-          // height: 240px;
-          width: 432px;
-          height: 400px;
-          object-fit: cover;
-        }
-        .card-body {
-            .swiper-card-text {
-                // hr, .line-separator {
-                //   border-top: 0.5px solid $gray-500;
-                // }
-                h2 {
-                  font-size: 1.5rem;
-                  text-transform: uppercase;
-                }
-                .card-text {
-                  font-weight: 300;
-                }
+.swiper-container {
+  margin-left: 130px;
+  margin-right: 140px;
+      #btn-read-more {
+        a {
+          font-weight: 300;
+          line-height: 1;
 
-            }
-          #btn-read-more {
-            // border-radius: 1px;
-            font-weight: 300;
-            line-height: 1;
+        }
+        // border-radius: 1px;
+      }
+      .swiper-wrapper {
+          .card {
+            // border: 1px solid rgb(0 0 0 / 0%);  
+            border: none;
+            min-width: auto;
           }
+          .swiper-slide {
+              .card-img-top {
+                // border-radius: 1px;
+                width: 320px;
+                height: 240px;
+                // width: 432px;
+                // height: 400px;
+                object-fit: cover;
+              }
+              .card-body {
+                height: 320px;
+                  .swiper-card-text {
+                      // hr, .line-separator {
+                      //   border-top: 0.5px solid $gray-500;
+                      // }
+                      h2 {
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                      }
+                      .card-text {
+                        font-weight: 300;
+                      }
 
-        }
-    }
+                  }
+              }
+          }
+      }
 }
 .swiper-button-next, .swiper-button-prev {
   display: none;
