@@ -267,10 +267,17 @@ $this->fields = $this->fields + array(
 			'section'  => 1,
 			'source'   => 'wizard',
 			'type'     => 'radio',
-			'options'  => $this->yes_no,
 			'label'    => '',
 			'callback' => 'cookie_scan',
 			'help'     => __( "If you want to clear all cookies from the plugin, you can do so here. You'll need to run a scan again afterwards. If you want to start with a clean slate, you might need to clear your browsercache, to make sure all cookies are removed from your browser as well.", "complianz-gdpr" ),
+		),
+
+		'install_burst' => array(
+			'step'     => STEP_COOKIES,
+			'section'  => 2,
+			'source'   => 'wizard',
+			'callback' => 'install_burst',
+			'label'    => '',
 		),
 
 		'compile_statistics' => array(
@@ -361,7 +368,7 @@ $this->fields = $this->fields + array(
 			'label'              => __( "Do you want to ask consent for statistics?", 'complianz-gdpr' ),
 			'options'            => $this->yes_no,
 			'help'               => __( "In some countries, like Germany, Austria, Belgium or Spain, consent is required for statistics, even if the data is anonymized.", 'complianz-gdpr' ) . cmplz_read_more( 'https://complianz.io/google-analytics' ),
-			'callback_condition' => 'cmplz_stats_privacy_friendly'
+			'callback_condition' => 'cmplz_statistics_privacy_friendly'
 		),
 
 		'script_center_button' => array(

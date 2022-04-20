@@ -967,13 +967,11 @@ if ( ! class_exists( "cmplz_field" ) ) {
 					if ( is_array($args['disabled']) && in_array($option_value, $args['disabled']) || $args['disabled'] === true ) {
 						$disabled = 'disabled';
 					}
-
                 	?>
                     <label tabindex="0" role="button" aria-pressed="false" class="cmplz-radio-container <?php echo $disabled ?>"><?php echo $option_label ?>
                         <input tabindex="-1"
                             <?php echo $required ?>
                                 type="radio"
-                                id="<?php echo esc_html( $option_value ) ?>"
                                 name="<?php echo esc_html( $fieldname ) ?>"
                                 class="<?php echo esc_html( $fieldname ) ?>"
                                 value="<?php echo esc_html( $option_value ) ?>"
@@ -1195,9 +1193,10 @@ if ( ! class_exists( "cmplz_field" ) ) {
 				return true;
 			}
 
-			//function callbacks
-			$maybe_is_function = is_string($args[ $type ]) ? str_replace( 'NOT ', '', $args[ $type ] ) : '';
-			if ( ! is_array( $args[ $type ] ) && ! empty( $args[ $type ] ) && function_exists( $maybe_is_function ) ) {
+			//ensure the function exists, and is prefixed with cmplz_
+			//pass the original, including NOT
+			$maybe_is_function = is_string($args[ $type ]) ? str_replace( 'NOT ', '', $args[ $type ] ) : $args[ $type ];
+			if ( is_string( $args[ $type ] ) && ! empty( $args[ $type ] ) && strpos($maybe_is_function, 'cmplz_')!==FALSE && function_exists( $maybe_is_function ) ) {
 				return $this->function_callback_applies( $args[ $type ] );
 			}
 
@@ -1218,7 +1217,9 @@ if ( ! class_exists( "cmplz_field" ) ) {
 
 				foreach ( $c_values as $c_value ) {
 					$maybe_is_function = str_replace( 'NOT ', '', $c_value );
-					if ( function_exists( $maybe_is_function ) ) {
+					//ensure the function exists, and is prefixed with cmplz_
+					//pass the original, including NOT
+					if ( function_exists( $maybe_is_function ) && strpos($maybe_is_function, 'cmplz_')!==FALSE ) {
 						$match = $this->function_callback_applies( $c_value );
 						if ( ! $match ) {
 							return false;

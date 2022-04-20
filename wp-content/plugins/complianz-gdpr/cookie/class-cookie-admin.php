@@ -2587,8 +2587,6 @@ if ( ! class_exists( "cmplz_cookie_admin" ) ) {
 				unset( $post_types['cmplz-processing'] );
 				unset( $post_types['user_request'] );
 				unset( $post_types['cookie'] );
-				unset( $post_types['cmplz-dataleak'] );
-				unset( $post_types['cmplz-processing'] );
 				$post_types = apply_filters('cmplz_cookiescan_post_types',$post_types );
 
 				//from each post type, get one, for faster results.
@@ -2911,9 +2909,9 @@ if ( ! class_exists( "cmplz_cookie_admin" ) ) {
 			//stringyfy select args.
 			$settings_args = sanitize_title(json_encode($settings));
 			$cookies = wp_cache_get('cmplz_cookies_'.$settings_args, 'complianz');
-			if ( !$cookies ){
+			if ( !$cookies || is_admin() ){
 				$cookies = $wpdb->get_results( "select * from {$wpdb->prefix}cmplz_cookies where " . $sql );
-				wp_cache_set('cmplz_cookies_'.$settings_args, $cookies, 'complianz');
+				wp_cache_set('cmplz_cookies_'.$settings_args, $cookies, 'complianz', HOUR_IN_SECONDS);
 			}
 			//make sure service data is added
 			foreach ( $cookies as $index => $cookie ) {

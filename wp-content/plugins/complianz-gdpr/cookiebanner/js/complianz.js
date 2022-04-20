@@ -414,7 +414,7 @@ function cmplz_insert_placeholder_text(container, service){
 		if ( typeof placeholder_text !== 'undefined' ) {
 			if ( complianz.clean_cookies == 1 ) {
 				//make service human readable
-				let service_nicename = service.replace('-', ' ');
+				let service_nicename = service ? service.replace('-', ' ') : '';
 				service_nicename = service_nicename.charAt(0).toUpperCase() + service_nicename.slice(1);
 				placeholder_text = placeholder_text.replace('{service}', service_nicename);
 				let body = cmplz_create_element('div', placeholder_text);
@@ -422,6 +422,7 @@ function cmplz_insert_placeholder_text(container, service){
 				body.classList.add('cmplz-blocked-content-notice');
 				let btn = body.querySelector('button');
 				btn.setAttribute('data-service', service);
+				btn.setAttribute('data-category', 'marketing');
 				btn.setAttribute('aria-label', service);
 				let pageLinks = complianz.page_links[complianz.region];
 				let link = body.querySelector('.cmplz-links a');
@@ -511,6 +512,7 @@ function cmplz_has_blocked_scripts(){
  * */
 
 function cmplz_enable_category(category, service) {
+
 	if ( complianz.tm_categories == 1 && category !== '') {
 		cmplz_run_tm_event(category);
 	}
@@ -521,20 +523,35 @@ function cmplz_enable_category(category, service) {
 	if ( category === 'functional' ) {
 		return;
 	}
+
 	//enable cookies for integrations
 	if ( category === 'marketing' ) {
 		cmplz_set_integrations_cookies();
 	}
 
 	//remove accept cookie notice overlay
-	document.querySelectorAll('.cmplz-blocked-content-notice.cmplz-accept-'+category+', .cmplz-blocked-content-notice [data-service='+service+']').forEach(obj => {
-		obj.parentNode.removeChild(obj);
+	let selector;
+	if (service !== 'do_not_match') {
+		selector = '.cmplz-blocked-content-notice [data-service='+service+']';
+	} else {
+		selector = complianz.clean_cookies!=1 ? '.cmplz-blocked-content-notice.cmplz-accept-'+category : '.cmplz-blocked-content-notice [data-category='+category+']';
+	}
+
+	document.querySelectorAll(selector).forEach(obj => {
+		let blockedElementService = obj.getAttribute('data-service');
+		if (obj.parentNode.classList.contains('cmplz-blocked-content-notice')) {
+			obj = obj.parentNode;
+		}
+		//only remove if the service is not explicitly denied
+		if ( !cmplz_is_service_denied(blockedElementService) ) {
+			obj.parentNode.removeChild(obj);
+		}
 	});
 
 	document.querySelectorAll('[data-category='+category+'], [data-service='+service+']').forEach(obj => {
 		//if a category is activated, but this specific service is denied, skip.
 		let elementService = obj.getAttribute('data-service');
-		if ( cmplz_is_service_denied(elementService)) {
+		if ( cmplz_is_service_denied(elementService) ) {
 			return;
 		}
 
@@ -561,7 +578,8 @@ function cmplz_enable_category(category, service) {
 				obj.setAttribute('loading', 'lazy');
 			}
 			cmplz_remove_placeholder(obj);
-		} else if (tagName==='IFRAME'){
+		}
+		else if (tagName==='IFRAME'){
 			obj.classList.add('cmplz-activated' );
 			let src = obj.getAttribute('data-src-cmplz');
 			let srcAttribute = obj.getAttribute('data-cmplz-target') ? obj.getAttribute('data-cmplz-target') : 'src';
@@ -773,6 +791,24 @@ function cmplz_run_tm_event(category) {
 	}
 }
 
+/**
+ * Function to handle backward compatibility
+ *
+ */
+
+function cmplz_legacy(){
+	let has_recaptcha = false;
+	document.querySelectorAll('[data-service=recaptcha]').forEach(obj => {
+		obj.setAttribute('data-service', 'google-recaptcha');
+		has_recaptcha=true;
+	});
+
+	if ( has_recaptcha ) {
+		console.log('recaptcha as service name is deprecated. Please rename the service in your custom html to google-recaptcha');
+		document.body.classList.add( 'cmplz-google-recaptcha' );
+	}
+}
+
 window.conditionally_show_banner = function() {
 	//merge userdata with complianz data, in case a b testing is used with user specific cookie banner data
 	//objects are merged so user_data will override data in complianz object
@@ -780,6 +816,7 @@ window.conditionally_show_banner = function() {
 	//check if we need to redirect to another legal document, for a specific region
 	cmplz_maybe_auto_redirect();
 	cmplz_set_blocked_content_container();
+	cmplz_legacy();
 
 	/**
 	 * Integration with WordPress, tell what kind of consent type we're using, then fire an event
@@ -790,7 +827,7 @@ window.conditionally_show_banner = function() {
 	document.dispatchEvent( event );
 	event = new CustomEvent('cmplz_before_cookiebanner' );
 	document.dispatchEvent(event);
-	if ( complianz.forceEnableStats == 1 ) {
+	if ( complianz.forceEnableStats == 1 && complianz.consenttype === 'optin' ) {
 		cmplz_set_consent('statistics', 'allow');
 	}
 
@@ -810,13 +847,12 @@ window.conditionally_show_banner = function() {
 		let services = cmplz_get_services_on_page();
 		for (let key in services) {
 			if ( services.hasOwnProperty(key) ) {
-				let service = services[key];
-				if (service.length == 0) continue;
-				if (cmplz_has_service_consent(service)) {
+				let service = services[key].service;
+				let category = services[key].category;
+				if ( cmplz_has_service_consent( service, category )) {
 					document.querySelectorAll('.cmplz-accept-service[data-service=' + service + ']').forEach(obj => {
 						obj.checked = true;
 					});
-
 					cmplz_enable_category('', service);
 				}
 			}
@@ -875,8 +911,12 @@ function cmplz_get_services_on_page(){
 	let services=[];
 	document.querySelectorAll('[data-service]').forEach(obj => {
 		let service = obj.getAttribute('data-service');
+		let category = obj.getAttribute('data-category');
 		if ( services.indexOf(service)==-1 ) {
-			services.push(service);
+			services.push({
+				'category': category,
+				'service':service,
+			});
 		}
 	});
 	return services;
@@ -886,7 +926,6 @@ function cmplz_get_services_on_page(){
  * Run the actual cookie warning
  *
  * */
-
 
 window.show_cookie_banner = function () {
 	let disableCookiebanner = complianz.disable_cookiebanner || cmplz_is_speedbot();
@@ -1058,11 +1097,6 @@ window.cmplz_has_consent = function ( category ){
  * @returns {boolean|*}
  */
 window.cmplz_is_service_denied = function ( service ) {
-	//in opt out, there's no consent per service. so it's always true.
-	if ( complianz.consenttype === 'optout' ) {
-		return false;
-	}
-
 	//Check if it's in the consented services cookie
 	var consented_services_json = cmplz_get_cookie('consented_services');
 	var consented_services;
@@ -1082,14 +1116,10 @@ window.cmplz_is_service_denied = function ( service ) {
 /**
  * Check if a service has consent
  * @param service
+ * @param category
  * @returns {boolean|*}
  */
-window.cmplz_has_service_consent = function ( service ) {
-	//in opt out, there's no consent per service. so it's always true.
-	if ( complianz.consenttype === 'optout' ) {
-		return true;
-	}
-
+window.cmplz_has_service_consent = function ( service, category ) {
 	//Check if it's in the consented services cookie
 	var consented_services_json = cmplz_get_cookie('consented_services');
 	var consented_services;
@@ -1100,7 +1130,8 @@ window.cmplz_has_service_consent = function ( service ) {
 	}
 
 	if ( !consented_services.hasOwnProperty( service ) ){
-		return false;
+		//default to the category
+		return cmplz_has_consent( category );
 	} else {
 		return consented_services[service];
 	}
@@ -1143,6 +1174,14 @@ function cmplz_set_service_consent( service, consented ){
 	}
 	consented_services[service] = consented;
 	cmplz_set_cookie('consented_services', JSON.stringify(consented_services) );
+	let details = new Object();
+	details.service = service;
+	details.value = consented;
+	details.region = complianz.region;
+	//when the status is changed, we may need to fire scripts again, so we reset it.
+	cmplz_all_scripts_hook_fired = false;
+	let event = new CustomEvent('cmplz_status_change_service', { detail: details });
+	document.dispatchEvent(event);
 }
 
 /**
@@ -1398,7 +1437,7 @@ cmplz_add_event('click', '.cmplz-accept-marketing', function(e){
  */
 cmplz_add_event('click', '.cmplz-accept-service', function(e){
 	let obj = e.target;
-	//that is for the change event, for input checkboxes
+	//INPUT should be handled by change event, these are checkboxes on the cookie policy
 	let tagName = obj.tagName;
 	if ( tagName === 'INPUT' ) {
 		return;
@@ -1419,8 +1458,6 @@ cmplz_add_event('change', '.cmplz-accept-service', function(e){
 	let obj = e.target;
 	let tagName = obj.tagName;
 	let service = obj.getAttribute('data-service');
-
-	// //that is for the change event, for input checkboxes
 	if ( typeof service !== 'undefined' ) {
 		//inputs are from the consent per service option on the cookie policy.
 		if ( tagName === 'INPUT' ) {
@@ -1432,10 +1469,10 @@ cmplz_add_event('change', '.cmplz-accept-service', function(e){
 				//give our track status time to finish
 				setTimeout(function(){
 					location.reload()
-				}, 500);			}
-		//if not input, it's a placeholder
+				}, 500);
+			}
+			//if not input, it's a placeholder
 		} else {
-			cmplz_set_service_consent(service, false);
 			e.preventDefault();
 			cmplz_set_service_consent(service, true);
 			cmplz_enable_category('', 'general');
@@ -1673,7 +1710,7 @@ function cmplz_sync_category_checkboxes() {
 	for ( var key in cmplz_categories ) {
 		if ( cmplz_categories.hasOwnProperty(key) ) {
 			var category = cmplz_categories[key];
-			if (cmplz_has_consent(category) || category === 'functional') {
+			if ( cmplz_has_consent(category) || category === 'functional' ) {
 				document.querySelectorAll('input.cmplz-' + category).forEach(obj => {
 					obj.checked = true;
 				});
@@ -1686,18 +1723,15 @@ function cmplz_sync_category_checkboxes() {
 
 		document.querySelectorAll('.cmplz-accept-service').forEach(obj => {
 			let service = obj.getAttribute('data-service');
-			if ( cmplz_has_service_consent( service ) ) {
+			let category = obj.getAttribute('data-category');
+			if ( cmplz_has_service_consent( service, category ) ) {
 				obj.checked = true;
 			} else if ( cmplz_is_service_denied( service ) ) {
 				obj.checked = false;
 			} else {
 				//no consent on service level, check if it's category has consent.
 				let category = obj.getAttribute('data-category' );
-				if (  cmplz_has_consent( category ) ) {
-					obj.checked = true;
-				} else {
-					obj.checked = false;
-				}
+				obj.checked = !!cmplz_has_consent(category);
 			}
 		});
 	}
@@ -1937,7 +1971,7 @@ function cmplz_clean(){
 			if ( !cmplz_has_consent(category) && cmplz_cookie_data.hasOwnProperty(category) ) {
 				let services = cmplz_cookie_data[category];
 				for (var service in services) {
-					if ( !cmplz_has_service_consent(service) ) {
+					if ( !cmplz_has_service_consent(service, category) ) {
 						let cookies = services[service];
 						for (var j in cookies) {
 							let item = cookies[j];

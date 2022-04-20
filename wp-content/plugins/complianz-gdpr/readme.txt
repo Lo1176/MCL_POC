@@ -6,7 +6,7 @@ Requires at least: 4.9
 License: GPL2
 Requires PHP: 5.6
 Tested up to: 5.9
-Stable tag: 6.1.2
+Stable tag: 6.1.5
 
 Configure your Cookie Notice, Cookie Consent and Cookie Policy with our Wizard and Cookie Scan. Supports GDPR, DSGVO, TTDSG, LGPD, POPIA, RGPD, CCPA and PIPEDA.
 
@@ -80,7 +80,6 @@ Complianz offers a Full Privacy Suite for WordPress on [Complianz.io](https://co
 
 = Cookie Consent Notice =
 
-* Elementor Pro - Create a Cookie Banner with Elementor Pop Ups and use Complianz's Consent Management
 * Improve conversion with A/B Testing: which cookie banner has the best consent ratio? Run tests and measure what works best for your site.
 
 = Consent Management =
@@ -166,6 +165,33 @@ The Brazilian General Data Protection Law is similar to the GDPR, the UK-GDPR it
 With some custom CSS this is possible, but we do not consider a cookie wall to be GDPR compliant, so it's not actively supported. We do, however, have the option to create a Soft Cookie Wall. Which blocks interaction with the website, but dismissing remains a possibility.
 
 == Changelog ==
+= 6.1.5 =
+* Fix: 'NOT' condition not loading correctly, props @rickvanleeuwen
+
+= 6.1.4 =
+* Improvement: integration which fixes bug in Thrive theme which removes other plugin's inline css
+* Improvement: Use category as fallback for service consent
+* Improvement: legal update to imprint/impressum
+* Improvement: adjustments to EU configuration to allow for Switzerland as region
+* Improvement: add Burst Statistics to suggested plugins for privacy friendly statistics
+* Improvement: improve caching mechanism to ensure that on even for persistent cached database queries, these get updated when necessary
+* Improvement: new event for integrations 'cmplz_status_change_service'
+* Improvement: when checking callback function, also check for prefix
+* Improvement: user registration pro
+* Fix: reCaptcha integration in combination with consent per service, props @esby
+* Fix: Burst Statistics integration could cause duplicate hits in some situations
+* Fix: Placeholders for Elementor Facebook and Twitter widget, and allow for Consent Per Service
+* Fix: Consent per service icw Elementor Youtube implementation
+* Fix: US revoke statistics with forceEnableStats
+* Fix: drop Elementor Pro Cookie Banner support
+* Fix: drop aria-checked=true for input type=checkbox, props @lofesa
+* Fix: Uncaught TypeError: service is null when Elementor integration used in combination with Cookie Shredder/consent per service
+* Fix: duplicate id in back-end radio field
+
+= 6.1.3 =
+* Fix: Consent Mode consenting to marketing when preferences was accepted
+* Fix: Burst Statistics integration triggering twice
+
 = 6.1.2 =
 * New: Matomo Tag Manager / WP Piwik
 * Improvement: editable "I Agree" button for consent per service/Cookie Shredder
