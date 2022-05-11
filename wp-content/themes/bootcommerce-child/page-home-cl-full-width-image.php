@@ -106,7 +106,7 @@ get_header();
                   <div class="col-sm-6 col-xl-3 mb-5">
                     <a href="<?php #echo do_shortcode('[homeurl]/categorie-produit/chateau-laguiole/melchior/'); 
                               ?>">
-                      <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2021/07/CL-melchior-ironwood.jpeg'); 
+                      <img class="card-img-top" src="<?php echo do_shortcode('[homeurl]/wp-content/uploads/2022/04/melchior-white-scaled.jpeg'); 
                                                           ?>" alt="Produc image cap">
                       <div class="card-body">
                         <h5 class="card-title"><strong>Melchior</strong></h5>
